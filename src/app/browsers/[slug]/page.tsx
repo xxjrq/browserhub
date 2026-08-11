@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, Check, X, ExternalLink, Download } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Download, ExternalLink, Minus, Star, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { browserBySlug, browsers, comparisons, guides } from "@/data/resources";
 import { ResourceIcon } from "@/components/resource-icon";
+import { StatusBadge } from "@/components/status-badge";
+import { Rating } from "@/components/rating";
+import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
 	return browsers.map(browser => ({ slug: browser.slug }));
@@ -22,6 +24,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 	const title = `${browser.name}：价格、功能与平台信息`;
 	const description = `${browser.name} 指纹浏览器资料：免费额度、价格、环境数量、平台、内核、API、自动化、代理、优势与限制。`;
 	return { title, description, alternates: { canonical: `/browsers/${browser.slug}/` }, openGraph: { title, description, url: `/browsers/${browser.slug}/` } };
+}
+
+function SpecRow({ label, value }: { label: string; value: React.ReactNode }) {
+	return (
+		<div className="flex items-start justify-between gap-4">
+			<span className="shrink-0 text-sm text-muted-foreground">{label}</span>
+			<span className="text-right text-sm font-medium">{value}</span>
+		</div>
+	);
+}
+
+function CapabilityRow({ label, ok }: { label: string; ok: boolean }) {
+	return (
+		<div className="flex items-center justify-between gap-4">
+			<span className="text-sm text-muted-foreground">{label}</span>
+			{ok
+				? <span className="inline-flex items-center gap-1.5 text-sm font-medium"><Check className="h-4 w-4 text-success" aria-hidden="true" />支持</span>
+				: <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground"><Minus className="h-4 w-4" aria-hidden="true" />未标注</span>}
+		</div>
+	);
 }
 
 export default async function BrowserDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -44,40 +66,175 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 	];
 
 	return (
-		<div className="container py-12">
+		<div className="container py-10 md:py-14">
 			<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-			<nav className="mb-6 text-sm text-muted-foreground" aria-label="面包屑"><Link href="/">首页</Link><span className="mx-2">/</span><Link href="/browsers/">指纹浏览器</Link><span className="mx-2">/</span><span>{browser.name}</span></nav>
-			<Link href="/browsers/" className={buttonVariants({ variant: "ghost" }) + " mb-6"}><ArrowLeft className="mr-2 h-4 w-4" /> 返回浏览器列表</Link>
+			<nav className="mb-6 flex items-center font-mono text-xs tracking-wide text-muted-foreground" aria-label="面包屑">
+				<Link href="/" className="transition-colors hover:text-foreground">首页</Link>
+				<span className="mx-2 text-border">/</span>
+				<Link href="/browsers/" className="transition-colors hover:text-foreground">指纹浏览器</Link>
+				<span className="mx-2 text-border">/</span>
+				<span className="text-foreground">{browser.name}</span>
+			</nav>
+			<Link href="/browsers/" className={cn(buttonVariants({ variant: "ghost", size: "sm" }), "mb-8 -ml-2 text-muted-foreground")}><ArrowLeft className="mr-1.5 h-4 w-4" aria-hidden="true" />返回浏览器列表</Link>
 
-			<div className="grid gap-8 lg:grid-cols-3">
-				<div className="lg:col-span-2">
-					<div className="mb-6 flex flex-wrap items-center gap-4"><ResourceIcon name={browser.name} src={browser.icon} size={56} /><h1 className="text-4xl font-bold tracking-tight">{browser.name}</h1>{browser.featured && <Badge>Featured</Badge>}<Badge variant="secondary">{browser.status}</Badge></div>
-					{browser.sponsored && <p className="mb-5 rounded-lg border border-primary/30 bg-primary/5 px-4 py-3 text-sm text-muted-foreground">说明：{browser.name} 是 BrowserHub 的关联产品，页面仍按统一字段列出优势、限制和来源，价格及功能以官网为准。</p>}
+			<div className="grid gap-10 lg:grid-cols-3">
+				<div className="min-w-0 lg:col-span-2">
+					<header className="mb-8">
+						<div className="flex flex-wrap items-center gap-4">
+							<ResourceIcon name={browser.name} src={browser.icon} website={browser.website} size={64} />
+							<div className="min-w-0">
+								<div className="flex flex-wrap items-center gap-3">
+									<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{browser.name}</h1>
+									{browser.featured && <Star aria-label="Featured" className="h-5 w-5 fill-primary text-primary" />}
+								</div>
+								<div className="mt-2 flex flex-wrap items-center gap-2.5">
+									<StatusBadge status={browser.status} />
+									<span className="font-mono text-[11px] tracking-widest text-muted-foreground uppercase">{browser.type} · {browser.engine}</span>
+								</div>
+							</div>
+						</div>
+					</header>
+
+					{browser.sponsored && (
+						<p className="mb-6 border-l-2 border-primary bg-primary/[0.04] px-4 py-3 text-sm leading-6 text-muted-foreground">
+							说明：{browser.name} 是 BrowserHub 的关联产品，页面仍按统一字段列出优势、限制和来源，价格及功能以官网为准。
+						</p>
+					)}
+
 					<p className="mb-6 text-lg leading-8 text-muted-foreground">{browser.longDescription}</p>
-					<div className="mb-8 flex flex-wrap gap-2">{browser.bestFor.slice(0, 4).map(item => <Badge key={item} variant="outline">适合：{item}</Badge>)}</div>
-
-					<Separator className="my-8" />
-					<h2 className="mb-4 text-2xl font-bold">核心功能</h2>
-					<ul className="mb-8 grid gap-3 md:grid-cols-2">{browser.features.map(feature => <li key={feature} className="flex items-start gap-2"><Check className="mt-1 h-4 w-4 shrink-0 text-green-600" /><span>{feature}</span></li>)}</ul>
-
-					<div className="grid gap-6 md:grid-cols-2">
-						<Card><CardHeader><CardTitle className="text-green-600">优势</CardTitle></CardHeader><CardContent><ul className="space-y-3">{browser.pros.map(item => <li key={item} className="flex items-start gap-2"><Check className="mt-1 h-4 w-4 shrink-0 text-green-600" /><span>{item}</span></li>)}</ul></CardContent></Card>
-						<Card><CardHeader><CardTitle className="text-red-600">限制与注意事项</CardTitle></CardHeader><CardContent><ul className="space-y-3">{browser.cons.map(item => <li key={item} className="flex items-start gap-2"><X className="mt-1 h-4 w-4 shrink-0 text-red-600" /><span>{item}</span></li>)}</ul></CardContent></Card>
+					<div className="mb-4 flex flex-wrap gap-2">
+						{browser.bestFor.slice(0, 4).map(item => (
+							<span key={item} className="rounded-full border bg-card px-3 py-1 font-mono text-[11px] tracking-wide text-muted-foreground">{item}</span>
+						))}
 					</div>
 
-					<Separator className="my-8" />
-					<h2 className="mb-4 text-2xl font-bold">适用场景</h2>
-					<div className="mb-8 grid gap-3 md:grid-cols-2">{browser.bestFor.map(item => <div key={item} className="rounded-lg border bg-muted/20 p-4">{item}</div>)}</div>
+					<Separator className="my-10" />
 
-					<h2 className="mb-4 text-2xl font-bold">常见问题</h2>
-					<div className="space-y-4">{faq.map(item => <Card key={item.question}><CardHeader><CardTitle className="text-base">{item.question}</CardTitle></CardHeader><CardContent><p className="leading-7 text-muted-foreground">{item.answer}</p></CardContent></Card>)}</div>
+					<h2 className="mb-1 text-xl font-semibold tracking-tight">核心功能</h2>
+					<p className="eyebrow mb-5">Features</p>
+					<ul className="grid gap-3 sm:grid-cols-2">
+						{browser.features.map(feature => (
+							<li key={feature} className="flex items-start gap-2.5 rounded-lg border bg-card px-3.5 py-3 text-sm">
+								<Check className="mt-0.5 h-4 w-4 shrink-0 text-success" aria-hidden="true" />
+								{feature}
+							</li>
+						))}
+					</ul>
+
+					<div className="mt-10 grid gap-5 md:grid-cols-2">
+						<Card>
+							<CardHeader><CardTitle className="flex items-center gap-2 text-base"><Check className="h-4 w-4 text-success" aria-hidden="true" />优势</CardTitle></CardHeader>
+							<CardContent><ul className="space-y-3">{browser.pros.map(item => <li key={item} className="flex items-start gap-2.5 text-sm leading-6"><Check className="mt-1 h-3.5 w-3.5 shrink-0 text-success" aria-hidden="true" />{item}</li>)}</ul></CardContent>
+						</Card>
+						<Card>
+							<CardHeader><CardTitle className="flex items-center gap-2 text-base"><X className="h-4 w-4 text-destructive" aria-hidden="true" />限制与注意事项</CardTitle></CardHeader>
+							<CardContent><ul className="space-y-3">{browser.cons.map(item => <li key={item} className="flex items-start gap-2.5 text-sm leading-6"><X className="mt-1 h-3.5 w-3.5 shrink-0 text-destructive" aria-hidden="true" />{item}</li>)}</ul></CardContent>
+						</Card>
+					</div>
+
+					<Separator className="my-10" />
+
+					<h2 className="mb-1 text-xl font-semibold tracking-tight">适用场景</h2>
+					<p className="eyebrow mb-5">Use Cases</p>
+					<div className="grid gap-3 sm:grid-cols-2">
+						{browser.bestFor.map(item => <div key={item} className="rounded-lg border bg-card px-4 py-3.5 text-sm">{item}</div>)}
+					</div>
+
+					<Separator className="my-10" />
+
+					<h2 className="mb-1 text-xl font-semibold tracking-tight">常见问题</h2>
+					<p className="eyebrow mb-5">FAQ</p>
+					<div className="space-y-4">
+						{faq.map(item => (
+							<Card key={item.question}>
+								<CardHeader><CardTitle className="text-base">{item.question}</CardTitle></CardHeader>
+								<CardContent><p className="text-sm leading-7 text-muted-foreground">{item.answer}</p></CardContent>
+							</Card>
+						))}
+					</div>
 				</div>
 
-				<div className="lg:col-span-1"><Card className="sticky top-20"><CardHeader><CardTitle>价格与规格</CardTitle></CardHeader><CardContent className="space-y-4"><div className="flex justify-between gap-4"><span className="text-muted-foreground">免费额度</span><span className="text-right font-medium">{browser.free}</span></div><div className="flex justify-between gap-4"><span className="text-muted-foreground">起步价格</span><span className="text-right font-medium">{browser.price}</span></div><div className="flex justify-between gap-4"><span className="text-muted-foreground">环境数量</span><span className="text-right font-medium">{browser.profiles}</span></div><Separator /><div className="flex justify-between"><span className="text-muted-foreground">API</span>{browser.api ? <Check className="h-4 w-4 text-green-600" /> : <X className="h-4 w-4 text-red-600" />}</div><div className="flex justify-between"><span className="text-muted-foreground">自动化</span>{browser.automation ? <Check className="h-4 w-4 text-green-600" /> : <X className="h-4 w-4 text-red-600" />}</div><div className="flex justify-between"><span className="text-muted-foreground">代理</span>{browser.proxy ? <Check className="h-4 w-4 text-green-600" /> : <X className="h-4 w-4 text-red-600" />}</div><Separator /><div className="flex justify-between gap-4"><span className="text-muted-foreground">平台</span><span className="text-right font-medium">{browser.platforms.join(", ")}</span></div><div className="flex justify-between gap-4"><span className="text-muted-foreground">内核</span><span className="text-right font-medium">{browser.engine}</span></div><div className="flex justify-between gap-4"><span className="text-muted-foreground">存储</span><span className="text-right font-medium">{browser.storage}</span></div><div className="flex justify-between"><span className="text-muted-foreground">编辑评分</span><span className="font-medium" aria-label={`${browser.rating} out of 5`}>{"★".repeat(browser.rating)}{"☆".repeat(5 - browser.rating)}</span></div><Separator /><div className="space-y-2"><a href={browser.sponsored ? `${browser.website}?utm_source=browserhub&utm_medium=referral&utm_campaign=resource_hub` : browser.website} target="_blank" rel="noopener noreferrer" className={buttonVariants() + " w-full"}><ExternalLink className="mr-2 h-4 w-4" /> 访问官网</a>{browser.download && <a href={browser.download} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline" }) + " w-full"}><Download className="mr-2 h-4 w-4" /> 下载</a>}</div></CardContent></Card></div>
+				<aside className="lg:col-span-1">
+					<Card className="sticky top-20">
+						<CardHeader>
+							<p className="eyebrow">Specifications</p>
+							<CardTitle className="text-lg">价格与规格</CardTitle>
+						</CardHeader>
+						<CardContent className="space-y-4">
+							<SpecRow label="免费额度" value={browser.free} />
+							<SpecRow label="起步价格" value={<span className="font-mono">{browser.price}</span>} />
+							<SpecRow label="环境数量" value={browser.profiles} />
+							<Separator />
+							<CapabilityRow label="API" ok={browser.api} />
+							<CapabilityRow label="自动化" ok={browser.automation} />
+							<CapabilityRow label="代理" ok={browser.proxy} />
+							<Separator />
+							<SpecRow label="平台" value={browser.platforms.join(", ")} />
+							<SpecRow label="内核" value={browser.engine} />
+							<SpecRow label="存储" value={browser.storage} />
+							<div className="flex items-center justify-between gap-4">
+								<span className="text-sm text-muted-foreground">编辑评分</span>
+								<Rating value={browser.rating} />
+							</div>
+							<Separator />
+							<div className="space-y-2 pt-1">
+								<a href={browser.sponsored ? `${browser.website}?utm_source=browserhub&utm_medium=referral&utm_campaign=resource_hub` : browser.website} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants(), "w-full")}>
+									<ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />访问官网
+								</a>
+								{browser.download && (
+									<a href={browser.download} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "outline" }), "w-full")}>
+										<Download className="mr-2 h-4 w-4" aria-hidden="true" />下载
+									</a>
+								)}
+							</div>
+						</CardContent>
+					</Card>
+				</aside>
 			</div>
 
-			<div className="mt-12 grid gap-8 lg:grid-cols-3"><section><h2 className="mb-4 text-xl font-bold">相关浏览器</h2><div className="space-y-3">{relatedBrowsers.map(item => <Link key={item.slug} href={`/browsers/${item.slug}/`} className="flex items-center justify-between rounded-lg border p-4 hover:border-primary"><span>{item.name}</span><ArrowRight className="h-4 w-4" /></Link>)}</div></section><section><h2 className="mb-4 text-xl font-bold">相关对比</h2><div className="space-y-3">{relatedComparisons.map(item => <Link key={item.slug} href={`/compare/${item.slug}/`} className="flex items-center justify-between rounded-lg border p-4 hover:border-primary"><span>{item.title}</span><ArrowRight className="h-4 w-4" /></Link>)}</div></section><section><h2 className="mb-4 text-xl font-bold">相关指南</h2><div className="space-y-3">{relatedGuides.map(item => <Link key={item.slug} href={`/guides/${item.slug}/`} className="flex items-center justify-between rounded-lg border p-4 hover:border-primary"><span>{item.title}</span><ArrowRight className="h-4 w-4" /></Link>)}</div></section></div>
-			<p className="mt-10 text-sm text-muted-foreground">资料来源：<a className="underline" href={browser.sourceUrl} target="_blank" rel="noopener noreferrer">公开资源整理</a> · 更新于 {browser.updatedAt} · 价格、套餐和功能请以官方页面为准。</p>
+			<div className="mt-14 grid gap-10 lg:grid-cols-3">
+				<section>
+					<h2 className="mb-1 text-lg font-semibold tracking-tight">相关浏览器</h2>
+					<p className="eyebrow mb-4">Related</p>
+					<div className="space-y-2.5">
+						{relatedBrowsers.map(item => (
+							<Link key={item.slug} href={`/browsers/${item.slug}/`} className="group flex items-center gap-3 rounded-lg border bg-card p-3.5 transition-colors hover:border-foreground/25">
+								<ResourceIcon name={item.name} src={item.icon} website={item.website} size={28} />
+								<span className="min-w-0 flex-1 truncate text-sm font-medium">{item.name}</span>
+								<ArrowRight className="h-4 w-4 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true" />
+							</Link>
+						))}
+					</div>
+				</section>
+				<section>
+					<h2 className="mb-1 text-lg font-semibold tracking-tight">相关对比</h2>
+					<p className="eyebrow mb-4">Compare</p>
+					<div className="space-y-2.5">
+						{relatedComparisons.map(item => (
+							<Link key={item.slug} href={`/compare/${item.slug}/`} className="group flex items-center justify-between gap-3 rounded-lg border bg-card p-3.5 transition-colors hover:border-foreground/25">
+								<span className="min-w-0 truncate text-sm font-medium">{item.title}</span>
+								<ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true" />
+							</Link>
+						))}
+					</div>
+				</section>
+				<section>
+					<h2 className="mb-1 text-lg font-semibold tracking-tight">相关指南</h2>
+					<p className="eyebrow mb-4">Guides</p>
+					<div className="space-y-2.5">
+						{relatedGuides.map(item => (
+							<Link key={item.slug} href={`/guides/${item.slug}/`} className="group flex items-center justify-between gap-3 rounded-lg border bg-card p-3.5 transition-colors hover:border-foreground/25">
+								<span className="min-w-0 truncate text-sm font-medium">{item.title}</span>
+								<ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true" />
+							</Link>
+						))}
+					</div>
+				</section>
+			</div>
+
+			<p className="mt-12 border-t pt-6 font-mono text-xs leading-6 text-muted-foreground">
+				资料来源：<a className="underline underline-offset-4 transition-colors hover:text-foreground" href={browser.sourceUrl} target="_blank" rel="noopener noreferrer">公开资源整理</a> · 更新于 {browser.updatedAt} · 价格、套餐和功能请以官方页面为准。
+			</p>
 		</div>
 	);
 }

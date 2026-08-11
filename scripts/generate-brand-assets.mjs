@@ -29,13 +29,11 @@ await sharp(Buffer.from(mark)).resize(192, 192).png().toFile(path.join(iconDir, 
 await sharp(Buffer.from(mark)).resize(512, 512).png().toFile(path.join(iconDir, "icon-512.png"));
 
 const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0B1020"/><stop offset="1" stop-color="#172554"/></linearGradient></defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="1030" cy="90" r="240" fill="#06B6D4" opacity=".12"/>
-  <circle cx="110" cy="570" r="250" fill="#2563EB" opacity=".12"/>
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <circle cx="1030" cy="90" r="240" fill="#2563EB" opacity=".12"/>
   <image href="data:image/svg+xml;base64,${Buffer.from(mark).toString("base64")}" x="100" y="150" width="180" height="180"/>
   <text x="100" y="410" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="54" font-weight="700">BrowserHub</text>
-  <text x="100" y="470" fill="#BAE6FD" font-family="Arial,sans-serif" font-size="30">Fingerprint browser and privacy resources</text>
+  <text x="100" y="470" fill="#A1A1AA" font-family="Arial,sans-serif" font-size="30">Fingerprint browser and privacy resources</text>
 </svg>`;
 await sharp(Buffer.from(og)).png().toFile(path.join(outputDir, "browserhub-og.png"));
 

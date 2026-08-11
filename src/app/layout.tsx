@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { DocumentLanguage } from "@/components/layout/document-language";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
 	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co"),
@@ -50,7 +51,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="zh-CN" suppressHydrationWarning>
-			<body className={`${inter.variable} font-sans antialiased`}>
+			<body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
 				{process.env.NODE_ENV === "production" && <Script id="baidu-analytics" strategy="afterInteractive">{`var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");

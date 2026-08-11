@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Languages, Menu, Moon, Search, Sun, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
@@ -18,6 +19,7 @@ const navigation = [
 export function Header() {
 	const [open, setOpen] = useState(false);
 	const [dark, setDark] = useState(false);
+	const pathname = usePathname();
 
 	useEffect(() => {
 		const saved = window.localStorage.getItem("browsertools-theme");
@@ -34,17 +36,47 @@ export function Header() {
 		window.localStorage.setItem("browsertools-theme", next ? "dark" : "light");
 	};
 
-	return <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-		<div className="container flex h-16 items-center justify-between gap-4">
-			<Link href="/" className="flex min-w-0 shrink-0 items-center gap-2" onClick={() => setOpen(false)}><Image src="/brand/browserhub-mark.svg" alt="" width={28} height={28} priority /><span className="truncate text-lg font-bold">指纹浏览器资源库</span></Link>
-			<nav className="hidden items-center gap-1 md:flex" aria-label="主导航">{navigation.map(item => <Link key={item.href} href={item.href} className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">{item.name}</Link>)}</nav>
+	const isActive = (href: string) => pathname.startsWith(href);
+
+	return <header className="sticky top-0 z-50 w-full border-b bg-background/85 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
+		<div className="container flex h-14 items-center justify-between gap-4">
+			<Link href="/" className="flex min-w-0 shrink-0 items-center gap-2.5" onClick={() => setOpen(false)}>
+				<Image src="/brand/browserhub-mark.svg" alt="" width={24} height={24} priority />
+				<span className="truncate text-[15px] font-semibold tracking-tight">BrowserHub</span>
+				<span className="hidden font-mono text-[10px] tracking-widest text-muted-foreground uppercase lg:inline">Resource Database</span>
+			</Link>
+			<nav className="hidden items-center gap-0.5 md:flex" aria-label="主导航">
+				{navigation.map(item => (
+					<Link
+						key={item.href}
+						href={item.href}
+						aria-current={isActive(item.href) ? "page" : undefined}
+						className={cn(
+							"relative rounded-md px-3 py-1.5 text-sm transition-colors duration-150",
+							isActive(item.href) ? "font-medium text-foreground" : "text-muted-foreground hover:text-foreground"
+						)}
+					>
+						{item.name}
+						{isActive(item.href) && <span className="absolute inset-x-3 -bottom-[13px] h-px bg-primary" aria-hidden="true" />}
+					</Link>
+				))}
+			</nav>
 			<div className="flex items-center gap-1">
-				<Link href="/browsers/" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "hidden md:inline-flex")} aria-label="浏览器资源"><Search className="h-5 w-5" /></Link>
-				<Link href="/en/" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "hidden md:inline-flex")} aria-label="切换到英文"><Languages className="h-5 w-5" /></Link>
-				<button type="button" onClick={toggleTheme} className={buttonVariants({ variant: "ghost", size: "icon" })} aria-label={dark ? "切换到浅色主题" : "切换到深色主题"}>{dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}</button>
-				<button type="button" onClick={() => setOpen(value => !value)} className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden")} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "关闭菜单" : "打开菜单"}>{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</button>
+				<Link href="/browsers/" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "hidden text-muted-foreground hover:text-foreground md:inline-flex")} aria-label="搜索资源"><Search className="h-[18px] w-[18px]" /></Link>
+				<Link href="/en/" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "hidden text-muted-foreground hover:text-foreground md:inline-flex")} aria-label="切换到英文"><Languages className="h-[18px] w-[18px]" /></Link>
+				<button type="button" onClick={toggleTheme} className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "text-muted-foreground hover:text-foreground")} aria-label={dark ? "切换到浅色主题" : "切换到深色主题"}>{dark ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}</button>
+				<button type="button" onClick={() => setOpen(value => !value)} className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "text-muted-foreground hover:text-foreground md:hidden")} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "关闭菜单" : "打开菜单"}>{open ? <X className="h-[18px] w-[18px]" /> : <Menu className="h-[18px] w-[18px]" />}</button>
 			</div>
 		</div>
-		{open && <nav id="mobile-navigation" className="border-t bg-background md:hidden" aria-label="移动端主导航"><div className="container grid gap-1 py-3">{navigation.map(item => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className="rounded-md px-3 py-3 text-sm font-medium hover:bg-accent">{item.name}</Link>)}<Link href="/en/" onClick={() => setOpen(false)} className="rounded-md px-3 py-3 text-sm font-medium hover:bg-accent">English</Link></div></nav>}
+		{open && (
+			<nav id="mobile-navigation" className="border-t bg-background md:hidden" aria-label="移动端主导航">
+				<div className="container grid gap-0.5 py-3">
+					{navigation.map(item => (
+						<Link key={item.href} href={item.href} onClick={() => setOpen(false)} className={cn("rounded-md px-3 py-2.5 text-sm", isActive(item.href) ? "bg-muted font-medium text-foreground" : "text-muted-foreground hover:bg-muted hover:text-foreground")}>{item.name}</Link>
+					))}
+					<Link href="/en/" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">English</Link>
+				</div>
+			</nav>
+		)}
 	</header>;
 }
