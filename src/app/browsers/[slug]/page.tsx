@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { browserBySlug, browsers } from "@/data/resources";
+import { ResourceIcon } from "@/components/resource-icon";
 
 export function generateStaticParams() {
 	return browsers.map(browser => ({ slug: browser.slug }));
@@ -17,7 +18,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 	const { slug } = await params;
 	const browser = browserBySlug(slug);
-	return browser ? { title: browser.name, description: browser.description, alternates: { canonical: `/browsers/${browser.slug}/` } } : {};
+	return browser ? { title: browser.name, description: browser.description, alternates: { canonical: `/browsers/${browser.slug}/` }, openGraph: { title: browser.name, description: browser.description, url: `/browsers/${browser.slug}/` } } : {};
 }
 
 export default async function BrowserDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -34,10 +35,12 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 
 			<div className="grid gap-8 lg:grid-cols-3">
 				<div className="lg:col-span-2">
-					<div className="mb-6 flex items-center gap-4">
+					<div className="mb-6 flex flex-wrap items-center gap-4">
+						<ResourceIcon name={browser.name} src={browser.icon} size={56} />
 						<h1 className="text-4xl font-bold tracking-tight">{browser.name}</h1>
-						{browser.featured && <Badge>Featured</Badge>}
+						{browser.featured && <Badge>本站产品 · 特色推荐</Badge>}
 					</div>
+					{browser.sponsored && <p className="mb-5 rounded-lg border border-primary/30 bg-primary/5 px-4 py-3 text-sm text-muted-foreground">说明：{browser.name} 是本站关联产品，页面同时保留统一字段和限制信息，价格及功能以官网为准。</p>}
 					<p className="mb-6 text-lg text-muted-foreground">{browser.longDescription}</p>
 
 					<Separator className="my-8" />
@@ -124,6 +127,9 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 								<span className="text-muted-foreground">平台</span>
 								<span className="font-medium">{browser.platforms.join(", ")}</span>
 							</div>
+							<div className="flex justify-between gap-4"><span className="text-muted-foreground">状态</span><span className="font-medium">{browser.status}</span></div>
+							<div className="flex justify-between gap-4"><span className="text-muted-foreground">内核</span><span className="text-right font-medium">{browser.engine}</span></div>
+							<div className="flex justify-between gap-4"><span className="text-muted-foreground">存储</span><span className="text-right font-medium">{browser.storage}</span></div>
 							<div className="flex justify-between">
 								<span className="text-muted-foreground">编辑评分</span>
 								<span className="font-medium" aria-label={`${browser.rating} out of 5`}>{"★".repeat(browser.rating)}{"☆".repeat(5 - browser.rating)}</span>

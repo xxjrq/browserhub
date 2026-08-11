@@ -4,7 +4,7 @@ import { browsers, comparisons, guides, technologies, tools } from "@/data/resou
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://browsers.draxgr.cc";
+	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co";
 	const updatedAt = "2026-08-11";
 	const paths = [
 		"/", "/en/", "/browsers/", "/tools/", "/fingerprint/", "/guides/", "/compare/", "/about/", "/contact/", "/privacy/",

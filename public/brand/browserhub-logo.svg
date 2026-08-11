@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" role="img" aria-labelledby="title">
+  <title id="title">BrowserHub</title>
+  <rect x="5" y="8" width="54" height="48" rx="13" fill="none" stroke="#2563EB" stroke-width="5"/>
+  <path d="M7 22h50M32 29c-7 0-12 5-12 12m12-7c-4 0-7 3-7 7m7-2c-1 0-2 1-2 2m2-12c7 0 12 5 12 12m-12-7c4 0 7 3 7 7m-7-2c1 0 2 1 2 2" fill="none" stroke="#06B6D4" stroke-linecap="round" stroke-width="3"/>
+  <text x="76" y="43" fill="currentColor" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">BrowserHub</text>
+</svg>

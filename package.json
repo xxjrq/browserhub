@@ -2,11 +2,14 @@
   "name": "browsertools",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint",
+		"assets:brand": "node scripts/generate-brand-assets.mjs",
+		"check:dist": "node scripts/check-dist.mjs",
+		"ci": "npm run lint && npm run assets:brand && NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build && npm run check:dist"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

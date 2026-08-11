@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://browsers.draxgr.cc";
+	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co";
 	return {
 		rules: {
 			userAgent: "*",

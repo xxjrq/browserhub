@@ -3,30 +3,31 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { DocumentLanguage } from "@/components/layout/document-language";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://browsers.draxgr.cc"),
-	title: {
-		default: "指纹浏览器资源大全 | Anti-Detect Browser Hub",
-		template: "%s | 指纹浏览器资源大全"
-	},
-	description: "整理指纹浏览器、浏览器指纹检测、自动化与隐私资源，支持产品对比、技术百科和使用指南。",
+	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co"),
+	title: { default: "指纹浏览器资源大全 | BrowserHub", template: "%s | BrowserHub" },
+	description: "指纹浏览器、浏览器指纹检测、自动化、代理与隐私资源导航。",
 	keywords: ["anti-detect browser", "fingerprint browser", "browser automation", "multi-account", "privacy"],
-	authors: [{ name: "Anti-Detect Browser Hub" }],
+	authors: [{ name: "xxjrq" }],
 	creator: "xxjrq",
+	 alternates: { canonical: "/" },
 	openGraph: {
 		type: "website",
 		locale: "zh_CN",
-		title: "指纹浏览器资源大全",
+		title: "指纹浏览器资源大全 | BrowserHub",
 		description: "指纹浏览器、检测工具、自动化与隐私资源导航。",
-		siteName: "指纹浏览器资源大全"
+		siteName: "BrowserHub",
+		images: [{ url: "/brand/browserhub-og.png", width: 1200, height: 630, alt: "BrowserHub 指纹浏览器资源大全" }]
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "指纹浏览器资源大全",
-		description: "指纹浏览器、检测工具、自动化与隐私资源导航。"
+		title: "指纹浏览器资源大全 | BrowserHub",
+		description: "指纹浏览器、检测工具、自动化与隐私资源导航。",
+		images: ["/brand/browserhub-og.png"]
 	},
 	robots: {
 		index: true,
@@ -49,13 +50,25 @@ export default function RootLayout({
 	return (
 		<html lang="zh-CN" suppressHydrationWarning>
 			<body className={`${inter.variable} font-sans antialiased`}>
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-					"@context": "https://schema.org",
-					"@type": "Organization",
-					name: "指纹浏览器资源大全",
-					url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://browsers.draxgr.cc",
-					sameAs: ["https://github.com/xxjrq/antidetect-browser-hub", "https://gitee.com/xxjrq/antidetect-browser-hub"]
-				}) }} />
+				<DocumentLanguage />
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
+					{
+						"@context": "https://schema.org",
+						"@type": "Organization",
+						"@id": `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co"}/#organization`,
+						name: "BrowserHub",
+						url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co",
+						sameAs: ["https://github.com/xxjrq/antidetect-browser-hub", "https://gitee.com/xxjrq/antidetect-browser-hub"]
+					},
+					{
+						"@context": "https://schema.org",
+						"@type": "WebSite",
+						"@id": `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co"}/#website`,
+						name: "BrowserHub",
+						url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co",
+						publisher: { "@id": `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co"}/#organization` }
+					}
+				]) }} />
 				<div className="relative flex min-h-screen flex-col">
 					<Header />
 					<main className="flex-1">{children}</main>

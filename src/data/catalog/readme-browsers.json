@@ -1,0 +1,465 @@
+{
+  "source": "README.md",
+  "browsers": [
+    {
+      "id": "easybr",
+      "name": "EasyBR",
+      "url": "https://www.ebrower.com/",
+      "status": "active",
+      "rating": 4,
+      "freePlan": "5个",
+      "price": "$3+/月起",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "gologin",
+      "name": "GoLogin",
+      "url": "https://gologin.com/",
+      "status": "active",
+      "rating": 4,
+      "freePlan": "3个",
+      "price": "$24+/月起",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "云端"
+      ]
+    },
+    {
+      "id": "adspower",
+      "name": "AdsPower",
+      "url": "https://www.adspower.com/",
+      "status": "active",
+      "rating": 4,
+      "freePlan": "2个",
+      "price": "$5.4+/月起",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ]
+    },
+    {
+      "id": "multilogin",
+      "name": "Multilogin",
+      "url": "https://multilogin.com/",
+      "status": "active",
+      "rating": 4,
+      "freePlan": "试用",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ]
+    },
+    {
+      "id": "dolphin-anty",
+      "name": "Dolphin Anty",
+      "url": "https://dolphin-anty.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ]
+    },
+    {
+      "id": "morelogin",
+      "name": "MoreLogin",
+      "url": "https://www.morelogin.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "incogniton",
+      "name": "Incogniton",
+      "url": "https://incogniton.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "bitbrowser",
+      "name": "BitBrowser",
+      "url": "https://www.bitbrowser.net/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "octo-browser",
+      "name": "Octo Browser",
+      "url": "https://octobrowser.net/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "试用",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ]
+    },
+    {
+      "id": "kameleo",
+      "name": "Kameleo",
+      "url": "https://kameleo.io/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "试用",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Android"
+      ]
+    },
+    {
+      "id": "undetectable",
+      "name": "Undetectable",
+      "url": "https://undetectable.io/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "vmlogin",
+      "name": "VMLogin",
+      "url": "https://www.vmlogin.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "试用/付费",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows"
+      ]
+    },
+    {
+      "id": "ixbrowser",
+      "name": "ixBrowser",
+      "url": "https://www.ixbrowser.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "nstbrowser",
+      "name": "NSTBrowser",
+      "url": "https://www.nstbrowser.io/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ]
+    },
+    {
+      "id": "hidemyacc",
+      "name": "HideMyAcc",
+      "url": "https://hidemyacc.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "试用/付费",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "dicloak",
+      "name": "DICloak",
+      "url": "https://dicloak.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "ghost-browser",
+      "name": "Ghost Browser",
+      "url": "https://ghostbrowser.com/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "有限",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "wade",
+      "name": "Wade",
+      "url": "https://wade.is/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ]
+    },
+    {
+      "id": "gpmlogin",
+      "name": "GPMLogin",
+      "url": "https://gpmloginapp.com/en",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows"
+      ]
+    },
+    {
+      "id": "linken-sphere",
+      "name": "Linken Sphere",
+      "url": "https://linkensphere.info/en/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "camoufox",
+      "name": "Camoufox",
+      "url": "https://camoufox.com/",
+      "status": "open-source",
+      "rating": 4,
+      "freePlan": "开源",
+      "price": "免费",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ]
+    },
+    {
+      "id": "browser-automation-studio",
+      "name": "Browser Automation Studio",
+      "url": "https://bablosoft.com/shop/BrowserAutomationStudio",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "Windows"
+      ]
+    },
+    {
+      "id": "lightpanda",
+      "name": "Lightpanda",
+      "url": "https://lightpanda.io/",
+      "status": "active",
+      "rating": 3,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "Linux",
+        "Server"
+      ]
+    },
+    {
+      "id": "potabrowser",
+      "name": "PotaBrowser",
+      "url": "https://github.com/snaberino/pota-browser",
+      "status": "experimental",
+      "rating": 2,
+      "freePlan": "开源",
+      "price": "免费",
+      "platforms": [
+        "Desktop"
+      ]
+    },
+    {
+      "id": "cloakbrowser",
+      "name": "CloakBrowser",
+      "url": "https://github.com/CloakHQ/CloakBrowser",
+      "status": "experimental",
+      "rating": 2,
+      "freePlan": "开源",
+      "price": "免费",
+      "platforms": [
+        "Desktop"
+      ]
+    },
+    {
+      "id": "roxybrowser",
+      "name": "RoxyBrowser",
+      "url": "https://roxybrowser.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "url": "https://indigobrowser.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "vektort13",
+      "name": "VektorT13",
+      "url": "https://detect.expert/antidetect/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "nullprint",
+      "name": "NullPrint",
+      "url": "https://nullprint.net/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "multizen",
+      "name": "Multizen",
+      "url": "https://getmultizen.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "开源",
+      "price": "免费",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "donutbrowser",
+      "name": "DonutBrowser",
+      "url": "https://donutbrowser.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "dashnull",
+      "name": "DashNull",
+      "url": "https://dashnull.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "whologin",
+      "name": "WhoLogin",
+      "url": "https://whologin.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "chromepowerapp",
+      "name": "ChromePowerApp",
+      "url": "https://github.com/zmzimpl/chrome-power-app",
+      "status": "experimental",
+      "rating": 2,
+      "freePlan": "开源",
+      "price": "免费",
+      "platforms": [
+        "Windows"
+      ]
+    },
+    {
+      "id": "0detect",
+      "name": "0detect",
+      "url": "https://0detect.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    },
+    {
+      "id": "adblogin",
+      "name": "ADBLogin",
+      "url": "https://adblogin.com/",
+      "status": "pending-review",
+      "rating": 2,
+      "freePlan": "以官网为准",
+      "price": "以官网为准",
+      "platforms": [
+        "桌面端"
+      ]
+    }
+  ]
+}
