@@ -17,7 +17,7 @@ const categories = [
 	{ name: "指纹技术", icon: Wrench, count: technologies.length, href: "/fingerprint/", description: "渲染、设备、网络、语言与存储信号" }
 ];
 
-export default function Home() {
+export function HomePage() {
 	const featured = browsers.find(browser => browser.featured) ?? browsers[0];
 	const featuredRest = browsers.filter(browser => browser.slug !== featured.slug && ["gologin", "adspower", "multilogin"].includes(browser.slug)).slice(0, 3);
 	const stats = [
@@ -253,3 +253,5 @@ export default function Home() {
 		</div>
 	);
 }
+
+export default HomePage;

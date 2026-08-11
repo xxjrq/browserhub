@@ -11,6 +11,7 @@ import { StatusBadge } from "@/components/status-badge";
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
 import { allLocaleParams, comparisonApiAnswer, comparisonCopy, comparisonFaq, hreflangFor, isLocale, localeMeta, localePath, localizedResourceDescription, pageMeta, resourceFor, t, type Locale, type LocalizedKind } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
+import { HomePage } from "@/app/page";
 
 export const dynamicParams = false;
 
@@ -125,7 +126,7 @@ export default async function LocalizedPage({ params }: { params: Promise<{ loca
 	const locale = rawLocale;
 	const path = segments.join("/");
 	const [kindRaw, slug] = segments;
-	if (!path) return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, path, t(locale).homeTitle, t(locale).homeDescription, "WebSite")) }} /><Home locale={locale} /></>;
+	if (!path) return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, path, t(locale).homeTitle, t(locale).homeDescription, "WebSite")) }} />{locale === "zh-cn" ? <HomePage /> : <Home locale={locale} />}</>;
 	if (["about", "contact", "privacy"].includes(kindRaw) && !slug) return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, path, pageMeta(locale, path).title, pageMeta(locale, path).description, "AboutPage")) }} /><InfoPage locale={locale} kind={kindRaw as "about" | "contact" | "privacy"} /></>;
 	const kind = kindRaw as LocalizedKind;
 	if (!["browsers", "tools", "fingerprint", "guides", "compare"].includes(kind)) notFound();
