@@ -1,0 +1,2 @@
+export const metadata = { title: "隐私说明", description: "指纹浏览器资源大全的隐私说明。" };
+export default function PrivacyPage() { return <div className="container py-12"><article className="mx-auto max-w-3xl"><h1 className="text-4xl font-bold tracking-tight">隐私说明</h1><p className="mt-6 text-lg leading-8 text-muted-foreground">本站第一版为静态内容站，不要求登录，不收集浏览器配置，不提供用户数据后台。第三方链接会跳转到对应服务商的页面，请在使用前阅读对方的隐私政策。</p></article></div>; }

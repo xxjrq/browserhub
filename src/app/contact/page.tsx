@@ -1,0 +1,2 @@
+export const metadata = { title: "联系与贡献", description: "联系指纹浏览器资源大全项目并提交修正。" };
+export default function ContactPage() { return <div className="container py-12"><article className="mx-auto max-w-3xl"><h1 className="text-4xl font-bold tracking-tight">联系与贡献</h1><p className="mt-6 text-lg leading-8 text-muted-foreground">欢迎通过项目仓库提交链接、修正、翻译和内容建议。提交时请附上来源 URL、修改理由和适用语言。</p><a className="mt-8 inline-flex underline" href="https://github.com/xxjrq/antidetect-browser-hub/issues" target="_blank" rel="noopener noreferrer">前往 GitHub Issues</a></article></div>; }
