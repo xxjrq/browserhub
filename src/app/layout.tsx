@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 	keywords: ["anti-detect browser", "fingerprint browser", "browser automation", "multi-account", "privacy"],
 	authors: [{ name: "xxjrq" }],
 	creator: "xxjrq",
-	 alternates: { canonical: "/" },
+	 alternates: { canonical: "/zh-cn/" },
 	openGraph: {
 		type: "website",
 		locale: "zh_CN",

@@ -9,7 +9,8 @@
 		"lint": "eslint",
 		"assets:brand": "node scripts/generate-brand-assets.mjs",
 		"check:dist": "node scripts/check-dist.mjs",
-		"ci": "npm run lint && npm run assets:brand && NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build && npm run check:dist"
+		"ci": "npm run lint && npm run assets:brand && NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build && npm run fix:locale-lang && npm run check:dist",
+		"fix:locale-lang": "node scripts/fix-static-locale-lang.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

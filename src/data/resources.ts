@@ -274,6 +274,24 @@ export const comparisons: ComparisonResource[] = [
 	{ title: "BitBrowser vs AdsPower", slug: "bitbrowser-vs-adspower", description: "比较环境数量、平台与工作流能力。", browsers: ["bitbrowser", "adspower"] },
 	{ title: "Incogniton vs GoLogin", slug: "incogniton-vs-gologin", description: "比较轻量多账号管理和云端自动化。", browsers: ["incogniton", "gologin"] },
 	{ title: "MoreLogin vs Multilogin", slug: "morelogin-vs-multilogin", description: "比较不同团队规模下的浏览器环境管理。", browsers: ["morelogin", "multilogin"] }
+	,
+	{ title: "AdsPower vs Dolphin Anty", slug: "adspower-vs-dolphin-anty", description: "比较电商工作流、团队协作和多账号环境能力。", browsers: ["adspower", "dolphin-anty"] },
+	{ title: "AdsPower vs MoreLogin", slug: "adspower-vs-morelogin", description: "比较免费额度、自动化接口和常见运营场景。", browsers: ["adspower", "morelogin"] },
+	{ title: "AdsPower vs Incogniton", slug: "adspower-vs-incogniton", description: "比较电商运营与轻量多账号管理。", browsers: ["adspower", "incogniton"] },
+	{ title: "GoLogin vs Dolphin Anty", slug: "gologin-vs-dolphin-anty", description: "比较云端环境、团队协作和自动化能力。", browsers: ["gologin", "dolphin-anty"] },
+	{ title: "GoLogin vs MoreLogin", slug: "gologin-vs-morelogin", description: "比较价格、环境数量、平台与自动化支持。", browsers: ["gologin", "morelogin"] },
+	{ title: "GoLogin vs Incogniton", slug: "gologin-vs-incogniton", description: "比较轻量多账号管理和云端工作流。", browsers: ["gologin", "incogniton"] },
+	{ title: "GoLogin vs Kameleo", slug: "gologin-vs-kameleo", description: "比较浏览器指纹管理、平台和自动化方式。", browsers: ["gologin", "kameleo"] },
+	{ title: "GoLogin vs Octo Browser", slug: "gologin-vs-octo-browser", description: "比较多账号环境、团队功能与代理配置。", browsers: ["gologin", "octo-browser"] },
+	{ title: "Multilogin vs Dolphin Anty", slug: "multilogin-vs-dolphin-anty", description: "比较企业团队管理与社媒运营场景。", browsers: ["multilogin", "dolphin-anty"] },
+	{ title: "Multilogin vs Incogniton", slug: "multilogin-vs-incogniton", description: "比较企业级环境管理与轻量方案。", browsers: ["multilogin", "incogniton"] },
+	{ title: "Multilogin vs Kameleo", slug: "multilogin-vs-kameleo", description: "比较浏览器内核、指纹能力与自动化支持。", browsers: ["multilogin", "kameleo"] },
+	{ title: "Dolphin Anty vs MoreLogin", slug: "dolphin-anty-vs-morelogin", description: "比较社媒运营、环境数量和团队协作。", browsers: ["dolphin-anty", "morelogin"] },
+	{ title: "Dolphin Anty vs Incogniton", slug: "dolphin-anty-vs-incogniton", description: "比较营销团队和个人多账号使用方式。", browsers: ["dolphin-anty", "incogniton"] },
+	{ title: "MoreLogin vs BitBrowser", slug: "morelogin-vs-bitbrowser", description: "比较亚洲市场常见方案的环境与自动化能力。", browsers: ["morelogin", "bitbrowser"] },
+	{ title: "Octo Browser vs Undetectable", slug: "octo-browser-vs-undetectable", description: "比较多账号环境、代理配置与自动化工作流。", browsers: ["octo-browser", "undetectable"] },
+	{ title: "Kameleo vs Octo Browser", slug: "kameleo-vs-octo-browser", description: "比较指纹配置、平台和自动化工作流。", browsers: ["kameleo", "octo-browser"] },
+	{ title: "Undetectable vs GoLogin", slug: "undetectable-vs-gologin", description: "比较多账号浏览器的价格、环境和自动化能力。", browsers: ["undetectable", "gologin"] }
 ];
 
 export const browserBySlug = (slug: string) => browsers.find(browser => browser.slug === slug);

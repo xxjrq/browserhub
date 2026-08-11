@@ -117,3 +117,70 @@ export function pageMeta(locale: Locale, path: string) {
 		description: `${name} — ${section}. ${labels.sourceNote}`
 	};
 }
+
+export function comparisonCopy(locale: Locale, a: BrowserResource, b: BrowserResource) {
+	const names = `${a.name} 与 ${b.name}`;
+	const enNames = `${a.name} and ${b.name}`;
+	const templates: Record<Locale, { overview: string; verdict: string; strengths: string; limitations: string; scenarios: string; faq: string; fields: Record<string, string>; free: string; price: string; profiles: string; platform: string; engine: string; storage: string; api: string; automation: string; proxy: string; source: string }> = {
+		"zh-cn": { overview: `${names} 的主要差异集中在环境存储、免费额度、平台覆盖和自动化方式。下面使用同一组公开字段，帮助个人用户、运营团队和开发者快速缩小选择范围。`, verdict: `如果你更看重本地控制、环境隔离或当前页面列出的免费额度，应优先查看 ${a.name}；如果你更看重 ${b.name} 的平台覆盖、团队工作流或公开集成能力，则可以优先评估 ${b.name}。最终请以两家官网当前套餐和文档为准。`, strengths: `${a.name} 的优势与适用场景`, limitations: `${b.name} 的优势与适用场景`, scenarios: "场景建议", faq: "常见问题", fields: { free: "免费额度", price: "起步价格", profiles: "环境数量", platform: "平台", engine: "浏览器内核", storage: "存储方式", api: "API", automation: "自动化", proxy: "代理" }, free: "免费额度", price: "价格", profiles: "环境数量", platform: "平台", engine: "内核", storage: "存储", api: "API", automation: "自动化", proxy: "代理", source: "价格、套餐和功能可能变化，请以官方页面为准。" },
+		en: { overview: `The main differences between ${enNames} are profile storage, free capacity, platform coverage and automation workflow. The table below uses the same public fields so individuals, operators and developers can compare them consistently.`, verdict: `Choose ${a.name} first if local control, profile isolation or its listed free allowance matters most. Evaluate ${b.name} first if its platform coverage, team workflow or public integrations better match your needs. Confirm current plans and documentation on both official websites.`, strengths: `${a.name}: strengths and best-fit scenarios`, limitations: `${b.name}: strengths and best-fit scenarios`, scenarios: "Scenario guidance", faq: "Frequently asked questions", fields: { free: "Free allowance", price: "Starting price", profiles: "Profiles", platform: "Platforms", engine: "Browser engine", storage: "Storage", api: "API", automation: "Automation", proxy: "Proxy" }, free: "Free allowance", price: "Price", profiles: "Profiles", platform: "Platforms", engine: "Engine", storage: "Storage", api: "API", automation: "Automation", proxy: "Proxy", source: "Plans, pricing and features can change; confirm them on the official websites." },
+		ja: { overview: `${a.name} と ${b.name} の違いは、プロファイル保存、無料枠、対応プラットフォーム、自動化の運用方法にあります。同じ公開項目で比較し、利用目的に合う候補を絞り込みます。`, verdict: `ローカル管理や環境分離、掲載された無料枠を重視する場合は ${a.name} を先に確認してください。チーム運用や対応プラットフォームを重視する場合は ${b.name} も比較してください。最新情報は公式サイトで確認します。`, strengths: `${a.name} の特徴と適した用途`, limitations: `${b.name} の特徴と適した用途`, scenarios: "用途別の目安", faq: "よくある質問", fields: { free: "無料枠", price: "開始料金", profiles: "環境数", platform: "対応環境", engine: "ブラウザエンジン", storage: "保存方式", api: "API", automation: "自動化", proxy: "プロキシ" }, free: "無料枠", price: "料金", profiles: "環境数", platform: "プラットフォーム", engine: "エンジン", storage: "保存", api: "API", automation: "自動化", proxy: "プロキシ", source: "料金・機能は変更される可能性があるため、公式サイトを確認してください。" },
+		ko: { overview: `${a.name}과(와) ${b.name}의 차이는 프로필 저장 방식, 무료 한도, 플랫폼 지원과 자동화 흐름에 있습니다. 동일한 공개 필드로 비교해 사용 목적에 맞는 후보를 찾을 수 있습니다.`, verdict: `로컬 제어와 프로필 격리를 중시하면 ${a.name}을(를) 먼저 확인하고, 팀 워크플로와 플랫폼 범위를 중시하면 ${b.name}도 함께 평가하세요. 최신 요금과 기능은 공식 사이트에서 확인해야 합니다.`, strengths: `${a.name}의 특징과 적합한 사용 시나리오`, limitations: `${b.name}의 특징과 적합한 사용 시나리오`, scenarios: "사용 시나리오", faq: "자주 묻는 질문", fields: { free: "무료 한도", price: "시작 가격", profiles: "프로필 수", platform: "플랫폼", engine: "브라우저 엔진", storage: "저장 방식", api: "API", automation: "자동화", proxy: "프록시" }, free: "무료 한도", price: "가격", profiles: "프로필", platform: "플랫폼", engine: "엔진", storage: "저장", api: "API", automation: "자동화", proxy: "프록시", source: "요금과 기능은 바뀔 수 있으므로 공식 사이트에서 확인하세요." },
+		es: { overview: `Las diferencias principales entre ${a.name} y ${b.name} están en el almacenamiento de perfiles, el plan gratuito, las plataformas y la automatización. La tabla usa los mismos campos públicos para facilitar una comparación clara.`, verdict: `Prioriza ${a.name} si necesitas más control local, aislamiento de perfiles o su plan gratuito publicado. Evalúa ${b.name} si encaja mejor con tus plataformas, equipo o integraciones. Confirma siempre la información actual en los sitios oficiales.`, strengths: `${a.name}: ventajas y escenarios`, limitations: `${b.name}: ventajas y escenarios`, scenarios: "Guía por escenario", faq: "Preguntas frecuentes", fields: { free: "Plan gratuito", price: "Precio inicial", profiles: "Perfiles", platform: "Plataformas", engine: "Motor", storage: "Almacenamiento", api: "API", automation: "Automatización", proxy: "Proxy" }, free: "Plan gratuito", price: "Precio", profiles: "Perfiles", platform: "Plataformas", engine: "Motor", storage: "Almacenamiento", api: "API", automation: "Automatización", proxy: "Proxy", source: "Los precios y funciones pueden cambiar; verifica los datos en los sitios oficiales." },
+		pt: { overview: `As principais diferenças entre ${a.name} e ${b.name} estão no armazenamento dos perfis, no plano gratuito, nas plataformas e na automação. A tabela usa os mesmos campos públicos para uma comparação consistente.`, verdict: `Priorize ${a.name} se o controle local, o isolamento dos perfis ou o plano gratuito forem mais importantes. Avalie ${b.name} se as plataformas, o trabalho em equipe ou as integrações forem mais adequados. Confirme os dados nos sites oficiais.`, strengths: `${a.name}: vantagens e cenários`, limitations: `${b.name}: vantagens e cenários`, scenarios: "Orientação por cenário", faq: "Perguntas frequentes", fields: { free: "Plano gratuito", price: "Preço inicial", profiles: "Perfis", platform: "Plataformas", engine: "Navegador", storage: "Armazenamento", api: "API", automation: "Automação", proxy: "Proxy" }, free: "Plano gratuito", price: "Preço", profiles: "Perfis", platform: "Plataformas", engine: "Engine", storage: "Armazenamento", api: "API", automation: "Automação", proxy: "Proxy", source: "Preços e recursos podem mudar; confirme as informações nos sites oficiais." },
+		ru: { overview: `Главные различия между ${a.name} и ${b.name} связаны с хранением профилей, бесплатным лимитом, платформами и автоматизацией. В таблице используются одинаковые открытые поля для понятного сравнения.`, verdict: `Сначала изучите ${a.name}, если важны локальный контроль, изоляция профилей или опубликованный бесплатный лимит. Изучите ${b.name}, если важнее платформы, командный процесс или интеграции. Актуальные условия проверяйте на официальных сайтах.`, strengths: `${a.name}: преимущества и сценарии`, limitations: `${b.name}: преимущества и сценарии`, scenarios: "Рекомендации по сценарию", faq: "Частые вопросы", fields: { free: "Бесплатный план", price: "Начальная цена", profiles: "Профили", platform: "Платформы", engine: "Движок", storage: "Хранилище", api: "API", automation: "Автоматизация", proxy: "Прокси" }, free: "Бесплатный план", price: "Цена", profiles: "Профили", platform: "Платформы", engine: "Движок", storage: "Хранилище", api: "API", automation: "Автоматизация", proxy: "Прокси", source: "Цены и функции могут меняться; проверяйте данные на официальных сайтах." }
+	};
+	return templates[locale];
+}
+
+export function comparisonFaq(locale: Locale, a: BrowserResource, b: BrowserResource, copy: ReturnType<typeof comparisonCopy>) {
+	const questions: Record<Locale, [string, string, string]> = {
+		"zh-cn": [`${a.name} 和 ${b.name} 哪个更适合我？`, `${copy.fields.price}如何确认？`, `${copy.fields.api}和${copy.fields.automation}是否相同？`],
+		en: [`Which is a better fit: ${a.name} or ${b.name}?`, `How should I verify the ${copy.fields.price.toLowerCase()}?`, `Do ${copy.fields.api} and ${copy.fields.automation.toLowerCase()} mean the same thing?`],
+		ja: [`${a.name} と ${b.name} はどちらが適していますか？`, `${copy.fields.price}はどこで確認できますか？`, `${copy.fields.api}と${copy.fields.automation}は同じですか？`],
+		ko: [`${a.name}과(와) ${b.name} 중 어느 쪽이 적합한가요?`, `${copy.fields.price}는 어디에서 확인하나요?`, `${copy.fields.api}와(과) ${copy.fields.automation}은 같은 의미인가요?`],
+		es: [`¿Qué opción encaja mejor: ${a.name} o ${b.name}?`, `¿Cómo se debe verificar el ${copy.fields.price.toLowerCase()}?`, `¿La ${copy.fields.api} es lo mismo que la ${copy.fields.automation.toLowerCase()}?`],
+		pt: [`Qual opção é mais adequada: ${a.name} ou ${b.name}?`, `Como confirmar o ${copy.fields.price.toLowerCase()}?`, `${copy.fields.api} e ${copy.fields.automation.toLowerCase()} são a mesma coisa?`],
+		ru: [`Что лучше подходит: ${a.name} или ${b.name}?`, `Где проверить ${copy.fields.price.toLowerCase()}?`, `${copy.fields.api} и ${copy.fields.automation.toLowerCase()} — это одно и то же?`]
+	};
+	return questions[locale];
+}
+
+export function comparisonApiAnswer(locale: Locale, a: BrowserResource, b: BrowserResource) {
+	const answers: Record<Locale, string> = {
+		"zh-cn": `${a.name} 与 ${b.name} 的 API 和自动化能力应分别查看官方文档，表格只记录公开资料中明确列出的能力。`,
+		en: `${a.name} and ${b.name} API and automation capabilities should be confirmed in the official documentation; this table only records publicly stated capabilities.`,
+		ja: `${a.name} と ${b.name} の API と自動化機能は公式ドキュメントで個別に確認してください。この表は公開情報だけを記載しています。`,
+		ko: `${a.name}과(와) ${b.name}의 API 및 자동화 기능은 공식 문서에서 확인해야 하며, 표에는 공개된 정보만 표시합니다.`,
+		es: `Las capacidades de API y automatización de ${a.name} y ${b.name} deben confirmarse en su documentación oficial; la tabla solo recoge información pública.`,
+		pt: `As capacidades de API e automação de ${a.name} e ${b.name} devem ser confirmadas na documentação oficial; a tabela registra apenas informações públicas.`,
+		ru: `Возможности API и автоматизации ${a.name} и ${b.name} следует проверять в официальной документации; в таблице указаны только открытые данные.`
+	};
+	return answers[locale];
+}
+
+// The catalog is a discriminated union at runtime; this helper intentionally reads fields selected by `kind`.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function localizedResourceDescription(locale: Locale, kind: LocalizedKind, item: any) {
+	if (locale === "zh-cn") return item.description;
+	if (kind === "compare" && "browsers" in item) {
+		const a = browsers.find(browser => browser.slug === item.browsers[0]) ?? browsers[0];
+		const b = browsers.find(browser => browser.slug === item.browsers[1]) ?? browsers[1];
+		return comparisonCopy(locale, a, b).overview;
+	}
+	if (kind === "browsers" && "longDescription" in item && "type" in item) {
+		const templates: Partial<Record<Locale, string>> = {
+			en: `${item.name} is a ${item.type} browser resource for isolated browser environments, multi-account workflows and privacy research. Review its platforms, storage model and public capabilities before choosing a plan.`,
+			ja: `${item.name} は分離されたブラウザ環境、マルチアカウント運用、プライバシー研究向けの ${item.type} ブラウザです。料金と公開機能は公式情報で確認してください。`,
+			ko: `${item.name}은(는) 격리된 브라우저 환경과 멀티 계정 워크플로를 위한 ${item.type} 브라우저 리소스입니다. 요금과 공개 기능은 공식 정보를 확인하세요.`,
+			es: `${item.name} es un recurso de navegador ${item.type} para entornos aislados y flujos multicuenta. Revisa sus plataformas y funciones públicas antes de elegir un plan.`,
+			pt: `${item.name} é um recurso de navegador ${item.type} para ambientes isolados e fluxos multi-conta. Confira plataformas e recursos públicos antes de escolher um plano.`,
+			ru: `${item.name} — это ресурс ${item.type}-браузера для изолированных сред и мультиаккаунт-сценариев. Перед выбором тарифа проверьте платформы и открытые функции.`
+		};
+		return templates[locale] ?? item.longDescription;
+	}
+	if (kind === "tools" && "category" in item) return ({ en: `${item.name} is a public ${item.category} resource for browser, network or automation research. Review the official documentation and test conditions before relying on a result.`, ja: `${item.name} はブラウザ、ネットワーク、自動化研究向けの公開 ${item.category} リソースです。結果を利用する前に公式ドキュメントを確認してください。`, ko: `${item.name}은(는) 브라우저·네트워크·자동화 연구를 위한 공개 ${item.category} 리소스입니다. 결과를 사용하기 전에 공식 문서를 확인하세요.`, es: `${item.name} es un recurso público de ${item.category} para investigar navegadores, redes o automatización. Consulta su documentación oficial.`, pt: `${item.name} é um recurso público de ${item.category} para pesquisa de navegadores, redes ou automação. Consulte a documentação oficial.`, ru: `${item.name} — открытый ресурс категории «${item.category}» для исследования браузеров, сетей или автоматизации. Изучите официальную документацию.` } as Record<Locale, string>)[locale];
+	if (kind === "fingerprint" && "category" in item) return ({ en: `${item.name} is a browser fingerprint signal used to study rendering, device, language, network or storage consistency.`, ja: `${item.name} はレンダリング、端末、言語、ネットワーク、ストレージの一貫性を調べるブラウザ指紋信号です。`, ko: `${item.name}은(는) 렌더링, 장치, 언어, 네트워크 또는 저장소 일관성을 분석하는 브라우저 핑거프린트 신호입니다.`, es: `${item.name} es una señal de huella del navegador relacionada con la coherencia de renderizado, dispositivo, idioma, red o almacenamiento.`, pt: `${item.name} é um sinal de fingerprint usado para estudar a consistência de renderização, dispositivo, idioma, rede ou armazenamento.`, ru: `${item.name} — сигнал браузерного отпечатка для анализа согласованности рендеринга, устройства, языка, сети или хранилища.` } as Record<Locale, string>)[locale];
+	if (kind === "guides" && "title" in item) return ({ en: `A practical BrowserHub guide covering browser selection, profile isolation, proxy setup, fingerprint checks and responsible use.`, ja: `ブラウザ選定、プロファイル分離、プロキシ設定、指紋チェックと適切な利用を扱う BrowserHub の実用ガイドです。`, ko: `브라우저 선택, 프로필 분리, 프록시 설정, 핑거프린트 점검과 책임 있는 사용을 다루는 BrowserHub 실용 가이드입니다.`, es: `Guía práctica de BrowserHub sobre selección de navegadores, aislamiento de perfiles, proxies, huellas y uso responsable.`, pt: `Guia prático do BrowserHub sobre escolha de navegadores, isolamento de perfis, proxies, fingerprints e uso responsável.`, ru: `Практическое руководство BrowserHub по выбору браузера, изоляции профилей, прокси, отпечаткам и ответственному использованию.` } as Record<Locale, string>)[locale];
+	return item.description;
+}

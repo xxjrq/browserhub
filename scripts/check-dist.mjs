@@ -15,6 +15,7 @@ const errors = [];
 const titles = new Map();
 const descriptions = new Map();
 const locales = ["zh-cn", "en", "ja", "ko", "es", "pt", "ru"];
+const localeLang = { "zh-cn": "zh-CN", en: "en", ja: "ja", ko: "ko", es: "es", pt: "pt", ru: "ru" };
 for (const file of htmlFiles) {
 	const html = fs.readFileSync(file, "utf8");
 	if (!file.includes("/404") && !file.includes("/_not-found")) {
@@ -31,6 +32,9 @@ for (const file of htmlFiles) {
 		if (!sectionRoot.has(relative) && !/<script[^>]+type=["']application\/ld\+json["']/i.test(html)) errors.push(`${file}: missing JSON-LD`);
 		const locale = locales.find(item => relative === `${item}/index.html` || relative.startsWith(`${item}/`));
 		if (locale) {
+			const expectedLang = localeLang[locale];
+			const actualLang = html.match(/<html[^>]+lang=["']([^"']+)["']/i)?.[1];
+			if (actualLang !== expectedLang) errors.push(`${file}: expected html lang=${expectedLang}, found ${actualLang ?? "missing"}`);
 			const alternateCount = (html.match(/rel=["']alternate["'][^>]+hrefLang=/gi) ?? []).length;
 			if (alternateCount < 8) errors.push(`${file}: expected 8 hreflang links, found ${alternateCount}`);
 			if (!/<meta[^>]+property=["']og:title["']/i.test(html)) errors.push(`${file}: missing OpenGraph title`);
@@ -49,6 +53,7 @@ for (const locale of locales) {
 	if (localeUrls.length < 117) errors.push(`locale sitemap coverage below expected minimum: ${locale} (${localeUrls.length})`);
 }
 if (htmlFiles.some(file => /\?lang=/.test(fs.readFileSync(file, "utf8")))) errors.push("locale switching must not use ?lang=");
+if (!/<link[^>]+rel=["']canonical["'][^>]+href=["']https:\/\/browserhub\.co\/zh-cn\//i.test(fs.readFileSync(path.join(root, "index.html"), "utf8"))) errors.push("root canonical must point to /zh-cn/");
 if ((sitemap.match(/\/browsers\/[^<]+/g) ?? []).length < 36) errors.push("browser count below 36");
 if ((sitemap.match(/\/tools\/[^<]+/g) ?? []).length < 35) errors.push("tool count below 35");
 if ((sitemap.match(/\/fingerprint\/[^<]+/g) ?? []).length < 15) errors.push("technology count below 15");
