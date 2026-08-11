@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -50,6 +51,13 @@ export default function RootLayout({
 	return (
 		<html lang="zh-CN" suppressHydrationWarning>
 			<body className={`${inter.variable} font-sans antialiased`}>
+				{process.env.NODE_ENV === "production" && <Script id="baidu-analytics" strategy="afterInteractive">{`var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?05e35203a9afa3bf3f9100645c520d27";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();`}</Script>}
 				<DocumentLanguage />
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
 					{
