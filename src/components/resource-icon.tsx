@@ -29,11 +29,16 @@ const hashHue = (value: string) => {
 };
 
 export function ResourceIcon({ name, src, website, size = 40, className }: ResourceIconProps) {
-	const [failed, setFailed] = useState(false);
+	const [sourceIndex, setSourceIndex] = useState(0);
 	const [loaded, setLoaded] = useState(false);
 	const domain = getDomain(website);
-	const remote = src ?? (domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128` : undefined);
-	const showImage = Boolean(remote) && !failed;
+	const sources = [
+		src,
+		domain ? `https://${domain}/favicon.ico` : undefined,
+		domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128` : undefined
+	].filter((value): value is string => Boolean(value));
+	const remote = sources[sourceIndex];
+	const showImage = Boolean(remote);
 
 	const parts = name.split(/\s+/).filter(Boolean);
 	const fallback = (parts.length > 1 ? parts.map(part => part[0]).join("") : name.replace(/[^A-Za-z0-9]/g, "")).slice(0, 2).toUpperCase() || name.slice(0, 2).toUpperCase();
@@ -60,7 +65,10 @@ export function ResourceIcon({ name, src, website, size = 40, className }: Resou
 					height={size}
 					loading="lazy"
 					onLoad={() => setLoaded(true)}
-					onError={() => setFailed(true)}
+					onError={() => {
+						setLoaded(false);
+						setSourceIndex(index => Math.min(index + 1, sources.length));
+					}}
 					className={cn("absolute inset-0 h-full w-full bg-card object-contain p-[16%] transition-opacity duration-300", loaded ? "opacity-100" : "opacity-0")}
 				/>
 			) : null}
