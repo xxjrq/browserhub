@@ -34,6 +34,8 @@ export type BrowserResource = {
 	cons: string[];
 	updatedAt: string;
 	sourceUrl: string;
+	pricingUrl?: string;
+	pricingCheckedAt?: string;
 	icon?: string;
 };
 
@@ -91,6 +93,7 @@ export type ComparisonResource = {
 };
 
 const updatedAt = "2026-08-11";
+const pricingCheckedAt = "2026-08-12";
 const officialSite = "https://www.ebrower.com/";
 
 const detailedBrowsers: Record<string, Partial<BrowserResource>> = {
@@ -109,10 +112,35 @@ const detailedBrowsers: Record<string, Partial<BrowserResource>> = {
 		website: officialSite,
 		download: "https://www.ebrower.com/down.html",
 		rating: 4,
+		pricingUrl: "https://www.ebrower.com/",
 	},
-	gologin: { description: "面向多账号和自动化的云端指纹浏览器", rating: 4 },
-	adspower: { description: "面向电商运营和自动化流程的指纹浏览器", rating: 4 },
-	multilogin: { description: "面向团队和企业流程的指纹浏览器", rating: 4 }
+	gologin: { description: "面向多账号和自动化的云端指纹浏览器", rating: 4, free: "3 个浏览器档案", price: "$9/月起（Professional；当前促销 $4.50/月）", pricingUrl: "https://gologin.com/pricing/" },
+	adspower: { description: "面向电商运营和自动化流程的指纹浏览器", rating: 4, free: "2 个档案永久免费", price: "$9/月起（Professional；年付折算 $7.20/月）", pricingUrl: "https://www.adspower.com/pricing" },
+	multilogin: { description: "面向团队和企业流程的指纹浏览器", rating: 4, free: "5 个档案免费", price: "$7.08/月起（年付）", pricingUrl: "https://multilogin.com/pricing/" },
+	"dolphin-anty": { free: "5 个档案免费", price: "$10/月起", pricingUrl: "https://dolphin-anty.com/pricing/" },
+	morelogin: { free: "2 个档案永久免费", price: "$5.40/月起", pricingUrl: "https://www.morelogin.com/pricing" },
+	incogniton: { free: "前 2 个月 10 个档案，之后 3 个", price: "$19.99/月起（半年计费）", pricingUrl: "https://incogniton.com/pricing/" },
+	bitbrowser: { free: "10 个档案永久免费", price: "$10/月起（50 个档案）", pricingUrl: "https://www.bitbrowser.net/price" },
+	"octo-browser": { free: "试用/促销额度以官网为准", price: "$10/月起", pricingUrl: "https://octobrowser.net/pricing/" },
+	kameleo: { free: "免费计划；100 个云端档案", price: "$51.93/月起（约 €45）", pricingUrl: "https://kameleo.io/pricing" },
+	undetectable: { free: "5–45 个云端档案免费", price: "$34/月起", pricingUrl: "https://undetectable.io/pricing/" },
+	ixbrowser: { free: "免费版 $0/月", price: "$2.81/月起（约 ¥19）", pricingUrl: "https://www.ixbrowser.com/en/pricing" },
+	nstbrowser: { free: "免费计划", price: "按档案启动/代理用量计费；代理 $0.30/GB 起", pricingUrl: "https://www.nstbrowser.io/en/pricing" },
+	hidemyacc: { free: "7 天免费试用", price: "$5/月起（年付价）", pricingUrl: "https://hidemyacc.com/pricing" },
+	dicloak: { free: "$0/月免费计划", price: "$8/月起（年付折算 $4.80/月）", pricingUrl: "https://dicloak.com/pricing" },
+	"ghost-browser": { free: "免费版", price: "$21/月起（年付）", pricingUrl: "https://ghostbrowser.com/upgrade/" },
+	wade: { free: "7 天完整试用", price: "$10/月起", pricingUrl: "https://wade.is/pricing" },
+	"linken-sphere": { free: "免费计划", price: "$24/月起", pricingUrl: "https://ls.app/pricing" },
+	camoufox: { free: "开源免费", price: "$0（开源）", pricingUrl: "https://camoufox.com/" },
+	gpmlogin: { free: "7 天免费试用", price: "$125 起（终身授权）", pricingUrl: "https://gpmloginapp.com/en" },
+	"browser-automation-studio": { free: "免费版", price: "$80/年（高级版）", pricingUrl: "https://bablosoft.com/shop/BrowserAutomationStudio" },
+	lightpanda: { free: "$0/月；每月含 10 小时", price: "$19/月起", pricingUrl: "https://lightpanda.io/pricing" },
+	roxybrowser: { free: "3 个档案免费试用", price: "$4.80/月起", pricingUrl: "https://roxybrowser.com/pricing" },
+	nullprint: { free: "7 天试用", price: "$9/月起", pricingUrl: "https://nullprint.net/pricing/" },
+	multizen: { free: "开源免费", price: "$0（MIT 开源）", pricingUrl: "https://getmultizen.com/" },
+	donutbrowser: { free: "免费计划；本地档案永久免费", price: "$29/月起（Solo）", pricingUrl: "https://donutbrowser.com/pricing/" },
+	"0detect": { free: "1 个档案免费计划", price: "免费计划；付费价格以官网为准", pricingUrl: "https://0detect.com/prices" },
+	adblogin: { free: "无限本地档案永久免费", price: "$0（永久免费）", pricingUrl: "https://adblogin.com/" }
 };
 
 const readmeRows = readmeBrowserCatalog.browsers as Array<{ id: string; name: string; url: string; status: ResourceStatus; rating: number; freePlan: string; price: string; platforms: string[] }>;
@@ -126,6 +154,12 @@ const normalizePlatform = (value: string) => {
 const normalizeStatus = (value: string): ResourceStatus => {
 	if (["recommended", "active", "open-source", "experimental", "pending-review", "inactive"].includes(value)) return value as ResourceStatus;
 	return "pending-review";
+};
+const normalizePrice = (value: string) => {
+	if (value === "以官网为准") return "官网动态报价";
+	if (value === "免费") return "$0（免费）";
+	if (value === "试用") return "免费试用，详见官网价格页";
+	return value;
 };
 
 export const browsers: BrowserResource[] = readmeRows.map(row => {
@@ -141,7 +175,7 @@ export const browsers: BrowserResource[] = readmeRows.map(row => {
 		description: detail.description ?? `${row.name} 的浏览器环境与多账号资源整理`,
 		longDescription: detail.longDescription ?? `${row.name} 的公开资源信息，包括状态、平台、浏览器内核和适用场景。使用前请以官方页面为准。`,
 		free: detail.free ?? row.freePlan,
-		price: detail.price ?? row.price,
+		price: normalizePrice(detail.price ?? row.price),
 		profiles: detail.profiles ?? "未公开",
 		api: detail.api ?? (catalog?.automation ?? false),
 		automation: detail.automation ?? (catalog?.automation ?? false),
@@ -163,6 +197,8 @@ export const browsers: BrowserResource[] = readmeRows.map(row => {
 		cons: detail.cons ?? ["功能和套餐可能变化"],
 		updatedAt,
 		sourceUrl: `https://github.com/xxjrq/antidetect-browser-hub/blob/main/README.md#${nameSlug}`,
+		pricingUrl: detail.pricingUrl ?? row.url,
+		pricingCheckedAt,
 		icon: detail.icon
 	};
 });

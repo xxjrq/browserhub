@@ -163,6 +163,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 						<CardContent className="space-y-4">
 							<SpecRow label="免费额度" value={browser.free} />
 							<SpecRow label="起步价格" value={<span className="font-mono">{browser.price}</span>} />
+							<SpecRow label="官方价格页" value={<a href={browser.pricingUrl ?? browser.website} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-4 hover:underline">查看</a>} />
 							<SpecRow label="环境数量" value={browser.profiles} />
 							<Separator />
 							<CapabilityRow label="API" ok={browser.api} />
@@ -172,6 +173,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 							<SpecRow label="平台" value={browser.platforms.join(", ")} />
 							<SpecRow label="内核" value={browser.engine} />
 							<SpecRow label="存储" value={browser.storage} />
+							{browser.pricingCheckedAt && <p className="border-t pt-3 text-xs leading-5 text-muted-foreground">价格核对：{browser.pricingCheckedAt} · 价格可能随官网套餐调整</p>}
 							<div className="flex items-center justify-between gap-4">
 								<span className="text-sm text-muted-foreground">编辑评分</span>
 								<Rating value={browser.rating} />
