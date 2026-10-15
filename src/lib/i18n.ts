@@ -1,4 +1,5 @@
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
+import { localizedGuideCopy } from "@/data/guide-translations";
 
 export const locales = ["zh-cn", "en", "ja", "ko", "es", "pt", "ru"] as const;
 export type Locale = (typeof locales)[number];
@@ -120,7 +121,9 @@ export function pageMeta(locale: Locale, path: string) {
 		return { title, description: comparison.overview };
 	}
 	if (kind === "guides" && resource && "content" in resource) {
-		return { title: `${name} | ${labels.guides}`, description: resource.description };
+		const guide = resource as GuideResource;
+		const copy = localizedGuideCopy(locale, guide.slug, { title: guide.title, description: guide.description });
+		return { title: `${copy.title} | ${labels.guides}`, description: copy.description };
 	}
 	return {
 		title: `${name} | ${section}`,
@@ -181,7 +184,10 @@ export function fingerprintCopy(locale: Locale, name: string): { what: string; d
  * from within the catalogue, not only from its own section index. This keeps the
  * crawl graph connected and spreads link equity to long-tail resource pages.
  */
+// `item` is narrowed by `kind` at runtime, not by a TS discriminated union.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function relatedLinks(locale: Locale, kind: LocalizedKind, item: any, limit = 6): RelatedLink[] {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const link = (targetKind: LocalizedKind, entry: any): RelatedLink => {
 		const title = "name" in entry ? entry.name : "title" in entry ? entry.title : entry.slug;
 		return { href: localePath(locale, `${targetKind}/${entry.slug}`), title, description: localizedResourceDescription(locale, targetKind, entry), kind: targetKind };
@@ -252,9 +258,11 @@ export function comparisonApiAnswer(locale: Locale, a: BrowserResource, b: Brows
 }
 
 // The catalog is a discriminated union at runtime; this helper intentionally reads fields selected by `kind`.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const browserTypeLabel: Record<string, string> = { commercial: "商业", "open-source": "开源", freemium: "免费增值", free: "免费" };
 
+// `item` is narrowed by `kind` at runtime rather than by a TS discriminated union, because the
+// catalog is assembled from several JSON files with different shapes.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function localizedResourceDescription(locale: Locale, kind: LocalizedKind, item: any) {
 	if (locale === "zh-cn") {
 		if (kind === "browsers" && "longDescription" in item && "type" in item) {

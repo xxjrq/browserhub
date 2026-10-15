@@ -11,6 +11,31 @@ import { cn } from "@/lib/utils";
 export function generateStaticParams() { return guides.map(guide => ({ slug: guide.slug })); }
 export const dynamicParams = false;
 
+/**
+ * Renders a section body as real document structure instead of one long string:
+ * blank-line separated paragraphs become <p>, "- " prefixed runs become <ul><li>.
+ * Headings are emitted as <h2> so each section is a real outline node for crawlers
+ * and for featured-snippet extraction.
+ */
+function SectionBody({ body }: { body: string }) {
+	const blocks = body.split(/\n{2,}/).map(block => block.trim()).filter(Boolean);
+	return (
+		<div className="space-y-4">
+			{blocks.map((block, blockIndex) => {
+				const lines = block.split("\n").map(line => line.trim()).filter(Boolean);
+				if (lines.length > 0 && lines.every(line => line.startsWith("- "))) {
+					return (
+						<ul key={blockIndex} className="list-disc space-y-2 pl-5 text-sm leading-7 text-muted-foreground">
+							{lines.map(line => <li key={line}>{line.slice(2)}</li>)}
+						</ul>
+					);
+				}
+				return <p key={blockIndex} className="text-sm leading-7 text-muted-foreground">{block}</p>;
+			})}
+		</div>
+	);
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
 	const { slug } = await params;
 	const guide = guideBySlug(slug);
@@ -57,9 +82,9 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
 						<Card key={section.heading}>
 							<CardHeader>
 								<p className="eyebrow">{String(index + 1).padStart(2, "0")}</p>
-								<CardTitle className="text-lg">{section.heading}</CardTitle>
+								<CardTitle className="text-lg"><h2>{section.heading}</h2></CardTitle>
 							</CardHeader>
-							<CardContent><p className="text-sm leading-7 text-muted-foreground">{section.body}</p></CardContent>
+							<CardContent><SectionBody body={section.body} /></CardContent>
 						</Card>
 					))}
 				</div>
