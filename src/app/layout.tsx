@@ -1,13 +1,34 @@
 import type { Metadata } from "next";
-import { Inter, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { DocumentLanguage } from "@/components/layout/document-language";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+// Fonts are self-hosted (subset woff2 files under src/app/fonts) instead of pulled from
+// Google Fonts at build time. This keeps the exact same typography while removing the
+// network dependency from `next build` and one render-blocking third-party request in production.
+const inter = localFont({
+	variable: "--font-inter",
+	display: "swap",
+	weight: "100 900",
+	style: "normal",
+	src: [
+		{ path: "./fonts/inter-latin.woff2", weight: "100 900" },
+		{ path: "./fonts/inter-latin-ext.woff2", weight: "100 900" }
+	],
+	fallback: ["system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"]
+});
+
+const geistMono = localFont({
+	variable: "--font-geist-mono",
+	display: "swap",
+	weight: "100 900",
+	style: "normal",
+	src: [{ path: "./fonts/geist-mono-latin.woff2", weight: "100 900" }],
+	fallback: ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "monospace"]
+});
 
 export const metadata: Metadata = {
 	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co"),

@@ -15,5 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		...guides.map(item => localePath(locale, `guides/${item.slug}`)),
 		...comparisons.map(item => localePath(locale, `compare/${item.slug}`))
 	])];
-	return paths.map(path => ({ url: `${baseUrl}${path}`, lastModified: updatedAt, changeFrequency: "weekly", priority: path === "/" ? 1 : 0.7 }));
+	const uniquePaths = [...new Set(paths)];
+	return uniquePaths.map(path => ({ url: `${baseUrl}${path}`, lastModified: updatedAt, changeFrequency: "weekly", priority: path === "/" ? 1 : 0.7 }));
 }

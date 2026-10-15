@@ -28,7 +28,7 @@ export const localeFromPath = (pathname: string): Locale => {
 const copy = {
 	"zh-cn": {
 		homeTitle: "指纹浏览器与隐私资源中心",
-		homeDescription: "统一整理指纹浏览器、浏览器指纹检测、自动化工具、代理与隐私技术资源。",
+		homeDescription: "BrowserHub 整理指纹浏览器、检测与自动化工具、代理与隐私资源，帮助跨境电商、社媒运营与开发者对比多账号浏览器的免费额度、价格与能力。",
 		browsers: "指纹浏览器大全", tools: "检测与自动化工具", fingerprint: "浏览器指纹技术", guides: "指南与教程", compare: "浏览器对比",
 		browse: "浏览资源", details: "查看详情", official: "访问官网", entries: "条目", updated: "更新于", sourceNote: "价格、套餐和功能请以官方页面为准。",
 		browserIntro: "收录公开的反检测浏览器和多账号浏览器，统一比较平台、免费额度、价格、API、自动化与代理能力。",
@@ -39,7 +39,7 @@ const copy = {
 		about: "关于项目", contact: "联系与贡献", privacy: "隐私说明", home: "首页", related: "相关资源", features: "主要能力", specs: "规格信息", bestFor: "适用场景", limitations: "限制与注意事项", faq: "常见问题", howTo: "使用方法", detection: "检测方式", mitigation: "合规防护思路", comparisonTable: "统一字段对比"
 	},
 	en: {
-		homeTitle: "Anti-Detect Browser & Privacy Resource Hub", homeDescription: "A curated database of anti-detect browsers, fingerprint detection, automation, proxy and privacy resources.",
+		homeTitle: "Anti-Detect Browser & Privacy Resource Hub", homeDescription: "BrowserHub catalogs anti-detect browsers, fingerprint detection, automation, proxy and privacy tools. Compare free plans, pricing and capabilities.",
 		browsers: "Anti-Detect Browsers", tools: "Detection & Automation Tools", fingerprint: "Browser Fingerprint Technology", guides: "Guides & Tutorials", compare: "Browser Comparisons",
 		browse: "Browse resources", details: "View details", official: "Official website", entries: "entries", updated: "Updated", sourceNote: "Verify current pricing, plans and features on the official website.",
 		browserIntro: "Compare public anti-detect and multi-account browsers by platforms, free plans, pricing, APIs, automation and proxy support.", toolIntro: "Explore fingerprint detection, network testing, automation and privacy tools for practical research.", fingerprintIntro: "Learn how Canvas, WebGL, WebRTC, TLS, language, timezone and storage signals identify browser environments.", guideIntro: "Practical, source-based guides for browser selection, profile isolation, proxy setup and fingerprint checks.", compareIntro: "Compare free plans, pricing, platforms, engines, storage, APIs, automation and proxy support using the same fields.",
@@ -112,9 +112,19 @@ export function pageMeta(locale: Locale, path: string) {
 	const resource = resourceFor(kind, slug);
 	const name = resource && "name" in resource ? resource.name : resource && "title" in resource ? resource.title : slug;
 	const section = names[kind] ?? labels.homeTitle;
+	if (kind === "compare" && resource && "browsers" in resource) {
+		const a = browsers.find(browser => browser.slug === resource.browsers[0]) ?? browsers[0];
+		const b = browsers.find(browser => browser.slug === resource.browsers[1]) ?? browsers[1];
+		const comparison = comparisonCopy(locale, a, b);
+		const title = locale === "en" ? `${a.name} vs ${b.name}: Features & Pricing` : locale === "zh-cn" ? `${a.name} vs ${b.name}：功能、价格与适用场景对比` : `${a.name} vs ${b.name} — ${labels.compare}`;
+		return { title, description: comparison.overview };
+	}
+	if (kind === "guides" && resource && "content" in resource) {
+		return { title: `${name} | ${labels.guides}`, description: resource.description };
+	}
 	return {
 		title: `${name} | ${section}`,
-		description: `${name} — ${section}. ${labels.sourceNote}`
+		description: resource && "description" in resource ? localizedResourceDescription(locale, kind, resource) : `${name} — ${section}. ${labels.sourceNote}`
 	};
 }
 
@@ -131,6 +141,88 @@ export function comparisonCopy(locale: Locale, a: BrowserResource, b: BrowserRes
 		ru: { overview: `Главные различия между ${a.name} и ${b.name} связаны с хранением профилей, бесплатным лимитом, платформами и автоматизацией. В таблице используются одинаковые открытые поля для понятного сравнения.`, verdict: `Сначала изучите ${a.name}, если важны локальный контроль, изоляция профилей или опубликованный бесплатный лимит. Изучите ${b.name}, если важнее платформы, командный процесс или интеграции. Актуальные условия проверяйте на официальных сайтах.`, strengths: `${a.name}: преимущества и сценарии`, limitations: `${b.name}: преимущества и сценарии`, scenarios: "Рекомендации по сценарию", faq: "Частые вопросы", fields: { free: "Бесплатный план", price: "Начальная цена", profiles: "Профили", platform: "Платформы", engine: "Движок", storage: "Хранилище", api: "API", automation: "Автоматизация", proxy: "Прокси" }, free: "Бесплатный план", price: "Цена", profiles: "Профили", platform: "Платформы", engine: "Движок", storage: "Хранилище", api: "API", automation: "Автоматизация", proxy: "Прокси", source: "Цены и функции могут меняться; проверяйте данные на официальных сайтах." }
 	};
 	return templates[locale];
+}
+
+export type RelatedLink = { href: string; title: string; description: string; kind: LocalizedKind };
+
+/**
+ * Localised "how to use" steps for tool pages. Previously these were hard-coded English
+ * strings rendered on every locale, which read as untranslated boilerplate.
+ */
+export function toolHowToSteps(locale: Locale): [string, string, string] {
+	const steps: Record<Locale, [string, string, string]> = {
+		"zh-cn": ["打开官方页面，先阅读它的隐私说明与数据处理方式。", "在你想要评估的浏览器环境里运行一次检测，记录当时的网络与设备条件。", "与另外一到两个独立工具交叉验证结果，并记录测试条件以便复现。"],
+		en: ["Open the official resource and review its privacy notes.", "Run the test in the browser environment you want to evaluate.", "Compare results with independent tools and record the test conditions."],
+		ja: ["公式サイトを開き、プライバシーに関する説明とデータの取扱いを確認します。", "評価したいブラウザ環境で実際に実行し、その時のネットワークと端末条件を記録します。", "別の独立したツールと結果を突き合わせ、再現できるようテスト条件を保存します。"],
+		ko: ["공식 사이트를 열고 개인정보 안내와 데이터 처리 방식을 확인합니다.", "평가하려는 브라우저 환경에서 실제로 실행하고 그때의 네트워크와 기기 조건을 기록합니다.", "독립적인 다른 도구와 결과를 비교하고 재현 가능하도록 테스트 조건을 남깁니다."],
+		es: ["Abre el sitio oficial y revisa sus notas de privacidad y tratamiento de datos.", "Ejecuta la prueba en el entorno de navegador que quieres evaluar y anota las condiciones de red y dispositivo.", "Compara el resultado con otra herramienta independiente y registra las condiciones de la prueba."],
+		pt: ["Abra o site oficial e leia as notas de privacidade e tratamento de dados.", "Execute o teste no ambiente de navegador que deseja avaliar e registre as condições de rede e dispositivo.", "Compare o resultado com outra ferramenta independente e registre as condições do teste."],
+		ru: ["Откройте официальный сайт и ознакомьтесь с политикой конфиденциальности и обработкой данных.", "Запустите проверку в том окружении браузера, которое вы оцениваете, и зафиксируйте условия сети и устройства.", "Сравните результат с независимым инструментом и сохраните условия теста для воспроизведения."]
+	};
+	return steps[locale];
+}
+
+/** Localised copy for the fingerprint signal pages (previously hard-coded English). */
+export function fingerprintCopy(locale: Locale, name: string): { what: string; detection: string; mitigation: string } {
+	const copy: Record<Locale, { what: string; detection: string; mitigation: string }> = {
+		"zh-cn": { what: `${name} 属于浏览器环境识别信号之一，网站可用它判断访问环境是否真实一致。`, detection: "在不同浏览器与网络环境下重复测试该信号，再用公开检测工具交叉验证结果。", mitigation: "保持浏览器版本、设备、语言、时区与网络设置彼此一致，并遵守目标网站条款与当地法律。" },
+		en: { what: `${name} is one of the signals browsers expose so sites can judge whether an environment looks consistent.`, detection: "Test the signal across several browsers and networks, then cross-check the result with public detection tools.", mitigation: "Keep browser, device, language, timezone and network settings consistent, and follow the target site's terms and local laws." },
+		ja: { what: `${name} はブラウザーが環境侦察に利用するシグナルの一つで、サイトの環境判定に使われます。`, detection: "複数のブラウザとネットワークで同じシグナルを測定し、公開の検出ツールで結果を突き合わせます。", mitigation: "ブラウザ・端末・言語・タイムゾーン・ネットワークの設定を揃え、対象サイトの規約と当地の法律を守ります。" },
+		ko: { what: `${name} 은(는) 브라우저가 환경 식별에 노출하는 신호 중 하나로, 사이트가 환경을 판단하는 데 사용됩니다.`, detection: "여러 브라우저와 네트워크에서 같은 신호를 측정하고 공개된 탐지 도구로 결과를 교차 확인합니다.", mitigation: "브라우저, 기기, 언어, 시간대와 네트워크 설정을 일관되게 유지하고 대상 사이트 약관과 현지 법률을 따릅니다." },
+		es: { what: `${name} es una de las señales que el navegador expone para que los sitios evaluen si el entorno resulta coherente.`, detection: "Prueba la señal en varios navegadores y redes y contrasta el resultado con herramientas públicas de detección.", mitigation: "Mantén coherentes el navegador, el dispositivo, el idioma, la zona horaria y la red, y sigue las condiciones del sitio y la ley local." },
+		pt: { what: `${name} é um dos sinais expostos pelo navegador para que os sites avaliem se o ambiente parece consistente.`, detection: "Teste o sinal em vários navegadores e redes e confronte o resultado com ferramentas públicas de detecção.", mitigation: "Mantenha navegador, dispositivo, idioma, fuso horário e rede consistentes e siga os termos do site e a legislação local." },
+		ru: { what: `${name} — один из сигналов, которые браузер передаёт сайтам, чтобы оценить, насколько среда выглядит согласованной.`, detection: "Проверьте сигнал в нескольких браузерах и сетях и сверьте результат с публичными инструментами проверки.", mitigation: "Держите браузер, устройство, язык, часовой пояс и сеть согласованными и соблюдайте правила сайта и местное законодательство." }
+	};
+	return copy[locale];
+}
+
+/**
+ * Builds contextual internal links for a detail page so every page is reachable
+ * from within the catalogue, not only from its own section index. This keeps the
+ * crawl graph connected and spreads link equity to long-tail resource pages.
+ */
+export function relatedLinks(locale: Locale, kind: LocalizedKind, item: any, limit = 6): RelatedLink[] {
+	const link = (targetKind: LocalizedKind, entry: any): RelatedLink => {
+		const title = "name" in entry ? entry.name : "title" in entry ? entry.title : entry.slug;
+		return { href: localePath(locale, `${targetKind}/${entry.slug}`), title, description: localizedResourceDescription(locale, targetKind, entry), kind: targetKind };
+	};
+	const pick = (entries: RelatedLink[]) => entries.filter(Boolean).slice(0, limit);
+
+	if (kind === "browsers") {
+		const slug = item.slug as string;
+		const vsBrowsers = comparisons.filter(entry => entry.browsers.includes(slug)).slice(0, 3).map(entry => link("compare", entry));
+		const alternatives = browsers.filter(entry => entry.slug !== slug).sort((a, b) => b.rating - a.rating).slice(0, 3).map(entry => link("browsers", entry));
+		const guidesForBrowser = guides.filter(entry => entry.relatedBrowsers?.includes(slug)).slice(0, 2).map(entry => link("guides", entry));
+		return pick([...vsBrowsers, ...alternatives, ...guidesForBrowser]);
+	}
+
+	if (kind === "compare") {
+		const pair = item.browsers as [string, string];
+		const subjects = pair.map(slug => browsers.find(entry => entry.slug === slug)).filter(Boolean).map(entry => link("browsers", entry));
+		const siblings = comparisons.filter(entry => entry.slug !== item.slug && entry.browsers.some(slug => pair.includes(slug))).slice(0, 3).map(entry => link("compare", entry));
+		return pick([...subjects, ...siblings]);
+	}
+
+	if (kind === "tools" || kind === "fingerprint") {
+		const sameCategory = kind === "tools"
+			? tools.filter(entry => entry.slug !== item.slug && entry.categorySlug === item.categorySlug)
+			: technologies.filter(entry => entry.slug !== item.slug && entry.category === item.category);
+		const siblings = kind === "tools"
+			? tools.filter(entry => entry.slug !== item.slug).slice(0, 2).map(entry => link("tools", entry))
+			: browsers.filter(entry => entry.rating >= 4.5).slice(0, 3).map(entry => link("browsers", entry));
+		return pick([...sameCategory.slice(0, 3).map(entry => link(kind, entry)), ...siblings]);
+	}
+
+	// Guides: reuse the curated relations already present in the dataset, then widen.
+	const guide = item as GuideResource;
+	const relatedBrowserLinks = (guide.relatedBrowsers ?? []).map(slug => browsers.find(entry => entry.slug === slug)).filter((entry): entry is BrowserResource => Boolean(entry)).map(entry => link("browsers", entry));
+	const relatedToolLinks = (guide.relatedTools ?? []).map(slug => tools.find(entry => entry.slug === slug)).filter((entry): entry is ToolResource => Boolean(entry)).map(entry => link("tools", entry));
+	const otherGuides = guides.filter(entry => entry.slug !== guide.slug && entry.category === guide.category).slice(0, 2).map(entry => link("guides", entry));
+	// Guides usually carry no curated relations, so fall back to top-rated browsers and
+	// detection tools. Without this most guide pages would render no internal links at all.
+	const fallbackBrowsers = browsers.filter(entry => entry.rating >= 4.5).slice(0, 3).map(entry => link("browsers", entry));
+	const fallbackTools = tools.filter(entry => entry.categorySlug.includes("detection") || entry.categorySlug.includes("fingerprint")).slice(0, 2).map(entry => link("tools", entry));
+	return pick([...relatedBrowserLinks, ...relatedToolLinks, ...otherGuides, ...fallbackBrowsers, ...fallbackTools]);
 }
 
 export function comparisonFaq(locale: Locale, a: BrowserResource, b: BrowserResource, copy: ReturnType<typeof comparisonCopy>) {
@@ -161,16 +253,33 @@ export function comparisonApiAnswer(locale: Locale, a: BrowserResource, b: Brows
 
 // The catalog is a discriminated union at runtime; this helper intentionally reads fields selected by `kind`.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+const browserTypeLabel: Record<string, string> = { commercial: "商业", "open-source": "开源", freemium: "免费增值", free: "免费" };
+
 export function localizedResourceDescription(locale: Locale, kind: LocalizedKind, item: any) {
-	if (locale === "zh-cn") return item.description;
+	if (locale === "zh-cn") {
+		if (kind === "browsers" && "longDescription" in item && "type" in item) {
+			const facts = [item.free, item.price, item.platforms?.length ? `平台 ${item.platforms.join("、")}` : ""].filter(Boolean);
+			return `${item.name} 是${browserTypeLabel[item.type] ?? item.type}指纹浏览器，用于多账号环境隔离、自动化与隐私研究。${facts.join("；")}。`;
+		}
+		if (kind === "tools" && "category" in item)
+			return `${item.name} 是面向${item.category}的公开工具，用于浏览器指纹、网络或自动化研究。使用前请阅读官方说明并在合规范围内使用。`;
+		if (kind === "fingerprint" && "category" in item)
+			return `${item.name} 是浏览器指纹中的信号维度，用于研究渲染、设备、语言、网络与存储的一致性。`;
+		if (kind === "guides" && "title" in item) return item.description;
+		return item.description;
+	}
 	if (kind === "compare" && "browsers" in item) {
 		const a = browsers.find(browser => browser.slug === item.browsers[0]) ?? browsers[0];
 		const b = browsers.find(browser => browser.slug === item.browsers[1]) ?? browsers[1];
 		return comparisonCopy(locale, a, b).overview;
 	}
 	if (kind === "browsers" && "longDescription" in item && "type" in item) {
+		const isCjk = (value: unknown) => typeof value === "string" && /[\u4e00-\u9fff]/.test(value);
+		const enFacts: string[] = [];
+		if (Array.isArray(item.platforms) && item.platforms.length) enFacts.push(`Runs on ${item.platforms.join(", ")}`);
+		if (item.price && !isCjk(item.price) && item.price !== "以官网为准") enFacts.push(`plans from ${item.price}`);
 		const templates: Partial<Record<Locale, string>> = {
-			en: `${item.name} is a ${item.type} browser resource for isolated browser environments, multi-account workflows and privacy research. Review its platforms, storage model and public capabilities before choosing a plan.`,
+			en: `${item.name} is a ${item.type} anti-detect browser for multi-account isolation, automation and privacy research.${enFacts.length ? ` ${enFacts.join("; ")}.` : ""}`,
 			ja: `${item.name} は分離されたブラウザ環境、マルチアカウント運用、プライバシー研究向けの ${item.type} ブラウザです。料金と公開機能は公式情報で確認してください。`,
 			ko: `${item.name}은(는) 격리된 브라우저 환경과 멀티 계정 워크플로를 위한 ${item.type} 브라우저 리소스입니다. 요금과 공개 기능은 공식 정보를 확인하세요.`,
 			es: `${item.name} es un recurso de navegador ${item.type} para entornos aislados y flujos multicuenta. Revisa sus plataformas y funciones públicas antes de elegir un plan.`,
@@ -179,7 +288,7 @@ export function localizedResourceDescription(locale: Locale, kind: LocalizedKind
 		};
 		return templates[locale] ?? item.longDescription;
 	}
-	if (kind === "tools" && "category" in item) return ({ en: `${item.name} is a public ${item.category} resource for browser, network or automation research. Review the official documentation and test conditions before relying on a result.`, ja: `${item.name} はブラウザ、ネットワーク、自動化研究向けの公開 ${item.category} リソースです。結果を利用する前に公式ドキュメントを確認してください。`, ko: `${item.name}은(는) 브라우저·네트워크·자동화 연구를 위한 공개 ${item.category} 리소스입니다. 결과를 사용하기 전에 공식 문서를 확인하세요.`, es: `${item.name} es un recurso público de ${item.category} para investigar navegadores, redes o automatización. Consulta su documentación oficial.`, pt: `${item.name} é um recurso público de ${item.category} para pesquisa de navegadores, redes ou automação. Consulte a documentação oficial.`, ru: `${item.name} — открытый ресурс категории «${item.category}» для исследования браузеров, сетей или автоматизации. Изучите официальную документацию.` } as Record<Locale, string>)[locale];
+	if (kind === "tools" && "category" in item) return ({ en: `${item.name} is a public ${item.categorySlug ? String(item.categorySlug).replace(/-/g, " ") : item.category} tool for browser fingerprint, network or automation research. Review the official documentation and test conditions before relying on results.`, ja: `${item.name} はブラウザ、ネットワーク、自動化研究向けの公開 ${item.category} リソースです。結果を利用する前に公式ドキュメントを確認してください。`, ko: `${item.name}은(는) 브라우저·네트워크·자동화 연구를 위한 공개 ${item.category} 리소스입니다. 결과를 사용하기 전에 공식 문서를 확인하세요.`, es: `${item.name} es un recurso público de ${item.category} para investigar navegadores, redes o automatización. Consulta su documentación oficial.`, pt: `${item.name} é um recurso público de ${item.category} para pesquisa de navegadores, redes ou automação. Consulte a documentação oficial.`, ru: `${item.name} — открытый ресурс категории «${item.category}» для исследования браузеров, сетей или автоматизации. Изучите официальную документацию.` } as Record<Locale, string>)[locale];
 	if (kind === "fingerprint" && "category" in item) return ({ en: `${item.name} is a browser fingerprint signal used to study rendering, device, language, network or storage consistency.`, ja: `${item.name} はレンダリング、端末、言語、ネットワーク、ストレージの一貫性を調べるブラウザ指紋信号です。`, ko: `${item.name}은(는) 렌더링, 장치, 언어, 네트워크 또는 저장소 일관성을 분석하는 브라우저 핑거프린트 신호입니다.`, es: `${item.name} es una señal de huella del navegador relacionada con la coherencia de renderizado, dispositivo, idioma, red o almacenamiento.`, pt: `${item.name} é um sinal de fingerprint usado para estudar a consistência de renderização, dispositivo, idioma, rede ou armazenamento.`, ru: `${item.name} — сигнал браузерного отпечатка для анализа согласованности рендеринга, устройства, языка, сети или хранилища.` } as Record<Locale, string>)[locale];
 	if (kind === "guides" && "title" in item) return ({ en: `A practical BrowserHub guide covering browser selection, profile isolation, proxy setup, fingerprint checks and responsible use.`, ja: `ブラウザ選定、プロファイル分離、プロキシ設定、指紋チェックと適切な利用を扱う BrowserHub の実用ガイドです。`, ko: `브라우저 선택, 프로필 분리, 프록시 설정, 핑거프린트 점검과 책임 있는 사용을 다루는 BrowserHub 실용 가이드입니다.`, es: `Guía práctica de BrowserHub sobre selección de navegadores, aislamiento de perfiles, proxies, huellas y uso responsable.`, pt: `Guia prático do BrowserHub sobre escolha de navegadores, isolamento de perfis, proxies, fingerprints e uso responsável.`, ru: `Практическое руководство BrowserHub по выбору браузера, изоляции профилей, прокси, отпечаткам и ответственному использованию.` } as Record<Locale, string>)[locale];
 	return item.description;
