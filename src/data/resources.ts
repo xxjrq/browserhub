@@ -3,6 +3,7 @@ import readmeBrowserCatalog from "./catalog/readme-browsers.json";
 import toolCatalog from "./catalog/tools.json";
 import technologyCatalog from "./catalog/technologies.json";
 import useCaseCatalog from "./catalog/use-cases.json";
+import { comparisonSections } from "./comparison-sections";
 
 export type ResourceStatus = "recommended" | "active" | "open-source" | "experimental" | "pending-review" | "inactive";
 
@@ -90,9 +91,10 @@ export type ComparisonResource = {
 	browsers: [string, string];
 	verdict?: string;
 	notes?: string[];
+	sections?: Array<{ heading: string; body: string }>;
 };
 
-const updatedAt = "2026-08-11";
+const updatedAt = "2026-10-15";
 const pricingCheckedAt = "2026-08-12";
 const officialSite = "https://www.ebrower.com/";
 
@@ -310,11 +312,96 @@ export const guides: GuideResource[] = [
 			}
 		]
 	},
-	{ title: "浏览器指纹是什么", slug: "browser-fingerprinting-explained", description: "理解 Canvas、WebGL、字体、时区、WebRTC 和网络信号。", date: updatedAt, category: "技术百科", sourcePath: "docs/zh-CN/fingerprint-technologies.md", content: "浏览器指纹不是单一字段，而是渲染、设备、语言、时区、网络和存储等多个信号的组合。单项检测只能说明一个维度，不能替代完整的安全或隐私评估。" },
-	{ title: "EasyBR 代理配置要点", slug: "setting-up-proxies-easybr", description: "了解 HTTP、HTTPS、SOCKS5 代理配置和常见排查路径。", date: updatedAt, category: "使用教程", sourcePath: "docs/zh-CN/network-and-proxy.md", content: "配置代理时应确认协议、主机、端口、认证信息和 DNS/WebRTC 行为。先用公开检测工具验证出口 IP、DNS 和 WebRTC，再开始账号工作流。EasyBR 的当前字段和套餐以官网版本为准。" },
-	{ title: "多账号环境管理实践", slug: "multi-account-best-practices", description: "从环境隔离、代理一致性和权限管理降低账号串联风险。", date: updatedAt, category: "实践指南", sourcePath: "docs/zh-CN/use-cases.md", content: "多账号管理应为每个账号建立独立环境，保持代理、语言、时区和账号行为的一致性，限制共享凭据，并记录环境变更。仅在遵守平台规则和当地法律的范围内使用。" },
-	{ title: "免费指纹浏览器怎么选", slug: "free-antidetect-browser", description: "从免费环境数量、平台限制、存储方式和功能边界比较免费方案。", date: updatedAt, category: "选型指南", sourcePath: "data/browsers.json", content: "免费方案适合先验证工作流，不代表永久拥有全部商业功能。比较时应同时看免费环境数量、数据是否本地保存、是否支持代理和自动化，以及升级后的价格。", relatedBrowsers: ["easybr", "gologin", "adspower"] },
-	{ title: "本地存储与云端存储区别", slug: "local-vs-cloud-browser-storage", description: "理解浏览器环境数据放在本地或云端时的安全、协作与恢复差异。", date: updatedAt, category: "技术指南", sourcePath: "data/browsers.json", content: "本地存储通常便于控制数据位置和离线使用，云端存储更适合跨设备协作和集中管理。选择时要关注同步范围、备份机制、团队权限和供应商的隐私政策。", relatedBrowsers: ["easybr", "multilogin", "gologin"] },
+	{ title: "浏览器指纹是什么", slug: "browser-fingerprinting-explained", description: "理解 Canvas、WebGL、字体、时区、WebRTC 和网络信号。", date: updatedAt, category: "技术百科", sourcePath: "docs/zh-CN/fingerprint-technologies.md", content: "浏览器指纹不是单一字段，而是渲染、设备、语言、时区、网络和存储等多个信号的组合。单项检测只能说明一个维度，不能替代完整的安全或隐私评估。", sections: [
+		{
+			heading: "浏览器指纹到底是什么",
+			body: "浏览器指纹不是某一个字段，而是一组可被网站读取的信号组合。打开页面时，浏览器会暴露渲染能力、设备参数、系统设置、语言、时区和网络特征等信息。站点把这些值拼接、哈希后，就能得到一个相对稳定的「环境标识」，用来判断两次访问是否来自同一个浏览器环境。\n\n它和 Cookie 最大的区别是：Cookie 存在本地、可以清除，而指纹来自环境本身，清除 Cookie 后仍然可能保持一致。正因如此，指纹常用于无 Cookie 追踪和风控识别。"
+		},
+		{
+			heading: "为什么单点修改往往无效",
+			body: "很多人只改 User-Agent 或只换一个字体，结果仍然被识别为同一环境。原因是风控看的是信号之间的「一致性」：时区设在东京、语言却是英文、Canvas 又呈现另一台机器的渲染特征，这种互相矛盾的组合反而更像伪装。\n\n有效的做法不是改单点，而是让一组信号彼此自洽，并保持在一段时间内稳定。临时切换参数比长期稳定更容易触发异常判定。"
+		},
+		{
+			heading: "需要关注的信号维度",
+			body: "常见维度可以分成几类：\n- 渲染类：Canvas、WebGL、AudioContext 的绘制差异。\n- 设备类：硬件并发数、内存、屏幕分辨率与色彩深度。\n- 系统类：操作系统、字体列表、时区、语言与区域。\n- 网络类：出口 IP、WebRTC 候选地址、DNS 解析路径。\n- 存储类：Cookie、LocalStorage、IndexedDB 之间的隔离关系。\n\n每一项单独看都只是碎片，组合在一起才构成可识别的环境画像。"
+		},
+		{
+			heading: "两个常见误区",
+			body: "- 认为「隐身模式」能消除指纹。隐身模式主要隔离本地存储，对渲染、字体、时区等环境信号几乎没有影响。\n- 认为指纹固定不变就是安全。信号长期不变确实更自然，但如果所有环境长得一模一样，反而失去区分度。目标是让每个环境自洽且彼此不同，而不是追求某个「标准」指纹。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
+		}
+	] },
+	{ title: "EasyBR 代理配置要点", slug: "setting-up-proxies-easybr", description: "了解 HTTP、HTTPS、SOCKS5 代理配置和常见排查路径。", date: updatedAt, category: "使用教程", sourcePath: "docs/zh-CN/network-and-proxy.md", content: "配置代理时应确认协议、主机、端口、认证信息和 DNS/WebRTC 行为。先用公开检测工具验证出口 IP、DNS 和 WebRTC，再开始账号工作流。EasyBR 的当前字段和套餐以官网版本为准。", relatedBrowsers: ["easybr"], sections: [
+		{
+			heading: "配置前先确认三件事",
+			body: "在填入任何代理信息之前，先把三件事写下来，避免凭记忆操作：\n- 协议类型：确认服务商提供的是 HTTP、HTTPS 还是 SOCKS5。三者配置入口和认证方式不同，填错会导致连接失败。\n- 用途边界：确认服务商允许的目标网站类型，这部分在合规层面比技术配置更重要。\n- DNS 行为：SOCKS5 是否由代理端解析域名，需要单独确认，不能默认它已经正确。\n\nEasyBR 的代理字段与套餐以官网当前版本为准，本文只描述通用排查思路。"
+		},
+		{
+			heading: "推荐的配置与验证顺序",
+			body: "按顺序走完，每一步都留下可复核的证据：\n\n第一步，先在没挂代理时记录基线公网 IP，作为对照。\n\n第二步，在 EasyBR 的环境设置里选择对应协议，填入主机、端口和认证信息。\n\n第三步，用普通 IP 查询页面确认出口 IP 已变为代理地址。这一步不通过就不用继续。\n\n第四步，用 DNS 泄漏检测工具确认查询由代理服务器发起。\n\n第五步，检查 WebRTC 候选地址，确认没有出现与代理不一致的真实地址。\n\n第六步，在目标场景里做一次实际连通性测试，并记录测试条件。"
+		},
+		{
+			heading: "出问题时怎么排查",
+			body: "- 完全连不上：先在系统命令行测试代理端口是否可达，再回头看客户端配置。端口不通属于网络层问题，与浏览器无关。\n- 能连但认证失败：检查协议类型是否选错，以及密码里的特殊字符是否需要编码。\n- 网页打不开但 IP 查询正常：通常是 DNS 解析位置的问题，启用远程解析后重试。\n- 部分站点异常：可能涉及目标站点对代理 IP 段的限制，属于出口 IP 信誉问题，不是配置错误。\n\n排查过程中不要把代理密码写进公开日志、工单截图或共享文档。"
+		},
+		{
+			heading: "两个容易忽略的点",
+			body: "- 「配置成功」不等于「没有泄漏」。代理只约束隧道内的流量，WebRTC 或某些后台请求可能不遵循代理设置，必须分别验证。\n- 长期使用应固定节点。频繁切换代理区域会让登录地频繁变化，本身就是一种异常信号，可能触发平台风控。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。价格、套餐和功能可能变化，请以对应官方网站当前信息为准。"
+		}
+	] },
+	{ title: "多账号环境管理实践", slug: "multi-account-best-practices", description: "从环境隔离、代理一致性和权限管理降低账号串联风险。", date: updatedAt, category: "实践指南", sourcePath: "docs/zh-CN/use-cases.md", content: "多账号管理应为每个账号建立独立环境，保持代理、语言、时区和账号行为的一致性，限制共享凭据，并记录环境变更。仅在遵守平台规则和当地法律的范围内使用。", relatedBrowsers: ["easybr", "multilogin", "adspower"], sections: [
+		{
+			heading: "先建立隔离的边界",
+			body: "多账号管理最底层的原则是「一账号一环境」。每个账号绑定独立的环境、独立的代理、独立的登录态，不在环境之间复用 Cookie 或缓存。\n\n环境复用是账号串联最常见的原因。很多被关联的案例，追溯下来都是两个账号共享了同一个指纹环境、同一个出口 IP，或同一份本地存储。隔离边界一旦建立，后续所有一致性操作才有意义。"
+		},
+		{
+			heading: "保持信号长期一致",
+			body: "隔离之后，关键是让每个环境的信号在长时间内保持稳定：\n- 代理：固定节点，避免频繁切换导致登录地跳动。\n- 语言与时区：与环境所属地区保持一致，例如北美环境用美式英语和对应时区。\n- 行为：操作节奏、设备使用习惯尽量贴近真实用户的自然分布。\n\n一致性不是「越像越好」，而是「自洽且稳定」。临时改参数比长期稳定更容易触发异常判定。"
+		},
+		{
+			heading: "权限与变更记录",
+			body: "团队协作时，按成员职责分配最小权限，避免共享主账号凭据，限制导出和删除操作。\n\n每次修改代理、扩展或环境配置，都留下可回溯的记录：谁、在什么时间、改了哪个环境的什么字段。出现关联时，这些记录是定位原因的唯一线索。\n\n凭据泄露应视为安全事件，立即轮换并审计受影响的环境。"
+		},
+		{
+			heading: "三个常见误区",
+			body: "- 认为「不同浏览器内核」就等于隔离。内核不同只是信号之一，如果两个环境的网络、语言、时区完全一致，仍可能被关联。\n- 只在出问题时才检查环境。应在日常工作中周期性用公开检测工具复验指纹与代理一致性。\n- 把工具能力等同于合规许可。是否合规由使用场景和平台条款决定，而不是由工具本身决定。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
+		}
+	] },
+	{ title: "免费指纹浏览器怎么选", slug: "free-antidetect-browser", description: "从免费环境数量、平台限制、存储方式和功能边界比较免费方案。", date: updatedAt, category: "选型指南", sourcePath: "data/browsers.json", content: "免费方案适合先验证工作流，不代表永久拥有全部商业功能。比较时应同时看免费环境数量、数据是否本地保存、是否支持代理和自动化，以及升级后的价格。", relatedBrowsers: ["easybr", "gologin", "adspower"], sections: [
+		{
+			heading: "免费方案适合做什么",
+			body: "免费额度最适合用来验证工作流：先确认工具的环境隔离、代理配置和检测表现是否符合预期，再决定是否付费扩容。它本质上是「试水」入口，不代表永久拥有全部商业功能。\n\n如果你的账号规模已经超过免费额度，强行挤在免费层通常会导致环境复用、导出受限或保留天数不足，反而增加运营风险。免费适合起步，不适合长期主力。"
+		},
+		{
+			heading: "比较时要逐项核对",
+			body: "不要只看「免费环境数量」这一个数字，至少还要看四项：\n- 数据保存位置：环境数据存在本地还是云端，决定离线可用性和数据自主管控。\n- 平台覆盖：免费档是否也支持你需要的 Windows、macOS、Linux 或移动端。\n- 代理与自动化：免费档是否允许绑定代理、是否开放 API 或自动化接口。\n- 保留与导出：免费环境是否限制保留天数、是否限制导出。\n\n本站对比页的免费额度、价格、平台、存储等字段，就是按这套口径整理的可核对清单。"
+		},
+		{
+			heading: "核算真实成本",
+			body: "免费升付费时，按「环境数 × 单价 × 留存月数」计算，并单独列出代理流量费用。多账号场景下，代理常按 GB 计费，可能超过浏览器本身的订阅费。\n\n价格、套餐和功能均可能变化，本文所有价格信息请以对应官网当前页面为准。不要凭记忆里的旧价格做预算。"
+		},
+		{
+			heading: "三个常见误区",
+			body: "- 把免费环境数量当成可用上限。免费档往往还有功能边界，例如限制自动化或导出，实际可用度低于数字本身。\n- 忽略保留规则。部分免费额度限制环境保留天数，到期前未升级可能丢失配置。\n- 在免费环境里跑真实主力账号。免费层限制多、稳定性弱，更适合测试，主力账号应放在付费且稳定的环境里。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
+		}
+	] },
+	{ title: "本地存储与云端存储区别", slug: "local-vs-cloud-browser-storage", description: "理解浏览器环境数据放在本地或云端时的安全、协作与恢复差异。", date: updatedAt, category: "技术指南", sourcePath: "data/browsers.json", content: "本地存储通常便于控制数据位置和离线使用，云端存储更适合跨设备协作和集中管理。选择时要关注同步范围、备份机制、团队权限和供应商的隐私政策。", relatedBrowsers: ["easybr", "multilogin", "gologin"], sections: [
+		{
+			heading: "两种存储方式分别解决什么",
+			body: "本地优先（local-first）把环境数据放在你自己的设备上，断网也能使用，数据位置和备份节奏由你控制，更适合重视数据自主管控的场景。\n\n云端存储把环境数据放在服务商一侧，跨设备登录即可拉起同一套环境，更适合多地、多设备协作和集中管理。代价是你需要信任服务商的存储安全和隐私政策，并依赖网络连接。"
+		},
+		{
+			heading: "按你的优先级做选择",
+			body: "可以从四个维度来比对：\n- 离线可用：本地优先在断网时仍可使用，云端依赖网络。\n- 协作便利：云端在跨设备、跨成员同步上更顺手。\n- 数据控制：本地优先对数据位置和删除节奏更有主动权。\n- 恢复能力：云端通常自带集中备份与恢复，本地需要你自己规划备份。\n\n本站对比页的「存储方式」字段会标注每个产品是本地优先、云端还是两者兼有，可以作为核对起点。"
+		},
+		{
+			heading: "迁移与备份的注意点",
+			body: "选定存储方式后，备份策略要跟上：本地优先的环境建议定期导出并异地保存，避免单设备损坏导致全部环境丢失；云端环境则要确认服务商的保留期限和导出能力，防止停服时无法取回数据。\n\n切换存储方式通常意味着重新创建环境，原环境的指纹与配置不会自动迁移，应提前规划。"
+		},
+		{
+			heading: "两个常见误区",
+			body: "- 认为云端一定更不安全。安全性取决于服务商的具体措施和你的使用习惯，不能一概而论。\n- 认为本地一定更可靠。本地设备一旦损坏且未备份，数据同样会丢失。\n\n无论选哪种，都请阅读供应商隐私政策，并在遵守目标平台条款与当地法律的前提下使用。"
+		}
+	] },
 	{
 		title: "WebRTC 泄漏如何检查",
 		slug: "webrtc-leak-check",
@@ -347,8 +434,42 @@ export const guides: GuideResource[] = [
 			}
 		]
 	},
-	{ title: "如何阅读 CreepJS 检测结果", slug: "read-creepjs-results", description: "理解 CreepJS 中的指纹、信任分数和环境一致性信号。", date: updatedAt, category: "检测指南", sourcePath: "data/tools.json", content: "CreepJS 适合研究浏览器暴露的多维信号。阅读结果时先区分事实数据、推断分数和风险提示，再结合 BrowserLeaks、Pixelscan 等工具交叉观察，避免把单一分数当作结论。", relatedTools: ["creepjs", "browserleaks", "pixelscan"] },
-	{ title: "如何配置 HTTP 代理", slug: "configure-http-proxy", description: "整理 HTTP/HTTPS 代理的字段、认证方式和连通性检查步骤。", date: updatedAt, category: "网络指南", sourcePath: "data/network-and-proxy.md", content: "HTTP 代理配置至少包含协议、主机、端口和认证信息。保存前先确认端口可达，保存后检查出口 IP、DNS 和 HTTPS 访问，避免把代理密码写入公开日志。", relatedBrowsers: ["easybr", "adspower"] },
+	{ title: "如何阅读 CreepJS 检测结果", slug: "read-creepjs-results", description: "理解 CreepJS 中的指纹、信任分数和环境一致性信号。", date: updatedAt, category: "检测指南", sourcePath: "data/tools.json", content: "CreepJS 适合研究浏览器暴露的多维信号。阅读结果时先区分事实数据、推断分数和风险提示，再结合 BrowserLeaks、Pixelscan 等工具交叉观察，避免把单一分数当作结论。", relatedTools: ["creepjs", "browserleaks", "pixelscan"], sections: [
+		{
+			heading: "先区分三类输出",
+			body: "CreepJS 的结果可以分成三类，阅读时先分清楚：\n- 事实数据：浏览器实际暴露的字段值，例如字体列表、时区、语言、Canvas 噪声。这部分是可直接复现的测量值。\n- 推断分数：工具基于规则给出的信任度或一致性评分，属于启发式判断，不是客观事实。\n- 风险提示：对异常或矛盾信号的标记，需要结合你的真实配置来理解。\n\n把分数当成结论，往往会被单一工具的口径带偏。"
+		},
+		{
+			heading: "重点看一致性，而不是分数高低",
+			body: "更有价值的不是「分数高不高」，而是「信号之间是否自洽」。例如时区、语言、地区设置是否指向同一地点，渲染特征是否稳定。\n\n如果各项信号互相矛盾，即使总分看起来不错，也可能比信号一致但分数一般的环境更可疑。一致性是判断环境是否「自然」的核心。"
+		},
+		{
+			heading: "用交叉验证提高可信度",
+			body: "不要只信一个工具。用 BrowserLeaks、Pixelscan 等相互独立的检测页对同一环境复测，观察关键字段是否一致。\n\n出现分歧时，先记录测试条件：浏览器版本、操作系统、代理类型和测试时间。检测结果只在当时的网络与设备条件下有效，环境变更后应重新测试。"
+		},
+		{
+			heading: "两个常见误区",
+			body: "- 把「分数好」等同于「安全」。分数只是工具视角，不代表目标站点的判定口径。\n- 测一次就下结论。浏览器更新、系统变更、代理切换都会改变结果，建议在同一环境下重复检测并留存记录。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
+		}
+	] },
+	{ title: "如何配置 HTTP 代理", slug: "configure-http-proxy", description: "整理 HTTP/HTTPS 代理的字段、认证方式和连通性检查步骤。", date: updatedAt, category: "网络指南", sourcePath: "data/network-and-proxy.md", content: "HTTP 代理配置至少包含协议、主机、端口和认证信息。保存前先确认端口可达，保存后检查出口 IP、DNS 和 HTTPS 访问，避免把代理密码写入公开日志。", relatedBrowsers: ["easybr", "adspower"], sections: [
+		{
+			heading: "HTTP 代理的四个字段",
+			body: "配置 HTTP/HTTPS 代理时，至少确认四项：\n- 协议：明确是 HTTP 还是 HTTPS 入口，两者认证与加密方式不同。\n- 主机与端口：注意区分 IP 与域名形式，部分服务商对形式有要求。\n- 认证信息：用户名与密码，密码中的特殊字符有时需要 URL 编码。\n- 用途边界：确认服务商允许代理的目标网站类型，这在合规层面比技术配置更重要。\n\n填写前先逐项核对，不要凭记忆填入。"
+		},
+		{
+			heading: "保存前的连通性检查",
+			body: "在浏览器里保存配置之前，建议先在系统命令行测试代理端口是否可达，避免把网络层问题误判成客户端故障。\n\n端口不通属于网络层问题，与浏览器无关；端口通了再进行下一步，能大幅缩小排查范围。这一步能省掉后面大量无效的配置调试。"
+		},
+		{
+			heading: "保存后的三层验证",
+			body: "保存配置后，按顺序验证三层：\n\n第一步，用普通 IP 查询页面确认出口 IP 已变为代理地址。这一步不通过，后续都没意义。\n\n第二步，检查 DNS 解析是否走代理通道，避免本地运营商 DNS 暴露。\n\n第三步，访问目标 HTTPS 站点，确认证书与加载正常。\n\n三层都通过，才说明 HTTP 代理真正生效。"
+		},
+		{
+			heading: "两个安全提醒",
+			body: "- 不要把代理密码写入公开日志、工单截图或共享文档。凭据泄露应视为安全事件处理。\n- HTTP 代理不保证处理 WebRTC 候选收集。代理解决流量路径，WebRTC 可能绕过，需要单独检测。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。价格、套餐和功能可能变化，请以对应官方网站当前信息为准。"
+		}
+	] },
 	{
 		title: "如何配置 SOCKS5 代理",
 		slug: "configure-socks5-proxy",
@@ -381,11 +502,45 @@ export const guides: GuideResource[] = [
 			}
 		]
 	},
-	{ title: "浏览器指纹包含哪些信息", slug: "browser-fingerprint-signals", description: "按渲染、设备、系统、语言、网络和存储六类理解指纹信号。", date: updatedAt, category: "技术百科", sourcePath: "data/technologies.json", content: "常见指纹信号包括 Canvas、WebGL、字体、屏幕、时区、语言、硬件并发数、TLS、IP 信誉和存储状态。它们通常被组合分析，不能只修改一个字段来代表完整环境。", relatedTools: ["creepjs", "browserleaks"] },
-	{ title: "多账号浏览器的权限管理", slug: "browser-profile-permissions", description: "为团队环境设置最小权限、共享边界和变更记录。", date: updatedAt, category: "实践指南", sourcePath: "data/use-cases.json", content: "团队使用多账号浏览器时，应按成员职责分配最小权限，避免共享主账号凭据，限制导出和删除操作，并记录代理、扩展和环境配置的变更。", relatedBrowsers: ["easybr", "multilogin", "adspower"] }
+	{ title: "浏览器指纹包含哪些信息", slug: "browser-fingerprint-signals", description: "按渲染、设备、系统、语言、网络和存储六类理解指纹信号。", date: updatedAt, category: "技术百科", sourcePath: "data/technologies.json", content: "常见指纹信号包括 Canvas、WebGL、字体、屏幕、时区、语言、硬件并发数、TLS、IP 信誉和存储状态。它们通常被组合分析，不能只修改一个字段来代表完整环境。", relatedTools: ["creepjs", "browserleaks"], sections: [
+		{
+			heading: "六类信号分别是什么",
+			body: "浏览器指纹可以从六个维度理解：\n- 渲染类：Canvas、WebGL、AudioContext 的绘制与计算差异。\n- 设备类：硬件并发数、内存、屏幕分辨率、色彩深度。\n- 系统类：操作系统、字体列表、时区、语言与区域设置。\n- 语言类：界面语言、可接受语言列表、拼写与区域格式。\n- 网络类：出口 IP 与信誉、WebRTC 候选地址、DNS 解析路径、TLS 握手特征。\n- 存储类：Cookie、LocalStorage、IndexedDB 之间的隔离关系。"
+		},
+		{
+			heading: "为什么组合分析才有效",
+			body: "单个字段的区分度有限，真正有识别力的是字段之间的组合与一致性。例如，某台机器的 Canvas 噪声可能和成千上万台相似，但「Canvas 噪声 + 字体集合 + 时区 + 屏幕参数」的组合，重复概率就低得多。\n\n这也是为什么只改一个字段往往无效：风控看的是整体画像，而不是某一个值。"
+		},
+		{
+			heading: "如何用信号做一致性检查",
+			body: "管理多账号环境时，可以用这六类信号做日常核对：新建环境后，用公开检测工具观察每类信号是否落在预期范围内，并记录基线。\n\n后续复测时对比基线，信号跳变可能意味着配置被重置或代理异常。同样的环境多次检测应当稳定，不应出现随机变化。"
+		},
+		{
+			heading: "两个常见误区",
+			body: "- 认为改掉某个「关键字段」就能焕然一新。信号是组合生效的，单点修改容易被其他字段暴露。\n- 认为信号越多越危险。风险不在于信号数量，而在于信号之间是否自洽、是否长期稳定。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
+		}
+	] },
+	{ title: "多账号浏览器的权限管理", slug: "browser-profile-permissions", description: "为团队环境设置最小权限、共享边界和变更记录。", date: updatedAt, category: "实践指南", sourcePath: "data/use-cases.json", content: "团队使用多账号浏览器时，应按成员职责分配最小权限，避免共享主账号凭据，限制导出和删除操作，并记录代理、扩展和环境配置的变更。", relatedBrowsers: ["easybr", "multilogin", "adspower"], sections: [
+		{
+			heading: "按职责分配最小权限",
+			body: "团队使用多账号浏览器时，权限应遵循「最小够用」原则：每个成员只拿到完成工作所必需的環境与操作权，而不是全站管理员。\n\n常见的权限维度包括：环境查看、环境编辑、代理管理、扩展安装、导出与删除。把高风险操作（导出、删除、修改代理）限制在少数人手里，能显著降低误操作与凭据泄露的波及面。"
+		},
+		{
+			heading: "划清共享边界",
+			body: "避免共享主账号凭据，改用成员子账号或团队工作区来协作。共享主账号会让所有操作无法追溯到个人，一旦出问题无从定责。\n\n环境之间也要划清边界：哪些环境属于哪个成员或项目，谁可以临时借用，借用的期限是多久。边界模糊是多账号运营混乱的常见根源。"
+		},
+		{
+			heading: "保留变更记录",
+			body: "对代理、扩展和环境配置的每一次修改，都应记录：谁、在什么时间、改了哪个环境的什么字段。这些记录不必复杂，但要在出现关联或异常时能被快速检索到。\n\n凭据泄露应视为安全事件，立即轮换并审计受影响的环境。变更记录是定位原因的唯一可靠线索。"
+		},
+		{
+			heading: "两个常见误区",
+			body: "- 认为「信任成员」就不需要权限分级。权限分级是为了降低误操作与账号泄露的波及范围，与信任无关。\n- 认为配置一次就不用再管。代理失效、扩展更新、成员变动都会改变风险面，应定期复核权限与共享边界。\n\n本文仅用于资源整理、隐私研究与合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
+		}
+	] }
 ];
 
-export const comparisons: ComparisonResource[] = [
+const rawComparisons: ComparisonResource[] = [
 	{ title: "EasyBR vs AdsPower", slug: "easybr-vs-adspower", description: "比较本地优先与电商自动化工作流。", browsers: ["easybr", "adspower"] },
 	{ title: "EasyBR vs GoLogin", slug: "easybr-vs-gologin", description: "比较本地优先和云端环境管理。", browsers: ["easybr", "gologin"] },
 	{ title: "EasyBR vs Multilogin", slug: "easybr-vs-multilogin", description: "比较本地优先与企业团队工作流。", browsers: ["easybr", "multilogin"] },
@@ -411,13 +566,18 @@ export const comparisons: ComparisonResource[] = [
 	{ title: "Multilogin vs Dolphin Anty", slug: "multilogin-vs-dolphin-anty", description: "比较企业团队管理与社媒运营场景。", browsers: ["multilogin", "dolphin-anty"] },
 	{ title: "Multilogin vs Incogniton", slug: "multilogin-vs-incogniton", description: "比较企业级环境管理与轻量方案。", browsers: ["multilogin", "incogniton"] },
 	{ title: "Multilogin vs Kameleo", slug: "multilogin-vs-kameleo", description: "比较浏览器内核、指纹能力与自动化支持。", browsers: ["multilogin", "kameleo"] },
-	{ title: "Dolphin Anty vs MoreLogin", slug: "dolphin-anty-vs-morelogin", description: "比较社媒运营、环境数量和团队协作。", browsers: ["dolphin-anty", "morelogin"] },
 	{ title: "Dolphin Anty vs Incogniton", slug: "dolphin-anty-vs-incogniton", description: "比较营销团队和个人多账号使用方式。", browsers: ["dolphin-anty", "incogniton"] },
 	{ title: "MoreLogin vs BitBrowser", slug: "morelogin-vs-bitbrowser", description: "比较亚洲市场常见方案的环境与自动化能力。", browsers: ["morelogin", "bitbrowser"] },
 	{ title: "Octo Browser vs Undetectable", slug: "octo-browser-vs-undetectable", description: "比较多账号环境、代理配置与自动化工作流。", browsers: ["octo-browser", "undetectable"] },
 	{ title: "Kameleo vs Octo Browser", slug: "kameleo-vs-octo-browser", description: "比较指纹配置、平台和自动化工作流。", browsers: ["kameleo", "octo-browser"] },
 	{ title: "Undetectable vs GoLogin", slug: "undetectable-vs-gologin", description: "比较多账号浏览器的价格、环境和自动化能力。", browsers: ["undetectable", "gologin"] }
 ];
+
+// Attach the generated, data-driven "分场景推荐" sections (see comparison-sections.ts).
+export const comparisons: ComparisonResource[] = rawComparisons.map(comparison => ({
+	...comparison,
+	sections: comparisonSections[comparison.slug]
+}));
 
 export const browserBySlug = (slug: string) => browsers.find(browser => browser.slug === slug);
 export const toolBySlug = (slug: string) => tools.find(tool => tool.slug === slug);

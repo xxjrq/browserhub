@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Check, Minus } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { browserBySlug, browsers, comparisons } from "@/data/resources";
+import { comparisonIsolationAnswer, comparisonPitfalls, comparisonProxyAnswer } from "@/lib/i18n";
 import { ResourceIcon } from "@/components/resource-icon";
 import { Rating } from "@/components/rating";
 import { cn } from "@/lib/utils";
@@ -49,7 +50,7 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
 	] as Array<[string, string | boolean, string | boolean]>;
 	const related = comparisons.filter(item => item.slug !== comparison.slug && item.browsers.some(itemSlug => comparison.browsers.includes(itemSlug))).slice(0, 4);
 	const jsonLd = [
-		{ "@context": "https://schema.org", "@type": "Article", headline: comparison.title, description: comparison.description, dateModified: "2026-08-11", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/compare/${comparison.slug}/` },
+		{ "@context": "https://schema.org", "@type": "Article", headline: comparison.title, description: comparison.description, dateModified: "2026-10-15", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/compare/${comparison.slug}/` },
 		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "浏览器对比", item: "https://browserhub.co/compare/" }, { "@type": "ListItem", position: 3, name: comparison.title, item: `https://browserhub.co/compare/${comparison.slug}/` }] }
 	];
 
@@ -130,9 +131,27 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
 					</Card>
 				</div>
 
-				<p className="mt-6 border-l-2 border-primary bg-primary/[0.04] px-4 py-3 text-sm leading-7 text-muted-foreground">
-					选型建议：先按环境数量、平台和存储方式缩小范围，再验证 API、自动化、代理和团队协作能力。评分是编辑整理指标，不代表官方承诺。
-				</p>
+			<p className="mt-6 border-l-2 border-primary bg-primary/[0.04] px-4 py-3 text-sm leading-7 text-muted-foreground">
+				选型建议：先按环境数量、平台和存储方式缩小范围，再验证 API、自动化、代理和团队协作能力。评分是编辑整理指标，不代表官方承诺。
+			</p>
+
+			{comparison.sections?.map(section => (
+				<section key={section.heading} className="mt-10">
+					<h2 className="text-lg font-semibold tracking-tight">{section.heading}</h2>
+					<div className="mt-4 space-y-4">{section.body.split(/\n{2,}/).map((block, blockIndex) => <p key={blockIndex} className="text-sm leading-7 text-muted-foreground">{block}</p>)}</div>
+				</section>
+			))}
+			<section className="mt-10">
+				<h2 className="text-lg font-semibold tracking-tight">常见误区</h2>
+				<ul className="mt-4 space-y-3">{comparisonPitfalls("zh-cn").map(pitfall => <li key={pitfall} className="flex items-start gap-2.5 text-sm leading-7 text-muted-foreground"><Minus className="mt-1 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" aria-hidden="true" /><span>{pitfall}</span></li>)}</ul>
+			</section>
+			<section className="mt-10">
+				<h2 className="text-lg font-semibold tracking-tight">常见问题</h2>
+				<div className="mt-4 space-y-3">
+					<Card><CardHeader><CardTitle className="text-base">挂了代理就一定不会泄漏 WebRTC 吗？</CardTitle></CardHeader><CardContent><p className="text-sm leading-7 text-muted-foreground">{comparisonProxyAnswer("zh-cn")}</p></CardContent></Card>
+					<Card><CardHeader><CardTitle className="text-base">能不能用一个环境同时登录多个账号？</CardTitle></CardHeader><CardContent><p className="text-sm leading-7 text-muted-foreground">{comparisonIsolationAnswer("zh-cn")}</p></CardContent></Card>
+				</div>
+			</section>
 
 				<section className="mt-12">
 					<h2 className="mb-1 text-lg font-semibold tracking-tight">相关对比</h2>

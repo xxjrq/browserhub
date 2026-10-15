@@ -9,7 +9,7 @@ import { ResourceIcon } from "@/components/resource-icon";
 import { Rating } from "@/components/rating";
 import { StatusBadge } from "@/components/status-badge";
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
-import { allLocaleParams, comparisonApiAnswer, comparisonCopy, comparisonFaq, fingerprintCopy, hreflangFor, isLocale, localeMeta, localePath, localizedResourceDescription, pageMeta, relatedLinks, resourceFor, t, toolHowToSteps, type Locale, type LocalizedKind } from "@/lib/i18n";
+import { allLocaleParams, comparisonApiAnswer, comparisonCopy, comparisonFaq, comparisonIsolationAnswer, comparisonPitfalls, comparisonProxyAnswer, fingerprintCopy, hreflangFor, isLocale, localeMeta, localePath, localizedResourceDescription, pageMeta, relatedLinks, resourceFor, t, toolHowToSteps, type Locale, type LocalizedKind } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { HomePage } from "@/app/page";
 
@@ -129,14 +129,27 @@ function Detail({ locale, kind, item }: { locale: Locale; kind: LocalizedKind; i
 		const faq = [
 			{ q: questions[0], a: copy.verdict },
 			{ q: questions[1], a: copy.source },
-			{ q: questions[2], a: comparisonApiAnswer(locale, a, b) }
+			{ q: questions[2], a: comparisonApiAnswer(locale, a, b) },
+			{ q: questions[3], a: comparisonProxyAnswer(locale) },
+			{ q: questions[4], a: comparisonIsolationAnswer(locale) }
 		];
+		const pitfallsHeading = { "zh-cn": "常见误区", en: "Common pitfalls", ja: "よくある誤り", ko: "흔한 실수", es: "Errores comunes", pt: "Erros comuns", ru: "Частые ошибки" }[locale];
 		return <Shell locale={locale} path={path} related={relatedSlot}><article className="mx-auto max-w-6xl">
 			<header className="mb-10"><div className="flex flex-wrap items-center gap-4"><ResourceIcon name={a.name} src={a.icon} website={a.website} size={52} /><span className="text-2xl font-semibold">{a.name}</span><span className="rounded-full border px-3 py-1 font-mono text-sm text-muted-foreground">vs</span><ResourceIcon name={b.name} src={b.icon} website={b.website} size={52} /><span className="text-2xl font-semibold">{b.name}</span></div><h1 className="mt-7 text-3xl font-semibold tracking-tight sm:text-4xl">{a.name} vs {b.name}</h1><p className="mt-5 max-w-4xl text-lg leading-8 text-muted-foreground">{copy.overview}</p></header>
 			<section className="mb-8 rounded-xl border border-primary/30 bg-primary/[0.04] p-6"><p className="eyebrow text-primary">Verdict</p><p className="mt-3 leading-8 text-muted-foreground">{copy.verdict}</p></section>
 			<Card><CardHeader><CardTitle>{labels.comparisonTable}</CardTitle></CardHeader><CardContent className="overflow-x-auto p-0"><table className="w-full min-w-[680px] text-sm"><thead><tr className="border-y bg-muted/50 text-left"><th className="p-4">{copy.fields.price}</th><th className="p-4">{a.name}</th><th className="p-4">{b.name}</th></tr></thead><tbody>{rows.map(([field, va, vb]) => <tr key={field} className="border-b last:border-0"><td className="p-4 font-medium text-muted-foreground">{field}</td><td className="p-4">{valueCell(va)}</td><td className="p-4">{valueCell(vb)}</td></tr>)}</tbody></table></CardContent></Card>
 			<section className="mt-8 grid gap-5 md:grid-cols-2"><Card><CardHeader><CardTitle>{copy.strengths}</CardTitle></CardHeader><CardContent><ul className="space-y-3 text-sm leading-7">{a.pros.slice(0, 4).map(value => <li key={value}><Check className="mr-2 inline h-4 w-4 text-success" />{value}</li>)}</ul><p className="mt-5 border-t pt-4 text-sm text-muted-foreground">{a.bestFor.slice(0, 3).join(" · ")}</p></CardContent></Card><Card><CardHeader><CardTitle>{copy.limitations}</CardTitle></CardHeader><CardContent><ul className="space-y-3 text-sm leading-7">{b.pros.slice(0, 4).map(value => <li key={value}><Check className="mr-2 inline h-4 w-4 text-success" />{value}</li>)}</ul><p className="mt-5 border-t pt-4 text-sm text-muted-foreground">{b.bestFor.slice(0, 3).join(" · ")}</p></CardContent></Card></section>
 			<section className="mt-8"><h2 className="text-xl font-semibold">{copy.scenarios}</h2><div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{[a, b].flatMap(browser => browser.bestFor.slice(0, 2).map(scenario => <div key={`${browser.slug}-${scenario}`} className="rounded-lg border bg-card p-4 text-sm"><p className="font-medium">{browser.name}</p><p className="mt-2 text-muted-foreground">{scenario}</p></div>))}</div></section>
+			{item.sections?.map(section => (
+				<section key={section.heading} className="mt-10">
+					<h2 className="text-xl font-semibold">{copy.scenarios}</h2>
+					<div className="mt-4 space-y-4">{section.body.split(/\n{2,}/).map((block, blockIndex) => <p key={blockIndex} className="text-sm leading-7 text-muted-foreground">{block}</p>)}</div>
+				</section>
+			))}
+			<section className="mt-10">
+				<h2 className="text-xl font-semibold">{pitfallsHeading}</h2>
+				<ul className="mt-4 space-y-3">{comparisonPitfalls(locale).map(pitfall => <li key={pitfall} className="flex items-start gap-2.5 text-sm leading-7 text-muted-foreground"><Minus className="mt-1 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" aria-hidden="true" /><span>{pitfall}</span></li>)}</ul>
+			</section>
 			<section className="mt-10"><h2 className="text-xl font-semibold">{copy.faq}</h2><div className="mt-4 space-y-3">{faq.map(entry => <Card key={entry.q}><CardHeader><CardTitle className="text-base">{entry.q}</CardTitle></CardHeader><CardContent><p className="text-sm leading-7 text-muted-foreground">{entry.a}</p></CardContent></Card>)}</div></section>
 			<p className="mt-10 border-t pt-5 text-xs leading-6 text-muted-foreground">{copy.source} · {labels.updated} {a.updatedAt}</p>
 		</article></Shell>;

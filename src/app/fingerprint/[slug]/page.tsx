@@ -26,7 +26,7 @@ export default async function FingerprintDetailPage({ params }: { params: Promis
 	if (!technology) notFound();
 	const relatedTools = tools.filter(tool => tool.slug !== "playwright" && tool.slug !== "puppeteer").slice(0, 4);
 	const jsonLd = [
-		{ "@context": "https://schema.org", "@type": "TechArticle", headline: `${technology.name} 浏览器指纹：原理、检测与隐私影响`, description: technology.description, dateModified: "2026-08-11", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/fingerprint/${technology.slug}/` },
+		{ "@context": "https://schema.org", "@type": "TechArticle", headline: `${technology.name} 浏览器指纹：原理、检测与隐私影响`, description: technology.description, dateModified: "2026-10-15", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/fingerprint/${technology.slug}/` },
 		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "浏览器指纹技术", item: "https://browserhub.co/fingerprint/" }, { "@type": "ListItem", position: 3, name: technology.name, item: `https://browserhub.co/fingerprint/${technology.slug}/` }] }
 	];
 	return (

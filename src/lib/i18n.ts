@@ -232,14 +232,14 @@ export function relatedLinks(locale: Locale, kind: LocalizedKind, item: any, lim
 }
 
 export function comparisonFaq(locale: Locale, a: BrowserResource, b: BrowserResource, copy: ReturnType<typeof comparisonCopy>) {
-	const questions: Record<Locale, [string, string, string]> = {
-		"zh-cn": [`${a.name} 和 ${b.name} 哪个更适合我？`, `${copy.fields.price}如何确认？`, `${copy.fields.api}和${copy.fields.automation}是否相同？`],
-		en: [`Which is a better fit: ${a.name} or ${b.name}?`, `How should I verify the ${copy.fields.price.toLowerCase()}?`, `Do ${copy.fields.api} and ${copy.fields.automation.toLowerCase()} mean the same thing?`],
-		ja: [`${a.name} と ${b.name} はどちらが適していますか？`, `${copy.fields.price}はどこで確認できますか？`, `${copy.fields.api}と${copy.fields.automation}は同じですか？`],
-		ko: [`${a.name}과(와) ${b.name} 중 어느 쪽이 적합한가요?`, `${copy.fields.price}는 어디에서 확인하나요?`, `${copy.fields.api}와(과) ${copy.fields.automation}은 같은 의미인가요?`],
-		es: [`¿Qué opción encaja mejor: ${a.name} o ${b.name}?`, `¿Cómo se debe verificar el ${copy.fields.price.toLowerCase()}?`, `¿La ${copy.fields.api} es lo mismo que la ${copy.fields.automation.toLowerCase()}?`],
-		pt: [`Qual opção é mais adequada: ${a.name} ou ${b.name}?`, `Como confirmar o ${copy.fields.price.toLowerCase()}?`, `${copy.fields.api} e ${copy.fields.automation.toLowerCase()} são a mesma coisa?`],
-		ru: [`Что лучше подходит: ${a.name} или ${b.name}?`, `Где проверить ${copy.fields.price.toLowerCase()}?`, `${copy.fields.api} и ${copy.fields.automation.toLowerCase()} — это одно и то же?`]
+	const questions: Record<Locale, [string, string, string, string, string]> = {
+		"zh-cn": [`${a.name} 和 ${b.name} 哪个更适合我？`, `${copy.fields.price}如何确认？`, `${copy.fields.api}和${copy.fields.automation}是否相同？`, `挂了代理就一定不会泄漏 WebRTC 吗？`, `能不能用一个环境同时登录多个账号？`],
+		en: [`Which is a better fit: ${a.name} or ${b.name}?`, `How should I verify the ${copy.fields.price.toLowerCase()}?`, `Do ${copy.fields.api} and ${copy.fields.automation.toLowerCase()} mean the same thing?`, `Does a proxy guarantee no WebRTC leak?`, `Can I run several accounts inside one browser profile?`],
+		ja: [`${a.name} と ${b.name} はどちらが適していますか？`, `${copy.fields.price}はどこで確認できますか？`, `${copy.fields.api}と${copy.fields.automation}は同じですか？`, `プロキシを設定すれば WebRTC 漏洩は防げますか？`, `1 つのプロファイルで複数アカウントを運用してもいいですか？`],
+		ko: [`${a.name}과(와) ${b.name} 중 어느 쪽이 적합한가요?`, `${copy.fields.price}는 어디에서 확인하나요?`, `${copy.fields.api}와(과) ${copy.fields.automation}은 같은 의미인가요?`, `프록시를 쓰면 WebRTC 누출이 막히나요?`, `한 프로필에서 여러 계정을 함께 돌려도 되나요?`],
+		es: [`¿Qué opción encaja mejor: ${a.name} o ${b.name}?`, `¿Cómo se debe verificar el ${copy.fields.price.toLowerCase()}?`, `¿La ${copy.fields.api} es lo mismo que la ${copy.fields.automation.toLowerCase()}?`, `¿El proxy evita siempre la fuga de WebRTC?`, `¿Puedo usar una sola cuenta de perfil para varias cuentas?`],
+		pt: [`Qual opção é mais adequada: ${a.name} ou ${b.name}?`, `Como confirmar o ${copy.fields.price.toLowerCase()}?`, `${copy.fields.api} e ${copy.fields.automation.toLowerCase()} são a mesma coisa?`, `O proxy garante que não haja vazamento WebRTC?`, `Posso usar um único perfil para várias contas?`],
+		ru: [`Что лучше подходит: ${a.name} или ${b.name}?`, `Где проверить ${copy.fields.price.toLowerCase()}?`, `${copy.fields.api} и ${copy.fields.automation.toLowerCase()} — это одно и то же?`, `Гарантирует ли прокси отсутствие утечки WebRTC?`, `Можно ли вести несколько аккаунтов в одном профиле?`]
 	};
 	return questions[locale];
 }
@@ -255,6 +255,87 @@ export function comparisonApiAnswer(locale: Locale, a: BrowserResource, b: Brows
 		ru: `Возможности API и автоматизации ${a.name} и ${b.name} следует проверять в официальной документации; в таблице указаны только открытые данные.`
 	};
 	return answers[locale];
+}
+
+/**
+ * Shared "常见误区" (common pitfalls) shown on every comparison page. These are
+ * general multi-account practices, not per-product claims, so they stay constant
+ * across all 30 comparisons while the data-driven scenario text above differs.
+ */
+export function comparisonPitfalls(locale: Locale): string[] {
+	const lists: Record<Locale, string[]> = {
+		"zh-cn": [
+			"只比较浏览器订阅价，忽略代理流量费。多账号场景里代理常按 GB 计费，可能超过浏览器本身的开销。",
+			"用一个环境同时登录多个账号。环境复用是账号串联最常见的原因；每个账号应绑定独立环境，并保持代理、语言、时区长期一致。",
+			"把「不可检测」当作绝对结论。不存在对所有站点都不可检测的工具，应以实际公开检测结果为准，而不是以宣传话术为准。",
+			"只看免费环境数量，不看保留规则与功能边界。免费额度可能限制导出、自动化或环境保留天数，迁移前要先确认。"
+		],
+		en: [
+			"Comparing only the browser subscription price and ignoring proxy traffic fees. In multi-account setups proxies are often billed per GB and can exceed the browser cost.",
+			"Running several accounts inside one profile. Profile reuse is the most common cause of account linkage; give each account its own profile and keep proxy, language and timezone stable over time.",
+			"Treating \"undetectable\" as an absolute claim. No tool is undetectable to every site; judge by actual public detection results, not marketing wording.",
+			"Looking only at the free profile count and ignoring retention rules and feature limits. Free tiers may cap exports, automation or how long profiles are kept — confirm before migrating."
+		],
+		ja: [
+			"ブラウザの月額だけを比較し、プロキシ通信費を忘れる。マルチアカウントではプロキシが GB 課金でブラウザ代を超えることがあります。",
+			"1 つのプロファイルで複数アカウントを運用する。プロファイルの使い回しはアカウント紐付けの最大の原因です。アカウントごとに独立した環境を割り当て、プロキシ・言語・タイムゾーンを長期で一致させてください。",
+			"「検出不可能」を絶対視する。すべてのサイトで検出されないツールは存在しません。宣伝文句ではなく、実際の公開検出結果で判断してください。",
+			"無料プロファイル数だけを見て、保持ルールや機能制限を確認しない。無料枠はエクスポートや自動化、保持日数を制限する場合があるため、移行前に確認が必要です。"
+		],
+		ko: [
+			"브라우저 구독 가격만 비교하고 프록시 트래픽 비용을 빼먹기. 멀티 계정 환경에서는 프록시가 GB 단위로 과금되어 브라우저 비용을 넘을 수 있습니다.",
+			"한 프로필에서 여러 계정 운영. 프로필 재사용은 계정 연동의 가장 흔한 원인입니다. 계정마다 독립된 환경을 주고 프록시·언어·시간대를 장기적으로 일치시키세요.",
+			"\"검출 불가\"를 절대적인 사실로 받아들이기. 모든 사이트에서 검출되지 않는 도구는 없습니다. 마케팅 문구가 아닌 실제 공개 검출 결과로 판단하세요.",
+			"무료 프로필 개수만 보고 보관 규칙과 기능 한계를 놓치기. 무료 등급은 내보내기·자동화·보관 일수를 제한할 수 있으니 이동 전에 확인하세요."
+		],
+		es: [
+			"Solo comparar la suscripción del navegador e ignorar la facturación del tráfico de proxy. En entornos multicuenta el proxy suele cobrarse por GB y puede superar el coste del navegador.",
+			"Usar un mismo perfil para varias cuentas. Reutilizar perfiles es la causa más común de vinculación de cuentas; asigna un perfil propio a cada cuenta y mantén proxy, idioma y zona horaria estables.",
+			"Tomar \"indetectable\" como una afirmación absoluta. Ninguna herramienta es indetectable para todos los sitios; juzga por resultados de detección públicos, no por el marketing.",
+			"Mirar solo la cantidad de perfiles gratis y pasar por alto las reglas de retención y los límites. La capa gratuita puede limitar exportaciones, automatización o días de retención; confírmalo antes de migrar."
+		],
+		pt: [
+			"Comparar apenas a assinatura do navegador e esquecer o tráfego do proxy. Em contas múltiplas o proxy costuma ser cobrado por GB e pode passar o custo do navegador.",
+			"Usar um único perfil para várias contas. Reutilizar perfis é a causa mais comum de vínculo entre contas; dê um perfil próprio a cada conta e mantenha proxy, idioma e fuso estáveis.",
+			"Tratar \"indetectável\" como afirmação absoluta. Nenhuma ferramenta é indetectável para todos os sites; julgue por resultados públicos de detecção, não por marketing.",
+			"Olhar só a quantidade de perfis grátis e ignorar regras de retenção e limites. O plano gratuito pode limitar exportações, automação ou retenção; confirme antes de migrar."
+		],
+		ru: [
+			"Сравнивать только подписку браузера и игнорировать трафик прокси. При мультиаккаунтах прокси часто тарифицируется за ГБ и может превысить стоимость браузера.",
+			"Вести несколько аккаунтов в одном профиле. Переиспользование профилей — самая частая причина привязки аккаунтов; выделяйте отдельный профиль каждому аккаунту и держите прокси, язык и часовой пояс стабильными.",
+			"Считать \"необнаружимый\" абсолютным утверждением. Ни одна утилита не необнаружима для всех сайтов; оценивайте по публичным результатам детекта, а не по маркетингу.",
+			"Смотреть только на число бесплатных профилей и игнорировать правила хранения и лимиты. Бесплатный уровень может ограничивать экспорт, автоматизацию или срок хранения — проверьте перед миграцией."
+		]
+	};
+	return lists[locale];
+}
+
+/** FAQ answer: a proxy does not by itself guarantee no WebRTC leak. */
+export function comparisonProxyAnswer(locale: Locale): string {
+	const lists: Record<Locale, string> = {
+		"zh-cn": "不一定。代理解决的是流量路径，但 WebRTC 的候选地址收集不一定遵循代理设置，可能直接暴露真实公网或局域网地址。应分别验证出口 IP、DNS 解析与 WebRTC 候选地址，三者一致才算配置正确。",
+		en: "Not necessarily. A proxy fixes the traffic path, but WebRTC candidate collection may bypass the proxy and expose your real public or local address. Verify the exit IP, the DNS resolver and the WebRTC candidates separately; only when all three agree is the setup correct.",
+		ja: "いいえ。プロキシは通信経路を解決しますが、WebRTC の候補収集はプロキシ設定に従わず、実際の公網や LAN アドレスを漏らすことがあります。出口 IP・DNS 解決・WebRTC 候補を別々に検証し、三者が一致して初めて正しい設定です。",
+		ko: "아니요. 프록시는 트래픽 경로를 해결하지만 WebRTC 후보 수집이 프록시를 우회해 실제 공인·내부 주소를 노출할 수 있습니다. 출구 IP, DNS 확인, WebRTC 후보를 각각 검증하고 셋이 일치해야 올바른 설정입니다.",
+		es: "No necesariamente. El proxy arregla la ruta del tráfico, pero la recolección de candidatos WebRTC puede omitir el proxy y exponer tu dirección pública o local real. Verifica la IP de salida, el resolutor DNS y los candidatos WebRTC por separado; solo cuando los tres coinciden la configuración es correcta.",
+		pt: "Não necessariamente. O proxy corrige o caminho do tráfego, mas a coleta de candidatos WebRTC pode contornar o proxy e expor seu endereço público ou local real. Verifique o IP de saída, o resolvedor DNS e os candidatos WebRTC separadamente; só quando os três concordam a configuração está correta.",
+		ru: "Не обязательно. Прокси исправляет путь трафика, но сбор кандидатов WebRTC может обходить прокси и раскрыть ваш реальный публичный или локальный адрес. Проверяйте исходящий IP, DNS-резолвер и кандидатов WebRTC по отдельности; настройка верна, только когда все три совпадают."
+	};
+	return lists[locale];
+}
+
+/** FAQ answer: one profile should not host several accounts. */
+export function comparisonIsolationAnswer(locale: Locale): string {
+	const lists: Record<Locale, string> = {
+		"zh-cn": "不建议。同一个环境内登录多个账号是账号串联最常见的原因。正确做法是每个账号绑定独立环境，并保持代理、语言、时区与账号行为长期一致，再用公开检测工具确认环境稳定。",
+		en: "No. Logging several accounts into one profile is the most common cause of account linkage. Give each account its own isolated profile, keep the proxy, language and timezone stable over time, then confirm stability with public detection tools.",
+		ja: "おすすめしません。1 つのプロファイルで複数アカウントを運用するのはアカウント紐付けの最も一般的な原因です。アカウントごとに独立した環境を割り当て、プロキシ・言語・タイムゾーンを長期で一致させ、公開検出ツールで安定性を確認してください。",
+		ko: "권장하지 않습니다. 한 프로필에서 여러 계정을 운영하는 것은 계정 연동의 가장 흔한 원인입니다. 계정마다 독립된 환경을 주고 프록시·언어·시간대를 장기적으로 일치시킨 뒤 공개 검출 도구로 안정성을 확인하세요.",
+		es: "No. Iniciar sesión con varias cuentas en un mismo perfil es la causa más común de vinculación de cuentas. Asigna un perfil aislado a cada cuenta, mantén proxy, idioma y zona horaria estables y confirma la estabilidad con herramientas de detección públicas.",
+		pt: "Não. Usar várias contas em um único perfil é a causa mais comum de vínculo entre contas. Dê a cada conta um perfil isolado, mantenha proxy, idioma e fuso estáveis e confirme a estabilidade com ferramentas de detecção públicas.",
+		ru: "Нет. Вход нескольких аккаунтов в один профиль — самая частая причина привязки аккаунтов. Выделяйте каждому аккаунту изолированный профиль, держите прокси, язык и часовой пояс стабильными и подтверждайте стабильность публичными инструментами детекта."
+	};
+	return lists[locale];
 }
 
 // The catalog is a discriminated union at runtime; this helper intentionally reads fields selected by `kind`.
