@@ -45,8 +45,36 @@ NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build
 npm run check:dist
 ```
 
+## 服务器部署
+
+Nginx vhost 示例位于 `deploy/nginx/`。本仓库只负责静态站源码和构建产物，不包含服务器凭据。
+
+**部署目标（已确认，直接用，不要再猜）**
+
+| 项 | 值 |
+|---|---|
+| SSH | `root@178.156.220.215`（远端 hostname `mz1`），公钥免密 |
+| ssh 别名 | `browserhub-deploy`（已写入 `~/.ssh/config`） |
+| 部署根目录 | `/opt/browsertools`，`current` 软链接指向 `releases/<日期>-<commit>` |
+| 保留版本数 | 5（`KEEP_RELEASES`） |
+| 源站直连域 | `browsers.draxgr.cc`（nginx 1.24.0 Ubuntu） |
+| Cloudflare 主域 | `browserhub.co`（DNS 指向 172.67.x / 104.21.x，代理回源到上面那台） |
+| 证书 | `/etc/letsencrypt/live/{browserhub.co,browsers.draxgr.cc}` |
+
+发布命令：
+
+```bash
+bash scripts/deploy.sh
+# 等价于 DEPLOY_HOST=browserhub-deploy DOMAIN=browsers.draxgr.cc bash scripts/deploy.sh
+```
+
+`deploy.sh` 会依次执行：清理构建缓存 → `npm run ci` → 上传到新的 release 目录 →
+`current` 原子切换 → reload Nginx → 冒烟测试。任一步失败都会保留上一版本继续对外服务。
+
+**冒烟测试为什么用 `browsers.draxgr.cc` 而不是 `browserhub.co`**：主域在 Cloudflare 后面，
+缓存可能让一次旧版本的响应返回 200，让部署看起来成功而实际没更新。`browsers.draxgr.cc`
+直连本机，读到的就是刚上传的产物。上线后仍建议对两个域名都 curl 复验一次。
+
 ## 数据来源与维护
 
 浏览器、工具、技术和场景目录集中存放在 `src/data/catalog/`；浏览器详情同时参考主资源库 `xxjrq/antidetect-browser-hub` 的公开整理内容。新增或修订条目时，请保留官方链接、适用场景和限制说明，不提交密码、令牌或其他敏感信息。
-
-服务器部署示例位于 `deploy/nginx/`。本仓库只负责静态站源码和构建产物，不包含服务器凭据，也不在本地提交中自动发布线上服务。

@@ -13,9 +13,28 @@ DEPLOY_HOST=browserhub-deploy DOMAIN=browsers.draxgr.cc bash scripts/deploy.sh
 - 部署命令已改为默认 `DEPLOY_HOST=browserhub-deploy` / `DOMAIN=browsers.draxgr.cc`（不走 Cloudflare，避免拿缓存当成功）。
 
 ### ⚠️ 我踩过的坑（不要再犯）
-第一次执行时报「DEPLOY_HOST 未知」，是因为**只翻了 `~/.ssh/config` 里的 5 台主机**（myserver / 47.84.225.130 / centos-ainiu / vm-arm / gitee），那几台跑的是**无关业务**（skyvora.cc、aimmme.com 等），全盘 grep `browserhub` 当然找不到。
-**真正的入口是本地发布资料**：`deploy/nginx/browserhub.co.conf` 和 `deploy/nginx/browsers.draxgr.cc.conf`。
-以后判断部署机，**先读 `deploy/nginx/*.conf`**，再考虑 SSH 盲试。
+
+**根因不是"主机难找"，是我没读资料。** IP 就写在用户的需求文档里：
+`/Users/myd/develop/brower/easybrmy/zuo/资源大全网站开发需求.md`（约 1075 行）明确写着：
+
+```
+browsers.draxgr.cc 临时先用这个域名，域名还在购买。
+178.156.220.215
+这里有服务器，可以参考 /Users/myd/develop/brower/ezo/    ezosite 考考这个网站怎么上线的。
+服务器都是一个，免密码登录的。部署上线哈。 怎么配置的，资料都有，你要自己去找肯定都能找到。
+```
+
+第一手资料有三处，全部指向同一台机器，我一份都没查就下了"主机未知"的结论：
+1. **需求文档** `zuo/资源大全网站开发需求.md` —— 直接写了 IP（注意该文档混用全角/异体字符，grep 搜数字可能搜不到，要按行读）
+2. **仓库发布资料** `deploy/nginx/browserhub.co.conf`、`deploy/nginx/browsers.draxgr.cc.conf` —— 有域名和 `root /opt/browsertools/current`
+3. **参考项目** `/Users/myd/develop/brower/ezo/appapi/scripts/deploy.sh`
+
+**教训：判断部署机必须先读资料，再考虑 SSH 盲试。** 现在的固定顺序：
+1. 需求文档 `zuo/资源大全网站开发需求.md`
+2. `deploy/nginx/*.conf`
+3. `ssh browserhub-deploy` 直接验证（别名已配好，免密）
+
+`README.md` 和 `AGENTS.md` 现在都写了主机信息，任何 agent 进仓库第一眼就能看到，不要再重新排查。
 
 ### 排查过的干扰项（确认都不是部署机）
 | 主机 | 结论 |
@@ -24,6 +43,7 @@ DEPLOY_HOST=browserhub-deploy DOMAIN=browsers.draxgr.cc bash scripts/deploy.sh
 | `47.84.225.130` | 阿里云，跑 skyvora.cc，/opt/browsertools 不存在。不是。 |
 | `centos-ainiu` (124.223.7.24) | 跑 aimmme.com / ebrower.com。⚠️ `/usr/share/nginx/html/llms.txt` 属于 **EasyBR** 站点，与 BrowserHub 无关，勿再误判。 |
 | `vm-arm` | 超时（192.168.64.2 内网地址）。 |
+| ~~~~ | **以上全部与 BrowserHub 无关，不要再查。** |
 
 ### 域名链路
 - `browserhub.co` → Cloudflare（alfred/carla.ns.cloudflare.com）→ 源站 178.156.220.215。**DNS 查不到源站，被代理隐藏。**
