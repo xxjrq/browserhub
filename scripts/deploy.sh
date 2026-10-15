@@ -4,14 +4,26 @@
 # Flow: clean cache -> npm run ci -> rsync out/ to a timestamped release dir ->
 # atomically repoint /opt/browsertools/current -> reload Nginx -> smoke-test.
 # A failed build or failed health check leaves the previous release serving traffic.
+#
+# Deploy host (confirmed 2026-10-15): the release notes in deploy/nginx/*.conf
+# point browsers.draxgr.cc and browserhub.co at the same origin, root@178.156.220.215
+# (hostname mz1), which serves /opt/browsertools. It is NOT one of the hosts in
+# ~/.ssh/config that also run unrelated business sites, which is why a blind search
+# over those hosts finds nothing. Use the `browserhub-deploy` ssh alias, added to
+# ~/.ssh/config for this reason.
+#
+# Usage: DEPLOY_HOST=browserhub-deploy DOMAIN=browsers.draxgr.cc bash scripts/deploy.sh
 set -euo pipefail
 
 PROJECT_DIR="${PROJECT_DIR:-/Users/myd/develop/brower/easybrmy/browsertools}"
-DEPLOY_HOST="${DEPLOY_HOST:?set DEPLOY_HOST, e.g. DEPLOY_HOST=myserver}"
+DEPLOY_HOST="${DEPLOY_HOST:-browserhub-deploy}"
 DEPLOY_ROOT="${DEPLOY_ROOT:-/opt/browsertools}"
 RELEASES="$DEPLOY_ROOT/releases"
 CURRENT="$DEPLOY_ROOT/current"
-DOMAIN="${DOMAIN:-browserhub.co}"
+# Default to the origin host, not browserhub.co: browserhub.co sits behind
+# Cloudflare, so its smoke test can pass against a cached copy and report a
+# stale deploy as healthy. browsers.draxgr.cc reads this box directly.
+DOMAIN="${DOMAIN:-browsers.draxgr.cc}"
 KEEP_RELEASES="${KEEP_RELEASES:-5}"
 export NEXT_PUBLIC_SITE_URL="https://$DOMAIN"
 # WorkBuddy injects NODE_OPTIONS with a sandbox shim that redirects Node sockets to a
