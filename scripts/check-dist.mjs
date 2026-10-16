@@ -44,7 +44,10 @@ for (const file of htmlFiles) {
 		}
 	}
 	if (/<a\b[^>]*>\s*<button\b/i.test(html)) errors.push(`${file}: nested anchor/button`);
-	if (/后续将补充|内容建设中|Coming soon|lorem ipsum/i.test(html)) errors.push(`${file}: placeholder content`);
+	// A vendor's unreleased Android client may legitimately be described in evidence.
+	// Reject site-construction placeholders, rather than the phrase inside a sourced note.
+	const visibleHtml = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
+	if (/后续将补充|内容建设中|lorem ipsum/i.test(visibleHtml) || />\s*(?:Coming soon|Under construction)[.!…]?\s*</i.test(visibleHtml)) errors.push(`${file}: placeholder content`);
 }
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);

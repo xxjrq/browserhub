@@ -37,11 +37,11 @@ export function BrowserCard({ browser, className }: { browser: BrowserResource; 
 				<Capability ok={browser.automation} label="Automation" />
 				<Capability ok={browser.proxy} label="Proxy" />
 			</div>
-			<div className="mt-auto flex items-center justify-between gap-3 border-t pt-3">
+			<div className="mt-auto flex flex-col items-start gap-3 border-t pt-3">
 				<span className="truncate text-xs text-muted-foreground">{browser.platforms.join(" · ")}</span>
-				<span className="flex shrink-0 items-center gap-2">
-					<span className="font-mono text-xs font-medium">{browser.price}</span>
-					<ArrowUpRight className="h-4 w-4 text-muted-foreground transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true" />
+				<span className="flex min-w-0 max-w-full items-start gap-2">
+					<span className="min-w-0 font-mono text-xs leading-5 font-medium break-words">{browser.price}</span>
+					<ArrowUpRight className="h-4 w-4 shrink-0 text-muted-foreground transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden="true" />
 				</span>
 			</div>
 		</Link>

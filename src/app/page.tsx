@@ -21,7 +21,7 @@ export function HomePage() {
 	const featured = browsers.find(browser => browser.featured) ?? browsers[0];
 	const featuredRest = browsers.filter(browser => browser.slug !== featured.slug && ["gologin", "adspower", "multilogin"].includes(browser.slug)).slice(0, 3);
 	const stats = [
-		{ value: `${browsers.length}+`, label: "指纹浏览器" },
+		{ value: `${browsers.length}+`, label: "浏览器及相关资源" },
 		{ value: `${tools.length}+`, label: "检测与自动化工具" },
 		{ value: `${technologies.length}+`, label: "指纹技术" },
 		{ value: `${comparisons.length}+`, label: "浏览器对比" }

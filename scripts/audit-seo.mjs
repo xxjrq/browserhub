@@ -10,7 +10,7 @@ const args = process.argv.slice(2);
 const root = path.resolve(args.includes("--dir") ? args[args.indexOf("--dir") + 1] : "out");
 const origin = "https://browserhub.co";
 const languages = { "zh-cn": "zh-CN", en: "en", ja: "ja", ko: "ko", es: "es", pt: "pt", ru: "ru" };
-const newGuideSlugs = ["best-antidetect-browsers-2026", "proxy-vs-vpn-vs-antidetect-browser", "chrome-profiles-vs-antidetect-browser", "residential-vs-datacenter-proxies", "antidetect-browser-macos", "team-browser-evaluation-checklist", "browser-fingerprint-testing-checklist", "browser-automation-profile-persistence"];
+const editorialSlugs = ["how-to-choose-antidetect-browser", "free-antidetect-browser", "local-vs-cloud-browser-storage", "multi-account-best-practices", "browser-profile-permissions", "setting-up-proxies-easybr", "browser-fingerprinting-explained", "browser-fingerprint-signals", "webrtc-leak-check", "read-creepjs-results", "configure-http-proxy", "configure-socks5-proxy", "best-antidetect-browsers-2026", "proxy-vs-vpn-vs-antidetect-browser", "chrome-profiles-vs-antidetect-browser", "residential-vs-datacenter-proxies", "antidetect-browser-macos", "team-browser-evaluation-checklist", "browser-fingerprint-testing-checklist", "browser-automation-profile-persistence"];
 const issues = [];
 const warnings = [];
 const pages = new Map();
@@ -64,7 +64,7 @@ const walk = directory => {
 
 if (!fs.existsSync(root)) throw new Error(`Static export directory does not exist: ${root}. Run the production build first.`);
 walk(root);
-for (const slug of newGuideSlugs) for (const locale of ["en", "zh-cn"]) {
+for (const slug of editorialSlugs) for (const locale of ["en", "zh-cn"]) {
 	const route = `/${locale}/guides/${slug}/`;
 	if (!pages.has(route)) add(route, "required editorial guide missing exported HTML");
 }
@@ -162,6 +162,11 @@ for (const page of pages.values()) {
 	}
 	const isGuide = /^\/(?:zh-cn|en)\/guides\/[^/]+\/$/.test(route) && !page.noindex;
 	const detail = locale && /^\/(?:[^/]+)\/(?:guides|browsers|tools|fingerprint|compare)\/[^/]+\/$/.test(route);
+	if (locale && /^\/[^/]+\/browsers\/[^/]+\/$/.test(route)) {
+		const slug = route.split("/")[3];
+		if (!page.article.includes(`data-product-evidence="${slug}"`)) add(route, "product missing visible official-source verification");
+		if (!/Current price unverified|Listed price confirmed|当前价格未核实|所列价格已在该日期确认/.test(page.articleText)) add(route, "product missing explicit price verification status");
+	}
 	if (detail && !page.schemas.length) add(route, "detail page missing JSON-LD");
 	for (const schema of page.schemas) {
 		if (!schema["@type"] && !schema["@graph"]) add(route, "JSON-LD object missing @type or @graph");
@@ -177,14 +182,13 @@ for (const page of pages.values()) {
 		const headings = (page.article.match(/<h2\b/gi) ?? []).length;
 		if (page.articleText.length < 650 || headings < 3) add(route, "guide too thin: expected at least 650 visible characters and three h2 sections");
 		const sourceHeading = /<h[23]\b[^>]*>[^<]*(?:Sources|References|来源|参考)/i.test(page.article);
-		const requiredEditorial = newGuideSlugs.includes(route.split("/")[3]);
-		if (requiredEditorial && !sourceHeading) add(route, "new editorial guide missing dedicated sources section");
-		// New editorial articles carry an explicit sources section. Older guides are
-		// reported as improvement opportunities instead of receiving a fabricated pass.
+		const requiredEditorial = editorialSlugs.includes(route.split("/")[3]);
+		if (requiredEditorial && !sourceHeading) add(route, "editorial guide missing dedicated sources section");
+		// All published English/Chinese guides must meet the same sourced editorial standard.
 		if (sourceHeading || requiredEditorial) {
 			editorialGuides++;
 			const externalSources = [...page.article.matchAll(/<a\b[^>]*>/gi)].map(match => attrs(match[0]).href).filter(href => { const target = url(href ?? ""); return target && /^https?:$/.test(target.protocol) && target.origin !== origin; });
-			if (new Set(externalSources).size < 2) add(route, "editorial guide needs at least two external source links");
+			if (new Set(externalSources).size < 3) add(route, "editorial guide needs at least three external source links");
 			if (page.articleText.length < (locale === "en" ? 4500 : 2200) || headings < 6) add(route, "editorial guide needs richer visible text and at least six h2 sections");
 			if (!page.schemas.some(schema => schema["@type"] === "FAQPage")) add(route, "editorial guide missing FAQPage JSON-LD");
 			if (!/\bFAQ\b|常见问题/i.test(page.articleText)) add(route, "editorial guide missing visible FAQ");

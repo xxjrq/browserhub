@@ -1,0 +1,5737 @@
+/** Public documentation review. false capability flags with unknown checks mean unverified, not unsupported. */
+export type ProductCheck = { status: "verified" | "unknown" | "contradicted"; note: string; sourceUrls: string[] };
+export type VerifiedProductFields = {
+ description?: string; longDescription?: string; free?: string; price?: string; profiles?: string;
+ platforms?: string[]; engine?: string; storage?: string; api?: boolean; automation?: boolean; proxy?: boolean;
+ proxyProtocols?: string[]; features?: string[]; pros?: string[]; cons?: string[];
+ type?: string; bestFor?: string[]; status?: "active" | "open-source" | "experimental" | "pending-review" | "inactive";
+ website?: string; download?: string; pricingUrl?: string; pricingCheckedAt?: string;
+};
+export type VerifiedProduct = { zh: VerifiedProductFields; en: VerifiedProductFields;
+ sources: Array<{title: string; url: string; checkedAt: string; fields: string[]}>;
+ verifiedAt: string; pricingStatus: "verified" | "unverified";
+ notes: { "zh-cn": string[]; en: string[] }; checks: Record<string, ProductCheck>;
+};
+export const verifiedProducts: Record<string, VerifiedProduct> = {
+  "easybr": {
+    "zh": {
+      "description": "提供免费环境与 Local API 的桌面指纹浏览器",
+      "longDescription": "提供免费环境与 Local API 的桌面指纹浏览器。公开列出的功能包括5 个免费环境、环境导入导出、Local API 与 CDP 接入。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "5 个环境永久免费",
+      "price": "CNY ¥20/月（B 活动套餐；50 个环境）",
+      "profiles": "免费 5；B 套餐 50 个环境",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium",
+      "storage": "本地优先；可选环境云同步",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5"
+      ],
+      "features": [
+        "5 个免费环境",
+        "环境导入导出",
+        "Local API 与 CDP 接入"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://www.ebrower.com/",
+      "website": "https://www.ebrower.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A desktop profile browser with free environments and a Local API",
+      "longDescription": "A desktop profile browser with free environments and a Local API. Documented features include 5 free environments, Environment import / export, Local API and CDP access. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "5 profiles free forever",
+      "price": "CNY ¥20/month (B campaign plan; 50 environments)",
+      "profiles": "5 free; 50 environments in B plan",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium",
+      "storage": "local-first; optional cloud sync",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5"
+      ],
+      "features": [
+        "5 free environments",
+        "Environment import / export",
+        "Local API and CDP access"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://www.ebrower.com/",
+      "website": "https://www.ebrower.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "EasyBR — official product / pricing",
+        "url": "https://www.ebrower.com/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "free",
+          "platforms",
+          "price",
+          "profiles"
+        ]
+      },
+      {
+        "title": "EasyBR Local API documentation",
+        "url": "https://www.ebrower.com/helperdoc/apidoc.html",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "storage",
+          "proxy",
+          "proxyProtocols"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Five free profiles; campaign plan CNY20/month for 50 environments; Windows and macOS desktop downloads.",
+        "sourceUrls": [
+          "https://www.ebrower.com/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Five free profiles; campaign plan CNY20/month for 50 environments; Windows and macOS desktop downloads.",
+        "sourceUrls": [
+          "https://www.ebrower.com/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Five free profiles; campaign plan CNY20/month for 50 environments; Windows and macOS desktop downloads.",
+        "sourceUrls": [
+          "https://www.ebrower.com/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Five free profiles; campaign plan CNY20/month for 50 environments; Windows and macOS desktop downloads.",
+        "sourceUrls": [
+          "https://www.ebrower.com/"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Documents Chromium CDP integration with Selenium/Puppeteer/Playwright, local profile data and opt-in cloudSync, HTTP/HTTPS/SOCKS5 settings.",
+        "sourceUrls": [
+          "https://www.ebrower.com/helperdoc/apidoc.html"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Documents Chromium CDP integration with Selenium/Puppeteer/Playwright, local profile data and opt-in cloudSync, HTTP/HTTPS/SOCKS5 settings.",
+        "sourceUrls": [
+          "https://www.ebrower.com/helperdoc/apidoc.html"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Documents Chromium CDP integration with Selenium/Puppeteer/Playwright, local profile data and opt-in cloudSync, HTTP/HTTPS/SOCKS5 settings.",
+        "sourceUrls": [
+          "https://www.ebrower.com/helperdoc/apidoc.html"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Documents Chromium CDP integration with Selenium/Puppeteer/Playwright, local profile data and opt-in cloudSync, HTTP/HTTPS/SOCKS5 settings.",
+        "sourceUrls": [
+          "https://www.ebrower.com/helperdoc/apidoc.html"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Documents Chromium CDP integration with Selenium/Puppeteer/Playwright, local profile data and opt-in cloudSync, HTTP/HTTPS/SOCKS5 settings.",
+        "sourceUrls": [
+          "https://www.ebrower.com/helperdoc/apidoc.html"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Documents Chromium CDP integration with Selenium/Puppeteer/Playwright, local profile data and opt-in cloudSync, HTTP/HTTPS/SOCKS5 settings.",
+        "sourceUrls": [
+          "https://www.ebrower.com/helperdoc/apidoc.html"
+        ]
+      }
+    }
+  },
+  "gologin": {
+    "zh": {
+      "description": "提供免费档案与云端工作流的指纹浏览器",
+      "longDescription": "提供免费档案与云端工作流的指纹浏览器。公开列出的功能包括免费档案、计划分层的 REST API/SDK、云端浏览器（指定套餐）。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "3 个档案永久免费；另有 7 天付费功能试用",
+      "price": "USD $9/月（Professional 10）；年付页面价 $4.50/月",
+      "profiles": "免费 3；Professional 10 为 10 个",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Cloud"
+      ],
+      "engine": "Chromium（Orbita）",
+      "storage": "云端存储与本地运行/云启动",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5"
+      ],
+      "features": [
+        "免费档案",
+        "计划分层的 REST API/SDK",
+        "云端浏览器（指定套餐）"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://gologin.com/pricing/",
+      "website": "https://gologin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A profile browser with a free tier and cloud workflows",
+      "longDescription": "A profile browser with a free tier and cloud workflows. Documented features include Free profiles, Plan-dependent REST API / SDK, Cloud browser on selected plans. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "3 profiles free forever; separate 7-day paid-feature trial",
+      "price": "USD $9/month (Professional 10); yearly display $4.50/month",
+      "profiles": "3 free; 10 in Professional 10",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Cloud"
+      ],
+      "engine": "Chromium (Orbita)",
+      "storage": "Cloud storage with local execution / cloud launch",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5"
+      ],
+      "features": [
+        "Free profiles",
+        "Plan-dependent REST API / SDK",
+        "Cloud browser on selected plans"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://gologin.com/pricing/",
+      "website": "https://gologin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "GoLogin — official product / pricing",
+        "url": "https://gologin.com/pricing/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "free",
+          "platforms",
+          "price",
+          "profiles"
+        ]
+      },
+      {
+        "title": "GoLogin automation quickstart",
+        "url": "https://gologin.com/docs/api-reference/introduction/quickstart",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "automation"
+        ]
+      },
+      {
+        "title": "GoLogin official features",
+        "url": "https://gologin.com/features/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "engine",
+          "storage",
+          "proxy"
+        ]
+      },
+      {
+        "title": "GoLogin proxy FAQ",
+        "url": "https://support.gologin.com/en/articles/14839275-faq-proxies",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "proxyProtocols"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。",
+        "API 不包含在最低付费档；以具体套餐矩阵为准。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features.",
+        "API is not included in the lowest paid tier; check the plan matrix."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free tier has 3 profiles. Professional 10 lists $9/month and an annually discounted $4.50/month display; REST API and SDK appear at Professional 100.",
+        "sourceUrls": [
+          "https://gologin.com/pricing/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free tier has 3 profiles. Professional 10 lists $9/month and an annually discounted $4.50/month display; REST API and SDK appear at Professional 100.",
+        "sourceUrls": [
+          "https://gologin.com/pricing/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free tier has 3 profiles. Professional 10 lists $9/month and an annually discounted $4.50/month display; REST API and SDK appear at Professional 100.",
+        "sourceUrls": [
+          "https://gologin.com/pricing/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Free tier has 3 profiles. Professional 10 lists $9/month and an annually discounted $4.50/month display; REST API and SDK appear at Professional 100.",
+        "sourceUrls": [
+          "https://gologin.com/pricing/"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Official features describe Chromium engine, cloud storage, profile launch locally or in cloud and imported third-party proxies.",
+        "sourceUrls": [
+          "https://gologin.com/features/"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Official features describe Chromium engine, cloud storage, profile launch locally or in cloud and imported third-party proxies.",
+        "sourceUrls": [
+          "https://gologin.com/features/"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free tier has 3 profiles. Professional 10 lists $9/month and an annually discounted $4.50/month display; REST API and SDK appear at Professional 100.",
+        "sourceUrls": [
+          "https://gologin.com/pricing/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Official SDK quickstart provides programmatic browser automation.",
+        "sourceUrls": [
+          "https://gologin.com/docs/api-reference/introduction/quickstart"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Official features describe Chromium engine, cloud storage, profile launch locally or in cloud and imported third-party proxies.",
+        "sourceUrls": [
+          "https://gologin.com/features/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Vendor explicitly supports external and built-in proxies, including HTTP/HTTPS and SOCKS5.",
+        "sourceUrls": [
+          "https://support.gologin.com/en/articles/14839275-faq-proxies"
+        ]
+      }
+    }
+  },
+  "adspower": {
+    "zh": {
+      "description": "提供 RPA、双内核和 Local API 的档案浏览器",
+      "longDescription": "提供 RPA、双内核和 Local API 的档案浏览器。公开列出的功能包括RPA、Local API、多窗口同步。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "2 个档案永久免费；另有 7 天功能试用",
+      "price": "USD $9/月（Professional 10）；年付 $64.80，折算 $5.40/月",
+      "profiles": "免费 2；Professional 10 个",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "iOS"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "RPA",
+        "Local API",
+        "多窗口同步"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://www.adspower.com/pricing",
+      "website": "https://www.adspower.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A dual-engine profile browser with RPA and a Local API",
+      "longDescription": "A dual-engine profile browser with RPA and a Local API. Documented features include RPA, Local API, Window synchronizer. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "2 profiles free forever; separate 7-day feature trial",
+      "price": "USD $9/month (Professional 10); $64.80 annually, equivalent to $5.40/month",
+      "profiles": "2 free; 10 in Professional",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "iOS"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "RPA",
+        "Local API",
+        "Window synchronizer"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://www.adspower.com/pricing",
+      "website": "https://www.adspower.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "AdsPower — official product / pricing",
+        "url": "https://www.adspower.com/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "price",
+          "profiles",
+          "proxy"
+        ]
+      },
+      {
+        "title": "AdsPower official downloads",
+        "url": "https://www.adspower.com/download",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      },
+      {
+        "title": "AdsPower Local API",
+        "url": "https://www.adspower.com/local-api",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api"
+        ]
+      },
+      {
+        "title": "AdsPower RPA",
+        "url": "https://www.adspower.com/rpa",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "automation"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Rendered official pricing lists 2 free profiles; Professional 10 is $9/month or $5.4/month equivalent with $64.8 annual billing; Chrome and Firefox engines.",
+        "sourceUrls": [
+          "https://www.adspower.com/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Rendered official pricing lists 2 free profiles; Professional 10 is $9/month or $5.4/month equivalent with $64.8 annual billing; Chrome and Firefox engines.",
+        "sourceUrls": [
+          "https://www.adspower.com/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Rendered official pricing lists 2 free profiles; Professional 10 is $9/month or $5.4/month equivalent with $64.8 annual billing; Chrome and Firefox engines.",
+        "sourceUrls": [
+          "https://www.adspower.com/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Official download page lists Windows, macOS, Linux and iPhone iOS; Android is marked coming soon.",
+        "sourceUrls": [
+          "https://www.adspower.com/download"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Rendered official pricing lists 2 free profiles; Professional 10 is $9/month or $5.4/month equivalent with $64.8 annual billing; Chrome and Firefox engines.",
+        "sourceUrls": [
+          "https://www.adspower.com/pricing"
+        ]
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Vendor provides a Local API for programmatic profile management.",
+        "sourceUrls": [
+          "https://www.adspower.com/local-api"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Vendor documents a visual automation system.",
+        "sourceUrls": [
+          "https://www.adspower.com/rpa"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Official pricing feature matrix explicitly lists easy configuration of proxy; individual protocols are not confirmed.",
+        "sourceUrls": [
+          "https://www.adspower.com/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "multilogin": {
+    "zh": {
+      "description": "提供云端档案、团队权限与 API 的浏览器平台",
+      "longDescription": "提供云端档案、团队权限与 API 的浏览器平台。公开列出的功能包括云端档案、API 接入、团队权限。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "5 个档案永久免费",
+      "price": "USD $11/月（Pro 10）；年付 $85，页面折算 $7.08/月",
+      "profiles": "免费 5；Pro 起始 10 个",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium（Mimic）；Firefox（旧版 Stealthfox）",
+      "storage": "本地或云端（创建档案时选择）",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "云端档案",
+        "API 接入",
+        "团队权限"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://multilogin.com/pricing/",
+      "website": "https://multilogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A cloud profile platform with team permissions and an API",
+      "longDescription": "A cloud profile platform with team permissions and an API. Documented features include Cloud profiles, API access, Team permissions. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "5 profiles free forever",
+      "price": "USD $11/month (Pro 10); $85 annually, displayed as $7.08/month",
+      "profiles": "5 free; Pro starts at 10",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium (Mimic); Firefox (legacy Stealthfox)",
+      "storage": "Local or cloud, selected per profile",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Cloud profiles",
+        "API access",
+        "Team permissions"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://multilogin.com/pricing/",
+      "website": "https://multilogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Multilogin — official product / pricing",
+        "url": "https://multilogin.com/pricing/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "storage"
+        ]
+      },
+      {
+        "title": "Multilogin official app downloads",
+        "url": "https://multilogin.com/multilogin-app/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      },
+      {
+        "title": "Multilogin browser core support",
+        "url": "https://multilogin.com/help/en_US/how-to-use-mimic-and-stealthfox",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "engine"
+        ]
+      },
+      {
+        "title": "Multilogin local and cloud storage",
+        "url": "https://multilogin.com/help/en_US/transferring-profiles-to-multilogin?kb_language=en_US",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。",
+        "Stealthfox 是停止内核更新的旧版选项；不将双内核表述为两者都持续维护。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features.",
+        "Stealthfox is legacy and no longer receives core updates; dual-engine availability does not mean both are actively maintained."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free has 5 profiles. Pro 10 costs $11 billed monthly or $85 annually ($7.08/month displayed). API and cloud browser profiles are listed.",
+        "sourceUrls": [
+          "https://multilogin.com/pricing/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free has 5 profiles. Pro 10 costs $11 billed monthly or $85 annually ($7.08/month displayed). API and cloud browser profiles are listed.",
+        "sourceUrls": [
+          "https://multilogin.com/pricing/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free has 5 profiles. Pro 10 costs $11 billed monthly or $85 annually ($7.08/month displayed). API and cloud browser profiles are listed.",
+        "sourceUrls": [
+          "https://multilogin.com/pricing/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Official download page includes Windows, macOS and Linux installers.",
+        "sourceUrls": [
+          "https://multilogin.com/multilogin-app/"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Mimic is actively supported Chrome-based core; Firefox-based Stealthfox is legacy and receives no new core after146.",
+        "sourceUrls": [
+          "https://multilogin.com/help/en_US/how-to-use-mimic-and-stealthfox"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Official migration guide allows local storage for one computer or cloud storage for cross-device/team access.",
+        "sourceUrls": [
+          "https://multilogin.com/help/en_US/transferring-profiles-to-multilogin?kb_language=en_US"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free has 5 profiles. Pro 10 costs $11 billed monthly or $85 annually ($7.08/month displayed). API and cloud browser profiles are listed.",
+        "sourceUrls": [
+          "https://multilogin.com/pricing/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free has 5 profiles. Pro 10 costs $11 billed monthly or $85 annually ($7.08/month displayed). API and cloud browser profiles are listed.",
+        "sourceUrls": [
+          "https://multilogin.com/pricing/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free has 5 profiles. Pro 10 costs $11 billed monthly or $85 annually ($7.08/month displayed). API and cloud browser profiles are listed.",
+        "sourceUrls": [
+          "https://multilogin.com/pricing/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "dolphin-anty": {
+    "zh": {
+      "description": "提供场景自动化与本地/云同步的档案浏览器",
+      "longDescription": "提供场景自动化与本地/云同步的档案浏览器。公开列出的功能包括场景构建器、本地与云同步、多种代理协议。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "最多 5 个免费档案",
+      "price": "USD $10/月（Starter；20 个档案）",
+      "profiles": "免费最多 5；Starter 起始 20",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "本地与云端同步（依套餐）",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5",
+        "SOCKS4",
+        "SSH"
+      ],
+      "features": [
+        "场景构建器",
+        "本地与云同步",
+        "多种代理协议"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://dolphin-anty.com/tarifs/",
+      "website": "https://dolphin-anty.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A profile browser with scenario automation and local / cloud sync",
+      "longDescription": "A profile browser with scenario automation and local / cloud sync. Documented features include Scenario builder, Local and cloud sync, Multiple proxy protocols. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Up to 5 free profiles",
+      "price": "USD $10/month (Starter; 20 profiles)",
+      "profiles": "Up to 5 free; Starter begins at 20",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "Local and cloud sync, plan dependent",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5",
+        "SOCKS4",
+        "SSH"
+      ],
+      "features": [
+        "Scenario builder",
+        "Local and cloud sync",
+        "Multiple proxy protocols"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://dolphin-anty.com/tarifs/",
+      "website": "https://dolphin-anty.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Dolphin Anty — official product / pricing",
+        "url": "https://dolphin-anty.com/tarifs/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "automation",
+          "engine",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "proxyProtocols",
+          "storage"
+        ]
+      },
+      {
+        "title": "Dolphin Anty official downloads",
+        "url": "https://dolphin-anty.com/download/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      },
+      {
+        "title": "Dolphin Anty official API automation",
+        "url": "https://docs.dolphin-anty.com/en/api/basic-automation-dolphin-anty",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。",
+        "Local API 需客户端运行；免费与付费权限不同，Cookie API 及云同步有额外限制。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features.",
+        "Local API requires the running client; free/paid entitlements differ, including cookie API and cloud-sync limits."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free tier has up to 5 profiles; Starter 20 is $10/month. Pricing comparison lists Chrome/Firefox, local/cloud sync, scenarios and HTTP/SOCKS5/SOCKS4/SSH proxies.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/tarifs/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free tier has up to 5 profiles; Starter 20 is $10/month. Pricing comparison lists Chrome/Firefox, local/cloud sync, scenarios and HTTP/SOCKS5/SOCKS4/SSH proxies.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/tarifs/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free tier has up to 5 profiles; Starter 20 is $10/month. Pricing comparison lists Chrome/Firefox, local/cloud sync, scenarios and HTTP/SOCKS5/SOCKS4/SSH proxies.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/tarifs/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Vendor explicitly supports Windows, macOS and Linux desktop applications.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/download/"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Free tier has up to 5 profiles; Starter 20 is $10/month. Pricing comparison lists Chrome/Firefox, local/cloud sync, scenarios and HTTP/SOCKS5/SOCKS4/SSH proxies.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/tarifs/"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Free tier has up to 5 profiles; Starter 20 is $10/month. Pricing comparison lists Chrome/Firefox, local/cloud sync, scenarios and HTTP/SOCKS5/SOCKS4/SSH proxies.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/tarifs/"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Official guide documents local token authentication, profile start endpoint and DevTools automation with Puppeteer/Playwright/Selenium; plan-specific limits remain.",
+        "sourceUrls": [
+          "https://docs.dolphin-anty.com/en/api/basic-automation-dolphin-anty"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Official guide documents local token authentication, profile start endpoint and DevTools automation with Puppeteer/Playwright/Selenium; plan-specific limits remain.",
+        "sourceUrls": [
+          "https://docs.dolphin-anty.com/en/api/basic-automation-dolphin-anty"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free tier has up to 5 profiles; Starter 20 is $10/month. Pricing comparison lists Chrome/Firefox, local/cloud sync, scenarios and HTTP/SOCKS5/SOCKS4/SSH proxies.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/tarifs/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Free tier has up to 5 profiles; Starter 20 is $10/month. Pricing comparison lists Chrome/Firefox, local/cloud sync, scenarios and HTTP/SOCKS5/SOCKS4/SSH proxies.",
+        "sourceUrls": [
+          "https://dolphin-anty.com/tarifs/"
+        ]
+      }
+    }
+  },
+  "morelogin": {
+    "zh": {
+      "description": "提供 Local API 与多平台客户端的双内核浏览器",
+      "longDescription": "提供 Local API 与多平台客户端的双内核浏览器。公开列出的功能包括Local API、Selenium/Puppeteer 接入、云端档案同步。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "2 个档案与 2 用户永久免费",
+      "price": "USD $9/月（Pro；10 档案）；年付页面折算 $5.40/月",
+      "profiles": "免费 2；Pro 起始 10",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "云端档案同步",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Local API",
+        "Selenium/Puppeteer 接入",
+        "云端档案同步"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://www.morelogin.com/pricing",
+      "website": "https://www.morelogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A dual-engine browser with a Local API and multiple desktop clients",
+      "longDescription": "A dual-engine browser with a Local API and multiple desktop clients. Documented features include Local API, Selenium / Puppeteer integration, Cloud profile sync. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "2 profiles and 2 users free forever",
+      "price": "USD $9/month (Pro; 10 profiles); yearly display $5.40/month",
+      "profiles": "2 free; Pro starts at 10",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "Cloud profile sync",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Local API",
+        "Selenium / Puppeteer integration",
+        "Cloud profile sync"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://www.morelogin.com/pricing",
+      "website": "https://www.morelogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "MoreLogin — official product / pricing",
+        "url": "https://www.morelogin.com/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "storage"
+        ]
+      },
+      {
+        "title": "MoreLogin official downloads",
+        "url": "https://www.morelogin.com/download",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Download links list Windows, macOS and Linux desktop/server; Android says coming soon.",
+        "sourceUrls": [
+          "https://www.morelogin.com/download"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free has 2 profiles and 2 users. Pro 10 displays $9/month and $5.4/month alongside yearly 40% discount. Local API, Selenium/Puppeteer and Chrome/Firefox are stated.",
+        "sourceUrls": [
+          "https://www.morelogin.com/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "incogniton": {
+    "zh": {
+      "description": "提供分级档案套餐与付费自动化的浏览器",
+      "longDescription": "提供分级档案套餐与付费自动化的浏览器。公开列出的功能包括档案管理、付费高阶套餐 API/自动化、代理配置。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "前 2 个月 10 个档案，之后 3 个",
+      "price": "USD $19.99/月（Starter Plus）；半年计费折算 $13.99/月",
+      "profiles": "免费初始 10，2 个月后 3；Starter Plus 10",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5",
+        "SSH"
+      ],
+      "features": [
+        "档案管理",
+        "付费高阶套餐 API/自动化",
+        "代理配置"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://incogniton.com/pricing/",
+      "website": "https://incogniton.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A profile browser with tiered capacity and paid automation",
+      "longDescription": "A profile browser with tiered capacity and paid automation. Documented features include Profile management, API / automation on higher paid tiers, Proxy configuration. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "10 profiles for first 2 months, then 3",
+      "price": "USD $19.99/month (Starter Plus); $13.99/month equivalent billed every 6 months",
+      "profiles": "10 initially free, then 3; Starter Plus has 10",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5",
+        "SSH"
+      ],
+      "features": [
+        "Profile management",
+        "API / automation on higher paid tiers",
+        "Proxy configuration"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://incogniton.com/pricing/",
+      "website": "https://incogniton.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Incogniton — official product / pricing",
+        "url": "https://incogniton.com/pricing/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "proxyProtocols"
+        ]
+      },
+      {
+        "title": "Incogniton official download and requirements",
+        "url": "https://incogniton.com/download-incogniton/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。",
+        "最低付费 Starter Plus 不含 REST API 与 Selenium/Puppeteer。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features.",
+        "The entry Starter Plus plan excludes REST API and Selenium/Puppeteer."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free starter has 10 profiles for 2 months then 3. Starter Plus is $19.99/month or $13.99/month billed each 6 months; API/Selenium/Puppeteer require Entrepreneur or above.",
+        "sourceUrls": [
+          "https://incogniton.com/pricing/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free starter has 10 profiles for 2 months then 3. Starter Plus is $19.99/month or $13.99/month billed each 6 months; API/Selenium/Puppeteer require Entrepreneur or above.",
+        "sourceUrls": [
+          "https://incogniton.com/pricing/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free starter has 10 profiles for 2 months then 3. Starter Plus is $19.99/month or $13.99/month billed each 6 months; API/Selenium/Puppeteer require Entrepreneur or above.",
+        "sourceUrls": [
+          "https://incogniton.com/pricing/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Downloads support Windows and macOS; FAQ explicitly says no mobile client.",
+        "sourceUrls": [
+          "https://incogniton.com/download-incogniton/"
+        ]
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free starter has 10 profiles for 2 months then 3. Starter Plus is $19.99/month or $13.99/month billed each 6 months; API/Selenium/Puppeteer require Entrepreneur or above.",
+        "sourceUrls": [
+          "https://incogniton.com/pricing/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free starter has 10 profiles for 2 months then 3. Starter Plus is $19.99/month or $13.99/month billed each 6 months; API/Selenium/Puppeteer require Entrepreneur or above.",
+        "sourceUrls": [
+          "https://incogniton.com/pricing/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free starter has 10 profiles for 2 months then 3. Starter Plus is $19.99/month or $13.99/month billed each 6 months; API/Selenium/Puppeteer require Entrepreneur or above.",
+        "sourceUrls": [
+          "https://incogniton.com/pricing/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Free starter has 10 profiles for 2 months then 3. Starter Plus is $19.99/month or $13.99/month billed each 6 months; API/Selenium/Puppeteer require Entrepreneur or above.",
+        "sourceUrls": [
+          "https://incogniton.com/pricing/"
+        ]
+      }
+    }
+  },
+  "bitbrowser": {
+    "zh": {
+      "description": "提供 10 个免费档案、RPA 与 Local API 的浏览器",
+      "longDescription": "提供 10 个免费档案、RPA 与 Local API 的浏览器。公开列出的功能包括Local API、RPA、多窗口同步。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "10 个免费档案；每日最多打开 50 次",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "免费 10；每日创建上限 20",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5",
+        "SSH"
+      ],
+      "features": [
+        "Local API",
+        "RPA",
+        "多窗口同步"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://www.bitbrowser.net/price",
+      "website": "https://www.bitbrowser.net/"
+    },
+    "en": {
+      "description": "A browser with 10 free profiles, RPA and a Local API",
+      "longDescription": "A browser with 10 free profiles, RPA and a Local API. Documented features include Local API, RPA, Window synchronization. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "10 free profiles; 50 launches per day",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "10 free; 20 profile creations per day",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5",
+        "SSH"
+      ],
+      "features": [
+        "Local API",
+        "RPA",
+        "Window synchronization"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://www.bitbrowser.net/price",
+      "website": "https://www.bitbrowser.net/"
+    },
+    "sources": [
+      {
+        "title": "BitBrowser — official product / pricing",
+        "url": "https://www.bitbrowser.net/price",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "profiles",
+          "proxy",
+          "proxyProtocols"
+        ]
+      },
+      {
+        "title": "BitBrowser official downloads",
+        "url": "https://www.bitbrowser.net/download",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。",
+        "付费选择器返回 0 档案/$0 占位，未作为真实套餐报价。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features.",
+        "The paid selector returned 0 profiles / $0 placeholders; these were not treated as real quotes."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Official page shows 10 free profiles, 50 daily launches and HTTP/HTTPS/SOCKS5/SSH, Local API, RPA, Google and Firefox kernels. Paid selector returns zero placeholders, so no paid amount is verified.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/price"
+        ]
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Official page shows 10 free profiles, 50 daily launches and HTTP/HTTPS/SOCKS5/SSH, Local API, RPA, Google and Firefox kernels. Paid selector returns zero placeholders, so no paid amount is verified.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/price"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Official download links provide Windows and Mac versions.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/download"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Official page shows 10 free profiles, 50 daily launches and HTTP/HTTPS/SOCKS5/SSH, Local API, RPA, Google and Firefox kernels. Paid selector returns zero placeholders, so no paid amount is verified.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/price"
+        ]
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Official page shows 10 free profiles, 50 daily launches and HTTP/HTTPS/SOCKS5/SSH, Local API, RPA, Google and Firefox kernels. Paid selector returns zero placeholders, so no paid amount is verified.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/price"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Official page shows 10 free profiles, 50 daily launches and HTTP/HTTPS/SOCKS5/SSH, Local API, RPA, Google and Firefox kernels. Paid selector returns zero placeholders, so no paid amount is verified.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/price"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Official page shows 10 free profiles, 50 daily launches and HTTP/HTTPS/SOCKS5/SSH, Local API, RPA, Google and Firefox kernels. Paid selector returns zero placeholders, so no paid amount is verified.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/price"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Official page shows 10 free profiles, 50 daily launches and HTTP/HTTPS/SOCKS5/SSH, Local API, RPA, Google and Firefox kernels. Paid selector returns zero placeholders, so no paid amount is verified.",
+        "sourceUrls": [
+          "https://www.bitbrowser.net/price"
+        ]
+      }
+    }
+  },
+  "octo-browser": {
+    "zh": {
+      "description": "按档案和团队额度分层的桌面浏览器",
+      "longDescription": "按档案和团队额度分层的桌面浏览器。公开列出的功能包括档案管理、Base 及以上 API。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "Starter 可用 TRIAL 码试用 2 天；未确认永久免费档",
+      "price": "EUR €10/月（Lite；3 个档案）",
+      "profiles": "Lite 3；Starter 30；Base 200",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "档案管理",
+        "Base 及以上 API"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://octobrowser.net/pricing/",
+      "website": "https://octobrowser.net/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A desktop profile browser with tiered profile and team capacity",
+      "longDescription": "A desktop profile browser with tiered profile and team capacity. Documented features include Profile management, API on Base and above. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "2-day Starter trial with TRIAL code; no permanent free tier confirmed",
+      "price": "EUR €10/month (Lite; 3 profiles)",
+      "profiles": "Lite 3; Starter 30; Base 200",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "Profile management",
+        "API on Base and above"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://octobrowser.net/pricing/",
+      "website": "https://octobrowser.net/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Octo Browser — official product / pricing",
+        "url": "https://octobrowser.net/pricing/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "free",
+          "price",
+          "profiles"
+        ]
+      },
+      {
+        "title": "Octo official API automation",
+        "url": "https://octobrowser.net/api-automation/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "automation"
+        ]
+      },
+      {
+        "title": "Octo official download",
+        "url": "https://octobrowser.org/download/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。",
+        "EUR 欧元报价，旧美元符号错误；最低 Lite 不含 API。",
+        "官网套餐卡片列 Starter 30 / Base 200，较下方 Managing Profiles 矩阵却列 10 / 100，档案额度存在内部冲突；购买前请向官方确认。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features.",
+        "Prices are EUR, correcting the old dollar label; the entry Lite tier excludes API.",
+        "Official plan cards list Starter 30 / Base 200 while the lower Managing Profiles matrix lists 10 / 100. These internal capacity figures conflict; confirm the purchased allowance with the vendor."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Lite costs EUR10/month for 3 profiles; Starter EUR29/month has a 2-day TRIAL-code promotion; API starts at Base EUR79/month. No permanent free plan is shown.",
+        "sourceUrls": [
+          "https://octobrowser.net/pricing/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Lite costs EUR10/month for 3 profiles; Starter EUR29/month has a 2-day TRIAL-code promotion; API starts at Base EUR79/month. No permanent free plan is shown.",
+        "sourceUrls": [
+          "https://octobrowser.net/pricing/"
+        ]
+      },
+      "profiles": {
+        "status": "contradicted",
+        "note": "Plan cards list Starter30 / Base200; lower Managing Profiles matrix lists10 /100. Capacity remains conflicting.",
+        "sourceUrls": [
+          "https://octobrowser.net/pricing/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Downloads explicitly list Windows, macOS and Linux.",
+        "sourceUrls": [
+          "https://octobrowser.org/download/"
+        ]
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Lite costs EUR10/month for 3 profiles; Starter EUR29/month has a 2-day TRIAL-code promotion; API starts at Base EUR79/month. No permanent free plan is shown.",
+        "sourceUrls": [
+          "https://octobrowser.net/pricing/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Vendor documents browser automation via its API.",
+        "sourceUrls": [
+          "https://octobrowser.net/api-automation/"
+        ]
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "kameleo": {
+    "zh": {
+      "description": "按并发计费、支持本地与云档案的自动化浏览器",
+      "longDescription": "按并发计费、支持本地与云档案的自动化浏览器。公开列出的功能包括Local API 与 SDK、本地不限档案、移动设备环境模拟。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "免费：2 并发、300 分钟用量、100 云端档案",
+      "price": "EUR €59/月（Startup；10 并发）；年付折算 €45/月",
+      "profiles": "本地不限数量；免费云端 100；付费云端 5000",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Docker"
+      ],
+      "engine": "Chromium / Firefox（Chroma / Junglefox）",
+      "storage": "本地和云端",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5",
+        "SSH"
+      ],
+      "features": [
+        "Local API 与 SDK",
+        "本地不限档案",
+        "移动设备环境模拟"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://kameleo.io/pricing",
+      "website": "https://kameleo.io/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "An automation browser priced by concurrency with local / cloud profiles",
+      "longDescription": "An automation browser priced by concurrency with local / cloud profiles. Documented features include Local API and SDKs, Unlimited local profiles, Emulated mobile browsers. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free: 2 concurrent browsers, 300 usage minutes, 100 cloud profiles",
+      "price": "EUR €59/month (Startup; 10 concurrent browsers); €45/month equivalent annually",
+      "profiles": "Unlimited local; 100 free cloud; 5000 paid cloud",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Docker"
+      ],
+      "engine": "Chromium / Firefox (Chroma / Junglefox)",
+      "storage": "Local and cloud",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "HTTPS",
+        "SOCKS5",
+        "SSH"
+      ],
+      "features": [
+        "Local API and SDKs",
+        "Unlimited local profiles",
+        "Emulated mobile browsers"
+      ],
+      "pros": [],
+      "cons": [
+        "An unverified field does not mean a feature is unsupported"
+      ],
+      "pricingUrl": "https://kameleo.io/pricing",
+      "website": "https://kameleo.io/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Kameleo — official product / pricing",
+        "url": "https://kameleo.io/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "proxyProtocols",
+          "storage"
+        ]
+      },
+      {
+        "title": "Kameleo official downloads",
+        "url": "https://kameleo.io/downloads",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "本次为官方公开资料核查，不是客户端实测；标为未核实的字段不用于判定不支持。",
+        "并发数、档案存储量和分钟额度是三种不同限制；移动模拟不等于 Android 原生客户端。"
+      ],
+      "en": [
+        "This is a public vendor-documentation review, not hands-on testing; unverified fields do not imply unsupported features.",
+        "Concurrency, stored profiles and usage minutes are separate limits; mobile emulation is not a native Android client."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Official downloads support Windows, macOS and Docker; pricing documents Linux/Windows containers.",
+        "sourceUrls": [
+          "https://kameleo.io/downloads"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Free has 2 concurrent browsers, 300 browser-use minutes, unlimited local profiles and 100 cloud profiles. Startup 10 concurrent browsers costs EUR59/month or EUR45/month annually. Local API, SDKs, Selenium/Puppeteer/Playwright and HTTP/HTTPS/SOCKS5/SSH are documented.",
+        "sourceUrls": [
+          "https://kameleo.io/pricing"
+        ]
+      }
+    }
+  },
+  "undetectable": {
+    "zh": {
+      "description": "提供本地档案和限额云档案的浏览器",
+      "longDescription": "提供本地档案和限额云档案的浏览器。公开列出的功能包括Local API、本地档案、云端档案。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "5 云端档案；每月创建最多 50 次",
+      "price": "USD $412/年（Base；页面约 $34/月）；月付价格另核",
+      "profiles": "免费 5 云端；扩容至 45 需加购；付费本地不限",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "未核实",
+      "storage": "本地与云端",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Local API",
+        "本地档案",
+        "云端档案"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://undetectable.io/pricing/",
+      "website": "https://undetectable.io/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser combining local profiles and metered cloud profiles",
+      "longDescription": "A browser combining local profiles and metered cloud profiles. Documented features include Local API, Local profiles, Cloud profiles. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "5 cloud profiles; up to 50 creations/month",
+      "price": "USD $412/year (Base; displayed about $34/month); monthly billing not verified",
+      "profiles": "5 free cloud; paid add-ons needed up to 45; unlimited paid local",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Needs verification",
+      "storage": "Local and cloud",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Local API",
+        "Local profiles",
+        "Cloud profiles"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://undetectable.io/pricing/",
+      "website": "https://undetectable.io/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Undetectable — official source",
+        "url": "https://undetectable.io/pricing/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "platforms",
+          "price",
+          "profiles",
+          "proxy",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "“5–45 免费”已修正：额外每 10 个档案收费 $10。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "The old 5–45 free claim was corrected: each additional 10 profiles costs $10."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free permits 5 cloud profiles and 50 creations/month; 45 requires paid add-ons. Base display is $34/month equivalent with $412/year shown; paid local profiles unlimited. Local API, cookie bot, proxy import and Windows/macOS stated.",
+        "sourceUrls": [
+          "https://undetectable.io/pricing/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "vmlogin": {
+    "zh": {
+      "description": "提供团队档案分享与 REST API 的浏览器",
+      "longDescription": "提供团队档案分享与 REST API 的浏览器。公开列出的功能包括REST API、团队档案分享。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "免费额度未核实",
+      "price": "CNY ¥700/月（SOLO；200 档案）",
+      "profiles": "SOLO 200 个档案",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": true,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "REST API",
+        "团队档案分享"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://www.vmlogin.com/",
+      "website": "https://www.vmlogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A profile browser with team sharing and a REST API",
+      "longDescription": "A profile browser with team sharing and a REST API. Documented features include REST API, Team profile sharing. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free allowance not verified",
+      "price": "CNY ¥700/month (SOLO; 200 profiles)",
+      "profiles": "200 profiles in SOLO",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "REST API",
+        "Team profile sharing"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://www.vmlogin.com/",
+      "website": "https://www.vmlogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "VMLogin — official source",
+        "url": "https://www.vmlogin.com/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "price",
+          "profiles"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "price": {
+        "status": "verified",
+        "note": "Official Chinese page lists SOLO CNY700/month for 200 profiles, 5 subaccounts and basic REST API; no permanent free allowance or trial duration confirmed.",
+        "sourceUrls": [
+          "https://www.vmlogin.com/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Official Chinese page lists SOLO CNY700/month for 200 profiles, 5 subaccounts and basic REST API; no permanent free allowance or trial duration confirmed.",
+        "sourceUrls": [
+          "https://www.vmlogin.com/"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Official Chinese page lists SOLO CNY700/month for 200 profiles, 5 subaccounts and basic REST API; no permanent free allowance or trial duration confirmed.",
+        "sourceUrls": [
+          "https://www.vmlogin.com/"
+        ]
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "ixbrowser": {
+    "zh": {
+      "description": "按每日创建与启动次数分层的档案浏览器",
+      "longDescription": "按每日创建与启动次数分层的档案浏览器。公开列出的功能包括档案与代理转移、计划分层 API、团队权限。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "不限存储档案；每日创建 10、打开 100 次",
+      "price": "USD $3.99/月（Professional）；另有 Basic Developer $9.99/年",
+      "profiles": "不限存储档案；创建和打开次数依套餐",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "档案与代理转移",
+        "计划分层 API",
+        "团队权限"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://www.ixbrowser.com/en",
+      "website": "https://www.ixbrowser.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A profile browser with daily creation and launch allowances",
+      "longDescription": "A profile browser with daily creation and launch allowances. Documented features include Profile and proxy transfer, Plan-dependent API, Team permissions. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Unlimited stored profiles; 10 creations and 100 launches/day",
+      "price": "USD $3.99/month (Professional); separate Basic Developer $9.99/year",
+      "profiles": "Unlimited stored profiles; creation / launch limits depend on plan",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Profile and proxy transfer",
+        "Plan-dependent API",
+        "Team permissions"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://www.ixbrowser.com/en",
+      "website": "https://www.ixbrowser.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "ixBrowser — official source",
+        "url": "https://www.ixbrowser.com/en",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy"
+        ]
+      },
+      {
+        "title": "ixBrowser official downloads",
+        "url": "https://www.ixbrowser.com/en/download-page",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "platforms"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free has unlimited stored profiles, 10 creations/day and 100 launches/day. Professional is $3.99/month; separate Basic Developer $9.99/year. API, automation and cloud storage are listed.",
+        "sourceUrls": [
+          "https://www.ixbrowser.com/en"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free has unlimited stored profiles, 10 creations/day and 100 launches/day. Professional is $3.99/month; separate Basic Developer $9.99/year. API, automation and cloud storage are listed.",
+        "sourceUrls": [
+          "https://www.ixbrowser.com/en"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free has unlimited stored profiles, 10 creations/day and 100 launches/day. Professional is $3.99/month; separate Basic Developer $9.99/year. API, automation and cloud storage are listed.",
+        "sourceUrls": [
+          "https://www.ixbrowser.com/en"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Official installers include Windows and macOS Apple Silicon / Intel.",
+        "sourceUrls": [
+          "https://www.ixbrowser.com/en/download-page"
+        ]
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free has unlimited stored profiles, 10 creations/day and 100 launches/day. Professional is $3.99/month; separate Basic Developer $9.99/year. API, automation and cloud storage are listed.",
+        "sourceUrls": [
+          "https://www.ixbrowser.com/en"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free has unlimited stored profiles, 10 creations/day and 100 launches/day. Professional is $3.99/month; separate Basic Developer $9.99/year. API, automation and cloud storage are listed.",
+        "sourceUrls": [
+          "https://www.ixbrowser.com/en"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free has unlimited stored profiles, 10 creations/day and 100 launches/day. Professional is $3.99/month; separate Basic Developer $9.99/year. API, automation and cloud storage are listed.",
+        "sourceUrls": [
+          "https://www.ixbrowser.com/en"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "nstbrowser": {
+    "zh": {
+      "description": "提供 RPA、API 和按量服务的浏览器平台",
+      "longDescription": "提供 RPA、API 和按量服务的浏览器平台。公开列出的功能包括RPA、API、用量与超额计费。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "$0 订阅；500 标准档案、每天 30 次启动；超额计费",
+      "price": "USD $29.90/月（Starter）；另有按量收费",
+      "profiles": "免费 500 标准档案；每日 30 次标准启动",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "RPA",
+        "API",
+        "用量与超额计费"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://www.nstbrowser.io/en/pricing",
+      "website": "https://www.nstbrowser.io/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser platform with RPA, an API and usage-based services",
+      "longDescription": "A browser platform with RPA, an API and usage-based services. Documented features include RPA, API, Usage and overage billing. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "$0 subscription; 500 standard profiles, 30 launches/day; overages billed",
+      "price": "USD $29.90/month (Starter); separate usage charges apply",
+      "profiles": "500 free standard profiles; 30 standard launches/day",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "RPA",
+        "API",
+        "Usage and overage billing"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://www.nstbrowser.io/en/pricing",
+      "website": "https://www.nstbrowser.io/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "NSTBrowser — official source",
+        "url": "https://www.nstbrowser.io/en/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "代理流量单价不等于浏览器套餐起价；免费订阅超额仍可能收费。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Proxy bandwidth rates are not browser subscription prices; free subscription overages can incur charges."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free subscription is USD0/month with 500 standard profiles and 30 standard launches/day; overages are billed. Starter displays $29.9/month. RPA, API and proxies are listed; proxy bandwidth is separate usage pricing.",
+        "sourceUrls": [
+          "https://www.nstbrowser.io/en/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free subscription is USD0/month with 500 standard profiles and 30 standard launches/day; overages are billed. Starter displays $29.9/month. RPA, API and proxies are listed; proxy bandwidth is separate usage pricing.",
+        "sourceUrls": [
+          "https://www.nstbrowser.io/en/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free subscription is USD0/month with 500 standard profiles and 30 standard launches/day; overages are billed. Starter displays $29.9/month. RPA, API and proxies are listed; proxy bandwidth is separate usage pricing.",
+        "sourceUrls": [
+          "https://www.nstbrowser.io/en/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free subscription is USD0/month with 500 standard profiles and 30 standard launches/day; overages are billed. Starter displays $29.9/month. RPA, API and proxies are listed; proxy bandwidth is separate usage pricing.",
+        "sourceUrls": [
+          "https://www.nstbrowser.io/en/pricing"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free subscription is USD0/month with 500 standard profiles and 30 standard launches/day; overages are billed. Starter displays $29.9/month. RPA, API and proxies are listed; proxy bandwidth is separate usage pricing.",
+        "sourceUrls": [
+          "https://www.nstbrowser.io/en/pricing"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free subscription is USD0/month with 500 standard profiles and 30 standard launches/day; overages are billed. Starter displays $29.9/month. RPA, API and proxies are listed; proxy bandwidth is separate usage pricing.",
+        "sourceUrls": [
+          "https://www.nstbrowser.io/en/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "hidemyacc": {
+    "zh": {
+      "description": "提供试用、档案管理与指纹配置的浏览器",
+      "longDescription": "提供试用、档案管理与指纹配置的浏览器。公开列出的功能包括档案导入导出、指纹配置。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "7 天免费试用",
+      "price": "USD $10/月（Mini；5 个档案）",
+      "profiles": "Mini 5 个档案",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": false,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "档案导入导出",
+        "指纹配置"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://hidemyacc.com/pricing",
+      "website": "https://hidemyacc.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser offering a trial, profile management and fingerprint settings",
+      "longDescription": "A browser offering a trial, profile management and fingerprint settings. Documented features include Profile import / export, Fingerprint configuration. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "7-day free trial",
+      "price": "USD $10/month (Mini; 5 profiles)",
+      "profiles": "5 profiles in Mini",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": false,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "Profile import / export",
+        "Fingerprint configuration"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://hidemyacc.com/pricing",
+      "website": "https://hidemyacc.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "HideMyAcc — official source",
+        "url": "https://hidemyacc.com/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "free",
+          "price",
+          "profiles"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Official monthly table lists Mini $10/month and 5 profiles, plus a separate yearly discount tab; device OS fingerprints are distinct from supported host installers.",
+        "sourceUrls": [
+          "https://hidemyacc.com/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Official monthly table lists Mini $10/month and 5 profiles, plus a separate yearly discount tab; device OS fingerprints are distinct from supported host installers.",
+        "sourceUrls": [
+          "https://hidemyacc.com/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Official monthly table lists Mini $10/month and 5 profiles, plus a separate yearly discount tab; device OS fingerprints are distinct from supported host installers.",
+        "sourceUrls": [
+          "https://hidemyacc.com/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "dicloak": {
+    "zh": {
+      "description": "提供免费档案和团队自动化的浏览器平台",
+      "longDescription": "提供免费档案和团队自动化的浏览器平台。公开列出的功能包括RPA、Local / HTTP API、团队协作。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "5 档案、1 用户、每天打开 15 次",
+      "price": "USD $8/月（Base）；年付 $57.60，折算 $4.80/月",
+      "profiles": "免费 5；付费档案数按配置",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "云端同步",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "RPA",
+        "Local / HTTP API",
+        "团队协作"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://dicloak.com/pricing",
+      "website": "https://dicloak.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser platform with free profiles and team automation",
+      "longDescription": "A browser platform with free profiles and team automation. Documented features include RPA, Local / HTTP API, Team collaboration. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "5 profiles, 1 user, 15 launches/day",
+      "price": "USD $8/month (Base); $57.60 annually, equivalent to $4.80/month",
+      "profiles": "5 free; paid capacity selected in configurator",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Cloud sync",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "RPA",
+        "Local / HTTP API",
+        "Team collaboration"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://dicloak.com/pricing",
+      "website": "https://dicloak.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "DICloak — official source",
+        "url": "https://dicloak.com/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free has 5 profiles, one member, 15 launches/day. Base displays USD8/month or USD57.6 annually (4.8/month equivalent). API interfaces, RPA, flexible proxies and cloud sync listed.",
+        "sourceUrls": [
+          "https://dicloak.com/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free has 5 profiles, one member, 15 launches/day. Base displays USD8/month or USD57.6 annually (4.8/month equivalent). API interfaces, RPA, flexible proxies and cloud sync listed.",
+        "sourceUrls": [
+          "https://dicloak.com/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free has 5 profiles, one member, 15 launches/day. Base displays USD8/month or USD57.6 annually (4.8/month equivalent). API interfaces, RPA, flexible proxies and cloud sync listed.",
+        "sourceUrls": [
+          "https://dicloak.com/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Free has 5 profiles, one member, 15 launches/day. Base displays USD8/month or USD57.6 annually (4.8/month equivalent). API interfaces, RPA, flexible proxies and cloud sync listed.",
+        "sourceUrls": [
+          "https://dicloak.com/pricing"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free has 5 profiles, one member, 15 launches/day. Base displays USD8/month or USD57.6 annually (4.8/month equivalent). API interfaces, RPA, flexible proxies and cloud sync listed.",
+        "sourceUrls": [
+          "https://dicloak.com/pricing"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free has 5 profiles, one member, 15 launches/day. Base displays USD8/month or USD57.6 annually (4.8/month equivalent). API interfaces, RPA, flexible proxies and cloud sync listed.",
+        "sourceUrls": [
+          "https://dicloak.com/pricing"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free has 5 profiles, one member, 15 launches/day. Base displays USD8/month or USD57.6 annually (4.8/month equivalent). API interfaces, RPA, flexible proxies and cloud sync listed.",
+        "sourceUrls": [
+          "https://dicloak.com/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "ghost-browser": {
+    "zh": {
+      "description": "按身份隔离 Cookie 的 Chromium 工作浏览器",
+      "longDescription": "按身份隔离 Cookie 的 Chromium 工作浏览器。公开列出的功能包括独立 Cookie 身份、按标签页设置代理、工作区同步。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "免费额度未核实",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium",
+      "storage": "本地与可选团队同步",
+      "api": false,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "独立 Cookie 身份",
+        "按标签页设置代理",
+        "工作区同步"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://ghostbrowser.com/",
+      "website": "https://ghostbrowser.com/",
+      "type": "productivity-browser",
+      "bestFor": [
+        "workspaces",
+        "cookie-isolation"
+      ]
+    },
+    "en": {
+      "description": "A Chromium productivity browser with separate cookie identities",
+      "longDescription": "A Chromium productivity browser with separate cookie identities. Documented features include Separate cookie identities, Per-tab proxies, Workspace sync. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free allowance not verified",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium",
+      "storage": "Local with optional team sync",
+      "api": false,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Separate cookie identities",
+        "Per-tab proxies",
+        "Workspace sync"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://ghostbrowser.com/",
+      "website": "https://ghostbrowser.com/",
+      "type": "productivity-browser",
+      "bestFor": [
+        "workspaces",
+        "cookie-isolation"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Ghost Browser — official source",
+        "url": "https://ghostbrowser.com/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "engine",
+          "platforms",
+          "proxy",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "身份/Cookie 隔离不等于经验证的底层指纹修改；价格页本次不可读。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Identity / cookie isolation is not verified engine fingerprint modification; pricing page was unavailable."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Vendor positions a Chromium productivity browser with separate cookie identities, per-tab/group proxy assignment and private team sync. Pricing fetch failed; no anti-fingerprint or automation/API claim verified.",
+        "sourceUrls": [
+          "https://ghostbrowser.com/"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Vendor positions a Chromium productivity browser with separate cookie identities, per-tab/group proxy assignment and private team sync. Pricing fetch failed; no anti-fingerprint or automation/API claim verified.",
+        "sourceUrls": [
+          "https://ghostbrowser.com/"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Vendor positions a Chromium productivity browser with separate cookie identities, per-tab/group proxy assignment and private team sync. Pricing fetch failed; no anti-fingerprint or automation/API claim verified.",
+        "sourceUrls": [
+          "https://ghostbrowser.com/"
+        ]
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Vendor positions a Chromium productivity browser with separate cookie identities, per-tab/group proxy assignment and private team sync. Pricing fetch failed; no anti-fingerprint or automation/API claim verified.",
+        "sourceUrls": [
+          "https://ghostbrowser.com/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "wade": {
+    "zh": {
+      "description": "提供云端档案与 API 的桌面浏览器",
+      "longDescription": "提供云端档案与 API 的桌面浏览器。公开列出的功能包括云端档案、API。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "FULLACCESS 注册码试用 7 天",
+      "price": "USD $30/月（Mini；30 档案）",
+      "profiles": "Mini 30",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "未核实",
+      "storage": "云端档案",
+      "api": true,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "云端档案",
+        "API"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://wade.is/pricing",
+      "website": "https://wade.is/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A desktop browser with cloud profiles and an API",
+      "longDescription": "A desktop browser with cloud profiles and an API. Documented features include Cloud profiles, API. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "7-day trial using FULLACCESS at registration",
+      "price": "USD $30/month (Mini; 30 profiles)",
+      "profiles": "30 in Mini",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Needs verification",
+      "storage": "Cloud profiles",
+      "api": true,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "Cloud profiles",
+        "API"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://wade.is/pricing",
+      "website": "https://wade.is/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Wade — official source",
+        "url": "https://wade.is/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "free",
+          "platforms",
+          "price",
+          "profiles",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "旧 $10/月起未在当前页面确认，改为页面 Mini $30。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "The former $10 entry price was not supported; current Mini display is $30."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Mini is USD30/month for 30 profiles; 7-day FULLACCESS trial code; longer billing discounts. Cloud profiles, API, Windows and macOS downloads listed.",
+        "sourceUrls": [
+          "https://wade.is/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Mini is USD30/month for 30 profiles; 7-day FULLACCESS trial code; longer billing discounts. Cloud profiles, API, Windows and macOS downloads listed.",
+        "sourceUrls": [
+          "https://wade.is/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Mini is USD30/month for 30 profiles; 7-day FULLACCESS trial code; longer billing discounts. Cloud profiles, API, Windows and macOS downloads listed.",
+        "sourceUrls": [
+          "https://wade.is/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Mini is USD30/month for 30 profiles; 7-day FULLACCESS trial code; longer billing discounts. Cloud profiles, API, Windows and macOS downloads listed.",
+        "sourceUrls": [
+          "https://wade.is/pricing"
+        ]
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Mini is USD30/month for 30 profiles; 7-day FULLACCESS trial code; longer billing discounts. Cloud profiles, API, Windows and macOS downloads listed.",
+        "sourceUrls": [
+          "https://wade.is/pricing"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Mini is USD30/month for 30 profiles; 7-day FULLACCESS trial code; longer billing discounts. Cloud profiles, API, Windows and macOS downloads listed.",
+        "sourceUrls": [
+          "https://wade.is/pricing"
+        ]
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "gpmlogin": {
+    "zh": {
+      "description": "按设备一次性授权、支持 API 的双内核浏览器",
+      "longDescription": "按设备一次性授权、支持 API 的双内核浏览器。公开列出的功能包括一次性设备授权、API、无代码自动化。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "7 天免费试用",
+      "price": "USD $125 一次性（SOLO；1 台设备终身授权）",
+      "profiles": "授权档案不限量",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "一次性设备授权",
+        "API",
+        "无代码自动化"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://gpmloginapp.com/en",
+      "website": "https://gpmloginapp.com/en",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A dual-engine browser with per-device lifetime licensing and an API",
+      "longDescription": "A dual-engine browser with per-device lifetime licensing and an API. Documented features include One-time device license, API, No-code automation. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "7-day free trial",
+      "price": "USD $125 one-time (SOLO; lifetime license for 1 device)",
+      "profiles": "Unlimited profiles per license",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium / Firefox",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "One-time device license",
+        "API",
+        "No-code automation"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://gpmloginapp.com/en",
+      "website": "https://gpmloginapp.com/en",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "GPMLogin — official source",
+        "url": "https://gpmloginapp.com/en",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "platforms",
+          "price",
+          "profiles"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "SOLO lifetime license USD125 for one device, unlimited profiles; 7-day trial; Windows and macOS Apple Silicon. Chromium/Firefox, API, no-code automation and optional private server stated.",
+        "sourceUrls": [
+          "https://gpmloginapp.com/en"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "SOLO lifetime license USD125 for one device, unlimited profiles; 7-day trial; Windows and macOS Apple Silicon. Chromium/Firefox, API, no-code automation and optional private server stated.",
+        "sourceUrls": [
+          "https://gpmloginapp.com/en"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "SOLO lifetime license USD125 for one device, unlimited profiles; 7-day trial; Windows and macOS Apple Silicon. Chromium/Firefox, API, no-code automation and optional private server stated.",
+        "sourceUrls": [
+          "https://gpmloginapp.com/en"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "SOLO lifetime license USD125 for one device, unlimited profiles; 7-day trial; Windows and macOS Apple Silicon. Chromium/Firefox, API, no-code automation and optional private server stated.",
+        "sourceUrls": [
+          "https://gpmloginapp.com/en"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "SOLO lifetime license USD125 for one device, unlimited profiles; 7-day trial; Windows and macOS Apple Silicon. Chromium/Firefox, API, no-code automation and optional private server stated.",
+        "sourceUrls": [
+          "https://gpmloginapp.com/en"
+        ]
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "SOLO lifetime license USD125 for one device, unlimited profiles; 7-day trial; Windows and macOS Apple Silicon. Chromium/Firefox, API, no-code automation and optional private server stated.",
+        "sourceUrls": [
+          "https://gpmloginapp.com/en"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "SOLO lifetime license USD125 for one device, unlimited profiles; 7-day trial; Windows and macOS Apple Silicon. Chromium/Firefox, API, no-code automation and optional private server stated.",
+        "sourceUrls": [
+          "https://gpmloginapp.com/en"
+        ]
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "linken-sphere": {
+    "zh": {
+      "description": "提供免费会话与付费同步的浏览器",
+      "longDescription": "提供免费会话与付费同步的浏览器。公开列出的功能包括会话管理、付费云同步、Pro Local API。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "5 个会话免费，无时间限制",
+      "price": "Pure 页面价 USD $24/月，年额 $288；月付现价另核",
+      "profiles": "免费 5；Pure 30 个会话",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "本地与付费云同步",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "会话管理",
+        "付费云同步",
+        "Pro Local API"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://ls.app/pricing",
+      "website": "https://linkensphere.info/en/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser with free sessions and paid synchronization",
+      "longDescription": "A browser with free sessions and paid synchronization. Documented features include Session management, Paid cloud sync, Pro Local API. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "5 sessions free with no time limit",
+      "price": "Pure displayed USD $24/month with $288/year; monthly-billing price not verified",
+      "profiles": "5 free; 30 sessions in Pure",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Local with paid cloud sync",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Session management",
+        "Paid cloud sync",
+        "Pro Local API"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://ls.app/pricing",
+      "website": "https://linkensphere.info/en/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Linken Sphere — official source",
+        "url": "https://ls.app/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "API 在 Pro 档提供；价格页同时呈现年额，不将 $24 宣称为已确认月付价。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "API is a Pro feature; the page also shows annual totals, so $24 is not claimed as a verified monthly-billing quote."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free has 5 sessions without a time limit. Pure shows USD24/month plus annual total USD288 and struck USD360; billing state ambiguous, so it is a displayed annual-rate snapshot. Pro provides Local API and automation.",
+        "sourceUrls": [
+          "https://ls.app/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free has 5 sessions without a time limit. Pure shows USD24/month plus annual total USD288 and struck USD360; billing state ambiguous, so it is a displayed annual-rate snapshot. Pro provides Local API and automation.",
+        "sourceUrls": [
+          "https://ls.app/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free has 5 sessions without a time limit. Pure shows USD24/month plus annual total USD288 and struck USD360; billing state ambiguous, so it is a displayed annual-rate snapshot. Pro provides Local API and automation.",
+        "sourceUrls": [
+          "https://ls.app/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Free has 5 sessions without a time limit. Pure shows USD24/month plus annual total USD288 and struck USD360; billing state ambiguous, so it is a displayed annual-rate snapshot. Pro provides Local API and automation.",
+        "sourceUrls": [
+          "https://ls.app/pricing"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free has 5 sessions without a time limit. Pure shows USD24/month plus annual total USD288 and struck USD360; billing state ambiguous, so it is a displayed annual-rate snapshot. Pro provides Local API and automation.",
+        "sourceUrls": [
+          "https://ls.app/pricing"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free has 5 sessions without a time limit. Pure shows USD24/month plus annual total USD288 and struck USD360; billing state ambiguous, so it is a displayed annual-rate snapshot. Pro provides Local API and automation.",
+        "sourceUrls": [
+          "https://ls.app/pricing"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free has 5 sessions without a time limit. Pure shows USD24/month plus annual total USD288 and struck USD360; billing state ambiguous, so it is a displayed annual-rate snapshot. Pro provides Local API and automation.",
+        "sourceUrls": [
+          "https://ls.app/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "camoufox": {
+    "zh": {
+      "description": "提供 Python/Playwright 接口的开源浏览器",
+      "longDescription": "提供 Python/Playwright 接口的开源浏览器。公开列出的功能包括Python / TypeScript 接口、Playwright 自动化、Firefox 内核。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "开源软件；运行和代理成本自理",
+      "price": "USD $0 软件许可（开源）；非托管服务报价",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "Firefox",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "Python / TypeScript 接口",
+        "Playwright 自动化",
+        "Firefox 内核"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://camoufox.com/",
+      "website": "https://camoufox.com/",
+      "pricingCheckedAt": "2026-10-16",
+      "status": "experimental"
+    },
+    "en": {
+      "description": "An open-source browser with a Python / Playwright interface",
+      "longDescription": "An open-source browser with a Python / Playwright interface. Documented features include Python / TypeScript interfaces, Playwright automation, Firefox engine. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Open-source software; compute and proxies are separate",
+      "price": "USD $0 open-source software; not a hosted-service quote",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Firefox",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "Python / TypeScript interfaces",
+        "Playwright automation",
+        "Firefox engine"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://camoufox.com/",
+      "website": "https://camoufox.com/",
+      "pricingCheckedAt": "2026-10-16",
+      "status": "experimental"
+    },
+    "sources": [
+      {
+        "title": "Camoufox — official source",
+        "url": "https://camoufox.com/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "free",
+          "price"
+        ]
+      },
+      {
+        "title": "Camoufox Python interface",
+        "url": "https://camoufox.com/python/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation"
+        ]
+      },
+      {
+        "title": "Camoufox maintainer repository",
+        "url": "https://github.com/daijro/camoufox",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "engine",
+          "status"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "维护者标记仍在开发，不保证适用于稳定生产。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Maintainer marks the project under development and potentially unsuitable for stable production."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Official introduction identifies an open-source anti-detect browser. The Python interface separately documents a Playwright wrapper; no hosted REST service is inferred.",
+        "sourceUrls": [
+          "https://camoufox.com/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Official introduction identifies an open-source anti-detect browser. The Python interface separately documents a Playwright wrapper; no hosted REST service is inferred.",
+        "sourceUrls": [
+          "https://camoufox.com/"
+        ]
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Maintainer identifies Firefox build and Python/TypeScript interfaces and warns under development, potentially unsuitable for stable production.",
+        "sourceUrls": [
+          "https://github.com/daijro/camoufox"
+        ]
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Official Python interface wraps Playwright for launching and controlling Camoufox. API means library interface, not a verified hosted REST service.",
+        "sourceUrls": [
+          "https://camoufox.com/python/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Official Python interface wraps Playwright for launching and controlling Camoufox. API means library interface, not a verified hosted REST service.",
+        "sourceUrls": [
+          "https://camoufox.com/python/"
+        ]
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "status": {
+        "status": "verified",
+        "note": "Maintainer identifies Firefox build and Python/TypeScript interfaces and warns under development, potentially unsuitable for stable production.",
+        "sourceUrls": [
+          "https://github.com/daijro/camoufox"
+        ]
+      }
+    }
+  },
+  "browser-automation-studio": {
+    "zh": {
+      "description": "提供可视化脚本与独立应用输出的自动化工具",
+      "longDescription": "提供可视化脚本与独立应用输出的自动化工具。公开列出的功能包括可视化自动化、生成独立应用、FingerprintSwitcher 服务接入。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "免费版本",
+      "price": "USD $80/年（Premium）；或 $40/半年",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "Chromium（Chrome engine）",
+      "storage": "未核实",
+      "api": false,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "可视化自动化",
+        "生成独立应用",
+        "FingerprintSwitcher 服务接入"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://bablosoft.com/shop/BrowserAutomationStudio",
+      "website": "https://bablosoft.com/shop/BrowserAutomationStudio",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A visual automation tool that can produce standalone applications",
+      "longDescription": "A visual automation tool that can produce standalone applications. Documented features include Visual automation, Standalone application output, FingerprintSwitcher service integration. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free version",
+      "price": "USD $80/year (Premium); or $40 per 6 months",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Chromium (Chrome engine)",
+      "storage": "Needs verification",
+      "api": false,
+      "automation": true,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [
+        "Visual automation",
+        "Standalone application output",
+        "FingerprintSwitcher service integration"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://bablosoft.com/shop/BrowserAutomationStudio",
+      "website": "https://bablosoft.com/shop/BrowserAutomationStudio",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Browser Automation Studio — official source",
+        "url": "https://bablosoft.com/shop/BrowserAutomationStudio",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "automation",
+          "engine",
+          "free",
+          "price"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "指纹切换依赖独立 FingerprintSwitcher 服务，不能把 Premium 价格当作全部运行成本。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Fingerprint changes use the separate FingerprintSwitcher service; Premium is not the entire operating cost."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free version and premium USD80/year or USD40/6 months listed. Visual automation, Chrome engine and executable apps documented; FingerprintSwitcher is a separate service.",
+        "sourceUrls": [
+          "https://bablosoft.com/shop/BrowserAutomationStudio"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free version and premium USD80/year or USD40/6 months listed. Visual automation, Chrome engine and executable apps documented; FingerprintSwitcher is a separate service.",
+        "sourceUrls": [
+          "https://bablosoft.com/shop/BrowserAutomationStudio"
+        ]
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Free version and premium USD80/year or USD40/6 months listed. Visual automation, Chrome engine and executable apps documented; FingerprintSwitcher is a separate service.",
+        "sourceUrls": [
+          "https://bablosoft.com/shop/BrowserAutomationStudio"
+        ]
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free version and premium USD80/year or USD40/6 months listed. Visual automation, Chrome engine and executable apps documented; FingerprintSwitcher is a separate service.",
+        "sourceUrls": [
+          "https://bablosoft.com/shop/BrowserAutomationStudio"
+        ]
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "lightpanda": {
+    "zh": {
+      "description": "用于自动化与 AI 的自研无头浏览器引擎",
+      "longDescription": "用于自动化与 AI 的自研无头浏览器引擎。公开列出的功能包括托管浏览器小时计费、自带代理。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "托管 Explorer 每月 10 小时、5 并发",
+      "price": "USD $19/月（Builder；含 300 小时，超额 $0.08/小时）",
+      "profiles": "按运行小时与并发计费，不是档案额度",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "自研 Zig 无头引擎",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "托管浏览器小时计费",
+        "自带代理"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://lightpanda.io/pricing",
+      "website": "https://lightpanda.io/",
+      "pricingCheckedAt": "2026-10-16",
+      "type": "headless-engine",
+      "bestFor": [
+        "headless-automation",
+        "authorized-crawling"
+      ]
+    },
+    "en": {
+      "description": "A custom headless browser engine for automation and AI",
+      "longDescription": "A custom headless browser engine for automation and AI. Documented features include Hosted browser-hour billing, Bring your own proxy. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Hosted Explorer: 10 hours/month, 5 concurrent sessions",
+      "price": "USD $19/month (Builder; 300 hours, then $0.08/hour)",
+      "profiles": "Metered by hours and concurrency, not profile slots",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Custom Zig headless engine",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Hosted browser-hour billing",
+        "Bring your own proxy"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://lightpanda.io/pricing",
+      "website": "https://lightpanda.io/",
+      "pricingCheckedAt": "2026-10-16",
+      "type": "headless-engine",
+      "bestFor": [
+        "headless-automation",
+        "authorized-crawling"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Lightpanda — official source",
+        "url": "https://lightpanda.io/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "free",
+          "price",
+          "profiles",
+          "proxy"
+        ]
+      },
+      {
+        "title": "Lightpanda engine and automation",
+        "url": "https://lightpanda.io/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "engine",
+          "api",
+          "automation"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Hosted Explorer USD0 includes 10 browser-hours/month, 5 concurrent sessions and bring-your-own proxy; Builder USD19/month includes 300 hours then USD0.08/hour. Not a GUI profile-management plan.",
+        "sourceUrls": [
+          "https://lightpanda.io/pricing"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Hosted Explorer USD0 includes 10 browser-hours/month, 5 concurrent sessions and bring-your-own proxy; Builder USD19/month includes 300 hours then USD0.08/hour. Not a GUI profile-management plan.",
+        "sourceUrls": [
+          "https://lightpanda.io/pricing"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Hosted Explorer USD0 includes 10 browser-hours/month, 5 concurrent sessions and bring-your-own proxy; Builder USD19/month includes 300 hours then USD0.08/hour. Not a GUI profile-management plan.",
+        "sourceUrls": [
+          "https://lightpanda.io/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Vendor describes a custom Zig headless engine and Puppeteer/Playwright cloud connection.",
+        "sourceUrls": [
+          "https://lightpanda.io/"
+        ]
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Vendor describes a custom Zig headless engine and Puppeteer/Playwright cloud connection.",
+        "sourceUrls": [
+          "https://lightpanda.io/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Vendor describes a custom Zig headless engine and Puppeteer/Playwright cloud connection.",
+        "sourceUrls": [
+          "https://lightpanda.io/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Hosted Explorer USD0 includes 10 browser-hours/month, 5 concurrent sessions and bring-your-own proxy; Builder USD19/month includes 300 hours then USD0.08/hour. Not a GUI profile-management plan.",
+        "sourceUrls": [
+          "https://lightpanda.io/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "potabrowser": {
+    "zh": {
+      "description": "实验性的 Rust / Chromium 档案管理器",
+      "longDescription": "实验性的 Rust / Chromium 档案管理器。公开列出的功能包括本地档案路径、HTTP 代理路由。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "公开源代码项目；许可条款需另核",
+      "price": "当前商业/许可价格未核实",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "Chromium（依赖用户安装）",
+      "storage": "本地档案路径",
+      "api": false,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP"
+      ],
+      "features": [
+        "本地档案路径",
+        "HTTP 代理路由"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://github.com/snaberino/pota-browser",
+      "website": "https://github.com/snaberino/pota-browser",
+      "type": "profile-manager",
+      "bestFor": [
+        "profile-management",
+        "research"
+      ]
+    },
+    "en": {
+      "description": "An experimental Rust / Chromium profile manager",
+      "longDescription": "An experimental Rust / Chromium profile manager. Documented features include Local profile paths, HTTP proxy routing. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Public-source project; license terms need verification",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Chromium (user-supplied installation)",
+      "storage": "Local profile paths",
+      "api": false,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP"
+      ],
+      "features": [
+        "Local profile paths",
+        "HTTP proxy routing"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://github.com/snaberino/pota-browser",
+      "website": "https://github.com/snaberino/pota-browser",
+      "type": "profile-manager",
+      "bestFor": [
+        "profile-management",
+        "research"
+      ]
+    },
+    "sources": [
+      {
+        "title": "PotaBrowser — official source",
+        "url": "https://github.com/snaberino/pota-browser",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "engine",
+          "free",
+          "price",
+          "proxy",
+          "proxyProtocols",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "README 的 SOCKS 说明与待办列表冲突；完整底层指纹修改明确超出当前范围。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "README SOCKS claims conflict with its TODO; full engine fingerprint patching is explicitly out of scope."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Maintainer calls this experimental Rust Chromium profile manager. Local paths and HTTP proxy routing described; SOCKS support both claimed and left in TODO, so protocol support is limited to HTTP pending confirmation. No separate API verified.",
+        "sourceUrls": [
+          "https://github.com/snaberino/pota-browser"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Maintainer calls this experimental Rust Chromium profile manager. Local paths and HTTP proxy routing described; SOCKS support both claimed and left in TODO, so protocol support is limited to HTTP pending confirmation. No separate API verified.",
+        "sourceUrls": [
+          "https://github.com/snaberino/pota-browser"
+        ]
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Maintainer calls this experimental Rust Chromium profile manager. Local paths and HTTP proxy routing described; SOCKS support both claimed and left in TODO, so protocol support is limited to HTTP pending confirmation. No separate API verified.",
+        "sourceUrls": [
+          "https://github.com/snaberino/pota-browser"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Maintainer calls this experimental Rust Chromium profile manager. Local paths and HTTP proxy routing described; SOCKS support both claimed and left in TODO, so protocol support is limited to HTTP pending confirmation. No separate API verified.",
+        "sourceUrls": [
+          "https://github.com/snaberino/pota-browser"
+        ]
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Maintainer calls this experimental Rust Chromium profile manager. Local paths and HTTP proxy routing described; SOCKS support both claimed and left in TODO, so protocol support is limited to HTTP pending confirmation. No separate API verified.",
+        "sourceUrls": [
+          "https://github.com/snaberino/pota-browser"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Maintainer calls this experimental Rust Chromium profile manager. Local paths and HTTP proxy routing described; SOCKS support both claimed and left in TODO, so protocol support is limited to HTTP pending confirmation. No separate API verified.",
+        "sourceUrls": [
+          "https://github.com/snaberino/pota-browser"
+        ]
+      }
+    }
+  },
+  "cloakbrowser": {
+    "zh": {
+      "description": "含独立内核许可的 Chromium 自动化包装库",
+      "longDescription": "含独立内核许可的 Chromium 自动化包装库。公开列出的功能包括Playwright / Puppeteer 接口、HTTP / SOCKS5、本地持久档案。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "MIT 包装库；最新免费内核需登录、限 1 并发；旧版条件另核",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium",
+      "storage": "本地持久档案",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5"
+      ],
+      "features": [
+        "Playwright / Puppeteer 接口",
+        "HTTP / SOCKS5",
+        "本地持久档案"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://github.com/CloakHQ/CloakBrowser",
+      "website": "https://github.com/CloakHQ/CloakBrowser",
+      "type": "automation-browser",
+      "bestFor": [
+        "browser-automation",
+        "developer-research"
+      ]
+    },
+    "en": {
+      "description": "Chromium automation wrappers with separate binary licensing",
+      "longDescription": "Chromium automation wrappers with separate binary licensing. Documented features include Playwright / Puppeteer interfaces, HTTP / SOCKS5, Local persistent profiles. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "MIT wrappers; latest free binary requires sign-in and has 1 concurrency; older-build terms differ",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium",
+      "storage": "Local persistent profiles",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5"
+      ],
+      "features": [
+        "Playwright / Puppeteer interfaces",
+        "HTTP / SOCKS5",
+        "Local persistent profiles"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://github.com/CloakHQ/CloakBrowser",
+      "website": "https://github.com/CloakHQ/CloakBrowser",
+      "type": "automation-browser",
+      "bestFor": [
+        "browser-automation",
+        "developer-research"
+      ]
+    },
+    "sources": [
+      {
+        "title": "CloakBrowser — official source",
+        "url": "https://github.com/CloakHQ/CloakBrowser",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "platforms",
+          "proxy",
+          "proxyProtocols",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "不能把 MIT 包装库许可套用于全部内核；README 内许可段落存在版本差异，购买前核查 BINARY-LICENSE。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "MIT wrapper licensing does not cover every binary; README licensing sections vary by version, so inspect BINARY-LICENSE before use."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "MIT wrappers are distinct from binary license. README offers latest free binary at 1 concurrency via GitHub sign-in, paid Pro increases capacity, and older v146 remains free; licensing sections differ, so paid quote unverified. Playwright/Puppeteer, local persistent profiles and HTTP/SOCKS5 documented.",
+        "sourceUrls": [
+          "https://github.com/CloakHQ/CloakBrowser"
+        ]
+      }
+    }
+  },
+  "roxybrowser": {
+    "zh": {
+      "description": "提供免费档案、窗口同步和 API 的浏览器",
+      "longDescription": "提供免费档案、窗口同步和 API 的浏览器。公开列出的功能包括API、窗口同步、代理配置。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "2 个免费档案",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "免费 2；付费档案数依配置",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "API",
+        "窗口同步",
+        "代理配置"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://roxybrowser.com/pricing",
+      "website": "https://roxybrowser.com/"
+    },
+    "en": {
+      "description": "A browser with free profiles, window synchronization and an API",
+      "longDescription": "A browser with free profiles, window synchronization and an API. Documented features include API, Window sync, Proxy configuration. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "2 free profiles",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "2 free; paid capacity depends on configurator",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "API",
+        "Window sync",
+        "Proxy configuration"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://roxybrowser.com/pricing",
+      "website": "https://roxybrowser.com/"
+    },
+    "sources": [
+      {
+        "title": "RoxyBrowser — official source",
+        "url": "https://roxybrowser.com/pricing",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "free",
+          "profiles",
+          "proxy"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "动态价格 $4.80 的周期与配置未完整确认，不再作为通用月付起价。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "The billing period / configuration behind dynamic $4.80 is not fully verified, so it is not shown as a general monthly starting price."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Pricing comparison shows Free 2 profiles. Dynamic configurator displays USD4.80/month at 40% off but selection/billing period is ambiguous; exact paid price is unverified. API, proxy configuration and synchronization listed.",
+        "sourceUrls": [
+          "https://roxybrowser.com/pricing"
+        ]
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Pricing comparison shows Free 2 profiles. Dynamic configurator displays USD4.80/month at 40% off but selection/billing period is ambiguous; exact paid price is unverified. API, proxy configuration and synchronization listed.",
+        "sourceUrls": [
+          "https://roxybrowser.com/pricing"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Pricing comparison shows Free 2 profiles. Dynamic configurator displays USD4.80/month at 40% off but selection/billing period is ambiguous; exact paid price is unverified. API, proxy configuration and synchronization listed.",
+        "sourceUrls": [
+          "https://roxybrowser.com/pricing"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Pricing comparison shows Free 2 profiles. Dynamic configurator displays USD4.80/month at 40% off but selection/billing period is ambiguous; exact paid price is unverified. API, proxy configuration and synchronization listed.",
+        "sourceUrls": [
+          "https://roxybrowser.com/pricing"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Pricing comparison shows Free 2 profiles. Dynamic configurator displays USD4.80/month at 40% off but selection/billing period is ambiguous; exact paid price is unverified. API, proxy configuration and synchronization listed.",
+        "sourceUrls": [
+          "https://roxybrowser.com/pricing"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "indigo": {
+    "zh": {
+      "description": "提供本地与云档案及 API 的双内核指纹浏览器",
+      "longDescription": "提供本地与云档案及 API 的双内核指纹浏览器。公开列出的功能包括API、Selenium / Playwright / Puppeteer、双内核档案。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "10 天试用；50 个档案",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "试用 50；Pro 10/50/100",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "Chromium / Firefox（Mimic / Stealthfox）",
+      "storage": "本地与云端",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "API",
+        "Selenium / Playwright / Puppeteer",
+        "双内核档案"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://indigobrowser.com/",
+      "website": "https://indigobrowser.com/"
+    },
+    "en": {
+      "description": "A dual-engine browser with local / cloud profiles and an API",
+      "longDescription": "A dual-engine browser with local / cloud profiles and an API. Documented features include API, Selenium / Playwright / Puppeteer, Dual-engine profiles. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "10-day trial; 50 profiles",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "50 trial; Pro 10 / 50 / 100",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Chromium / Firefox (Mimic / Stealthfox)",
+      "storage": "Local and cloud",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "API",
+        "Selenium / Playwright / Puppeteer",
+        "Dual-engine profiles"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://indigobrowser.com/",
+      "website": "https://indigobrowser.com/"
+    },
+    "sources": [
+      {
+        "title": "Indigo official product and plan page",
+        "url": "https://indigobrowser.com/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "free",
+          "profiles",
+          "engine",
+          "storage",
+          "api",
+          "automation",
+          "proxy"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "Web 读取失败后，Firecrawl 成功读取官方页；本次仅核查公开资料，未实测。",
+        "价格切换器显示冲突数字，现价保持未核实；移动环境为桌面模拟，不代表 Android 原生应用。"
+      ],
+      "en": [
+        "Firecrawl read the official page after the web read failed; this is documentation review, not hands-on testing.",
+        "Pricing-selector output is ambiguous and remains unverified; mobile environments are desktop emulation, not proof of an Android app."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Trial has 50 profiles for 10 days. Mimic/Stealthfox use Chrome/Firefox; cloud/local profiles, API, proxy integration and Selenium/Playwright/Puppeteer documented. Price selector output inconsistent.",
+        "sourceUrls": [
+          "https://indigobrowser.com/"
+        ]
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Trial has 50 profiles for 10 days. Mimic/Stealthfox use Chrome/Firefox; cloud/local profiles, API, proxy integration and Selenium/Playwright/Puppeteer documented. Price selector output inconsistent.",
+        "sourceUrls": [
+          "https://indigobrowser.com/"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Trial has 50 profiles for 10 days. Mimic/Stealthfox use Chrome/Firefox; cloud/local profiles, API, proxy integration and Selenium/Playwright/Puppeteer documented. Price selector output inconsistent.",
+        "sourceUrls": [
+          "https://indigobrowser.com/"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Trial has 50 profiles for 10 days. Mimic/Stealthfox use Chrome/Firefox; cloud/local profiles, API, proxy integration and Selenium/Playwright/Puppeteer documented. Price selector output inconsistent.",
+        "sourceUrls": [
+          "https://indigobrowser.com/"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Trial has 50 profiles for 10 days. Mimic/Stealthfox use Chrome/Firefox; cloud/local profiles, API, proxy integration and Selenium/Playwright/Puppeteer documented. Price selector output inconsistent.",
+        "sourceUrls": [
+          "https://indigobrowser.com/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Trial has 50 profiles for 10 days. Mimic/Stealthfox use Chrome/Firefox; cloud/local profiles, API, proxy integration and Selenium/Playwright/Puppeteer documented. Price selector output inconsistent.",
+        "sourceUrls": [
+          "https://indigobrowser.com/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Trial has 50 profiles for 10 days. Mimic/Stealthfox use Chrome/Firefox; cloud/local profiles, API, proxy integration and Selenium/Playwright/Puppeteer documented. Price selector output inconsistent.",
+        "sourceUrls": [
+          "https://indigobrowser.com/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "vektort13": {
+    "zh": {
+      "description": "运行在 Windows 上的虚拟机环境与标识管理工具",
+      "longDescription": "VektorT13 的官方页面描述虚拟机和硬件/操作系统标识管理，并列出 Windows 10/11 要求。它与仅管理浏览器档案的桌面产品不同；本次未验证独立浏览器 API 或自动化接口。",
+      "free": "免费额度未核实",
+      "price": "USD $90/月（页面列出的 2PC 方案）；版别与授权范围请确认",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "Windows"
+      ],
+      "engine": "未核实",
+      "storage": "本地虚拟环境（官网声明不云存储）",
+      "api": false,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "虚拟机环境",
+        "系统与硬件标识设置",
+        "代理配置"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://detect.expert/antidetect/",
+      "website": "https://detect.expert/antidetect/",
+      "type": "virtual-machine-tool",
+      "bestFor": [
+        "virtual-machine-research",
+        "system-identity-testing"
+      ],
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A Windows virtual-machine environment and identity-management tool",
+      "longDescription": "The official VektorT13 page describes virtual machines and hardware / OS identity management, with Windows 10/11 requirements. This differs from a browser-profile manager. A dedicated browser API or automation interface was not verified.",
+      "free": "Free allowance not verified",
+      "price": "USD $90/month (listed 2-PC offer); confirm edition and license scope",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Windows"
+      ],
+      "engine": "Needs verification",
+      "storage": "Local virtual environments (vendor says no cloud storage)",
+      "api": false,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Virtual environments",
+        "System and hardware identity settings",
+        "Proxy configuration"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://detect.expert/antidetect/",
+      "website": "https://detect.expert/antidetect/",
+      "type": "virtual-machine-tool",
+      "bestFor": [
+        "virtual-machine-research",
+        "system-identity-testing"
+      ],
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "VektorT13 — official source",
+        "url": "https://detect.expert/antidetect/",
+        "checkedAt": "2026-10-16",
+        "fields": []
+      },
+      {
+        "title": "VektorT13 official system / requirements / offers",
+        "url": "https://detect.expert/antidetect/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "type",
+          "platforms",
+          "storage",
+          "proxy",
+          "price"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "官方不同版别切换信息不完整；$90/月对应页面 2PC 方案，另有 $1800 起的授权，不直接等同。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Edition tabs are incomplete in extraction; $90/month is the listed 2-PC offer, distinct from another $1800+ license."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "price": {
+        "status": "verified",
+        "note": "Page describes virtual machines, local environments, proxy/IP rotation and Windows10/11; lists USD90/month for2PC and a distinct USD1800+ offer.",
+        "sourceUrls": [
+          "https://detect.expert/antidetect/"
+        ]
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Page describes virtual machines, local environments, proxy/IP rotation and Windows10/11; lists USD90/month for2PC and a distinct USD1800+ offer.",
+        "sourceUrls": [
+          "https://detect.expert/antidetect/"
+        ]
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Page describes virtual machines, local environments, proxy/IP rotation and Windows10/11; lists USD90/month for2PC and a distinct USD1800+ offer.",
+        "sourceUrls": [
+          "https://detect.expert/antidetect/"
+        ]
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Page describes virtual machines, local environments, proxy/IP rotation and Windows10/11; lists USD90/month for2PC and a distinct USD1800+ offer.",
+        "sourceUrls": [
+          "https://detect.expert/antidetect/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "type": {
+        "status": "verified",
+        "note": "Page describes virtual machines, local environments, proxy/IP rotation and Windows10/11; lists USD90/month for2PC and a distinct USD1800+ offer.",
+        "sourceUrls": [
+          "https://detect.expert/antidetect/"
+        ]
+      }
+    }
+  },
+  "nullprint": {
+    "zh": {
+      "description": "提供免费档案与分级云端/自动化功能的浏览器",
+      "longDescription": "提供免费档案与分级云端/自动化功能的浏览器。公开列出的功能包括免费档案、付费代理加购、指定付费档自动化。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "5 个档案永久免费；另有 7 天试用",
+      "price": "USD $9/月（Starter；20 个档案）",
+      "profiles": "免费 5；Starter 20",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": false,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "免费档案",
+        "付费代理加购",
+        "指定付费档自动化"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://nullprint.net/pricing/",
+      "website": "https://nullprint.net/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser with free profiles and tiered cloud / automation features",
+      "longDescription": "A browser with free profiles and tiered cloud / automation features. Documented features include Free profiles, Paid proxy add-on, Automation on selected paid tiers. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "5 profiles free for life; separate 7-day trial",
+      "price": "USD $9/month (Starter; 20 profiles)",
+      "profiles": "5 free; 20 in Starter",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": false,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Free profiles",
+        "Paid proxy add-on",
+        "Automation on selected paid tiers"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://nullprint.net/pricing/",
+      "website": "https://nullprint.net/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "NullPrint — official source",
+        "url": "https://nullprint.net/pricing/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Current page lists 5 lifetime-free profiles, separate 7-day trial, and Starter USD9/month for 20 profiles / 1 member; Business and Enterprise list automation and cloud profiles.",
+        "sourceUrls": [
+          "https://nullprint.net/pricing/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Current page lists 5 lifetime-free profiles, separate 7-day trial, and Starter USD9/month for 20 profiles / 1 member; Business and Enterprise list automation and cloud profiles.",
+        "sourceUrls": [
+          "https://nullprint.net/pricing/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Current page lists 5 lifetime-free profiles, separate 7-day trial, and Starter USD9/month for 20 profiles / 1 member; Business and Enterprise list automation and cloud profiles.",
+        "sourceUrls": [
+          "https://nullprint.net/pricing/"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Current page lists 5 lifetime-free profiles, separate 7-day trial, and Starter USD9/month for 20 profiles / 1 member; Business and Enterprise list automation and cloud profiles.",
+        "sourceUrls": [
+          "https://nullprint.net/pricing/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Current page lists 5 lifetime-free profiles, separate 7-day trial, and Starter USD9/month for 20 profiles / 1 member; Business and Enterprise list automation and cloud profiles.",
+        "sourceUrls": [
+          "https://nullprint.net/pricing/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "multizen": {
+    "zh": {
+      "description": "为 AI Agent 提供本地档案与 MCP 的开源浏览器",
+      "longDescription": "为 AI Agent 提供本地档案与 MCP 的开源浏览器。公开列出的功能包括原生 MCP、本地档案、多平台下载。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "MIT 开源免费",
+      "price": "USD $0（MIT 开源软件；运行与代理成本另计）",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium",
+      "storage": "本地；可选同步",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "原生 MCP",
+        "本地档案",
+        "多平台下载"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://getmultizen.com/",
+      "website": "https://getmultizen.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "An open-source browser with local profiles and MCP for AI agents",
+      "longDescription": "An open-source browser with local profiles and MCP for AI agents. Documented features include Native MCP, Local profiles, Cross-platform downloads. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free MIT open-source software",
+      "price": "USD $0 (MIT software; compute and proxies separate)",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "engine": "Chromium",
+      "storage": "Local; optional sync",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Native MCP",
+        "Local profiles",
+        "Cross-platform downloads"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://getmultizen.com/",
+      "website": "https://getmultizen.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "Multizen — official source",
+        "url": "https://getmultizen.com/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "platforms",
+          "price",
+          "proxy",
+          "storage",
+          "profiles"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "官网首屏写 50 档案，价格区写不限量，额度存在冲突，未认证“不限量”。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "The hero says 50 profiles while pricing says unlimited; capacity is inconsistent and unlimited is not certified."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "profiles": {
+        "status": "contradicted",
+        "note": "Hero states 50 profiles; pricing states unlimited.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Site describes MIT free software, Windows/macOS/Linux, patched Chromium, local disk profiles and native MCP control. Hero says 50 profiles but pricing says unlimited, so capacity is conflicting.",
+        "sourceUrls": [
+          "https://getmultizen.com/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "donutbrowser": {
+    "zh": {
+      "description": "提供免费本地档案和付费云备份的浏览器",
+      "longDescription": "提供免费本地档案和付费云备份的浏览器。公开列出的功能包括免费档案管理 API、付费浏览器操控 API、本地档案与云备份。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "本地档案不限量免费",
+      "price": "USD $29/月（Solo；20 个云端备份）",
+      "profiles": "本地不限；Solo 云端备份 20",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "Wayfern（官网产品名称）",
+      "storage": "本地；付费云备份/同步",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5"
+      ],
+      "features": [
+        "免费档案管理 API",
+        "付费浏览器操控 API",
+        "本地档案与云备份"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://donutbrowser.com/pricing/",
+      "website": "https://donutbrowser.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser with free local profiles and paid cloud backups",
+      "longDescription": "A browser with free local profiles and paid cloud backups. Documented features include Free profile-management API, Paid browser-control API, Local profiles and cloud backups. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Unlimited local profiles free",
+      "price": "USD $29/month (Solo; 20 cloud backups)",
+      "profiles": "Unlimited local; 20 cloud backups in Solo",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Wayfern (vendor engine name)",
+      "storage": "Local; paid cloud backups / sync",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5"
+      ],
+      "features": [
+        "Free profile-management API",
+        "Paid browser-control API",
+        "Local profiles and cloud backups"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://donutbrowser.com/pricing/",
+      "website": "https://donutbrowser.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "DonutBrowser — official source",
+        "url": "https://donutbrowser.com/pricing/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "proxyProtocols",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "管理档案 API 与控制网页的 API 分开分层，不能当作免费完整自动化。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Profile-management and browser-control APIs are separate plan features; this is not free full browser automation."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Free includes unlimited local profiles, Wayfern engine, HTTP/SOCKS5 and profile management API. Solo USD29/month includes 20 cloud backups; Pro99 includes browser manipulation API and remote execution, Team199 has 2 seats.",
+        "sourceUrls": [
+          "https://donutbrowser.com/pricing/"
+        ]
+      }
+    }
+  },
+  "dashnull": {
+    "zh": {
+      "description": "DashNull 公开产品资料核查",
+      "longDescription": "DashNull 公开产品资料核查。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "免费额度未核实",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": false,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://dashnull.com/",
+      "website": "https://dashnull.com/",
+      "status": "pending-review"
+    },
+    "en": {
+      "description": "DashNull public product information review",
+      "longDescription": "DashNull public product information review. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free allowance not verified",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": false,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://dashnull.com/",
+      "website": "https://dashnull.com/",
+      "status": "pending-review"
+    },
+    "sources": [],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "官网两次读取失败；不将连接失败判定为产品停运。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Two official-page retrievals failed; connection failures do not establish product shutdown."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "whologin": {
+    "zh": {
+      "description": "WhoLogin 公开产品资料核查",
+      "longDescription": "WhoLogin 公开产品资料核查。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "免费额度未核实",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": false,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://whologin.com/",
+      "website": "https://whologin.com/",
+      "status": "pending-review"
+    },
+    "en": {
+      "description": "WhoLogin public product information review",
+      "longDescription": "WhoLogin public product information review. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free allowance not verified",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": false,
+      "automation": false,
+      "proxy": false,
+      "proxyProtocols": [],
+      "features": [],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://whologin.com/",
+      "website": "https://whologin.com/",
+      "status": "pending-review"
+    },
+    "sources": [],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "官网读取失败；不以第三方榜单补充未经确认的现价。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Official retrieval failed; third-party roundups were not used to fill current prices."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "chromepowerapp": {
+    "zh": {
+      "description": "Chrome 多窗口管理工具；维护者声明指纹启动已失效",
+      "longDescription": "维护者 README 明确说明指纹启动方式目前失效，相关代码已注释。目前应视为 Chrome 多开管理工具，不能作为已验证的完整指纹浏览器。",
+      "free": "AGPL 源码；另有用途声明需核查",
+      "price": "源码可访问；商业使用与发布条件需核实",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium",
+      "storage": "本地缓存目录",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5"
+      ],
+      "features": [
+        "多窗口管理",
+        "API 管理",
+        "HTTP / SOCKS5"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://github.com/zmzimpl/chrome-power-app",
+      "website": "https://github.com/zmzimpl/chrome-power-app",
+      "type": "automation-browser",
+      "bestFor": [
+        "multi-window-management",
+        "browser-automation"
+      ]
+    },
+    "en": {
+      "description": "Chrome multi-window manager; fingerprint launch is reported broken",
+      "longDescription": "The maintainer explicitly reports that fingerprint launching is broken and commented out. Treat it as a Chrome multi-window manager, not a verified complete anti-detect browser.",
+      "free": "AGPL source with additional usage notice to review",
+      "price": "Public source; commercial use / distribution terms need verification",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Chromium",
+      "storage": "Local cache directory",
+      "api": true,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [
+        "HTTP",
+        "SOCKS5"
+      ],
+      "features": [
+        "Multi-window management",
+        "API management",
+        "HTTP / SOCKS5"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://github.com/zmzimpl/chrome-power-app",
+      "website": "https://github.com/zmzimpl/chrome-power-app",
+      "type": "automation-browser",
+      "bestFor": [
+        "multi-window-management",
+        "browser-automation"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ChromePowerApp — official source",
+        "url": "https://github.com/zmzimpl/chrome-power-app",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "automation",
+          "engine",
+          "free",
+          "platforms",
+          "price",
+          "proxy",
+          "proxyProtocols",
+          "storage",
+          "fingerprint"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "README 的用途声明与 AGPL 标签都需阅读，不能只凭开源标签保证商业使用。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "Read both the README usage notice and AGPL license; an open-source badge alone does not settle commercial-use questions."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "engine": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "api": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "verified",
+        "note": "Maintainer says fingerprint launch currently stopped working and commented out. It remains Chrome multi-window management, HTTP/SOCKS5 proxy and API management with Puppeteer/Playwright/Selenium; AGPL repository with additional usage notice.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      },
+      "fingerprint": {
+        "status": "contradicted",
+        "note": "Maintainer explicitly says fingerprint launching is currently broken and commented out.",
+        "sourceUrls": [
+          "https://github.com/zmzimpl/chrome-power-app"
+        ]
+      }
+    }
+  },
+  "0detect": {
+    "zh": {
+      "description": "提供 Windows/macOS 客户端的档案浏览器",
+      "longDescription": "提供 Windows/macOS 客户端的档案浏览器。公开列出的功能包括API（套餐权限另核）、代理设置。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "免费额度未核实",
+      "price": "当前付费价格未核实；请查官网",
+      "profiles": "档案额度未核实",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "未核实",
+      "storage": "未核实",
+      "api": true,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "API（套餐权限另核）",
+        "代理设置"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://0detect.com/prices",
+      "website": "https://0detect.com/"
+    },
+    "en": {
+      "description": "A profile browser with Windows and macOS downloads",
+      "longDescription": "A profile browser with Windows and macOS downloads. Documented features include API (plan entitlement needs review), Proxy settings. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Free allowance not verified",
+      "price": "Current paid price unverified; check vendor",
+      "profiles": "Profile allowance unverified",
+      "platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "engine": "Needs verification",
+      "storage": "Needs verification",
+      "api": true,
+      "automation": false,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "API (plan entitlement needs review)",
+        "Proxy settings"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://0detect.com/prices",
+      "website": "https://0detect.com/"
+    },
+    "sources": [
+      {
+        "title": "0detect — official source",
+        "url": "https://0detect.com/prices",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "api",
+          "platforms",
+          "proxy"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "unverified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "原“1 个档案免费”未能从可读价格内容确认，移除当前额度断言。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "The former one-free-profile claim was not confirmed in readable pricing content, so the allowance claim was removed."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "price": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "profiles": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "platforms": {
+        "status": "verified",
+        "note": "Official pricing page renders feature names, Windows/macOS downloads and API, but price/free-plan amounts are image/dynamic content and were not confirmed.",
+        "sourceUrls": [
+          "https://0detect.com/prices"
+        ]
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "api": {
+        "status": "verified",
+        "note": "Official pricing page renders feature names, Windows/macOS downloads and API, but price/free-plan amounts are image/dynamic content and were not confirmed.",
+        "sourceUrls": [
+          "https://0detect.com/prices"
+        ]
+      },
+      "automation": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Official pricing page renders feature names, Windows/macOS downloads and API, but price/free-plan amounts are image/dynamic content and were not confirmed.",
+        "sourceUrls": [
+          "https://0detect.com/prices"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  },
+  "adblogin": {
+    "zh": {
+      "description": "声明提供免费本地档案的浏览器项目",
+      "longDescription": "声明提供免费本地档案的浏览器项目。公开列出的功能包括本地档案、自动化接入声明。本页为官方资料整理，不代表检测效果或账号结果的实测认证。",
+      "free": "官网声明无限本地档案永久免费",
+      "price": "USD $0（官网声明；下载包未实测）",
+      "profiles": "官网声明不限量本地档案",
+      "platforms": [
+        "未核实"
+      ],
+      "engine": "未核实",
+      "storage": "本地",
+      "api": false,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "本地档案",
+        "自动化接入声明"
+      ],
+      "pros": [],
+      "cons": [
+        "未核实字段不代表产品不支持"
+      ],
+      "pricingUrl": "https://adblogin.com/",
+      "website": "https://adblogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "en": {
+      "description": "A browser project claiming free local profiles",
+      "longDescription": "A browser project claiming free local profiles. Documented features include Local profiles, Documented automation hooks. This review uses public vendor documentation and does not certify detection performance or account outcomes.",
+      "free": "Vendor claims unlimited local profiles free forever",
+      "price": "USD $0 (vendor claim; binaries not tested)",
+      "profiles": "Unlimited local profiles claimed",
+      "platforms": [
+        "Needs verification"
+      ],
+      "engine": "Needs verification",
+      "storage": "Local",
+      "api": false,
+      "automation": true,
+      "proxy": true,
+      "proxyProtocols": [],
+      "features": [
+        "Local profiles",
+        "Documented automation hooks"
+      ],
+      "pros": [],
+      "cons": [
+        "Unverified does not mean unsupported"
+      ],
+      "pricingUrl": "https://adblogin.com/",
+      "website": "https://adblogin.com/",
+      "pricingCheckedAt": "2026-10-16"
+    },
+    "sources": [
+      {
+        "title": "ADBLogin — official source",
+        "url": "https://adblogin.com/",
+        "checkedAt": "2026-10-16",
+        "fields": [
+          "automation",
+          "free",
+          "price",
+          "profiles",
+          "proxy",
+          "storage"
+        ]
+      }
+    ],
+    "verifiedAt": "2026-10-16",
+    "pricingStatus": "verified",
+    "notes": {
+      "zh-cn": [
+        "公开资料审核，非客户端实测；未知不等于不支持。",
+        "站点披露 Multilogin 联盟关系；本次未验安装包或原生平台，不作为独立性能证明。"
+      ],
+      "en": [
+        "Public-document review, not hands-on testing; unknown does not mean unsupported.",
+        "The site discloses a Multilogin affiliate relationship; installers and native platforms were not validated."
+      ]
+    },
+    "checks": {
+      "free": {
+        "status": "verified",
+        "note": "Public page claims unlimited local profiles free forever, proxy-ready sessions and Playwright/Selenium/Puppeteer hooks; it discloses a Multilogin affiliate relationship. Download binary and host-platform details were not independently inspected.",
+        "sourceUrls": [
+          "https://adblogin.com/"
+        ]
+      },
+      "price": {
+        "status": "verified",
+        "note": "Public page claims unlimited local profiles free forever, proxy-ready sessions and Playwright/Selenium/Puppeteer hooks; it discloses a Multilogin affiliate relationship. Download binary and host-platform details were not independently inspected.",
+        "sourceUrls": [
+          "https://adblogin.com/"
+        ]
+      },
+      "profiles": {
+        "status": "verified",
+        "note": "Public page claims unlimited local profiles free forever, proxy-ready sessions and Playwright/Selenium/Puppeteer hooks; it discloses a Multilogin affiliate relationship. Download binary and host-platform details were not independently inspected.",
+        "sourceUrls": [
+          "https://adblogin.com/"
+        ]
+      },
+      "platforms": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "engine": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "storage": {
+        "status": "verified",
+        "note": "Public page claims unlimited local profiles free forever, proxy-ready sessions and Playwright/Selenium/Puppeteer hooks; it discloses a Multilogin affiliate relationship. Download binary and host-platform details were not independently inspected.",
+        "sourceUrls": [
+          "https://adblogin.com/"
+        ]
+      },
+      "api": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      },
+      "automation": {
+        "status": "verified",
+        "note": "Public page claims unlimited local profiles free forever, proxy-ready sessions and Playwright/Selenium/Puppeteer hooks; it discloses a Multilogin affiliate relationship. Download binary and host-platform details were not independently inspected.",
+        "sourceUrls": [
+          "https://adblogin.com/"
+        ]
+      },
+      "proxy": {
+        "status": "verified",
+        "note": "Public page claims unlimited local profiles free forever, proxy-ready sessions and Playwright/Selenium/Puppeteer hooks; it discloses a Multilogin affiliate relationship. Download binary and host-platform details were not independently inspected.",
+        "sourceUrls": [
+          "https://adblogin.com/"
+        ]
+      },
+      "proxyProtocols": {
+        "status": "unknown",
+        "note": "No sufficiently specific current evidence in this review.",
+        "sourceUrls": []
+      }
+    }
+  }
+};

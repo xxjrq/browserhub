@@ -1,3 +1,4 @@
+import { ProductEvidence } from "@/components/product-evidence";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -56,7 +57,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 	const relatedGuides = guides.filter(guide => guide.relatedBrowsers?.includes(browser.slug)).slice(0, 3);
 	const faq = [
 		{ question: `${browser.name} 适合什么用户？`, answer: `${browser.name} 的公开资料显示，它主要面向${browser.bestFor.slice(0, 2).join("和")}等浏览器环境管理场景。具体适用范围应结合平台、账号数量和自动化需求判断。` },
-		{ question: `${browser.name} 的价格是多少？`, answer: `当前页面记录的起步信息为“${browser.price}”，免费额度为“${browser.free}”。价格、套餐和免费额度可能调整，请以官方页面为准。` },
+		{ question: `${browser.name} 的价格是多少？`, answer: `本页记录的套餐或许可信息为“${browser.price}”，免费额度为“${browser.free}”。价格、套餐和免费额度可能调整，请以官方页面为准。` },
 		{ question: `${browser.name} 支持哪些能力？`, answer: `当前整理结果显示：API${browser.api ? "支持" : "未标注支持"}、自动化${browser.automation ? "支持" : "未标注支持"}、代理${browser.proxy ? "支持" : "未标注支持"}。实际接口和版本以官方文档为准。` }
 	];
 	const jsonLd = [
@@ -123,8 +124,8 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 
 					<div className="mt-10 grid gap-5 md:grid-cols-2">
 						<Card>
-							<CardHeader><CardTitle className="flex items-center gap-2 text-base"><Check className="h-4 w-4 text-success" aria-hidden="true" />优势</CardTitle></CardHeader>
-							<CardContent><ul className="space-y-3">{browser.pros.map(item => <li key={item} className="flex items-start gap-2.5 text-sm leading-6"><Check className="mt-1 h-3.5 w-3.5 shrink-0 text-success" aria-hidden="true" />{item}</li>)}</ul></CardContent>
+							<CardHeader><CardTitle className="flex items-center gap-2 text-base"><Check className="h-4 w-4 text-success" aria-hidden="true" />公开特点</CardTitle></CardHeader>
+							<CardContent><ul className="space-y-3">{(browser.pros.length ? browser.pros : browser.features.length ? browser.features : ["暂无可确认的功能说明，请核对下方来源状态"]).map(item => <li key={item} className="flex items-start gap-2.5 text-sm leading-6"><Check className="mt-1 h-3.5 w-3.5 shrink-0 text-success" aria-hidden="true" />{item}</li>)}</ul></CardContent>
 						</Card>
 						<Card>
 							<CardHeader><CardTitle className="flex items-center gap-2 text-base"><X className="h-4 w-4 text-destructive" aria-hidden="true" />限制与注意事项</CardTitle></CardHeader>
@@ -162,7 +163,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 						</CardHeader>
 						<CardContent className="space-y-4">
 							<SpecRow label="免费额度" value={browser.free} />
-							<SpecRow label="起步价格" value={<span className="font-mono">{browser.price}</span>} />
+							<SpecRow label="套餐价格" value={<span className="font-mono">{browser.price}</span>} />
 							<SpecRow label="官方价格页" value={<a data-official-link="true" href={browser.pricingUrl ?? browser.website} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-4 hover:underline">查看</a>} />
 							<SpecRow label="环境数量" value={browser.profiles} />
 							<Separator />
@@ -173,7 +174,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 							<SpecRow label="平台" value={browser.platforms.join(", ")} />
 							<SpecRow label="内核" value={browser.engine} />
 							<SpecRow label="存储" value={browser.storage} />
-							{browser.pricingCheckedAt && <p className="border-t pt-3 text-xs leading-5 text-muted-foreground">价格核对：{browser.pricingCheckedAt} · 价格可能随官网套餐调整</p>}
+							{browser.pricingCheckedAt && <p className="border-t pt-3 text-xs leading-5 text-muted-foreground">价格口径与本次核查状态见下方官方来源；购买前请向官网确认。</p>}
 							<div className="flex items-center justify-between gap-4">
 								<span className="text-sm text-muted-foreground">编辑评分</span>
 								<Rating value={browser.rating} />
@@ -234,6 +235,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 				</section>
 			</div>
 
+			<ProductEvidence slug={browser.slug} />
 			<p className="mt-12 border-t pt-6 font-mono text-xs leading-6 text-muted-foreground">
 				资料来源：<a className="underline underline-offset-4 transition-colors hover:text-foreground" href={browser.sourceUrl} target="_blank" rel="noopener noreferrer">公开资源整理</a> · 更新于 {browser.updatedAt} · 价格、套餐和功能请以官方页面为准。
 			</p>

@@ -1,7 +1,8 @@
+import { verifiedProducts } from "./verified-products";
+
 /**
- * Display translations of the existing catalogue, not a fresh product audit.
- * The source pricingCheckedAt (currently 2026-08-12) and every capability flag
- * survive unchanged. English is an explicit content fallback for non-zh locales;
+ * Display translations, overlaid with explicitly reviewed vendor fields.
+ * Each reviewed product carries its own field-level evidence and pricing date. English is an explicit content fallback for non-zh locales;
  * this helper does not claim that those pages have been fully translated.
  */
 export type BrowserEditorialInput = {
@@ -46,7 +47,6 @@ const englishFields: Record<string, string> = {
 	"10 个档案永久免费": "10 profiles free for life",
 	"试用/促销额度以官网为准": "Verify trial and promotional allowances with the vendor",
 	"免费计划；100 个云端档案": "Free plan; 100 cloud profiles",
-	"5–45 个云端档案免费": "5–45 free cloud profiles",
 	"免费版 $0/月": "Free plan at $0/month",
 	"免费计划": "Free plan",
 	"7 天免费试用": "7-day free trial",
@@ -60,17 +60,13 @@ const englishFields: Record<string, string> = {
 	"免费计划；本地档案永久免费": "Free plan; local profiles free for life",
 	"1 个档案免费计划": "Free plan with 1 profile",
 	"无限本地档案永久免费": "Unlimited local profiles free for life",
-	"$3+/月起": "From $3+/month",
 	"$24+/月起": "From $24+/month",
 	"$5.4+/月起": "From $5.40+/month",
 	"$9/月起（Professional；当前促销 $4.50/月）": "From $9/month (Professional; listed promotion: $4.50/month)",
-	"$9/月起（Professional；年付折算 $7.20/月）": "From $9/month (Professional; $7.20/month equivalent when billed annually)",
 	"$7.08/月起（年付）": "From $7.08/month, billed annually",
 	"$10/月起": "From $10/month",
 	"$5.40/月起": "From $5.40/month",
-	"$19.99/月起（半年计费）": "From $19.99/month, billed every 6 months",
 	"$10/月起（50 个档案）": "From $10/month for 50 profiles",
-	"$51.93/月起（约 €45）": "From $51.93/month (approximately €45 as listed)",
 	"$34/月起": "From $34/month",
 	"$2.81/月起（约 ¥19）": "From $2.81/month (approximately ¥19 as listed)",
 	"按档案启动/代理用量计费；代理 $0.30/GB 起": "Usage-based billing for profile launches and proxies; proxy traffic from $0.30/GB",
@@ -134,7 +130,7 @@ export function browserDisplay<T extends BrowserEditorialInput>(browser: T, loca
 	if (browser.storage !== undefined) result.storage = englishField(browser.storage, browser);
 	if (browser.engine !== undefined) result.engine = englishField(browser.engine, browser);
 	if (browser.bestFor !== undefined) result.bestFor = browser.bestFor.map(value => englishField(value, browser));
-	return result;
+	return { ...result, ...verifiedProducts[browser.slug]?.en };
 }
 
 export type ComparisonEditorialSource = { label: string; url: string; accessedAt: string };
@@ -164,7 +160,7 @@ export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
 			sections: [
 				{ heading: "Choose the execution model before the subscription", body: "AdsPower documents a built-in RPA task builder, reusable tasks in RPA Plus and a Local API. GoLogin documents profile sharing and a separate Cloud Browser that can run remotely through Playwright or Puppeteer. For an operator maintaining repeatable browser tasks, inspect AdsPower's task logs and editing flow. For a developer who needs remote execution, inspect GoLogin's cloud connection and persistence model. These are different workflow choices; neither proves better detection resistance.\n\nCheck which product and plan each feature belongs to. A desktop profile subscription should not be assumed to include unlimited cloud sessions or every automation feature." },
 				{ heading: "Run a handoff and failure-recovery trial", body: "Use an account and test site you own. In AdsPower, create a short task, deliberately interrupt it, then inspect the task log and resume procedure. In GoLogin, share one test profile with a restricted teammate, reopen it from a second authorized device, then revoke access. If evaluating Cloud Browser, repeat a harmless authenticated task across two sessions and inspect which state survives. Record the client version, proxy, permission level and result rather than calling a successful login an anti-detection benchmark." },
-				{ heading: "Check the permissions behind the API checkbox", body: "AdsPower's API documentation says team members may need Local API permission and that resetting a key invalidates previous keys. GoLogin exposes permissions at profile, folder and workspace levels. Ask how your intended plan handles member access, export, key rotation and session sharing. Compare a written quote for your actual seats, profiles, automation runs and proxy usage; the historical catalogue prices below are not a quote verified today." }
+				{ heading: "Check the permissions behind the API checkbox", body: "AdsPower's API documentation says team members may need Local API permission and that resetting a key invalidates previous keys. GoLogin exposes permissions at profile, folder and workspace levels. Ask how your intended plan handles member access, export, key rotation and session sharing. Compare a written quote for your actual seats, profiles, automation runs and proxy usage; the table below uses individually dated price or licence checks and explicitly labels unverified prices. A dated public offer is not a binding quote for your plan." }
 			],
 			sources: [adsRpa, adsApi, goFeatures, goCloud]
 		},
@@ -172,7 +168,7 @@ export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
 			sections: [
 				{ heading: "先选择执行方式，再比较订阅", body: "AdsPower 官方资料列出内置 RPA、RPA Plus 可复用任务和 Local API；GoLogin 官方资料列出档案共享，以及可由 Playwright 或 Puppeteer 远程连接的独立 Cloud Browser 产品。需要维护重复浏览器任务的运营人员，应重点检查 AdsPower 的任务日志和流程编辑；需要远端执行的开发者，应检查 GoLogin 的云端连接与状态持久化。两者是工作方式的差别，不能证明谁更难被检测。\n\n还要确认功能属于哪个产品和套餐，不能把桌面档案订阅理解为无限云端会话或全部自动化功能。" },
 				{ heading: "用交接与失败恢复完成一次试用", body: "使用自己拥有的测试网站和账号。在 AdsPower 建立一个短任务，故意中断后检查日志与恢复步骤；在 GoLogin 把测试档案分配给受限成员，在第二台已授权设备重新打开，然后撤销权限。若评估 Cloud Browser，再跨两个会话执行同一个无害的登录测试，记录哪些状态得以保留。记录客户端版本、代理、成员权限和结果；登录成功不能称为反检测性能测试。" },
-				{ heading: "不要只看“支持 API”", body: "AdsPower 官方 API 说明指出，成员可能需要单独开启 Local API 权限，重置密钥后旧密钥会失效；GoLogin 可在档案、文件夹和工作区设置访问权限。采购时应逐项询问导出、密钥轮换、成员权限和会话共享边界，并按实际席位、环境数、自动化任务与代理用量获取报价。下方目录中的历史价格不代表今天重新核验的报价。" }
+				{ heading: "不要只看“支持 API”", body: "AdsPower 官方 API 说明指出，成员可能需要单独开启 Local API 权限，重置密钥后旧密钥会失效；GoLogin 可在档案、文件夹和工作区设置访问权限。采购时应逐项询问导出、密钥轮换、成员权限和会话共享边界，并按实际席位、环境数、自动化任务与代理用量获取报价。下表按条目标注价格或免费许可的核查日期，未核实报价明确标出；有日期的公开套餐也不等于为你的团队出具的正式报价。" }
 			],
 			sources: [adsRpa, adsApi, goFeatures, goCloud]
 		}
@@ -218,7 +214,7 @@ export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
 			sections: [
 				{ heading: "Choose between a local integration and an RPA workflow", body: "EasyBR's published API guide describes a logged-in desktop client exposing a local service and CDP connection details. AdsPower documents an RPA editor as well as a Local API. If you already maintain a test script, validate the browser-launch and reconnect sequence in both products. If an operator needs to build repeatable tasks inside the browser manager, evaluate AdsPower's RPA interface rather than assuming that an API flag provides the same workflow." },
 				{ heading: "Check storage and member access instead of assuming offline operation", body: "EasyBR's guide describes optional cloud synchronization and account-plan limits; local-first storage does not mean the client never communicates with a server. AdsPower's API page describes member permissions and key management. During a trial, use test data, verify where a profile is saved, transfer it only through a supported route, and remove a teammate's access. Ask both vendors what remains available after sign-out, expiry or a device failure." },
-				{ heading: "Keep the comparison and commercial relationship explicit", body: "EasyBR is a related product of BrowserHub. This is a comparison of public documentation, not an independent hands-on ranking. The useful decision is whether each candidate completes your required proxy, session, export and team tasks at the quoted cost. The catalogue's historical price date is retained; current quotes and feature entitlements must be confirmed with each vendor." }
+				{ heading: "Keep the comparison and commercial relationship explicit", body: "EasyBR is a related product of BrowserHub. This is a comparison of public documentation, not an independent hands-on ranking. The useful decision is whether each candidate completes your required proxy, session, export and team tasks at the quoted cost. Individual price-check dates and verification states appear below; current quotes and feature entitlements must be confirmed with each vendor." }
 			],
 			sources: [easybrApi, easybrProduct, adsRpa, adsApi]
 		},
@@ -226,7 +222,7 @@ export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
 			sections: [
 				{ heading: "本机接口与内置任务流程，按执行人员选择", body: "EasyBR 的官方 API 指南描述已登录桌面客户端提供本机服务及 CDP 连接信息；AdsPower 同时提供 RPA 编辑器与 Local API。已经维护测试脚本的团队，应在两家分别验证启动和重新连接流程；需要运营人员直接编排重复任务时，则应检查 AdsPower RPA 的实际界面，不能把“支持 API”当成完全相同的工作方式。" },
 				{ heading: "验证存储与权限，不把本地优先当离线保证", body: "EasyBR 指南写明可选云同步及账号套餐限制，本地优先并不代表客户端完全不访问服务器；AdsPower API 页面说明了成员权限和密钥管理。试用时只用测试资料，确认档案保存位置，通过支持的路径迁移后检查，再移除一名测试成员的权限。分别向厂商确认退出登录、套餐到期或设备故障时的恢复边界。" },
-				{ heading: "公开关联关系，再按验收任务选型", body: "EasyBR 是 BrowserHub 的关联产品。本页比较公开资料，不是独立实测排名。真正应比较的是两家能否以所报费用完成你的代理、会话、导出和团队任务。目录保留原有价格记录日期，当前报价和功能权益仍须向对应厂商确认。" }
+				{ heading: "公开关联关系，再按验收任务选型", body: "EasyBR 是 BrowserHub 的关联产品。本页比较公开资料，不是独立实测排名。真正应比较的是两家能否以所报费用完成你的代理、会话、导出和团队任务。下方保留每项价格核查日期与确认状态，当前正式报价和功能权益仍须向对应厂商确认。" }
 			],
 			sources: [easybrApi, easybrProduct, adsRpa, adsApi]
 		}
@@ -254,7 +250,7 @@ export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
 			sections: [
 				{ heading: "Desktop browser profiles and Android cloud phones solve different tasks", body: "EasyBR's public product page focuses on Windows/macOS browser environments and describes mobile directions as custom development. Multilogin's current product overview offers Android cloud phones alongside browser profiles. If the task requires a native Android app, a desktop profile with a mobile user agent is not equivalent. If your task is entirely web-based, compare the desktop workflow without paying for device features you will not use." },
 				{ heading: "Match the proposed plan to a recoverable pilot", body: "Use a test account and list required browser profiles, teammates, proxy traffic and any cloud-phone time separately. Run a login, close/reopen the environment, check retained state, hand it to an authorized teammate and revoke access. For EasyBR automation, validate the logged-in desktop client's Local API route. For a Multilogin mobile requirement, test a cloud device separately. Request written clarification of export, backups and what happens after a plan expires." },
-				{ heading: "Treat the evidence and relationship as part of the decision", body: "BrowserHub has a relationship with EasyBR. This page uses public product and API documents; it is not a measured safety or performance ranking. Multilogin's current browser page describes Chromium, while older catalogue labels may cover a different product generation. Confirm the exact offered engine and device before purchase, and compare current vendor quotes rather than treating historical catalogue prices as newly checked." }
+				{ heading: "Treat the evidence and relationship as part of the decision", body: "BrowserHub has a relationship with EasyBR. This page uses public product and API documents; it is not a measured safety or performance ranking. Multilogin's current browser page describes Chromium, while older catalogue labels may cover a different product generation. Confirm the exact offered engine and device before purchase, and use the dated field checks below, distinguish confirmed offers from unknown prices, and obtain a current vendor quote." }
 			],
 			sources: [easybrProduct, easybrApi, multiBrowser, multiProduct]
 		},
@@ -262,7 +258,7 @@ export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
 			sections: [
 				{ heading: "桌面浏览器档案与 Android 云手机处理不同任务", body: "EasyBR 公开产品页以 Windows/macOS 浏览器环境为标准产品，并把移动端方向描述为定制开发；Multilogin 当前产品总览提供 Android 云手机，同时提供浏览器档案。需要运行原生 Android 应用时，带手机 User-Agent 的桌面档案并不等价。只操作网站则应直接比较桌面流程，不必把不会使用的设备功能纳入采购理由。" },
 				{ heading: "让报价对应一次可恢复的试点", body: "使用测试账号，分别列出需要的浏览器环境、成员、代理流量和云手机时间。完成登录、正常关闭重开、状态检查、授权交接和撤权。EasyBR 自动化应验证已登录桌面客户端的 Local API 路径；Multilogin 移动需求则单独测试云设备。要求两家说明导出、备份和套餐到期后的处理方式，避免直接迁移正式账号。" },
-				{ heading: "把证据等级和关联关系放进决策", body: "BrowserHub 与 EasyBR 存在关联。本页依据公开产品与 API 文档，不是安全性或性能实测排名。Multilogin 当前浏览器页描述 Chromium，旧目录中的标签可能对应其他产品代际。购买前核实实际提供的内核和设备，并比较当前正式报价，不能把历史目录价格理解为本轮重新核验。" }
+				{ heading: "把证据等级和关联关系放进决策", body: "BrowserHub 与 EasyBR 存在关联。本页依据公开产品与 API 文档，不是安全性或性能实测排名。Multilogin 当前浏览器页描述 Chromium，旧目录中的标签可能对应其他产品代际。购买前核实实际提供的内核和设备，参考下方逐项核查日期，区分已确认套餐与未知报价，并向厂商索取当前正式报价。" }
 			],
 			sources: [easybrProduct, easybrApi, multiBrowser, multiProduct]
 		}

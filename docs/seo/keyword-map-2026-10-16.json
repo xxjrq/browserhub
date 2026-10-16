@@ -348,7 +348,12 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "team-browser-evaluation-checklist"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:browser-fingerprinting-explained",
@@ -381,7 +386,12 @@
       "relatedSlugs": [
         "browser-fingerprint-signals",
         "browser-fingerprint-testing-checklist"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:setting-up-proxies-easybr",
@@ -415,7 +425,12 @@
         "configure-http-proxy",
         "configure-socks5-proxy",
         "webrtc-leak-check"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:multi-account-best-practices",
@@ -448,7 +463,12 @@
       "relatedSlugs": [
         "chrome-profiles-vs-antidetect-browser",
         "browser-profile-permissions"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:free-antidetect-browser",
@@ -481,7 +501,12 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:local-vs-cloud-browser-storage",
@@ -514,7 +539,12 @@
       "relatedSlugs": [
         "team-browser-evaluation-checklist",
         "browser-automation-profile-persistence"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:webrtc-leak-check",
@@ -547,7 +577,12 @@
       "relatedSlugs": [
         "browser-fingerprint-testing-checklist",
         "configure-socks5-proxy"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:read-creepjs-results",
@@ -580,7 +615,12 @@
       "relatedSlugs": [
         "browser-fingerprint-testing-checklist",
         "browser-fingerprint-signals"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:configure-http-proxy",
@@ -613,7 +653,12 @@
       "relatedSlugs": [
         "proxy-vs-vpn-vs-antidetect-browser",
         "webrtc-leak-check"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:configure-socks5-proxy",
@@ -646,7 +691,12 @@
       "relatedSlugs": [
         "proxy-vs-vpn-vs-antidetect-browser",
         "webrtc-leak-check"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:browser-fingerprint-signals",
@@ -679,7 +729,12 @@
       "relatedSlugs": [
         "browser-fingerprinting-explained",
         "browser-fingerprint-testing-checklist"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "guides:browser-profile-permissions",
@@ -712,7 +767,12 @@
       "relatedSlugs": [
         "team-browser-evaluation-checklist",
         "multi-account-best-practices"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "refreshed-complete-en-zh-cn",
+        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+      }
     },
     {
       "id": "compare:easybr-vs-adspower",
@@ -1731,7 +1791,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:gologin",
@@ -1764,7 +1830,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:adspower",
@@ -1797,7 +1869,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:multilogin",
@@ -1830,7 +1908,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:dolphin-anty",
@@ -1863,7 +1947,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:morelogin",
@@ -1896,7 +1986,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:incogniton",
@@ -1929,7 +2025,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:bitbrowser",
@@ -1962,7 +2064,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:octo-browser",
@@ -1995,7 +2103,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:kameleo",
@@ -2028,7 +2142,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:undetectable",
@@ -2061,7 +2181,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:vmlogin",
@@ -2094,7 +2220,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:ixbrowser",
@@ -2127,7 +2259,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:nstbrowser",
@@ -2160,7 +2298,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:hidemyacc",
@@ -2193,7 +2337,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:dicloak",
@@ -2226,7 +2376,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:ghost-browser",
@@ -2259,7 +2415,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:wade",
@@ -2292,7 +2454,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:gpmlogin",
@@ -2325,7 +2493,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:linken-sphere",
@@ -2358,7 +2532,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:camoufox",
@@ -2391,7 +2571,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:browser-automation-studio",
@@ -2424,7 +2610,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:lightpanda",
@@ -2457,7 +2649,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:potabrowser",
@@ -2490,7 +2688,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:cloakbrowser",
@@ -2523,7 +2727,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:roxybrowser",
@@ -2556,7 +2766,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:indigo",
@@ -2589,7 +2805,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:vektort13",
@@ -2622,7 +2844,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:nullprint",
@@ -2655,7 +2883,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:multizen",
@@ -2688,7 +2922,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:donutbrowser",
@@ -2721,7 +2961,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:dashnull",
@@ -2754,7 +3000,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:whologin",
@@ -2787,7 +3039,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:chromepowerapp",
@@ -2820,7 +3078,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:0detect",
@@ -2853,7 +3117,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "unverified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "browsers:adblogin",
@@ -2886,7 +3156,13 @@
       "relatedSlugs": [
         "best-antidetect-browsers-2026",
         "how-to-choose-antidetect-browser"
-      ]
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "official-documentation-reviewed",
+        "pricingStatus": "verified",
+        "evidenceFile": "product-evidence-2026-10-16.json"
+      }
     }
   ],
   "futureCandidates": [
@@ -2965,6 +3241,7 @@
   "currentPolicyNotes": {
     "FAQRichResults": "Google no longer shows FAQ rich results from 2026-05-07; documentation removed 2026-06-15; visible helpful FAQ remains useful to readers",
     "HowToRichResults": "Google deprecated desktop HowTo rich results in September 2023",
-    "llmsTxt": "Google clarification 2026-06-15: does not positively or negatively affect Google Search visibility or ranking"
+    "llmsTxt": "Google clarification 2026-06-15: does not positively or negatively affect Google Search visibility or ranking",
+    "secondRelease": "2026-10-16: all 12 old guides have complete sourced English/Chinese editions; all 36 product entries carry field-level review states. 26 price or free-licence records supported, 10 paid prices explicitly unverified. Search metrics remain unknown until observed in webmaster data."
   }
 }

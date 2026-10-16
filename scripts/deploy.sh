@@ -14,6 +14,7 @@ if [ "${SKIP_BUILD:-0}" != 1 ]; then
 else
   npm run check:dist
   npm run audit:seo
+  npm run check:products
 fi
 STAMP=$(date +%Y%m%d-%H%M%S)
 RELEASE="$DEPLOY_ROOT/releases/$STAMP"
@@ -37,6 +38,12 @@ curl -fsS --retry 2 --max-time 25 "https://$DOMAIN/en/guides/best-antidetect-bro
 node -e 'const s=require("fs").readFileSync("/tmp/browserhub-deploy-health.html","utf8"); if(!s.includes("best-antidetect-browsers-2026") || !s.includes("id=\"sources\"") || !s.includes("https://browserhub.co/en/guides/best-antidetect-browsers-2026/")) process.exit(1)'
 curl -fsS --max-time 25 "https://$DOMAIN/sitemap.xml" -o /tmp/browserhub-deploy-sitemap.xml
 cmp out/sitemap.xml /tmp/browserhub-deploy-sitemap.xml
+# The refreshed guide and product evidence must reach the origin before accepting
+# the release; the pillar alone may be unchanged between content deployments.
+curl -fsS --retry 2 --max-time 25 "https://$DOMAIN/en/guides/configure-socks5-proxy/" -o /tmp/browserhub-deploy-guide.html
+cmp out/en/guides/configure-socks5-proxy/index.html /tmp/browserhub-deploy-guide.html
+curl -fsS --retry 2 --max-time 25 "https://$DOMAIN/en/browsers/easybr/" -o /tmp/browserhub-deploy-product.html
+cmp out/en/browsers/easybr/index.html /tmp/browserhub-deploy-product.html
 trap - ERR
 SWITCHED=0
 ssh "$DEPLOY_HOST" "ls -1dt '$DEPLOY_ROOT/releases'/*/ | tail -n +$((KEEP_RELEASES + 1)) | xargs -r rm -rf"

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import type { GuideResource } from "@/data/resources";
-import { editorialGuideTranslations } from "@/data/editorial-guides";
+import { guideEditions } from "@/data/guide-editions";
 import { localizedGuideCopy, localizedGuideSections } from "@/data/guide-translations";
 import { guideCategoryLabel, localePath, t, type Locale } from "@/lib/i18n";
 import { SectionBody } from "@/components/section-body";
 import { Badge } from "@/components/ui/badge";
 
 export function guideFaq(guide: GuideResource, locale: Locale) {
-	return editorialGuideTranslations[guide.slug]?.[locale === "zh-cn" ? "zh-cn" : "en"].faq ?? guide.faq ?? [];
+	return guideEditions[guide.slug]?.[locale === "zh-cn" ? "zh-cn" : "en"].faq ?? guide.faq ?? [];
 }
 
 export function GuideArticle({ guide, locale }: { guide: GuideResource; locale: Locale }) {
@@ -15,7 +15,7 @@ export function GuideArticle({ guide, locale }: { guide: GuideResource; locale: 
 	const copy = localizedGuideCopy(locale, guide.slug, guide);
 	const sections = localizedGuideSections(locale, guide.slug) ?? guide.sections ?? [{ heading: en ? "Overview" : "概述", body: guide.content }];
 	const questions = guideFaq(guide, locale);
-	const edition = editorialGuideTranslations[guide.slug]?.[en ? "en" : "zh-cn"];
+	const edition = guideEditions[guide.slug]?.[en ? "en" : "zh-cn"];
 	return <article className="mx-auto max-w-3xl" lang={en ? "en" : "zh-CN"}>
 		<header className="mb-8">
 			<Badge variant="secondary">{edition?.category ?? guideCategoryLabel(locale, guide.category)}</Badge>
@@ -23,6 +23,7 @@ export function GuideArticle({ guide, locale }: { guide: GuideResource; locale: 
 			<p className="mt-5 text-lg leading-8 text-muted-foreground">{copy.description}</p>
 			<p className="mt-4 text-xs leading-6 text-muted-foreground">BrowserHub {en ? "editorial team · Updated" : "编辑团队 · 更新于"} <time dateTime={guide.date}>{guide.date}</time> · <Link href={localePath(en ? "en" : "zh-cn", "about")} className="underline underline-offset-4">{en ? "Sources & editorial policy" : "来源与编辑政策"}</Link></p>
 		</header>
+		<div className="mb-8"><SectionBody body={edition?.content ?? guide.content} /></div>
 		{!["en", "zh-cn"].includes(locale) && <p className="mb-6 rounded-lg border p-4 text-sm">English edition. This guide has not yet been translated into {locale}.</p>}
 		<nav aria-label={en ? "On this page" : "本文目录"} className="mb-10 rounded-xl border bg-muted/40 p-5">
 			<p className="font-semibold">{en ? "On this page" : "本文目录"}</p>

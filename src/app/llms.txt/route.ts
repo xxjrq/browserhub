@@ -1,3 +1,4 @@
+import { verifiedProducts } from "@/data/verified-products";
 import { browsers, comparisons, guides, tools } from "@/data/resources";
 
 export const dynamic = "force-static";
@@ -9,11 +10,14 @@ function browserLine(b: (typeof browsers)[number]) {
 	const platforms = b.platforms.join("、");
 	const capabilities = [
 		b.proxy ? "支持代理" : "",
-		b.api || b.automation ? "API 与自动化" : "",
+		b.api ? "API 已确认" : "",
+		b.automation ? "自动化已确认" : "",
 		b.storage && b.storage !== "以官网为准" ? `${b.storage}存储` : ""
 	].filter(Boolean).join("、");
 	const tail = capabilities ? `；${capabilities}。` : "。";
-	return `- ${b.name} — ${type}指纹浏览器；${b.free}；${b.price}；平台：${platforms}${tail}`;
+	const evidence = verifiedProducts[b.slug];
+	const review = evidence ? ` 公开资料核查：${evidence.verifiedAt}；价格状态：${evidence.pricingStatus}；来源：${evidence.sources.map(source => source.url).join(" ")}` : " 未完成官方资料核查。";
+	return `- [${b.name}](https://browserhub.co/zh-cn/browsers/${b.slug}/) — ${type}浏览器资源；${b.description}；${b.free}；${b.price}；平台：${platforms}${tail}${review}`;
 }
 
 export function GET() {
@@ -39,7 +43,7 @@ BrowserHub（中文名「指纹浏览器资源大全」）是一个开源资料�
 
 ## Editorial disclosure
 EasyBR is affiliated with BrowserHub and receives featured placement. Articles use public documentation unless a reproducible test is explicitly described. Editorial policy: https://browserhub.co/en/about/
-Directory prices are historical snapshots last checked 2026-08-12, not current quotes. Verify on official sites.
+Product entries carry individual official-documentation review dates and field-level checks. A confirmed price is a dated snapshot in its original currency and billing period, not a live quote. Unverified prices are explicitly labelled; unknown API, automation or platform fields do not imply unsupported features. Vendor documentation is not a hands-on benchmark.
 
 ## 收录浏览器（关键事实）/ Browsers tracked
 ${browserFacts}
