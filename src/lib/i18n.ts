@@ -67,6 +67,88 @@ const copy = {
 export type LocaleCopy = (typeof copy)[Locale];
 export const t = (locale: Locale): LocaleCopy => copy[locale];
 
+/**
+ * Footer copy.
+ *
+ * `components/layout/footer.tsx` renders inside the root layout, so it is emitted on
+ * every localized URL. Its links and headings were hard-coded Chinese, which put a
+ * Chinese nav block at the bottom of all 956 non-Chinese pages and contradicted the
+ * language promise made by <title> and hreflang. Kept separate from `t()` because the
+ * footer needs link labels and section headings rather than page metadata.
+ */
+export type FooterCopy = {
+	tagline: string;
+	sections: { resources: string; project: string; community: string };
+	links: { browsers: string; tools: string; fingerprint: string; guides: string; compare: string; about: string; contact: string; privacy: string; telegram: string; easybr: string; qq: string };
+	disclaimer: string;
+};
+
+const footerCopy: Record<Locale, FooterCopy> = {
+	"zh-cn": {
+		tagline: "中立收录指纹浏览器、检测工具、自动化框架与隐私技术资源，信息以官方页面为准。",
+		sections: { resources: "资源", project: "项目", community: "社区与产品" },
+		links: { browsers: "指纹浏览器", tools: "检测工具", fingerprint: "指纹技术", guides: "指南与教程", compare: "浏览器对比", about: "关于项目", contact: "联系与贡献", privacy: "隐私说明", telegram: "Telegram 社区", easybr: "EasyBR 官网", qq: "QQ 群：967818141" },
+		disclaimer: "信息仅供资源整理与研究参考 · 价格与功能以官方页面为准"
+	},
+	en: {
+		tagline: "An independent catalogue of anti-detect browsers, detection tools, automation frameworks and privacy resources. Verify details on official pages.",
+		sections: { resources: "Resources", project: "Project", community: "Community" },
+		links: { browsers: "Anti-detect browsers", tools: "Detection tools", fingerprint: "Fingerprinting", guides: "Guides", compare: "Comparisons", about: "About", contact: "Contact & contribute", privacy: "Privacy", telegram: "Telegram community", easybr: "EasyBR official site", qq: "QQ group: 967818141" },
+		disclaimer: "For resource curation and research only · Verify prices and features on official pages"
+	},
+	ja: {
+		tagline: "指紋ブラウザ、検出ツール、自動化フレームワーク、プライバシー技術のリソースを中立的に掲載。最新情報は公式サイトをご確認ください。",
+		sections: { resources: "リソース", project: "プロジェクト", community: "コミュニティ" },
+		links: { browsers: "指紋ブラウザ", tools: "検出ツール", fingerprint: "指紋技術", guides: "ガイド", compare: "比較", about: "プロジェクトについて", contact: "連絡・貢献", privacy: "プライバシー", telegram: "Telegram コミュニティ", easybr: "EasyBR 公式サイト", qq: "QQ グループ：967818141" },
+		disclaimer: "リソース整理と研究のための参考情報 · 価格と機能は公式サイトで確認してください"
+	},
+	ko: {
+		tagline: "핑거프린트 브라우저, 탐지 도구, 자동화 프레임워크, 개인정보 기술 리소스를 중립적으로 정리했습니다. 최신 정보는 공식 사이트에서 확인하세요.",
+		sections: { resources: "리소스", project: "프로젝트", community: "커뮤니티" },
+		links: { browsers: "핑거프린트 브라우저", tools: "탐지 도구", fingerprint: "핑거프린팅", guides: "가이드", compare: "비교", about: "프로젝트 소개", contact: "연락 및 기여", privacy: "개인정보", telegram: "Telegram 커뮤니티", easybr: "EasyBR 공식 사이트", qq: "QQ 그룹: 967818141" },
+		disclaimer: "리소스 정리와 연구를 위한 참고 정보 · 가격과 기능은 공식 사이트에서 확인하세요"
+	},
+	es: {
+		tagline: "Catálogo independiente de navegadores anti-detección, herramientas de detección, frameworks de automatización y recursos de privacidad. Verifica los detalles en las páginas oficiales.",
+		sections: { resources: "Recursos", project: "Proyecto", community: "Comunidad" },
+		links: { browsers: "Navegadores anti-detección", tools: "Herramientas de detección", fingerprint: "Huella del navegador", guides: "Guías", compare: "Comparativas", about: "Acerca de", contact: "Contacto y contribuciones", privacy: "Privacidad", telegram: "Comunidad de Telegram", easybr: "Sitio oficial de EasyBR", qq: "Grupo QQ: 967818141" },
+		disclaimer: "Solo para curar recursos e investigación · Verifica precios y funciones en las páginas oficiales"
+	},
+	pt: {
+		tagline: "Catálogo independente de navegadores anti-detecção, ferramentas de detecção, frameworks de automação e recursos de privacidade. Verifique os detalhes nos sites oficiais.",
+		sections: { resources: "Recursos", project: "Projeto", community: "Comunidade" },
+		links: { browsers: "Navegadores anti-detecção", tools: "Ferramentas de detecção", fingerprint: "Fingerprint", guides: "Guias", compare: "Comparações", about: "Sobre", contact: "Contato e contribuição", privacy: "Privacidade", telegram: "Comunidade Telegram", easybr: "Site oficial do EasyBR", qq: "Grupo QQ: 967818141" },
+		disclaimer: "Apenas para curadoria de recursos e pesquisa · Confirme preços e recursos nos sites oficiais"
+	},
+	ru: {
+		tagline: "Независимый каталог антидетект-браузеров, инструментов проверки, фреймворков автоматизации и ресурсов о приватности. Проверяйте данные на официальных сайтах.",
+		sections: { resources: "Ресурсы", project: "Проект", community: "Сообщество" },
+		links: { browsers: "Антидетект-браузеры", tools: "Инструменты проверки", fingerprint: "Отпечаток браузера", guides: "Руководства", compare: "Сравнения", about: "О проекте", contact: "Контакты и вклад", privacy: "Конфиденциальность", telegram: "Сообщество Telegram", easybr: "Официальный сайт EasyBR", qq: "QQ-группа: 967818141" },
+		disclaimer: "Только для подбора ресурсов и исследований · Проверяйте цены и функции на официальных сайтах"
+	}
+};
+
+export const footer = (locale: Locale): FooterCopy => footerCopy[locale];
+
+/**
+ * Accessible names for header controls.
+ *
+ * These were hard-coded Chinese aria-labels on a client component, so screen-reader
+ * users navigating an English or Japanese page heard Chinese control names. They are
+ * not visible text, but they are still part of the page's language contract.
+ */
+const a11yCopy: Record<Locale, { mainNav: string; mobileNav: string; language: string; lightTheme: string; darkTheme: string; openMenu: string; closeMenu: string }> = {
+	"zh-cn": { mainNav: "主导航", mobileNav: "移动端主导航", language: "选择语言", lightTheme: "切换到浅色主题", darkTheme: "切换到深色主题", openMenu: "打开菜单", closeMenu: "关闭菜单" },
+	en: { mainNav: "Main navigation", mobileNav: "Mobile navigation", language: "Select language", lightTheme: "Switch to light theme", darkTheme: "Switch to dark theme", openMenu: "Open menu", closeMenu: "Close menu" },
+	ja: { mainNav: "メインナビゲーション", mobileNav: "モバイルナビゲーション", language: "言語を選択", lightTheme: "ライトテーマに切り替え", darkTheme: "ダークテーマに切り替え", openMenu: "メニューを開く", closeMenu: "メニューを閉じる" },
+	ko: { mainNav: "주요 탐색", mobileNav: "모바일 탐색", language: "언어 선택", lightTheme: "라이트 테마로 전환", darkTheme: "다크 테마로 전환", openMenu: "메뉴 열기", closeMenu: "메뉴 닫기" },
+	es: { mainNav: "Navegación principal", mobileNav: "Navegación móvil", language: "Seleccionar idioma", lightTheme: "Cambiar al tema claro", darkTheme: "Cambiar al tema oscuro", openMenu: "Abrir menú", closeMenu: "Cerrar menú" },
+	pt: { mainNav: "Navegação principal", mobileNav: "Navegação móvel", language: "Selecionar idioma", lightTheme: "Mudar para o tema claro", darkTheme: "Mudar para o tema escuro", openMenu: "Abrir menu", closeMenu: "Fechar menu" },
+	ru: { mainNav: "Основная навигация", mobileNav: "Мобильная навигация", language: "Выбрать язык", lightTheme: "Переключить на светлую тему", darkTheme: "Переключить на тёмную тему", openMenu: "Открыть меню", closeMenu: "Закрыть меню" }
+};
+
+export const a11y = (locale: Locale) => a11yCopy[locale];
+
 export type LocalizedKind = "home" | "browsers" | "tools" | "fingerprint" | "guides" | "compare";
 export const manifestPaths = [
 	"", "browsers", "tools", "fingerprint", "guides", "compare", "about", "contact", "privacy",
