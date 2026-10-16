@@ -1,0 +1,161 @@
+{
+  "completedAt": "2026-10-16T04:51:36.937Z",
+  "site": "https://browserhub.co/",
+  "release": "/opt/browsertools/releases/20261016-124923",
+  "codeCommit": "c3321e3",
+  "focus": "User prioritised topical, useful fingerprint-browser and environment-detection content and deferred indexing work.",
+  "research": {
+    "queryCount": 14,
+    "evidenceFile": "series-search-evidence-2026-10-16.json",
+    "scope": "Actual public search queries and selected result-body inspection; not first-party search traffic, measured demand volume or trend growth."
+  },
+  "newTopics": [
+    {
+      "slug": "canvas-fingerprint-test",
+      "title": "Canvas 指纹检测怎么看：哈希变化、读取限制与排查流程",
+      "sections": 7,
+      "faq": 4,
+      "officialSources": 6,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/canvas-fingerprint-test/",
+        "https://browserhub.co/en/guides/canvas-fingerprint-test/"
+      ]
+    },
+    {
+      "slug": "webgl-fingerprint-test",
+      "title": "WebGL 指纹检测：GPU、ANGLE、渲染器与异常结果怎么看",
+      "sections": 7,
+      "faq": 4,
+      "officialSources": 6,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/webgl-fingerprint-test/",
+        "https://browserhub.co/en/guides/webgl-fingerprint-test/"
+      ]
+    },
+    {
+      "slug": "user-agent-client-hints-check",
+      "title": "User-Agent 与 Client Hints 检测：请求头、JS、UA 缩减怎么核对",
+      "sections": 7,
+      "faq": 4,
+      "officialSources": 6,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/user-agent-client-hints-check/",
+        "https://browserhub.co/en/guides/user-agent-client-hints-check/"
+      ]
+    },
+    {
+      "slug": "browser-timezone-language-check",
+      "title": "浏览器时区与语言检测：Intl、请求头和 IP 位置如何核对",
+      "sections": 7,
+      "faq": 4,
+      "officialSources": 7,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/browser-timezone-language-check/",
+        "https://browserhub.co/en/guides/browser-timezone-language-check/"
+      ]
+    },
+    {
+      "slug": "dns-leak-test-browser-proxy",
+      "title": "浏览器代理 DNS 泄漏检测：解析器、DoH 与出口该怎样判读",
+      "sections": 7,
+      "faq": 4,
+      "officialSources": 4,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/dns-leak-test-browser-proxy/",
+        "https://browserhub.co/en/guides/dns-leak-test-browser-proxy/"
+      ]
+    },
+    {
+      "slug": "browserleaks-vs-creepjs",
+      "title": "BrowserLeaks 与 CreepJS 怎么选：环境检测能力、差异与记录方法",
+      "sections": 8,
+      "faq": 4,
+      "officialSources": 6,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/browserleaks-vs-creepjs/",
+        "https://browserhub.co/en/guides/browserleaks-vs-creepjs/"
+      ]
+    },
+    {
+      "slug": "open-source-antidetect-browsers",
+      "title": "开源指纹浏览器怎么选：Camoufox、Donut 与无头引擎的区别",
+      "sections": 8,
+      "faq": 4,
+      "officialSources": 5,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/open-source-antidetect-browsers/",
+        "https://browserhub.co/en/guides/open-source-antidetect-browsers/"
+      ]
+    },
+    {
+      "slug": "browser-profile-storage-isolation-test",
+      "title": "浏览器环境隔离怎么测：Cookie、localStorage 与 IndexedDB 实验",
+      "sections": 8,
+      "faq": 4,
+      "officialSources": 8,
+      "urls": [
+        "https://browserhub.co/zh-cn/guides/browser-profile-storage-isolation-test/",
+        "https://browserhub.co/en/guides/browser-profile-storage-isolation-test/"
+      ]
+    }
+  ],
+  "comparisonTopics": [
+    "adspower-vs-dolphin-anty",
+    "adspower-vs-morelogin",
+    "gologin-vs-octo-browser",
+    "kameleo-vs-octo-browser"
+  ],
+  "readerSeries": [
+    {
+      "id": "browser-selection",
+      "topics": 6
+    },
+    {
+      "id": "environment-detection",
+      "topics": 12
+    },
+    {
+      "id": "profiles-proxies-and-teams",
+      "topics": 10
+    }
+  ],
+  "totals": {
+    "guideTopics": 28,
+    "completeGuideLanguageEditions": 56,
+    "deepComparisonPairs": 10,
+    "newTopicLanguageEditions": 16,
+    "comparisonLanguageEditionsEnhanced": 8
+  },
+  "readerImprovements": [
+    "Three learning paths on the guide index",
+    "Previous and next articles across the complete 28-topic library",
+    "Current series featured on the homepage",
+    "Detection tool and signal pages link to specific practical guides",
+    "Blank CSV record at /templates/browser-environment-checklist.csv; no benchmark results or real account data prefilled",
+    "Distinct original CreepJS deployment and component-specific open-source licences explained"
+  ],
+  "validation": {
+    "ci": "passed: lint, production build, HTML and SEO checks, product evidence consistency",
+    "contentPages": 1136,
+    "canonicalUrls": 924,
+    "seoErrors": 0,
+    "editorialWarnings": 0,
+    "focusedEditorialPagesChecked": 24,
+    "liveResponses": 138,
+    "liveFailures": 0,
+    "liveCheckedAt": "2026-10-16T04:50:53.483Z",
+    "liveScope": "All 56 English/Chinese guide detail pages, 8 enhanced comparison pages, 2 homepages, 2 guide indexes and the CSV on both main and origin domains; visible text and canonical agree with build.",
+    "browserChecks": [
+      "Guide-series index at 1920px visually inspected",
+      "Guide-series index at 390px has no document overflow",
+      "Chinese WebGL article at 390px visually inspected, six sources and four FAQs present",
+      "Kameleo vs Octo at 390px: five research sections, two tables, no document overflow",
+      "Live BrowserLeaks vs CreepJS article: correct original-project source links, six sources, four FAQs and series navigation"
+    ]
+  },
+  "indexingWork": {
+    "submissionsMade": 0,
+    "newWebmasterConfiguration": false,
+    "reason": "Deferred at user request; existing setup preserved."
+  }
+}
