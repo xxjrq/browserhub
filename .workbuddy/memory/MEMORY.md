@@ -67,11 +67,25 @@ lint 退出非 0 会让部署在第一步就失败，且失败信息与实际部
 
 ## 代码结构要点
 - 站点是 Next.js 16 纯静态导出（`output: "export"`），7 语言，zh-cn 为默认语言（根路径 `/` 等价 `/zh-cn/`）。
-- 指南 sections 渲染：`src/app/guides/[slug]/page.tsx` 的 `SectionBody` + `sections.map`。
-  `CardTitle` 底层是 `<div>`，**要真 h2 必须自己包 `<h2>`**。
-- 多语言文案：`src/data/guide-translations.ts`（`localizedGuideCopy`），在 `pageMeta()` 的 guides 分支接入。
+- **双路由陷阱（2026-10-16 踩过，务必记住）**：
+  - legacy 路由：`guides/[slug]`、`compare/[slug]`、`fingerprint/[slug]`、`browsers/[slug]`、`tools/[slug]`
+  - locale 路由：`[locale]/[[...segments]]` ——**真正被 sitemap 收录 / hreflang 指向的是这一套**
+  - `out/sitemap.xml` 里 **legacy 非locale URL 数量为 0**（956 条全是 `/[locale]/...`）。
+  - 所以：**任何内容改动必须同时在 locale 路由验证**，只 curl legacy 路由会得到假成功。
+    2026-10-15 的 50 个 guide sections（10464 字）就是这样写完却一个字都没上线。
+- 指南 sections 渲染：**共享组件 `src/components/section-body.tsx`**（legacy 与 locale 两条路由都import 它，
+  防止再次漂移）。`CardTitle` 底层是 `<div>`，**要真 h2 必须自己包 `<h2>`**。
+- locale 路由的 `Detail()` 按 kind 分支渲染，guides 分支现已渲染 sections：
+  zh-cn 用 `item.sections` 原生，其余语言用 `localizedGuideSections()` 的英译。
+- 多语言文案：`src/data/guide-translations.ts`（`localizedGuideCopy` / `localizedGuideSections`）、
+  `src/lib/i18n.ts`（`footer()` / `a11y()` / `guideCategoryLabel()` / `fingerprintCopy()`）。
   新增指南时**必须同步加翻译**，否则 `localizedGuideCopy` 会回退到 en（不会再漏中文，但 hreflang 组会不完整）。
-- sitemap 用 `Set` 去重，`updatedAt` 是全站统一的 `2026-08-11`（尚未随内容更新）。
+- **渲染在 root layout 的组件（footer / header）出现在全部 956 个本地化页面上**，
+  它们绝不能硬编码中文（2026-10-16 之前 footer 整块是中文）。
+- `updatedAt` 现在是 `2026-10-16`，`src/data/resources.ts` 与 `src/app/sitemap.ts` 各有一份，改内容时要同步。
+- **未解决的数据层问题**：`src/data/catalog/*.json` 里的 `free` / `price` / `profiles` / `pros` /
+  `cons` / `longDescription` 本身就是中文，所以 browsers / tools / compare 详情页在全部
+  7 语言下都显示中文产品事实。这是当前最大的 i18n 缺口，需要改数据层而非渲染层。
 
 ## 内容红线（沿用任务约定）
 - 禁止伪造 aggregateRating / review；ratingCount 必须真实。
@@ -83,3 +97,16 @@ lint 退出非 0 会让部署在第一步就失败，且失败信息与实际部
 ## 校验方法约定
 死链/覆盖率校验**必须以 `out/` 构建产物为基准**（sitemap URL 列表 vs 实际文件、curl 真实 HTML），
 不能只信 `check-dist.mjs` 单一数据源 —— 历史上曾因漏读 `catalog/readme-browsers.json`（36 条）误报 328 条死链。
+
+### 两个把人骗过的统计陷阱
+1. `grep -c '<h2' xxx.html` 对压缩成单行的 HTML **只返回 1**。必须 `grep -o '<h2' | wc -l`。
+2. 判断「非中文语言是否混入中文」**不能只数 CJK 字符数** —— ja/ko 页面天然含大量汉字，
+   会大量误报。正确做法是把 zh-cn 源文案（heading + 正文片段）拿去非中文页面做**子串匹配**，
+   匹配数为 0 才算干净。
+
+### 每天的巡检脚本思路（可直接复用）
+- 先按「页面类型 × 语言」聚合统计 `<article>` 内的 h2 数与正文长度，找出最薄的整类页面，
+  **不要抽样单页**——抽样会掩盖整类页面的系统性问题（2026-10-16 就是这样发现 guides 整类失效的）。
+- 用源数据当基准逐页比对渲染结果（如「12篇 × 7 语言的 section 数是否等于源数据」），
+  比肉眼看 curl 更可靠。
+- 验证前先确认「这条 URL 会被 sitemap 收录吗」，再验证它的内容。
