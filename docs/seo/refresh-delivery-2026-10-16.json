@@ -1,0 +1,67 @@
+{
+  "completedAt": "2026-10-16T04:28:25.064Z",
+  "site": "https://browserhub.co/",
+  "origin": "https://browsers.draxgr.cc",
+  "codeCommit": "82a1ee8",
+  "release": "/opt/browsertools/releases/20261016-122630",
+  "scope": {
+    "legacyGuideTopicsRefreshed": 12,
+    "completeLanguageEditionsRefreshed": 24,
+    "languages": [
+      "en",
+      "zh-cn"
+    ],
+    "sectionsPerTopic": 7,
+    "faqPerTopic": "3–4",
+    "primarySourcesPerTopic": "3–6",
+    "totalGuideTopics": 20,
+    "totalCompleteGuideEditions": 40,
+    "productEntriesReviewed": 36,
+    "comparisonPairsUsingReviewedFields": 29
+  },
+  "productReview": {
+    "type": "field-specific public documentation; not hands-on benchmarks",
+    "priceOrFreeLicenceEvidence": 26,
+    "paidPricesExplicitlyUnverified": 10,
+    "evidenceFile": "product-evidence-2026-10-16.json",
+    "materialCorrections": [
+      "EasyBR original CNY price; Octo and Kameleo original EUR prices; billing periods and promotional conditions retained",
+      "Free tiers separated from timed trials; API entitlement separated from automation capability",
+      "Native client platforms separated from Android fingerprints and cloud devices",
+      "ChromePower fingerprint startup unavailable; Lightpanda a headless engine; VektorT13 a virtual-machine tool",
+      "Octo official card/matrix profile allowance conflict disclosed instead of silently choosing a value"
+    ]
+  },
+  "validation": {
+    "ci": "passed: lint, static build, HTML checks, SEO audit, product provenance and rendered-price checks",
+    "htmlFiles": 1116,
+    "auditedContentPages": 1112,
+    "sitemapCanonicalUrls": 908,
+    "seoErrors": 0,
+    "editorialWarnings": 0,
+    "explicitNoindexLegacyLanguageFallbacks": 60,
+    "browserChecks": [
+      "English SOCKS5 guide desktop and 390px mobile: no horizontal overflow; correct sources/FAQ/table content",
+      "EasyBR Chinese product evidence opens and shows ten field checks at 390px with no horizontal overflow",
+      "Live EasyBR proxy article title, official fields, four sources and four FAQs verified in browser"
+    ],
+    "live": {
+      "checkedAt": "2026-10-16T04:27:31.495Z",
+      "urlsPerDomain": 96,
+      "httpResponses": 192,
+      "failures": 0,
+      "comparison": "full rendered article text and canonical match local build on both domains"
+    }
+  },
+  "discovery": {
+    "indexNow": {
+      "submittedAt": "2026-10-16T04:27:43.741Z",
+      "status": 200,
+      "changedCanonicalUrls": 530,
+      "meaning": "received; does not confirm indexing, ranking, impressions or traffic"
+    },
+    "changedUrlFile": "changed-urls-refresh-2026-10-16.json",
+    "gscAndBing": "Existing verified properties and sitemap remain in place; no duplicate site setup required"
+  },
+  "nextPlanningInput": "Use real webmaster query/page impressions and indexing reports when available to choose the next content revisions; keyword-volume and ranking fields remain null until measured."
+}
