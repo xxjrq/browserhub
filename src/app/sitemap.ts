@@ -6,7 +6,7 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co";
-	const updatedAt = "2026-10-15";
+	const updatedAt = "2026-10-16";
 	const paths = ["/", "/about/", "/contact/", "/privacy/", ...locales.flatMap(locale => [
 		localePath(locale), localePath(locale, "browsers"), localePath(locale, "tools"), localePath(locale, "fingerprint"), localePath(locale, "guides"), localePath(locale, "compare"), localePath(locale, "about"), localePath(locale, "contact"), localePath(locale, "privacy"),
 		...browsers.map(item => localePath(locale, `browsers/${item.slug}`)),

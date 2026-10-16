@@ -94,7 +94,7 @@ export type ComparisonResource = {
 	sections?: Array<{ heading: string; body: string }>;
 };
 
-const updatedAt = "2026-10-15";
+const updatedAt = "2026-10-16";
 const pricingCheckedAt = "2026-08-12";
 const officialSite = "https://www.ebrower.com/";
 
