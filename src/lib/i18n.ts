@@ -165,6 +165,31 @@ export function toolHowToSteps(locale: Locale): [string, string, string] {
 	return steps[locale];
 }
 
+/**
+ * Localised labels for the eight `GuideResource.category` values.
+ *
+ * `category` is authored in Chinese on the source rows and is rendered verbatim in
+ * the guide header, which leaked a Chinese badge into every locale sibling. Only the
+ * category label is translated — the guide body sections are handled separately by
+ * `localizedGuideSections`.
+ */
+export function guideCategoryLabel(locale: Locale, category: string): string {
+	const map: Record<string, Partial<Record<Locale, string>>> = {
+		"选型指南": { en: "Selection guide", ja: "選定ガイド", ko: "선정 가이드", es: "Guía de selección", pt: "Guia de seleção", ru: "Руководство по выбору" },
+		"技术百科": { en: "Technical explainer", ja: "技術解説", ko: "기술 해설", es: "Explicación técnica", pt: "Explicação técnica", ru: "Технический разбор" },
+		"使用教程": { en: "Tutorial", ja: "チュートリアル", ko: "튜토리얼", es: "Tutorial", pt: "Tutorial", ru: "Руководство" },
+		"实践指南": { en: "Practice guide", ja: "実践ガイド", ko: "실무 가이드", es: "Guía práctica", pt: "Guia prático", ru: "Практическое руководство" },
+		"技术指南": { en: "Technical guide", ja: "技術ガイド", ko: "기술 가이드", es: "Guía técnica", pt: "Guia técnico", ru: "Техническое руководство" },
+		"排查指南": { en: "Troubleshooting guide", ja: "トラブルシューティング", ko: "문제 해결 가이드", es: "Guía de diagnóstico", pt: "Guia de diagnóstico", ru: "Руководство по диагностике" },
+		"检测指南": { en: "Detection guide", ja: "検出ガイド", ko: "탐지 가이드", es: "Guía de detección", pt: "Guia de detecção", ru: "Руководство по проверке" },
+		"网络指南": { en: "Network guide", ja: "ネットワークガイド", ko: "네트워크 가이드", es: "Guía de red", pt: "Guia de rede", ru: "Руководство по сети" }
+	};
+	const entry = map[category];
+	if (!entry) return category;
+	if (locale === "zh-cn") return category;
+	return entry[locale] ?? entry.en ?? category;
+}
+
 /** Localised copy for the fingerprint signal pages (previously hard-coded English). */
 export function fingerprintCopy(locale: Locale, name: string): { what: string; detection: string; mitigation: string } {
 	const copy: Record<Locale, { what: string; detection: string; mitigation: string }> = {

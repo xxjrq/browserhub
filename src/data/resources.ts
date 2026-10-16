@@ -573,7 +573,8 @@ const rawComparisons: ComparisonResource[] = [
 	{ title: "Undetectable vs GoLogin", slug: "undetectable-vs-gologin", description: "比较多账号浏览器的价格、环境和自动化能力。", browsers: ["undetectable", "gologin"] }
 ];
 
-// Attach the generated, data-driven "分场景推荐" sections (see comparison-sections.ts).
+// Attach the generated, data-driven "逐项核对清单" sections (see comparison-sections.ts).
+// These are Chinese-only prose, so the locale routes render them on zh-cn only.
 export const comparisons: ComparisonResource[] = rawComparisons.map(comparison => ({
 	...comparison,
 	sections: comparisonSections[comparison.slug]

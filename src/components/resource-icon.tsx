@@ -9,6 +9,8 @@ type ResourceIconProps = {
 	website?: string;
 	size?: number;
 	className?: string;
+	/** Alt text for the loaded image. Defaults to a locale-neutral label. */
+	alt?: string;
 };
 
 const getDomain = (url?: string) => {
@@ -28,7 +30,7 @@ const hashHue = (value: string) => {
 	return hash;
 };
 
-export function ResourceIcon({ name, src, website, size = 40, className }: ResourceIconProps) {
+export function ResourceIcon({ name, src, website, size = 40, className, alt }: ResourceIconProps) {
 	const [sourceIndex, setSourceIndex] = useState(0);
 	const [loaded, setLoaded] = useState(false);
 	const domain = getDomain(website);
@@ -60,7 +62,7 @@ export function ResourceIcon({ name, src, website, size = 40, className }: Resou
 				// eslint-disable-next-line @next/next/no-img-element
 				<img
 					src={remote}
-					alt={`${name} 图标`}
+					alt={alt ?? name}
 					width={size}
 					height={size}
 					loading="lazy"
