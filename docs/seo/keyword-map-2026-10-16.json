@@ -1248,7 +1248,14 @@
         "adspower",
         "dolphin-anty",
         "best-antidetect-browsers-2026"
-      ]
+      ],
+      "seriesExecution": {
+        "date": "2026-10-16",
+        "status": "enhanced-en-zh-cn",
+        "sections": 5,
+        "informationGain": "Distinguish no-code RPA, documented Local API, team handoff and entry-plan limits with an executable acceptance checklist.",
+        "evidenceFile": "series-search-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "compare:adspower-vs-morelogin",
@@ -1282,7 +1289,14 @@
         "adspower",
         "morelogin",
         "best-antidetect-browsers-2026"
-      ]
+      ],
+      "seriesExecution": {
+        "date": "2026-10-16",
+        "status": "enhanced-en-zh-cn",
+        "sections": 5,
+        "informationGain": "Separate desktop browser and cloud-phone purchasing, API/RPA access and paid seats; price exact profile/seat/period basket instead of declaring cheapest from promo entry price.",
+        "evidenceFile": "series-search-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "compare:adspower-vs-incogniton",
@@ -1486,7 +1500,14 @@
         "gologin",
         "octo-browser",
         "best-antidetect-browsers-2026"
-      ]
+      ],
+      "seriesExecution": {
+        "date": "2026-10-16",
+        "status": "enhanced-en-zh-cn",
+        "sections": 5,
+        "informationGain": "A same-basket comparison separating EUR/USD, billing term, stored profiles, team seats, API gates and mobile promo terms with reproducible migration/persistence check.",
+        "evidenceFile": "series-search-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "compare:multilogin-vs-dolphin-anty",
@@ -1724,7 +1745,14 @@
         "kameleo",
         "octo-browser",
         "best-antidetect-browsers-2026"
-      ]
+      ],
+      "seriesExecution": {
+        "date": "2026-10-16",
+        "status": "enhanced-en-zh-cn",
+        "sections": 5,
+        "informationGain": "Compare concurrent browser capacity versus stored profile capacity, SDK/persistence flow, desktop OS support and mobile fingerprints versus native mobile apps; preserve exact billing units.",
+        "evidenceFile": "series-search-evidence-2026-10-16.json"
+      }
     },
     {
       "id": "compare:undetectable-vs-gologin",
@@ -3163,31 +3191,300 @@
         "pricingStatus": "verified",
         "evidenceFile": "product-evidence-2026-10-16.json"
       }
-    }
-  ],
-  "futureCandidates": [
+    },
     {
+      "id": "guides:canvas-fingerprint-test",
       "primaryKeyword": {
-        "en": "open source antidetect browser",
-        "zh-CN": "开源指纹浏览器"
+        "en": "canvas fingerprint test",
+        "zh-CN": "Canvas 指纹检测：哈希变化、稳定性与读回异常怎么判断"
       },
-      "intent": "commercial investigation/developer",
-      "priority": "P2",
-      "proposedSlug": "open-source-antidetect-browsers",
-      "existingRelatedUrls": [
-        "https://browserhub.co/en/browsers/camoufox/",
-        "https://browserhub.co/en/guides/free-antidetect-browser/"
-      ],
-      "gap": "需要区分开源框架/浏览器与成熟桌面档案管理；不能因免费就算开源",
-      "publishGate": "真实query/用户任务证据+官方license/维护状态核查+避免与free页重复",
+      "intent": "Tool and diagnostic explanation. Users want a live result and to interpret stability or spoof warnings.",
+      "cluster": "environment-detection",
+      "priority": "P1",
       "metrics": {
         "monthlySearchVolume": null,
         "keywordDifficulty": null,
         "currentPosition": null,
         "gscImpressions": null,
         "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/canvas-fingerprint-test/",
+        "https://browserhub.co/zh-cn/guides/canvas-fingerprint-test/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "BrowserLeaks explains the drawing/hash method and population sample; WebBrowserTools emphasizes persistent/random noise detection. Neither replaces a controlled profile lifecycle record.",
+      "informationGain": "A same-input four-run worksheet for baseline, refresh, restart and profile B, distinguishing rendering changes, blocked reads and privacy defenses without treating one hash as personal identity.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
       }
     },
+    {
+      "id": "guides:webgl-fingerprint-test",
+      "primaryKeyword": {
+        "en": "WebGL fingerprint test",
+        "zh-CN": "WebGL 指纹检测：Renderer、ANGLE 与图像哈希怎么读"
+      },
+      "intent": "Inspect GPU/rendering report and explain abnormal or missing renderer fields.",
+      "cluster": "environment-detection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/webgl-fingerprint-test/",
+        "https://browserhub.co/zh-cn/guides/webgl-fingerprint-test/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "BrowserLeaks exposes many parameters; WebBrowserTools provides image/noise tests. Large field dumps need a decision process for masked versus unmasked fields and expected implementation differences.",
+      "informationGain": "A field-to-action table for context/version/vendor/renderer/extensions/image hash and controlled hardware-acceleration observations, separating software/ANGLE layers from claimed physical GPU.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
+      }
+    },
+    {
+      "id": "guides:browser-timezone-language-check",
+      "primaryKeyword": {
+        "en": "browser timezone language mismatch",
+        "zh-CN": "浏览器时区与语言检测：偏移、夏令时和请求头一致性"
+      },
+      "intent": "Diagnose disagreement across IP geolocation, browser locale and date/time formatting.",
+      "cluster": "environment-detection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-timezone-language-check/",
+        "https://browserhub.co/zh-cn/guides/browser-timezone-language-check/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "TrustMyIP provides direct mismatch guidance and mabl explains legitimate locale/timezone testing. Broad match/mismatch labels can hide travel, multilingual users, DST and IP location uncertainty.",
+      "informationGain": "A layered observation sheet for IANA zone, date-specific offset, navigator languages and Accept-Language with legitimate disagreement cases and minimal-change retest.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
+      }
+    },
+    {
+      "id": "guides:dns-leak-test-browser-proxy",
+      "primaryKeyword": {
+        "en": "DNS leak test browser proxy",
+        "zh-CN": "浏览器代理 DNS 泄漏检测：解析器结果与真实路径边界"
+      },
+      "intent": "Run DNS test and determine whether resolution follows intended proxy/network configuration.",
+      "cluster": "environment-detection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/dns-leak-test-browser-proxy/",
+        "https://browserhub.co/zh-cn/guides/dns-leak-test-browser-proxy/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "Results focus on tools and resolver locations. Browser-triggered authoritative observation is often conflated with packet-level proof or complete anonymity.",
+      "informationGain": "Separate observed recursive resolvers from browser/system/proxy resolution paths; use baseline/retest and explain DoH, anycast, IPv6 and inconclusive tests.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "configure-http-proxy",
+        "configure-socks5-proxy",
+        "webrtc-leak-check"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
+      }
+    },
+    {
+      "id": "guides:browserleaks-vs-creepjs",
+      "primaryKeyword": {
+        "en": "BrowserLeaks vs CreepJS",
+        "zh-CN": "BrowserLeaks 与 CreepJS 对比：选检测工具与核验原版入口"
+      },
+      "intent": "Compare diagnostic tools and decide which report to use for specific checks.",
+      "cluster": "environment-detection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browserleaks-vs-creepjs/",
+        "https://browserhub.co/zh-cn/guides/browserleaks-vs-creepjs/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "SERP mixes the original open-source CreepJS project with a similarly named independent domain; vendor review links the independent domain while attributing it to original author.",
+      "informationGain": "A task-first capability matrix, trusted original deployment, and repeatable cross-tool record that does not compare incomparable scores or treat one checker as platform identity evidence.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "read-creepjs-results",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
+      }
+    },
+    {
+      "id": "guides:user-agent-client-hints-check",
+      "primaryKeyword": {
+        "en": "user agent client hints check",
+        "zh-CN": "User-Agent 与 Client Hints 检测：请求头和 JavaScript 怎么核对"
+      },
+      "intent": "Inspect actual user-agent/client hints values and reconcile differences or absent high-entropy fields.",
+      "cluster": "environment-detection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/user-agent-client-hints-check/",
+        "https://browserhub.co/zh-cn/guides/user-agent-client-hints-check/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "BrowserLeaks and WhatIsMyBrowser show values while MDN explains API disclosure. Reader needs a conditions-aware comparison rather than a simplistic strings must match rule.",
+      "informationGain": "Four-layer UA worksheet with HTTP User-Agent, navigator.userAgent, navigator.userAgentData and Sec-CH-*; explain Accept-CH, secure contexts, policy, GREASE and legitimate unavailable fields.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
+      }
+    },
+    {
+      "id": "guides:open-source-antidetect-browsers",
+      "primaryKeyword": {
+        "en": "open source antidetect browsers",
+        "zh-CN": "开源指纹浏览器怎么选：内核、GUI、许可证与维护成本"
+      },
+      "intent": "Find inspectable browser projects and compare scope, licensing and operational needs.",
+      "cluster": "selection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/open-source-antidetect-browsers/",
+        "https://browserhub.co/zh-cn/guides/open-source-antidetect-browsers/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "SERP mixes engine, launcher and profile-manager products. Nextbrowser comparison labels all Camoufox MIT although original repository distinguishes components; open source is also wrongly equated with never using cloud.",
+      "informationGain": "Separate engine versus launcher versus GUI layers and component licenses, official release provenance, maintenance/sync boundaries and developer integration cost; no untested ranking or benchmark.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "free-antidetect-browser",
+        "chrome-profiles-vs-antidetect-browser",
+        "browser-automation-profile-persistence"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
+      }
+    },
+    {
+      "id": "guides:browser-profile-storage-isolation-test",
+      "primaryKeyword": {
+        "en": "browser cookies localStorage IndexedDB isolation test",
+        "zh-CN": "浏览器环境隔离测试：Cookie、localStorage 与 IndexedDB 的 A/B 验收"
+      },
+      "intent": "Check that separate profiles do not share website state, beyond whether APIs work.",
+      "cluster": "environment-detection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-profile-storage-isolation-test/",
+        "https://browserhub.co/zh-cn/guides/browser-profile-storage-isolation-test/"
+      ],
+      "status": "implemented-complete-en-zh-cn",
+      "gap": "Broad query returns API-selection explanations and a first-party storage functionality test. BrowserCheck explicitly states its single-origin round trip does not prove profile isolation.",
+      "informationGain": "A dedicated same-origin A/B random marker procedure per store, new-tab/refresh/restart matrix and scoped cleanup that distinguishes sessionStorage lifecycle, copied profiles and server sessions.",
+      "demandEvidence": "Actual public SERP query and selected result-body review; not first-party queries or measured search volume",
+      "evidenceFile": "series-search-evidence-2026-10-16.json",
+      "avoidCannibalizing": [
+        "local-vs-cloud-browser-storage",
+        "browser-automation-profile-persistence",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "execution": {
+        "date": "2026-10-16",
+        "status": "complete-source-based-bilingual-series",
+        "validation": "production HTML and content review"
+      }
+    }
+  ],
+  "futureCandidates": [
     {
       "primaryKeyword": {
         "en": "browser profile migration checklist",
@@ -3242,6 +3539,7 @@
     "FAQRichResults": "Google no longer shows FAQ rich results from 2026-05-07; documentation removed 2026-06-15; visible helpful FAQ remains useful to readers",
     "HowToRichResults": "Google deprecated desktop HowTo rich results in September 2023",
     "llmsTxt": "Google clarification 2026-06-15: does not positively or negatively affect Google Search visibility or ranking",
-    "secondRelease": "2026-10-16: all 12 old guides have complete sourced English/Chinese editions; all 36 product entries carry field-level review states. 26 price or free-licence records supported, 10 paid prices explicitly unverified. Search metrics remain unknown until observed in webmaster data."
+    "secondRelease": "2026-10-16: all 12 old guides have complete sourced English/Chinese editions; all 36 product entries carry field-level review states. 26 price or free-licence records supported, 10 paid prices explicitly unverified. Search metrics remain unknown until observed in webmaster data.",
+    "seriesContentPass": "User explicitly prioritised topical, useful content over indexing work. Eight new bilingual topics, four deeper existing comparisons, three reader journeys and a blank test-record template. No indexing submissions or new webmaster configuration in this pass."
   }
 }

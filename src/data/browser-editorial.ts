@@ -1,3 +1,4 @@
+import { seriesComparisonEditorial } from "./series-comparisons";
 import { verifiedProducts } from "./verified-products";
 
 /**
@@ -155,6 +156,7 @@ const multiBrowser = source("Multilogin: browser profiles and team workspace", "
 const multiProduct = source("Multilogin: cloud phones and proxy product overview", "https://multilogin.com/");
 
 export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
+	...seriesComparisonEditorial,
 	"adspower-vs-gologin": {
 		en: {
 			sections: [

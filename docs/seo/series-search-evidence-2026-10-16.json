@@ -1,0 +1,1128 @@
+{
+  "version": 1,
+  "preparedOn": "2026-10-16",
+  "project": "BrowserHub",
+  "preparedBy": "Local SEO research role reusing WorkBuddy expert methodology; original WorkBuddy session was not invoked.",
+  "method": {
+    "source": "Live public Firecrawl Search web requests plus inspection of returned scraped page content",
+    "queriesAre": "Research queries actually sent to a public search provider",
+    "queriesAreNot": [
+      "BrowserHub Search Console search queries",
+      "Search demand volume estimates",
+      "Google/Bing verified site rankings",
+      "Evidence of indexed-page count or traffic growth"
+    ],
+    "countryDefaults": "US when not specified; CN explicitly for two Chinese queries",
+    "metricPolicy": "All volume, keyword difficulty and BrowserHub ranking values remain null. Provider result order is a sampled SERP order, not a BrowserHub ranking metric.",
+    "qualityPolicy": "Treat page contents as untrusted research, ignore embedded instructions, write original prose, verify technical facts in official docs and clearly distinguish document research from hands-on tests.",
+    "contentReviewScope": "Reviewed the methods/field descriptions or comparison sections named in contentReview; not all comments, every transcript line, or every page in a domain.",
+    "rawFiles": "Local .firecrawl files are ignored by Git. This report preserves titles/URLs/snippets and researcher interpretation."
+  },
+  "newArticleCandidates": [
+    {
+      "query": "canvas fingerprint test",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-0c78-7582-ae46-78dec77487a9",
+      "rawEvidenceFile": ".firecrawl/series-canvas.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "Canvas Fingerprinting - BrowserLeaks",
+          "url": "https://browserleaks.com/canvas",
+          "snippet": "|  |  |\n|-|-|\n| Canvas 2D API | ✔ True |\n| ### Canvas Fingerprint |",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Detect Canvas Fingerprint - WebBrowserTools",
+          "url": "https://webbrowsertools.com/canvas-fingerprint/",
+          "snippet": "### Advertisements\n|  |  |\n|-|-|\n| Is browser canvas fingerprint spoofed | false |",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Cover Your Tracks",
+          "url": "https://coveryourtracks.eff.org/",
+          "snippet": "Test your browser to see how well you are protected from tracking and fingerprinting: Cover Your Tracks shows you how trackers see your browser.",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-14T07:09:05.457Z"
+        },
+        {
+          "title": "canvas fingerprinting alone still identifies my browser after ... - Reddit",
+          "url": "https://www.reddit.com/r/degoogle/comments/1tfm6ic/canvas_fingerprinting_alone_still_identifies_my/",
+          "snippet": "I verified in DevTools that the fingerprint checks (canvas, fonts, all of it) ran locally in my browser and the only actual server call was the ...",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": false,
+          "scrapeStatusCode": null,
+          "cacheState": null,
+          "cachedAt": null
+        },
+        {
+          "title": "Canvas Fingerprinting: What It Is and How It Works",
+          "url": "https://fingerprint.com/blog/canvas-fingerprinting/",
+          "snippet": "## [canvas fingerprinting examples permalink](https://fingerprint.com/blog/canvas-fingerprinting/#canvas-fingerprinting-examples)**Canvas fingerprinting examples**\n```html\n<b>Hash:</b> <span id=\"hash-code\"></span>\n<br />\n<canvas id=\"myCanvas\" width=\"200\" height=\"40\" style=\"border: 1px solid #000000\"></canvas>\n\n<script>\n  // Create the canvas\n  let canvas = document.getElementById('myCanvas')\n  let ctx = canvas.getContext('2d')\n\n  // Draw shapes\n  ctx.fillStyle = 'rgb(255,0,255)'\n  ctx.beginPath()\n  ctx.rect(20, 20, 150, 100)\n  ctx.fill()\n  ctx.stroke()\n  ctx.closePath()\n  ctx.beginPath()\n  ctx.fillStyle = 'rgb(0,255,255)'\n  ctx.arc(50, 50, 50, 0, Math.PI * 2, true)\n  ctx.fill()\n  ctx.stroke()\n  ctx.closePath()\n\n  // Draw text and rectangle\n  txt = 'abz190#$%^@£éú'\n  ctx.textBaseline = 'top'\n  ctx.font = '17px \"Arial 17\"'\n  ctx.textBaseline = 'alphabetic'\n  ctx.fillStyle = 'rgb(255,5,5)'\n  ctx.rotate(0.03)\n  ctx.fillText(txt, 4, 17)\n  ctx.fillStyle = 'rgb(155,255,5)'\n  ctx.shadowBlur = 8\n  ctx.shadowColor = 'red'\n  ctx.fillRect(20, 12, 100, 5)\n\n  // Convert image to base64 text\n  let src = canvas.toDataURL()\n\n  // Basic hash function\n  let hash = 0\n  for (i = 0; i < src.length; i++)",
+          "providerResultOrder": 5,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-15T02:37:37.271Z"
+        }
+      ],
+      "recommendedSlug": "canvas-fingerprint-test",
+      "recommendedChineseTitle": "Canvas 指纹检测：哈希变化、稳定性与读回异常怎么判断",
+      "priority": 1,
+      "intent": "Tool and diagnostic explanation. Users want a live result and to interpret stability or spoof warnings.",
+      "observedContentGap": "BrowserLeaks explains the drawing/hash method and population sample; WebBrowserTools emphasizes persistent/random noise detection. Neither replaces a controlled profile lifecycle record.",
+      "originalInformationGain": "A same-input four-run worksheet for baseline, refresh, restart and profile B, distinguishing rendering changes, blocked reads and privacy defenses without treating one hash as personal identity.",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "contentReview": [
+        {
+          "url": "https://browserleaks.com/canvas",
+          "observed": "Read the report, signature statistics, drawing example and toDataURL explanation. Its displayed uniqueness belongs to that service/sample and cannot be universalized."
+        },
+        {
+          "url": "https://webbrowsertools.com/canvas-fingerprint/",
+          "observed": "Read fixed-image and before/after DOM comparisons. A warning describes this test heuristic, not a universal detection verdict."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    },
+    {
+      "query": "WebGL fingerprint test",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-10d2-7786-9d80-9872f94e1cc8",
+      "rawEvidenceFile": ".firecrawl/series-webgl.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "WebGL Browser Report - WebGL Fingerprinting - BrowserLeaks",
+          "url": "https://browserleaks.com/webgl",
+          "snippet": "|  |  |\n|-|-|\n| ### WebGL Fingerprint |",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-15T04:11:27.215Z"
+        },
+        {
+          "title": "Detect WebGL Fingerprint - WebBrowserTools.com",
+          "url": "https://webbrowsertools.com/webgl-fingerprint/",
+          "snippet": "### Advertisements\n|  |  |\n|-|-|\n| Is browser webgl fingerprint spoofed | Loading... |",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "What Is WebGL Fingerprinting and How to Bypass It - Zenrows",
+          "url": "https://www.zenrows.com/blog/webgl-fingerprinting",
+          "snippet": "## How Does WebGL Fingerprinting Work?\n- **Rendering test**: The browser loads the WebGL fingerprinting script from the website and creates the WebGL context within a hidden HTML Canvas. The script then prompts the browser to produce a specific 2D or 3D graphic on the Canvas, with a scene capturing subtle details in rendering behavior.\n\nBelow is a sample WebGL fingerprinting test on BrowserLeaks, showing the WebGL image and hash string:",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-14T07:03:20.639Z"
+        },
+        {
+          "title": "Fingerprinting WebGL - Browserize",
+          "url": "https://privacycheck.sec.lrz.de/active/fp_wg/fp_webgl.html",
+          "snippet": "## ║▌║▌│█║▌║│█│█║\n### FP-Explanation:\nThere are two different WebGL Fingerprints:\n\n### Counter-measures:\n_Description:_ Disable via WebGL via browser settings or Addon to block WebGL Fingerprinting.\n\n### FP-Explanation:\nThere are two different WebGL Fingerprints:\n\n- WebGL Rendering Context Report Fingerprint\n- WebGL Canvas Image Base64 Fingerpint\n\n### Publications/References:\n- [WebGL Fingerprinting (BrowserLeaks.com)](https://browserleaks.com/webgl)\n\n### WebGL Fingerprinting: Results\n**Website visits:** 16\n\n**Your WebGL Image Fingerprint:** e9119fcc2b96d0e2ff2f8d42e7f5969c\n\n**Your WebGL Report Fingerprint:** 512bf5f0ec7e966c863b4a677a351012",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "WebGL Fingerprint Defender - Chrome Web Store",
+          "url": "https://chromewebstore.google.com/detail/webgl-fingerprint-defende/olnbjpaejebpnokblkepbphhembdicik?hl=en",
+          "snippet": "WebGL Fingerprint Defender is a browser extension that let you easily hide your real WebGL fingerprint by reporting a random fake value.",
+          "providerResultOrder": 5,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "recommendedSlug": "webgl-fingerprint-test",
+      "recommendedChineseTitle": "WebGL 指纹检测：Renderer、ANGLE 与图像哈希怎么读",
+      "priority": 1,
+      "intent": "Inspect GPU/rendering report and explain abnormal or missing renderer fields.",
+      "observedContentGap": "BrowserLeaks exposes many parameters; WebBrowserTools provides image/noise tests. Large field dumps need a decision process for masked versus unmasked fields and expected implementation differences.",
+      "originalInformationGain": "A field-to-action table for context/version/vendor/renderer/extensions/image hash and controlled hardware-acceleration observations, separating software/ANGLE layers from claimed physical GPU.",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "contentReview": [
+        {
+          "url": "https://browserleaks.com/webgl",
+          "observed": "Read context and debug renderer tables, extension list and further reading."
+        },
+        {
+          "url": "https://webbrowsertools.com/webgl-fingerprint/",
+          "observed": "Read persistent/random noise method and support/readPixels fields. The extraction contained Loading values; those are not actual user test outcomes."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    },
+    {
+      "query": "browser timezone language mismatch",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-4710-7079-a633-23d0143f65aa",
+      "rawEvidenceFile": ".firecrawl/series-timezone.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "IP vs Browser Timezone Check - TrustMyIP",
+          "url": "https://trustmyip.com/timezone-dissonance",
+          "snippet": "# Timezone Dissonance Test  Free IP vs Browser Timezone Check\n## Your times do not match. Here is how to fix it.\n### Command line\nIf the locale card above also says mismatch, the fix is in the browser rather than the operating system: Chrome at `chrome://settings/languages`, Firefox under Settings → General → Language. Move the language of your exit country to the top of the list. A clean timezone with an obviously foreign `Accept-Language` header is still a contradiction, and it is one that most people never think to check.\n\n## What Is a Timezone Dissonance Test and Why Does It Matter?\nWhen your IP says \"America/New_York\" but your browser reports \"Asia/Kolkata,\" the mismatch is unmistakable.\n\n## Timezone Mismatch Test for Remote Workers and Freelancers\n### Common Remote Work Scenarios\n- **Digital Nomad:** Traveling through 3 countries in a month while maintaining a single VPN location. Each new country creates a different **browser timezone** mismatch.",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-13T15:59:24.689Z"
+        },
+        {
+          "title": "Setting browser locale and timezone - mabl help",
+          "url": "https://help.mabl.com/hc/en-us/articles/19944246860820-Setting-browser-locale-and-timezone",
+          "snippet": "In mabl, you can override the default settings for browser locale and timezone in cloud runs, local runs, and training sessions.",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Time zone Discrepancies? - EasyMorph Community",
+          "url": "https://community.easymorph.com/t/time-zone-discrepancies/4204",
+          "snippet": "To verify that your browser is providing the correct timezone, you can open the developer console by pressing Ctrl+Shift+J in Chrome/Firefox and ...",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Why does my spoofed browser timezone still reveal the actual ...",
+          "url": "https://stackoverflow.com/questions/79552429/why-does-my-spoofed-browser-timezone-still-reveal-the-actual-timezone",
+          "snippet": "Change your system timezone to one that does not match your IP (e.g., UTC+12:00 Pacific/Fiji). Or you can use a proxy/VPN. The key is to create ...timezone - How to use a custom time in browser to test for client vs server ...get client time zone from browser [duplicate] - Stack OverflowMore results from stackoverflow.com",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "recommendedSlug": "browser-timezone-language-check",
+      "recommendedChineseTitle": "浏览器时区与语言检测：偏移、夏令时和请求头一致性",
+      "priority": 1,
+      "intent": "Diagnose disagreement across IP geolocation, browser locale and date/time formatting.",
+      "observedContentGap": "TrustMyIP provides direct mismatch guidance and mabl explains legitimate locale/timezone testing. Broad match/mismatch labels can hide travel, multilingual users, DST and IP location uncertainty.",
+      "originalInformationGain": "A layered observation sheet for IANA zone, date-specific offset, navigator languages and Accept-Language with legitimate disagreement cases and minimal-change retest.",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "contentReview": [
+        {
+          "url": "https://trustmyip.com/timezone-dissonance",
+          "observed": "Read mismatch definition, result cards and repair sections; page itself acknowledges travel can explain poor score. Marketing claims about fraud scoring are not evidence of specific platform behavior."
+        },
+        {
+          "url": "https://help.mabl.com/hc/en-us/articles/19944246860820-Setting-browser-locale-and-timezone",
+          "observed": "Read multi-locale testing and local/cloud defaults; official examples establish that locale differences can be ordinary test configuration."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    },
+    {
+      "query": "DNS leak test browser proxy",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-4707-7118-b92d-4f3d90e15d34",
+      "rawEvidenceFile": ".firecrawl/series-dns.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "DNS Leak Test - BrowserLeaks",
+          "url": "https://browserleaks.com/dns",
+          "snippet": "|  |  |  |\n|-|-|-|\n| ### DNS Leak Test |\n| ![US](https://browserleaks.com/img/flags/US.png)[172.217.107.25](https://browserleaks.com/ip/172.217.107.25) | Google LLC | United States, Washington D.C. |\n| ![US](https://browserleaks.com/img/flags/US.png)[172.217.107.28](https://browserleaks.com/ip/172.217.107.28) | Google LLC | United States, Washington D.C. |\n| ![US](https://browserleaks.com/img/flags/US.png)[172.217.111.23](https://browserleaks.com/ip/172.217.111.23) | Google LLC | United States, Washington D.C. |\n| ![US](https://browserleaks.com/img/flags/US.png)[172.217.111.27](https://browserleaks.com/ip/172.217.111.27) | Google LLC | United States, Washington D.C. |\n| ![US](https://browserleaks.com/img/flags/US.png)[172.253.8.158](https://browserleaks.com/ip/172.253.8.158) | Google LLC | United States, Washington D.C. |\n| ![US](https://browserleaks.com/img/flags/US.png)[172.253.210.20](https://browserleaks.com/ip/172.253.210.20) | Google LLC | United States, Washington D.C. |\n| ![US](https://browserleaks.com/img/flags/US.png)[172.253.210.21](https://browserleaks.com/ip/172.253.210.21) | Google LLC | United States, Washington D.C. |\n| ![US](https://browserleaks.com/img/flags/US.pn",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-14T07:36:26.262Z"
+        },
+        {
+          "title": "IP/DNS Detect - What is your IP, what is your DNS, what informations you ...",
+          "url": "https://ipleak.net/",
+          "snippet": "## API\n```\nhttps://ipleak.net/json/\nhttps://ipleak.net/json/8.8.8.8\nhttps://ipleak.net/json/example.com\nhttps://{session}-{label}.ipleak.net/dnsdetection/\n```",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-15T15:27:34.255Z"
+        },
+        {
+          "title": "DNS leak test",
+          "url": "https://www.dnsleaktest.com/",
+          "snippet": "DNSleaktest.com offers a simple test to determine if you DNS requests are being leaked which may represent a critical privacy threat.",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-14T15:22:45.216Z"
+        },
+        {
+          "title": "DNS Leak Test - Free Proxy & VPN Checker",
+          "url": "https://www.proxies.sx/tools/dns-leak-test",
+          "snippet": "We test both TCP and UDP DNS to ensure comprehensive leak detection. Results show if DNS queries are properly routed through your proxy.",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "recommendedSlug": "dns-leak-test-browser-proxy",
+      "recommendedChineseTitle": "浏览器代理 DNS 泄漏检测：解析器结果与真实路径边界",
+      "priority": 1,
+      "intent": "Run DNS test and determine whether resolution follows intended proxy/network configuration.",
+      "observedContentGap": "Results focus on tools and resolver locations. Browser-triggered authoritative observation is often conflated with packet-level proof or complete anonymity.",
+      "originalInformationGain": "Separate observed recursive resolvers from browser/system/proxy resolution paths; use baseline/retest and explain DoH, anycast, IPv6 and inconclusive tests.",
+      "avoidCannibalizing": [
+        "configure-http-proxy",
+        "configure-socks5-proxy",
+        "webrtc-leak-check"
+      ],
+      "contentReview": [
+        {
+          "url": "https://browserleaks.com/dns",
+          "observed": "Read random hostname method: 50 generated domains, divided into IPv4-only and IPv6-only. Resolver table is diagnostic observation, not an OS-wide audit."
+        },
+        {
+          "url": "https://ipleak.net/",
+          "observed": "Read separate public-IP, WebRTC and DNS sections and interpretation, keeping mechanisms distinct."
+        },
+        {
+          "url": "https://www.proxies.sx/tools/dns-leak-test",
+          "observed": "Read proxy-entry form and TCP/UDP marketing claims. Do not send credentials or assume this remote test observes the reader local browser path."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    },
+    {
+      "query": "BrowserLeaks vs CreepJS",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-960a-776f-a588-7c377734d030",
+      "rawEvidenceFile": ".firecrawl/series-toolcompare.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "CreepJS",
+          "url": "https://creepjs.org/",
+          "snippet": "# Browser Fingerprint Checker & IP Risk Analysis\nCreepJS turns dozens of weak signals into a readable report—without pretending coverage is identity or a fraud probability.",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-13T16:00:29.111Z"
+        },
+        {
+          "title": "CreepJS Review: Mastering Browser Fingerprint Analysis - Dolphin {anty}",
+          "url": "https://dolphin-anty.com/blog/en/creepjs-review-the-ultimate-guide-to-browser-fingerprint-analysis/",
+          "snippet": "[CreepJS](https://dolphin-anty.com/blog/en/gte/?u=https%3A%2F%2Fcreepjs.org%2F)is one of the **strictest and even somewhat paranoid** **tools** for testing a browser’s digital fingerprint. Unlike other checkers that simply assign a score, CreepJS focuses on detecting inconsistencies and literally tries 🤥 **to catch the browser “lying”** via exposing logical contradictions within the fingerprint.\n\n## CreepJS vs FingerprintJS vs BrowserLeaks: Which is Better?\nOne shows how websites see you, another is used for commercial user identification and a third acts as a set of diagnostic tests for detecting browser leaks.\n\n| Criterion | CreepJS | FingerprintJS | BrowserLeaks |\n|-|-|-|-|\n| Practical use | Anonymity, anti-detect, configuration audits | Anti-fraud, business tracking, identification | Leak diagnostics and in-depth technical fingerprint analysis |\n\n**CreepJS** is a research tool that doesn’t just collect browser data as it verifies its consistency and shows how unique and trackable a user is.\n\n**BrowserLeaks** is a simpler diagnostic tool that displays individual parameters but does not combine them into a unified analysis model.",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Browserleaks - Check your browser for privacy leaks",
+          "url": "https://browserleaks.com/",
+          "snippet": "BrowserLeaks is a suite of tools that offers a range of tests to evaluate the security and privacy of your web browser.",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "abrahamjuliot/creepjs: Creepy device and browser fingerprinting - GitHub",
+          "url": "https://github.com/abrahamjuliot/creepjs",
+          "snippet": "CreepJS is an unauthorized mirror and should be treated as a malicious honeypot designed to steal your fingerprint data. privacy leaks among modern anti- ...",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-16T04:12:57.058Z"
+        }
+      ],
+      "recommendedSlug": "browserleaks-vs-creepjs",
+      "recommendedChineseTitle": "BrowserLeaks 与 CreepJS 对比：选检测工具与核验原版入口",
+      "priority": 1,
+      "intent": "Compare diagnostic tools and decide which report to use for specific checks.",
+      "observedContentGap": "SERP mixes the original open-source CreepJS project with a similarly named independent domain; vendor review links the independent domain while attributing it to original author.",
+      "originalInformationGain": "A task-first capability matrix, trusted original deployment, and repeatable cross-tool record that does not compare incomparable scores or treat one checker as platform identity evidence.",
+      "avoidCannibalizing": [
+        "read-creepjs-results",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "contentReview": [
+        {
+          "url": "https://browserleaks.com/",
+          "observed": "Read suite descriptions: IP/headers, JavaScript, WebRTC, Canvas, WebGL, fonts and TLS have separate tasks."
+        },
+        {
+          "url": "https://github.com/abrahamjuliot/creepjs",
+          "observed": "Read original project purpose, tested surfaces and explicit trusted deployment statement pointing to abrahamjuliot.github.io/creepjs."
+        },
+        {
+          "url": "https://creepjs.org/",
+          "observed": "Read homepage explicit statement that it is distinct from Abraham Juliot separate open-source research project. This is SERP identity evidence; do not recommend it as official original CreepJS."
+        },
+        {
+          "url": "https://dolphin-anty.com/blog/en/creepjs-review-the-ultimate-guide-to-browser-fingerprint-analysis/",
+          "observed": "Read intro and comparison matrix; detected conflation of destination domain and original author. Do not repeat its causal claims about flags and account outcomes."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    },
+    {
+      "query": "user agent client hints check",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-95a6-758e-905b-a61f33b6c173",
+      "rawEvidenceFile": ".firecrawl/series-ua.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "Client Hints - BrowserLeaks",
+          "url": "https://browserleaks.com/client-hints",
+          "snippet": "Client Hints are a set of HTTP Headers and a JavaScript API that allow web browsers to send detailed information about the client device and browser to web ...",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "User-Agent Client Hints API - MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/User-Agent_Client_Hints_API",
+          "snippet": "# User-Agent Client Hints API\n## [Security considerations](https://developer.mozilla.org/en-US/docs/Web/API/User-Agent_Client_Hints_API#security_considerations)\n```\n<iframe src=\"https://a.example.com\" allow=\"ch-ua-high-entropy-values\"></iframe>\n```",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-15T17:11:08.675Z"
+        },
+        {
+          "title": "The Client Hints Headers your web browser is sending",
+          "url": "https://www.whatismybrowser.com/detect/client-hints/",
+          "snippet": "# The Client Hints headers your web browser is sending\n### What are my client hints?\n| Name | Your value | Definition | Header/Accept-CH value |\n|-|-|-|-|\n| User Agent | \"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\" | The Agent (Browser) that's making the request | SEC-CH-UA |\n| User Agent Full version | \"155.0.8059.39\" | The full version of the user agent (Browser) | SEC-CH-UA-FULL-VERSION |\n| Platform | \"Linux\" | The platform of the device | SEC-CH-UA-PLATFORM |\n| Platform version | \"\" | The full platform version | SEC-CH-UA-PLATFORM-VERSION |\n| Architecture | \"x86\" | The CPU architecture of of the device | SEC-CH-UA-ARCH |\n| Model | \"\" | The model of the device | SEC-CH-UA-MODEL |\n| Viewport Width | 1920 | The width of the primary screen | VIEWPORT-WIDTH |\n| Downlink | 10 | Megabits Per Second (mbps) - approximate speed of the user's connection | DOWNLINK |\n| Effective Connection Type | 4g | Basic outline of the user's connection type | ECT |\n| Round Trip Time | 50 | An estimate of the round trip time of the request (on the application layer) | RTT |\n| Device Memory | 32 | Roughly how many gigabytes of RAM the device has | DEVICE-MEMORY |\n| Device Pixel Ratio",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "GitHub - WICG/ua-client-hints: Wouldn't it be nice if `User-Agent` was a ...",
+          "url": "https://github.com/WICG/ua-client-hints",
+          "snippet": "This repository hosts the User Agent Client Hints (UA-CH) specification. UA-CH introduces the following Client Hints HTTP headers and a corresponding ...",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "recommendedSlug": "user-agent-client-hints-check",
+      "recommendedChineseTitle": "User-Agent 与 Client Hints 检测：请求头和 JavaScript 怎么核对",
+      "priority": 1,
+      "intent": "Inspect actual user-agent/client hints values and reconcile differences or absent high-entropy fields.",
+      "observedContentGap": "BrowserLeaks and WhatIsMyBrowser show values while MDN explains API disclosure. Reader needs a conditions-aware comparison rather than a simplistic strings must match rule.",
+      "originalInformationGain": "Four-layer UA worksheet with HTTP User-Agent, navigator.userAgent, navigator.userAgentData and Sec-CH-*; explain Accept-CH, secure contexts, policy, GREASE and legitimate unavailable fields.",
+      "avoidCannibalizing": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "contentReview": [
+        {
+          "url": "https://browserleaks.com/client-hints",
+          "observed": "Read JavaScript and HTTP header tables plus high/low-entropy footnote. Extracted live values belong to the crawler, not BrowserHub reader or a tested product."
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/User-Agent_Client_Hints_API",
+          "observed": "Read limited availability, low/high entropy disclosure, API and security context."
+        },
+        {
+          "url": "https://www.whatismybrowser.com/detect/client-hints/",
+          "observed": "Read request headers versus JavaScript sections and opt-in reload explanation."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    },
+    {
+      "query": "open source antidetect browsers",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-e929-7581-ba16-d716a32873ea",
+      "rawEvidenceFile": ".firecrawl/series-opensource.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "GitHub - daijro/camoufox: Anti-detect browser",
+          "url": "https://github.com/daijro/camoufox",
+          "snippet": "# Camoufox\n#### Camoufox is an open source anti-detect browser built for webscraping & AI agents. 🦊\n[Permalink: Camoufox is an open source anti-detect browser built for webscraping & AI agents. 🦊](https://github.com/daijro/camoufox#camoufox-is-an-open-source-anti-detect-browser-built-for-webscraping--ai-agents-)\n\n[![daijro%2Fcamoufox | Trendshift](https://camo.githubusercontent.com/f208140ac9ffde23d9df0b3fbbd1b32ba2921b06f604850760abf937b88bbe34/68747470733a2f2f7472656e6473686966742e696f2f6170692f62616467652f7265706f7369746f726965732f3132323234)](https://trendshift.io/repositories/12224)\n\n[![Total Downloads](https://camo.githubusercontent.com/f24a3d3c567b9c39e606d6cb87c7bdd62b479a7d363684a77b863eb62fedc154/68747470733a2f2f7374617469632e706570792e746563682f706572736f6e616c697a65642d62616467652f63616d6f75666f783f706572696f643d746f74616c26756e6974733d494e5445524e4154494f4e414c5f53595354454d266c6566745f636f6c6f723d424c41434b2672696768745f636f6c6f723d475245454e266c6566745f746578743d646f776e6c6f616473)](https://pepy.tech/projects/camoufox) [![Monthly Downloads](https://camo.githubusercontent.com/0562635e91cd12d8461097baa16383020ff9e354caf263da30b7a6579c2a657d/68747470733a2f2f737461746963",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-15T21:05:24.332Z"
+        },
+        {
+          "title": "The most private anti-detect browser — Donut Browser",
+          "url": "https://donutbrowser.com/",
+          "snippet": "# The most privateanti-detect browser.\n- [Open-source app, AGPL-3.0](https://github.com/zhom/donutbrowser)\n\n## Questions, answered.\n### 01What is Donut Browser?\nThe Donut Browser app is open source under the AGPL-3.0 license with zero telemetry, so you can inspect the code and verify how your data is handled.",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-15T12:49:42.210Z"
+        },
+        {
+          "title": "Open-Source Anti-Detect Browsers: Camoufox, Donut and More",
+          "url": "https://nextbrowser.com/blog/open-source-anti-detect-browser-alternatives-2026/",
+          "snippet": "## Contents\n**TL;DR:** Camoufox (Firefox-based) is the strongest open-source anti-detect browser in 2026.\n\n## Why Look at Open-Source Anti-Detect Browsers?\nThree reasons keep coming up.\n\n- **Transparency.** Anti-detect browsers handle sensitive data: account credentials, session tokens, payment information. With proprietary tools, you're trusting a black box. With open source, you can audit every line of code that touches your data.\n- **Control.** Self-hosted means your fingerprints, profiles, and session data never leave your machine. No cloud sync. No telemetry. No vendor deciding to change their pricing, deprecate features, or shut down.\n\n## The Open-Source Options: An Honest Assessment\n### Camoufox\n**The strongest Firefox-based open-source anti-detect option.**\n\n### Clawbrowser\nIt's a Chromium-based anti-detect browser built from the ground up for AI agent workflows.\n\n## Comparison: Open-Source Anti-Detect Browsers at a Glance\n| Feature | Camoufox | Donut Browser | Clawbrowser | Playwright Stealth | Kameleo | ShardBrowser |\n|-|-|-|-|-|-|-|\n| **Actually open source** | Yes (MIT) | Yes (AGPL-3.0) | Free for commercial use | Yes (MIT) | No (SDK only) | No (engine closed) |\n| **Bro",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-13T09:32:13.095Z"
+        },
+        {
+          "title": "Are there any Open Source / Free Anti-detect Browsers with GUI?",
+          "url": "https://www.reddit.com/r/webscraping/comments/1iyl99t/are_there_any_open_source_free_antidetect/",
+          "snippet": "If you google AntiDetect browser or Multi Login Browser there are options out there. I'm just surprised by the fact that there are so many of ...What are the best FREE anti-detection browsers? - RedditTop 5 Antidetect Browsers Comparison (2025) : r/automationMore results from www.reddit.com",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": false,
+          "scrapeStatusCode": null,
+          "cacheState": null,
+          "cachedAt": null
+        }
+      ],
+      "recommendedSlug": "open-source-antidetect-browsers",
+      "recommendedChineseTitle": "开源指纹浏览器怎么选：内核、GUI、许可证与维护成本",
+      "priority": 2,
+      "intent": "Find inspectable browser projects and compare scope, licensing and operational needs.",
+      "observedContentGap": "SERP mixes engine, launcher and profile-manager products. Nextbrowser comparison labels all Camoufox MIT although original repository distinguishes components; open source is also wrongly equated with never using cloud.",
+      "originalInformationGain": "Separate engine versus launcher versus GUI layers and component licenses, official release provenance, maintenance/sync boundaries and developer integration cost; no untested ranking or benchmark.",
+      "avoidCannibalizing": [
+        "free-antidetect-browser",
+        "chrome-profiles-vs-antidetect-browser",
+        "browser-automation-profile-persistence"
+      ],
+      "contentReview": [
+        {
+          "url": "https://github.com/daijro/camoufox",
+          "observed": "Read project purpose and licensing context: browser/modified Firefox MPL-2.0 and Python launcher MIT are distinct components. Verify exact current files before publishing legal detail."
+        },
+        {
+          "url": "https://donutbrowser.com/",
+          "observed": "Read app AGPL-3.0 claim, local profile storage and optional encrypted sync. App openness is a different assertion from every bundled engine being under that license."
+        },
+        {
+          "url": "https://nextbrowser.com/blog/open-source-anti-detect-browser-alternatives-2026/",
+          "observed": "Read Camoufox and Donut sections and category table. Use only to understand commercial list intent, not to support blanket license/benchmark/security claims."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    },
+    {
+      "query": "browser cookies localStorage IndexedDB isolation test",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fc-e935-734e-80fd-77c027a0bdb3",
+      "rawEvidenceFile": ".firecrawl/series-isolation.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "IndexedDB: What Makes It Better Than LocalStorage and Cookies?",
+          "url": "https://www.youtube.com/watch?v=J8fr-xc3bis",
+          "snippet": "Tap to unmute. Your browser can't play this video. Learn more.",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Cookie & Storage Test | Browser Check",
+          "url": "https://browsercheck.net/cookie-test",
+          "snippet": "## Results in this browser\n### First-party cookie\nReadPassed\n\n### localStorage\nAvailable\n\nWritePassed\n\nReadPassed\n\nCleanupPassed\n\n### IndexedDB\nAvailable\n\nWritePassed\n\nReadPassed\n\nCleanupPassed\n\nCopy safe summaryPrint / save PDF\n\nCopied and printed output omits IP addresses, the full User Agent, exact versions, fingerprint hashes, and precise location.\n\n## What is tested and how to read it\n### Local and session storage\nEach storage API is tested independently. The test never calls clear() or deletes unrelated keys.\n\n## Next steps\n1. Check each storage row and its cleanup result. A passing cookie test does not imply IndexedDB or another store passed.\n\n## Frequently asked questions\nDoes this delete my existing cookies or localStorage?",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "LocalStorage vs. IndexedDB vs. Cookies vs. OPFS vs. WASM-SQLite",
+          "url": "https://rxdb.info/articles/localstorage-indexeddb-cookies-opfs-sqlite-wasm.html",
+          "snippet": "## Feature Comparison [​](https://rxdb.info/articles/localstorage-indexeddb-cookies-opfs-sqlite-wasm.html#feature-comparison)\n### Multi-Tab Support [​](https://rxdb.info/articles/localstorage-indexeddb-cookies-opfs-sqlite-wasm.html#multi-tab-support)\n```\n// localStorage can observe changes with the storage event.\n// This feature is missing in IndexedDB and others\naddEventListener(\"storage\", (event) => {});\n```\n\n## FAQ [​](https://rxdb.info/articles/localstorage-indexeddb-cookies-opfs-sqlite-wasm.html#faq)\nIn contrast, **[LocalStorage](https://rxdb.info/articles/localstorage.html)** and **[IndexedDB](https://rxdb.info/rx-storage-indexeddb.html)** are strictly managed by the browser and sandboxed within the application's origin, meaning users cannot easily access or modify those raw database files on their hard drive.",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "How is indexedDB conceptually different from HTML5 local storage?",
+          "url": "https://stackoverflow.com/questions/5924485/how-is-indexeddb-conceptually-different-from-html5-local-storage",
+          "snippet": "# [How is indexedDB conceptually different from HTML5 local storage?](https://stackoverflow.com/questions/5924485/how-is-indexeddb-conceptually-different-from-html5-local-storage)\n## 3 Answers 3\n```javascript\nCopy\nmyObject = {a: 1, b: 2, c: 3};\nlocalStorage.setItem(\"uniq\", JSON.stringify(myObject));\n```\n\n```javascript\nCopy\nvar myStorageObject = JSON.parse(localStorage.getItem(\"uniq\"));\nwindow.alert(myStorageObject.b);\n```",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "recommendedSlug": "browser-profile-storage-isolation-test",
+      "recommendedChineseTitle": "浏览器环境隔离测试：Cookie、localStorage 与 IndexedDB 的 A/B 验收",
+      "priority": 2,
+      "intent": "Check that separate profiles do not share website state, beyond whether APIs work.",
+      "observedContentGap": "Broad query returns API-selection explanations and a first-party storage functionality test. BrowserCheck explicitly states its single-origin round trip does not prove profile isolation.",
+      "originalInformationGain": "A dedicated same-origin A/B random marker procedure per store, new-tab/refresh/restart matrix and scoped cleanup that distinguishes sessionStorage lifecycle, copied profiles and server sessions.",
+      "avoidCannibalizing": [
+        "local-vs-cloud-browser-storage",
+        "browser-automation-profile-persistence",
+        "browser-fingerprint-testing-checklist"
+      ],
+      "contentReview": [
+        {
+          "url": "https://browsercheck.net/cookie-test",
+          "observed": "Read write/read/cleanup stages and limitations including HttpOnly, third-party partitioning and separate A/B procedure."
+        },
+        {
+          "url": "https://rxdb.info/articles/localstorage-indexeddb-cookies-opfs-sqlite-wasm.html",
+          "observed": "Read storage API purpose and selection comparison. It targets developer storage choice rather than independent profile acceptance."
+        }
+      ],
+      "decision": "create one substantive English and Simplified Chinese article, keep both editions on the same slug"
+    }
+  ],
+  "comparisonUpdates": [
+    {
+      "query": "AdsPower vs Dolphin Anty",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fd-354f-774e-8c8b-642865d37429",
+      "rawEvidenceFile": ".firecrawl/series-compare-adspower-dolphin.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "AdsPower vs. Dolphin Anty The Ultimate Comparison",
+          "url": "https://dolphin-anty.com/blog/en/why-dolphin-anty-is-better-than-adspower/",
+          "snippet": "![Dolphin Anty or AdsPower](https://dolphin-anty.com/blog/wp-content/uploads/2026/08/1280_640-en-5.png)![](https://dolphin-anty.com/blog/wp-content/uploads/2026/08/1280_640-en-5.png)![](https://dolphin-anty.com/blog/wp-content/themes/blog/app/images/dist/logo-article-white.svg)\n\n📣 If you are already considering switching from AdsPower to Dolphin Anty, now is the perfect time: use the promo code **ADSPOWER21** to get a **21% discount**.\n\n## Dolphin Anty: Summary\nMost of the functionality available in AdsPower is also available here, with some aspects implemented in a more user-friendly way.\n\nWe are going to take a closer look by comparing Dolphin Anty and AdsPower in detail.\n\n## Profile Management\n### Other Differences\nCookie Robot and profile copying (both with fingerprint randomization and without) are available in Dolphin Anty on the free plan, while in AdsPower they are only available on paid plans.\n\nIn AdsPower profiles cannot be sorted freely, whereas in Dolphin Anty you can sort them not only by name, but also by notes, tags, statuses and more.\n\nIn addition, unlike Dolphin Anty, pop-up windows in AdsPower do not close when you click on an empty area.\n\n## Chromium Core Updates",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Dolphin Anty vs AdsPower: Which One Should You Actually Use?",
+          "url": "https://blog.send.win/dolphin-anty-vs-adspower-which-one-should-you-actually-use/",
+          "snippet": "## Dolphin Anty vs AdsPower: The Honest Breakdown\n**Dolphin Anty** and **AdsPower** are both capable antidetect browsers, but they serve different users. Dolphin Anty leans toward crypto, Web3, and affiliate teams with a clean, fast UI. AdsPower targets high-volume e-commerce and ad account managers with deeper automation and a more generous free tier. In this **Dolphin Anty vs AdsPower** comparison, we break down fingerprinting, profiles, team features, proxies, and pricing — and explain where Send.win fits, with paid plans starting at $19/month.\n\n![Send.win dashboard illustrating dolphin anty vs adspower](https://blog.send.win/wp-content/uploads/2026/07/shared-dashboard-mockup.jpg)\n\n## How Send.win Helps With Dolphin Anty Vs Adspower\n### AdsPower Weaknesses\n- **Slower profile launch:** Heavier browser engines mean longer startup times, especially with many profiles\n- **UI complexity:** More features means more menus — steeper learning curve for new users\n- **RPA limitations:** The visual builder handles simple tasks but struggles with complex conditional logic\n- **Cost scales fast:** While the entry point is low, 500+ profiles quickly reaches $100+/month\n\n## Head-to-Head: What Re",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Dolphin Anty vs AdsPower: Best Anti-Detect Browser for FB - iAmAttila",
+          "url": "https://iamattila.com/affiliate-marketing/dolphin-anty-vs-adspower-which-anti-detect-browser-is-better-for-facebook-ads-and-affiliate-marketing",
+          "snippet": "# Dolphin Anty vs AdsPower: Which Anti-Detect Browser Is Better for Facebook Ads and Affiliate Marketing?\n**Short answer:** Dolphin Anty is the better pick for Facebook ads and affiliate work in my view, mainly for its profile and cookie handling and team sharing, while AdsPower wins on RPA automation. Dolphin Anty has a Free plan with 5 profiles (AdsPower: 2) and paid plans from $10 a month; compare both free tiers before you pay.\n\nChoosing where to run your traffic next?\n\nIf you’re running Facebook ads, affiliate lead generation campaigns, e-commerce, crypto, sweepstakes, or pretty much any vertical where accounts can get banned for doing the wrong thing, or sometimes for doing absolutely nothing wrong, your browser setup matters more than you think.\n\nSo when I tell you that an anti-detect browser isn’t some nice-to-have feature, I really mean it. It’s one of those tools that can make the difference between scaling campaigns and constantly fighting bans.\n\nJust take Facebook as an example. One wrong setup can burn your\n\n## **Dolphin Anty vs AdsPower: Quick Verdict**\n|  |  |\n|-|-|\n| **Category** | **Winner** |\n| Facebook Ads account management | Dolphin Anty |\n| Affiliate marketing",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "targetSlug": "adspower-vs-dolphin-anty",
+      "targetExists": true,
+      "deepEditorialExistsBeforeThisBatch": false,
+      "intent": "Commercial comparison and workflow/plan decision",
+      "decision": "expand existing comparison canonical; do not add synonym or reversed-pair duplicate",
+      "observedContentGap": "Vendor and affiliate comparisons include screenshots, workflow detail and contradictory free tiers/engine claims; current BrowserHub has only generic comparison sections.",
+      "originalInformationGain": "Distinguish no-code RPA, documented Local API, team handoff and entry-plan limits with an executable acceptance checklist.",
+      "contentReview": [
+        {
+          "url": "https://dolphin-anty.com/blog/en/why-dolphin-anty-is-better-than-adspower/",
+          "observed": "Read summary, profiles, notes/tags/filtering and proxy rotation; vendor attribution/disclaimer present."
+        },
+        {
+          "url": "https://blog.send.win/dolphin-anty-vs-adspower-which-one-should-you-actually-use/",
+          "observed": "Read matrix and Dolphin/AdsPower summaries. Several claimed engines/tiers conflict with official records; no factual reuse."
+        }
+      ],
+      "productFactAuthority": "Use src/data/verified-products.ts and primary vendor documentation, not these competitor assertions."
+    },
+    {
+      "query": "AdsPower vs MoreLogin",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fd-3567-7431-9bfa-99f4c7aac535",
+      "rawEvidenceFile": ".firecrawl/series-compare-adspower-morelogin.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "MoreLogin vs AdsPower: Which Anti Detect Browser Is Right for You?",
+          "url": "https://multilogin.com/blog/morelogin-vs-adspower/",
+          "snippet": "# MoreLogin vs AdsPower: Which Anti Detect Browser Is Right for You?\n[Start now](https://multilogin.com/pricing/)\n\n![](https://multilogin.com/wp-content/uploads/2026/03/Component-1.svg)\n\nSummarize this article with your preferred AI\n\n[![chatgpt](https://multilogin.com/wp-content/plugins/sumtics/assets/images/chatgpt.svg)ChatGPT](https://chatgpt.com/?q=Summarize+this+article%3A+https%3A%2F%2Fmultilogin.com%2Fblog%2Fmorelogin-vs-adspower%2F+Structure+your+response+as%3A+1.+Key+Takeaways%3A+main+points+from+the+article+in+4%E2%80%935+bullets+2.+Practical+Insights%3A+useful+lessons%2C+strategies%2C+or+recommendations+3.+How+Multilogin+Helps+%28if+relevant%29%3A+ways+Multilogin+can+support+this+use+case+4.+Try+It%3A+briefly+suggest+exploring+Multilogin+here%3A+https%3A%2F%2Fmultilogin.com%2Fpricing+Context%3A+this+article+is+published+by+multilogin.com.+Multilogin+is+a+platform+for+managing+multiple+social+media+accounts+across+mobile+and+web+using+cloud+phones+and+browser+profiles%2C+all+from+one+dashboard.+It+is+designed+to+help+users+scale+account+operations%2C+keep+accounts+isolated%2C+and+avoid+common+issues+like+device+conflicts+or+account+linking.) [![googleai](https://multilogin",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "AdsPower vs MoreLogin (2026) Which One is Better? - YouTube",
+          "url": "https://www.youtube.com/watch?v=MoEWyIszrso",
+          "snippet": "In this video I'll compare AdsPower vs MoreLogin. ▷ Get a 10% Discount Coupon for MoreLogin: ...",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "AdsPower vs MoreLogin — Antidetect guide | Afina Browser",
+          "url": "https://afina.io/en/blog/adspower-vs-morelogin",
+          "snippet": "# AdsPower vs MoreLogin: which antidetect browser to choose in 2026\n## AdsPower vs MoreLogin: short answer\nPut simply, MoreLogin is often seen as an easier entry into multi-accounting: easier start, less overload, and a lower barrier for solo users. AdsPower, on the other hand, feels more like an antidetect browser for teams, automation, and scaling, where roles, API access, bulk scenarios, and control over large numbers of profiles start to matter.\n\nBut they share the same problem. Both AdsPower and MoreLogin depend heavily on external proxies. That means part of your stability does not come from the browser itself, but from how well you build the proxy workflow around it.\n\n## What AdsPower does better for teams and automation\nAdsPower is usually chosen when the work has already moved beyond “a few accounts for myself.” In competitor materials, it appears as a more functional tool for teams, agencies, and people who rely seriously on automation.\n\nIts strengths look like this:\n\n- support for a large number of profiles;\n- a stronger focus on team work;\n- API, RPA, Selenium, and Puppeteer for automation;\n- more flexible control for scaling scenarios.\n\nIn simple terms, AdsPower tends ",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "targetSlug": "adspower-vs-morelogin",
+      "targetExists": true,
+      "deepEditorialExistsBeforeThisBatch": false,
+      "intent": "Commercial comparison and workflow/plan decision",
+      "decision": "expand existing comparison canonical; do not add synonym or reversed-pair duplicate",
+      "observedContentGap": "SERP has third-party-vendor comparisons and affiliate videos; broad beginner-versus-team claims lack a plan-qualified validation sheet.",
+      "originalInformationGain": "Separate desktop browser and cloud-phone purchasing, API/RPA access and paid seats; price exact profile/seat/period basket instead of declaring cheapest from promo entry price.",
+      "contentReview": [
+        {
+          "url": "https://afina.io/en/blog/adspower-vs-morelogin",
+          "observed": "Read short answer, automation/team criteria, comparison matrix and proposed own-product alternative; commercial conflict clear."
+        },
+        {
+          "url": "https://multilogin.com/blog/morelogin-vs-adspower/",
+          "observed": "Read table of contents and product summaries. It promotes a third vendor, so not neutral empirical proof."
+        }
+      ],
+      "productFactAuthority": "Use src/data/verified-products.ts and primary vendor documentation, not these competitor assertions."
+    },
+    {
+      "query": "GoLogin vs Octo Browser",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fd-8d29-7651-8569-d4d478869d87",
+      "rawEvidenceFile": ".firecrawl/series-compare-gologin-octo.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "Octo Browser vs Gologin: Updated Review 2026",
+          "url": "https://gologin.com/blog/octo-browser-gologin/",
+          "snippet": "# Octo Browser vs Gologin: Updated Review 2026\n## ![](https://gologin.com/wp-content/uploads/Group-469500.png)\n### Support and updates\nYou can see [Octo updates right in your browser](https://gologin.com/browser-alternatives/octo-browser-alternatives/) under the bell icon next to the settings.\n\nTech support also responds quite quickly – both in the Octobrowser app and in Telegram.\n\n![octo browser](https://gologin.com/wp-content/uploads/Screenshot-2025-02-25-at-13.58.18_result.webp)\n\nAt the time of the test, Octo is only available in Russian and English. This doesn’t seem a problem, considering that most Octo Browser reviews come mostly from the Russian speaking space.\n\n## Gologin browser is a good alternative to Okto browser\nAt first glance, Octo Browser seems quite similar to Gologin in terms of overall functionality and interface. However, unlike Octo, under the simple and minimalistic interface Gologin contains much more powerful functionality.\n\nGologin is well suited for both solo use and professional teams of any size due to its affordable prices and more advanced functionality.\n\nLet’s compare Octo Browser to Gologin, and at the end take a look at prices and rates.\n\n![gologin]",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-15T07:37:18.759Z"
+        },
+        {
+          "title": "Octo Browser vs GoLogin: Comparing the Best with the Affordable",
+          "url": "https://www.namepros.com/threads/octo-browser-vs-gologin-comparing-the-best-with-the-affordable.1333154/",
+          "snippet": "# Octo Browser vs GoLogin: Comparing the Best with the Affordable\n## Would you like to try Octo Browser for free?​\nGoLogin is cheaper than Octo Browser when working with a small number of profiles and with the most basic subscription. However, in Octo one profile is only $0.10 more expensive with the most expensive subscription, and for just this difference in cost users get stable and regular kernel updates, top-quality fingerprint spoofing, and numerous unique features that are not available in GoLogin.\n\nMoreover, for larger teams and multi-accounting professionals, Octo Browser [partners](https://octobrowser.net/partners/?utm_source=namepros.com) with many proxy providers, affiliate networks, and specialized tools ready to offer special conditions and discounts to Octo Browser users.",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "GoLogin vs Multilogin vs AdsPower vs Octo Browser - 2026 - YouTube",
+          "url": "https://www.youtube.com/watch?v=DnE8UQcsQos",
+          "snippet": "GoLogin vs Multilogin vs AdsPower vs Octo Browser - 2026 | I Compared Main Features (Side-By-Side) · Comments. 48. Comment... 9: ...",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "targetSlug": "gologin-vs-octo-browser",
+      "targetExists": true,
+      "deepEditorialExistsBeforeThisBatch": false,
+      "intent": "Commercial comparison and workflow/plan decision",
+      "decision": "expand existing comparison canonical; do not add synonym or reversed-pair duplicate",
+      "observedContentGap": "Direct vendor review and sponsored video dominate sampled results. GoLogin review contains updated Lite references and older Starter framing within same page.",
+      "originalInformationGain": "A same-basket comparison separating EUR/USD, billing term, stored profiles, team seats, API gates and mobile promo terms with reproducible migration/persistence check.",
+      "contentReview": [
+        {
+          "url": "https://gologin.com/blog/octo-browser-gologin/",
+          "observed": "Read opening matrix, mobile/cloud distinctions and pricing section; vendor review/promo and checker claims are not an independent benchmark."
+        },
+        {
+          "url": "https://www.namepros.com/threads/octo-browser-vs-gologin-comparing-the-best-with-the-affordable.1333154/",
+          "observed": "Read promotional thread identity and comparison sections; the author account is Octo Browser."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=DnE8UQcsQos",
+          "observed": "Read description declaring Octo sponsorship and opening transcript; cannot use personal test claims as BrowserHub tests."
+        }
+      ],
+      "productFactAuthority": "Use src/data/verified-products.ts and primary vendor documentation, not these competitor assertions."
+    },
+    {
+      "query": "Kameleo vs Octo Browser",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "US",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fd-8da1-74ec-be62-57098e3a85a0",
+      "rawEvidenceFile": ".firecrawl/series-compare-kameleo-octo.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "Compare Kameleo vs. Octo Browser in 2026 - Slashdot",
+          "url": "https://slashdot.org/software/comparison/Kameleo-vs-Octo-Browser/",
+          "snippet": "Compare Kameleo vs. Octo Browser in 2026 by cost, reviews, features, integrations, and more. Octo Browser passes popular checkers like Pixels and BrowserLeaks.",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Octo Browser",
+          "url": "https://octobrowser.net/",
+          "snippet": "Octo Browser is a fast anti-detect browser for multi-accounting with maximum protection against browser identification. , and offers excellent tech support.",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-13T14:27:46.065Z"
+        },
+        {
+          "title": "Kameleo: Anti-Detect Browser for Multi-Accounting & Web Scraping",
+          "url": "https://kameleo.io/",
+          "snippet": "# Anti-Detect Browser Engineered for:Un_\n## Get running in 3 steps\n```bash\nwinget install Kameleo.App\n& \"$Env:LOCALAPPDATA\\Programs\\Kameleo\\Kameleo.Engine.exe\"\n```\n\n```bash\npip install kameleo.local-api-client playwright\n```",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "hit",
+          "cachedAt": "2026-10-13T20:37:49.900Z"
+        }
+      ],
+      "targetSlug": "kameleo-vs-octo-browser",
+      "targetExists": true,
+      "deepEditorialExistsBeforeThisBatch": false,
+      "intent": "Commercial comparison and workflow/plan decision",
+      "decision": "expand existing comparison canonical; do not add synonym or reversed-pair duplicate",
+      "observedContentGap": "Directory table is weak evidence: sampled Slashdot labels Octo no API/mobile app despite current official material exposing API and mobile offer.",
+      "originalInformationGain": "Compare concurrent browser capacity versus stored profile capacity, SDK/persistence flow, desktop OS support and mobile fingerprints versus native mobile apps; preserve exact billing units.",
+      "contentReview": [
+        {
+          "url": "https://slashdot.org/software/comparison/Kameleo-vs-Octo-Browser/",
+          "observed": "Read API access, pricing and deployment fields. These stale boolean/price-unit classifications cannot support current product facts."
+        },
+        {
+          "url": "https://kameleo.io/",
+          "observed": "Read official engine/install/API example and Windows/macOS/Docker choices; no-account start statement is not proof of unlimited paid capacity."
+        },
+        {
+          "url": "https://octobrowser.net/",
+          "observed": "Read official homepage/mobile promotion and doc links; distinguish promotional offer from standing desktop free tier."
+        }
+      ],
+      "productFactAuthority": "Use src/data/verified-products.ts and primary vendor documentation, not these competitor assertions."
+    }
+  ],
+  "chineseClusterValidation": [
+    {
+      "query": "指纹浏览器 环境检测 Canvas WebGL",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "CN",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fe-26b0-7549-bafb-e53b48d9e1d8",
+      "rawEvidenceFile": ".firecrawl/series-zh-environment.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "浏览器指纹检测指南：检查Canvas - Virtual Browser",
+          "url": "https://www.virtualbrowser.cc/zh/guide/browser-fingerprint-check.html",
+          "snippet": "浏览器指纹检测是对Canvas、WebGL、WebRTC、IP、DNS、时区、语言、字体和屏幕等信号进行检查,确认它们是否稳定、彼此一致,并且符合当前设备与网络环境。",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "模拟浏览器指纹：生成与定制特定属性原创 - CSDN博客",
+          "url": "https://blog.csdn.net/u014497060/article/details/147261028",
+          "snippet": "# 模拟浏览器指纹：生成与定制特定属性\n### 三、总结\n通过上述步骤，我们成功模拟了一个完整的浏览器指纹，包括导航器信息、Canvas 指纹、WebGL 指纹、屏幕信息、音频和视频支持等。\n\n[_指纹_ _浏览器_ _开发_。上期我们通过修改gl的参数，`getSupportedExtensions()`函数返回值列表的顺序，绕过部分网站的 _指纹_ 检测。\\\n- 但还有些网站通过 _webGL_ _生成_ 图形来获取 _指纹_，我们就需要再出一期了。\\\n- 还有就是：上期 _指纹_ 检测未通过browserscan这个网站。](https://blog.csdn.net/w1101662433/article/details/139830277)\n\n[_浏览器_ _指纹_ 检测原理 _:_ _Canvas_、 _WebGL_、Audio _指纹_ 详解 _与_ 自检脚本-CSDN博...](https://blog.csdn.net/Novproxy_Z/article/details/167697455)\n\n[_指纹_ _浏览器_ 防关联核心技术拆解 _:_ 从 _Canvas_ 到 _WebGL_,底层 _指纹_ 伪装的真相_利...](https://blog.csdn.net/weixin_48522686/article/details/162263201)\n\n[_指纹_ _生成_ 隔离化实现一环境一 _指纹_、一账号一组双 _指纹_ 组合, _Canvas_ 哈希值 _与_ _WebGL_ 特征值无规律匹配,彻底切断设备之间的 _指纹_ 关联关系。 风控行为 _模拟_ 搭配随机 UA、随机屏幕尺寸、合规时区 _语言_、真实网络环境,让随机化后的设备 _指纹_ 高度贴近真实用户设备行为,提升环境可信度。](https://blog.csdn.net/weixin_41943766/article/details/161186013)\n\n[在Web安全 _与_ 数据爬取领域， _JavaScript_ 逆向工程是核心技术之一，其核心原理在于分析并 _模拟_ _浏览器_ 执行环境以获取关键算法逻辑。面对日益复杂的 _前端_ 反爬机制，尤其是高强度环境检测（常被称为“盾山”技术），传统的直接解密方法往往失效。此时，“补环境”技术展现出重要价值，它通过在Node.js等非 _浏览器_ 环境中构造逼真的 _浏览器_ 对象（如window、navigator），欺骗检测逻辑，使核心加密算法得以执行。这项技术广泛应用于数据接口调用、签名算法还原等场景。本文将深入探讨如何应对包括 _Canvas_ _指纹_、 _WebGL_ 渲](https://blog.csdn.net/weixin_34216196/article/details/90219061)\n\n",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "浏览器指纹 - 蒋固金的个人博客",
+          "url": "https://www.jianggujin.com/post/10",
+          "snippet": "## 目录\n第二部分 浏览器指纹实现\n\n2.1 Canvas指纹\n\n2.3 WebGL指纹\n\n# 第二部分 浏览器指纹实现\n## 2.3 WebGL指纹\n### 2.3.4 Canvas指纹示例\n```js\njs\n\n// 包含标点符号、小写、大写字符的文本\nvar txt = \"JiangGujin,com <canvas> 1.0\";\nctx.textBaseline = \"top\";\n// 最常见的类型\nctx.font = \"14px 'Arial'\";\nctx.textBaseline = \"alphabetic\";\nctx.fillStyle = \"#f60\";\nctx.fillRect(102, 1, 62, 20);\n// 增加渲染差异的颜色混合\nctx.fillStyle = \"#069\";\nctx.fillText(txt, 2, 15);\nctx.fillStyle = \"rgba(102, 204, 0, 0.7)\";\nctx.fillText(txt, 4, 17);\n\n// 生成图像的Base64格式字符串\nvar data = canvas.toDataURL()\n\n// 将Base64字符串转换为Uint8Array\nvar rawData = atob(data.split(\",\")[1]);\nvar dataArr = new Uint8Array(rawData.length);\nfor (let i = 0; i < rawData.length; i++) {\n    dataArr[i] = rawData.charCodeAt(i);\n}\n\n// 将最终的Uint8Array进行MD5摘要运算，将结果作为指纹\n//  https://github.com/emn178/js-md5\nvar hash = md5(dataArr).toUpperCase();\nconsole.log(hash)\n```\n\n# 第三部分 参考\n#### 预览:\n1.1 什么是浏览器指纹？\n\n2.3 WebGL指纹\n\n2.3.2 WebGL与Canvas之间的联系",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "Canvas检测与WebGL检测有什么区别？看完这篇你就明白了-ToDetect",
+          "url": "https://www.todetect.cn/article/canvas/webgl-fingerprint/",
+          "snippet": "# Canvas检测 与 WebGL检测有什么区别？看完这篇你就明白了\nCanvas检测偏向浏览器渲染层，WebGL检测更接近硬件层，两者共同构成核心浏览器指纹体系。\n\n看完这篇你就明白了\n\n很多人第一次接触 **浏览器指纹识别**，基本都是从“被风控”“被关联”开始的。 最常看到的两个词就是： **Canvas检测** 和 **WebGL检测**。\n\n为什么同样是浏览器指纹检测，有的平台更看重 Canvas，有的却死盯着 WebGL？\n\n## 一、先搞清楚：什么是 [浏览器指纹识别](https://www.todetect.cn/)？\n浏览器指纹识别，就是平台通过收集浏览器和设备的各种“软硬件特征”，给你生成一个相对唯一的身份标识。\n\n其中， **Canvas检测** 和 **WebGL检测**，因为稳定性高、伪装难度大，已经成为主流平台的重点检测项。\n\n## 二、什么是 Canvas检测？它在检测什么？\n### 2. Canvas检测的特点\n也正因为这样，Canvas检测已经成为很多平台进行 **浏览器指纹检测** 的标配项目。\n\n## 四、 [Canvas检测](https://www.todetect.cn/canvas/) 与 WebGL检测的核心区别\n| 对比维度 | Canvas检测 | WebGL检测 |\n|-|-|-|\n| 依赖层级 | 浏览器渲染层 | 硬件渲染层 |\n\n## 五、Canvas检测 和 WebGL检测的实际应用\n•  Canvas指纹\n\n•  WebGL指纹\n\n•  其他浏览器指纹识别参数\n\n## 六、如何判断自己的浏览器指纹是否“安全”？\n**ToDetect指纹查询工具** 可以直接检测当前浏览器的：\n\n•  Canvas指纹状态\n\n•  WebGL指纹是否异常\n\n•  是否存在高风险参数\n\n对于做账号环境隔离、反关联测试的人来说，用这类工具提前检测一遍，能少踩很多坑。",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "intentObservation": "Chinese results include a structured vendor checklist plus how-it-works tutorials; prioritize deeper signal-specific diagnosis and avoid unsupported universal uniqueness or account guarantees.",
+      "use": "Validate Chinese cluster vocabulary; not search-volume evidence."
+    },
+    {
+      "query": "浏览器 时区 语言 DNS 泄漏检测",
+      "observedOn": "2026-10-16",
+      "provider": "Firecrawl Search web",
+      "countryParameter": "CN",
+      "locationParameter": null,
+      "languageParameter": null,
+      "searchEngine": null,
+      "localeLimit": "Country setting is a provider parameter; engine, city, language, personalization and reproducible Google rank are not established. Scraped pages can be cached.",
+      "searchId": "01a142fe-272a-754f-b91c-0dc85f4ae2ef",
+      "rawEvidenceFile": ".firecrawl/series-zh-network.json",
+      "monthlyVolume": null,
+      "keywordDifficulty": null,
+      "browserHubRank": null,
+      "results": [
+        {
+          "title": "DNS Leak Test怎么检测? DNS泄露检测工具使用教程与结果分析",
+          "url": "https://www.todetect.cn/article/dns-leak/dnsleak-check/",
+          "snippet": "# DNS Leak Test怎么检测? DNS泄露检测工具使用教程与结果分析\n![DNS Leak Test怎么检测? DNS泄露检测工具使用教程与结果分析](https://tarticle-new.oss-cn-shenzhen.aliyuncs.com/article/C_038df5f8e2.png)Charles![dateTime](https://www.todetect.cn/images/clock.png)2026-10-09 10:00\n\n## 一、DNS泄露是什么?先了解DNS查询过程\n•  浏览器内置的安全DNS服务\n\n## 五、DoH和DoT能解决DNS泄露吗?\n•  时区和语言设置\n\n## 七、DNS检测之外，还需要关注哪些网络信息?\n•  浏览器检测可以查看时区、语言、User Agent等环境参数是否一致。",
+          "providerResultOrder": 1,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "WebRTC与DNS泄露检测- 浏览器环境检测| IPRisk - IP 纯净度检测",
+          "url": "https://iprisk.top/env",
+          "snippet": "检测范围：IP 分流、WebRTC、DNS、时区、语言与浏览器指纹。\n\n浏览器语言",
+          "providerResultOrder": 2,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "DNS 泄漏检测/ WebRTC 泄露检测— 真实IP 暴露测试 - IP查询",
+          "url": "https://cleanip.io/leak",
+          "snippet": "一键检测DNS 泄漏(DNS 泄露)、WebRTC 泄露、IPv6 泄漏与时区/ IP 一致性, 看真实IP 有没有暴露。如果你用了VPN 或代理, 这里能确认是否真正匿名。 开始检测.",
+          "providerResultOrder": 3,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        },
+        {
+          "title": "DNS 泄露检测：检查解析器是否绕过代理 - IP透视",
+          "url": "https://www.iptoushi.com/dns-leak-test",
+          "snippet": "# DNS 泄露检测：检查解析器是否绕过代理\n## 相关检测\n[**IP 泄露检测** 同时检查当前出口 IP、DNS 路径和 WebRTC 公网候选地址，发现代理之外可能暴露的真实 IP 或跨地区网络路径。](https://www.iptoushi.com/ip-leak-test) [**WebRTC 泄露检测** 通过 WebRTC ICE/STUN 检查浏览器暴露的公网与本地候选地址，判断是否出现与当前代理出口不同的公网 IP。](https://www.iptoushi.com/webrtc-leak-test) [**浏览器指纹检测** 查看当前浏览器公开的系统、语言、时区、Canvas、WebGL 与 Cookie 状态，理解这些特征如何形成可关联的浏览器指纹。](https://www.iptoushi.com/browser-fingerprint) [**VPN / 代理检测** 查询当前出口 IP 是否命中 VPN、公开代理、住宅代理、Tor、匿名网络或机房托管标签，并解释每项检测结果的边界。](https://www.iptoushi.com/vpn-proxy-test) [**节点纯净度检测** 检测当前代理或 VPN 节点的 IP 风险分、网络类型、原生性、匿名标签、静态关联和近 24 小时共享用户情况。](https://www.iptoushi.com/node-purity-test) [**Claude IP 环境风险** 检查当前 IP 所在地区的 Claude 开放性、匿名代理标签、Claude 访问出口分流和浏览器时区一致性，辅助排查环境问题。](https://www.iptoushi.com/claude-ip-risk) [**原生 IP 检测** 对比当前 IP 的网络注册国家、地理定位国家、特别代表地、Anycast 和国家置信度，判断原生、广播或证据不足。](https://www.iptoushi.com/native-ip-test)",
+          "providerResultOrder": 4,
+          "scrapedContentAvailable": true,
+          "scrapeStatusCode": 200,
+          "cacheState": "miss",
+          "cachedAt": null
+        }
+      ],
+      "intentObservation": "Chinese results include live network environment tools and DNS tutorials; explain result limitations, not just another green-score checklist.",
+      "use": "Validate Chinese cluster vocabulary; not search-volume evidence."
+    }
+  ],
+  "existingPageUpdates": [
+    {
+      "slug": "browser-fingerprint-testing-checklist",
+      "action": "Keep as checklist owner and series starting page; link each new narrow diagnostic and include what its result can establish."
+    },
+    {
+      "slug": "browser-fingerprint-signals",
+      "action": "Keep as signal dictionary; link Canvas/WebGL/UA-CH/timezone deep dives rather than duplicating procedures."
+    },
+    {
+      "slug": "read-creepjs-results",
+      "action": "Keep as CreepJS report-reading owner, cross-link the task-first tools comparison and retain original GitHub Pages authority."
+    },
+    {
+      "slug": "configure-http-proxy",
+      "action": "Link DNS report interpretation and explain protocol setup does not verify observed DNS path."
+    },
+    {
+      "slug": "configure-socks5-proxy",
+      "action": "Link DNS diagnostic; retain browser-specific DNS/authentication limits from Chromium official docs."
+    },
+    {
+      "slug": "free-antidetect-browser",
+      "action": "Differentiate free commercial tiers/trials from source availability; link open-source buying/integration article."
+    },
+    {
+      "slug": "browser-automation-profile-persistence",
+      "action": "Keep restart/persistence lifecycle focus and link A/B storage isolation acceptance."
+    }
+  ],
+  "implementationRecommendation": {
+    "newTopics": 8,
+    "completeLanguageEditions": 16,
+    "expandExistingComparisons": 4,
+    "doNotCreate": [
+      "reverse-pair comparison duplicates",
+      "eight synonyms of browser fingerprinting explained",
+      "thin untranslated language URLs"
+    ],
+    "requiredPageValue": [
+      "explicit question answered near start",
+      "task-specific table or reproducible record",
+      "primary documentation citations near claims",
+      "3+ substantive FAQ items with matching visible/schema answers",
+      "internal links to cluster owner and appropriate product/tool pages"
+    ],
+    "measurementNext": "After GSC reports real site queries, prioritize actual impressions/clicks and landing pages; public SERP checks alone cannot prove traffic impact."
+  }
+}

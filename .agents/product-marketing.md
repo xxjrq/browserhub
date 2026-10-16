@@ -10,8 +10,10 @@ WorkBuddy expert source: /Users/myd/.workbuddy/plugins/cache/experts/seo-expert/
 
 Execution plan and keyword ownership: docs/seo/strategy-2026-10-16.md and keyword-map-2026-10-16.json. Prefer improving an existing intent owner over creating synonym duplicates. Learn from competitors’ intent and useful structures, write original explanations, cite primary product/standards documentation and add reproducible decision tools. Do not copy competitor prose, invent testing, fabricate volume/KD/rankings, promise account outcomes or pretend missing GSC data is zero traffic. Public page count is not organic traffic.
 
-Prices are historical snapshots last checked 2026-08-12 unless a specific newer verification is recorded. Content edit dates do not certify product facts. Document-based research must be distinguished from hands-on tests. BrowserHub is not an independent laboratory. Do not invent user reviews or aggregate ratings.
+All 36 catalogue products have field-level public-documentation reviews dated 2026-10-16 in verified-products.ts. 26 price/free-licence records have evidence; 10 paid prices remain unverified. Do not read legacy catalogue prices as current. Content edit dates do not certify product facts. Document-based research must be distinguished from hands-on tests. BrowserHub is not an independent laboratory. Do not invent user reviews or aggregate ratings.
 
 GSC and Bing Webmaster Tools are free. Use an authorized signed-in browser, never ask for passwords. Verification and sitemap submission are not guarantees of indexing. FAQ/llms.txt are not guaranteed search/AI ranking boosts. Do not send external outreach without explicit authorization.
 
 Validation: npm run ci includes build, locale lang repair, static output checks and SEO audit. Read saved audit evidence and report actual live status. Traffic/measurement baselines may be unavailable; record unknowns and dates rather than estimates.
+
+Current editorial direction: prioritize useful, search-informed fingerprint-browser and environment-detection series. The user explicitly deferred indexing work on this pass; leave existing technical setup in place and spend effort on content and comparisons.

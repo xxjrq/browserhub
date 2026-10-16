@@ -1,3 +1,4 @@
+import { GuideSeriesIndex } from "@/components/guide-series";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +17,7 @@ export default function GuidesPage() {
 				</div>
 				<p className="font-mono text-xs tracking-wide text-muted-foreground uppercase">{guides.length} Articles</p>
 			</div>
+			<GuideSeriesIndex locale="zh-cn" />
 			<div className="border-t">
 				{guides.map(guide => (
 					<Link key={guide.slug} href={`/zh-cn/guides/${guide.slug}/`} className="group flex items-center gap-4 border-b py-5 transition-colors hover:bg-muted/40 sm:gap-8">

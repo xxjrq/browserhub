@@ -1,3 +1,4 @@
+import { ComparisonResearch } from "@/components/comparison-research";
 import { ProductEvidence } from "@/components/product-evidence";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -142,6 +143,7 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
 					<div className="mt-4 space-y-4">{section.body.split(/\n{2,}/).map((block, blockIndex) => <p key={blockIndex} className="text-sm leading-7 text-muted-foreground">{block}</p>)}</div>
 				</section>
 			))}
+			<ComparisonResearch slug={comparison.slug} locale="zh-cn" />
 			<section className="mt-10">
 				<h2 className="text-lg font-semibold tracking-tight">常见误区</h2>
 				<ul className="mt-4 space-y-3">{comparisonPitfalls("zh-cn").map(pitfall => <li key={pitfall} className="flex items-start gap-2.5 text-sm leading-7 text-muted-foreground"><Minus className="mt-1 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" aria-hidden="true" /><span>{pitfall}</span></li>)}</ul>

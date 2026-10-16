@@ -19,6 +19,7 @@ const categories = [
 
 export function HomePage() {
 	const featured = browsers.find(browser => browser.featured) ?? browsers[0];
+	const featuredGuides = ["canvas-fingerprint-test", "webgl-fingerprint-test", "browserleaks-vs-creepjs", "open-source-antidetect-browsers"].map(slug => guides.find(guide => guide.slug === slug)).filter((guide): guide is (typeof guides)[number] => Boolean(guide));
 	const featuredRest = browsers.filter(browser => browser.slug !== featured.slug && ["gologin", "adspower", "multilogin"].includes(browser.slug)).slice(0, 3);
 	const stats = [
 		{ value: `${browsers.length}+`, label: "浏览器及相关资源" },
@@ -205,9 +206,9 @@ export function HomePage() {
 			<section className="border-t py-16 md:py-20">
 				<div className="container grid gap-12 lg:grid-cols-[1.6fr_1fr]">
 					<div>
-						<SectionHeader eyebrow="Guides" title="最新指南" description="选型、排查和合规使用的可执行知识。" href="/guides/" action="全部指南" />
+						<SectionHeader eyebrow="Guides" title="指纹浏览器与环境检测专题" description="从检测工具选择到结果判读，循序完成自己的环境检查。" href="/guides/" action="全部指南" />
 						<div className="border-t">
-							{guides.slice(0, 4).map(guide => (
+							{featuredGuides.map(guide => (
 								<Link key={guide.slug} href={`/zh-cn/guides/${guide.slug}/`} className="group flex items-center gap-4 border-b py-4 transition-colors hover:bg-muted/40 sm:gap-6">
 									<span className="hidden w-24 shrink-0 font-mono text-xs text-muted-foreground sm:block">{guide.date}</span>
 									<span className="min-w-0 flex-1">

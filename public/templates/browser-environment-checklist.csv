@@ -1,0 +1,5 @@
+﻿run_id,condition,observed_at_utc,browser_version,os_version,anonymous_profile_label,controlled_test_origin,canvas_result,webgl_renderer,ua_and_client_hints,timezone_and_date_offset,language_and_accept_language,http_exit_observation,dns_resolver_observation,webrtc_candidate_type,cookie_marker,localstorage_marker,indexeddb_marker,interpretation,next_step
+A1,baseline_same_origin,,,,A,,,,,,,,,,,,,,
+A2,refresh_same_inputs,,,,A,,,,,,,,,,,,,,
+A3,close_and_reopen_same_profile,,,,A,,,,,,,,,,,,,,
+B1,separate_profile_same_origin,,,,B,,,,,,,,,,,,,,

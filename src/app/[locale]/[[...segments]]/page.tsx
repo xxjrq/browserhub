@@ -1,7 +1,9 @@
+import { ComparisonResearch } from "@/components/comparison-research";
+import { GuideSeriesIndex } from "@/components/guide-series";
 import { ProductEvidence } from "@/components/product-evidence";
 import { verifiedProducts } from "@/data/verified-products";
 import { toolDisplay } from "@/lib/tool-display";
-import { browserDisplay, comparisonEditorial } from "@/data/browser-editorial";
+import { browserDisplay } from "@/data/browser-editorial";
 import { SectionBody } from "@/components/section-body";
 import { PrivacyNotice } from "@/components/privacy-notice";
 import Link from "next/link";
@@ -117,7 +119,7 @@ function Home({ locale }: { locale: Locale }) {
 function Collection({ locale, kind }: { locale: Locale; kind: LocalizedKind }) {
 	const labels = t(locale);
 	const config = kind === "browsers" ? { title: labels.browsers, intro: labels.browserIntro, items: browsers, eyebrow: "Database / Browsers" } : kind === "tools" ? { title: labels.tools, intro: labels.toolIntro, items: tools, eyebrow: "Database / Tools" } : kind === "fingerprint" ? { title: labels.fingerprint, intro: labels.fingerprintIntro, items: technologies, eyebrow: "Knowledge / Fingerprint" } : kind === "guides" ? { title: labels.guides, intro: labels.guideIntro, items: guides, eyebrow: "Knowledge / Guides" } : { title: labels.compare, intro: labels.compareIntro, items: comparisons, eyebrow: "Database / Compare" };
-	return <Shell locale={locale} path={kind}><PageHeader locale={locale} eyebrow={config.eyebrow} title={config.title} description={config.intro} count={config.items.length} /><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{config.items.map(item => { const name = "content" in item ? localizedGuideCopy(locale, item.slug, item).title : "name" in item ? item.name : "title" in item ? item.title : ""; const description = localizedResourceDescription(locale, kind, item); return <Link key={item.slug} href={contentPath(locale, `${kind}/${item.slug}`)} className="group flex h-full flex-col rounded-xl border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-foreground/30"><div className="flex items-start gap-3">{"name" in item && "website" in item && <ResourceIcon name={item.name} src={item.icon} website={item.website} size={40} />}<div className="min-w-0 flex-1"><h2 className="font-semibold tracking-tight">{name}</h2><p className="mt-1 font-mono text-[11px] uppercase text-muted-foreground">{"category" in item ? kind === "guides" ? guideCategoryLabel(locale, item.category) : item.category : kind}</p></div>{"status" in item && <StatusBadge status={item.status} locale={locale} />}</div><p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{description}</p><span className="mt-5 inline-flex items-center gap-1 border-t pt-3 text-sm font-medium text-muted-foreground group-hover:text-primary">{labels.details}<ArrowRight className="h-3.5 w-3.5" /></span></Link>; })}</div></Shell>;
+	return <Shell locale={locale} path={kind}><PageHeader locale={locale} eyebrow={config.eyebrow} title={config.title} description={config.intro} count={config.items.length} />{kind === "guides" && <GuideSeriesIndex locale={locale} />}<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{config.items.map(item => { const name = "content" in item ? localizedGuideCopy(locale, item.slug, item).title : "name" in item ? item.name : "title" in item ? item.title : ""; const description = localizedResourceDescription(locale, kind, item); return <Link key={item.slug} href={contentPath(locale, `${kind}/${item.slug}`)} className="group flex h-full flex-col rounded-xl border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-foreground/30"><div className="flex items-start gap-3">{"name" in item && "website" in item && <ResourceIcon name={item.name} src={item.icon} website={item.website} size={40} />}<div className="min-w-0 flex-1"><h2 className="font-semibold tracking-tight">{name}</h2><p className="mt-1 font-mono text-[11px] uppercase text-muted-foreground">{"category" in item ? kind === "guides" ? guideCategoryLabel(locale, item.category) : item.category : kind}</p></div>{"status" in item && <StatusBadge status={item.status} locale={locale} />}</div><p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{description}</p><span className="mt-5 inline-flex items-center gap-1 border-t pt-3 text-sm font-medium text-muted-foreground group-hover:text-primary">{labels.details}<ArrowRight className="h-3.5 w-3.5" /></span></Link>; })}</div></Shell>;
 }
 
 function InfoPage({ locale, kind }: { locale: Locale; kind: "about" | "contact" | "privacy" }) {
@@ -154,7 +156,6 @@ function Detail({ locale, kind, item: rawItem }: { locale: Locale; kind: Localiz
 			{ q: questions[3], a: comparisonProxyAnswer(locale) },
 			{ q: questions[4], a: comparisonIsolationAnswer(locale) }
 		];
-		const editorial = comparisonEditorial[item.slug]?.[locale === "zh-cn" ? "zh-cn" : "en"];
 		const pitfallsHeading = { "zh-cn": "常见误区", en: "Common pitfalls", ja: "よくある誤り", ko: "흔한 실수", es: "Errores comunes", pt: "Erros comuns", ru: "Частые ошибки" }[locale];
 		return <Shell locale={locale} path={path} related={relatedSlot}><article className="mx-auto max-w-6xl">
 			<header className="mb-10"><div className="flex flex-wrap items-center gap-4"><ResourceIcon name={a.name} src={a.icon} website={a.website} size={52} /><span className="text-2xl font-semibold">{a.name}</span><span className="rounded-full border px-3 py-1 font-mono text-sm text-muted-foreground">vs</span><ResourceIcon name={b.name} src={b.icon} website={b.website} size={52} /><span className="text-2xl font-semibold">{b.name}</span></div><h1 className="mt-7 text-3xl font-semibold tracking-tight sm:text-4xl">{a.name} vs {b.name}</h1><p className="mt-5 max-w-4xl text-lg leading-8 text-muted-foreground">{copy.overview}</p></header>
@@ -173,7 +174,7 @@ function Detail({ locale, kind, item: rawItem }: { locale: Locale; kind: Localiz
 					<div className="mt-4 space-y-4">{section.body.split(/\n{2,}/).map((block, blockIndex) => <p key={blockIndex} className="text-sm leading-7 text-muted-foreground">{block}</p>)}</div>
 				</section>
 			))}
-			{editorial && <section className="mt-10 space-y-8" lang={locale === "zh-cn" ? "zh-CN" : "en"}>{editorial.sections.map(section => <section key={section.heading}><h2 className="mb-3 text-xl font-semibold">{section.heading}</h2><SectionBody body={section.body} /></section>)}<div className="rounded-lg border p-5"><h2 className="font-semibold">{locale === "zh-cn" ? "官方资料与核查日期" : "Official sources and review dates"}</h2><ul className="mt-3 space-y-2 text-sm">{editorial.sources.map(source => <li key={source.url}><a href={source.url} className="text-primary underline underline-offset-4">{source.label}</a> · {source.accessedAt}</li>)}</ul></div></section>}
+			<ComparisonResearch slug={item.slug} locale={locale} />
 			<section className="mt-10">
 				<h2 className="text-xl font-semibold">{pitfallsHeading}</h2>
 				<ul className="mt-4 space-y-3">{comparisonPitfalls(locale).map(pitfall => <li key={pitfall} className="flex items-start gap-2.5 text-sm leading-7 text-muted-foreground"><Minus className="mt-1 h-3.5 w-3.5 shrink-0 text-muted-foreground/50" aria-hidden="true" /><span>{pitfall}</span></li>)}</ul>

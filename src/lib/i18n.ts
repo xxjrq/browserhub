@@ -1,3 +1,4 @@
+import { guideSeriesFor } from "@/data/guide-series";
 import { verifiedProducts } from "@/data/verified-products";
 import { comparisonEditorial } from "@/data/browser-editorial";
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
@@ -95,7 +96,7 @@ export function comparisonCopy(locale: Locale, a: BrowserResource, b: BrowserRes
 		pt: `Compare ${a.name} e ${b.name} por plataformas, armazenamento, permissões e automação. Teste ambos com as mesmas tarefas e confirme as condições atuais com cada fornecedor.`,
 		ru: `Сравните ${a.name} и ${b.name} по платформам, хранению, правам и задачам автоматизации. Проверьте оба решения одинаковыми заданиями и уточните текущие условия у поставщиков.`
 	};
-	return { ...templates[locale], verdict: editorial && (locale === "en" || locale === "zh-cn") ? editorial[locale].sections[0].body.split("\n\n")[0] : neutral[locale] };
+	return { ...templates[locale], verdict: editorial && (locale === "en" || locale === "zh-cn") ? editorial[locale].sections[0].body.split("\n\n")[0].replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") : neutral[locale] };
 }
 
 export type RelatedLink = { href: string; title: string; description: string; kind: LocalizedKind };
@@ -127,6 +128,8 @@ export function toolHowToSteps(locale: Locale): [string, string, string] {
  */
 export function guideCategoryLabel(locale: Locale, category: string): string {
 	const map: Record<string, Partial<Record<Locale, string>>> = {
+		"环境检测": { en: "Environment diagnostics" },
+		"工具对比": { en: "Tool comparisons" },
 		"选型指南": { en: "Selection guide", ja: "選定ガイド", ko: "선정 가이드", es: "Guía de selección", pt: "Guia de seleção", ru: "Руководство по выбору" },
 		"技术百科": { en: "Technical explainer", ja: "技術解説", ko: "기술 해설", es: "Explicación técnica", pt: "Explicação técnica", ru: "Технический разбор" },
 		"使用教程": { en: "Tutorial", ja: "チュートリアル", ko: "튜토리얼", es: "Tutorial", pt: "Tutorial", ru: "Руководство" },
@@ -189,20 +192,29 @@ export function relatedLinks(locale: Locale, kind: LocalizedKind, item: any, lim
 	}
 
 	if (kind === "tools" || kind === "fingerprint") {
+		const guideMap: Record<string, string[]> = {
+			creepjs: ["browserleaks-vs-creepjs", "read-creepjs-results", "browser-fingerprint-testing-checklist"],
+			browserleaks: ["browserleaks-vs-creepjs", "browser-fingerprint-testing-checklist", "dns-leak-test-browser-proxy"],
+			canvas: ["canvas-fingerprint-test"], webgl: ["webgl-fingerprint-test"],
+			webrtc: ["webrtc-leak-check"], dns: ["dns-leak-test-browser-proxy"], timezone: ["browser-timezone-language-check"], language: ["browser-timezone-language-check"],
+			"user-agent": ["user-agent-client-hints-check"], storage: ["browser-profile-storage-isolation-test"]
+		};
+		const practicalGuides = (guideMap[item.slug] ?? []).map(slug => guides.find(guide => guide.slug === slug)).filter((entry): entry is GuideResource => Boolean(entry)).map(entry => link("guides", entry));
 		const sameCategory = kind === "tools"
 			? tools.filter(entry => entry.slug !== item.slug && entry.categorySlug === item.categorySlug)
 			: technologies.filter(entry => entry.slug !== item.slug && entry.category === item.category);
 		const siblings = kind === "tools"
 			? tools.filter(entry => entry.slug !== item.slug).slice(0, 2).map(entry => link("tools", entry))
 			: browsers.filter(entry => entry.rating >= 4.5).slice(0, 3).map(entry => link("browsers", entry));
-		return pick([...sameCategory.slice(0, 3).map(entry => link(kind, entry)), ...siblings]);
+		return pick([...practicalGuides, ...sameCategory.slice(0, 3).map(entry => link(kind, entry)), ...siblings]);
 	}
 
 	// Guides: reuse the curated relations already present in the dataset, then widen.
 	const guide = item as GuideResource;
 	const relatedBrowserLinks = (guide.relatedBrowsers ?? []).map(slug => browsers.find(entry => entry.slug === slug)).filter((entry): entry is BrowserResource => Boolean(entry)).map(entry => link("browsers", entry));
 	const relatedToolLinks = (guide.relatedTools ?? []).map(slug => tools.find(entry => entry.slug === slug)).filter((entry): entry is ToolResource => Boolean(entry)).map(entry => link("tools", entry));
-	const otherGuides = guides.filter(entry => entry.slug !== guide.slug && (guide.relatedGuides?.includes(entry.slug) || entry.slug === "best-antidetect-browsers-2026" || entry.category === guide.category)).slice(0, 4).map(entry => link("guides", entry));
+	const orderedGuideSlugs = [...(guide.relatedGuides ?? []), ...(guideSeriesFor(guide.slug)?.slugs ?? []), ...guides.filter(entry => entry.category === guide.category).map(entry => entry.slug), "best-antidetect-browsers-2026"];
+	const otherGuides = [...new Set(orderedGuideSlugs)].filter(slug => slug !== guide.slug).map(slug => guides.find(entry => entry.slug === slug)).filter((entry): entry is GuideResource => Boolean(entry)).slice(0, 4).map(entry => link("guides", entry));
 	// Guides usually carry no curated relations, so fall back to top-rated browsers and
 	// detection tools. Without this most guide pages would render no internal links at all.
 	const fallbackBrowsers = browsers.filter(entry => entry.rating >= 4.5).slice(0, 3).map(entry => link("browsers", entry));
@@ -324,6 +336,7 @@ const browserTypeLabel: Record<string, string> = { commercial: "商业", "open-s
 // catalog is assembled from several JSON files with different shapes.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function localizedResourceDescription(locale: Locale, kind: LocalizedKind, item: any) {
+	if (kind === "guides" && "title" in item) return localizedGuideCopy(locale, item.slug, item).description;
 	if (kind === "browsers" && verifiedProducts[item.slug]) {
 		const fields = verifiedProducts[item.slug][locale === "zh-cn" ? "zh" : "en"];
 		return `${item.name}: ${fields.description} ${fields.free}; ${fields.price}.`;
