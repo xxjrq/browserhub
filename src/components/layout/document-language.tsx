@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import { localeFromPath, localeMeta } from "@/lib/i18n";
+import { localeFromPath, localeMeta } from "@/lib/locale-ui";
 
 export function DocumentLanguage() {
 	const pathname = usePathname();

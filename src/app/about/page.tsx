@@ -1,6 +1,7 @@
+import { EditorialPolicy } from "@/components/editorial-policy";
 import { Check } from "lucide-react";
 
-export const metadata = { title: "关于项目", description: "BrowserHub 指纹浏览器、检测工具和隐私资源项目说明。", alternates: { canonical: "/about/" } };
+export const metadata = { title: "关于项目", description: "BrowserHub 指纹浏览器、检测工具和隐私资源项目说明。", alternates: { canonical: "/zh-cn/about/" } };
 
 const principles = ["优先链接官方页面。", "产品价格和功能以官方信息为准。", "特色推荐会明确标注，不伪装成客观排名。"];
 
@@ -23,6 +24,7 @@ export default function AboutPage() {
 						))}
 					</ul>
 				</div>
+				<EditorialPolicy />
 			</article>
 		</div>
 	);

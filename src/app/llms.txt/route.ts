@@ -19,15 +19,15 @@ function browserLine(b: (typeof browsers)[number]) {
 export function GET() {
 	const browserFacts = browsers.map(browserLine).join("\n");
 	const compareList = comparisons.map(c => c.title).join("、");
-	const guideList = guides.map(g => `- ${g.title}（${g.category}）`).join("\n");
+	const guideList = guides.map(g => `- [${g.title}](https://browserhub.co/zh-cn/guides/${g.slug}/) · [English](https://browserhub.co/en/guides/${g.slug}/)`).join("\n");
 	const toolFacts = tools.slice(0, 12).map(t => `- ${t.name} — ${t.category}`).join("\n");
 
 	const body = `# BrowserHub 指纹浏览器资源大全
 
-BrowserHub is an independent, open research hub for anti-detect (fingerprint) browsers, detection & automation tools, proxy and privacy technologies. It compares public, verifiable product facts so individuals, growth teams and developers can evaluate multi-account and privacy tooling. Pricing and features change — always confirm on the official site.
+BrowserHub is an open resource and research hub for anti-detect (fingerprint) browsers, detection & automation tools, proxy and privacy technologies. It compares public, verifiable product facts so individuals, growth teams and developers can evaluate multi-account and privacy tooling. Pricing and features change — always confirm on the official site.
 
 ## 关于 BrowserHub / About
-BrowserHub（中文名「指纹浏览器资源大全」）是一个独立的开源资料站，统一整理反检测浏览器、浏览器指纹检测、自动化框架、代理与隐私技术。所有数据以公开信息为准，帮助跨境电商、社媒运营、安全研究与开发者对比多账号浏览器的免费额度、价格、平台、存储、代理与自动化能力。
+BrowserHub（中文名「指纹浏览器资源大全」）是一个开源资料站（EasyBR 为关联产品），统一整理反检测浏览器、浏览器指纹检测、自动化框架、代理与隐私技术。所有数据以公开信息为准，帮助跨境电商、社媒运营、安全研究与开发者对比多账号浏览器的免费额度、价格、平台、存储、代理与自动化能力。
 
 ## 覆盖内容 / What we cover
 - 反检测 / 指纹浏览器（多账号环境隔离）
@@ -36,6 +36,10 @@ BrowserHub（中文名「指纹浏览器资源大全」）是一个独立的开�
 - 浏览器指纹信号（Canvas、WebGL、WebRTC、TLS、时区、语言、存储）
 - 实用指南（浏览器选型、代理配置、多账号最佳实践）
 - 热门浏览器横向对比
+
+## Editorial disclosure
+EasyBR is affiliated with BrowserHub and receives featured placement. Articles use public documentation unless a reproducible test is explicitly described. Editorial policy: https://browserhub.co/en/about/
+Directory prices are historical snapshots last checked 2026-08-12, not current quotes. Verify on official sites.
 
 ## 收录浏览器（关键事实）/ Browsers tracked
 ${browserFacts}

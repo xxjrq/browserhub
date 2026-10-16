@@ -1,3 +1,4 @@
+import { EngagementTracking } from "@/components/engagement-tracking";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
@@ -81,6 +82,7 @@ export default function RootLayout({
   s.parentNode.insertBefore(hm, s);
 })();`}</Script>}
 				<DocumentLanguage />
+				<EngagementTracking />
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
 					{
 						"@context": "https://schema.org",

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Languages, Menu, Moon, Search, Sun, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
-import { a11y, localeFromPath, localeMeta, localePath, locales, t } from "@/lib/i18n";
+import { a11y, contentLocales, contentPath, localeFromPath, localeMeta, localePath, locales, t } from "@/lib/locale-ui";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -74,7 +74,7 @@ export function Header() {
 				<details className="relative hidden md:block">
 					<summary className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "list-none cursor-pointer text-muted-foreground hover:text-foreground")} aria-label={a11yText.language}><Languages className="h-[18px] w-[18px]" /></summary>
 					<div className="absolute top-11 right-0 z-50 grid min-w-32 gap-1 rounded-lg border bg-background p-1.5 shadow-xl">
-						{locales.map(target => <Link key={target} href={localePath(target, resourcePath)} className={cn("rounded-md px-3 py-2 text-sm hover:bg-muted", target === locale && "bg-muted font-medium")} hrefLang={localeMeta[target].hreflang}>{localeMeta[target].label}</Link>)}
+						{contentLocales(resourcePath).map(target => <Link key={target} href={contentPath(target, resourcePath)} className={cn("rounded-md px-3 py-2 text-sm hover:bg-muted", target === locale && "bg-muted font-medium")} hrefLang={localeMeta[target].hreflang}>{localeMeta[target].label}</Link>)}
 					</div>
 				</details>
 				<button type="button" onClick={toggleTheme} className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "text-muted-foreground hover:text-foreground")} aria-label={dark ? a11yText.lightTheme : a11yText.darkTheme}>{dark ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}</button>
@@ -88,7 +88,7 @@ export function Header() {
 						<Link key={item.path} href={hrefFor(item.path)} onClick={() => setOpen(false)} className={cn("rounded-md px-3 py-2.5 text-sm", isActive(item.path) ? "bg-muted font-medium text-foreground" : "text-muted-foreground hover:bg-muted hover:text-foreground")}>{item.name}</Link>
 					))}
 					<div className="mt-2 grid grid-cols-2 gap-1 border-t pt-2">
-						{locales.map(target => <Link key={target} href={localePath(target, resourcePath)} onClick={() => setOpen(false)} className="rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">{localeMeta[target].label}</Link>)}
+						{contentLocales(resourcePath).map(target => <Link key={target} href={contentPath(target, resourcePath)} onClick={() => setOpen(false)} className="rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">{localeMeta[target].label}</Link>)}
 					</div>
 				</div>
 			</nav>

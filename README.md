@@ -78,3 +78,11 @@ bash scripts/deploy.sh
 ## 数据来源与维护
 
 浏览器、工具、技术和场景目录集中存放在 `src/data/catalog/`；浏览器详情同时参考主资源库 `xxjrq/antidetect-browser-hub` 的公开整理内容。新增或修订条目时，请保留官方链接、适用场景和限制说明，不提交密码、令牌或其他敏感信息。
+
+## SEO / GEO 内容维护
+
+- [90 天执行计划](docs/seo/strategy-2026-10-16.md)、[关键词与页面映射](docs/seo/keyword-map-2026-10-16.json)、[本轮交付与验收](docs/seo/delivery-2026-10-16.md)
+- 新的中英文长文集中在 `src/data/editorial-guides.ts`；未完整翻译的语言不自动扩为可索引版本。每篇保留官方来源、真实核查日期、边界说明和关联关系披露。
+- `npm run ci` 包含规范地址、sitemap、hreflang、内部链接、正文与结构化数据一致性检查；`npm run audit:seo` 可以单独复验已有 `out/`。
+- Google/Bing 验证文件和 IndexNow ownership 文件在 `public/`，后续发布应保留。提交搜索引擎不等于已收录，也不能替代点击和转化数据。
+- 生产使用原有百度统计和本站独立 nginx 日志；观测口径见 `docs/seo/measurement-setup-2026-10-16.md`。

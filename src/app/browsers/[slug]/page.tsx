@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 	if (!browser) return {};
 	const title = `${browser.name}：价格、功能与平台信息`;
 	const description = `${browser.name} 指纹浏览器资料：免费额度、价格、环境数量、平台、内核、API、自动化、代理、优势与限制。`;
-	return { title, description, alternates: { canonical: `/browsers/${browser.slug}/` }, openGraph: { title, description, url: `/browsers/${browser.slug}/` } };
+	return { title, description, alternates: { canonical: `/zh-cn/browsers/${browser.slug}/` }, openGraph: { title, description, url: `/zh-cn/browsers/${browser.slug}/` } };
 }
 
 function SpecRow({ label, value }: { label: string; value: React.ReactNode }) {
@@ -61,7 +61,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 	];
 	const jsonLd = [
 		{ "@context": "https://schema.org", "@type": "SoftwareApplication", name: browser.name, description: browser.description, applicationCategory: "WebApplication", operatingSystem: browser.platforms.join(", "), url: browser.website },
-		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "指纹浏览器", item: "https://browserhub.co/browsers/" }, { "@type": "ListItem", position: 3, name: browser.name, item: `https://browserhub.co/browsers/${browser.slug}/` }] },
+		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "指纹浏览器", item: "https://browserhub.co/zh-cn/browsers/" }, { "@type": "ListItem", position: 3, name: browser.name, item: `https://browserhub.co/zh-cn/browsers/${browser.slug}/` }] },
 		{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(item => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) }
 	];
 
@@ -163,7 +163,7 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 						<CardContent className="space-y-4">
 							<SpecRow label="免费额度" value={browser.free} />
 							<SpecRow label="起步价格" value={<span className="font-mono">{browser.price}</span>} />
-							<SpecRow label="官方价格页" value={<a href={browser.pricingUrl ?? browser.website} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-4 hover:underline">查看</a>} />
+							<SpecRow label="官方价格页" value={<a data-official-link="true" href={browser.pricingUrl ?? browser.website} target="_blank" rel="noopener noreferrer" className="text-primary underline-offset-4 hover:underline">查看</a>} />
 							<SpecRow label="环境数量" value={browser.profiles} />
 							<Separator />
 							<CapabilityRow label="API" ok={browser.api} />
@@ -180,11 +180,11 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 							</div>
 							<Separator />
 							<div className="space-y-2 pt-1">
-								<a href={browser.sponsored ? `${browser.website}?utm_source=browserhub&utm_medium=referral&utm_campaign=resource_hub` : browser.website} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants(), "w-full")}>
+								<a data-official-link="true" href={browser.sponsored ? `${browser.website}?utm_source=browserhub&utm_medium=referral&utm_campaign=resource_hub` : browser.website} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants(), "w-full")}>
 									<ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />访问官网
 								</a>
 								{browser.download && (
-									<a href={browser.download} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "outline" }), "w-full")}>
+									<a data-official-link="true" href={browser.download} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "outline" }), "w-full")}>
 										<Download className="mr-2 h-4 w-4" aria-hidden="true" />下载
 									</a>
 								)}

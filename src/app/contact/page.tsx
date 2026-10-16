@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 
-export const metadata = { title: "联系与贡献", description: "通过 GitHub、Gitee、Telegram 和 QQ 群联系 BrowserHub 项目。", alternates: { canonical: "/contact/" } };
+export const metadata = { title: "联系与贡献", description: "通过 GitHub、Gitee、Telegram 和 QQ 群联系 BrowserHub 项目。", alternates: { canonical: "/zh-cn/contact/" } };
 
 const channels = [
 	{ name: "GitHub Issues", description: "提交资源、修正和功能建议", href: "https://github.com/xxjrq/antidetect-browser-hub/issues" },

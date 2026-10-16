@@ -10,12 +10,12 @@ const statusMeta: Record<ResourceStatus, { label: string; dot: string }> = {
 	inactive: { label: "停更", dot: "bg-destructive" }
 };
 
-export function StatusBadge({ status, className }: { status: ResourceStatus; className?: string }) {
+export function StatusBadge({ status, className, locale = "zh-cn" }: { status: ResourceStatus; className?: string; locale?: string }) {
 	const meta = statusMeta[status] ?? statusMeta["pending-review"];
 	return (
 		<span className={cn("inline-flex w-fit shrink-0 items-center gap-1.5 rounded-full border bg-card px-2 py-0.5 text-xs whitespace-nowrap text-muted-foreground", className)}>
 			<span className={cn("h-1.5 w-1.5 rounded-full", meta.dot)} aria-hidden="true" />
-			{meta.label}
+			{locale === "zh-cn" ? meta.label : ({ recommended: "Featured", active: "Active", "open-source": "Open source", experimental: "Experimental", "pending-review": "To verify", inactive: "Inactive" }[status])}
 		</span>
 	);
 }

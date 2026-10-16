@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { technologies } from "@/data/resources";
 
-export const metadata = { title: "浏览器指纹技术", description: "理解 Canvas、WebGL、设备、语言、网络和存储等浏览器指纹信号。", alternates: { canonical: "/fingerprint/" } };
+export const metadata = { title: "浏览器指纹技术", description: "理解 Canvas、WebGL、设备、语言、网络和存储等浏览器指纹信号。", alternates: { canonical: "/zh-cn/fingerprint/" } };
 
 export default function FingerprintPage() {
 	return (

@@ -17,6 +17,7 @@ const descriptions = new Map();
 const locales = ["zh-cn", "en", "ja", "ko", "es", "pt", "ru"];
 const localeLang = { "zh-cn": "zh-CN", en: "en", ja: "ja", ko: "ko", es: "es", pt: "pt", ru: "ru" };
 for (const file of htmlFiles) {
+	if (/\/google[a-f0-9]+\.html$/.test(file)) continue;
 	const html = fs.readFileSync(file, "utf8");
 	if (!file.includes("/404") && !file.includes("/_not-found")) {
 		if ((html.match(/<h1\b/gi) ?? []).length !== 1) errors.push(`${file}: expected one h1`);
@@ -36,7 +37,9 @@ for (const file of htmlFiles) {
 			const actualLang = html.match(/<html[^>]+lang=["']([^"']+)["']/i)?.[1];
 			if (actualLang !== expectedLang) errors.push(`${file}: expected html lang=${expectedLang}, found ${actualLang ?? "missing"}`);
 			const alternateCount = (html.match(/rel=["']alternate["'][^>]+hrefLang=/gi) ?? []).length;
-			if (alternateCount < 8) errors.push(`${file}: expected 8 hreflang links, found ${alternateCount}`);
+			const fallbackGuide = /^(ja|ko|es|pt|ru)\/guides\/[^/]+\//.test(relative);
+			const expectedAlternates = /^(zh-cn|en)\/guides\/[^/]+\//.test(relative) ? 3 : fallbackGuide ? 0 : 8;
+			if (alternateCount !== expectedAlternates) errors.push(`${file}: expected ${expectedAlternates} hreflang links, found ${alternateCount}`);
 			if (!/<meta[^>]+property=["']og:title["']/i.test(html)) errors.push(`${file}: missing OpenGraph title`);
 		}
 	}

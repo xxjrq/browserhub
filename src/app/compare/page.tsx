@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { browsers, comparisons } from "@/data/resources";
 import { ResourceIcon } from "@/components/resource-icon";
 
-export const metadata = { title: "浏览器对比", description: "用统一字段比较指纹浏览器的功能、价格、平台和适用场景。", alternates: { canonical: "/compare/" } };
+export const metadata = { title: "浏览器对比", description: "用统一字段比较指纹浏览器的功能、价格、平台和适用场景。", alternates: { canonical: "/zh-cn/compare/" } };
 
 export default function ComparePage() {
 	return (

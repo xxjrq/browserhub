@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 	if (!technology) return {};
 	const title = `${technology.name} 浏览器指纹：原理、检测与隐私影响`;
 	const description = `${technology.name} 浏览器指纹技术说明：工作原理、常见检测方式、隐私影响、排查工具和合规防护思路。`;
-	return { title, description, alternates: { canonical: `/fingerprint/${technology.slug}/` }, openGraph: { title, description, url: `/fingerprint/${technology.slug}/` } };
+	return { title, description, alternates: { canonical: `/zh-cn/fingerprint/${technology.slug}/` }, openGraph: { title, description, url: `/zh-cn/fingerprint/${technology.slug}/` } };
 }
 
 export default async function FingerprintDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -26,8 +26,8 @@ export default async function FingerprintDetailPage({ params }: { params: Promis
 	if (!technology) notFound();
 	const relatedTools = tools.filter(tool => tool.slug !== "playwright" && tool.slug !== "puppeteer").slice(0, 4);
 	const jsonLd = [
-		{ "@context": "https://schema.org", "@type": "TechArticle", headline: `${technology.name} 浏览器指纹：原理、检测与隐私影响`, description: technology.description, dateModified: "2026-10-15", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/fingerprint/${technology.slug}/` },
-		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "浏览器指纹技术", item: "https://browserhub.co/fingerprint/" }, { "@type": "ListItem", position: 3, name: technology.name, item: `https://browserhub.co/fingerprint/${technology.slug}/` }] }
+		{ "@context": "https://schema.org", "@type": "TechArticle", headline: `${technology.name} 浏览器指纹：原理、检测与隐私影响`, description: technology.description, dateModified: "2026-10-15", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/zh-cn/fingerprint/${technology.slug}/` },
+		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "浏览器指纹技术", item: "https://browserhub.co/zh-cn/fingerprint/" }, { "@type": "ListItem", position: 3, name: technology.name, item: `https://browserhub.co/zh-cn/fingerprint/${technology.slug}/` }] }
 	];
 	return (
 		<div className="container py-10 md:py-14">

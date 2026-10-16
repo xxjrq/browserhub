@@ -4,6 +4,7 @@ import toolCatalog from "./catalog/tools.json";
 import technologyCatalog from "./catalog/technologies.json";
 import useCaseCatalog from "./catalog/use-cases.json";
 import { comparisonSections } from "./comparison-sections";
+import { editorialGuides } from "./editorial-guides";
 
 export type ResourceStatus = "recommended" | "active" | "open-source" | "experimental" | "pending-review" | "inactive";
 
@@ -82,6 +83,10 @@ export type GuideResource = {
 	sections?: Array<{ heading: string; body: string }>;
 	relatedBrowsers?: string[];
 	relatedTools?: string[];
+	sources?: Array<{ title: string; url: string }>;
+	faq?: Array<{ question: string; answer: string }>;
+	relatedGuides?: string[];
+	availableLocales?: string[];
 };
 
 export type ComparisonResource = {
@@ -278,12 +283,13 @@ export const technologies: TechnologyResource[] = technologyRows.map(item => ({
 	slug: item.id,
 	description: technologyDescriptions[item.id] ?? "浏览器环境识别与隐私研究中的一个信号维度。",
 	category: item.category,
-	doc: item.doc
+	doc: item.doc.startsWith("docs/") ? `https://github.com/xxjrq/antidetect-browser-hub/blob/main/${item.doc}` : item.doc
 }));
 
 export const useCases: UseCaseResource[] = (useCaseCatalog.useCases as Array<{ id: string; name: string; recommendedCategories: string[] }>).map(item => ({ ...item, slug: item.id }));
 
 export const guides: GuideResource[] = [
+	...editorialGuides,
 	{
 		title: "如何选择指纹浏览器",
 		slug: "how-to-choose-antidetect-browser",
@@ -300,15 +306,15 @@ export const guides: GuideResource[] = [
 			},
 			{
 				heading: "六个应该逐项核对的判断依据",
-				body: "不要按品牌印象或单价高低做决定。以下六项是真正拉开差距的维度，建议逐项记录结论：\n\n- 环境隔离方式：环境数据存在本地还是云端，决定了数据可迁移性和协作方式。本地优先的工具在断网时仍可使用，云端方案在跨设备协作上更方便。\n- 浏览器内核与版本策略：内核决定了指纹信号的基线。停更的旧内核会随着目标平台升级而逐步失效，选型时应确认厂商的内核跟进节奏。\n- 代理能力：至少要确认是否支持 HTTP、HTTPS、SOCKS5，是否支持代理绑定到单个环境，以及是否具备 DNS 处理选项。\n- 平台覆盖：Windows、macOS、Linux、Cloud 的组合要覆盖你实际的办公环境。\n- 自动化与 API：是否有稳定的接口、是否与主流自动化框架兼容，这决定你能否把手工流程沉淀成脚本。\n- 团队与权限：多成员协作时，最小权限、共享边界和变更记录比单人功能更重要。\n\n本站对比页中的平台、内核、存储、免费额度和起步价格字段，就是按这套口径整理的，可以直接作为核对清单使用。"
+				body: "不要按品牌印象或单价高低做决定。以下六项是真正拉开差距的维度，建议逐项记录结论：\n\n- 环境隔离方式：环境数据存在本地还是云端，决定了数据可迁移性和协作方式。本地优先是否能断网使用，仍取决于授权、同步和目标网站的联网要求，云端方案在跨设备协作上更方便。\n- 浏览器内核与版本策略：内核决定了指纹信号的基线。停更的旧内核会随着目标平台升级而逐步失效，选型时应确认厂商的内核跟进节奏。\n- 代理能力：至少要确认是否支持 HTTP、HTTPS、SOCKS5，是否支持代理绑定到单个环境，以及是否具备 DNS 处理选项。\n- 平台覆盖：Windows、macOS、Linux、Cloud 的组合要覆盖你实际的办公环境。\n- 自动化与 API：是否有稳定的接口、是否与主流自动化框架兼容，这决定你能否把手工流程沉淀成脚本。\n- 团队与权限：多成员协作时，最小权限、共享边界和变更记录比单人功能更重要。\n\n本站对比页中的平台、内核、存储、免费额度和起步价格字段，就是按这套口径整理的，可以直接作为核对清单使用。"
 			},
 			{
 				heading: "用四步流程完成选型验证",
-				body: "列清单 → 小样试用 → 价格核算 → 落地检查，按顺序走完，可以避免被单方面宣传带偏。\n\n第一步，列出硬性约束。包括环境数量上限、必须支持的平台、是否必须云端、是否需要 API。把不能妥协的项标成必选。\n\n第二步，用必选项筛出 2 到 3 个候选，用免费额度或最低档套餐实际创建环境。不要跳过这一步，文档写得好不等于实际行为一致。\n\n第三步，核算真实成本时按「环境数 × 单价 × 留存月数」计算，并单独列出代理流量费用。很多产品的价格结构里，代理是按 GB 另计的，这部分常常超过浏览器本身的订阅费。\n\n第四步，落地前做一次一致性检查：新建一个环境，分别在普通访问和目标场景下运行公开检测工具，记录 Canvas、WebGL、时区、语言、WebRTC 的结果。同一环境多次检测应当稳定，不应出现随机跳变。\n\n价格、套餐和功能均可能变化，本页所有价格信息请以对应官网当前页面为准。"
+				body: "列清单 → 小样试用 → 价格核算 → 落地检查，按顺序走完，可以避免被单方面宣传带偏。\n\n第一步，列出硬性约束。包括环境数量上限、必须支持的平台、是否必须云端、是否需要 API。把不能妥协的项标成必选。\n\n第二步，用必选项筛出 2 到 3 个候选，用免费额度或最低档套餐实际创建环境。不要跳过这一步，文档写得好不等于实际行为一致。\n\n第三步，核算真实成本时按实际套餐、席位、计费周期、税费和使用量计算，并单独列出代理流量费用。很多产品的价格结构里，代理是按 GB 另计的，应根据流量预算单独估算，不能假定与订阅费有固定比例。\n\n第四步，落地前做一次一致性检查：新建一个环境，分别在普通访问和目标场景下运行公开检测工具，记录 Canvas、WebGL、时区、语言、WebRTC 的结果。同一环境多次检测应当稳定，不应出现随机跳变。\n\n价格、套餐和功能均可能变化，本页所有价格信息请以对应官网当前页面为准。"
 			},
 			{
 				heading: "四个常见误区",
-				body: "- 把「评分高」直接等同于「适合我」。评分反映的是综合表现，与你的具体约束是否匹配是两回事。\n- 只比较价格，不计算代理成本。多账号场景下，代理流量费用常常是浏览器订阅费的两到三倍。\n- 相信「完全 undetectable」这类表述。不存在对所有站点都不可检测的工具，选择时应以实际检测结果为准，而不是以承诺为准。\n- 用一个环境同时跑多个账号。环境复用是账号串联最常见的原因，每个账号应绑定独立环境，并保持代理、语言、时区的长期一致。\n\n以上内容仅用于资源整理、隐私研究和合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
+				body: "- 把「评分高」直接等同于「适合我」。旧星级仅为主观编辑整理标签，没有统一测试方法，不能作为性能结论。\n- 只比较价格，不计算代理成本。多账号场景下，代理流量费用取决于实际用量和合同，应单独估算，没有通用倍数。\n- 相信「完全 undetectable」这类表述。不存在对所有站点都不可检测的工具，选择时应以实际检测结果为准，而不是以承诺为准。\n- 用一个环境同时跑多个账号。环境复用可能导致共享会话或存储状态，每个账号应绑定独立环境，并保持代理、语言、时区的长期一致。\n\n以上内容仅用于资源整理、隐私研究和合规的浏览器环境管理。请遵守目标平台条款与当地法律。"
 			}
 		]
 	},
@@ -351,7 +357,7 @@ export const guides: GuideResource[] = [
 	{ title: "多账号环境管理实践", slug: "multi-account-best-practices", description: "从环境隔离、代理一致性和权限管理降低账号串联风险。", date: updatedAt, category: "实践指南", sourcePath: "docs/zh-CN/use-cases.md", content: "多账号管理应为每个账号建立独立环境，保持代理、语言、时区和账号行为的一致性，限制共享凭据，并记录环境变更。仅在遵守平台规则和当地法律的范围内使用。", relatedBrowsers: ["easybr", "multilogin", "adspower"], sections: [
 		{
 			heading: "先建立隔离的边界",
-			body: "多账号管理最底层的原则是「一账号一环境」。每个账号绑定独立的环境、独立的代理、独立的登录态，不在环境之间复用 Cookie 或缓存。\n\n环境复用是账号串联最常见的原因。很多被关联的案例，追溯下来都是两个账号共享了同一个指纹环境、同一个出口 IP，或同一份本地存储。隔离边界一旦建立，后续所有一致性操作才有意义。"
+			body: "多账号管理最底层的原则是「一账号一环境」。每个账号绑定独立的环境、独立的代理、独立的登录态，不在环境之间复用 Cookie 或缓存。\n\n环境复用可能暴露共享会话或存储状态；是否产生关联还取决于目标服务的信号与规则。隔离边界一旦建立，后续所有一致性操作才有意义。"
 		},
 		{
 			heading: "保持信号长期一致",
@@ -377,7 +383,7 @@ export const guides: GuideResource[] = [
 		},
 		{
 			heading: "核算真实成本",
-			body: "免费升付费时，按「环境数 × 单价 × 留存月数」计算，并单独列出代理流量费用。多账号场景下，代理常按 GB 计费，可能超过浏览器本身的订阅费。\n\n价格、套餐和功能均可能变化，本文所有价格信息请以对应官网当前页面为准。不要凭记忆里的旧价格做预算。"
+			body: "免费升付费时，按实际套餐、席位、计费周期、税费和使用量计算，并单独列出代理流量费用。多账号场景下，代理常按 GB 计费，可能超过浏览器本身的订阅费。\n\n价格、套餐和功能均可能变化，本文所有价格信息请以对应官网当前页面为准。不要凭记忆里的旧价格做预算。"
 		},
 		{
 			heading: "三个常见误区",
@@ -387,11 +393,11 @@ export const guides: GuideResource[] = [
 	{ title: "本地存储与云端存储区别", slug: "local-vs-cloud-browser-storage", description: "理解浏览器环境数据放在本地或云端时的安全、协作与恢复差异。", date: updatedAt, category: "技术指南", sourcePath: "data/browsers.json", content: "本地存储通常便于控制数据位置和离线使用，云端存储更适合跨设备协作和集中管理。选择时要关注同步范围、备份机制、团队权限和供应商的隐私政策。", relatedBrowsers: ["easybr", "multilogin", "gologin"], sections: [
 		{
 			heading: "两种存储方式分别解决什么",
-			body: "本地优先（local-first）把环境数据放在你自己的设备上，断网也能使用，数据位置和备份节奏由你控制，更适合重视数据自主管控的场景。\n\n云端存储把环境数据放在服务商一侧，跨设备登录即可拉起同一套环境，更适合多地、多设备协作和集中管理。代价是你需要信任服务商的存储安全和隐私政策，并依赖网络连接。"
+			body: "本地优先（local-first）把环境数据放在你自己的设备上；离线可用性还取决于授权和运行要求，数据位置和备份节奏由你控制，更适合重视数据自主管控的场景。\n\n云端存储把环境数据放在服务商一侧，跨设备登录即可拉起同一套环境，更适合多地、多设备协作和集中管理。代价是你需要信任服务商的存储安全和隐私政策，并依赖网络连接。"
 		},
 		{
 			heading: "按你的优先级做选择",
-			body: "可以从四个维度来比对：\n- 离线可用：本地优先在断网时仍可使用，云端依赖网络。\n- 协作便利：云端在跨设备、跨成员同步上更顺手。\n- 数据控制：本地优先对数据位置和删除节奏更有主动权。\n- 恢复能力：云端通常自带集中备份与恢复，本地需要你自己规划备份。\n\n本站对比页的「存储方式」字段会标注每个产品是本地优先、云端还是两者兼有，可以作为核对起点。"
+			body: "可以从四个维度来比对：\n- 离线可用：先实测创建、启动、授权和同步在断网时的行为，不能仅由存储标签推断。\n- 协作便利：云端在跨设备、跨成员同步上更顺手。\n- 数据控制：本地优先对数据位置和删除节奏更有主动权。\n- 恢复能力：云端通常自带集中备份与恢复，本地需要你自己规划备份。\n\n本站对比页的「存储方式」字段会标注每个产品是本地优先、云端还是两者兼有，可以作为核对起点。"
 		},
 		{
 			heading: "迁移与备份的注意点",

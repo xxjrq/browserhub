@@ -1,0 +1,2970 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-16",
+  "timezone": "Asia/Shanghai",
+  "site": "https://browserhub.co/",
+  "purpose": "Editorial intent-to-URL map; not a measured keyword volume or rank report",
+  "baseline": {
+    "timing": "before current SEO release",
+    "sitemapUrls": 956,
+    "browsers": 36,
+    "tools": 35,
+    "technologies": 15,
+    "guides": 12,
+    "comparisons": 29,
+    "indexedPages": null,
+    "organicSessions": null,
+    "referringDomains": null,
+    "observedSampleUrls": [
+      "https://browserhub.co/en/guides/how-to-choose-antidetect-browser/",
+      "https://browserhub.co/ja/guides/how-to-choose-antidetect-browser/",
+      "https://browserhub.co/en/browsers/gologin/"
+    ]
+  },
+  "metricNullMeaning": "not obtained, never zero; replace only with dated source, country, language, device and measurement window",
+  "supportedContentLocalesForCurrentRelease": [
+    "en",
+    "zh-cn"
+  ],
+  "localePolicy": {
+    "legacyEnglishFallbackGuideLocales": [
+      "ja",
+      "ko",
+      "es",
+      "pt",
+      "ru"
+    ],
+    "action": "keep URL reachable, noindex/follow, point to English, exclude from sitemap and active hreflang until full reviewed translations",
+    "legacyChineseGuideAlias": "canonical to zh-cn counterpart"
+  },
+  "rows": [
+    {
+      "id": "brand:browserhub",
+      "primaryKeyword": {
+        "en": "BrowserHub antidetect browser resources",
+        "zh-CN": "BrowserHub 指纹浏览器资源"
+      },
+      "intent": "navigational",
+      "priority": "P0",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/",
+        "https://browserhub.co/en/",
+        "https://browserhub.co/zh-cn/",
+        "https://browserhub.co/about/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/",
+        "https://browserhub.co/zh-cn/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "品牌身份与关联产品披露不足以证明品牌未收录；没有品牌排名基线",
+      "action": "一致的品牌名称/首页WebSite实体/真实about与编辑披露；GSC核查品牌query，不承诺第一",
+      "demandEvidence": "site-owned brand identity, volume unknown"
+    },
+    {
+      "id": "guides:best-antidetect-browsers-2026",
+      "primaryKeyword": {
+        "en": "best antidetect browsers 2026",
+        "zh-CN": "2026 指纹浏览器对比"
+      },
+      "intent": "commercial investigation",
+      "cluster": "selection",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/best-antidetect-browsers-2026/",
+        "https://browserhub.co/zh-cn/guides/best-antidetect-browsers-2026/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "缺少按场景比较的汇总pillar；不是搜索量最高的已证实词",
+      "action": "本轮发布中英稿，方法/证据等级/约束矩阵/官方来源/关联披露，拒绝虚构排名",
+      "relatedSlugs": [
+        "how-to-choose-antidetect-browser",
+        "free-antidetect-browser",
+        "antidetect-browser-macos",
+        "team-browser-evaluation-checklist"
+      ]
+    },
+    {
+      "id": "guides:proxy-vs-vpn-vs-antidetect-browser",
+      "primaryKeyword": {
+        "en": "proxy vs VPN vs antidetect browser",
+        "zh-CN": "代理 VPN 指纹浏览器区别"
+      },
+      "intent": "informational/commercial investigation",
+      "cluster": "network",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/proxy-vs-vpn-vs-antidetect-browser/",
+        "https://browserhub.co/zh-cn/guides/proxy-vs-vpn-vs-antidetect-browser/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "缺少网络出口与环境隔离的能力边界解释",
+      "action": "本轮发布比较矩阵和按任务选择流程",
+      "relatedSlugs": [
+        "configure-http-proxy",
+        "configure-socks5-proxy",
+        "webrtc-leak-check",
+        "residential-vs-datacenter-proxies"
+      ]
+    },
+    {
+      "id": "guides:chrome-profiles-vs-antidetect-browser",
+      "primaryKeyword": {
+        "en": "Chrome profiles vs antidetect browser",
+        "zh-CN": "Chrome 多用户与指纹浏览器区别"
+      },
+      "intent": "informational/commercial investigation",
+      "cluster": "workflows",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chrome-profiles-vs-antidetect-browser/",
+        "https://browserhub.co/zh-cn/guides/chrome-profiles-vs-antidetect-browser/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "缺少普通Chrome Profiles已足够的情境与成本判断",
+      "action": "本轮发布中英稿，区分存储隔离/设备信号，明确不需要额外软件的条件",
+      "relatedSlugs": [
+        "multi-account-best-practices",
+        "local-vs-cloud-browser-storage",
+        "browser-profile-permissions"
+      ]
+    },
+    {
+      "id": "guides:residential-vs-datacenter-proxies",
+      "primaryKeyword": {
+        "en": "residential vs datacenter proxies",
+        "zh-CN": "住宅代理与机房代理区别"
+      },
+      "intent": "commercial investigation",
+      "cluster": "network",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/residential-vs-datacenter-proxies/",
+        "https://browserhub.co/zh-cn/guides/residential-vs-datacenter-proxies/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "现有协议教程不解释代理来源和成本/稳定性边界",
+      "action": "本轮发布选择矩阵和授权/用量核对项；不承诺住宅IP必过检测",
+      "relatedSlugs": [
+        "proxy-vs-vpn-vs-antidetect-browser",
+        "configure-socks5-proxy",
+        "webrtc-leak-check"
+      ]
+    },
+    {
+      "id": "guides:antidetect-browser-macos",
+      "primaryKeyword": {
+        "en": "antidetect browser for macOS",
+        "zh-CN": "Mac 指纹浏览器"
+      },
+      "intent": "commercial investigation",
+      "cluster": "selection",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/antidetect-browser-macos/",
+        "https://browserhub.co/zh-cn/guides/antidetect-browser-macos/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "缺少macOS/Apple Silicon兼容性专项选型",
+      "action": "本轮发布官网要求和兼容性核查，未实测则不宣称性能/原生兼容",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "guides:team-browser-evaluation-checklist",
+      "primaryKeyword": {
+        "en": "team browser evaluation checklist",
+        "zh-CN": "团队指纹浏览器选型清单"
+      },
+      "intent": "commercial investigation",
+      "cluster": "workflows",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/team-browser-evaluation-checklist/",
+        "https://browserhub.co/zh-cn/guides/team-browser-evaluation-checklist/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "权限旧文缺少可直接复用的采购试用流程",
+      "action": "本轮发布权限/撤权/恢复/导出/成本清单和记录字段",
+      "relatedSlugs": [
+        "browser-profile-permissions",
+        "multi-account-best-practices",
+        "local-vs-cloud-browser-storage"
+      ]
+    },
+    {
+      "id": "guides:browser-fingerprint-testing-checklist",
+      "primaryKeyword": {
+        "en": "browser fingerprint testing checklist",
+        "zh-CN": "浏览器指纹检测清单"
+      },
+      "intent": "informational",
+      "cluster": "testing",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-fingerprint-testing-checklist/",
+        "https://browserhub.co/zh-cn/guides/browser-fingerprint-testing-checklist/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "现有检测工具文章缺少统一可复现的跨工具记录",
+      "action": "本轮发布版本/系统/网络/时间模板与解释限制，避免编造通过率",
+      "relatedSlugs": [
+        "browser-fingerprint-signals",
+        "read-creepjs-results",
+        "webrtc-leak-check"
+      ]
+    },
+    {
+      "id": "guides:browser-automation-profile-persistence",
+      "primaryKeyword": {
+        "en": "browser automation profile persistence",
+        "zh-CN": "浏览器自动化档案持久化"
+      },
+      "intent": "informational/developer",
+      "cluster": "workflows",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-automation-profile-persistence/",
+        "https://browserhub.co/zh-cn/guides/browser-automation-profile-persistence/"
+      ],
+      "status": "current-release-deliverable; not claimed published by this map",
+      "gap": "缺少状态持久化/storageState/profile边界教程",
+      "action": "本轮发布可授权测试的状态管理步骤、官方API来源与并发/敏感资料限制",
+      "relatedSlugs": [
+        "chrome-profiles-vs-antidetect-browser",
+        "browser-profile-permissions",
+        "local-vs-cloud-browser-storage"
+      ]
+    },
+    {
+      "id": "guides:how-to-choose-antidetect-browser",
+      "primaryKeyword": {
+        "en": "how to choose an antidetect browser",
+        "zh-CN": "如何选择指纹浏览器"
+      },
+      "intent": "commercial investigation",
+      "cluster": "selection",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/how-to-choose-antidetect-browser/",
+        "https://browserhub.co/zh-cn/guides/how-to-choose-antidetect-browser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/how-to-choose-antidetect-browser/",
+        "https://browserhub.co/zh-cn/guides/how-to-choose-antidetect-browser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "修正无来源费用倍数/离线能力等绝对断言，链接新pillar",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "team-browser-evaluation-checklist"
+      ]
+    },
+    {
+      "id": "guides:browser-fingerprinting-explained",
+      "primaryKeyword": {
+        "en": "what is browser fingerprinting",
+        "zh-CN": "浏览器指纹是什么"
+      },
+      "intent": "informational",
+      "cluster": "testing",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/browser-fingerprinting-explained/",
+        "https://browserhub.co/zh-cn/guides/browser-fingerprinting-explained/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-fingerprinting-explained/",
+        "https://browserhub.co/zh-cn/guides/browser-fingerprinting-explained/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "增加官方API/隐私文档来源，区分环境事实与检测推断",
+      "relatedSlugs": [
+        "browser-fingerprint-signals",
+        "browser-fingerprint-testing-checklist"
+      ]
+    },
+    {
+      "id": "guides:setting-up-proxies-easybr",
+      "primaryKeyword": {
+        "en": "EasyBR proxy setup",
+        "zh-CN": "EasyBR 代理配置"
+      },
+      "intent": "product support",
+      "cluster": "network",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/setting-up-proxies-easybr/",
+        "https://browserhub.co/zh-cn/guides/setting-up-proxies-easybr/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/setting-up-proxies-easybr/",
+        "https://browserhub.co/zh-cn/guides/setting-up-proxies-easybr/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "区分通用协议步骤和实际EasyBR界面/版本；明确关联关系",
+      "relatedSlugs": [
+        "configure-http-proxy",
+        "configure-socks5-proxy",
+        "webrtc-leak-check"
+      ]
+    },
+    {
+      "id": "guides:multi-account-best-practices",
+      "primaryKeyword": {
+        "en": "browser profile management best practices",
+        "zh-CN": "多账号环境管理实践"
+      },
+      "intent": "informational",
+      "cluster": "workflows",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/multi-account-best-practices/",
+        "https://browserhub.co/zh-cn/guides/multi-account-best-practices/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/multi-account-best-practices/",
+        "https://browserhub.co/zh-cn/guides/multi-account-best-practices/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "给出环境变更/授权范围/备份操作清单，避免无证据平台结论",
+      "relatedSlugs": [
+        "chrome-profiles-vs-antidetect-browser",
+        "browser-profile-permissions"
+      ]
+    },
+    {
+      "id": "guides:free-antidetect-browser",
+      "primaryKeyword": {
+        "en": "free antidetect browser",
+        "zh-CN": "免费指纹浏览器"
+      },
+      "intent": "commercial investigation",
+      "cluster": "selection",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/free-antidetect-browser/",
+        "https://browserhub.co/zh-cn/guides/free-antidetect-browser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/free-antidetect-browser/",
+        "https://browserhub.co/zh-cn/guides/free-antidetect-browser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "逐条核验免费额度/时间/计费限制，区分试用与永久免费",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "guides:local-vs-cloud-browser-storage",
+      "primaryKeyword": {
+        "en": "local vs cloud browser profiles",
+        "zh-CN": "本地与云端浏览器档案"
+      },
+      "intent": "informational/commercial investigation",
+      "cluster": "workflows",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/local-vs-cloud-browser-storage/",
+        "https://browserhub.co/zh-cn/guides/local-vs-cloud-browser-storage/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/local-vs-cloud-browser-storage/",
+        "https://browserhub.co/zh-cn/guides/local-vs-cloud-browser-storage/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "不把本地存储等同离线保证；补备份/授权/迁移边界",
+      "relatedSlugs": [
+        "team-browser-evaluation-checklist",
+        "browser-automation-profile-persistence"
+      ]
+    },
+    {
+      "id": "guides:webrtc-leak-check",
+      "primaryKeyword": {
+        "en": "WebRTC leak test checklist",
+        "zh-CN": "WebRTC 泄漏检测"
+      },
+      "intent": "informational",
+      "cluster": "testing",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/webrtc-leak-check/",
+        "https://browserhub.co/zh-cn/guides/webrtc-leak-check/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/webrtc-leak-check/",
+        "https://browserhub.co/zh-cn/guides/webrtc-leak-check/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "记录测试版本与候选类型；区分私有IP/公网IP暴露及浏览器保护差异",
+      "relatedSlugs": [
+        "browser-fingerprint-testing-checklist",
+        "configure-socks5-proxy"
+      ]
+    },
+    {
+      "id": "guides:read-creepjs-results",
+      "primaryKeyword": {
+        "en": "how to read CreepJS results",
+        "zh-CN": "CreepJS 检测结果怎么看"
+      },
+      "intent": "informational",
+      "cluster": "testing",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/read-creepjs-results/",
+        "https://browserhub.co/zh-cn/guides/read-creepjs-results/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/read-creepjs-results/",
+        "https://browserhub.co/zh-cn/guides/read-creepjs-results/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "引用上游解释版本，添加已脱敏的真实样本后才称案例",
+      "relatedSlugs": [
+        "browser-fingerprint-testing-checklist",
+        "browser-fingerprint-signals"
+      ]
+    },
+    {
+      "id": "guides:configure-http-proxy",
+      "primaryKeyword": {
+        "en": "how to configure HTTP proxy",
+        "zh-CN": "HTTP 代理怎么配置"
+      },
+      "intent": "informational",
+      "cluster": "network",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/configure-http-proxy/",
+        "https://browserhub.co/zh-cn/guides/configure-http-proxy/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/configure-http-proxy/",
+        "https://browserhub.co/zh-cn/guides/configure-http-proxy/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "补协议/HTTPS CONNECT/认证来源，记录浏览器与OS差异",
+      "relatedSlugs": [
+        "proxy-vs-vpn-vs-antidetect-browser",
+        "webrtc-leak-check"
+      ]
+    },
+    {
+      "id": "guides:configure-socks5-proxy",
+      "primaryKeyword": {
+        "en": "how to configure SOCKS5 proxy",
+        "zh-CN": "SOCKS5 代理怎么配置"
+      },
+      "intent": "informational",
+      "cluster": "network",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/configure-socks5-proxy/",
+        "https://browserhub.co/zh-cn/guides/configure-socks5-proxy/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/configure-socks5-proxy/",
+        "https://browserhub.co/zh-cn/guides/configure-socks5-proxy/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "DNS行为按具体客户端说明，不把默认行为写成普适规则",
+      "relatedSlugs": [
+        "proxy-vs-vpn-vs-antidetect-browser",
+        "webrtc-leak-check"
+      ]
+    },
+    {
+      "id": "guides:browser-fingerprint-signals",
+      "primaryKeyword": {
+        "en": "browser fingerprint signals",
+        "zh-CN": "浏览器指纹包含哪些信息"
+      },
+      "intent": "informational",
+      "cluster": "testing",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/browser-fingerprint-signals/",
+        "https://browserhub.co/zh-cn/guides/browser-fingerprint-signals/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-fingerprint-signals/",
+        "https://browserhub.co/zh-cn/guides/browser-fingerprint-signals/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "与explained页区分：此页是信号分类表，避免重复泛论",
+      "relatedSlugs": [
+        "browser-fingerprinting-explained",
+        "browser-fingerprint-testing-checklist"
+      ]
+    },
+    {
+      "id": "guides:browser-profile-permissions",
+      "primaryKeyword": {
+        "en": "browser profile team permissions",
+        "zh-CN": "浏览器档案团队权限"
+      },
+      "intent": "informational/commercial investigation",
+      "cluster": "workflows",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/guides/browser-profile-permissions/",
+        "https://browserhub.co/zh-cn/guides/browser-profile-permissions/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-profile-permissions/",
+        "https://browserhub.co/zh-cn/guides/browser-profile-permissions/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有中英内容；其他五语正文回退英文；旧中文alias和zh-cn存在规范化分裂",
+      "action": "增加共享/导出/撤权矩阵和具体验收任务",
+      "relatedSlugs": [
+        "team-browser-evaluation-checklist",
+        "multi-account-best-practices"
+      ]
+    },
+    {
+      "id": "compare:easybr-vs-adspower",
+      "primaryKeyword": {
+        "en": "EasyBR vs AdsPower",
+        "zh-CN": "EasyBR vs AdsPower"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-adspower/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-adspower/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-adspower/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-adspower/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "easybr",
+        "adspower",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:easybr-vs-gologin",
+      "primaryKeyword": {
+        "en": "EasyBR vs GoLogin",
+        "zh-CN": "EasyBR vs GoLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-gologin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-gologin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "easybr",
+        "gologin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:easybr-vs-multilogin",
+      "primaryKeyword": {
+        "en": "EasyBR vs Multilogin",
+        "zh-CN": "EasyBR vs Multilogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-multilogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-multilogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "easybr",
+        "multilogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:easybr-vs-dolphin-anty",
+      "primaryKeyword": {
+        "en": "EasyBR vs Dolphin Anty",
+        "zh-CN": "EasyBR vs Dolphin Anty"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-dolphin-anty/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-dolphin-anty/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "easybr",
+        "dolphin-anty",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:easybr-vs-morelogin",
+      "primaryKeyword": {
+        "en": "EasyBR vs MoreLogin",
+        "zh-CN": "EasyBR vs MoreLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-morelogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-morelogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "easybr",
+        "morelogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:easybr-vs-bitbrowser",
+      "primaryKeyword": {
+        "en": "EasyBR vs BitBrowser",
+        "zh-CN": "EasyBR vs BitBrowser"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-bitbrowser/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-bitbrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/easybr-vs-bitbrowser/",
+        "https://browserhub.co/zh-cn/compare/easybr-vs-bitbrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "easybr",
+        "bitbrowser",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:adspower-vs-gologin",
+      "primaryKeyword": {
+        "en": "AdsPower vs GoLogin",
+        "zh-CN": "AdsPower vs GoLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-gologin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-gologin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "adspower",
+        "gologin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:adspower-vs-multilogin",
+      "primaryKeyword": {
+        "en": "AdsPower vs Multilogin",
+        "zh-CN": "AdsPower vs Multilogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-multilogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-multilogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "adspower",
+        "multilogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:gologin-vs-multilogin",
+      "primaryKeyword": {
+        "en": "GoLogin vs Multilogin",
+        "zh-CN": "GoLogin vs Multilogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-multilogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-multilogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "gologin",
+        "multilogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:dolphin-anty-vs-morelogin",
+      "primaryKeyword": {
+        "en": "Dolphin Anty vs MoreLogin",
+        "zh-CN": "Dolphin Anty vs MoreLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/dolphin-anty-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/dolphin-anty-vs-morelogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/dolphin-anty-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/dolphin-anty-vs-morelogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "dolphin-anty",
+        "morelogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:bitbrowser-vs-adspower",
+      "primaryKeyword": {
+        "en": "BitBrowser vs AdsPower",
+        "zh-CN": "BitBrowser vs AdsPower"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/bitbrowser-vs-adspower/",
+        "https://browserhub.co/zh-cn/compare/bitbrowser-vs-adspower/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/bitbrowser-vs-adspower/",
+        "https://browserhub.co/zh-cn/compare/bitbrowser-vs-adspower/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "bitbrowser",
+        "adspower",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:incogniton-vs-gologin",
+      "primaryKeyword": {
+        "en": "Incogniton vs GoLogin",
+        "zh-CN": "Incogniton vs GoLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/incogniton-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/incogniton-vs-gologin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/incogniton-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/incogniton-vs-gologin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "incogniton",
+        "gologin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:morelogin-vs-multilogin",
+      "primaryKeyword": {
+        "en": "MoreLogin vs Multilogin",
+        "zh-CN": "MoreLogin vs Multilogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/morelogin-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/morelogin-vs-multilogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/morelogin-vs-multilogin/",
+        "https://browserhub.co/zh-cn/compare/morelogin-vs-multilogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "morelogin",
+        "multilogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:adspower-vs-dolphin-anty",
+      "primaryKeyword": {
+        "en": "AdsPower vs Dolphin Anty",
+        "zh-CN": "AdsPower vs Dolphin Anty"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-dolphin-anty/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-dolphin-anty/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "adspower",
+        "dolphin-anty",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:adspower-vs-morelogin",
+      "primaryKeyword": {
+        "en": "AdsPower vs MoreLogin",
+        "zh-CN": "AdsPower vs MoreLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-morelogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-morelogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "adspower",
+        "morelogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:adspower-vs-incogniton",
+      "primaryKeyword": {
+        "en": "AdsPower vs Incogniton",
+        "zh-CN": "AdsPower vs Incogniton"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-incogniton/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/adspower-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/adspower-vs-incogniton/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "adspower",
+        "incogniton",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:gologin-vs-dolphin-anty",
+      "primaryKeyword": {
+        "en": "GoLogin vs Dolphin Anty",
+        "zh-CN": "GoLogin vs Dolphin Anty"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-dolphin-anty/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-dolphin-anty/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "gologin",
+        "dolphin-anty",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:gologin-vs-morelogin",
+      "primaryKeyword": {
+        "en": "GoLogin vs MoreLogin",
+        "zh-CN": "GoLogin vs MoreLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-morelogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-morelogin/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-morelogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "gologin",
+        "morelogin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:gologin-vs-incogniton",
+      "primaryKeyword": {
+        "en": "GoLogin vs Incogniton",
+        "zh-CN": "GoLogin vs Incogniton"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-incogniton/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-incogniton/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "gologin",
+        "incogniton",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:gologin-vs-kameleo",
+      "primaryKeyword": {
+        "en": "GoLogin vs Kameleo",
+        "zh-CN": "GoLogin vs Kameleo"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-kameleo/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-kameleo/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-kameleo/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-kameleo/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "gologin",
+        "kameleo",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:gologin-vs-octo-browser",
+      "primaryKeyword": {
+        "en": "GoLogin vs Octo Browser",
+        "zh-CN": "GoLogin vs Octo Browser"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-octo-browser/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-octo-browser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/gologin-vs-octo-browser/",
+        "https://browserhub.co/zh-cn/compare/gologin-vs-octo-browser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "gologin",
+        "octo-browser",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:multilogin-vs-dolphin-anty",
+      "primaryKeyword": {
+        "en": "Multilogin vs Dolphin Anty",
+        "zh-CN": "Multilogin vs Dolphin Anty"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/multilogin-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/multilogin-vs-dolphin-anty/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/multilogin-vs-dolphin-anty/",
+        "https://browserhub.co/zh-cn/compare/multilogin-vs-dolphin-anty/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "multilogin",
+        "dolphin-anty",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:multilogin-vs-incogniton",
+      "primaryKeyword": {
+        "en": "Multilogin vs Incogniton",
+        "zh-CN": "Multilogin vs Incogniton"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/multilogin-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/multilogin-vs-incogniton/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/multilogin-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/multilogin-vs-incogniton/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "multilogin",
+        "incogniton",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:multilogin-vs-kameleo",
+      "primaryKeyword": {
+        "en": "Multilogin vs Kameleo",
+        "zh-CN": "Multilogin vs Kameleo"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/multilogin-vs-kameleo/",
+        "https://browserhub.co/zh-cn/compare/multilogin-vs-kameleo/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/multilogin-vs-kameleo/",
+        "https://browserhub.co/zh-cn/compare/multilogin-vs-kameleo/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "multilogin",
+        "kameleo",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:dolphin-anty-vs-incogniton",
+      "primaryKeyword": {
+        "en": "Dolphin Anty vs Incogniton",
+        "zh-CN": "Dolphin Anty vs Incogniton"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/dolphin-anty-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/dolphin-anty-vs-incogniton/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/dolphin-anty-vs-incogniton/",
+        "https://browserhub.co/zh-cn/compare/dolphin-anty-vs-incogniton/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "dolphin-anty",
+        "incogniton",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:morelogin-vs-bitbrowser",
+      "primaryKeyword": {
+        "en": "MoreLogin vs BitBrowser",
+        "zh-CN": "MoreLogin vs BitBrowser"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/morelogin-vs-bitbrowser/",
+        "https://browserhub.co/zh-cn/compare/morelogin-vs-bitbrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/morelogin-vs-bitbrowser/",
+        "https://browserhub.co/zh-cn/compare/morelogin-vs-bitbrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "morelogin",
+        "bitbrowser",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:octo-browser-vs-undetectable",
+      "primaryKeyword": {
+        "en": "Octo Browser vs Undetectable",
+        "zh-CN": "Octo Browser vs Undetectable"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/octo-browser-vs-undetectable/",
+        "https://browserhub.co/zh-cn/compare/octo-browser-vs-undetectable/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/octo-browser-vs-undetectable/",
+        "https://browserhub.co/zh-cn/compare/octo-browser-vs-undetectable/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "octo-browser",
+        "undetectable",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:kameleo-vs-octo-browser",
+      "primaryKeyword": {
+        "en": "Kameleo vs Octo Browser",
+        "zh-CN": "Kameleo vs Octo Browser"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/kameleo-vs-octo-browser/",
+        "https://browserhub.co/zh-cn/compare/kameleo-vs-octo-browser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/kameleo-vs-octo-browser/",
+        "https://browserhub.co/zh-cn/compare/kameleo-vs-octo-browser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "kameleo",
+        "octo-browser",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "compare:undetectable-vs-gologin",
+      "primaryKeyword": {
+        "en": "Undetectable vs GoLogin",
+        "zh-CN": "Undetectable vs GoLogin"
+      },
+      "intent": "commercial investigation",
+      "cluster": "comparisons",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/compare/undetectable-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/undetectable-vs-gologin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/compare/undetectable-vs-gologin/",
+        "https://browserhub.co/zh-cn/compare/undetectable-vs-gologin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "已有目录数据与模板对比；组合独有差异、报价核验、实际经验和本地化仍需逐页审查",
+      "action": "核验每一项比较字段，补该组合特有取舍/官方来源/未知项，移除无证据评分；EasyBR组合补关系披露",
+      "relatedSlugs": [
+        "undetectable",
+        "gologin",
+        "best-antidetect-browsers-2026"
+      ]
+    },
+    {
+      "id": "browsers:easybr",
+      "primaryKeyword": {
+        "en": "EasyBR browser features and pricing",
+        "zh-CN": "EasyBR 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/easybr/",
+        "https://browserhub.co/zh-cn/browsers/easybr/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/easybr/",
+        "https://browserhub.co/zh-cn/browsers/easybr/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:gologin",
+      "primaryKeyword": {
+        "en": "GoLogin browser features and pricing",
+        "zh-CN": "GoLogin 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/gologin/",
+        "https://browserhub.co/zh-cn/browsers/gologin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/gologin/",
+        "https://browserhub.co/zh-cn/browsers/gologin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:adspower",
+      "primaryKeyword": {
+        "en": "AdsPower browser features and pricing",
+        "zh-CN": "AdsPower 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/adspower/",
+        "https://browserhub.co/zh-cn/browsers/adspower/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/adspower/",
+        "https://browserhub.co/zh-cn/browsers/adspower/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:multilogin",
+      "primaryKeyword": {
+        "en": "Multilogin browser features and pricing",
+        "zh-CN": "Multilogin 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/multilogin/",
+        "https://browserhub.co/zh-cn/browsers/multilogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/multilogin/",
+        "https://browserhub.co/zh-cn/browsers/multilogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:dolphin-anty",
+      "primaryKeyword": {
+        "en": "Dolphin Anty browser features and pricing",
+        "zh-CN": "Dolphin Anty 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/dolphin-anty/",
+        "https://browserhub.co/zh-cn/browsers/dolphin-anty/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/dolphin-anty/",
+        "https://browserhub.co/zh-cn/browsers/dolphin-anty/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:morelogin",
+      "primaryKeyword": {
+        "en": "MoreLogin browser features and pricing",
+        "zh-CN": "MoreLogin 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/morelogin/",
+        "https://browserhub.co/zh-cn/browsers/morelogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/morelogin/",
+        "https://browserhub.co/zh-cn/browsers/morelogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:incogniton",
+      "primaryKeyword": {
+        "en": "Incogniton browser features and pricing",
+        "zh-CN": "Incogniton 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/incogniton/",
+        "https://browserhub.co/zh-cn/browsers/incogniton/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/incogniton/",
+        "https://browserhub.co/zh-cn/browsers/incogniton/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:bitbrowser",
+      "primaryKeyword": {
+        "en": "BitBrowser browser features and pricing",
+        "zh-CN": "BitBrowser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/bitbrowser/",
+        "https://browserhub.co/zh-cn/browsers/bitbrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/bitbrowser/",
+        "https://browserhub.co/zh-cn/browsers/bitbrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:octo-browser",
+      "primaryKeyword": {
+        "en": "Octo Browser browser features and pricing",
+        "zh-CN": "Octo Browser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/octo-browser/",
+        "https://browserhub.co/zh-cn/browsers/octo-browser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/octo-browser/",
+        "https://browserhub.co/zh-cn/browsers/octo-browser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:kameleo",
+      "primaryKeyword": {
+        "en": "Kameleo browser features and pricing",
+        "zh-CN": "Kameleo 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P1",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/kameleo/",
+        "https://browserhub.co/zh-cn/browsers/kameleo/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/kameleo/",
+        "https://browserhub.co/zh-cn/browsers/kameleo/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:undetectable",
+      "primaryKeyword": {
+        "en": "Undetectable browser features and pricing",
+        "zh-CN": "Undetectable 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/undetectable/",
+        "https://browserhub.co/zh-cn/browsers/undetectable/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/undetectable/",
+        "https://browserhub.co/zh-cn/browsers/undetectable/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:vmlogin",
+      "primaryKeyword": {
+        "en": "VMLogin browser features and pricing",
+        "zh-CN": "VMLogin 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/vmlogin/",
+        "https://browserhub.co/zh-cn/browsers/vmlogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/vmlogin/",
+        "https://browserhub.co/zh-cn/browsers/vmlogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:ixbrowser",
+      "primaryKeyword": {
+        "en": "ixBrowser browser features and pricing",
+        "zh-CN": "ixBrowser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/ixbrowser/",
+        "https://browserhub.co/zh-cn/browsers/ixbrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/ixbrowser/",
+        "https://browserhub.co/zh-cn/browsers/ixbrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:nstbrowser",
+      "primaryKeyword": {
+        "en": "NSTBrowser browser features and pricing",
+        "zh-CN": "NSTBrowser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/nstbrowser/",
+        "https://browserhub.co/zh-cn/browsers/nstbrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/nstbrowser/",
+        "https://browserhub.co/zh-cn/browsers/nstbrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:hidemyacc",
+      "primaryKeyword": {
+        "en": "HideMyAcc browser features and pricing",
+        "zh-CN": "HideMyAcc 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/hidemyacc/",
+        "https://browserhub.co/zh-cn/browsers/hidemyacc/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/hidemyacc/",
+        "https://browserhub.co/zh-cn/browsers/hidemyacc/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:dicloak",
+      "primaryKeyword": {
+        "en": "DICloak browser features and pricing",
+        "zh-CN": "DICloak 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/dicloak/",
+        "https://browserhub.co/zh-cn/browsers/dicloak/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/dicloak/",
+        "https://browserhub.co/zh-cn/browsers/dicloak/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:ghost-browser",
+      "primaryKeyword": {
+        "en": "Ghost Browser browser features and pricing",
+        "zh-CN": "Ghost Browser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/ghost-browser/",
+        "https://browserhub.co/zh-cn/browsers/ghost-browser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/ghost-browser/",
+        "https://browserhub.co/zh-cn/browsers/ghost-browser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:wade",
+      "primaryKeyword": {
+        "en": "Wade browser features and pricing",
+        "zh-CN": "Wade 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/wade/",
+        "https://browserhub.co/zh-cn/browsers/wade/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/wade/",
+        "https://browserhub.co/zh-cn/browsers/wade/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:gpmlogin",
+      "primaryKeyword": {
+        "en": "GPMLogin browser features and pricing",
+        "zh-CN": "GPMLogin 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/gpmlogin/",
+        "https://browserhub.co/zh-cn/browsers/gpmlogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/gpmlogin/",
+        "https://browserhub.co/zh-cn/browsers/gpmlogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:linken-sphere",
+      "primaryKeyword": {
+        "en": "Linken Sphere browser features and pricing",
+        "zh-CN": "Linken Sphere 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/linken-sphere/",
+        "https://browserhub.co/zh-cn/browsers/linken-sphere/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/linken-sphere/",
+        "https://browserhub.co/zh-cn/browsers/linken-sphere/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:camoufox",
+      "primaryKeyword": {
+        "en": "Camoufox browser features and pricing",
+        "zh-CN": "Camoufox 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/camoufox/",
+        "https://browserhub.co/zh-cn/browsers/camoufox/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/camoufox/",
+        "https://browserhub.co/zh-cn/browsers/camoufox/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:browser-automation-studio",
+      "primaryKeyword": {
+        "en": "Browser Automation Studio browser features and pricing",
+        "zh-CN": "Browser Automation Studio 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/browser-automation-studio/",
+        "https://browserhub.co/zh-cn/browsers/browser-automation-studio/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/browser-automation-studio/",
+        "https://browserhub.co/zh-cn/browsers/browser-automation-studio/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:lightpanda",
+      "primaryKeyword": {
+        "en": "Lightpanda browser features and pricing",
+        "zh-CN": "Lightpanda 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/lightpanda/",
+        "https://browserhub.co/zh-cn/browsers/lightpanda/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/lightpanda/",
+        "https://browserhub.co/zh-cn/browsers/lightpanda/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:potabrowser",
+      "primaryKeyword": {
+        "en": "PotaBrowser browser features and pricing",
+        "zh-CN": "PotaBrowser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/potabrowser/",
+        "https://browserhub.co/zh-cn/browsers/potabrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/potabrowser/",
+        "https://browserhub.co/zh-cn/browsers/potabrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:cloakbrowser",
+      "primaryKeyword": {
+        "en": "CloakBrowser browser features and pricing",
+        "zh-CN": "CloakBrowser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/cloakbrowser/",
+        "https://browserhub.co/zh-cn/browsers/cloakbrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/cloakbrowser/",
+        "https://browserhub.co/zh-cn/browsers/cloakbrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:roxybrowser",
+      "primaryKeyword": {
+        "en": "RoxyBrowser browser features and pricing",
+        "zh-CN": "RoxyBrowser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/roxybrowser/",
+        "https://browserhub.co/zh-cn/browsers/roxybrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/roxybrowser/",
+        "https://browserhub.co/zh-cn/browsers/roxybrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:indigo",
+      "primaryKeyword": {
+        "en": "Indigo browser features and pricing",
+        "zh-CN": "Indigo 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/indigo/",
+        "https://browserhub.co/zh-cn/browsers/indigo/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/indigo/",
+        "https://browserhub.co/zh-cn/browsers/indigo/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:vektort13",
+      "primaryKeyword": {
+        "en": "VektorT13 browser features and pricing",
+        "zh-CN": "VektorT13 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/vektort13/",
+        "https://browserhub.co/zh-cn/browsers/vektort13/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/vektort13/",
+        "https://browserhub.co/zh-cn/browsers/vektort13/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:nullprint",
+      "primaryKeyword": {
+        "en": "NullPrint browser features and pricing",
+        "zh-CN": "NullPrint 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/nullprint/",
+        "https://browserhub.co/zh-cn/browsers/nullprint/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/nullprint/",
+        "https://browserhub.co/zh-cn/browsers/nullprint/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:multizen",
+      "primaryKeyword": {
+        "en": "Multizen browser features and pricing",
+        "zh-CN": "Multizen 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/multizen/",
+        "https://browserhub.co/zh-cn/browsers/multizen/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/multizen/",
+        "https://browserhub.co/zh-cn/browsers/multizen/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:donutbrowser",
+      "primaryKeyword": {
+        "en": "DonutBrowser browser features and pricing",
+        "zh-CN": "DonutBrowser 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/donutbrowser/",
+        "https://browserhub.co/zh-cn/browsers/donutbrowser/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/donutbrowser/",
+        "https://browserhub.co/zh-cn/browsers/donutbrowser/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:dashnull",
+      "primaryKeyword": {
+        "en": "DashNull browser features and pricing",
+        "zh-CN": "DashNull 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/dashnull/",
+        "https://browserhub.co/zh-cn/browsers/dashnull/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/dashnull/",
+        "https://browserhub.co/zh-cn/browsers/dashnull/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:whologin",
+      "primaryKeyword": {
+        "en": "WhoLogin browser features and pricing",
+        "zh-CN": "WhoLogin 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/whologin/",
+        "https://browserhub.co/zh-cn/browsers/whologin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/whologin/",
+        "https://browserhub.co/zh-cn/browsers/whologin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:chromepowerapp",
+      "primaryKeyword": {
+        "en": "ChromePowerApp browser features and pricing",
+        "zh-CN": "ChromePowerApp 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/chromepowerapp/",
+        "https://browserhub.co/zh-cn/browsers/chromepowerapp/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/chromepowerapp/",
+        "https://browserhub.co/zh-cn/browsers/chromepowerapp/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:0detect",
+      "primaryKeyword": {
+        "en": "0detect browser features and pricing",
+        "zh-CN": "0detect 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/0detect/",
+        "https://browserhub.co/zh-cn/browsers/0detect/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/0detect/",
+        "https://browserhub.co/zh-cn/browsers/0detect/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    },
+    {
+      "id": "browsers:adblogin",
+      "primaryKeyword": {
+        "en": "ADBLogin browser features and pricing",
+        "zh-CN": "ADBLogin 功能与价格"
+      },
+      "intent": "navigational/commercial investigation",
+      "cluster": "products",
+      "priority": "P2",
+      "demandEvidence": "editorial hypothesis; validate with GSC/Bing query exports; search snippets do not establish search volume",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [
+        "https://browserhub.co/en/browsers/adblogin/",
+        "https://browserhub.co/zh-cn/browsers/adblogin/"
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/browsers/adblogin/",
+        "https://browserhub.co/zh-cn/browsers/adblogin/"
+      ],
+      "status": "existing-at-baseline",
+      "gap": "产品事实页；部分本地化页面字段仍中文，目录星级没有公开方法学；价格核验日期不能继承编辑日期",
+      "action": "逐条核验官方平台/计费周期/免费计划/来源；统一语言；无依据字段写未知；不伪装成实测review",
+      "relatedSlugs": [
+        "best-antidetect-browsers-2026",
+        "how-to-choose-antidetect-browser"
+      ]
+    }
+  ],
+  "futureCandidates": [
+    {
+      "primaryKeyword": {
+        "en": "open source antidetect browser",
+        "zh-CN": "开源指纹浏览器"
+      },
+      "intent": "commercial investigation/developer",
+      "priority": "P2",
+      "proposedSlug": "open-source-antidetect-browsers",
+      "existingRelatedUrls": [
+        "https://browserhub.co/en/browsers/camoufox/",
+        "https://browserhub.co/en/guides/free-antidetect-browser/"
+      ],
+      "gap": "需要区分开源框架/浏览器与成熟桌面档案管理；不能因免费就算开源",
+      "publishGate": "真实query/用户任务证据+官方license/维护状态核查+避免与free页重复",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      }
+    },
+    {
+      "primaryKeyword": {
+        "en": "browser profile migration checklist",
+        "zh-CN": "浏览器档案迁移清单"
+      },
+      "intent": "product support/informational",
+      "priority": "P2",
+      "proposedSlug": "browser-profile-migration",
+      "existingRelatedUrls": [
+        "https://browserhub.co/en/guides/local-vs-cloud-browser-storage/",
+        "https://browserhub.co/en/guides/browser-automation-profile-persistence/"
+      ],
+      "gap": "跨版本/跨OS/密钥与Cookie可迁移边界须实测，不能泛承诺",
+      "publishGate": "先有可授权、可复现的迁移记录再发经验文章",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      }
+    }
+  ],
+  "validationRules": [
+    "one primary search task per canonical URL",
+    "do not generate one article per synonym or AI fan-out query",
+    "prices require current official source and billing conditions",
+    "test claims require dated reproducible evidence",
+    "search-result snippets are discovery evidence, not verified rank or keyword volume",
+    "indexing is verified in search-engine webmaster tools; sitemap inclusion alone is not indexing",
+    "publish status must be checked after deploy; this map does not certify implementation"
+  ],
+  "sources": {
+    "local": [
+      "src/data/resources.ts",
+      "src/data/guide-translations.ts",
+      "src/lib/i18n.ts",
+      "src/app/sitemap.ts",
+      "src/app/robots.ts",
+      "src/app/[locale]/[[...segments]]/page.tsx"
+    ],
+    "official": [
+      "https://developers.google.com/search/docs/appearance/ai-features",
+      "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites",
+      "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a",
+      "https://developers.openai.com/api/docs/bots",
+      "https://developers.google.com/search/updates"
+    ]
+  },
+  "currentPolicyNotes": {
+    "FAQRichResults": "Google no longer shows FAQ rich results from 2026-05-07; documentation removed 2026-06-15; visible helpful FAQ remains useful to readers",
+    "HowToRichResults": "Google deprecated desktop HowTo rich results in September 2023",
+    "llmsTxt": "Google clarification 2026-06-15: does not positively or negatively affect Google Search visibility or ranking"
+  }
+}

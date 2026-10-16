@@ -119,14 +119,14 @@ const translations: Record<string, Partial<Record<Locale, GuideCopy>>> = {
 
 /** Returns the localised title/description for a guide, falling back to the zh-cn source copy. */
 export function localizedGuideCopy(locale: Locale, slug: string, fallback: { title: string; description: string }): GuideCopy {
+	const editorial = editorialGuideTranslations[slug];
+	if (editorial) return editorial[locale === "zh-cn" ? "zh-cn" : "en"];
 	const localized = translations[slug]?.[locale];
 	if (localized) return localized;
 	if (locale === "zh-cn") return fallback;
 	const english = translations[slug]?.en;
 	if (locale === "en" && english) return english;
-	// zh-cn is the only fully translated source today. Rather than leak Chinese into a
-	// page declared as ja/ko/es/pt/ru, reuse the English copy instead: it keeps the
-	// language promise of the hreflang group and avoids mixed-script titles.
+	// Old untranslated URLs retain an English fallback but are not in the indexing/hreflang set.
 	return english ?? fallback;
 }
 
@@ -161,11 +161,11 @@ const sectionTranslations: Record<string, GuideSection[]> = {
 		},
 		{
 			heading: "A four-step verification process",
-			body: "Shortlist → small trial → cost calculation → pre-launch check, in that order, keeps one-sided marketing from steering the decision.\n\nStep one, list the hard constraints: environment count ceiling, required platforms, whether cloud is mandatory, whether an API is needed. Mark the non-negotiable items as must-have.\n\nStep two, filter down to two or three candidates with the must-haves, then actually create environments with the free tier or cheapest plan. Do not skip this: well-written documentation does not guarantee consistent real behaviour.\n\nStep three, calculate the real cost as environments × unit price × months retained, and list proxy traffic fees separately. In many products proxy bandwidth is billed per GB, and that line item often exceeds the browser subscription itself.\n\nStep four, run a consistency check before going live: create an environment, run public detection tools in normal browsing and in your target scenario, and record the Canvas, WebGL, timezone, language and WebRTC results. Repeated tests on the same environment should be stable and should not jump randomly.\n\nPrices, plans and features change; treat every price on this page as subject to the vendor's current official page."
+			body: "Shortlist → small trial → cost calculation → pre-launch check, in that order, keeps one-sided marketing from steering the decision.\n\nStep one, list the hard constraints: environment count ceiling, required platforms, whether cloud is mandatory, whether an API is needed. Mark the non-negotiable items as must-have.\n\nStep two, filter down to two or three candidates with the must-haves, then actually create environments with the free tier or cheapest plan. Do not skip this: well-written documentation does not guarantee consistent real behaviour.\n\nStep three, calculate the real cost as the actual plan, seats, billing period, taxes and usage, and list proxy traffic fees separately. In many products proxy bandwidth is billed per GB, and that line item often exceeds the browser subscription itself.\n\nStep four, run a consistency check before going live: create an environment, run public detection tools in normal browsing and in your target scenario, and record the Canvas, WebGL, timezone, language and WebRTC results. Repeated tests on the same environment should be stable and should not jump randomly.\n\nPrices, plans and features change; treat every price on this page as subject to the vendor's current official page."
 		},
 		{
 			heading: "Four common mistakes",
-			body: "- Treating \"high rating\" as equivalent to \"right for me\". A rating reflects overall performance, which is a different question from whether it fits your constraints.\n- Comparing price while ignoring proxy cost. In multi-account scenarios proxy traffic can run two to three times the browser subscription.\n- Believing claims like \"completely undetectable\". No tool is undetectable everywhere; judge by actual detection results, not by promises.\n- Running several accounts in one environment. Environment reuse is the most common cause of account linkage; bind each account to its own environment and keep proxy, language and timezone consistent over time.\n\nThis material is for resource curation, privacy research and compliant browser environment management. Follow the target platform's terms and applicable local law."
+			body: "- Treating \"high rating\" as equivalent to \"right for me\". A rating reflects overall performance, which is a different question from whether it fits your constraints.\n- Comparing price while ignoring proxy cost. In multi-account scenarios proxy traffic should be budgeted from actual usage and contract terms; there is no universal cost ratio.\n- Believing claims like \"completely undetectable\". No tool is undetectable everywhere; judge by actual detection results, not by promises.\n- Running several accounts in one environment. Environment reuse may expose shared session or storage state; bind each account to its own environment and keep proxy, language and timezone consistent over time.\n\nThis material is for resource curation, privacy research and compliant browser environment management. Follow the target platform's terms and applicable local law."
 		}
 	],
 	"browser-fingerprinting-explained": [
@@ -207,7 +207,7 @@ const sectionTranslations: Record<string, GuideSection[]> = {
 	"multi-account-best-practices": [
 		{
 			heading: "Establish the isolation boundary first",
-			body: "The most basic principle in multi-account management is one account per environment. Bind each account to its own environment, its own proxy and its own login state, and do not reuse cookies or cache between environments.\n\nEnvironment reuse is the most common cause of account linkage. Many linked cases trace back to two accounts sharing one fingerprint environment, one exit IP, or one local storage set. Once the isolation boundary exists, every consistency measure after it becomes meaningful."
+			body: "The most basic principle in multi-account management is one account per environment. Bind each account to its own environment, its own proxy and its own login state, and do not reuse cookies or cache between environments.\n\nEnvironment reuse may expose shared sessions or storage; association also depends on the service and the signals it uses. Once the isolation boundary exists, every consistency measure after it becomes meaningful."
 		},
 		{
 			heading: "Keep signals consistent over the long term",
@@ -233,7 +233,7 @@ const sectionTranslations: Record<string, GuideSection[]> = {
 		},
 		{
 			heading: "Calculate the real cost",
-			body: "When moving from free to paid, calculate environments × unit price × months retained and list proxy traffic fees separately. In multi-account scenarios proxy bandwidth is often billed per GB and can exceed the browser subscription itself.\n\nPrices, plans and features change; treat every price here as subject to the vendor's current official page. Do not budget from remembered older prices."
+			body: "When moving from free to paid, calculate the actual plan, seats, billing period, taxes and usage and list proxy traffic fees separately. In multi-account scenarios proxy bandwidth is often billed per GB and can exceed the browser subscription itself.\n\nPrices, plans and features change; treat every price here as subject to the vendor's current official page. Do not budget from remembered older prices."
 		},
 		{
 			heading: "Three common mistakes",
@@ -380,13 +380,13 @@ const sectionTranslations: Record<string, GuideSection[]> = {
  * Returns the body sections for a guide in the requested locale.
  *
  * zh-cn returns undefined so the caller uses the native `GuideResource.sections`.
- * Every other locale receives the English translation. That mirrors
- * `localizedGuideCopy`: rather than leak Chinese body copy into a page declared as
- * ja/ko/es/pt/ru, reuse the English sections — it keeps the language promise of the
- * hreflang group and avoids mixed-script body text. Sections are far more valuable
- * than the alternative (a single Chinese paragraph), so this fallback is deliberate.
+ * Old untranslated locale URLs keep an explicitly labelled English fallback.
+ * They are excluded from indexing and hreflang until a real translation exists.
  */
 export function localizedGuideSections(locale: Locale, slug: string): GuideSection[] | undefined {
+	const editorial = editorialGuideTranslations[slug];
+	if (editorial) return editorial[locale === "zh-cn" ? "zh-cn" : "en"].sections;
 	if (locale === "zh-cn") return undefined;
 	return sectionTranslations[slug];
 }
+import { editorialGuideTranslations } from "./editorial-guides";

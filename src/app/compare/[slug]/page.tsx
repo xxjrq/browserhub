@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 	const comparison = comparisons.find(item => item.slug === slug);
 	if (!comparison) return {};
 	const description = `${comparison.description} 统一比较免费额度、价格、环境数量、平台、内核、API、自动化、代理和存储方式。`;
-	return { title: `${comparison.title}：功能与价格对比`, description, alternates: { canonical: `/compare/${comparison.slug}/` }, openGraph: { title: comparison.title, description, url: `/compare/${comparison.slug}/` } };
+	return { title: `${comparison.title}：功能与价格对比`, description, alternates: { canonical: `/zh-cn/compare/${comparison.slug}/` }, openGraph: { title: comparison.title, description, url: `/zh-cn/compare/${comparison.slug}/` } };
 }
 
 function CellValue({ value }: { value: string | boolean }) {
@@ -50,8 +50,8 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
 	] as Array<[string, string | boolean, string | boolean]>;
 	const related = comparisons.filter(item => item.slug !== comparison.slug && item.browsers.some(itemSlug => comparison.browsers.includes(itemSlug))).slice(0, 4);
 	const jsonLd = [
-		{ "@context": "https://schema.org", "@type": "Article", headline: comparison.title, description: comparison.description, dateModified: "2026-10-15", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/compare/${comparison.slug}/` },
-		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "浏览器对比", item: "https://browserhub.co/compare/" }, { "@type": "ListItem", position: 3, name: comparison.title, item: `https://browserhub.co/compare/${comparison.slug}/` }] }
+		{ "@context": "https://schema.org", "@type": "Article", headline: comparison.title, description: comparison.description, dateModified: "2026-10-15", author: { "@type": "Person", name: "xxjrq" }, mainEntityOfPage: `https://browserhub.co/zh-cn/compare/${comparison.slug}/` },
+		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "浏览器对比", item: "https://browserhub.co/zh-cn/compare/" }, { "@type": "ListItem", position: 3, name: comparison.title, item: `https://browserhub.co/zh-cn/compare/${comparison.slug}/` }] }
 	];
 
 	return (

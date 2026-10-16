@@ -1,20 +1,22 @@
 import { MetadataRoute } from "next";
 import { browsers, comparisons, guides, technologies, tools } from "@/data/resources";
-import { localePath, locales } from "@/lib/i18n";
+import { contentLocales, hreflangFor, localePath, locales } from "@/lib/i18n";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://browserhub.co";
-	const updatedAt = "2026-10-16";
-	const paths = ["/", "/about/", "/contact/", "/privacy/", ...locales.flatMap(locale => [
-		localePath(locale), localePath(locale, "browsers"), localePath(locale, "tools"), localePath(locale, "fingerprint"), localePath(locale, "guides"), localePath(locale, "compare"), localePath(locale, "about"), localePath(locale, "contact"), localePath(locale, "privacy"),
-		...browsers.map(item => localePath(locale, `browsers/${item.slug}`)),
-		...tools.map(item => localePath(locale, `tools/${item.slug}`)),
-		...technologies.map(item => localePath(locale, `fingerprint/${item.slug}`)),
-		...guides.map(item => localePath(locale, `guides/${item.slug}`)),
-		...comparisons.map(item => localePath(locale, `compare/${item.slug}`))
-	])];
-	const uniquePaths = [...new Set(paths)];
-	return uniquePaths.map(path => ({ url: `${baseUrl}${path}`, lastModified: updatedAt, changeFrequency: "weekly", priority: path === "/" ? 1 : 0.7 }));
+	const baseUrl = "https://browserhub.co";
+	const paths = locales.flatMap(locale => [
+		"", "browsers", "tools", "fingerprint", "guides", "compare", "about", "contact", "privacy",
+		...browsers.map(item => `browsers/${item.slug}`), ...tools.map(item => `tools/${item.slug}`),
+		...technologies.map(item => `fingerprint/${item.slug}`),
+		...guides.map(item => `guides/${item.slug}`).filter(path => contentLocales(path).includes(locale)),
+		...comparisons.map(item => `compare/${item.slug}`)
+	].map(path => ({ locale, path })));
+	return paths.map(({ locale, path }) => ({
+		url: `${baseUrl}${localePath(locale, path)}`,
+		// Only content with its own review date gets a lastmod. A build is not a content update.
+		...(path.startsWith("guides/") ? { lastModified: guides.find(guide => path === `guides/${guide.slug}`)?.date } : {}),
+		alternates: { languages: hreflangFor(path) }
+	}));
 }

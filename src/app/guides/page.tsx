@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { guides } from "@/data/resources";
 
-export const metadata = { title: "指南与教程", description: "指纹浏览器选型、浏览器指纹、代理配置与多账号环境管理指南。", alternates: { canonical: "/guides/" } };
+export const metadata = { title: "指南与教程", description: "指纹浏览器选型、浏览器指纹、代理配置与多账号环境管理指南。", alternates: { canonical: "/zh-cn/guides/" } };
 
 export default function GuidesPage() {
 	return (
@@ -18,7 +18,7 @@ export default function GuidesPage() {
 			</div>
 			<div className="border-t">
 				{guides.map(guide => (
-					<Link key={guide.slug} href={`/guides/${guide.slug}/`} className="group flex items-center gap-4 border-b py-5 transition-colors hover:bg-muted/40 sm:gap-8">
+					<Link key={guide.slug} href={`/zh-cn/guides/${guide.slug}/`} className="group flex items-center gap-4 border-b py-5 transition-colors hover:bg-muted/40 sm:gap-8">
 						<span className="hidden w-24 shrink-0 font-mono text-xs text-muted-foreground md:block">{guide.date}</span>
 						<span className="min-w-0 flex-1">
 							<span className="block text-[15px] font-medium transition-colors group-hover:text-primary">{guide.title}</span>

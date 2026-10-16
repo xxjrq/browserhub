@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 	if (!tool) return {};
 	const title = `${tool.name}：用途、功能与使用说明`;
 	const description = `${tool.name} ${tool.category}工具介绍：适用场景、主要能力、使用方法、平台、费用和限制。`;
-	return { title, description, alternates: { canonical: `/tools/${tool.slug}/` }, openGraph: { title, description, url: `/tools/${tool.slug}/` } };
+	return { title, description, alternates: { canonical: `/zh-cn/tools/${tool.slug}/` }, openGraph: { title, description, url: `/zh-cn/tools/${tool.slug}/` } };
 }
 
 export default async function ToolDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -34,7 +34,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
 	];
 	const jsonLd = [
 		{ "@context": "https://schema.org", "@type": "WebApplication", name: tool.name, description: tool.description, applicationCategory: tool.category, operatingSystem: tool.platforms.join(", "), url: tool.website },
-		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "检测与自动化工具", item: "https://browserhub.co/tools/" }, { "@type": "ListItem", position: 3, name: tool.name, item: `https://browserhub.co/tools/${tool.slug}/` }] },
+		{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "首页", item: "https://browserhub.co/" }, { "@type": "ListItem", position: 2, name: "检测与自动化工具", item: "https://browserhub.co/zh-cn/tools/" }, { "@type": "ListItem", position: 3, name: tool.name, item: `https://browserhub.co/zh-cn/tools/${tool.slug}/` }] },
 		{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(item => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) }
 	];
 

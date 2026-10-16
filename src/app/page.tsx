@@ -41,7 +41,7 @@ export function HomePage() {
 						找到适合你的<span className="text-primary">指纹浏览器</span>
 					</h1>
 					<p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
-						中立收录指纹浏览器、检测工具、自动化框架和隐私技术资源，用统一字段比较功能、价格、平台和适用场景。
+						收录指纹浏览器、检测工具、自动化框架和隐私技术资源，用统一字段比较功能、价格、平台和适用场景。
 					</p>
 					<form action="/browsers/" method="get" className="mt-10 flex w-full max-w-xl items-center gap-2">
 						<div className="relative flex-1">
@@ -76,7 +76,7 @@ export function HomePage() {
 			{/* FEATURED */}
 			<section className="py-16 md:py-20">
 				<div className="container">
-					<SectionHeader eyebrow="Featured" title="特色推荐" description="Featured 资源与常用产品并列展示，信息以官方页面为准。" href="/browsers/" action="全部浏览器" />
+					<SectionHeader eyebrow="Featured" title="特色推荐" description="EasyBR 为关联产品；特色展示与常用产品并列，详情以官方页面为准。" href="/browsers/" action="全部浏览器" />
 					<Link
 						href={`/browsers/${featured.slug}/`}
 						className="group mb-5 grid gap-6 rounded-xl border border-primary/30 bg-card p-6 ring-1 ring-primary/10 transition-all duration-200 hover:border-primary/50 hover:shadow-[0_12px_36px_-16px_rgb(37_99_235/0.35)] sm:p-8 md:grid-cols-[auto_1fr_auto] md:items-center"
@@ -208,7 +208,7 @@ export function HomePage() {
 						<SectionHeader eyebrow="Guides" title="最新指南" description="选型、排查和合规使用的可执行知识。" href="/guides/" action="全部指南" />
 						<div className="border-t">
 							{guides.slice(0, 4).map(guide => (
-								<Link key={guide.slug} href={`/guides/${guide.slug}/`} className="group flex items-center gap-4 border-b py-4 transition-colors hover:bg-muted/40 sm:gap-6">
+								<Link key={guide.slug} href={`/zh-cn/guides/${guide.slug}/`} className="group flex items-center gap-4 border-b py-4 transition-colors hover:bg-muted/40 sm:gap-6">
 									<span className="hidden w-24 shrink-0 font-mono text-xs text-muted-foreground sm:block">{guide.date}</span>
 									<span className="min-w-0 flex-1">
 										<span className="block truncate text-sm font-medium transition-colors group-hover:text-primary">{guide.title}</span>

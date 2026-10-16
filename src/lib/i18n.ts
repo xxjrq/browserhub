@@ -1,153 +1,9 @@
+import { comparisonEditorial } from "@/data/browser-editorial";
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
 import { localizedGuideCopy } from "@/data/guide-translations";
 
-export const locales = ["zh-cn", "en", "ja", "ko", "es", "pt", "ru"] as const;
-export type Locale = (typeof locales)[number];
-
-export const localeMeta: Record<Locale, { htmlLang: string; hreflang: string; label: string; ogLocale: string }> = {
-	"zh-cn": { htmlLang: "zh-CN", hreflang: "zh-CN", label: "中文", ogLocale: "zh_CN" },
-	en: { htmlLang: "en", hreflang: "en", label: "English", ogLocale: "en_US" },
-	ja: { htmlLang: "ja", hreflang: "ja", label: "日本語", ogLocale: "ja_JP" },
-	ko: { htmlLang: "ko", hreflang: "ko", label: "한국어", ogLocale: "ko_KR" },
-	es: { htmlLang: "es", hreflang: "es", label: "Español", ogLocale: "es_ES" },
-	pt: { htmlLang: "pt", hreflang: "pt", label: "Português", ogLocale: "pt_BR" },
-	ru: { htmlLang: "ru", hreflang: "ru", label: "Русский", ogLocale: "ru_RU" }
-};
-
-export const isLocale = (value: string): value is Locale => locales.includes(value as Locale);
-
-export const localePath = (locale: Locale, path = "") => {
-	const normalized = path.replace(/^\/+|\/+$/g, "");
-	return normalized ? `/${locale}/${normalized}/` : `/${locale}/`;
-};
-
-export const localeFromPath = (pathname: string): Locale => {
-	const candidate = pathname.split("/")[1];
-	return isLocale(candidate) ? candidate : "zh-cn";
-};
-
-const copy = {
-	"zh-cn": {
-		homeTitle: "指纹浏览器与隐私资源中心",
-		homeDescription: "BrowserHub 整理指纹浏览器、检测与自动化工具、代理与隐私资源，帮助跨境电商、社媒运营与开发者对比多账号浏览器的免费额度、价格与能力。",
-		browsers: "指纹浏览器大全", tools: "检测与自动化工具", fingerprint: "浏览器指纹技术", guides: "指南与教程", compare: "浏览器对比",
-		browse: "浏览资源", details: "查看详情", official: "访问官网", entries: "条目", updated: "更新于", sourceNote: "价格、套餐和功能请以官方页面为准。",
-		browserIntro: "收录公开的反检测浏览器和多账号浏览器，统一比较平台、免费额度、价格、API、自动化与代理能力。",
-		toolIntro: "整理浏览器指纹检测、网络测试、自动化和隐私工具，帮助你选择合适的验证路径。",
-		fingerprintIntro: "理解 Canvas、WebGL、WebRTC、TLS、语言、时区和存储等浏览器环境信号。",
-		guideIntro: "从产品选型、环境隔离、代理配置到指纹排查，提供可执行的公开资料整理。",
-		compareIntro: "使用统一字段比较免费额度、价格、平台、内核、存储、API、自动化和代理。",
-		about: "关于项目", contact: "联系与贡献", privacy: "隐私说明", home: "首页", related: "相关资源", features: "主要能力", specs: "规格信息", bestFor: "适用场景", limitations: "限制与注意事项", faq: "常见问题", howTo: "使用方法", detection: "检测方式", mitigation: "合规防护思路", comparisonTable: "统一字段对比"
-	},
-	en: {
-		homeTitle: "Anti-Detect Browser & Privacy Resource Hub", homeDescription: "BrowserHub catalogs anti-detect browsers, fingerprint detection, automation, proxy and privacy tools. Compare free plans, pricing and capabilities.",
-		browsers: "Anti-Detect Browsers", tools: "Detection & Automation Tools", fingerprint: "Browser Fingerprint Technology", guides: "Guides & Tutorials", compare: "Browser Comparisons",
-		browse: "Browse resources", details: "View details", official: "Official website", entries: "entries", updated: "Updated", sourceNote: "Verify current pricing, plans and features on the official website.",
-		browserIntro: "Compare public anti-detect and multi-account browsers by platforms, free plans, pricing, APIs, automation and proxy support.", toolIntro: "Explore fingerprint detection, network testing, automation and privacy tools for practical research.", fingerprintIntro: "Learn how Canvas, WebGL, WebRTC, TLS, language, timezone and storage signals identify browser environments.", guideIntro: "Practical, source-based guides for browser selection, profile isolation, proxy setup and fingerprint checks.", compareIntro: "Compare free plans, pricing, platforms, engines, storage, APIs, automation and proxy support using the same fields.",
-		about: "About", contact: "Contact & contribute", privacy: "Privacy", home: "Home", related: "Related resources", features: "Key capabilities", specs: "Specifications", bestFor: "Best for", limitations: "Limitations", faq: "FAQ", howTo: "How to use", detection: "Detection", mitigation: "Responsible use", comparisonTable: "Comparison table"
-	},
-	ja: {
-		homeTitle: "指紋ブラウザとプライバシー情報ハブ", homeDescription: "指紋ブラウザ、検出ツール、自動化、プロキシ、プライバシー情報を整理したデータベースです。",
-		browsers: "指紋ブラウザ一覧", tools: "検出・自動化ツール", fingerprint: "ブラウザ指紋技術", guides: "ガイドとチュートリアル", compare: "ブラウザ比較", browse: "リソースを見る", details: "詳細を見る", official: "公式サイト", entries: "件", updated: "更新", sourceNote: "料金・プラン・機能は公式サイトで確認してください。", browserIntro: "指紋ブラウザとマルチアカウントブラウザを、料金、環境数、API、自動化、プロキシで比較します。", toolIntro: "指紋検出、ネットワークテスト、自動化、プライバシー関連の公開ツールを整理しています。", fingerprintIntro: "Canvas、WebGL、WebRTC、TLS、言語、タイムゾーン、ストレージの信号を解説します。", guideIntro: "ブラウザ選定、環境分離、プロキシ設定、指紋チェックの実用ガイドです。", compareIntro: "同じ項目で無料枠、料金、OS、エンジン、API、自動化、プロキシを比較します。", about: "プロジェクトについて", contact: "連絡・貢献", privacy: "プライバシー", home: "ホーム", related: "関連リソース", features: "主な機能", specs: "仕様", bestFor: "おすすめ用途", limitations: "制限事項", faq: "よくある質問", howTo: "使い方", detection: "検出方法", mitigation: "適切な利用", comparisonTable: "比較表"
-	},
-	ko: {
-		homeTitle: "핑거프린트 브라우저와 개인정보 리소스 허브", homeDescription: "핑거프린트 브라우저, 탐지 도구, 자동화, 프록시와 개인정보 리소스를 정리한 데이터베이스입니다.", browsers: "핑거프린트 브라우저", tools: "탐지 및 자동화 도구", fingerprint: "브라우저 핑거프린트 기술", guides: "가이드와 튜토리얼", compare: "브라우저 비교", browse: "리소스 보기", details: "상세 보기", official: "공식 웹사이트", entries: "개", updated: "업데이트", sourceNote: "가격과 기능은 공식 사이트에서 확인하세요.", browserIntro: "멀티 계정 브라우저를 플랫폼, 무료 플랜, 가격, API, 자동화와 프록시 기준으로 비교합니다.", toolIntro: "핑거프린트 탐지, 네트워크 테스트, 자동화와 개인정보 도구를 정리합니다.", fingerprintIntro: "Canvas, WebGL, WebRTC, TLS, 언어, 시간대와 저장소 신호를 설명합니다.", guideIntro: "브라우저 선택, 프로필 분리, 프록시 설정과 핑거프린트 점검을 위한 실용 가이드입니다.", compareIntro: "동일한 항목으로 무료 플랜, 가격, 플랫폼, 엔진, API, 자동화와 프록시를 비교합니다.", about: "프로젝트 소개", contact: "연락 및 기여", privacy: "개인정보", home: "홈", related: "관련 리소스", features: "주요 기능", specs: "사양", bestFor: "추천 용도", limitations: "제한 사항", faq: "FAQ", howTo: "사용 방법", detection: "탐지 방법", mitigation: "책임 있는 사용", comparisonTable: "비교표"
-	},
-	es: {
-		homeTitle: "Centro de recursos de navegadores anti-detección", homeDescription: "Base de datos de navegadores anti-detección, detección de huella, automatización, proxies y privacidad.", browsers: "Navegadores anti-detección", tools: "Herramientas de detección y automatización", fingerprint: "Tecnología de huella del navegador", guides: "Guías y tutoriales", compare: "Comparativas", browse: "Explorar recursos", details: "Ver detalles", official: "Sitio oficial", entries: "entradas", updated: "Actualizado", sourceNote: "Verifica precios, planes y funciones en el sitio oficial.", browserIntro: "Compara navegadores anti-detección y multicuenta por plataforma, plan gratuito, precio, API, automatización y proxy.", toolIntro: "Herramientas públicas para detectar huellas, probar redes, automatizar y estudiar la privacidad.", fingerprintIntro: "Explicación de señales Canvas, WebGL, WebRTC, TLS, idioma, zona horaria y almacenamiento.", guideIntro: "Guías prácticas para elegir navegador, aislar perfiles, configurar proxies y revisar huellas.", compareIntro: "Compara planes gratuitos, precios, plataformas, motores, almacenamiento, API, automatización y proxy.", about: "Sobre el proyecto", contact: "Contacto y contribuciones", privacy: "Privacidad", home: "Inicio", related: "Recursos relacionados", features: "Funciones", specs: "Especificaciones", bestFor: "Ideal para", limitations: "Limitaciones", faq: "Preguntas frecuentes", howTo: "Cómo usar", detection: "Detección", mitigation: "Uso responsable", comparisonTable: "Tabla comparativa"
-	},
-	pt: {
-		homeTitle: "Central de recursos de navegadores anti-detecção", homeDescription: "Base de dados de navegadores anti-detecção, detecção de fingerprint, automação, proxies e privacidade.", browsers: "Navegadores anti-detecção", tools: "Ferramentas de detecção e automação", fingerprint: "Tecnologia de fingerprint", guides: "Guias e tutoriais", compare: "Comparações", browse: "Explorar recursos", details: "Ver detalhes", official: "Site oficial", entries: "itens", updated: "Atualizado", sourceNote: "Confirme preços, planos e recursos no site oficial.", browserIntro: "Compare navegadores anti-detecção e multi-conta por plataforma, plano gratuito, preço, API, automação e proxy.", toolIntro: "Ferramentas públicas para testar fingerprint, rede, automação e privacidade.", fingerprintIntro: "Entenda sinais de Canvas, WebGL, WebRTC, TLS, idioma, fuso horário e armazenamento.", guideIntro: "Guias práticos para escolher navegadores, separar perfis, configurar proxies e verificar fingerprints.", compareIntro: "Compare planos gratuitos, preços, plataformas, engines, armazenamento, API, automação e proxy.", about: "Sobre o projeto", contact: "Contato e contribuição", privacy: "Privacidade", home: "Início", related: "Recursos relacionados", features: "Principais recursos", specs: "Especificações", bestFor: "Indicado para", limitations: "Limitações", faq: "Perguntas frequentes", howTo: "Como usar", detection: "Detecção", mitigation: "Uso responsável", comparisonTable: "Tabela comparativa"
-	},
-	ru: {
-		homeTitle: "Центр ресурсов антидетект-браузеров", homeDescription: "База антидетект-браузеров, инструментов анализа отпечатка, автоматизации, прокси и приватности.", browsers: "Антидетект-браузеры", tools: "Инструменты проверки и автоматизации", fingerprint: "Технологии браузерного отпечатка", guides: "Руководства и инструкции", compare: "Сравнение браузеров", browse: "Открыть ресурсы", details: "Подробнее", official: "Официальный сайт", entries: "записей", updated: "Обновлено", sourceNote: "Актуальные цены и функции проверяйте на официальном сайте.", browserIntro: "Сравнение антидетект- и мультиаккаунт-браузеров по платформам, тарифам, API, автоматизации и прокси.", toolIntro: "Открытые инструменты для проверки отпечатка, сети, автоматизации и приватности.", fingerprintIntro: "Объяснение сигналов Canvas, WebGL, WebRTC, TLS, языка, часового пояса и хранилища.", guideIntro: "Практические руководства по выбору браузера, изоляции профилей, прокси и проверке отпечатка.", compareIntro: "Сравнивайте бесплатные планы, цены, платформы, движки, API, автоматизацию и прокси.", about: "О проекте", contact: "Контакты и вклад", privacy: "Конфиденциальность", home: "Главная", related: "Связанные ресурсы", features: "Возможности", specs: "Характеристики", bestFor: "Подходит для", limitations: "Ограничения", faq: "FAQ", howTo: "Как использовать", detection: "Проверка", mitigation: "Ответственное использование", comparisonTable: "Таблица сравнения"
-	}
-} as const;
-
-export type LocaleCopy = (typeof copy)[Locale];
-export const t = (locale: Locale): LocaleCopy => copy[locale];
-
-/**
- * Footer copy.
- *
- * `components/layout/footer.tsx` renders inside the root layout, so it is emitted on
- * every localized URL. Its links and headings were hard-coded Chinese, which put a
- * Chinese nav block at the bottom of all 956 non-Chinese pages and contradicted the
- * language promise made by <title> and hreflang. Kept separate from `t()` because the
- * footer needs link labels and section headings rather than page metadata.
- */
-export type FooterCopy = {
-	tagline: string;
-	sections: { resources: string; project: string; community: string };
-	links: { browsers: string; tools: string; fingerprint: string; guides: string; compare: string; about: string; contact: string; privacy: string; telegram: string; easybr: string; qq: string };
-	disclaimer: string;
-};
-
-const footerCopy: Record<Locale, FooterCopy> = {
-	"zh-cn": {
-		tagline: "中立收录指纹浏览器、检测工具、自动化框架与隐私技术资源，信息以官方页面为准。",
-		sections: { resources: "资源", project: "项目", community: "社区与产品" },
-		links: { browsers: "指纹浏览器", tools: "检测工具", fingerprint: "指纹技术", guides: "指南与教程", compare: "浏览器对比", about: "关于项目", contact: "联系与贡献", privacy: "隐私说明", telegram: "Telegram 社区", easybr: "EasyBR 官网", qq: "QQ 群：967818141" },
-		disclaimer: "信息仅供资源整理与研究参考 · 价格与功能以官方页面为准"
-	},
-	en: {
-		tagline: "An independent catalogue of anti-detect browsers, detection tools, automation frameworks and privacy resources. Verify details on official pages.",
-		sections: { resources: "Resources", project: "Project", community: "Community" },
-		links: { browsers: "Anti-detect browsers", tools: "Detection tools", fingerprint: "Fingerprinting", guides: "Guides", compare: "Comparisons", about: "About", contact: "Contact & contribute", privacy: "Privacy", telegram: "Telegram community", easybr: "EasyBR official site", qq: "QQ group: 967818141" },
-		disclaimer: "For resource curation and research only · Verify prices and features on official pages"
-	},
-	ja: {
-		tagline: "指紋ブラウザ、検出ツール、自動化フレームワーク、プライバシー技術のリソースを中立的に掲載。最新情報は公式サイトをご確認ください。",
-		sections: { resources: "リソース", project: "プロジェクト", community: "コミュニティ" },
-		links: { browsers: "指紋ブラウザ", tools: "検出ツール", fingerprint: "指紋技術", guides: "ガイド", compare: "比較", about: "プロジェクトについて", contact: "連絡・貢献", privacy: "プライバシー", telegram: "Telegram コミュニティ", easybr: "EasyBR 公式サイト", qq: "QQ グループ：967818141" },
-		disclaimer: "リソース整理と研究のための参考情報 · 価格と機能は公式サイトで確認してください"
-	},
-	ko: {
-		tagline: "핑거프린트 브라우저, 탐지 도구, 자동화 프레임워크, 개인정보 기술 리소스를 중립적으로 정리했습니다. 최신 정보는 공식 사이트에서 확인하세요.",
-		sections: { resources: "리소스", project: "프로젝트", community: "커뮤니티" },
-		links: { browsers: "핑거프린트 브라우저", tools: "탐지 도구", fingerprint: "핑거프린팅", guides: "가이드", compare: "비교", about: "프로젝트 소개", contact: "연락 및 기여", privacy: "개인정보", telegram: "Telegram 커뮤니티", easybr: "EasyBR 공식 사이트", qq: "QQ 그룹: 967818141" },
-		disclaimer: "리소스 정리와 연구를 위한 참고 정보 · 가격과 기능은 공식 사이트에서 확인하세요"
-	},
-	es: {
-		tagline: "Catálogo independiente de navegadores anti-detección, herramientas de detección, frameworks de automatización y recursos de privacidad. Verifica los detalles en las páginas oficiales.",
-		sections: { resources: "Recursos", project: "Proyecto", community: "Comunidad" },
-		links: { browsers: "Navegadores anti-detección", tools: "Herramientas de detección", fingerprint: "Huella del navegador", guides: "Guías", compare: "Comparativas", about: "Acerca de", contact: "Contacto y contribuciones", privacy: "Privacidad", telegram: "Comunidad de Telegram", easybr: "Sitio oficial de EasyBR", qq: "Grupo QQ: 967818141" },
-		disclaimer: "Solo para curar recursos e investigación · Verifica precios y funciones en las páginas oficiales"
-	},
-	pt: {
-		tagline: "Catálogo independente de navegadores anti-detecção, ferramentas de detecção, frameworks de automação e recursos de privacidade. Verifique os detalhes nos sites oficiais.",
-		sections: { resources: "Recursos", project: "Projeto", community: "Comunidade" },
-		links: { browsers: "Navegadores anti-detecção", tools: "Ferramentas de detecção", fingerprint: "Fingerprint", guides: "Guias", compare: "Comparações", about: "Sobre", contact: "Contato e contribuição", privacy: "Privacidade", telegram: "Comunidade Telegram", easybr: "Site oficial do EasyBR", qq: "Grupo QQ: 967818141" },
-		disclaimer: "Apenas para curadoria de recursos e pesquisa · Confirme preços e recursos nos sites oficiais"
-	},
-	ru: {
-		tagline: "Независимый каталог антидетект-браузеров, инструментов проверки, фреймворков автоматизации и ресурсов о приватности. Проверяйте данные на официальных сайтах.",
-		sections: { resources: "Ресурсы", project: "Проект", community: "Сообщество" },
-		links: { browsers: "Антидетект-браузеры", tools: "Инструменты проверки", fingerprint: "Отпечаток браузера", guides: "Руководства", compare: "Сравнения", about: "О проекте", contact: "Контакты и вклад", privacy: "Конфиденциальность", telegram: "Сообщество Telegram", easybr: "Официальный сайт EasyBR", qq: "QQ-группа: 967818141" },
-		disclaimer: "Только для подбора ресурсов и исследований · Проверяйте цены и функции на официальных сайтах"
-	}
-};
-
-export const footer = (locale: Locale): FooterCopy => footerCopy[locale];
-
-/**
- * Accessible names for header controls.
- *
- * These were hard-coded Chinese aria-labels on a client component, so screen-reader
- * users navigating an English or Japanese page heard Chinese control names. They are
- * not visible text, but they are still part of the page's language contract.
- */
-const a11yCopy: Record<Locale, { mainNav: string; mobileNav: string; language: string; lightTheme: string; darkTheme: string; openMenu: string; closeMenu: string }> = {
-	"zh-cn": { mainNav: "主导航", mobileNav: "移动端主导航", language: "选择语言", lightTheme: "切换到浅色主题", darkTheme: "切换到深色主题", openMenu: "打开菜单", closeMenu: "关闭菜单" },
-	en: { mainNav: "Main navigation", mobileNav: "Mobile navigation", language: "Select language", lightTheme: "Switch to light theme", darkTheme: "Switch to dark theme", openMenu: "Open menu", closeMenu: "Close menu" },
-	ja: { mainNav: "メインナビゲーション", mobileNav: "モバイルナビゲーション", language: "言語を選択", lightTheme: "ライトテーマに切り替え", darkTheme: "ダークテーマに切り替え", openMenu: "メニューを開く", closeMenu: "メニューを閉じる" },
-	ko: { mainNav: "주요 탐색", mobileNav: "모바일 탐색", language: "언어 선택", lightTheme: "라이트 테마로 전환", darkTheme: "다크 테마로 전환", openMenu: "메뉴 열기", closeMenu: "메뉴 닫기" },
-	es: { mainNav: "Navegación principal", mobileNav: "Navegación móvil", language: "Seleccionar idioma", lightTheme: "Cambiar al tema claro", darkTheme: "Cambiar al tema oscuro", openMenu: "Abrir menú", closeMenu: "Cerrar menú" },
-	pt: { mainNav: "Navegação principal", mobileNav: "Navegação móvel", language: "Selecionar idioma", lightTheme: "Mudar para o tema claro", darkTheme: "Mudar para o tema escuro", openMenu: "Abrir menu", closeMenu: "Fechar menu" },
-	ru: { mainNav: "Основная навигация", mobileNav: "Мобильная навигация", language: "Выбрать язык", lightTheme: "Переключить на светлую тему", darkTheme: "Переключить на тёмную тему", openMenu: "Открыть меню", closeMenu: "Закрыть меню" }
-};
-
-export const a11y = (locale: Locale) => a11yCopy[locale];
+import { locales, localeMeta, localePath, contentLocales, contentPath, t, type Locale } from "./locale-ui";
+export * from "./locale-ui";
 
 export type LocalizedKind = "home" | "browsers" | "tools" | "fingerprint" | "guides" | "compare";
 export const manifestPaths = [
@@ -159,12 +15,15 @@ export const manifestPaths = [
 	...comparisons.map(item => `compare/${item.slug}`)
 ];
 
-export const allLocaleParams = locales.flatMap(locale => manifestPaths.map(path => ({ locale, segments: path ? path.split("/") : [] })));
+export const allLocaleParams = locales.flatMap(locale => manifestPaths.filter(path => {
+	const guide = path.startsWith("guides/") ? guides.find(item => `guides/${item.slug}` === path) : undefined;
+	return !guide?.availableLocales || guide.availableLocales.includes(locale);
+}).map(path => ({ locale, segments: path ? path.split("/") : [] })));
 
 export function hreflangFor(path: string) {
 	return Object.fromEntries([
-		...locales.map(locale => [localeMeta[locale].hreflang, `https://browserhub.co${localePath(locale, path)}`]),
-		["x-default", path ? `https://browserhub.co/${path.replace(/^\/+|\/+$/g, "")}/` : "https://browserhub.co/"]
+		...contentLocales(path).map(locale => [localeMeta[locale].hreflang, `https://browserhub.co${localePath(locale, path)}`]),
+		["x-default", `https://browserhub.co${localePath("zh-cn", path)}`]
 	]);
 }
 
@@ -205,7 +64,7 @@ export function pageMeta(locale: Locale, path: string) {
 	if (kind === "guides" && resource && "content" in resource) {
 		const guide = resource as GuideResource;
 		const copy = localizedGuideCopy(locale, guide.slug, { title: guide.title, description: guide.description });
-		return { title: `${copy.title} | ${labels.guides}`, description: copy.description };
+		return { title: copy.title, description: copy.description };
 	}
 	return {
 		title: `${name} | ${section}`,
@@ -225,7 +84,17 @@ export function comparisonCopy(locale: Locale, a: BrowserResource, b: BrowserRes
 		pt: { overview: `As principais diferenças entre ${a.name} e ${b.name} estão no armazenamento dos perfis, no plano gratuito, nas plataformas e na automação. A tabela usa os mesmos campos públicos para uma comparação consistente.`, verdict: `Priorize ${a.name} se o controle local, o isolamento dos perfis ou o plano gratuito forem mais importantes. Avalie ${b.name} se as plataformas, o trabalho em equipe ou as integrações forem mais adequados. Confirme os dados nos sites oficiais.`, strengths: `${a.name}: vantagens e cenários`, limitations: `${b.name}: vantagens e cenários`, scenarios: "Orientação por cenário", faq: "Perguntas frequentes", fields: { free: "Plano gratuito", price: "Preço inicial", profiles: "Perfis", platform: "Plataformas", engine: "Navegador", storage: "Armazenamento", api: "API", automation: "Automação", proxy: "Proxy" }, free: "Plano gratuito", price: "Preço", profiles: "Perfis", platform: "Plataformas", engine: "Engine", storage: "Armazenamento", api: "API", automation: "Automação", proxy: "Proxy", source: "Preços e recursos podem mudar; confirme as informações nos sites oficiais." },
 		ru: { overview: `Главные различия между ${a.name} и ${b.name} связаны с хранением профилей, бесплатным лимитом, платформами и автоматизацией. В таблице используются одинаковые открытые поля для понятного сравнения.`, verdict: `Сначала изучите ${a.name}, если важны локальный контроль, изоляция профилей или опубликованный бесплатный лимит. Изучите ${b.name}, если важнее платформы, командный процесс или интеграции. Актуальные условия проверяйте на официальных сайтах.`, strengths: `${a.name}: преимущества и сценарии`, limitations: `${b.name}: преимущества и сценарии`, scenarios: "Рекомендации по сценарию", faq: "Частые вопросы", fields: { free: "Бесплатный план", price: "Начальная цена", profiles: "Профили", platform: "Платформы", engine: "Движок", storage: "Хранилище", api: "API", automation: "Автоматизация", proxy: "Прокси" }, free: "Бесплатный план", price: "Цена", profiles: "Профили", platform: "Платформы", engine: "Движок", storage: "Хранилище", api: "API", automation: "Автоматизация", proxy: "Прокси", source: "Цены и функции могут меняться; проверяйте данные на официальных сайтах." }
 	};
-	return templates[locale];
+	const editorial = comparisonEditorial[`${a.slug}-vs-${b.slug}`];
+	const neutral: Record<Locale, string> = {
+		"zh-cn": `先按所需平台、存储位置、团队权限和自动化任务比较 ${a.name} 与 ${b.name}，再用同一组测试账号、重启恢复和撤权任务验证。表格是历史资料快照；当前能力与报价请向各供应商确认。`,
+		en: `Compare ${a.name} and ${b.name} against your required platforms, storage location, team permissions and automation tasks. Validate both with the same test-account, restart/recovery and access-revocation pilot. The table is a historical catalogue snapshot; confirm current capabilities and quotes with each vendor.`,
+		ja: `${a.name} と ${b.name} を必要なOS、保存場所、権限、自動化タスクで比較し、同じ試用手順で確認してください。最新情報は各公式サイトで確認してください。`,
+		ko: `${a.name}과 ${b.name}을 필요한 플랫폼, 저장 위치, 권한, 자동화 작업으로 비교하고 같은 시험 절차로 확인하세요. 최신 정보는 각 공식 사이트에서 확인하세요.`,
+		es: `Compara ${a.name} y ${b.name} según plataformas, almacenamiento, permisos y automatización. Valida ambos con las mismas tareas y confirma las condiciones actuales con cada proveedor.`,
+		pt: `Compare ${a.name} e ${b.name} por plataformas, armazenamento, permissões e automação. Teste ambos com as mesmas tarefas e confirme as condições atuais com cada fornecedor.`,
+		ru: `Сравните ${a.name} и ${b.name} по платформам, хранению, правам и задачам автоматизации. Проверьте оба решения одинаковыми заданиями и уточните текущие условия у поставщиков.`
+	};
+	return { ...templates[locale], verdict: editorial && (locale === "en" || locale === "zh-cn") ? editorial[locale].sections[0].body.split("\n\n")[0] : neutral[locale] };
 }
 
 export type RelatedLink = { href: string; title: string; description: string; kind: LocalizedKind };
@@ -297,7 +166,8 @@ export function relatedLinks(locale: Locale, kind: LocalizedKind, item: any, lim
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const link = (targetKind: LocalizedKind, entry: any): RelatedLink => {
 		const title = "name" in entry ? entry.name : "title" in entry ? entry.title : entry.slug;
-		return { href: localePath(locale, `${targetKind}/${entry.slug}`), title, description: localizedResourceDescription(locale, targetKind, entry), kind: targetKind };
+		const localTitle = targetKind === "guides" ? localizedGuideCopy(locale, entry.slug, entry).title : title;
+		return { href: contentPath(locale, `${targetKind}/${entry.slug}`), title: localTitle, description: localizedResourceDescription(locale, targetKind, entry), kind: targetKind };
 	};
 	const pick = (entries: RelatedLink[]) => entries.filter(Boolean).slice(0, limit);
 
@@ -306,14 +176,15 @@ export function relatedLinks(locale: Locale, kind: LocalizedKind, item: any, lim
 		const vsBrowsers = comparisons.filter(entry => entry.browsers.includes(slug)).slice(0, 3).map(entry => link("compare", entry));
 		const alternatives = browsers.filter(entry => entry.slug !== slug).sort((a, b) => b.rating - a.rating).slice(0, 3).map(entry => link("browsers", entry));
 		const guidesForBrowser = guides.filter(entry => entry.relatedBrowsers?.includes(slug)).slice(0, 2).map(entry => link("guides", entry));
-		return pick([...vsBrowsers, ...alternatives, ...guidesForBrowser]);
+		return pick([...guidesForBrowser, ...vsBrowsers, ...alternatives]);
 	}
 
 	if (kind === "compare") {
 		const pair = item.browsers as [string, string];
 		const subjects = pair.map(slug => browsers.find(entry => entry.slug === slug)).filter(Boolean).map(entry => link("browsers", entry));
 		const siblings = comparisons.filter(entry => entry.slug !== item.slug && entry.browsers.some(slug => pair.includes(slug))).slice(0, 3).map(entry => link("compare", entry));
-		return pick([...subjects, ...siblings]);
+		const decisionGuide = guides.find(guide => guide.slug === "best-antidetect-browsers-2026");
+		return pick([...subjects, ...(decisionGuide ? [link("guides", decisionGuide)] : []), ...siblings]);
 	}
 
 	if (kind === "tools" || kind === "fingerprint") {
@@ -330,12 +201,12 @@ export function relatedLinks(locale: Locale, kind: LocalizedKind, item: any, lim
 	const guide = item as GuideResource;
 	const relatedBrowserLinks = (guide.relatedBrowsers ?? []).map(slug => browsers.find(entry => entry.slug === slug)).filter((entry): entry is BrowserResource => Boolean(entry)).map(entry => link("browsers", entry));
 	const relatedToolLinks = (guide.relatedTools ?? []).map(slug => tools.find(entry => entry.slug === slug)).filter((entry): entry is ToolResource => Boolean(entry)).map(entry => link("tools", entry));
-	const otherGuides = guides.filter(entry => entry.slug !== guide.slug && entry.category === guide.category).slice(0, 2).map(entry => link("guides", entry));
+	const otherGuides = guides.filter(entry => entry.slug !== guide.slug && (guide.relatedGuides?.includes(entry.slug) || entry.slug === "best-antidetect-browsers-2026" || entry.category === guide.category)).slice(0, 4).map(entry => link("guides", entry));
 	// Guides usually carry no curated relations, so fall back to top-rated browsers and
 	// detection tools. Without this most guide pages would render no internal links at all.
 	const fallbackBrowsers = browsers.filter(entry => entry.rating >= 4.5).slice(0, 3).map(entry => link("browsers", entry));
 	const fallbackTools = tools.filter(entry => entry.categorySlug.includes("detection") || entry.categorySlug.includes("fingerprint")).slice(0, 2).map(entry => link("tools", entry));
-	return pick([...relatedBrowserLinks, ...relatedToolLinks, ...otherGuides, ...fallbackBrowsers, ...fallbackTools]);
+	return pick([...otherGuides, ...relatedBrowserLinks, ...relatedToolLinks, ...fallbackBrowsers, ...fallbackTools]);
 }
 
 export function comparisonFaq(locale: Locale, a: BrowserResource, b: BrowserResource, copy: ReturnType<typeof comparisonCopy>) {
@@ -379,7 +250,7 @@ export function comparisonPitfalls(locale: Locale): string[] {
 		],
 		en: [
 			"Comparing only the browser subscription price and ignoring proxy traffic fees. In multi-account setups proxies are often billed per GB and can exceed the browser cost.",
-			"Running several accounts inside one profile. Profile reuse is the most common cause of account linkage; give each account its own profile and keep proxy, language and timezone stable over time.",
+			"Running several accounts inside one profile. Profile reuse may expose shared session or storage state; give each account its own profile and keep proxy, language and timezone stable over time.",
 			"Treating \"undetectable\" as an absolute claim. No tool is undetectable to every site; judge by actual public detection results, not marketing wording.",
 			"Looking only at the free profile count and ignoring retention rules and feature limits. Free tiers may cap exports, automation or how long profiles are kept — confirm before migrating."
 		],
@@ -435,7 +306,7 @@ export function comparisonProxyAnswer(locale: Locale): string {
 export function comparisonIsolationAnswer(locale: Locale): string {
 	const lists: Record<Locale, string> = {
 		"zh-cn": "不建议。同一个环境内登录多个账号是账号串联最常见的原因。正确做法是每个账号绑定独立环境，并保持代理、语言、时区与账号行为长期一致，再用公开检测工具确认环境稳定。",
-		en: "No. Logging several accounts into one profile is the most common cause of account linkage. Give each account its own isolated profile, keep the proxy, language and timezone stable over time, then confirm stability with public detection tools.",
+		en: "No. Logging several accounts into one profile can expose shared sessions or storage. Give each account its own isolated profile, keep the proxy, language and timezone stable over time, then confirm stability with public detection tools.",
 		ja: "おすすめしません。1 つのプロファイルで複数アカウントを運用するのはアカウント紐付けの最も一般的な原因です。アカウントごとに独立した環境を割り当て、プロキシ・言語・タイムゾーンを長期で一致させ、公開検出ツールで安定性を確認してください。",
 		ko: "권장하지 않습니다. 한 프로필에서 여러 계정을 운영하는 것은 계정 연동의 가장 흔한 원인입니다. 계정마다 독립된 환경을 주고 프록시·언어·시간대를 장기적으로 일치시킨 뒤 공개 검출 도구로 안정성을 확인하세요.",
 		es: "No. Iniciar sesión con varias cuentas en un mismo perfil es la causa más común de vinculación de cuentas. Asigna un perfil aislado a cada cuenta, mantén proxy, idioma y zona horaria estables y confirma la estabilidad con herramientas de detección públicas.",

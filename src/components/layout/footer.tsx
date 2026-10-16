@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { footer, localeFromPath, localePath, locales } from "@/lib/i18n";
+import { footer, localeFromPath, localePath, locales } from "@/lib/locale-ui";
 
 /**
  * Locale-aware footer.
@@ -51,8 +51,8 @@ export function Footer() {
 							<Image src="/brand/browserhub-mark.svg" alt="" width={24} height={24} />
 							<span className="text-[15px] font-semibold tracking-tight">BrowserHub</span>
 						</Link>
-						<p className="text-sm leading-6 text-muted-foreground">{copy.tagline}</p>
-						<p className="font-mono text-[11px] tracking-wide text-muted-foreground/70 uppercase">Neutral · Curated · Independent</p>
+						<p className="text-sm leading-6 text-muted-foreground">{copy.tagline}</p><p className="text-xs leading-6 text-muted-foreground" lang={locale === "zh-cn" ? "zh-CN" : "en"}>{locale === "zh-cn" ? "EasyBR 为关联产品。" : "EasyBR is an affiliated product."} <Link href={href("about")} className="underline underline-offset-4">{locale === "zh-cn" ? "编辑与披露政策" : "Editorial policy"}</Link></p>
+						<p className="font-mono text-[11px] tracking-wide text-muted-foreground/70 uppercase">Curated · Sources disclosed</p>
 					</div>
 					<nav aria-label={copy.sections.resources}>
 						<h2 className="eyebrow mb-4">{copy.sections.resources}</h2>
