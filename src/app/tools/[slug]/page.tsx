@@ -6,6 +6,8 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { toolBySlug, tools } from "@/data/resources";
+import { toolSectionsFor } from "@/data/tool-sections";
+import { SectionBody } from "@/components/section-body";
 import { ResourceIcon } from "@/components/resource-icon";
 import { StatusBadge } from "@/components/status-badge";
 import { cn } from "@/lib/utils";
@@ -84,6 +86,15 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
 						<li>在待测浏览器环境中运行检测，记录原始结果和测试时间。</li>
 						<li>将结果与其他独立工具交叉观察，不把单一分数当作结论。</li>
 					</ol>
+
+					<Separator className="my-10" />
+
+					{toolSectionsFor({ name: tool.name, slug: tool.slug, categorySlug: tool.categorySlug, website: tool.website }, "zh-cn").map(section => (
+						<div key={section.heading} className="mb-10 last:mb-0">
+							<h2 className="mb-1 text-xl font-semibold tracking-tight">{section.heading}</h2>
+							<SectionBody body={section.body} className="mt-4" />
+						</div>
+					))}
 
 					<Separator className="my-10" />
 

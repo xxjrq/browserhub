@@ -119,6 +119,39 @@ export function toolHowToSteps(locale: Locale): [string, string, string] {
 }
 
 /**
+ * Localised labels for the fourteen `ToolResource.categorySlug` values.
+ *
+ * `ToolResource.category` is authored in Chinese (`categoryLabels` in
+ * resources.ts) and was interpolated verbatim into the tool description for
+ * every locale, so `/ja/tools/*`, `/ko|es|pt|ru/tools/*` shipped the Chinese
+ * label "指纹检测" inside otherwise localised sentences. The description is
+ * rendered from the slug, so this map keys on the slug and every locale gets
+ * its own wording instead of a dashed English placeholder.
+ */
+export function toolCategoryLabel(locale: Locale, categorySlug: string): string {
+	const map: Record<string, Partial<Record<Locale, string>>> = {
+		"fingerprint-detection": { en: "fingerprint detection", ja: "指紋検出", ko: "지문 탐지", es: "detección de huellas", pt: "detecção de impressões digitais", ru: "обнаружение отпечатков" },
+		"bot-detection": { en: "bot detection", ja: "ボット検出", ko: "봇 탐지", es: "detección de bots", pt: "detecção de bots", ru: "обнаружение ботов" },
+		"privacy-testing": { en: "privacy testing", ja: "プライバシーテスト", ko: "개인정보 테스트", es: "pruebas de privacidad", pt: "testes de privacidade", ru: "проверка приватности" },
+		"automation-detection": { en: "automation detection", ja: "自動化検出", ko: "자동화 탐지", es: "detección de automatización", pt: "detecção de automação", ru: "обнаружение автоматизации" },
+		"network-fingerprint": { en: "network fingerprinting", ja: "ネットワーク指紋", ko: "네트워크 핑거프린팅", es: "huella de red", pt: "impressão digital de rede", ru: "сетевой отпечаток" },
+		"proxy-detection": { en: "proxy detection", ja: "プロキシ検出", ko: "프록시 탐지", es: "detección de proxies", pt: "detecção de proxies", ru: "обнаружение прокси" },
+		"ip-reputation": { en: "IP reputation", ja: "IP 信誉評価", ko: "IP 평판", es: "reputación de IP", pt: "reputação de IP", ru: "репутация IP" },
+		"network-testing": { en: "network testing", ja: "ネットワークテスト", ko: "네트워크 테스트", es: "pruebas de red", pt: "testes de rede", ru: "проверка сети" },
+		automation: { en: "automation", ja: "自動化", ko: "자동화", es: "automatización", pt: "automação", ru: "автоматизация" },
+		testing: { en: "testing", ja: "テスト", ko: "테스트", es: "pruebas", pt: "testes", ru: "тестирование" },
+		interaction: { en: "interaction automation", ja: "操作の自動化", ko: "상호작용 자동화", es: "automatización de interacción", pt: "automação de interação", ru: "автоматизация взаимодействия" },
+		"desktop-automation": { en: "desktop automation", ja: "デスクトップ自動化", ko: "데스크톱 자동화", es: "automatización de escritorio", pt: "automação de desktop", ru: "автоматизация рабочего стола" },
+		"http-tls": { en: "HTTP/TLS", ja: "HTTP/TLS", ko: "HTTP/TLS", es: "HTTP/TLS", pt: "HTTP/TLS", ru: "HTTP/TLS" },
+		privacy: { en: "privacy tools", ja: "プライバシーツール", ko: "개인정보 도구", es: "herramientas de privacidad", pt: "ferramentas de privacidade", ru: "инструменты приватности" }
+	};
+	const entry = map[categorySlug];
+	if (!entry) return categorySlug;
+	if (locale === "zh-cn") return entry["zh-cn"] ?? categorySlug;
+	return entry[locale] ?? entry.en ?? categorySlug;
+}
+
+/**
  * Localised labels for the eight `GuideResource.category` values.
  *
  * `category` is authored in Chinese on the source rows and is rendered verbatim in
@@ -373,7 +406,20 @@ export function localizedResourceDescription(locale: Locale, kind: LocalizedKind
 		};
 		return templates[locale] ?? item.longDescription;
 	}
-	if (kind === "tools" && "category" in item) return ({ en: `${item.name} is a public ${item.categorySlug ? String(item.categorySlug).replace(/-/g, " ") : item.category} tool for browser fingerprint, network or automation research. Review the official documentation and test conditions before relying on results.`, ja: `${item.name} はブラウザ、ネットワーク、自動化研究向けの公開 ${item.category} リソースです。結果を利用する前に公式ドキュメントを確認してください。`, ko: `${item.name}은(는) 브라우저·네트워크·자동화 연구를 위한 공개 ${item.category} 리소스입니다. 결과를 사용하기 전에 공식 문서를 확인하세요.`, es: `${item.name} es un recurso público de ${item.category} para investigar navegadores, redes o automatización. Consulta su documentación oficial.`, pt: `${item.name} é um recurso público de ${item.category} para pesquisa de navegadores, redes ou automação. Consulte a documentação oficial.`, ru: `${item.name} — открытый ресурс категории «${item.category}» для исследования браузеров, сетей или автоматизации. Изучите официальную документацию.` } as Record<Locale, string>)[locale];
+	if (kind === "tools" && "category" in item) {
+		// `item.category` is the Chinese label; the slug keeps every locale correct.
+		// zh-cn already returned above with the native label.
+		const slug = String(item.categorySlug ?? item.category);
+		const label = toolCategoryLabel(locale, slug);
+		return ({
+			en: `${item.name} is a public ${label} tool for browser fingerprint, network or automation research. Review the official documentation and test conditions before relying on results.`,
+			ja: `${item.name} はブラウザ、ネットワーク、自動化研究向けの公開 ${label} リソースです。結果を利用する前に公式ドキュメントとテスト条件を確認してください。`,
+			ko: `${item.name}은(는) 브라우저·네트워크·자동화 연구를 위한 공개 ${label} 리소스입니다. 결과를 사용하기 전에 공식 문서와 테스트 조건을 확인하세요.`,
+			es: `${item.name} es un recurso público de ${label} para investigar navegadores, redes o automatización. Consulta su documentación oficial y las condiciones de prueba antes de confiar en los resultados.`,
+			pt: `${item.name} é um recurso público de ${label} para pesquisa de navegadores, redes ou automação. Consulte a documentação oficial e as condições de teste antes de confiar nos resultados.`,
+			ru: `${item.name} — открытый ресурс категории «${label}» для исследования браузеров, сетей или автоматизации. Изучите официальную документацию и условия тестирования, прежде чем полагаться на результаты.`
+		} as Record<Locale, string>)[locale];
+	}
 	if (kind === "fingerprint" && "category" in item) return ({ en: `${item.name} is a browser fingerprint signal used to study rendering, device, language, network or storage consistency.`, ja: `${item.name} はレンダリング、端末、言語、ネットワーク、ストレージの一貫性を調べるブラウザ指紋信号です。`, ko: `${item.name}은(는) 렌더링, 장치, 언어, 네트워크 또는 저장소 일관성을 분석하는 브라우저 핑거프린트 신호입니다.`, es: `${item.name} es una señal de huella del navegador relacionada con la coherencia de renderizado, dispositivo, idioma, red o almacenamiento.`, pt: `${item.name} é um sinal de fingerprint usado para estudar a consistência de renderização, dispositivo, idioma, rede ou armazenamento.`, ru: `${item.name} — сигнал браузерного отпечатка для анализа согласованности рендеринга, устройства, языка, сети или хранилища.` } as Record<Locale, string>)[locale];
 	if (kind === "guides" && "title" in item) return ({ en: `A practical BrowserHub guide covering browser selection, profile isolation, proxy setup, fingerprint checks and responsible use.`, ja: `ブラウザ選定、プロファイル分離、プロキシ設定、指紋チェックと適切な利用を扱う BrowserHub の実用ガイドです。`, ko: `브라우저 선택, 프로필 분리, 프록시 설정, 핑거프린트 점검과 책임 있는 사용을 다루는 BrowserHub 실용 가이드입니다.`, es: `Guía práctica de BrowserHub sobre selección de navegadores, aislamiento de perfiles, proxies, huellas y uso responsable.`, pt: `Guia prático do BrowserHub sobre escolha de navegadores, isolamento de perfis, proxies, fingerprints e uso responsável.`, ru: `Практическое руководство BrowserHub по выбору браузера, изоляции профилей, прокси, отпечаткам и ответственному использованию.` } as Record<Locale, string>)[locale];
 	return item.description;
