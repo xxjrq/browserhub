@@ -6,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { technologyBySlug, technologies, tools } from "@/data/resources";
 import { ResourceIcon } from "@/components/resource-icon";
+import { SectionBody } from "@/components/section-body";
+import { fingerprintCategoryLabel, fingerprintSectionsFor } from "@/data/fingerprint-sections";
 import { cn } from "@/lib/utils";
 
 export function generateStaticParams() { return technologies.map(technology => ({ slug: technology.slug })); }
@@ -43,7 +45,7 @@ export default async function FingerprintDetailPage({ params }: { params: Promis
 
 			<article className="mx-auto max-w-4xl">
 				<header className="mb-10">
-					<p className="eyebrow text-primary">{technology.category}</p>
+					<p className="eyebrow text-primary">{fingerprintCategoryLabel("zh-cn", technology.category)}</p>
 					<h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl"><span className="font-mono">{technology.name}</span> 浏览器指纹</h1>
 					<p className="mt-5 text-lg leading-8 text-muted-foreground">{technology.description}</p>
 				</header>
@@ -76,6 +78,10 @@ export default async function FingerprintDetailPage({ params }: { params: Promis
 				<h2 className="mt-12 mb-1 text-xl font-semibold tracking-tight">合规防护思路</h2>
 				<p className="eyebrow mb-5">Mitigation</p>
 				<p className="leading-8 text-muted-foreground">优先保持浏览器、设备、语言、时区和网络设置的一致性，减少不必要的权限和扩展暴露，并遵守目标网站条款。不要把“通过某个检测”当作安全或隐私的唯一标准。</p>
+
+				<div className="mt-12 space-y-8">
+					{fingerprintSectionsFor({ name: technology.name, slug: technology.slug, category: technology.category }, "zh-cn").map(section => <section key={section.heading}><h2 className="mb-1 text-xl font-semibold tracking-tight">{section.heading}</h2><p className="eyebrow mb-4">Detail</p><SectionBody body={section.body} /></section>)}
+				</div>
 
 				<h2 className="mt-12 mb-1 text-xl font-semibold tracking-tight">相关检测工具</h2>
 				<p className="eyebrow mb-5">Tools</p>

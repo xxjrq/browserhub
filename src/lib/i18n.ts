@@ -3,6 +3,7 @@ import { verifiedProducts } from "@/data/verified-products";
 import { comparisonEditorial } from "@/data/browser-editorial";
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
 import { localizedGuideCopy } from "@/data/guide-translations";
+import { fingerprintCategoryLabel, fingerprintSignalSummary } from "@/data/fingerprint-sections";
 
 import { locales, localeMeta, localePath, contentLocales, contentPath, t, type Locale } from "./locale-ui";
 export * from "./locale-ui";
@@ -381,8 +382,11 @@ export function localizedResourceDescription(locale: Locale, kind: LocalizedKind
 		}
 		if (kind === "tools" && "category" in item)
 			return `${item.name} 是面向${item.category}的公开工具，用于浏览器指纹、网络或自动化研究。使用前请阅读官方说明并在合规范围内使用。`;
-		if (kind === "fingerprint" && "category" in item)
+		if (kind === "fingerprint" && "category" in item) {
+			const summary = fingerprintSignalSummary(String(item.slug), locale);
+			if (summary) return `${summary}属于${fingerprintCategoryLabel(locale, String(item.category))}，可用于研究浏览器环境的一致性。`;
 			return `${item.name} 是浏览器指纹中的信号维度，用于研究渲染、设备、语言、网络与存储的一致性。`;
+		}
 		if (kind === "guides" && "title" in item) return item.description;
 		return item.description;
 	}
@@ -420,7 +424,15 @@ export function localizedResourceDescription(locale: Locale, kind: LocalizedKind
 			ru: `${item.name} — открытый ресурс категории «${label}» для исследования браузеров, сетей или автоматизации. Изучите официальную документацию и условия тестирования, прежде чем полагаться на результаты.`
 		} as Record<Locale, string>)[locale];
 	}
-	if (kind === "fingerprint" && "category" in item) return ({ en: `${item.name} is a browser fingerprint signal used to study rendering, device, language, network or storage consistency.`, ja: `${item.name} はレンダリング、端末、言語、ネットワーク、ストレージの一貫性を調べるブラウザ指紋信号です。`, ko: `${item.name}은(는) 렌더링, 장치, 언어, 네트워크 또는 저장소 일관성을 분석하는 브라우저 핑거프린트 신호입니다.`, es: `${item.name} es una señal de huella del navegador relacionada con la coherencia de renderizado, dispositivo, idioma, red o almacenamiento.`, pt: `${item.name} é um sinal de fingerprint usado para estudar a consistência de renderização, dispositivo, idioma, rede ou armazenamento.`, ru: `${item.name} — сигнал браузерного отпечатка для анализа согласованности рендеринга, устройства, языка, сети или хранилища.` } as Record<Locale, string>)[locale];
+	if (kind === "fingerprint" && "category" in item) {
+		// Lead with the sentence that names this signal's own API or packet
+		// field. The previous single template differed across the 15 signals
+		// only by name, so every page described the same generic signal.
+		const summary = fingerprintSignalSummary(String(item.slug), locale);
+		const label = fingerprintCategoryLabel(locale, String(item.category));
+		if (summary) return `${summary} It belongs to the ${label.toLowerCase()} group of browser fingerprint signals.`;
+		return `${item.name} is a browser fingerprint signal in the ${label.toLowerCase()} group, used to study rendering, device, language, network or storage consistency.`;
+	}
 	if (kind === "guides" && "title" in item) return ({ en: `A practical BrowserHub guide covering browser selection, profile isolation, proxy setup, fingerprint checks and responsible use.`, ja: `ブラウザ選定、プロファイル分離、プロキシ設定、指紋チェックと適切な利用を扱う BrowserHub の実用ガイドです。`, ko: `브라우저 선택, 프로필 분리, 프록시 설정, 핑거프린트 점검과 책임 있는 사용을 다루는 BrowserHub 실용 가이드입니다.`, es: `Guía práctica de BrowserHub sobre selección de navegadores, aislamiento de perfiles, proxies, huellas y uso responsable.`, pt: `Guia prático do BrowserHub sobre escolha de navegadores, isolamento de perfis, proxies, fingerprints e uso responsável.`, ru: `Практическое руководство BrowserHub по выбору браузера, изоляции профилей, прокси, отпечаткам и ответственному использованию.` } as Record<Locale, string>)[locale];
 	return item.description;
 }
