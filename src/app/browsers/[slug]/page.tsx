@@ -7,6 +7,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { browserBySlug, browsers, comparisons, guides } from "@/data/resources";
+import { browserSectionsFor } from "@/data/browser-sections";
+import { scenarioLabel } from "@/lib/i18n";
+import { SectionBody } from "@/components/section-body";
 import { ResourceIcon } from "@/components/resource-icon";
 import { StatusBadge } from "@/components/status-badge";
 import { Rating } from "@/components/rating";
@@ -55,8 +58,11 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 	const relatedBrowsers = browsers.filter(item => item.slug !== browser.slug && item.type === browser.type).slice(0, 3);
 	const relatedComparisons = comparisons.filter(item => item.browsers.includes(browser.slug)).slice(0, 6);
 	const relatedGuides = guides.filter(guide => guide.relatedBrowsers?.includes(browser.slug)).slice(0, 3);
+	// The opening paragraph and the long-form sections are derived from the same
+	// catalog row, so they are resolved once here rather than per render site.
+	const browserCopy = browserSectionsFor({ name: browser.name, slug: browser.slug, status: browser.status, type: browser.type, platforms: browser.platforms, engine: browser.engine, automation: browser.automation, proxyProtocols: browser.proxyProtocols, storage: browser.storage, bestFor: browser.bestFor }, "zh-cn");
 	const faq = [
-		{ question: `${browser.name} 适合什么用户？`, answer: `${browser.name} 的公开资料显示，它主要面向${browser.bestFor.slice(0, 2).join("和")}等浏览器环境管理场景。具体适用范围应结合平台、账号数量和自动化需求判断。` },
+		{ question: `${browser.name} 适合什么用户？`, answer: `${browser.name} 的公开资料显示，它主要面向${browser.bestFor.slice(0, 2).map(item => scenarioLabel("zh-cn", item)).join("和")}等浏览器环境管理场景。具体适用范围应结合平台、账号数量和自动化需求判断。` },
 		{ question: `${browser.name} 的价格是多少？`, answer: `本页记录的套餐或许可信息为“${browser.price}”，免费额度为“${browser.free}”。价格、套餐和免费额度可能调整，请以官方页面为准。` },
 		{ question: `${browser.name} 支持哪些能力？`, answer: `当前整理结果显示：API${browser.api ? "支持" : "未标注支持"}、自动化${browser.automation ? "支持" : "未标注支持"}、代理${browser.proxy ? "支持" : "未标注支持"}。实际接口和版本以官方文档为准。` }
 	];
@@ -103,9 +109,10 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 					)}
 
 					<p className="mb-6 text-lg leading-8 text-muted-foreground">{browser.longDescription}</p>
+					<p className="mb-6 leading-8 text-muted-foreground">{browserCopy.opening}</p>
 					<div className="mb-4 flex flex-wrap gap-2">
 						{browser.bestFor.slice(0, 4).map(item => (
-							<span key={item} className="rounded-full border bg-card px-3 py-1 font-mono text-[11px] tracking-wide text-muted-foreground">{item}</span>
+							<span key={item} className="rounded-full border bg-card px-3 py-1 font-mono text-[11px] tracking-wide text-muted-foreground">{scenarioLabel("zh-cn", item)}</span>
 						))}
 					</div>
 
@@ -138,8 +145,15 @@ export default async function BrowserDetailPage({ params }: { params: Promise<{ 
 					<h2 className="mb-1 text-xl font-semibold tracking-tight">适用场景</h2>
 					<p className="eyebrow mb-5">Use Cases</p>
 					<div className="grid gap-3 sm:grid-cols-2">
-						{browser.bestFor.map(item => <div key={item} className="rounded-lg border bg-card px-4 py-3.5 text-sm">{item}</div>)}
+						{browser.bestFor.map(item => <div key={item} className="rounded-lg border bg-card px-4 py-3.5 text-sm">{scenarioLabel("zh-cn", item)}</div>)}
 					</div>
+
+					{browserCopy.sections.map(section => (
+						<section key={section.heading} className="mb-10">
+							<h2 className="mb-1 text-xl font-semibold tracking-tight">{section.heading}</h2>
+							<SectionBody body={section.body} className="mt-4" />
+						</section>
+					))}
 
 					<Separator className="my-10" />
 

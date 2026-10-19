@@ -179,6 +179,57 @@ export function guideCategoryLabel(locale: Locale, category: string): string {
 	return entry[locale] ?? entry.en ?? category;
 }
 
+/**
+ * Localised labels for `BrowserResource.bestFor`.
+ *
+ * `bestFor` holds machine slugs from `catalog/browsers.json` ("multi-account",
+ * "team-workflows", "proxy-management"…). They were rendered verbatim in the
+ * "适用场景" card, so 28 of the 36 zh-cn browser pages — the default locale —
+ * displayed raw English slugs. Only the label is translated; the underlying
+ * catalog values stay as slugs so the comparison pages can keep matching on them.
+ */
+export function scenarioLabel(locale: Locale, slug: string): string {
+	const map: Record<string, Partial<Record<Locale, string>>> = {
+		"multi-account": { "zh-cn": "多账号管理", en: "multi-account management", ja: "複数アカウント運用", ko: "다중 계정 관리", es: "gestión de varias cuentas", pt: "gestão de várias contas", ru: "управление несколькими аккаунтами" },
+		"team-workflows": { "zh-cn": "团队协作流程", en: "team workflows", ja: "チーム運用", ko: "팀 워크플로", es: "flujos de trabajo en equipo", pt: "fluxos de trabalho em equipe", ru: "командные рабочие процессы" },
+		"proxy-management": { "zh-cn": "代理管理", en: "proxy management", ja: "プロキシ管理", ko: "프록시 관리", es: "gestión de proxies", pt: "gestão de proxies", ru: "управление прокси" },
+		automation: { "zh-cn": "自动化任务", en: "automation tasks", ja: "自動化タスク", ko: "자동화 작업", es: "tareas de automatización", pt: "tarefas de automação", ru: "задачи автоматизации" },
+		"desktop-automation": { "zh-cn": "桌面自动化", en: "desktop automation", ja: "デスクトップ自動化", ko: "데스크톱 자동화", es: "automatización de escritorio", pt: "automação de desktop", ru: "автоматизация рабочего стола" },
+		"headless-automation": { "zh-cn": "无头自动化", en: "headless automation", ja: "ヘッドレス自動化", ko: "헤드리스 자동화", es: "automatización headless", pt: "automação headless", ru: "автоматизация без графического интерфейса" },
+		"mobile-testing": { "zh-cn": "移动端测试", en: "mobile testing", ja: "モバイルテスト", ko: "모바일 테스트", es: "pruebas en móvil", pt: "testes em dispositivos móveis", ru: "тестирование на мобильных устройствах" },
+		testing: { "zh-cn": "测试验证", en: "testing and verification", ja: "テスト・検証", ko: "테스트 검증", es: "pruebas y verificación", pt: "testes e verificação", ru: "тестирование и проверка" },
+		research: { "zh-cn": "指纹研究", en: "fingerprint research", ja: "指紋研究", ko: "지문 연구", es: "investigación de huellas", pt: "pesquisa de impressões digitais", ru: "исследование отпечатков" },
+		enterprise: { "zh-cn": "企业团队", en: "enterprise teams", ja: "エンタープライズ", ko: "엔터프라이즈", es: "equipos empresariales", pt: "equipes corporativas", ru: "корпоративные команды" },
+		workspaces: { "zh-cn": "工作区管理", en: "workspace management", ja: "ワークスペース管理", ko: "워크스페이스 관리", es: "gestión de espacios de trabajo", pt: "gestão de espaços de trabalho", ru: "управление рабочими пространствами" },
+		"chinese-language-users": { "zh-cn": "中文界面用户", en: "Chinese-language interfaces", ja: "中国語インターフェース", ko: "중국어 인터페이스", es: "interfaces en chino", pt: "interfaces em chinês", ru: "интерфейсы на китайском" },
+		"privacy research": { "zh-cn": "隐私研究", en: "privacy research", ja: "プライバシー研究", ko: "개인정보 연구", es: "investigación de privacidad", pt: "pesquisa de privacidade", ru: "исследование приватности" }
+	};
+	const entry = map[slug];
+	if (!entry) return slug;
+	if (locale === "zh-cn") return entry["zh-cn"] ?? slug;
+	return entry[locale] ?? entry.en ?? slug;
+}
+
+/**
+ * Localised field labels for the browser detail spec card.
+ *
+ * These four were literal English strings in the JSX, so they appeared verbatim in
+ * every locale including zh-cn. Reusing the comparison table's field names keeps the
+ * two surfaces on one vocabulary.
+ */
+export function browserSpecLabel(locale: Locale, field: "free" | "price" | "profiles" | "platform"): string {
+	const map: Record<Locale, Record<"free" | "price" | "profiles" | "platform", string>> = {
+		"zh-cn": { free: "免费额度", price: "套餐或许可价格", profiles: "环境数量", platform: "平台" },
+		en: { free: "Free allowance", price: "Plan or licence price", profiles: "Profiles", platform: "Platforms" },
+		ja: { free: "無料枠", price: "プランライセンス価格", profiles: "プロファイル数", platform: "対応プラットフォーム" },
+		ko: { free: "무료 한도", price: "플랜 또는 라이선스 가격", profiles: "프로필 수", platform: "플랫폼" },
+		es: { free: "Plan gratuito", price: "Precio del plan o licencia", profiles: "Perfiles", platform: "Plataformas" },
+		pt: { free: "Plano gratuito", price: "Preço do plano ou licença", profiles: "Perfis", platform: "Plataformas" },
+		ru: { free: "Бесплатный план", price: "Цена плана или лицензии", profiles: "Профили", platform: "Платформы" }
+	};
+	return map[locale][field];
+}
+
 /** Localised copy for the fingerprint signal pages (previously hard-coded English). */
 export function fingerprintCopy(locale: Locale, name: string): { what: string; detection: string; mitigation: string } {
 	const copy: Record<Locale, { what: string; detection: string; mitigation: string }> = {
