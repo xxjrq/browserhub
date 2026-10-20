@@ -26,3 +26,11 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 3. **冒烟测试和复验都要打 `browsers.draxgr.cc`，不要打 `browserhub.co`。**
    Cloudflare 缓存可能让旧版本返回 200，造成"部署成功"的假象。
    发布后应对两个域名都 curl 一次，确认真实 HTML 已更新。
+
+## 持续内容工作流
+
+BrowserHub 使用 `tools/workflows/agent.mjs` 接入公共 LangGraph 运行器；先读 `tools/workflows/README.md`。保持业务执行器、内容、账号与私有状态在本项目。周期触发由本聊天的 Codex heartbeat 提供，公共运行器不提供调度器。
+
+按用户指定的公共接入文档 `docs/MODEL-ROLES.md` 执行模型分工：常规内容执行 `gpt-6-luna`，独立审核 `gpt-6.1-sol`，复杂架构/关键决策与三次不同执行尝试仍未解决的问题使用 `gpt-6.1-sol` 的 `xhigh`。人工本次指定优先；不能静默换模型。能由代码完成的检查不调用模型。每轮保留实际角色、来源和未知项，不编造实际模型或 Token 消耗。
+
+用户已授权持续研究优质指纹浏览器与环境检测内容、优化已有对比，并在审核和构建通过后直接上线。每天最多一个新主题（完整中英文）或两项实质旧文增强，避免同义重复。先做当前搜索与一手来源取证；用户暂缓收录操作，不提交索引、不把页数/爬虫当流量。不要修改 EasyBR 客户端和后端，不发送外联消息，不新增付费订阅。

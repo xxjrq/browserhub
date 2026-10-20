@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "roles": {
+    "executor": { "model": "gpt-6-luna", "reasoningEffort": "high" },
+    "reviewer": { "model": "gpt-6.1-sol", "reasoningEffort": "high" },
+    "decision": { "model": "gpt-6.1-sol", "reasoningEffort": "xhigh" }
+  },
+  "maxDistinctExecutorAttempts": 3,
+  "selectionPriority": ["human_task", "human_project", "role_default"],
+  "silentFallbackAllowed": false
+}
