@@ -3482,6 +3482,30 @@
         "status": "complete-source-based-bilingual-series",
         "validation": "production HTML and content review"
       }
+    },
+    {
+      "id": "guides:browser-fingerprint-changes-after-update",
+      "primaryKeyword": {
+        "en": "browser fingerprint changes after update",
+        "zh-CN": "浏览器更新后指纹变化怎么排查"
+      },
+      "intent": "diagnostic regression after browser or system updates",
+      "cluster": "environment-detection",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-fingerprint-changes-after-update/",
+        "https://browserhub.co/zh-cn/guides/browser-fingerprint-changes-after-update/"
+      ],
+      "status": "review-required-bilingual-draft",
+      "informationGain": "Dated before/after baseline, signal-level change classification and workflow regression acceptance; distinct from initial collection and individual signal mechanics",
+      "evidenceFile": "update-research-2026-10-20.json"
     }
   ],
   "futureCandidates": [

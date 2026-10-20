@@ -8,6 +8,7 @@ import { verifiedProducts } from "./verified-products";
 import { refreshedGuidesA } from "./refreshed-guides-a";
 import { refreshedGuidesB } from "./refreshed-guides-b";
 import { editorialGuides } from "./editorial-guides";
+import { dailyGuides } from "./daily-guides-2026-10-20";
 import { environmentGuidesA } from "./environment-guides-a";
 import { environmentGuidesB } from "./environment-guides-b";
 
@@ -253,7 +254,7 @@ export const technologies: TechnologyResource[] = technologyRows.map(item => ({
 
 export const useCases: UseCaseResource[] = (useCaseCatalog.useCases as Array<{ id: string; name: string; recommendedCategories: string[] }>).map(item => ({ ...item, slug: item.id }));
 
-export const guides: GuideResource[] = [...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
+export const guides: GuideResource[] = [...dailyGuides, ...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
 
 const rawComparisons: ComparisonResource[] = [
 	{ title: "EasyBR vs AdsPower", slug: "easybr-vs-adspower", description: "比较本地优先与电商自动化工作流。", browsers: ["easybr", "adspower"] },

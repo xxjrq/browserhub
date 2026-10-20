@@ -19,7 +19,7 @@ const categories = [
 
 export function HomePage() {
 	const featured = browsers.find(browser => browser.featured) ?? browsers[0];
-	const featuredGuides = ["canvas-fingerprint-test", "webgl-fingerprint-test", "browserleaks-vs-creepjs", "open-source-antidetect-browsers"].map(slug => guides.find(guide => guide.slug === slug)).filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+	const featuredGuides = ["browser-fingerprint-changes-after-update", "canvas-fingerprint-test", "browserleaks-vs-creepjs", "open-source-antidetect-browsers"].map(slug => guides.find(guide => guide.slug === slug)).filter((guide): guide is (typeof guides)[number] => Boolean(guide));
 	const featuredRest = browsers.filter(browser => browser.slug !== featured.slug && ["gologin", "adspower", "multilogin"].includes(browser.slug)).slice(0, 3);
 	const stats = [
 		{ value: `${browsers.length}+`, label: "浏览器及相关资源" },

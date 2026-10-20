@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "slug": "browser-fingerprint-changes-after-update",
+  "purpose": "Dated topic validation and primary-source research for the 2026-10-20 bilingual editorial guide; not a traffic or ranking report",
+  "search": {
+    "provider": "OpenAI web search tool",
+    "queries": [
+      "browser fingerprint changes after browser update troubleshooting baseline Canvas WebGL font GPU driver Chromium release notes",
+      "浏览器 更新 指纹 变化 怎么排查 Canvas WebGL 字体 GPU 驱动 浏览器版本",
+      "site:developer.mozilla.org Canvas fingerprinting browser changes WebGL renderer font browser fingerprinting",
+      "site:chromium.org OR site:developer.chrome.com Chrome release notes graphics WebGL fingerprint privacy user agent reduction"
+    ],
+    "observedOn": "2026-10-20",
+    "limitations": "Search result sampling is not a reproducible Google/Bing SERP, does not establish demand, monthly volume, difficulty, rank, impressions, or traffic. No numerical search metric is inferred."
+  },
+  "intentAssessment": {
+    "english": "Results included a recent Canvas-specific change explainer and broader hardware-upgrade fingerprint articles. Those are adjacent to, but narrower than, a cross-signal browser/OS update regression workflow.",
+    "chinese": "Results included general fingerprint checker pages, a hardware-upgrade drift tutorial, and Canvas/WebGL-focused material. Search results do not establish whether users prefer one intent or quantify demand.",
+    "existingSiteCoverage": "The catalogue has distinct Canvas and WebGL tests, a signal glossary, a broad first-pass fingerprint checklist, and a User-Agent Client Hints check. No current slug owns dated before/after regression attribution across browser and OS versions, fonts/GPU drivers, and privacy-policy changes.",
+    "decision": "Proceed with one new bilingual guide. Preserve the existing signal-specific and full-checklist intent owners; focus this page on controlled baseline comparison, change classification, repeatability, and regression acceptance.",
+    "deduplicationBoundary": "Do not retell the mechanics of Canvas/WebGL hashing or repeat the entire multi-signal checklist. Cross-link those guides for individual signal detail and broad first-pass collection."
+  },
+  "primarySourcesOpened": [
+    {
+      "title": "MDN: Fingerprinting",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/Fingerprinting",
+      "openedOn": "2026-10-20",
+      "researchUse": "Defines browser fingerprinting as combining browser and operating-system characteristics and lists version, timezone/language, fonts, settings, and display among example features."
+    },
+    {
+      "title": "MDN: HTMLCanvasElement.toDataURL()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL",
+      "openedOn": "2026-10-20",
+      "researchUse": "Documents that toDataURL returns an encoded representation of the canvas image; supports describing output/hash as a measured result, not a diagnosis by itself."
+    },
+    {
+      "title": "MDN: WebGLRenderingContext.getParameter()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter",
+      "openedOn": "2026-10-20",
+      "researchUse": "Documents parameter queries in a WebGL context; article avoids claiming a universal renderer string or guaranteed exposure."
+    },
+    {
+      "title": "MDN: NavigatorUAData.getHighEntropyValues()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/getHighEntropyValues",
+      "openedOn": "2026-10-20",
+      "researchUse": "Documents the separate high-entropy Client Hints API used to distinguish UA surfaces and request conditions."
+    },
+    {
+      "title": "Chromium: User-Agent Reduction",
+      "url": "https://www.chromium.org/updates/ua-reduction/",
+      "openedOn": "2026-10-20",
+      "researchUse": "Records the staged Chromium UA-reduction rollout and migration toward UA-CH, supporting the caveat that reduced UA detail may be deliberate browser behavior."
+    },
+    {
+      "title": "Chrome for Developers: Chrome 152 release notes",
+      "url": "https://developer.chrome.com/release-notes/152",
+      "openedOn": "2026-10-20",
+      "researchUse": "Provides a dated, platform-scoped release-note example (stable release dated 2026-08-25). The guide frames release notes as hypotheses to inspect, not proof of a specific device-level fingerprint change."
+    },
+    {
+      "title": "W3C: Mitigating Browser Fingerprinting in Web Specifications",
+      "url": "https://www.w3.org/TR/fingerprinting-guidance/",
+      "openedOn": "2026-10-20",
+      "researchUse": "Standards guidance for considering and mitigating fingerprinting exposure; supports treating limited exposure as potentially intentional."
+    }
+  ],
+  "competitorObservation": {
+    "title": "Why your Canvas fingerprint changes (and when that’s a problem)",
+    "url": "https://mangobrowser.net/blog/why-canvas-fingerprint-changes",
+    "observedInSearchOn": "2026-10-20",
+    "reportedPublicationDateInResult": "2026-09-07 (Chinese result)",
+    "scope": "Canvas-focused change causes and stability discussion.",
+    "use": "Adjacent-intent evidence only; no competitor prose reused. It reinforces keeping the new article cross-signal and update-regression focused.",
+    "caveat": "Publication date and search placement were shown by search output and were not independently audited. No rank or demand claim is made."
+  },
+  "editorialBoundary": {
+    "dateBasis": "Sources were opened on 2026-10-20. Product- or device-specific behavior remains subject to version, operating system, policy, test site, and measured context.",
+    "evidenceType": "Documentation-based diagnostic method; no BrowserHub hands-on browser/OS update experiment was performed.",
+    "unknowns": [
+      "Search volume and keyword difficulty",
+      "BrowserHub query impressions, clicks, rankings, and organic sessions",
+      "Whether any particular reader's changed value is caused by a named browser or system update",
+      "Universal expected Canvas hashes, WebGL values, or account outcomes"
+    ]
+  }
+}

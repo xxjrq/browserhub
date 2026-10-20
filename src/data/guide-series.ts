@@ -14,7 +14,7 @@ export const guideSeries = [
 			en: { title: "Browser environment detection series", description: "Understand the signals, choose a test, and interpret the report using repeatable observations." },
 			"zh-cn": { title: "浏览器环境检测系列", description: "从指纹原理到逐项检测，学会选择工具、解释结果，并留下可复测记录。" }
 		},
-		slugs: ["browser-fingerprinting-explained", "browser-fingerprint-testing-checklist", "browserleaks-vs-creepjs", "canvas-fingerprint-test", "webgl-fingerprint-test", "user-agent-client-hints-check", "browser-timezone-language-check", "dns-leak-test-browser-proxy", "webrtc-leak-check", "browser-profile-storage-isolation-test", "read-creepjs-results", "browser-fingerprint-signals"]
+		slugs: ["browser-fingerprinting-explained", "browser-fingerprint-testing-checklist", "browser-fingerprint-changes-after-update", "browserleaks-vs-creepjs", "canvas-fingerprint-test", "webgl-fingerprint-test", "user-agent-client-hints-check", "browser-timezone-language-check", "dns-leak-test-browser-proxy", "webrtc-leak-check", "browser-profile-storage-isolation-test", "read-creepjs-results", "browser-fingerprint-signals"]
 	},
 	{
 		id: "profiles-proxies-and-teams",
