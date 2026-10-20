@@ -29,6 +29,10 @@ rollback() {
 }
 trap rollback ERR
 ssh "$DEPLOY_HOST" "mkdir -p '$RELEASE'"
+# The shared runtime uses umask 077 for private checkpoints. Normalize only
+# the public export; macOS openrsync does not reliably apply --chmod.
+find out -type d -exec chmod 755 {} +
+find out -type f -exec chmod 644 {} +
 rsync -az --delete --exclude '.DS_Store' -e "ssh -o BatchMode=yes" out/ "$DEPLOY_HOST:$RELEASE/"
 ssh "$DEPLOY_HOST" "test -f '$RELEASE/en/guides/best-antidetect-browsers-2026/index.html' && test -f '$RELEASE/sitemap.xml' && nginx -t"
 SWITCHED=1
@@ -36,7 +40,7 @@ ssh "$DEPLOY_HOST" "ln -sfn '$RELEASE' '$CURRENT' && systemctl reload nginx"
 # Origin verification proves this release is serving, independently of CDN caches.
 curl -fsS --retry 2 --max-time 25 "https://$DOMAIN/en/guides/best-antidetect-browsers-2026/" -o /tmp/browserhub-deploy-health.html
 node -e 'const s=require("fs").readFileSync("/tmp/browserhub-deploy-health.html","utf8"); if(!s.includes("best-antidetect-browsers-2026") || !s.includes("id=\"sources\"") || !s.includes("https://browserhub.co/en/guides/best-antidetect-browsers-2026/")) process.exit(1)'
-curl -fsS --max-time 25 "https://$DOMAIN/sitemap.xml" -o /tmp/browserhub-deploy-sitemap.xml
+curl -fsS --compressed --retry 2 --max-time 120 "https://$DOMAIN/sitemap.xml" -o /tmp/browserhub-deploy-sitemap.xml
 cmp out/sitemap.xml /tmp/browserhub-deploy-sitemap.xml
 # The refreshed guide and product evidence must reach the origin before accepting
 # the release; the pillar alone may be unchanged between content deployments.
