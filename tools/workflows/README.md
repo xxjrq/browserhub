@@ -30,7 +30,7 @@ node tools/workflows/agent.mjs run --workflow content-cycle --task content-2026-
 
 1. 当前智能体调用明确的 Luna 执行者完成搜索、来源核查、完整双语内容及共享目录/系列导航接入。先保存 `handoff.json`，包含 `files`（相对路径列表）、`topics`、`urls`（需要核验的完整 browserhub.co URL）和 `executor`（请求/实际模型、推理强度、尝试与来源）。限制改动在内容、关键词记录和原有内容审计名单，不让写作执行者改公共内核或发布器。
 2. 独立 Sol 上下文读取这些真实文件和来源，审核准确性、原创信息增益、语种、内链、技术边界及授权范围。按最终实际字节计算文件 SHA256，写 `review.json`：`cycleId`、`decision:"approved"`、`role:"reviewer"`、`modelRequested:"gpt-6.1-sol"`、实际型号未知时 `modelEffective:null`、`independentContext:true` 和 `files:[{path,sha256}]`。审核未通过就交回 Luna 修订，不能由脚本或执行者冒签通过。
-3. 用正式交接工具校验并冻结，随后继续原任务：
+3. 冻结前先运行 `npm run ci`，并只读确认 `git ls-remote origin refs/heads/main` 可访问正确仓库。先修正内容再重新独立审核；冻结后正式图还会重跑 CI。用正式交接工具校验并冻结，随后继续原任务：
 
 ```sh
 node tools/workflows/prepare-cycle.mjs content-2026-10-20
@@ -46,6 +46,12 @@ node tools/workflows/agent.mjs status --task content-2026-10-20
 
 `completed` 只表示图结束；交付需同时有 `content_cycle_completed`、真实部署 release 和主域/源站匹配的 `live.json`。首次初始化 inspect 不等于内容已生产或网站已发布。
 
-CI、本地内容处理失败可在修正后按原任务状态恢复；外部推送或发布结果未知时保留 `needs_reconciliation`，先读原 `push.json`/`publish.json` 与实际远端状态，禁止重投、删除journal或换任务名绕过。日常无实质变化保持安静；真实发布、明确失败或需要用户处理才报告。
+网络或环境等暂态失败可在冻结产物、Git HEAD 与工作流定义不变的前提下恢复原任务。内容或定义变化不能强行恢复旧检查点。只读验收失败可重试该节点，已完成的发布节点不会重发。
+
+外部推送或发布结果未知时保留 `needs_reconciliation`，先读原 `push.json`/`publish.json` 与实际远端状态，禁止盲目重投、删除 journal 或换任务名绕过。当前公共层没有正式 reconciliation API；确认原操作未生效或已回滚后，可由项目原执行器按同一周期身份补发，保存独立审核、意图、正式 release 和双域正文核验。此时项目完成回执明确写 `project_manual_reconciled`，原图仍保留原状态，不能报为图执行完成。不能仅凭一份失败原因说明跳过该周期。
+
+2026-10-20 的首轮记录见 `docs/seo/workflow-delivery-2026-10-20.json`。本项目 Git 认证需使用仓库所属的 `xxjrq`，不得受其他项目切换全局 GitHub 账号影响；凭据通过本机账号工具读取，不写入代码或回执。公共 CLI 的 umask 为 077，部署脚本仅把公开 `out` 目录/文件转为 755/644，私有状态仍为 700/600。双域验收使用本机可用的 curl 连接，HTTP 状态、正文和 canonical 必须全部匹配。
+
+日常无实质变化保持安静；真实发布、明确失败或需要用户处理才报告。
 
 公共文档位于运行器仓库 `docs/INTEGRATION.md`、`docs/ADAPTER-API.md`、`docs/COMPONENTS.md`、`docs/MODEL-ROLES.md`。本机配置为私有 `.local/workflows/runtime.local.json`，换机器用公共 `lgw init --existing` 恢复接线，不覆盖旧检查点。

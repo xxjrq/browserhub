@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-20",
+  "project": "browserhub",
+  "integration": "Public LangGraph CLI, SQLite checkpoints, reviewed publication adapter",
+  "automation": {
+    "id": "browserhub",
+    "status": "ACTIVE",
+    "timezone": "Asia/Shanghai",
+    "time": "09:00 daily",
+    "nextPlannedLocal": "2026-10-21 09:00"
+  },
+  "baselineDiagnosis": "Prior SEO batches were manually triggered; no BrowserHub recurring automation or public project registration existed at audit time.",
+  "sourceCodeCommit": "232a5e66f579ba81d038925c2874b151b3f8ad8d",
+  "workflowFoundationCommit": "afa7522",
+  "tests": {
+    "workflowPassed": 5,
+    "workflowFailed": 0,
+    "ciPassed": true,
+    "seoErrors": 0,
+    "seoWarnings": 0,
+    "htmlFiles": 1143,
+    "canonicalSitemapUrls": 926,
+    "sourcedGuideEditions": 58,
+    "productRecordsChecked": 36,
+    "confirmedPriceOrLicenceRecords": 26,
+    "explicitlyUnverifiedPrices": 10,
+    "eslintWarnings": 0
+  },
+  "editorialReview": {
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "independentContext": true,
+    "files": 8
+  },
+  "newTopic": "browser-fingerprint-changes-after-update",
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "liveStatus": "verified",
+  "recovery": {
+    "originalGraphStatus": "needs_reconciliation",
+    "originalStep": "push",
+    "reason": "Wrong GitHub active account returned terminal repository rejection before any update; repository-local account binding fixed it.",
+    "journalPreserved": true,
+    "noNewTaskIdentity": true,
+    "publicRuntimeMutated": false,
+    "sharedRuntimeGap": "No formal public reconcile command/API is provided. Current cycle continues through original project executors with explicit reconciliation evidence; graph status must remain truthful.",
+    "businessStatus": "project_manual_reconciled",
+    "projectCompletionReceipt": ".local/workflows/cycles/content-2026-10-20/completed.json",
+    "deploymentRootCause": "Public CLI umask077 was inherited by Next build; rsync preserved out700/600, causing Nginx403 Permission denied. Deployment now normalizes only public export directories755/files644; private data remains700/600.",
+    "deploymentAttempts": 3,
+    "previousReleaseRestoredAfterFailedAttempts": true,
+    "verificationTransportFix": "Use shell-free curl with configured machine proxy, one response per stdout buffer, strict 200/body/canonical matching; effect=read can be retried safely.",
+    "runtimeJournalUnchanged": true
+  },
+  "status": "published_verified",
+  "completedAt": "2026-10-20T12:46:38.420Z",
+  "workflowAdapterVersionForNextCycles": "2",
+  "release": "/opt/browsertools/releases/20261020-203952",
+  "live": {
+    "checkedAt": "2026-10-20T12:44:56.537Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-fingerprint-changes-after-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-fingerprint-changes-after-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-fingerprint-changes-after-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-fingerprint-changes-after-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "deployExecutorCommit": "ee3a6fd6e5470de906052e590a8df26ef1cc13ec",
+  "workflowTransportReview": {
+    "decision": "approved",
+    "independentContext": true,
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "files": [
+      {
+        "path": "tools/workflows/editorial.mjs",
+        "sha256": "8daab3c4ebc2e5c12db9ead2a9f97d44fed1db97975b0f1360e070f8c1ffac1b"
+      },
+      {
+        "path": "tools/workflows/adapter.mjs",
+        "sha256": "8902014accbbd168dcaca90e054e5238172c8c1ff828c1c39a55b18fc7b3e17d"
+      },
+      {
+        "path": "tools/workflows/README.md",
+        "sha256": "e999e2b40095a7e813d0c6be94c521360706178b9ba4990e15ecccc74f69c44b"
+      }
+    ],
+    "negativeCasesVerified": [
+      "HTTP503",
+      "body mismatch",
+      "network exit28",
+      "cancellation"
+    ]
+  }
+}

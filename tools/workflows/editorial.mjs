@@ -1,6 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+
+const runFile = promisify(execFile);
 
 export const digest = value => createHash('sha256').update(value).digest('hex');
 export const cycleDirectory = cycle => `.local/workflows/cycles/${cycle}`;
@@ -82,18 +86,28 @@ export async function execChecked(ctx, command, args, phase, timeoutMs = 600000)
   if (result.exitCode !== 0) throw new Error(`${phase} failed (exit ${result.exitCode}); see the project-local receipt`);
   return result;
 }
-export async function verifyLive(root, cycleId, urls) {
-  const results = [];
-  for (const canonical of urls) {
+export async function verifyLive(root, cycleId, urls, { signal } = {}) {
+  // curl uses this machine's configured proxy; Node fetch bypasses it and may
+  // time out on the Cloudflare domain. Keep the same strict body/canonical gate.
+  const results = (await Promise.all(urls.map(async canonical => {
     const pathname = new URL(canonical).pathname;
     const expected = await fs.readFile(path.join(root, 'out', pathname, 'index.html'), 'utf8');
     const body = html => (html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)?.[1] ?? html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? '').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '').replace(/\s+/g, ' ').trim();
-    for (const origin of ['https://browsers.draxgr.cc', 'https://browserhub.co']) {
-      const response = await fetch(`${origin}${pathname}`, { signal: AbortSignal.timeout(25000) });
-      const html = await response.text();
-      results.push({ url: `${origin}${pathname}`, status: response.status, contentMatches: Boolean(body(expected)) && body(expected) === body(html), canonical: html.includes(`rel="canonical" href="${canonical}"`) });
-    }
-  }
+    return Promise.all(['https://browsers.draxgr.cc', 'https://browserhub.co'].map(async origin => {
+      const url = `${origin}${pathname}`;
+      try {
+        // One response per buffer: curl retries can concatenate response bodies
+        // on stdout. A failed read is safe to retry by resuming this graph node.
+        const { stdout } = await runFile('curl', ['-sS', '--compressed', '--connect-timeout', '15', '--max-time', '60', '--write-out', '\n%{http_code}', url], { cwd: root, signal, timeout: 70000, maxBuffer: 4194304 });
+        const boundary = stdout.lastIndexOf('\n');
+        const status = Number(stdout.slice(boundary + 1));
+        const html = stdout.slice(0, boundary);
+        return { url, status, contentMatches: Boolean(body(expected)) && body(expected) === body(html), canonical: html.includes(`rel="canonical" href="${canonical}"`) };
+      } catch (error) {
+        return { url, status: 0, contentMatches: false, canonical: false, error: `curl transport failed (${error.code ?? 'unknown'})` };
+      }
+    }));
+  }))).flat();
   const ok = results.every(result => result.status === 200 && result.contentMatches && result.canonical);
   const receiptPath = await saveReceipt(root, cycleId, 'live', { checkedAt: new Date().toISOString(), ok, results });
   if (!ok) throw new Error(`Live content differs; see ${receiptPath}`);

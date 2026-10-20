@@ -12,12 +12,12 @@ const inspect = async ctx => {
   if (git.exitCode !== 0 || git.stdout.trim() !== 'main') missing.push('main Git branch');
   return { status: missing.length ? 'not_ready' : 'checked', missing, node: node.stdout.trim(), branch: git.stdout.trim(), scope: 'BrowserHub content, validation and deployment entry points', note: 'Research and writing are performed by this chat’s scheduled agent; this graph persists reviewed publication stages.' };
 };
-export default {
+const adapter = {
   id: 'browserhub',
   workflows: {
     inspect: { version: '2', description: 'Check real BrowserHub content and executor dependencies', validate: input => { if (!input || Object.keys(input).length) throw new Error('inspect accepts {}'); return {}; }, steps: [{ id: 'dependencies', effect: 'read', run: inspect }] },
     'content-cycle': {
-      version: '1',
+      version: '2',
       description: 'Daily research/writing handoff → independent review hashes → CI → Git checkpoint → push → atomic deploy → live verification',
       validate: normalizeInput,
       resources: ['browserhub:content-production'],
@@ -38,9 +38,10 @@ export default {
         } },
         { id: 'push', effect: 'external', async run(ctx) { await ensureFrozen(ctx); const result = await execChecked(ctx, 'git', ['push', 'origin', 'main'], 'push', 120000); return { status: 'pushed', commit: ctx.steps.checkpoint.commit, receiptPath: `${cycleDirectory(ctx.input.cycleId)}/push.json`, output: result.stdout.slice(-1000) }; } },
         { id: 'publish', effect: 'external', async run(ctx) { await ensureFrozen(ctx); const result = await ctx.exec('bash', ['scripts/deploy.sh'], { env: { SKIP_BUILD: '1' }, timeoutMs: 900000, maxOutputBytes: 1048576 }); const receiptPath = await saveReceipt(ctx.project.root, ctx.input.cycleId, 'publish', { checkedAt: new Date().toISOString(), exitCode: result.exitCode, stdout: result.stdout, stderr: result.stderr }); if (result.exitCode !== 0) return { status: 'needs_reconciliation', receiptPath, reason: 'Inspect original deployment receipt and current origin; do not resubmit blindly' }; const release = result.stdout.match(/Published: (.+)/)?.[1]; if (!release) return { status: 'needs_reconciliation', receiptPath, reason: 'Deployment returned no release receipt' }; return { status: 'published', release, receiptPath }; } },
-        { id: 'verify', effect: 'read', async run(ctx) { const a = await ensureFrozen(ctx); return verifyLive(ctx.project.root, ctx.input.cycleId, a.manifest.urls); } },
+        { id: 'verify', effect: 'read', async run(ctx) { const a = await ensureFrozen(ctx); return verifyLive(ctx.project.root, ctx.input.cycleId, a.manifest.urls, { signal: ctx.signal }); } },
         { id: 'receipt', effect: 'local', async run(ctx) { const a = await ensureFrozen(ctx); const receiptPath = await saveReceipt(ctx.project.root, ctx.input.cycleId, 'completed', { status: 'completed', completedAt: new Date().toISOString(), topics: a.manifest.topics, commit: ctx.steps.checkpoint.commit, release: ctx.steps.publish.release, live: ctx.steps.verify }); return { status: 'content_cycle_completed', receiptPath }; } }
       ]
     }
   }
 };
+export default adapter;
