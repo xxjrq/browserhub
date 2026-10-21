@@ -49,6 +49,16 @@
       "name": "easycodex + project model roles",
       "path": "tools/workflows/model-roles.json",
       "job": "Luna明确执行，Sol独立审核，复杂决策/三次不同尝试失败升级Sol xhigh；未知实际型号记null"
+    },
+    {
+      "name": "humanizer",
+      "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "job": "英文技术正文自然表达与信息保真"
+    },
+    {
+      "name": "humanizer-zh",
+      "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+      "job": "中文正文套话、重复与翻译腔编辑"
     }
   ],
   "priorityWorkstreams": [
@@ -165,7 +175,7 @@
     }
   ],
   "cadence": {
-    "daily": "最多1个独立新主题或2项实质旧页增强；取证→Luna执行→Sol独立审核→冻结→正式图构建/推送/部署/双域正文核验。",
+    "daily": "每天至少约5篇完整新主题，中英不重复计数，旧页增强另列；独立意图取证→Luna写作→humanizer/humanizer-zh编辑→Sol独立审核→冻结→正式图构建/推送/部署/双域正文核验。",
     "weekly": "先读用户最新AI浏览器主线与热点证据队列，复查CSDN阅读/近期问题及官方版本变化，优先可操作的AI浏览器内容；底层技术按需维护，检测网站不进入本阶段队列。",
     "every30Days": "复盘独特资产、资料陈旧度、纠错、真实用户任务及可核验引用；用相同口径看有效流量。"
   },
@@ -287,7 +297,8 @@
   "userSteering": [
     "2026-10-21：检测网站先暂缓，优先开发相关文章。",
     "2026-10-21：可参考CSDN现成文章做开发增强，优先找有阅读/近期问题信号的题目。",
-    "2026-10-21：用户进一步明确主线是AI浏览器；不能继续把指纹浏览器当全站唯一增长方向。"
+    "2026-10-21：用户进一步明确主线是AI浏览器；不能继续把指纹浏览器当全站唯一增长方向。",
+    "2026-10-21：每天至少约5篇新主题，中英不重复计数，执行去AI味skill编辑。"
   ],
   "scopeBoundary": "用户明确的是AI浏览器方向，不能据此把EasyBR或目录产品未验证的AI功能写成已实现，也不能把自动化框架统称完整AI浏览器。主页/产品能力宣传应在相应内容和官方功能核实后更新。",
   "supportingTechnicalIntentOwners": [
@@ -439,5 +450,12 @@
       "https://github.com/browser-use/browser-use"
     ],
     "limitations": "只核对项目官方入口与选题相关性；未在本轮评测这些AI工具，也未核实全部功能、性能、价格或排名。没有足够热度证据的候选不能以热门/爆款结论发布。"
+  },
+  "dailyProduction": {
+    "newTopicsMinimum": 5,
+    "translationCounting": "完整中英算1篇；旧文增强单列",
+    "primary": "AI浏览器、浏览器智能体的实际任务、开发和选型",
+    "qualityGate": "先取证写实质内容，再humanizer/humanizer-zh编辑、独立Sol审核、CI和真实双域验收",
+    "batching": "首批content-YYYY-MM-DD；真实前批completed后才可顺序batch-02..99，不绕过未知结果"
   }
 }

@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-21",
+  "purpose": "去AI味的编辑标准：写得自然、有信息，不冒充真人经历，不以检测器分数为目标。",
+  "dailyTarget": {
+    "newTopicsMinimum": 5,
+    "completeLocales": [
+      "en",
+      "zh-cn"
+    ],
+    "translationsCountAsSeparateArticles": false,
+    "refreshesReportedSeparately": true
+  },
+  "rules": [
+    "开头直接说读者遇到的问题、能得到的答案和关键条件；删掉行业浪潮、随着技术发展、本文将带你等空开场。",
+    "标题围绕具体任务，不用必看、终极、颠覆、全网最全等没有证据的修饰。",
+    "每一节解决一个实际问题；不强迫每篇都是七点、三层、同款总结。",
+    "解释具体错误、参数、版本和取舍；删掉换个说法重复标题的句子。",
+    "代码说明前置、输入、预期与退出；不能运行或未实测要准确注明，别编我们踩过的坑。",
+    "口语自然但不故意加错别字、假情绪或假经历；保留必要技术术语。",
+    "比较要说明不同方案适合什么任务，不用一刀切的最好或含糊的各有千秋。",
+    "引用支持紧邻的具体事实；不要把CSDN观点洗稿成事实或把累计阅读写成本站流量。",
+    "英文和中文分别按本语言习惯编辑，不能只逐字翻译套话。",
+    "交稿前逐段检查：删掉这段，读者是否少获得一个判断或操作？若没有就删。"
+  ],
+  "reviewRequired": [
+    "事实/引用",
+    "独特信息与意图归属",
+    "代码/步骤可用性及验证边界",
+    "自然表达与无模板重复",
+    "中英完整、内链和线上正文"
+  ],
+  "skillClarification": "本机WorkBuddy anti-distill的实际内容是知识脱敏，不是去AI写作腔；不将其用于抽掉技术信息。",
+  "skills": [
+    {
+      "name": "humanizer",
+      "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "upstream": "https://github.com/blader/humanizer",
+      "commit": "8c307f367c91bd974002f10f2be2965d642c13df",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "job": "英文技术正文自然表达与信息保真"
+    },
+    {
+      "name": "humanizer-zh",
+      "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+      "upstream": "https://github.com/op7418/Humanizer-zh",
+      "commit": "f4518a8eab97b8bfebc66a89d34320a89bef6930",
+      "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df",
+      "job": "中文正文套话、重复与翻译腔编辑"
+    }
+  ],
+  "process": [
+    "先按一手资料写实质内容，记录事实、版本、来源和验证范围",
+    "执行对应语言skill的嵌入式编辑，只改表达，保护代码、数据、链接与限定",
+    "独立Sol检查最终文件的自然表达、信息保真及技术事实，再计算最终SHA256",
+    "没有问题的句子可原样保留，不用自评分或AI检测分数代替审稿"
+  ]
+}

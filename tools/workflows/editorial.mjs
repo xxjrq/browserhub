@@ -17,9 +17,26 @@ export function verifyModelSelection(record, role, expected) {
 }
 export function normalizeInput(input) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Expected cycle input');
-  if (!/^content-\d{4}-\d{2}-\d{2}$/.test(input.cycleId ?? '')) throw new Error('Use content-YYYY-MM-DD as the durable daily identity');
+  if (!/^content-\d{4}-\d{2}-\d{2}(?:-batch-(?:0[2-9]|[1-9]\d))?$/.test(input.cycleId ?? '')) throw new Error('Use content-YYYY-MM-DD or its ordered batch-02..99 identity');
   if (Object.keys(input).some(key => !['cycleId', 'authorization'].includes(key))) throw new Error('Unexpected cycle input');
   return { cycleId: input.cycleId, authorization: { external: input.authorization?.external === true } };
+}
+export async function verifyPredecessor(ctx) {
+  const match = /^(content-\d{4}-\d{2}-\d{2})-batch-(\d{2})$/.exec(ctx.input.cycleId);
+  if (!match) return { status: 'initial_daily_batch' };
+  const previous = Number(match[2]) === 2 ? match[1] : `${match[1]}-batch-${String(Number(match[2]) - 1).padStart(2, '0')}`;
+  const result = await ctx.exec(process.execPath, ['tools/workflows/agent.mjs', 'status', '--task', previous]);
+  let state;
+  try { state = JSON.parse(result.stdout); } catch { throw new Error(`Cannot verify predecessor ${previous}`); }
+  if (result.exitCode !== 0 || state?.task !== previous || state?.workflow !== 'content-cycle' || state?.unknownSteps?.length || state?.status !== 'completed' || state.outcome?.attentionRequired !== false || state.outcome?.statuses?.receipt !== 'content_cycle_completed') throw new Error(`Previous batch ${previous} is not successfully completed; preserve and reconcile it first`);
+  const receipt = JSON.parse(await fs.readFile(await safeFile(ctx.project.root, `${cycleDirectory(previous)}/completed.json`), 'utf8'));
+  const live = JSON.parse(await fs.readFile(await safeFile(ctx.project.root, `${cycleDirectory(previous)}/live.json`), 'utf8'));
+  const push = JSON.parse(await fs.readFile(await safeFile(ctx.project.root, `${cycleDirectory(previous)}/push.json`), 'utf8'));
+  const publish = JSON.parse(await fs.readFile(await safeFile(ctx.project.root, `${cycleDirectory(previous)}/publish.json`), 'utf8'));
+  const editorial = JSON.parse(await fs.readFile(await safeFile(ctx.project.root, `${cycleDirectory(previous)}/editorial.json`), 'utf8'));
+  const expectedUrls = new Set((editorial.urls ?? []).flatMap(url => ['https://browserhub.co', 'https://browsers.draxgr.cc'].map(origin => `${origin}${new URL(url).pathname}`)));
+  if (receipt.status !== 'completed' || !receipt.release || receipt.release !== state.outcome.steps?.publish?.release || !receipt.commit || receipt.commit !== state.outcome.steps?.checkpoint?.commit || receipt.commit !== state.outcome.steps?.push?.commit || push.exitCode !== 0 || publish.exitCode !== 0 || !publish.stdout?.split('\n').includes(`Published: ${receipt.release}`) || editorial.cycleId !== previous || !expectedUrls.size || !live.ok || live.results?.length !== expectedUrls.size || new Set(live.results.map(row => row.url)).size !== expectedUrls.size || !live.results.every(row => expectedUrls.has(row.url) && row.status === 200 && row.contentMatches === true && row.canonical === true)) throw new Error(`Predecessor ${previous} lacks verified publication evidence`);
+  return { status: 'previous_batch_verified', predecessor: previous, release: receipt.release };
 }
 export async function safeFile(root, relative) {
   if (typeof relative !== 'string' || path.isAbsolute(relative) || relative.split(/[\\/]/).includes('..')) throw new Error('Invalid project artifact path');

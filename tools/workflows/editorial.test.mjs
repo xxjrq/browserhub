@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import adapter from './adapter.mjs';
-import { digest, readApproval, normalizeInput, ensureFrozen, verifyModelSelection } from './editorial.mjs';
+import { digest, readApproval, normalizeInput, ensureFrozen, verifyModelSelection, verifyPredecessor } from './editorial.mjs';
 
 async function fixture(t) {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), 'browserhub-flow-'));
@@ -76,4 +76,36 @@ test('public LangGraph persists editorial wait and deduplicates a resumed comple
   assert.equal(resumed.status, 'completed');
   await runtime.run({ project: 'fixture', workflow: 'cycle', task: 'daily', input: {} });
   assert.equal(await fs.readFile(path.join(f.root, 'once'), 'utf8'), 'first-second');
+});
+
+
+test('ordered new-work batches require actual successful predecessor receipts and both domains', async t => {
+  const f = await fixture(t);
+  const previous = f.manifest.cycleId;
+  const cycleId = `${previous}-batch-02`;
+  assert.equal(normalizeInput({ cycleId }).cycleId, cycleId);
+  for (const invalid of [`${previous}-batch-01`, `${previous}-batch-2`, `${previous}-batch-100`]) assert.throws(() => normalizeInput({ cycleId: invalid }), /identity/);
+  assert.deepEqual(await verifyPredecessor({ input: { cycleId: previous } }), { status: 'initial_daily_batch' });
+  const release = '/opt/browsertools/releases/fixture';
+  const commit = 'reviewed-commit';
+  const state = { task: previous, workflow: 'content-cycle', status: 'completed', unknownSteps: [], outcome: { attentionRequired: false, statuses: { receipt: 'content_cycle_completed' }, steps: { publish: { release }, checkpoint: { commit }, push: { commit } } } };
+  const ctx = { project: { root: f.root }, input: { cycleId }, exec: async (_cmd, args) => { assert.equal(args.at(-1), previous); return { exitCode: 0, stdout: JSON.stringify(state) }; } };
+  const write = (name, value) => fs.writeFile(path.join(f.root, f.directory, `${name}.json`), JSON.stringify(value));
+  await write('completed', { status: 'completed', release, commit });
+  await write('push', { exitCode: 0 });
+  await write('publish', { exitCode: 0, stdout: `Published: ${release}\n` });
+  const rows = f.manifest.urls.flatMap(url => ['https://browserhub.co', 'https://browsers.draxgr.cc'].map(origin => ({ url: `${origin}${new URL(url).pathname}`, status: 200, contentMatches: true, canonical: true })));
+  await write('live', { ok: true, results: rows });
+  assert.equal((await verifyPredecessor(ctx)).predecessor, previous);
+  state.status = 'needs_reconciliation';
+  await assert.rejects(verifyPredecessor(ctx), /not successfully completed/);
+  state.status = 'completed';
+  await write('live', { ok: true, results: [rows[0], rows[0], rows[2], rows[3]] });
+  await assert.rejects(verifyPredecessor(ctx), /lacks verified/);
+  await write('live', { ok: true, results: rows });
+  await write('push', { exitCode: 128 });
+  await assert.rejects(verifyPredecessor(ctx), /lacks verified/);
+  await write('push', { exitCode: 0 });
+  state.task = 'wrong-task';
+  await assert.rejects(verifyPredecessor(ctx), /not successfully completed/);
 });

@@ -4,7 +4,7 @@
 
 ## 每轮执行
 
-北京时间每天 09:00，最多新增一个完整中英主题，或对两篇现有页面做实质增强。先查现有主题及关键词映射，再取当前搜索和一手资料；没有独立新意图就补强旧页，不凑数。按用户要求暂缓收录工作，审核和构建通过后直接发布。
+北京时间每天 09:00，按用户 2026-10-21 最新要求，目标每天至少约 5 篇完整新主题。英文与中文算一个主题，旧文/对比的实质增强另列；先排独立意图及备用题，不做同义重复页。先查现有主题及关键词映射，再取当前搜索和一手资料；没有独立新意图就补强旧页，不凑数。按用户要求暂缓收录工作，审核和构建通过后直接发布。
 
 模型由当前智能体显式分派，配置在 `model-roles.json`：Luna 6 执行，Sol 6.1 独立审核，复杂决策及三次不同尝试仍失败时用 Sol 6.1 xhigh。人工明确指定优先；模型响应未报告实际型号时填 null。此项目使用当前智能体的工具执行研究和写作，不在公共框架中伪装模型自动执行节点。
 
@@ -15,21 +15,23 @@ node tools/workflows/agent.mjs doctor
 node tools/workflows/agent.mjs run --workflow inspect --task inspect-2026-10-20
 ```
 
-用上海日期固定每天的任务身份，禁止靠新任务名重复提交同一天的发布：
+首批用上海日期固定任务身份；保留已完成批次，不重复提交：
 
 ```sh
 node tools/workflows/agent.mjs run --workflow content-cycle --task content-2026-10-20 \
   --json '{"cycleId":"content-2026-10-20","authorization":{"external":true}}'
 ```
 
-流程真实执行：依赖检查 → 等待内容与独立审核 → `npm run ci` → 仅提交审核覆盖文件 → 推送 → 原子部署 → 主域与源站正文核验 → 保存完成回执。等待文章时任务持久暂停，恢复不会重复已完成节点。
+用户追加新内容或首批交付后当天仍未达到新目标时，可用顺序增量身份 `content-YYYY-MM-DD-batch-02`、`-batch-03`（02..99）。新增批次只承接真正的新工作；正式 `previous-batch` 只读节点核对直接前批的图 completed、推送/部署成功回执、审核提交、release 和全部双域正文/canonical 成功证据。前批缺失、失败或未知则阻止后批，不能用新批次跳过原故障，也不能清除旧 journal。
+
+流程真实执行：依赖检查 → 前批交付核对 → 等待内容与独立审核 → `npm run ci` → 仅提交审核覆盖文件 → 推送 → 原子部署 → 主域与源站正文核验 → 保存完成回执。等待文章时任务持久暂停，恢复不会重复已完成节点。
 
 ## 内容与审核交接
 
-每轮私有目录为 `.local/workflows/cycles/content-YYYY-MM-DD/`。所有回执和运行状态被 Git 忽略，不能提交 Cookie、浏览器ID、密钥、原始账号数据或模型完整上下文。
+每轮私有目录为 `.local/workflows/cycles/<cycleId>/`，追加批次使用含 batch 后缀的完整身份。所有回执和运行状态被 Git 忽略，不能提交 Cookie、浏览器ID、密钥、原始账号数据或模型完整上下文。
 
 1. 当前智能体调用明确的 Luna 执行者完成搜索、来源核查、完整双语内容及共享目录/系列导航接入。先保存 `handoff.json`，包含 `files`（相对路径列表）、`topics`、`urls`（需要核验的完整 browserhub.co URL）和 `executor`（请求/实际模型、推理强度、尝试与来源）。限制改动在内容、关键词记录和原有内容审计名单，不让写作执行者改公共内核或发布器。
-2. 独立 Sol 上下文读取这些真实文件和来源，审核准确性、原创信息增益、语种、内链、技术边界及授权范围。按最终实际字节计算文件 SHA256，写 `review.json`：`cycleId`、`decision:"approved"`、`role:"reviewer"`、`modelRequested:"gpt-6.1-sol"`、实际型号未知时 `modelEffective:null`、`independentContext:true` 和 `files:[{path,sha256}]`。审核未通过就交回 Luna 修订，不能由脚本或执行者冒签通过。
+2. 内容完成后先读 `/Users/myd/.codex/skills/humanizer/SKILL.md` 和 `/Users/myd/.codex/skills/humanizer-zh/SKILL.md`，分别编辑中英正文，再由独立 Sol 上下文读取这些真实文件和来源，审核准确性、原创信息增益、自然表达、信息保真、语种、内链、技术边界及授权范围。按最终实际字节计算文件 SHA256，写 `review.json`：`cycleId`、`decision:"approved"`、`role:"reviewer"`、`modelRequested:"gpt-6.1-sol"`、实际型号未知时 `modelEffective:null`、`independentContext:true` 和 `files:[{path,sha256}]`。审核未通过就交回 Luna 修订，不能由脚本或执行者冒签通过。
 3. 冻结前先运行 `npm run ci`，并只读确认 `git ls-remote origin refs/heads/main` 可访问正确仓库。先修正内容再重新独立审核；冻结后正式图还会重跑 CI。用正式交接工具校验并冻结，随后继续原任务：
 
 ```sh
