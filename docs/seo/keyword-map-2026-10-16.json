@@ -693,10 +693,18 @@
         "webrtc-leak-check"
       ],
       "execution": {
-        "date": "2026-10-16",
-        "status": "refreshed-complete-en-zh-cn",
-        "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
-      }
+        "date": "2026-10-21",
+        "status": "implemented-bilingual-content-update; publication tracked in workflow delivery receipt",
+        "evidenceFile": "research-2026-10-21.json",
+        "scope": "Chrome/curl解析语义与Playwright持久化context接入、前置和退出行为"
+      },
+      "executionHistory": [
+        {
+          "date": "2026-10-16",
+          "status": "refreshed-complete-en-zh-cn",
+          "evidence": "7 substantive sections; 3-4 FAQs; 3-6 primary sources per topic; factual corrections and contextual links; documented research, not product benchmark"
+        }
+      ]
     },
     {
       "id": "guides:browser-fingerprint-signals",
@@ -3332,10 +3340,18 @@
         "webrtc-leak-check"
       ],
       "execution": {
-        "date": "2026-10-16",
-        "status": "complete-source-based-bilingual-series",
-        "validation": "production HTML and content review"
-      }
+        "date": "2026-10-21",
+        "status": "implemented-bilingual-content-update; publication tracked in workflow delivery receipt",
+        "evidenceFile": "research-2026-10-21.json",
+        "scope": "DNS解析主体/超时/DoH与IPv6边界"
+      },
+      "executionHistory": [
+        {
+          "date": "2026-10-16",
+          "status": "complete-source-based-bilingual-series",
+          "validation": "production HTML and content review"
+        }
+      ]
     },
     {
       "id": "guides:browserleaks-vs-creepjs",
@@ -3564,6 +3580,8 @@
     "HowToRichResults": "Google deprecated desktop HowTo rich results in September 2023",
     "llmsTxt": "Google clarification 2026-06-15: does not positively or negatively affect Google Search visibility or ranking",
     "secondRelease": "2026-10-16: all 12 old guides have complete sourced English/Chinese editions; all 36 product entries carry field-level review states. 26 price or free-licence records supported, 10 paid prices explicitly unverified. Search metrics remain unknown until observed in webmaster data.",
-    "seriesContentPass": "User explicitly prioritised topical, useful content over indexing work. Eight new bilingual topics, four deeper existing comparisons, three reader journeys and a blank test-record template. No indexing submissions or new webmaster configuration in this pass."
+    "seriesContentPass": "User explicitly prioritised topical, useful content over indexing work. Eight new bilingual topics, four deeper existing comparisons, three reader journeys and a blank test-record template. No indexing submissions or new webmaster configuration in this pass.",
+    "developerContent20261021": "按用户要求暂缓检测网站开发；以CSDN公开阅读/互动和当前搜索问题作为选题线索，优先开发内容增强；不是本站query或流量测量。",
+    "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   }
 }

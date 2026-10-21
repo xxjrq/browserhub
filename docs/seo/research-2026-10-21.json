@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-21",
+  "project": "BrowserHub",
+  "execution_role": "gpt-6-luna/high (requested execution role)",
+  "research_method": "Ordinary web search and direct page inspection; Firecrawl was not used because its recorded CLI credit balance was negative and no new subscription or paid usage was authorized.",
+  "queries_executed": [
+    {
+      "query": "site:chromium.googlesource.com/chromium/src net/docs/proxy.md SOCKS5 proxy side DNS Chrome proxy hostname",
+      "purpose": "Verify Chrome proxy semantics, proxy-side destination resolution, SOCKS5 scope, and proxy bypass/fallback language."
+    },
+    {
+      "query": "site:curl.se/docs/manpage.html --socks5 --socks5-hostname DNS proxy hostname socks5h",
+      "purpose": "Verify curl local versus proxy-side destination-name resolution options."
+    },
+    {
+      "query": "site:browserleaks.com/dns BrowserLeaks DNS leak test unique domains methodology",
+      "purpose": "Check the DNS page's own description of its test and results."
+    },
+    {
+      "query": "site:developers.cloudflare.com 1.1.1.1 DNS over HTTPS documentation",
+      "purpose": "Verify DoH transport and public resolver anycast documentation."
+    },
+    {
+      "query": "site:support.google.com/chrome \"Use secure DNS\" computer Chrome",
+      "purpose": "Verify Chrome Secure DNS automatic fallback behavior and user-facing setting."
+    },
+    {
+      "query": "site:developers.google.com/speed/public-dns/docs/doh Google Public DNS DNS over HTTPS official docs",
+      "purpose": "Cross-check DoH transport description against a second resolver provider's official documentation."
+    },
+    {
+      "query": "site:playwright.dev/docs/api/class-browsertype launchPersistentContext userDataDir proxy persistent context",
+      "purpose": "Verify persistent user data directory behavior, context lifecycle, proxy option, and concurrent directory restrictions."
+    },
+    {
+      "query": "site:playwright.dev/docs/api/class-browser newContext proxy userDataDir browser context",
+      "purpose": "Verify Browser.newContext isolation and explicit close lifecycle for the nonpersistent alternative."
+    },
+    {
+      "query": "site:playwright.dev/docs/browsers proxy SOCKS5 launch persistent context",
+      "purpose": "Confirm Playwright documents HTTP(S) and SOCKS proxy configuration at browser and context scope."
+    },
+    {
+      "query": "site:playwright.dev/docs/intro npm install playwright install chromium",
+      "purpose": "Verify prerequisites for Playwright library use and the managed Chromium binary."
+    },
+    {
+      "query": "site:ebrower.com/helperdoc/apidoc.html EasyBR Local API proxyProtocol socks5 CDP Playwright",
+      "purpose": "Distinguish the documented EasyBR Local API/CDP integration and its own proxy fields from standalone Playwright-managed Chromium."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md",
+      "title": "Chromium proxy support documentation",
+      "date": "No publication/update date shown on the inspected page; current HEAD content inspected 2026-10-21 (search exposed Chromium revision 312b6bf).",
+      "use": "Chrome HTTP proxy and SOCKSv5 defer destination-name resolution to the proxy for covered URL requests; SOCKSv4 resolves target names client-side; SOCKSv5 URL proxying covers TCP; proxy configuration may have bypass/fallback rules. It does not establish that all OS/browser DNS activity follows the proxy."
+    },
+    {
+      "url": "https://curl.se/docs/manpage.html",
+      "title": "curl tool man page",
+      "date": "No publication/update date shown on the inspected page; current man page inspected 2026-10-21.",
+      "use": "The man page defines --socks5 as resolving the destination hostname locally and --socks5-hostname / socks5h:// as asking the proxy to resolve it. The examples in the article use a numeric loopback endpoint to isolate destination-name handling from proxy-hostname lookup."
+    },
+    {
+      "url": "https://browserleaks.com/dns",
+      "title": "BrowserLeaks DNS Leak Test",
+      "date": "No page publication/update date shown; live methodology inspected 2026-10-21.",
+      "use": "The page says it tests 50 randomly generated domain names, 25 IPv4-only and 25 IPv6-only, to determine DNS servers used by the browser for those lookups. This supports describing the results as test-specific observations rather than a device-wide packet capture."
+    },
+    {
+      "url": "https://support.google.com/chrome/answer/10468685?hl=en",
+      "title": "Google Chrome Help: Manage Chrome safety and security (Computer)",
+      "date": "No publication/update date shown on the inspected result; official help page inspected 2026-10-21.",
+      "use": "Chrome Help says Secure DNS automatic mode may fall back to unencrypted lookup when resolution fails; selecting a custom provider changes that behavior and can result in lookup errors. Used to recommend checking the active setting and error rather than blindly disabling DoH."
+    },
+    {
+      "url": "https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/",
+      "title": "Cloudflare 1.1.1.1: DNS over HTTPS",
+      "date": "Last updated 2026-05-05, as shown on page; inspected 2026-10-21.",
+      "use": "DoH carries DNS over HTTPS/port 443; used to distinguish transport encryption from resolver choice and proxy-route compliance."
+    },
+    {
+      "url": "https://blog.cloudflare.com/dns-resolver-1-1-1-1/",
+      "title": "Cloudflare Blog: Introducing DNS Resolver, 1.1.1.1 (not a joke)",
+      "date": "Published 2018-04-01; inspected 2026-10-21.",
+      "use": "The article explicitly says the 1.1.1.1 DNS resolver is served by Cloudflare's Global Anycast Network. Used to support the article's caution that a public resolver address and an IP-geolocation label do not describe every physical routing hop; publication date is kept separate from the 2026-10-21 inspection date."
+    },
+    {
+      "url": "https://developers.google.com/speed/public-dns/docs/doh/",
+      "title": "Google Public DNS: DNS-over-HTTPS (DoH)",
+      "date": "Last updated 2024-09-03 UTC, as shown on page; inspected 2026-10-21.",
+      "use": "Second provider's official documentation describes DoH endpoints and encrypted transport between a stub resolver and recursive resolver. Used only for the transport distinction, not to imply a particular route."
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc1928.html",
+      "title": "RFC 1928: SOCKS Protocol Version 5",
+      "date": "Published 1996-03; checked 2026-10-21.",
+      "use": "SOCKS5 protocol defines address types including domain-name form; protocol capability alone does not establish every client's DNS mode."
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc1929.html",
+      "title": "RFC 1929: Username/Password Authentication for SOCKS V5",
+      "date": "Published 1996-03; checked 2026-10-21.",
+      "use": "Existing SOCKS5 article's authentication and transport-security boundary retained; not part of the new curl test."
+    },
+    {
+      "url": "https://playwright.dev/docs/api/class-browsertype",
+      "title": "Playwright BrowserType API",
+      "date": "No publication/update date shown; current documentation inspected 2026-10-21.",
+      "use": "launchPersistentContext accepts a userDataDir, returns the browser's only persistent context, and closing it closes its browser. The directory stores browser session data; browsers do not allow simultaneous instances with the same user data directory. The launch options document SOCKS proxy support."
+    },
+    {
+      "url": "https://playwright.dev/docs/api/class-browser",
+      "title": "Playwright Browser API",
+      "date": "No publication/update date shown; current documentation inspected 2026-10-21.",
+      "use": "browser.newContext creates an isolated context; official usage recommends explicitly closing the context before closing the browser. Its context options can receive a proxy."
+    },
+    {
+      "url": "https://playwright.dev/docs/network",
+      "title": "Playwright network and proxy documentation",
+      "date": "No publication/update date shown; current documentation inspected 2026-10-21.",
+      "use": "Documents page traffic over HTTP(S) and SOCKSv5, with proxy configuration at browser or context scope; includes per-context configuration."
+    },
+    {
+      "url": "https://playwright.dev/docs/library",
+      "title": "Playwright library installation",
+      "date": "No publication/update date shown; current documentation inspected 2026-10-21.",
+      "use": "Documents installing the Playwright library and downloading the corresponding Chromium binary with the Playwright CLI."
+    },
+    {
+      "url": "https://www.ebrower.com/helperdoc/apidoc.html",
+      "title": "EasyBR Local API and automation development guide",
+      "date": "Published 2026-08-08, as shown on page; inspected 2026-10-21.",
+      "use": "The vendor document describes a local desktop API, custom proxy fields including proxyProtocol=socks5, opening an environment to obtain its CDP endpoint, connecting Playwright through CDP, and closing through the Local API. It was used only to distinguish integration paths; no EasyBR client or SOCKS route was run in this research."
+    }
+  ],
+  "competitor_and_problem_observations": {
+    "evidence_origin": "Read-only observations supplied by the root task owner, not independently measured site analytics.",
+    "observations": [
+      "Around 2026-10-15, a user question described Google resolver addresses appearing in another country under SOCKS5 while HTTPS observations differed.",
+      "Recent vendor articles/tutorials around 2026-09-28 illustrate recurring proxy and DNS explanation formats. No competitor was used as a source of technical facts."
+    ],
+    "limits": "These observations are not BrowserHub Search Console or analytics queries, volume, rank, CTR, traffic, or conversion data. No intent frequency is inferred."
+  },
+  "existing_page_information_gain": [
+    {
+      "slug": "dns-leak-test-browser-proxy",
+      "file": "src/data/environment-guides-b.ts",
+      "prior_state": "Already explained BrowserLeaks-style observations, Chrome proxy-side destination resolution, DoH, anycast and broad interpretation cautions. It did not provide a side-by-side browser/curl lookup map, isolate proxy-hostname lookup from destination lookup, or give concrete timeout/IPv6/DoH troubleshooting guidance.",
+      "change": "Added BrowserLeaks' current 50-name methodology; a bilingual matrix separating BrowserLeaks lookups, Chrome SOCKSv5 destination names, proxy endpoint hostname resolution, curl local mode and curl proxy-side mode; concrete blank/timeout next steps; Chrome Secure DNS fallback context; and guardrails for DoH and IPv6. Added Google DoH documentation as a second provider source."
+    },
+    {
+      "slug": "configure-socks5-proxy",
+      "file": "src/data/refreshed-guides-b.ts",
+      "prior_state": "Already covered protocol/client distinctions, proxy-hostname DNS, browser acceptance, auth and UDP limits. It lacked a safe reproducible command-line comparison and a clear table describing what each curl result can and cannot establish; it also had no developer integration sequence for a managed Playwright Chromium profile.",
+      "change": "Added bilingual credential-free curl examples against a numeric local SOCKS endpoint using --socks5 versus --socks5-hostname, a result/limit table, failure-stage caveats, and a direct FAQ on why curl socks5h semantics must not be copied as Chrome's control. Then added a bilingual Playwright-managed Chromium integration procedure with explicit install prerequisites, a running local SOCKS listener, dedicated userDataDir, controlled context shutdown, per-worker directory isolation, and a nonpersistent browser.newContext alternative. It clearly distinguishes EasyBR Local API/CDP from standalone Playwright and explicitly says the material is neither an EasyBR hands-on test nor a compatibility guarantee."
+    }
+  ],
+  "unknown_metrics": {
+    "search_volume": null,
+    "search_console_queries": null,
+    "impressions": null,
+    "clicks": null,
+    "ctr": null,
+    "rankings": null,
+    "ai_referrals": null,
+    "conversion_data": null
+  },
+  "validation_status": "After bilingual Playwright integration parity was restored, npx eslint src/data/refreshed-guides-b.ts, npx tsc --noEmit, and JSON parsing passed. English and Chinese SOCKS5 sections each contain nine matching topical sections. No content tests, production build, live browser acceptance, EasyBR run or deployment were performed.",
+  "hands_on_testing_claim": false,
+  "independent_review": "Not performed in this execution pass.",
+  "coordinatorCsdnTopicValidation": {
+    "priorityRule": "先看可观察需求、与BrowserHub的相关度、能补出的独特开发信息、实施成本；不凭感觉固定轮流写百科。",
+    "metricsRule": "公开累计阅读仅为平台显示值，不是唯一读者、本站流量或搜索量；原始发表时间、推荐时间与抓取时间分开。",
+    "shortlist": [
+      {
+        "topic": "AI浏览器/智能体接入已有会话：Playwright CDP基础开发需求",
+        "existingOwner": "browser-automation-profile-persistence",
+        "priority": "next-development-refresh",
+        "csdnUrl": "https://blog.csdn.net/lilongsy/article/details/130560129",
+        "observedOn": "2026-10-21",
+        "evidence": "direct page opened",
+        "displayedReadCount": "1.7w",
+        "displayedLikes": 7,
+        "displayedCollections": 26,
+        "displayedComments": 0,
+        "dateLabel": "最新推荐文章于2026-05-28；不能视为原始发表日期",
+        "proposedGain": "区分CDP接管已有context与newContext/持久化目录；核实当前Chrome远程调试要求、空contexts/pages、端口和关闭行为。"
+      },
+      {
+        "topic": "SOCKS5解析路径与浏览器自动化接入",
+        "existingOwner": "configure-socks5-proxy",
+        "priority": "current-cycle",
+        "csdnUrl": "https://blog.csdn.net/carson2440/article/details/81028622",
+        "observedOn": "2026-10-21",
+        "evidence": "web search excerpt; direct open unavailable",
+        "displayedReadCount": "2w",
+        "displayedCollections": 5,
+        "displayedLikes": 3,
+        "dateLabel": "搜索结果标记最新推荐2025-04-22；不当作近期增长",
+        "proposedGain": "把协议概念落实为Chrome/curl/Playwright的具体解析边界、无凭据示例与错误判断。"
+      },
+      {
+        "topic": "自动化登录态保存与专用profile目录",
+        "existingOwner": "browser-automation-profile-persistence",
+        "priority": "combine-with-CDP-owner-before-new-page",
+        "csdnUrl": "https://blog.csdn.net/fengxin0909/article/details/124496665",
+        "observedOn": "2026-10-21",
+        "evidence": "web search excerpt; direct open unavailable",
+        "displayedReadCount": "9.5k",
+        "displayedCollections": 29,
+        "displayedLikes": 6,
+        "dateLabel": "原文首次发布2022-04-29、修改2022-05-30；长期需求而非2026热点",
+        "proposedGain": "用现行Playwright/Chrome文档解释storageState与真实profile、敏感状态文件和目录并发限制。"
+      }
+    ],
+    "secondaryCandidates": [
+      "AI浏览器定义、真实能力和普通浏览器AI侧栏区别",
+      "Playwright MCP与Chrome DevTools MCP的任务选择",
+      "Browser Use与已有浏览器/持久化会话",
+      "网页调研、跨页整理与人工接管的真实案例",
+      "代理、指纹和内核开发仅作为底层专题补充"
+    ],
+    "secondaryCandidateGate": "这些方向先取公开需求证据和现行一手资料，再进入排期；不把候选当已证实热点。",
+    "primaryDirection": "AI浏览器、浏览器智能体与相关开发；先按任务需求和来源强度排序，不因标题带AI就称热点。"
+  },
+  "coordinatorAiBrowserResearch": {
+    "date": "2026-10-21",
+    "queries": [
+      "site:blog.csdn.net AI浏览器 阅读量 2026",
+      "site:blog.csdn.net Chrome DevTools MCP 阅读量",
+      "site:blog.csdn.net browser-use 阅读量",
+      "site:blog.csdn.net AI浏览器 Comet",
+      "site:blog.csdn.net AI浏览器 Atlas"
+    ],
+    "observations": [
+      {
+        "url": "https://blog.csdn.net/ceshiren2022/category_13026507.html",
+        "evidence": "search excerpt of category listing",
+        "topic": "Playwright MCP网页交互AI助手教程",
+        "displayedReadCount": "1238",
+        "dateLabel": "2025-10-14",
+        "interpretation": "已有阅读信号，非近期趋势或本站流量；技术与版本仍按官方核查"
+      },
+      {
+        "url": "https://blog.csdn.net/weixin_66397563",
+        "evidence": "search excerpt of author listing",
+        "topic": "Chrome DevTools MCP与AI Agent",
+        "displayedReadCount": "871",
+        "dateLabel": "2026-05-18",
+        "interpretation": "相关开发主题有公开讨论，不能仅凭该数称行业热点"
+      },
+      {
+        "url": "https://blog.csdn.net/m0_37988015/category_13164108.html",
+        "evidence": "search excerpt of category listing",
+        "topic": "browser-use介绍",
+        "displayedReadCount": "146",
+        "dateLabel": "2026-06-25",
+        "interpretation": "不采纳标题95K Star为当前星数，不将专栏总阅读50729归到该文章，不认定高流量"
+      }
+    ],
+    "officialReposOpened": [
+      "https://github.com/microsoft/playwright-mcp",
+      "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "https://github.com/browser-use/browser-use"
+    ],
+    "limitations": "只核对项目官方入口与选题相关性；未在本轮评测这些AI工具，也未核实全部功能、性能、价格或排名。没有足够热度证据的候选不能以热门/爆款结论发布。"
+  },
+  "userPositioning": {
+    "direction": "AI浏览器与浏览器智能体是用户明确的新内容主线：覆盖选型、真实任务、MCP/CDP/Playwright集成和开发排错；现有指纹、代理与环境隔离内容作为底层专题保留。",
+    "boundary": "用户明确的是AI浏览器方向，不能据此把EasyBR或目录产品未验证的AI功能写成已实现，也不能把自动化框架统称完整AI浏览器。主页/产品能力宣传应在相应内容和官方功能核实后更新。",
+    "todayRole": "已完成稿作为AI浏览器自动化的底层支持内容；不是今天新增AI浏览器评测，也不证明EasyBR具备新AI能力。"
+  }
+}

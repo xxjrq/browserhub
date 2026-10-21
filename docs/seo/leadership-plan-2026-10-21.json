@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "status": "planned_not_claimed_complete",
+  "project": "BrowserHub",
+  "positioning": "AI浏览器与浏览器智能体是用户明确的新内容主线：覆盖选型、真实任务、MCP/CDP/Playwright集成和开发排错；现有指纹、代理与环境隔离内容作为底层专题保留。",
+  "goal": "先把能完成的AI浏览器应用与开发内容做深，通过公开需求证据、官方核验和独特教程争取有效访问。检测网站开发暂缓；行业领先仍是待真实使用、引用和效果验证的目标。",
+  "existingPlan": "docs/seo/strategy-2026-10-16.md",
+  "currentEvidence": {
+    "guideTopics": 29,
+    "completeGuideEditions": 58,
+    "catalogueProducts": 36,
+    "confirmedPriceOrLicenceRecords": 26,
+    "explicitlyUnverifiedPrices": 10,
+    "baselineDate": "2026-10-20",
+    "organicClicks": null,
+    "organicSessions": null,
+    "returningUsers": null,
+    "independentCitations": null,
+    "note": "内容与产品数量来自已交付记录，不代表流量、实测数量或行业地位。"
+  },
+  "skills": [
+    {
+      "name": "content-strategy",
+      "path": "/Users/myd/.codex/skills/content-strategy/SKILL.md",
+      "job": "意图归属、差异化信息增益、编辑队列与主题集群"
+    },
+    {
+      "name": "ai-seo",
+      "path": "/Users/myd/.codex/skills/ai-seo/SKILL.md",
+      "job": "直接可引用的答案、事实来源、实体与版本一致性、AI引用抽样；时间敏感断言以官方现行文档为准"
+    },
+    {
+      "name": "seo-audit",
+      "path": "/Users/myd/.codex/skills/seo-audit/SKILL.md",
+      "job": "页面与技术质量诊断，避免旧页孤立、重复意图与语言错配"
+    },
+    {
+      "name": "firecrawl-seo-audit / firecrawl-search",
+      "path": "/Users/myd/.codex/skills/firecrawl-seo-audit/SKILL.md",
+      "job": "公开资料与竞品问题结构研究；额度不足时使用已有联网工具，不新增付费订阅"
+    },
+    {
+      "name": "WorkBuddy seo-expert",
+      "path": "/Users/myd/.workbuddy/plugins/cache/experts/seo-expert/1.0.2/agents/seo-expert.md",
+      "job": "复用专家的取证与优先级方法；未启动原会话，其模板数字不是本站目标或业绩"
+    },
+    {
+      "name": "easycodex + project model roles",
+      "path": "tools/workflows/model-roles.json",
+      "job": "Luna明确执行，Sol独立审核，复杂决策/三次不同尝试失败升级Sol xhigh；未知实际型号记null"
+    }
+  ],
+  "priorityWorkstreams": [
+    {
+      "id": "P0-developer-editorial",
+      "priority": 1,
+      "deliverable": "AI浏览器与浏览器智能体的热点应用、开发和排错系列",
+      "increment": "用CSDN公开阅读/互动、近期开发问题、项目官方文档或更新筛选，再写可操作、有条件和有来源的中英文增强稿。",
+      "acceptance": [
+        "记录具体原文URL、观察日期、可见阅读/互动原样值与来源局限",
+        "区分近期话题与长期阅读需求，不把累计阅读当最近增速",
+        "技术结论以当前官方API/内核文档核实；代码自写且注明验证范围",
+        "能够给既有文章增加独特开发信息时优先增强旧页",
+        "每篇完整中英、明确前置条件、示例、错误与一手来源",
+        "CSDN只作为选题/问题证据；未验证的技术断言与不兼容旧代码不继承",
+        "选题先问与AI浏览器实际任务的关系；基础代理/指纹文章不能占据长期主线；产品能力与SDK/MCP工具类型分清。"
+      ]
+    },
+    {
+      "id": "P0-test-evidence",
+      "priority": 2,
+      "deliverable": "基于现有环境完成的去敏代码与配置案例",
+      "increment": "先验证文章中的可执行示例与实际配置，不把建设新检测网站作为依赖。",
+      "acceptance": [
+        "首批至少4条实际完成的条件明确案例，后续按可用设备扩展",
+        "记录OS、内核构建、测试页面、设置、时间、重复次数和失败",
+        "无可用设备/许可/版本的组合保留未测",
+        "结果发布前去敏并独立复核",
+        "不由截图或单一checker分数推导平台通过率或账号安全"
+      ]
+    },
+    {
+      "id": "P1-buying-evidence",
+      "priority": 3,
+      "deliverable": "AI浏览器/智能体工具按实际任务进行的选型比较；旧目录按需维护",
+      "increment": "先核查AI方向的真实问题与产品或工具官方资料，区分完整浏览器、MCP服务、SDK与自动化框架；原6组指纹对比和10个产品只是历史维护清单，不挤占AI主线。",
+      "acceptance": [
+        "每个AI比较有具体用户任务、真实需求证据和官方资料",
+        "比较浏览器产品与MCP/SDK时明确类别及前置，不造统一性能分数",
+        "实际试用与文档研究分开，币种/周期/限制有来源，未知保持未知",
+        "公开EasyBR关联，未经核实不声称产品具备AI功能",
+        "原指纹目录只处理资料陈旧或实际用户需求，不默认继续扩量"
+      ]
+    },
+    {
+      "id": "P1-reference-library",
+      "priority": 4,
+      "deliverable": "AI浏览器与智能体的应用、接入和开发知识路径",
+      "increment": "从AI方向公开需求核查承接意图；MCP/CDP/会话等已有归属优先增强，独立缺口再新增。原10个技术意图列表仅作为支撑专题。",
+      "acceptance": [
+        "选题前查现有归属与当前公开问题",
+        "每页有直接答案、可操作步骤/判断表、常见错误、适用边界和一手来源",
+        "不能写出独特增量则增强旧页",
+        "不批量生成近义页或未完成翻译"
+      ]
+    },
+    {
+      "id": "P2-authority-and-feedback",
+      "priority": 5,
+      "deliverable": "可引用的版本化工具/资料、纠错记录与效果复盘",
+      "increment": "让引用来自有用的原创资产，并用真实访问和用户任务结果改进。",
+      "acceptance": [
+        "公开方法、修改日期和纠错入口",
+        "记录可核验引用URL和引用对象，未知数量留空",
+        "先准备可引用资产，不发未经授权的外联消息",
+        "不购买链接、伪造专家/评价、隐瞒关联或将AI自评当外部口碑"
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "days": "1–14",
+      "from": "2026-10-21",
+      "to": "2026-11-03",
+      "planned": [
+        "按公开需求筛出6个AI浏览器/智能体选题，核查现有归属",
+        "优先AI浏览器主线和已登录会话接入等有阅读证据的开发任务",
+        "完成正在制作的两篇底层支持指南，后续避免基础指纹内容长期占用主线"
+      ],
+      "gate": "各选题有来源与具体增量，已写/已审/已上线状态分开"
+    },
+    {
+      "days": "15–30",
+      "from": "2026-11-04",
+      "to": "2026-11-19",
+      "planned": [
+        "交付经筛选的AI浏览器/智能体中英文内容及已有页增强",
+        "对重点接入教程核实当前官方API、安装前置和错误路径",
+        "将选题证据、AI产品事实与实际测试分开记录"
+      ],
+      "gate": "示例的安装、版本、前置、失败与退出行为可理解；未实测不称实测"
+    },
+    {
+      "days": "31–60",
+      "from": "2026-11-20",
+      "to": "2026-12-19",
+      "planned": [
+        "按真实问题与公开证据扩展AI浏览器场景/工具选型",
+        "开发专题覆盖MCP、CDP、会话、恢复和授权边界",
+        "基础代理/指纹内容按真实需求维护，检测网站继续暂缓"
+      ],
+      "gate": "逐页对照固定开发任务，展示具体独有价值而非自封第一"
+    },
+    {
+      "days": "61–90",
+      "from": "2026-12-20",
+      "to": "2027-01-18",
+      "planned": [
+        "根据真实流量、用户问题和可核验引用重排选题",
+        "复核旧代码与官方版本差异",
+        "发布同口径90天复盘；检测网站继续暂缓直到用户重新明确要求"
+      ],
+      "gate": "能够用可获取数据解释哪些内容带来有效访问；未知留空"
+    }
+  ],
+  "cadence": {
+    "daily": "最多1个独立新主题或2项实质旧页增强；取证→Luna执行→Sol独立审核→冻结→正式图构建/推送/部署/双域正文核验。",
+    "weekly": "先读用户最新AI浏览器主线与热点证据队列，复查CSDN阅读/近期问题及官方版本变化，优先可操作的AI浏览器内容；底层技术按需维护，检测网站不进入本阶段队列。",
+    "every30Days": "复盘独特资产、资料陈旧度、纠错、真实用户任务及可核验引用；用相同口径看有效流量。"
+  },
+  "measurement": {
+    "businessMetrics": [
+      "非品牌自然搜索有效访问",
+      "开发教程的有效阅读与后续相关页访问",
+      "指南到对比/产品的有效点击",
+      "回访",
+      "独立网站真实引用"
+    ],
+    "baseline": "未获取的指标保持null，不由页面数或爬虫请求推导。",
+    "currentConstraint": "遵从用户暂缓收录操作。本轮不提交sitemap/IndexNow、不新建站长属性。效果测量与收录操作区分，后续只在现有授权和真实可用数据范围内执行。",
+    "aiSampling": "固定意图与语言，记录引擎/日期/样本数/引用页面，区分被引用与被推荐；不由一次回答推算市场份额。",
+    "successCriterion": "行业地位须由更有用的真实功能、可复核证据、外部采用及持续有效流量共同验证；不以页数、字数、schema或安装skill数量作为成绩。"
+  },
+  "today": {
+    "cycleId": "content-2026-10-21",
+    "plannedChanges": [
+      "增强既有DNS泄漏检测指南",
+      "增强既有SOCKS5配置指南"
+    ],
+    "newArticlesPlanned": 0,
+    "status": "content_prepared; publication state is recorded separately in workflow delivery receipts",
+    "role": "已完成稿作为AI浏览器自动化的底层支持内容；不是今天新增AI浏览器评测，也不证明EasyBR具备新AI能力。"
+  },
+  "primaryGuidanceChecked": [
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "checkedOn": "2026-10-21",
+      "use": "原创信息、实质增量和面向读者的质量标准"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "checkedOn": "2026-10-21",
+      "use": "AI搜索以有用可靠内容与基础搜索质量为核心，不把特殊文件/schema作为捷径"
+    },
+    {
+      "url": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
+      "checkedOn": "2026-10-21",
+      "use": "选型与评测提供真实证据、方法及产品独有差异"
+    }
+  ],
+  "permissions": "本计划不授权外联、购买订阅、假造测试/评价、复用无许可组件或修改其它项目。当前发布仍遵守已审核文件范围及原任务幂等。",
+  "deferredWorkstreams": [
+    {
+      "id": "P0-original-diagnostics",
+      "priority": null,
+      "deliverable": "本地运行的环境验收与前后差异工作台",
+      "increment": "让用户导出版本化JSON、比较两次报告并跳转对应解释；超越仅给红绿灯或总分。",
+      "scope": "先做受支持浏览器API可见字段，明确不可用/受保护/未测。不声称网页能抓获设备全部DNS或证明匿名。不自动采集Cookie、登录态、代理密码；网络检测另标观察范围。",
+      "acceptance": [
+        "每个字段有来源/采集方法/版本和限制",
+        "报告导出和导入比较可复现",
+        "本地报告内容不上传，网络请求与隐私行为有明确说明",
+        "正确处理缺失/失败而非伪造通过",
+        "移动端和键盘可用",
+        "CreepJS仍为原项目身份，复用组件先核实许可"
+      ],
+      "status": "deferred_by_user_2026-10-21",
+      "reason": "用户明确表示检测网站难做，当前先不做；优先热点开发文章与能完成的内容增强。"
+    }
+  ],
+  "topicSelection": {
+    "priorityRule": "先看可观察需求、与BrowserHub的相关度、能补出的独特开发信息、实施成本；不凭感觉固定轮流写百科。",
+    "metricsRule": "公开累计阅读仅为平台显示值，不是唯一读者、本站流量或搜索量；原始发表时间、推荐时间与抓取时间分开。",
+    "shortlist": [
+      {
+        "topic": "AI浏览器/智能体接入已有会话：Playwright CDP基础开发需求",
+        "existingOwner": "browser-automation-profile-persistence",
+        "priority": "next-development-refresh",
+        "csdnUrl": "https://blog.csdn.net/lilongsy/article/details/130560129",
+        "observedOn": "2026-10-21",
+        "evidence": "direct page opened",
+        "displayedReadCount": "1.7w",
+        "displayedLikes": 7,
+        "displayedCollections": 26,
+        "displayedComments": 0,
+        "dateLabel": "最新推荐文章于2026-05-28；不能视为原始发表日期",
+        "proposedGain": "区分CDP接管已有context与newContext/持久化目录；核实当前Chrome远程调试要求、空contexts/pages、端口和关闭行为。"
+      },
+      {
+        "topic": "SOCKS5解析路径与浏览器自动化接入",
+        "existingOwner": "configure-socks5-proxy",
+        "priority": "current-cycle",
+        "csdnUrl": "https://blog.csdn.net/carson2440/article/details/81028622",
+        "observedOn": "2026-10-21",
+        "evidence": "web search excerpt; direct open unavailable",
+        "displayedReadCount": "2w",
+        "displayedCollections": 5,
+        "displayedLikes": 3,
+        "dateLabel": "搜索结果标记最新推荐2025-04-22；不当作近期增长",
+        "proposedGain": "把协议概念落实为Chrome/curl/Playwright的具体解析边界、无凭据示例与错误判断。"
+      },
+      {
+        "topic": "自动化登录态保存与专用profile目录",
+        "existingOwner": "browser-automation-profile-persistence",
+        "priority": "combine-with-CDP-owner-before-new-page",
+        "csdnUrl": "https://blog.csdn.net/fengxin0909/article/details/124496665",
+        "observedOn": "2026-10-21",
+        "evidence": "web search excerpt; direct open unavailable",
+        "displayedReadCount": "9.5k",
+        "displayedCollections": 29,
+        "displayedLikes": 6,
+        "dateLabel": "原文首次发布2022-04-29、修改2022-05-30；长期需求而非2026热点",
+        "proposedGain": "用现行Playwright/Chrome文档解释storageState与真实profile、敏感状态文件和目录并发限制。"
+      }
+    ],
+    "secondaryCandidates": [
+      "AI浏览器定义、真实能力和普通浏览器AI侧栏区别",
+      "Playwright MCP与Chrome DevTools MCP的任务选择",
+      "Browser Use与已有浏览器/持久化会话",
+      "网页调研、跨页整理与人工接管的真实案例",
+      "代理、指纹和内核开发仅作为底层专题补充"
+    ],
+    "secondaryCandidateGate": "这些方向先取公开需求证据和现行一手资料，再进入排期；不把候选当已证实热点。",
+    "primaryDirection": "AI浏览器、浏览器智能体与相关开发；先按任务需求和来源强度排序，不因标题带AI就称热点。"
+  },
+  "userSteering": [
+    "2026-10-21：检测网站先暂缓，优先开发相关文章。",
+    "2026-10-21：可参考CSDN现成文章做开发增强，优先找有阅读/近期问题信号的题目。",
+    "2026-10-21：用户进一步明确主线是AI浏览器；不能继续把指纹浏览器当全站唯一增长方向。"
+  ],
+  "scopeBoundary": "用户明确的是AI浏览器方向，不能据此把EasyBR或目录产品未验证的AI功能写成已实现，也不能把自动化框架统称完整AI浏览器。主页/产品能力宣传应在相应内容和官方功能核实后更新。",
+  "supportingTechnicalIntentOwners": [
+    {
+      "slug": "browser-fingerprint-testing-checklist",
+      "task": "完整环境验收与报告入口"
+    },
+    {
+      "slug": "dns-leak-test-browser-proxy",
+      "task": "解释解析器与代理路径差异"
+    },
+    {
+      "slug": "configure-socks5-proxy",
+      "task": "按客户端配置并验证SOCKS5"
+    },
+    {
+      "slug": "webrtc-leak-check",
+      "task": "解释ICE候选与实时通信路径"
+    },
+    {
+      "slug": "canvas-fingerprint-test",
+      "task": "解释Canvas观测与复测"
+    },
+    {
+      "slug": "webgl-fingerprint-test",
+      "task": "解释WebGL能力与图形后端"
+    },
+    {
+      "slug": "user-agent-client-hints-check",
+      "task": "区分UA与Client Hints不同暴露面"
+    },
+    {
+      "slug": "browser-fingerprint-changes-after-update",
+      "task": "升级前后基线与回归判断"
+    },
+    {
+      "slug": "browserleaks-vs-creepjs",
+      "task": "选择并正确解释两类诊断工具"
+    },
+    {
+      "slug": "best-antidetect-browsers-2026",
+      "task": "按真实约束进入商业选型"
+    }
+  ],
+  "priorityIntentOwners": [
+    {
+      "task": "AI浏览器是什么：聊天侧栏、浏览器智能体与自动化框架的区别",
+      "status": "proposed-new-pillar; verify demand and official examples before drafting",
+      "ownership": "先核查现有站点意图归属，确有独立缺口才新增"
+    },
+    {
+      "task": "AI如何操作已登录浏览器：CDP接管与独立context的区别",
+      "status": "priority-existing-owner-refresh",
+      "existingOwner": "browser-automation-profile-persistence",
+      "demandEvidence": "CSDN已直接打开的CDP文章显示1.7w阅读，说明该开发任务有公开阅读信号，不等于AI题目搜索量"
+    },
+    {
+      "task": "Playwright MCP与Chrome DevTools MCP怎么选",
+      "status": "candidate-needs-intent-and-version-validation",
+      "officialSources": [
+        "https://github.com/microsoft/playwright-mcp",
+        "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+      ]
+    },
+    {
+      "task": "Browser Use接入已有浏览器与保存会话的开发教程",
+      "status": "candidate; observed CSDN article only146 reads is insufficient to call high-traffic",
+      "officialSources": [
+        "https://github.com/browser-use/browser-use"
+      ]
+    },
+    {
+      "task": "AI浏览器真实任务：网页调研、跨页整理与表单流程",
+      "status": "candidate-needs-current-product-evidence-and-permission-boundaries"
+    }
+  ],
+  "legacyComparisonPriority": [
+    "adspower-vs-gologin",
+    "gologin-vs-multilogin",
+    "adspower-vs-multilogin",
+    "easybr-vs-adspower",
+    "easybr-vs-gologin",
+    "easybr-vs-multilogin"
+  ],
+  "legacyProductPriority": [
+    "easybr",
+    "adspower",
+    "gologin",
+    "multilogin",
+    "dolphin-anty",
+    "morelogin",
+    "incogniton",
+    "bitbrowser",
+    "octo-browser",
+    "kameleo"
+  ],
+  "aiComparisonCandidates": [
+    {
+      "topic": "Playwright MCP / Chrome DevTools MCP",
+      "status": "tool comparison candidate, not a completed browser-product review"
+    },
+    {
+      "topic": "AI浏览器与普通浏览器加AI侧栏的适用差异",
+      "status": "needs-current-official-product-verification"
+    },
+    {
+      "topic": "Browser Use与确定性Playwright工作流的任务边界",
+      "status": "needs-current-API-and-method-validation"
+    }
+  ],
+  "aiTopicResearch": {
+    "date": "2026-10-21",
+    "queries": [
+      "site:blog.csdn.net AI浏览器 阅读量 2026",
+      "site:blog.csdn.net Chrome DevTools MCP 阅读量",
+      "site:blog.csdn.net browser-use 阅读量",
+      "site:blog.csdn.net AI浏览器 Comet",
+      "site:blog.csdn.net AI浏览器 Atlas"
+    ],
+    "observations": [
+      {
+        "url": "https://blog.csdn.net/ceshiren2022/category_13026507.html",
+        "evidence": "search excerpt of category listing",
+        "topic": "Playwright MCP网页交互AI助手教程",
+        "displayedReadCount": "1238",
+        "dateLabel": "2025-10-14",
+        "interpretation": "已有阅读信号，非近期趋势或本站流量；技术与版本仍按官方核查"
+      },
+      {
+        "url": "https://blog.csdn.net/weixin_66397563",
+        "evidence": "search excerpt of author listing",
+        "topic": "Chrome DevTools MCP与AI Agent",
+        "displayedReadCount": "871",
+        "dateLabel": "2026-05-18",
+        "interpretation": "相关开发主题有公开讨论，不能仅凭该数称行业热点"
+      },
+      {
+        "url": "https://blog.csdn.net/m0_37988015/category_13164108.html",
+        "evidence": "search excerpt of category listing",
+        "topic": "browser-use介绍",
+        "displayedReadCount": "146",
+        "dateLabel": "2026-06-25",
+        "interpretation": "不采纳标题95K Star为当前星数，不将专栏总阅读50729归到该文章，不认定高流量"
+      }
+    ],
+    "officialReposOpened": [
+      "https://github.com/microsoft/playwright-mcp",
+      "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "https://github.com/browser-use/browser-use"
+    ],
+    "limitations": "只核对项目官方入口与选题相关性；未在本轮评测这些AI工具，也未核实全部功能、性能、价格或排名。没有足够热度证据的候选不能以热门/爆款结论发布。"
+  }
+}
