@@ -1,0 +1,445 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "project": "browserhub",
+  "cycleId": "content-2026-10-21-batch-02",
+  "status": "published_verified",
+  "runtimeStatus": "completed",
+  "attentionRequired": false,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "01aa5e8b6e3a5e17be0a24753ed3e7bff131496c88eaf9f8807f0fecd5ce5145",
+  "commit": "27d83a661b673e633b481cd5c9bd0be305a6ef53",
+  "release": "/opt/browsertools/releases/20261021-094038",
+  "completedAt": "2026-10-21T01:41:20.476Z",
+  "changeKind": "five new complete bilingual AI-browser/browser-agent topics; translations counted once",
+  "newTopics": [
+    "ai-browser-vs-browser-agent",
+    "playwright-mcp-vs-chrome-devtools-mcp",
+    "browser-use-existing-browser-session",
+    "chrome-devtools-mcp-existing-browser",
+    "playwright-mcp-existing-browser"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-vs-browser-agent/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-vs-browser-agent/",
+    "https://browserhub.co/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+    "https://browserhub.co/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+    "https://browserhub.co/en/guides/browser-use-existing-browser-session/",
+    "https://browserhub.co/zh-cn/guides/browser-use-existing-browser-session/",
+    "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+    "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+    "https://browserhub.co/en/guides/playwright-mcp-existing-browser/",
+    "https://browserhub.co/zh-cn/guides/playwright-mcp-existing-browser/"
+  ],
+  "dailyTarget": {
+    "minimumNewTopics": 5,
+    "actualNewTopics": 5,
+    "met": true,
+    "separateEarlierRefreshes": [
+      "dns-leak-test-browser-proxy",
+      "configure-socks5-proxy"
+    ],
+    "previousBatch": "content-2026-10-21",
+    "batchReason": "User explicitly increased daily quantity after original batch had completed two existing-guide enhancements. Ordered new-work batch verified completed predecessor; no replay or journal reset."
+  },
+  "skills": [
+    {
+      "name": "humanizer",
+      "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "upstream": "https://github.com/blader/humanizer",
+      "commit": "8c307f367c91bd974002f10f2be2965d642c13df",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "job": "英文技术正文自然表达与信息保真"
+    },
+    {
+      "name": "humanizer-zh",
+      "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+      "upstream": "https://github.com/op7418/Humanizer-zh",
+      "commit": "f4518a8eab97b8bfebc66a89d34320a89bef6930",
+      "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df",
+      "job": "中文正文套话、重复与翻译腔编辑"
+    }
+  ],
+  "editorialProcess": [
+    "Current public query/reading signals used for candidate selection; no invented search volume",
+    "Primary technical/product documentation and implementation source checked",
+    "Luna drafts; English Humanizer and Chinese Humanizer-zh editing",
+    "Independent Sol reviewed final files and sources; all15 SHA256 records approved",
+    "Preflight CI and repository authentication read check; freeze",
+    "Real graph CI, commit, push, atomic deployment and20 dual-domain article body/canonical checks"
+  ],
+  "review": {
+    "role": "reviewer",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "independentContext": true,
+    "artifactCount": 15,
+    "receipt": ".local/workflows/cycles/content-2026-10-21-batch-02/review.json"
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "attempt": 1,
+    "agents": [
+      "ai_article_selection",
+      "ai_article_sessions",
+      "ai_article_playwright"
+    ],
+    "coordination": "Root integrated shared catalog, editions, reading series, homepage and keyword/audit records; independent reviewer evaluates actualfinalbytes.",
+    "followup": "All writers returned final files; coordinator applied independent-review prose edits and removed CSDN from public sources. No actual model response identifier reported.",
+    "executionAttempts": [
+      {
+        "agent": "ai_article_selection",
+        "attempt": 1,
+        "scope": "2topicdrafts"
+      },
+      {
+        "agent": "ai_article_selection",
+        "attempt": 2,
+        "reason": "Independent review corrected storage-state semantics and prose"
+      },
+      {
+        "agent": "ai_article_sessions",
+        "attempt": 1,
+        "scope": "2sessiontutorials"
+      },
+      {
+        "agent": "ai_article_sessions",
+        "attempt": 2,
+        "reason": "Independent review traced Agent cleanup; explicit keep_alive and sources"
+      },
+      {
+        "agent": "ai_article_playwright",
+        "attempt": 1,
+        "scope": "1extensiontutorial"
+      },
+      {
+        "agent": "ai_article_playwright",
+        "attempt": 2,
+        "reason": "Fixed TypeScript serialization, profile wording and token claims; actual final parse/ESLint/tsc passed"
+      }
+    ]
+  },
+  "resolvedFindings": [
+    "Storage-state initializes isolated sessions; does not persist later changes",
+    "Explicit BrowserProfile.keep_alive=True required to preserve Chrome through Agent.run cleanup; stop alone insufficient",
+    "Playwright profile selection and token claims aligned with current extension docs",
+    "TypeScript quoting fixed and final module compiled; unsupported token revocation UI claim removed",
+    "CSDN observations retained with surface/date limits in research; public technical source lists use primary sources"
+  ],
+  "validation": {
+    "preflightCiPassed": true,
+    "graphCiPassed": true,
+    "htmlFiles": 1158,
+    "seoAuditedPages": 1154,
+    "sitemapUrls": 936,
+    "seoErrors": 0,
+    "guideTopics": 34,
+    "completeGuideEditions": 68,
+    "productEvidenceRecords": 36,
+    "confirmedPriceOrLicenceRecords": 26,
+    "explicitlyUnverifiedPrices": 10,
+    "workflowRegressionTestsPassed": 6,
+    "sampleValidation": "Python AST and JSON parse/source checks; no paid API calls or independent live browser-agent compatibility benchmark"
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "previous_batch_verified",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-21T01:41:20.436Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-vs-browser-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-vs-browser-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-vs-browser-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-vs-browser-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-use-existing-browser-session/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-use-existing-browser-session/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-use-existing-browser-session/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-use-existing-browser-session/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "navigationAndDownloads": {
+    "checkedAt": "2026-10-21T01:43:01.570951+00:00",
+    "purpose": "Final read-only validation of homepage navigation and example files. Main root has existing301tozh-cn; verified same-domain target instead of expecting200atroot. No server/config/code change or deployment replay.",
+    "initialObservation": "postrelease-readonly.json",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/",
+        "status": 200,
+        "matches": true,
+        "check": "main_body_and_new_topic_link",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "matches": true,
+        "check": "main_body_and_new_topic_link",
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "matches": true,
+        "check": "main_body_and_new_topic_link",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "matches": true,
+        "check": "main_body_and_new_topic_link",
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "matches": true,
+        "check": "main_body_and_new_topic_link",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/templates/browser-use-existing-cdp-session.py",
+        "status": 200,
+        "matches": true,
+        "check": "exact_file_bytes",
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/browser-use-existing-cdp-session.py",
+        "status": 200,
+        "matches": true,
+        "check": "exact_file_bytes",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/templates/chrome-devtools-mcp-manual-attach.json",
+        "status": 200,
+        "matches": true,
+        "check": "exact_file_bytes",
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/chrome-devtools-mcp-manual-attach.json",
+        "status": 200,
+        "matches": true,
+        "check": "exact_file_bytes",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/templates/playwright-mcp-existing-browser.json",
+        "status": 200,
+        "matches": true,
+        "check": "exact_file_bytes",
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/playwright-mcp-existing-browser.json",
+        "status": 200,
+        "matches": true,
+        "check": "exact_file_bytes",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/",
+        "effectiveUrl": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "initialStatus": 301,
+        "matches": true,
+        "check": "same-domain-homepage-main-and-all-five-topics",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "effectiveUrl": "https://browserhub.co/en/",
+        "status": 200,
+        "initialStatus": 200,
+        "matches": true,
+        "check": "same-domain-homepage-main-and-all-five-topics",
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "effectiveUrl": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "initialStatus": 200,
+        "matches": true,
+        "check": "same-domain-homepage-main-and-all-five-topics",
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "effectiveUrl": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "initialStatus": 200,
+        "matches": true,
+        "check": "same-domain-homepage-main-and-all-five-topics",
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "effectiveUrl": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "initialStatus": 200,
+        "matches": true,
+        "check": "same-domain-homepage-main-and-all-five-topics",
+        "ok": true
+      }
+    ]
+  },
+  "automation": {
+    "id": "browserhub",
+    "status": "ACTIVE",
+    "localTime": "09:00",
+    "timezone": "Asia/Shanghai",
+    "newTopicTarget": 5,
+    "deAiSkillsRequired": true,
+    "translationsCountedSeparately": false
+  },
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "keywordSearchVolume": null,
+    "currentRank": null,
+    "note": "No new first-party traffic measurements. Public reading signals are cumulative observations, not BrowserHub traffic or current trend growth."
+  },
+  "operationsNotPerformed": [
+    "index submission",
+    "new detection website",
+    "external outreach",
+    "paid subscription/API calls",
+    "EasyBR client/backend changes"
+  ],
+  "history": "content-2026-10-20 original graph/journal left unchanged; historical project_manual_reconciled exception not reused for this batch"
+}
