@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "project": "browserhub",
+  "cycleId": "content-2026-10-21",
+  "status": "published_verified",
+  "runtimeStatus": "completed",
+  "attentionRequired": false,
+  "runtimeDefinitionHash": "b43d73424407988ee726178073ba6e449927efedfcf2b369341fe0a36a0b47c3",
+  "commit": "2a73044ea59bee46730adef49c1d54ee55b41531",
+  "release": "/opt/browsertools/releases/20261021-091717",
+  "completedAt": "2026-10-21T01:18:00.479Z",
+  "topics": [
+    "dns-leak-test-browser-proxy",
+    "configure-socks5-proxy"
+  ],
+  "changeKind": "two existing bilingual guide enhancements; no new article routes or detection website",
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "review": {
+    "role": "reviewer",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "independentContext": true,
+    "artifactCount": 5,
+    "receipt": ".local/workflows/cycles/content-2026-10-21/review.json"
+  },
+  "executor": {
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "role": "executor",
+    "attempt": 1
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-21T01:18:00.415Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dns-leak-test-browser-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dns-leak-test-browser-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dns-leak-test-browser-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dns-leak-test-browser-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/configure-socks5-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/configure-socks5-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/configure-socks5-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/configure-socks5-proxy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "validation": {
+    "ciPassed": true,
+    "htmlFiles": 1143,
+    "seoAuditedPages": 1139,
+    "sitemapUrls": 926,
+    "seoErrors": 0,
+    "sourcedGuideEditions": 58,
+    "productEvidenceRecords": 36,
+    "confirmedPriceOrLicenceRecords": 26,
+    "explicitlyUnverifiedPrices": 10,
+    "independentBrowserOrProxyLabTests": false
+  },
+  "editorialDirection": {
+    "primary": "AI browsers and browser agents: useful applications, developer integration and task-based tool selection",
+    "deferred": "Detection website/tool development",
+    "supporting": "Fingerprint, proxy and browser-environment articles remain technical support topics",
+    "roadmap": "docs/seo/leadership-plan-2026-10-21.json",
+    "research": "docs/seo/research-2026-10-21.json",
+    "candidateWithStrongestObservedReadSignal": {
+      "topic": "AI/browser automation connecting to an already open browser via CDP",
+      "csdnUrl": "https://blog.csdn.net/lilongsy/article/details/130560129",
+      "observedOn": "2026-10-21",
+      "displayedReads": "1.7w",
+      "limitation": "Cumulative displayed platform count, not monthly search demand or BrowserHub traffic"
+    },
+    "nextStep": "Validate existing browser-automation-profile-persistence ownership and current official MCP/CDP guidance; improve high-signal developer intent owners or one genuinely new AI-browser theme."
+  },
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "keywordSearchVolume": null,
+    "currentRank": null,
+    "note": "Not measured this pass. CSDN public signals and search samples are topic evidence, not first-party demand or traffic."
+  },
+  "automation": {
+    "id": "browserhub",
+    "status": "ACTIVE",
+    "localTime": "09:00",
+    "timezone": "Asia/Shanghai",
+    "directionUpdated": true
+  },
+  "priorCycle": {
+    "cycleId": "content-2026-10-20",
+    "runtimeStatus": "needs_reconciliation",
+    "businessStatus": "project_manual_reconciled",
+    "resolution": "Prior success receipts were inspected; no replay, journal reset or new same-day task identity."
+  },
+  "operationsNotPerformed": [
+    "index submission",
+    "new detection website",
+    "external outreach",
+    "paid subscriptions",
+    "EasyBR client/backend changes"
+  ]
+}
