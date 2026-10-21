@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-21",
+  "project": "BrowserHub",
+  "topic": "playwright-mcp-existing-browser",
+  "intent": "Set up Playwright MCP against an already open, authorized Chrome or Edge session, and choose extension versus CDP attachment.",
+  "execution": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffort": "high",
+    "modelEffective": null,
+    "attempt": 1
+  },
+  "researchMethod": "Directly inspected Microsoft's current Playwright MCP and extension documentation plus a public CSDN article page on 2026-10-21. No hands-on browser or MCP test was performed.",
+  "demandSignal": {
+    "source": "https://blog.csdn.net/lilongsy/article/details/130560129",
+    "observedOn": "2026-10-21",
+    "pageTopic": "Connecting Playwright to an already-open Chrome browser using CDP",
+    "displayedReads": "1.7w",
+    "displayedSaves": 26,
+    "displayedLikes": 7,
+    "displayedDateLabel": "CSDN showed 'latest recommended article' on 2026-05-28; this is not treated as original publication date.",
+    "limits": [
+      "Displayed reads are a cumulative platform count, not unique readers or monthly search demand.",
+      "The page presents syndicated distribution and a 1.7w cumulative reading count; this is only a topic clue.",
+      "These values are not BrowserHub traffic, search volume, ranking, conversion, or evidence of freshness."
+    ]
+  },
+  "officialSources": [
+    {
+      "url": "https://playwright.dev/mcp/configuration/browser-extension",
+      "title": "Microsoft Playwright MCP: Connecting to Browsers",
+      "inspectedOn": "2026-10-21",
+      "claimsUsed": [
+        "Chrome and Edge channel connection may be enabled in chrome://inspect/#remote-debugging; documented permission is 'Allow remote debugging for this browser instance'.",
+        "CDP may connect by endpoint such as http://localhost:9222 or by supported Chrome/Edge channel names.",
+        "Playwright Extension attaches to existing tabs and reuses logged-in sessions, cookies and installed extensions; its documented setup uses --extension and can pin a profile with --profile-dir-name."
+      ],
+      "limits": "The guide describes supported configuration; it does not guarantee every Chromium fork, browser build, MCP host topology or client-specific setup works unchanged."
+    },
+    {
+      "url": "https://github.com/microsoft/playwright/blob/main/packages/extension/README.md",
+      "title": "Microsoft Playwright: Playwright Chrome Extension README",
+      "inspectedOn": "2026-10-21",
+      "claimsUsed": [
+        "Prerequisite is a Chrome, Edge or Chromium browser; the extension install link points to the Chrome Web Store.",
+        "First interaction presents a page for selecting the browser tab; connection approval is required by default.",
+        "Clients receive separate tab groups, and the status page can inspect connections and disconnect them individually.",
+        "PLAYWRIGHT_MCP_EXTENSION_TOKEN is profile-specific, displayed in the extension UI, and avoids repeated manual connection approval when configured.",
+        "--profile-dir-name selects a profile by the final directory component of Profile Path at chrome://version; the token must match that profile.",
+        "Without an explicit profile name, the documented default is the last-used browser profile with the extension installed.",
+        "The inspected extension documentation does not describe a token revocation control."
+      ],
+      "limits": "Token authenticates the connection; it is not documented as a restriction on subsequent browser actions. No claim is made that a token provides authorization for a website or user account."
+    },
+    {
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "title": "Microsoft Playwright MCP README and configuration",
+      "inspectedOn": "2026-10-21",
+      "claimsUsed": [
+        "The server can use a Playwright-managed persistent profile, isolated contexts or an existing browser extension connection.",
+        "A persistent profile stores browser data in its user-data directory and one directory cannot be shared by concurrent browser instances.",
+        "Isolated mode discards session storage when the browser closes; storage state can be provided separately.",
+        "Browsers attached over CDP or extension are not automatically closed; an idle timeout disconnects from externally owned browsers while pages remain open."
+      ],
+      "limits": "Mode descriptions are kept distinct from promises about any specific MCP client or vendor-managed browser."
+    },
+    {
+      "url": "https://developer.chrome.com/blog/remote-debugging-port",
+      "title": "Chrome for Developers: Changes to remote debugging switches",
+      "inspectedOn": "2026-10-21",
+      "claimsUsed": [
+        "Chrome 136 changed remote debugging switch behavior and requires a non-default user-data directory for the documented remote-debugging scenario."
+      ],
+      "limits": "The article avoids presenting older launch commands as universally current and does not generalize Chromium-fork behavior beyond the cited Chrome guidance."
+    }
+  ],
+  "practicalChecksIncluded": [
+    "Pick the connection mode before configuring a browser.",
+    "Pin the extension to the intended Chrome profile and verify the selected tab and signed-in account before actions.",
+    "Keep CDP local or behind deliberate access controls and use a dedicated test user-data directory.",
+    "Troubleshoot missing tabs, repeated approval, CDP refusal or timeout, wrong profile/tab, and browser processes that remain open after disconnect.",
+    "Disconnect extension clients and remove temporary tokens and configuration according to the profile's data-retention policy."
+  ],
+  "claimBoundaries": {
+    "handsOnTestingClaim": false,
+    "compatibilityClaim": "Based on current Microsoft/Chrome documentation; no independent compatibility matrix or execution results.",
+    "bypassOrDetection": "No instruction to bypass login, CAPTCHA, account restrictions or platform controls; no anti-detection claim.",
+    "trafficOrSearchVolume": "Unknown; no BrowserHub analytics or keyword volume was available for this topic in this research pass.",
+    "exactNodeVersion": "Not stated because an exact Node.js runtime requirement for this extension path was not verified in the inspected official setup docs. The article only identifies the documented npx package command and required browser families."
+  },
+  "editorialOwnership": {
+    "newTopic": true,
+    "relatedExistingGuide": "browser-automation-profile-persistence",
+    "distinction": "The existing guide owns storage-state and persistent-directory concepts. This leaf owns Playwright MCP's live extension/CDP attachment, profile/tab selection, approval and disconnect workflow.",
+    "languages": ["en", "zh-cn"],
+    "sourceFile": "src/data/ai-playwright-guides.ts"
+  }
+}

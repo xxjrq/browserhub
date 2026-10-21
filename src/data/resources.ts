@@ -1,3 +1,6 @@
+import { aiSelectionGuides } from "./ai-selection-guides";
+import { aiSessionGuides } from "./ai-session-guides";
+import { aiPlaywrightGuides } from "./ai-playwright-guides";
 import browserCatalog from "./catalog/browsers.json";
 import readmeBrowserCatalog from "./catalog/readme-browsers.json";
 import toolCatalog from "./catalog/tools.json";
@@ -254,7 +257,7 @@ export const technologies: TechnologyResource[] = technologyRows.map(item => ({
 
 export const useCases: UseCaseResource[] = (useCaseCatalog.useCases as Array<{ id: string; name: string; recommendedCategories: string[] }>).map(item => ({ ...item, slug: item.id }));
 
-export const guides: GuideResource[] = [...dailyGuides, ...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
+export const guides: GuideResource[] = [...aiSelectionGuides, ...aiSessionGuides, ...aiPlaywrightGuides, ...dailyGuides, ...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
 
 const rawComparisons: ComparisonResource[] = [
 	{ title: "EasyBR vs AdsPower", slug: "easybr-vs-adspower", description: "比较本地优先与电商自动化工作流。", browsers: ["easybr", "adspower"] },

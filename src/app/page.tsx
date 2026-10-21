@@ -19,7 +19,7 @@ const categories = [
 
 export function HomePage() {
 	const featured = browsers.find(browser => browser.featured) ?? browsers[0];
-	const featuredGuides = ["browser-fingerprint-changes-after-update", "canvas-fingerprint-test", "browserleaks-vs-creepjs", "open-source-antidetect-browsers"].map(slug => guides.find(guide => guide.slug === slug)).filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+	const featuredGuides = ["ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"].map(slug => guides.find(guide => guide.slug === slug)).filter((guide): guide is (typeof guides)[number] => Boolean(guide));
 	const featuredRest = browsers.filter(browser => browser.slug !== featured.slug && ["gologin", "adspower", "multilogin"].includes(browser.slug)).slice(0, 3);
 	const stats = [
 		{ value: `${browsers.length}+`, label: "浏览器及相关资源" },
@@ -206,7 +206,7 @@ export function HomePage() {
 			<section className="border-t py-16 md:py-20">
 				<div className="container grid gap-12 lg:grid-cols-[1.6fr_1fr]">
 					<div>
-						<SectionHeader eyebrow="Guides" title="指纹浏览器与环境检测专题" description="从检测工具选择到结果判读，循序完成自己的环境检查。" href="/guides/" action="全部指南" />
+						<SectionHeader eyebrow="Guides" title="AI 浏览器与智能体开发" description="按任务选工具，接入已有登录会话，处理 MCP 与 CDP 的实际配置问题。" href="/guides/" action="全部指南" />
 						<div className="border-t">
 							{featuredGuides.map(guide => (
 								<Link key={guide.slug} href={`/zh-cn/guides/${guide.slug}/`} className="group flex items-center gap-4 border-b py-4 transition-colors hover:bg-muted/40 sm:gap-6">

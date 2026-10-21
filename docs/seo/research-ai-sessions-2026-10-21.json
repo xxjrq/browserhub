@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-21",
+  "project": "BrowserHub",
+  "execution_role": "gpt-6-luna/high (requested execution role)",
+  "model_effective": null,
+  "model_attempts": 1,
+  "research_method": "Ordinary web search and direct inspection of official GitHub documentation, source examples, and Chrome for Developers documentation. Technical claims rely on primary sources; CSDN is used only as public topic-demand evidence.",
+  "topics": [
+    {
+      "slug": "browser-use-existing-browser-session",
+      "intent": "Python developer wants a Browser Use agent to continue in a Chrome session that is already open, including its existing page state.",
+      "unique_scope": "Browser Use Python BrowserSession / BrowserProfile CDP setup, current Chrome 136+ dedicated user-data-directory requirement, endpoint check, limited sample task, and verified keep_alive / Agent.run cleanup semantics.",
+      "official_sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/examples/browser/using_cdp.py",
+          "title": "Browser Use Python CDP example",
+          "observed": "2026-10-21",
+          "supports": "Current repository example attaches BrowserSession via BrowserProfile(cdp_url=..., is_local=True), runs an Agent on it, and calls session.kill() after the run. The article does not copy this cleanup unmodified because Agent.run() invokes Agent.close() in its own finally path."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/skills/open-source/references/browser.md",
+          "title": "Browser Use browser configuration reference",
+          "observed": "2026-10-21",
+          "supports": "Documents cdp_url as the connection setting for an existing browser instance."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/browser/session.py",
+          "title": "Browser Use BrowserSession implementation",
+          "observed": "2026-10-21",
+          "supports": "Current source says stop() requests a non-forced browser stop and the BrowserSession stop handler preserves the process when BrowserProfile.keep_alive is true; kill() sends a forced stop that bypasses keep_alive."
+        },
+        {
+          "url": "https://developer.chrome.com/blog/remote-debugging-port",
+          "title": "Chrome for Developers: Changes to remote debugging switches to improve security",
+          "published": "2025-03-17",
+          "observed": "2026-10-21",
+          "supports": "From Chrome 136, --remote-debugging-port and --remote-debugging-pipe are ignored for the default Chrome data directory and must be paired with a non-standard --user-data-dir."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use",
+          "title": "Browser Use repository quickstart",
+          "observed": "2026-10-21",
+          "supports": "Python library quickstart and current project overview; repository currently documents Python 3.11+ for the Python library."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/browser/profile.py",
+          "title": "Browser Use BrowserProfile source",
+          "observed": "2026-10-21",
+          "supports": "Current BrowserProfile defines keep_alive with default None and describes it as keeping the browser alive after an agent run."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/agent/service.py",
+          "title": "Browser Use Agent lifecycle source",
+          "observed": "2026-10-21",
+          "supports": "Current Agent.close() kills the browser session when browser_profile.keep_alive is false or unset. With keep_alive true, it stops the event bus without killing the browser; Agent.run() cleanup calls close()."
+        }
+      ],
+      "public_demand_signals": [
+        {
+          "url": "https://blog.csdn.net/lilongsy/article/details/130560129",
+          "title": "How to connect Playwright to an already open browser",
+          "observed": "2026-10-21",
+          "displayed_reads": "1.6w",
+          "displayed_likes": 7,
+          "displayed_collections": 26,
+          "displayed_comments": 0,
+          "displayed_recommendation_date": "2026-03-28",
+          "interpretation": "This page provides public evidence of interest in attaching automation to an existing Chrome session. It is a Playwright tutorial, not Browser Use documentation. Both displayed read counts are cumulative platform signals, not unique readers, current trend growth, BrowserHub traffic, search volume, ranking, or a claim that the tutorial remains technically current.",
+          "surface_observation": {
+            "displayed_reads": "1.6w",
+            "displayed_recommendation_date": "2026-03-28",
+            "evidence": "Our search-result snapshot observed on 2026-10-21; not treated as an authoritative current counter."
+          },
+          "project_canonical_observation": {
+            "displayed_reads": "1.7w",
+            "displayed_recommendation_timestamp": "2026-05-28 15:40:43",
+            "evidence": "A separate direct-page recheck reported by the project reviewer on 2026-10-21."
+          },
+          "counter_reconciliation": "The two same-day observations differ in displayed counter and recommendation date, likely due to different page surfaces or cached snapshots; the reason is unresolved. Keep both labeled by provenance, and do not use either exact count/date as a current-hotness claim."
+        }
+      ],
+      "source_gaps": [
+        "An earlier pass inferred that BrowserSession.stop() alone would preserve Chrome after agent.run(); that was incomplete. Agent.run() closes the Agent, and Agent.close() kills the session unless BrowserProfile.keep_alive is true. The template and article now set keep_alive=True explicitly. An explicit forced kill still closes the browser.",
+        "No Browser Use installation or live Chrome session was run for this assignment; the Python example is source-checked, not reported as executed."
+      ],
+      "correction_attempt": 2,
+      "correction_evidence": {
+        "agent_service": "https://github.com/browser-use/browser-use/blob/main/browser_use/agent/service.py",
+        "browser_profile": "https://github.com/browser-use/browser-use/blob/main/browser_use/browser/profile.py",
+        "browser_session": "https://github.com/browser-use/browser-use/blob/main/browser_use/browser/session.py",
+        "finding": "Agent.run() cleanup closes Agent; Agent.close() calls BrowserSession.kill() when keep_alive is false or unset. keep_alive=True makes Agent.close() release the event bus without killing the browser. BrowserSession’s non-forced stop handler also preserves the browser when keep_alive is true; force=True still stops it."
+      }
+    },
+    {
+      "slug": "chrome-devtools-mcp-existing-browser",
+      "intent": "Developer wants Chrome DevTools MCP to connect to a currently running Chrome instance and needs to choose the right attachment method and debug version/consent problems.",
+      "unique_scope": "Separate Chrome 144+ autoConnect from manual --browser-url CDP attach; explain default-profile selection, explicit Chrome consent, Chrome 136 dedicated profile requirements for manual debugging, cleanup and common network/version errors.",
+      "official_sources": [
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/advanced-usage.md",
+          "title": "Chrome DevTools MCP advanced usage: connecting to a running Chrome instance",
+          "observed": "2026-10-21",
+          "supports": "Documents autoConnect for Chrome 144+, enabling remote debugging at chrome://inspect/#remote-debugging, consent, default profile selection, access to all windows in that profile, and manual --browser-url setup."
+        },
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md",
+          "title": "Chrome DevTools MCP configuration reference",
+          "observed": "2026-10-21",
+          "supports": "autoConnect/auto-connect option exists and defaults false; browserUrl/browser-url and wsEndpoint are endpoint connection options; current extension/PWA category connection restrictions are documented separately."
+        },
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md",
+          "title": "Chrome DevTools MCP troubleshooting",
+          "observed": "2026-10-21",
+          "supports": "Used for manual endpoint and VM/sandbox routing troubleshooting."
+        },
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "title": "Chrome DevTools MCP repository README",
+          "observed": "2026-10-21",
+          "supports": "Current repository describes supported Chrome and Chrome for Testing, Node.js LTS requirement, broad browser data access granted to MCP clients, and usage-statistics opt-out flag."
+        },
+        {
+          "url": "https://developer.chrome.com/blog/remote-debugging-port",
+          "title": "Chrome for Developers: Changes to remote debugging switches to improve security",
+          "published": "2025-03-17",
+          "observed": "2026-10-21",
+          "supports": "Chrome 136 default data directory behavior for command-line remote-debugging-port and pipe switches."
+        }
+      ],
+      "public_demand_signals": [
+        {
+          "url": "https://blog.csdn.net/weixin_66397563",
+          "title": "CSDN author listing containing Chrome DevTools MCP and AI Agent article",
+          "observed": "2026-10-21",
+          "displayed_article_reads": 871,
+          "article_date": "2026-05-18",
+          "interpretation": "The listing shows public discussion of Chrome DevTools MCP integration. This is a single displayed cumulative article count, not category aggregate, current growth, BrowserHub traffic, search volume, ranking or conversion evidence."
+        }
+      ],
+      "source_gaps": [
+        "The repository's main-branch documentation is mutable; the --autoConnect and Chrome 144 prerequisites were checked on 2026-10-21 and should be checked again when the MCP package is upgraded.",
+        "No Chrome DevTools MCP client was launched for this assignment; the downloadable manual configuration follows official documentation but is not reported as executed."
+      ]
+    }
+  ],
+  "humanizer_pass": {
+    "english_skill": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+    "chinese_skill": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+    "method": "Embedded/file-mode edit of both localized drafts after factual drafting; retained supported facts, version limits, attribution and source links; removed filler, invented experience, repeated summaries and template closers."
+  },
+  "validation": {
+    "source_research_completed": true,
+    "bilingual_sections_match_per_topic": true,
+    "faq_count_per_locale": 4,
+    "hands_on_testing_claim": false,
+    "browserhub_traffic_or_search_volume_claim": false,
+    "production_build_or_deployment": false
+  }
+}

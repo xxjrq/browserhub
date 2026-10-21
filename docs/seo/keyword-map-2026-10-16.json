@@ -3522,6 +3522,166 @@
       "status": "review-required-bilingual-draft",
       "informationGain": "Dated before/after baseline, signal-level change classification and workflow regression acceptance; distinct from initial collection and individual signal mechanics",
       "evidenceFile": "update-research-2026-10-20.json"
+    },
+    {
+      "id": "guides:ai-browser-vs-browser-agent",
+      "primaryKeyword": {
+        "en": "ai browser vs browser agent",
+        "zh-CN": "解释AI浏览器、聊天侧栏与浏览器智能体，并按实际任务选型"
+      },
+      "intent": "解释AI浏览器、聊天侧栏与浏览器智能体，并按实际任务选型",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-vs-browser-agent/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-vs-browser-agent/"
+      ],
+      "status": "reviewed-release-candidate; not yet claimed published",
+      "observedOn": "2026-10-21",
+      "demandEvidence": "公开搜索与CSDN具体阅读线索见本批三份research-ai记录；不是本站query或已测量搜索量。",
+      "originalGain": "解释AI浏览器、聊天侧栏与浏览器智能体，并按实际任务选型",
+      "relatedSlugs": [
+        "playwright-mcp-vs-chrome-devtools-mcp",
+        "browser-use-existing-browser-session",
+        "chrome-devtools-mcp-existing-browser",
+        "playwright-mcp-existing-browser"
+      ]
+    },
+    {
+      "id": "guides:playwright-mcp-vs-chrome-devtools-mcp",
+      "primaryKeyword": {
+        "en": "playwright mcp vs chrome devtools mcp",
+        "zh-CN": "比较两种MCP工具的交互、调试及会话模式"
+      },
+      "intent": "比较两种MCP工具的交互、调试及会话模式",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "https://browserhub.co/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/"
+      ],
+      "status": "reviewed-release-candidate; not yet claimed published",
+      "observedOn": "2026-10-21",
+      "demandEvidence": "公开搜索与CSDN具体阅读线索见本批三份research-ai记录；不是本站query或已测量搜索量。",
+      "originalGain": "比较两种MCP工具的交互、调试及会话模式",
+      "relatedSlugs": [
+        "ai-browser-vs-browser-agent",
+        "browser-use-existing-browser-session",
+        "chrome-devtools-mcp-existing-browser",
+        "playwright-mcp-existing-browser"
+      ]
+    },
+    {
+      "id": "guides:browser-use-existing-browser-session",
+      "primaryKeyword": {
+        "en": "browser use existing browser session",
+        "zh-CN": "Browser Use Python接入已有CDP会话及生命周期"
+      },
+      "intent": "Browser Use Python接入已有CDP会话及生命周期",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-use-existing-browser-session/",
+        "https://browserhub.co/zh-cn/guides/browser-use-existing-browser-session/"
+      ],
+      "status": "reviewed-release-candidate; not yet claimed published",
+      "observedOn": "2026-10-21",
+      "demandEvidence": "公开搜索与CSDN具体阅读线索见本批三份research-ai记录；不是本站query或已测量搜索量。",
+      "originalGain": "Browser Use Python接入已有CDP会话及生命周期",
+      "relatedSlugs": [
+        "ai-browser-vs-browser-agent",
+        "playwright-mcp-vs-chrome-devtools-mcp",
+        "chrome-devtools-mcp-existing-browser",
+        "playwright-mcp-existing-browser"
+      ]
+    },
+    {
+      "id": "guides:chrome-devtools-mcp-existing-browser",
+      "primaryKeyword": {
+        "en": "chrome devtools mcp existing browser",
+        "zh-CN": "Chrome DevTools MCP自动连接与手动调试端点配置"
+      },
+      "intent": "Chrome DevTools MCP自动连接与手动调试端点配置",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+        "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/"
+      ],
+      "status": "reviewed-release-candidate; not yet claimed published",
+      "observedOn": "2026-10-21",
+      "demandEvidence": "公开搜索与CSDN具体阅读线索见本批三份research-ai记录；不是本站query或已测量搜索量。",
+      "originalGain": "Chrome DevTools MCP自动连接与手动调试端点配置",
+      "relatedSlugs": [
+        "ai-browser-vs-browser-agent",
+        "playwright-mcp-vs-chrome-devtools-mcp",
+        "browser-use-existing-browser-session",
+        "playwright-mcp-existing-browser"
+      ]
+    },
+    {
+      "id": "guides:playwright-mcp-existing-browser",
+      "primaryKeyword": {
+        "en": "playwright mcp existing browser",
+        "zh-CN": "Playwright MCP扩展、profile选择和已有标签页接入"
+      },
+      "intent": "Playwright MCP扩展、profile选择和已有标签页接入",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-mcp-existing-browser/",
+        "https://browserhub.co/zh-cn/guides/playwright-mcp-existing-browser/"
+      ],
+      "status": "reviewed-release-candidate; not yet claimed published",
+      "observedOn": "2026-10-21",
+      "demandEvidence": "公开搜索与CSDN具体阅读线索见本批三份research-ai记录；不是本站query或已测量搜索量。",
+      "originalGain": "Playwright MCP扩展、profile选择和已有标签页接入",
+      "relatedSlugs": [
+        "ai-browser-vs-browser-agent",
+        "playwright-mcp-vs-chrome-devtools-mcp",
+        "browser-use-existing-browser-session",
+        "chrome-devtools-mcp-existing-browser"
+      ]
     }
   ],
   "futureCandidates": [
@@ -3583,5 +3743,6 @@
     "seriesContentPass": "User explicitly prioritised topical, useful content over indexing work. Eight new bilingual topics, four deeper existing comparisons, three reader journeys and a blank test-record template. No indexing submissions or new webmaster configuration in this pass.",
     "developerContent20261021": "按用户要求暂缓检测网站开发；以CSDN公开阅读/互动和当前搜索问题作为选题线索，优先开发内容增强；不是本站query或流量测量。",
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
-  }
+  },
+  "latestEditorialAddition": "2026-10-21"
 }

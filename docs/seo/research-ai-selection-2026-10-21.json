@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-21",
+  "purpose": "Document current public topic signals and primary-source facts for two English/Simplified Chinese AI browser and browser tooling articles. Public search result counts are evidence of visible discussion only, not BrowserHub traffic or market demand estimates.",
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffortRequested": "high",
+    "modelEffective": null,
+    "modelEffectiveNote": "The runtime did not report the actual model identifier.",
+    "delegation": "none"
+  },
+  "editorialReview": {
+    "humanizerPass": {
+      "date": "2026-10-21",
+      "skillsApplied": [
+        "/Users/myd/.codex/skills/humanizer/SKILL.md",
+        "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+      ],
+      "actions": "Reviewed English and Simplified Chinese prose for staged openers, repeated section patterns, redundant closers, forced parallel phrasing, and unsupported first-person experience. Rechecked the affected paragraphs after the factual revision. Product names, command text, links, versions, and source-backed uncertainty were preserved."
+    },
+    "correctionAttempts": [
+      {
+        "attempt": 1,
+        "trigger": "Independent review identified an inaccurate description of Playwright MCP isolated-session storage.",
+        "issue": "The first draft implied that providing --storage-state makes changes in the new isolated session persist. The option initializes a context from saved state; it does not save changes made afterward.",
+        "reasoning": "Separate initial state from session persistence: isolated changes are lost when the browser closes; --storage-state supplies starting data; persistent profiles retain state across restarts, while updated storage must be exported separately if required.",
+        "filesCorrected": [
+          "src/data/ai-selection-guides.ts",
+          "docs/seo/research-ai-selection-2026-10-21.json"
+        ]
+      }
+    ]
+  },
+  "method": {
+    "observedOn": "2026-10-21",
+    "searchMethod": "Web search for current CSDN topic pages and official product documentation, followed by opening primary GitHub README/docs and current vendor help pages.",
+    "firecrawl": "The Firecrawl CLI was not found on PATH in the zsh shell used for this task (command lookup returned 'command not found'). This observation is scoped to that shell environment and does not establish that the CLI is absent elsewhere on the machine. The available web search/open interface was used. No page interaction or product testing was performed.",
+    "limits": [
+      "Search snippets and displayed article reads are snapshots; they can vary by account, region, crawl and time.",
+      "Displayed reads are cumulative page-level figures where explicitly present. They do not establish recent growth, search volume, demand size, or BrowserHub traffic.",
+      "Vendor documentation describes intended or supported product capabilities. It does not establish independent reliability, comparative performance, or availability for every account and region.",
+      "GitHub main-branch documentation is mutable. The user's installed package version may not match the documentation observed on this date.",
+      "No software was installed and no browser workflow, benchmark, or compatibility test was run."
+    ]
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-vs-browser-agent",
+      "intent": "Definition and task selection: distinguish browser-embedded AI assistance from systems that plan and execute browser actions, then choose a capability and permission boundary for a concrete task.",
+      "distinctFrom": "The MCP comparison article is a developer tool comparison for page automation and Chrome diagnostics. This topic does not compare MCP servers or installation commands.",
+      "publicSignals": [
+        {
+          "url": "https://blog.csdn.net/longerxin2020",
+          "title": "CSDN author listing: AI browser Tabbit Agent mode",
+          "observedOn": "2026-10-21",
+          "evidence": "Search excerpt surfaced an original article dated 2026-06-23 focused on AI browser Agent mode, model options and migration of existing browser state. The excerpt did not expose that article's read count.",
+          "claimScope": "Evidence that Chinese-language public discussion covers the AI-browser-versus-agent capability distinction and existing-session migration. No quantitative demand claim."
+        },
+        {
+          "url": "https://blog.csdn.net/2501_93892086/article/details/153748287",
+          "title": "认识 Browser-Use WebUI：AI 自动操作浏览器的原理与基础使用",
+          "observedOn": "2026-10-21",
+          "evidence": "Search excerpt displayed 289 reads and a latest-recommendation date of 2025-10-29 for a Browser Use introduction/tutorial.",
+          "claimScope": "Cumulative displayed reads for this one article as surfaced by search, not a current trend measure, not total Browser Use readership and not BrowserHub traffic. The article's technical claims were not reused as product facts."
+        },
+        {
+          "url": "https://blog.csdn.net/m0_37988015/category_13164108.html",
+          "title": "CSDN AI前沿站 category listing with a Browser Use article",
+          "observedOn": "2026-10-21",
+          "evidence": "Search excerpt showed a Browser Use article dated 2026-06-25 with 146 displayed reads; the same excerpt separately showed aggregate category reads and collections.",
+          "claimScope": "Only the article-level 146 is associated with that entry. The category totals were excluded from article evidence. This is a modest visible reading signal, not proof of a hot topic."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://support.google.com/chrome/a/answer/17031592?hl=en",
+          "title": "Google Chrome Help: Gemini in Chrome and Auto Browse",
+          "observedOn": "2026-10-21",
+          "claimScope": "The help page distinguishes a contextual Gemini side panel from Auto Browse, which can navigate websites, click and fill forms. This supports a feature-based capability ladder, not a universal definition of AI browser."
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026/",
+          "title": "Google: Gemini Spark now integrates with Chrome",
+          "observedOn": "2026-10-21",
+          "claimScope": "The July 30, 2026 announcement says Chrome-integrated Auto Browse can use logged-in accounts and saved passwords with permission, and hands sensitive actions such as payments back to the user. The source describes Google's announced experience and initial availability, not universal access."
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/hub/blog/the-new-comet-assistant",
+          "title": "Perplexity: The New Comet Assistant",
+          "observedOn": "2026-10-21",
+          "claimScope": "Perplexity describes multi-tab work, browser interaction and asking the user before tasks that call for browser interaction. These are vendor claims about Comet Assistant."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use",
+          "title": "Browser Use official repository and README",
+          "observedOn": "2026-10-21",
+          "claimScope": "The current repository distinguishes hosted agent, CLI, and Python library paths; CLI/library can connect to local or cloud browsers. Used as an example that browser agents may be a separate library/runtime rather than a built-in browser feature. No pricing or benchmark claims used."
+        }
+      ],
+      "editorialDecision": "Publish as a practical classification and task-boundary guide. Describe AI browser and browser agent as working terms whose features overlap, then give a three-level capability check, task examples, approval points, and recovery checks. Avoid claiming one universal taxonomy or declaring named products equivalent."
+    },
+    {
+      "slug": "playwright-mcp-vs-chrome-devtools-mcp",
+      "intent": "Developer tool comparison: select an MCP server by browser automation, test isolation, existing-session access, or Chrome runtime diagnostics; troubleshoot setup and profile conflicts.",
+      "distinctFrom": "The AI-browser comparison serves a user-facing definition and task-ownership question. This article assumes an MCP-enabled developer environment and compares specific server behavior, connection paths, and debugging tools.",
+      "publicSignals": [
+        {
+          "url": "https://blog.csdn.net/Hogwartstester/article/details/151995183",
+          "title": "深度解析Playwright MCP：功能、优势与挑战",
+          "observedOn": "2026-10-21",
+          "evidence": "Search excerpt displayed 772 reads for an original article dated 2025-09-23.",
+          "claimScope": "Cumulative displayed reads on that article as surfaced by search, not current growth or BrowserHub traffic. Its outdated or disputed technical descriptions are not used as source of tool behavior."
+        },
+        {
+          "url": "https://blog.csdn.net/weixin_66397563",
+          "title": "CSDN author listing: Chrome DevTools MCP and AI Agent article",
+          "observedOn": "2026-10-21",
+          "evidence": "Search excerpt displayed an original article dated 2026-05-18 with 871 reads, describing Chrome DevTools MCP capabilities and a Playwright MCP positioning comparison.",
+          "claimScope": "Article-level cumulative displayed reads from the listing, a signal that the comparison is being discussed. Not an industry-wide count or trend rate."
+        },
+        {
+          "url": "https://blog.csdn.net/weixin_44075173/article/details/160284094",
+          "title": "Codex 浏览器 MCP 配置全指南",
+          "observedOn": "2026-10-21",
+          "evidence": "Search excerpt displayed 519 reads and a latest-recommendation date of 2026-05-02 for a Chrome DevTools MCP configuration guide that discusses visible-browser and debugging-port use.",
+          "claimScope": "A dated cumulative page count and troubleshooting topic signal only. Current attach requirements were checked against official Chrome DevTools MCP docs instead."
+        },
+        {
+          "url": "https://blog.csdn.net/qq_39883927",
+          "title": "CSDN author listing: Playwright MCP installation and troubleshooting guide",
+          "observedOn": "2026-10-21",
+          "evidence": "Search excerpt surfaced an original post dated 2026-09-17 that focuses on setup, login state, timeouts, validation and production hardening. Search result did not show an article read count.",
+          "claimScope": "Qualitative evidence of recent practical troubleshooting discussion. No quantitative claim."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://github.com/microsoft/playwright-mcp/blob/main/README.md",
+          "title": "Microsoft Playwright MCP README and profile configuration",
+          "observedOn": "2026-10-21",
+          "claimScope": "Documents persistent, isolated and extension-based existing-browser modes; persistent profile paths are workspace-derived and only one instance can use a profile at a time. Changes in an isolated session are lost when the browser closes. The --storage-state option initializes a session from a saved state file; it does not persist changes made during that session."
+        },
+        {
+          "url": "https://github.com/microsoft/playwright/blob/main/docs/src/getting-started-mcp.md",
+          "title": "Microsoft Playwright: Getting started with MCP",
+          "observedOn": "2026-10-21",
+          "claimScope": "Documents headed mode, persistent versus isolated sessions, extension attachment, idle timeout behavior, and the loss of isolated in-memory state on close. It describes storage-state as an initial-state input, not a mechanism that writes changes from the new isolated session back to that file."
+        },
+        {
+          "url": "https://github.com/microsoft/playwright/tree/main/packages/extension",
+          "title": "Microsoft Playwright browser extension README",
+          "observedOn": "2026-10-21",
+          "claimScope": "Official extension connection path for existing browser pages and state."
+        },
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md",
+          "title": "Chrome DevTools MCP tool reference",
+          "observedOn": "2026-10-21",
+          "claimScope": "Current tools include navigation/input, console and network inspection, screenshots, Lighthouse, and performance tracing."
+        },
+        {
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md",
+          "title": "Chrome DevTools MCP configuration",
+          "observedOn": "2026-10-21",
+          "claimScope": "Documents browser URL and WebSocket attachment, auto-connect requirements for local Chrome 144+, remote debugging setup, temporary isolated profile, telemetry options, and CrUX behavior."
+        },
+        {
+          "url": "https://developer.chrome.com/blog/chrome-devtools-mcp",
+          "title": "Chrome for Developers: Chrome DevTools MCP for your AI agent",
+          "observedOn": "2026-10-21",
+          "claimScope": "Official product introduction positions the server for Chrome debugging and performance insight. The article notes that the server now forms part of the DevTools for agents documentation family."
+        },
+        {
+          "url": "https://developer.chrome.com/blog/new-in-devtools-149",
+          "title": "Chrome for Developers: What's new in DevTools 149",
+          "observedOn": "2026-10-21",
+          "claimScope": "Published June 2, 2026; states that Chrome DevTools for agents MCP server and CLI reached stable status, and identifies third-party tool discovery and WebMCP debugging as experimental at that release."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/skills/open-source/references/browser.md",
+          "title": "Browser Use: Browser configuration reference",
+          "observedOn": "2026-10-21",
+          "claimScope": "Documents a cdp_url parameter for connecting to an existing browser, used only as additional context for existing-session workflows."
+        }
+      ],
+      "editorialDecision": "Publish a task-selection comparison focused on context isolation, existing-browser connection, and DevTools-only diagnostic tools. Include version-specific remote-debugging requirements, profile contention, read-only connection checks, and source-backed security limits. Do not assert speed, accuracy, universal browser support, or a product winner."
+    }
+  ],
+  "unverified": [
+    "No independent benchmark or installation check of either MCP server was performed.",
+    "No BrowserHub analytics, Search Console query data, or site traffic was consulted.",
+    "Exact current availability of vendor AI browser features can depend on account, region, device, rollout, and product version.",
+    "The CSDN public read counts are cumulative display values seen in search excerpts and may have changed after observation."
+  ]
+}

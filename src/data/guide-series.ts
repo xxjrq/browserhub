@@ -1,6 +1,14 @@
 /** Reader journeys, not one page for every keyword variation. */
 export const guideSeries = [
 	{
+		id: "ai-browser-development",
+		copy: {
+			en: { title: "AI browsers and browser agents", description: "Choose a browser agent, connect an existing session and resolve MCP or CDP setup problems." },
+			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "从任务选型到已有会话接入，解决 Browser Use、Playwright MCP 和 Chrome DevTools MCP 的配置与排错问题。" }
+		},
+		slugs: ["ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
+	},
+	{
 		id: "browser-selection",
 		copy: {
 			en: { title: "Choose a fingerprint browser", description: "Define the job, compare product types, and decide which browser is worth a trial." },
