@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "project": "browserhub",
+  "cycleId": "content-2026-10-22",
+  "status": "published_verified",
+  "runtimeStatus": "completed",
+  "attentionRequired": false,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "b9a2ef76353392e69bde80ca0cbdc415b0c885d0fb75b8029e2787965c31b606",
+  "commit": "043a68b880360bffda2d6709148c31041544a658",
+  "release": "/opt/browsertools/releases/20261022-092102",
+  "completedAt": "2026-10-22T01:21:41.293Z",
+  "changeKind": "five new complete bilingual AI browser/browser-agent topics; no old-page refresh counted toward daily quota",
+  "newTopics": [
+    "browser-use-vs-playwright",
+    "comet-vs-gemini-in-chrome",
+    "browser-agent-prompt-injection",
+    "browser-agent-download-files",
+    "browser-agent-structured-data-extraction"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/browser-use-vs-playwright/",
+    "https://browserhub.co/zh-cn/guides/browser-use-vs-playwright/",
+    "https://browserhub.co/en/guides/comet-vs-gemini-in-chrome/",
+    "https://browserhub.co/zh-cn/guides/comet-vs-gemini-in-chrome/",
+    "https://browserhub.co/en/guides/browser-agent-prompt-injection/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-prompt-injection/",
+    "https://browserhub.co/en/guides/browser-agent-download-files/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-download-files/",
+    "https://browserhub.co/en/guides/browser-agent-structured-data-extraction/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-structured-data-extraction/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "dailyTarget": {
+    "minimumNewTopics": 5,
+    "actualNewTopics": 5,
+    "met": true,
+    "translationsCountedSeparately": false,
+    "oldGuideRefreshesCounted": 0,
+    "previousCompletedBatchesLeftUntouched": true
+  },
+  "skills": [
+    {
+      "name": "humanizer",
+      "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "upstream": "https://github.com/blader/humanizer",
+      "commit": "8c307f367c91bd974002f10f2be2965d642c13df",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "job": "英文技术正文自然表达与信息保真"
+    },
+    {
+      "name": "humanizer-zh",
+      "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+      "upstream": "https://github.com/op7418/Humanizer-zh",
+      "commit": "f4518a8eab97b8bfebc66a89d34320a89bef6930",
+      "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df",
+      "job": "中文正文套话、重复与翻译腔编辑"
+    }
+  ],
+  "editorialProcess": [
+    "Current public query/comparison/problem signals; no invented keyword volume or traffic",
+    "Primary product docs and implementation source checked against dated claims",
+    "Luna drafting; English Humanizer and Chinese Humanizer-zh embedded editing",
+    "Independent Sol review of sources, all16 final file hashes and14 exported canonical HTML",
+    "Actual preflight CI and read-only repository authentication check, then frozen handoff",
+    "Original durable graph ran CI, content commit, push, atomic publish,28 dual-domain article/home/index verifications",
+    "Three downloadable examples/fixture checked on both domains; exact final bytes match"
+  ],
+  "review": {
+    "role": "reviewer",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "independentContext": true,
+    "artifactCount": 16,
+    "receipt": ".local/workflows/cycles/content-2026-10-22/review.json"
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "attempt": 1,
+    "agents": [
+      "daily_choices_20261022",
+      "daily_data_20261022",
+      "daily_security_20261022"
+    ],
+    "executionAttempts": [
+      {
+        "agent": "daily_choices_20261022",
+        "attempt": 1,
+        "scope": "two bilingual comparisons"
+      },
+      {
+        "agent": "daily_choices_20261022",
+        "attempt": 2,
+        "reason": "Correct Browser Use CDP stack, heading and localized links"
+      },
+      {
+        "agent": "daily_choices_20261022",
+        "attempt": 3,
+        "reason": "Independent source review: privacy URL, free Comet base download, Auto Browse eligibility, current quickstart, plain FAQ and country-age scope"
+      },
+      {
+        "agent": "daily_data_20261022",
+        "attempt": 1,
+        "scope": "download and structured-extraction articles plus examples"
+      },
+      {
+        "agent": "daily_data_20261022",
+        "attempt": 2,
+        "reason": "Promise rejection handling and unique per-run download directory"
+      },
+      {
+        "agent": "daily_security_20261022",
+        "attempt": 1,
+        "scope": "prompt injection guidance"
+      },
+      {
+        "agent": "daily_security_20261022",
+        "attempt": 2,
+        "reason": "Repair mixed quote syntax; validate actual final source parser"
+      }
+    ],
+    "coordination": "Root integrated shared data/navigation/audit/keyword map and research; aligned assigned security slug, WebMCP/W3C scope and download prose; ran offline synthetic validator. Actual model identifiers unreported."
+  },
+  "resolvedFindings": [
+    "Browser Use current0.13.13 dependency and CDP stack distinguished from historical Playwright assumptions; maintained quickstart replaces stale repository docs",
+    "Gemini privacy reference corrected to actual Privacy Hub; Comet free browser download distinguished from plan-limited AI features",
+    "Gemini general country-age eligibility distinguished from18+/US/English/personal Pro-or-Ultra Auto Browse prerequisites",
+    "FAQ references remain plain text to match renderer; per-language internal links resolved",
+    "Download event/click promises handled together; per-run unique output directory replaces race-prone overwrite precheck",
+    "Browser Use native-CDP and Python fetch download paths distinguished; downloads_path not assumed to universally belong to Chromium host",
+    "Security article identifies W3C Community Group analysis and WebMCP-specific guidance; no product-level attack-rate claims",
+    "Initial security mixed-quote syntax repaired, assigned slug preserved, actual final parser/CI passed"
+  ],
+  "validation": {
+    "preflightCiPassed": true,
+    "graphCiPassed": true,
+    "htmlFiles": 1173,
+    "seoAuditedPages": 1169,
+    "sitemapUrls": 946,
+    "seoErrors": 0,
+    "guideTopics": 39,
+    "completeGuideEditions": 78,
+    "productEvidenceRecords": 36,
+    "confirmedPriceOrLicenceRecords": 26,
+    "explicitlyUnverifiedPrices": 10,
+    "offlineSyntheticValidatorCasesPassed": 4,
+    "offlinePydanticVersion": "2.12.5",
+    "liveBrowserOrAgentCompatibilityTests": false,
+    "attackTests": false,
+    "paidModelCalls": false,
+    "workflowDefinitionChanged": false
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-22T01:21:41.258Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-use-vs-playwright/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-use-vs-playwright/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-use-vs-playwright/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-use-vs-playwright/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-prompt-injection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-prompt-injection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-prompt-injection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-prompt-injection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-download-files/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-download-files/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-download-files/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-download-files/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-structured-data-extraction/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-structured-data-extraction/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-structured-data-extraction/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-structured-data-extraction/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-22T01:22:18.495950+00:00",
+    "purpose": "Additional read-only check of three newly published example/fixture files; no browser or model execution",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browserhub.co/templates/agent-download-playwright.mjs",
+        "status": 200,
+        "matchesFinalTemplateBytes": true,
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/agent-download-playwright.mjs",
+        "status": 200,
+        "matchesFinalTemplateBytes": true,
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/templates/agent-extraction-validation.py",
+        "status": 200,
+        "matchesFinalTemplateBytes": true,
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/agent-extraction-validation.py",
+        "status": 200,
+        "matchesFinalTemplateBytes": true,
+        "ok": true
+      },
+      {
+        "url": "https://browserhub.co/templates/agent-extraction-fixture.json",
+        "status": 200,
+        "matchesFinalTemplateBytes": true,
+        "ok": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/agent-extraction-fixture.json",
+        "status": 200,
+        "matchesFinalTemplateBytes": true,
+        "ok": true
+      }
+    ]
+  },
+  "offlineValidation": {
+    "checkedAt": "2026-10-22T01:15:02.389383+00:00",
+    "scope": "Offline synthetic fixture validator only; no browser session, network, LLM or paid API execution",
+    "pydanticVersion": "2.12.5",
+    "results": [
+      {
+        "case": "synthetic_valid",
+        "expectedExit": 0,
+        "actualExit": 0,
+        "ok": true
+      },
+      {
+        "case": "missing_source_url",
+        "expectedExit": 1,
+        "actualExit": 1,
+        "ok": true
+      },
+      {
+        "case": "unknown_extra_field",
+        "expectedExit": 1,
+        "actualExit": 1,
+        "ok": true
+      },
+      {
+        "case": "non_http_source",
+        "expectedExit": 1,
+        "actualExit": 1,
+        "ok": true
+      }
+    ],
+    "ok": true
+  },
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "keywordSearchVolume": null,
+    "currentRank": null,
+    "note": "Public search results, dated project questions and official research are topic clues, not BrowserHub queries, measured growth or traffic."
+  },
+  "sourceRecords": [
+    "docs/seo/research-2026-10-22.json",
+    "docs/seo/research-ai-choices-2026-10-22.json",
+    "docs/seo/research-ai-data-2026-10-22.json",
+    "docs/seo/research-ai-security-2026-10-22.json"
+  ],
+  "operationsNotPerformed": [
+    "index submission",
+    "new detection website",
+    "EasyBR client/backend changes",
+    "external outreach",
+    "paid subscription or model call"
+  ],
+  "history": "content-2026-10-20 original needs_reconciliation journal preserved; private successful project_manual_reconciled release/push/review/four dual-domain checks inspected and no operation replayed."
+}
