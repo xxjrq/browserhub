@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-22",
+  "project": "BrowserHub",
+  "topic": "Browser-agent indirect prompt injection: user and developer safeguards",
+  "execution_role": {
+    "requested_model": "gpt-6-luna",
+    "model_effective": null,
+    "reasoning_effort": "high",
+    "attempt": 1,
+    "note": "The execution model was requested by the coordinator; runtime model identity was not exposed for independent verification."
+  },
+  "research_method": "Current public web search followed by direct inspection of primary official documentation, a W3C Community Group threat model, and the BrowseSafe++ paper. Search snippets were treated as discovery clues only. No paid service, attack run, browser-agent test, or product-specific success-rate claim was used.",
+  "queries_executed": [
+    {
+      "query": "site:developer.chrome.com/blog agentic browsing security prompt injection Chrome browser agent",
+      "purpose": "Find Chrome's primary agentic-browsing security documentation."
+    },
+    {
+      "query": "site:perplexity.ai/hub/blog Comet security prompt injection browser agent security",
+      "purpose": "Look for vendor-specific public security material; the search led to an Enterprise Comet product page, not a technical defense specification."
+    },
+    {
+      "query": "OWASP prompt injection prevention cheat sheet indirect prompt injection untrusted data",
+      "purpose": "Find primary OWASP implementation guidance on untrusted data, permissions and action review."
+    },
+    {
+      "query": "browser agent prompt injection security research BrowseSafe arxiv 2025 2026",
+      "purpose": "Find recent primary research and threat-model work; papers were read for scope and limitations, not treated as browser-product status claims."
+    },
+    {
+      "query": "Google Chrome Gemini in Chrome security prompt injection official help browsing agent web page attacks",
+      "purpose": "Verify user-facing Chrome guidance about prompt injection, signed-in sessions, safeguards and confirmation limits."
+    },
+    {
+      "query": "site:perplexity.ai/help-center Comet security safeguards prompt injection browser",
+      "purpose": "Search for a first-party Comet end-user security help page; no qualifying technical help page was established in the results inspected."
+    },
+    {
+      "query": "W3C agentic AI threat model untrusted content browser agents document 2025",
+      "purpose": "Locate a web-agent threat model that covers inputs, browser boundaries and actions."
+    },
+    {
+      "query": "Chrome agentic browsing prompt injection security official Google 2026",
+      "purpose": "Cross-check Google's current first-party description and discover Chrome developer security guidance."
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://support.google.com/chrome/answer/16821166?hl=en-GB",
+      "title": "Google Chrome Help: Ask Gemini in Chrome to complete tasks for you",
+      "date": "Page publication/update date not established in inspected content; inspected 2026-10-22.",
+      "use": "Defines prompt injection through web, email, document and multimedia content; warns that auto browse can use open tabs and signed-in sites, make mistakes, and that safeguards do not guarantee protection against all risks. Product-specific to Gemini in Chrome; article does not generalize those exact permissions to other agents."
+    },
+    {
+      "url": "https://blog.google/security/architecting-security-for-agentic/",
+      "title": "Google Security Blog: Architecting Security for Agentic Capabilities in Chrome",
+      "date": "Published 2025-12-08; inspected 2026-10-22.",
+      "use": "Describes indirect injection in malicious sites, iframes and user-generated content, and Google's layered Chrome design. Supports framing prompt injection as an open challenge and examples of mitigations; not evidence of a guarantee or of another vendor's implementation."
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+      "title": "OWASP: LLM Prompt Injection Prevention Cheat Sheet",
+      "date": "Current page inspected 2026-10-22; explicit publication date not established.",
+      "use": "Recommends layered controls, treating model output as untrusted at downstream uses, and testing boundaries with harmless data and instrumented tool substitutes. The article paraphrases implementation guidance and does not claim a complete prevention guarantee."
+    },
+    {
+      "url": "https://developer.chrome.com/docs/agents/security?hl=en",
+      "title": "Chrome for Developers: Agent security considerations for WebMCP",
+      "date": "Search result described it as published four months earlier; page inspected 2026-10-22.",
+      "use": "WebMCP-specific developer material discusses authenticated sessions and controls for untrusted inputs. This source was used as additional context only; WebMCP mechanisms are not represented as features of all browser-agent tools."
+    },
+    {
+      "url": "https://github.com/w3c-cg/threat-modeling/blob/main/models/agentic-ai-web-browsers.md",
+      "title": "W3C Community Group: Threat Model for Agentic AI Web Browsers",
+      "date": "Living Community Group document; inspected 2026-10-22. Not a W3C Recommendation or normative standard.",
+      "use": "Maps agent inputs, page content, search/agent browsing modes, browser boundaries and action surfaces. Used to support a system-level explanation, without implying formal standards status."
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.17457",
+      "title": "BrowseSafe++: Benchmarking Prompt Injection Detection Across Web Contexts, Languages, and Browser Views",
+      "date": "arXiv preprint submitted 2026-10-12; inspected 2026-10-22.",
+      "use": "The paper describes production-observed injection examples, matched control pages and tests across page representations; it distinguishes detection from task behavior. Used only to explain research scope and limits, with no benchmark figures or product-specific success rate in the article. Preprint results are not independent certification of commercial products."
+    },
+    {
+      "url": "https://www.perplexity.ai/enterprise/comet",
+      "title": "Perplexity: Comet Enterprise",
+      "date": "Current page inspected 2026-10-22; publication date not shown.",
+      "use": "Search/discovery follow-up only: the page markets prompt-injection protection, domain blocks, browser approvals and task limits for Comet Enterprise. It is vendor marketing, not a technical security specification, and was not used to support a claim that Comet's protections are effective."
+    }
+  ],
+  "public_signals": [
+    {
+      "date_observed": "2026-10-22",
+      "signal": "Search returned Google Chrome Help material specifically warning that web pages, email, documents or multimedia can carry prompt-injection instructions for Gemini in Chrome auto browse.",
+      "evidence": "Raw search result followed by direct inspection of the official help page.",
+      "interpretation": "A first-party product help page makes this a current user-facing safety topic. This is not search-volume, traffic, ranking or demand-frequency evidence."
+    },
+    {
+      "date_observed": "2026-10-22",
+      "signal": "Search returned BrowseSafe++ as a recent arXiv paper; direct inspection confirms submission on 2026-10-12 and scope across browser views, languages and matched page pairs.",
+      "evidence": "Raw search result plus arXiv abstract/full text inspection.",
+      "interpretation": "Timely research context for a practical explainer. It does not establish universal attack rates or the status of any browser product."
+    },
+    {
+      "date_observed": "2026-10-22",
+      "signal": "Search surfaced Google's Chrome security architecture post, Chrome WebMCP agent-security guidance, an OWASP prevention cheat sheet and the W3C Community Group agentic-browser threat model.",
+      "evidence": "Raw search results followed by direct inspection of the identified pages.",
+      "interpretation": "Several first-party and security-community sources now address the same concrete risk. Search result placement is not a measure of audience demand."
+    }
+  ],
+  "intent_and_originality": {
+    "distinct_intent": "Practical user and developer guidance for recognizing and containing indirect prompt injection while an agent reads browser content; centers authenticated tabs, action review and incident response.",
+    "existing_topic_boundary": "Related AI-browser selection, CDP/MCP connection and session-persistence guides cover choosing or connecting agents. This article owns the security workflow and does not duplicate setup instructions or claim that every AI browser shares one permission model.",
+    "differentiation": "Pairs a clearly labeled inert mock page note with concrete scope reduction, action-preview checks, incident steps and a fault-versus-injection distinction. Does not run a live attack or present research benchmark percentages as a product guarantee.",
+    "metrics": {
+      "search_volume": null,
+      "search_console_queries": null,
+      "impressions": null,
+      "clicks": null,
+      "rankings": null,
+      "traffic": null,
+      "conversions": null
+    }
+  },
+  "humanizer_pass": {
+    "skills_read": [
+      "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+    ],
+    "mode": "Embedded editing after evidence-based drafting; final English and Chinese prose reviewed for AI tells and factual fidelity.",
+    "edits_and_checks": "Removed staged openers and repeated section conclusions; varied section lengths; kept neutral technical voice; retained source scope, uncertainty and the no-test limitation; kept the mock explicitly synthetic, inert and disconnected from real accounts; did not add an author persona or experience.",
+    "limits": "Humanizer editing is a prose review, not authorship detection, security verification or evidence of product behavior."
+  },
+  "validation_status": "Attempt 1 exposed a TypeScript unterminated-string parse error. On attempt 2, the affected literals were repaired; npx eslint src/data/ai-security-2026-10-22.ts passed, TypeScript createSourceFile parseDiagnostics returned zero, and the research JSON parsed successfully. Approximate English copy count is 1143 including metadata and headings. No content tests, production build, live browser exercise, attack execution, deployment or indexing submission were performed.",
+  "hands_on_testing_claim": false,
+  "independent_review": "Coordinator/root Sol review is separate and pending; no independent reviewer identity or model result is asserted here.",
+  "coordinatorReviewClarifications": {
+    "W3C": "Visible EN/ZH identifies Community Group analysis, not a ratified W3C standard.",
+    "WebMCP": "Visible EN/ZH links specific guidance for website-exposed tools; annotations not universal browser settings.",
+    "slug": "Aligned to assigned browser-agent-prompt-injection; no synonym page created."
+  }
+}

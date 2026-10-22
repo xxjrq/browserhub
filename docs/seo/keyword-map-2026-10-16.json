@@ -3682,6 +3682,166 @@
         "browser-use-existing-browser-session",
         "chrome-devtools-mcp-existing-browser"
       ]
+    },
+    {
+      "id": "guides:browser-use-vs-playwright",
+      "primaryKeyword": {
+        "en": "browser use vs playwright",
+        "zh-CN": "SDK脚本与目标驱动智能体的选型，区别于昨日MCP工具比较"
+      },
+      "intent": "SDK脚本与目标驱动智能体的选型，区别于昨日MCP工具比较",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-use-vs-playwright/",
+        "https://browserhub.co/zh-cn/guides/browser-use-vs-playwright/"
+      ],
+      "status": "current-release-candidate; not claimed published by this map",
+      "observedOn": "2026-10-22",
+      "demandEvidence": "公开搜索与具体项目问题线索见research-2026-10-22及本批三份research-ai记录；不是本站query或量化热度。",
+      "originalGain": "SDK脚本与目标驱动智能体的选型，区别于昨日MCP工具比较",
+      "relatedSlugs": [
+        "comet-vs-gemini-in-chrome",
+        "browser-agent-prompt-injection",
+        "browser-agent-download-files",
+        "browser-agent-structured-data-extraction"
+      ]
+    },
+    {
+      "id": "guides:comet-vs-gemini-in-chrome",
+      "primaryKeyword": {
+        "en": "comet vs gemini in chrome",
+        "zh-CN": "具体浏览器AI产品的任务/会话/可用性比较，区别于昨日类别定义"
+      },
+      "intent": "具体浏览器AI产品的任务/会话/可用性比较，区别于昨日类别定义",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-vs-gemini-in-chrome/",
+        "https://browserhub.co/zh-cn/guides/comet-vs-gemini-in-chrome/"
+      ],
+      "status": "current-release-candidate; not claimed published by this map",
+      "observedOn": "2026-10-22",
+      "demandEvidence": "公开搜索与具体项目问题线索见research-2026-10-22及本批三份research-ai记录；不是本站query或量化热度。",
+      "originalGain": "具体浏览器AI产品的任务/会话/可用性比较，区别于昨日类别定义",
+      "relatedSlugs": [
+        "browser-use-vs-playwright",
+        "browser-agent-prompt-injection",
+        "browser-agent-download-files",
+        "browser-agent-structured-data-extraction"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-prompt-injection",
+      "primaryKeyword": {
+        "en": "browser agent prompt injection",
+        "zh-CN": "网页内容与用户指令的信任边界及防御检查"
+      },
+      "intent": "网页内容与用户指令的信任边界及防御检查",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-prompt-injection/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-prompt-injection/"
+      ],
+      "status": "current-release-candidate; not claimed published by this map",
+      "observedOn": "2026-10-22",
+      "demandEvidence": "公开搜索与具体项目问题线索见research-2026-10-22及本批三份research-ai记录；不是本站query或量化热度。",
+      "originalGain": "网页内容与用户指令的信任边界及防御检查",
+      "relatedSlugs": [
+        "browser-use-vs-playwright",
+        "comet-vs-gemini-in-chrome",
+        "browser-agent-download-files",
+        "browser-agent-structured-data-extraction"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-download-files",
+      "primaryKeyword": {
+        "en": "browser agent download files",
+        "zh-CN": "点击下载、浏览器下载目录与实际持久文件的验收"
+      },
+      "intent": "点击下载、浏览器下载目录与实际持久文件的验收",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-download-files/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-download-files/"
+      ],
+      "status": "current-release-candidate; not claimed published by this map",
+      "observedOn": "2026-10-22",
+      "demandEvidence": "公开搜索与具体项目问题线索见research-2026-10-22及本批三份research-ai记录；不是本站query或量化热度。",
+      "originalGain": "点击下载、浏览器下载目录与实际持久文件的验收",
+      "relatedSlugs": [
+        "browser-use-vs-playwright",
+        "comet-vs-gemini-in-chrome",
+        "browser-agent-prompt-injection",
+        "browser-agent-structured-data-extraction"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-structured-data-extraction",
+      "primaryKeyword": {
+        "en": "browser agent structured data extraction",
+        "zh-CN": "页面提取、最终结构化输出与字段事实校验"
+      },
+      "intent": "页面提取、最终结构化输出与字段事实校验",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-structured-data-extraction/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-structured-data-extraction/"
+      ],
+      "status": "current-release-candidate; not claimed published by this map",
+      "observedOn": "2026-10-22",
+      "demandEvidence": "公开搜索与具体项目问题线索见research-2026-10-22及本批三份research-ai记录；不是本站query或量化热度。",
+      "originalGain": "页面提取、最终结构化输出与字段事实校验",
+      "relatedSlugs": [
+        "browser-use-vs-playwright",
+        "comet-vs-gemini-in-chrome",
+        "browser-agent-prompt-injection",
+        "browser-agent-download-files"
+      ]
     }
   ],
   "futureCandidates": [
@@ -3744,5 +3904,5 @@
     "developerContent20261021": "按用户要求暂缓检测网站开发；以CSDN公开阅读/互动和当前搜索问题作为选题线索，优先开发内容增强；不是本站query或流量测量。",
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
-  "latestEditorialAddition": "2026-10-21"
+  "latestEditorialAddition": "2026-10-22"
 }

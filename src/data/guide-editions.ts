@@ -1,3 +1,6 @@
+import { aiChoicesTranslations } from "./ai-choices-2026-10-22";
+import { aiDataTranslations } from "./ai-data-2026-10-22";
+import { aiSecurityTranslations } from "./ai-security-2026-10-22";
 import { aiSelectionTranslations } from "./ai-selection-guides";
 import { aiSessionTranslations } from "./ai-session-guides";
 import { aiPlaywrightTranslations } from "./ai-playwright-guides";
@@ -10,6 +13,9 @@ import { dailyGuideTranslations } from "./daily-guides-2026-10-20";
 
 /** Complete editions only; untranslated legacy URLs retain labelled English. */
 export const guideEditions = {
+	...aiChoicesTranslations,
+	...aiDataTranslations,
+	...aiSecurityTranslations,
 	...aiSelectionTranslations,
 	...aiSessionTranslations,
 	...aiPlaywrightTranslations,

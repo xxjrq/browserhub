@@ -1,0 +1,278 @@
+{
+  "date": "2026-10-22",
+  "project": "BrowserHub",
+  "purpose": "Current public topic-question evidence and primary technical sources for two new English and Simplified Chinese browser-agent guides. Public discussions indicate questions people ask; they are not search-volume, ranking or BrowserHub traffic measurements.",
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffortRequested": "high",
+    "modelEffective": null,
+    "modelEffectiveNote": "The runtime did not report an effective model identifier.",
+    "attempts": 2,
+    "delegation": "none"
+  },
+  "method": {
+    "observedOn": "2026-10-22",
+    "researchMethod": "Web search and direct inspection of current Playwright documentation, Browser Use main-branch documentation/source and examples, Pydantic documentation, plus public developer questions/issues. Technical claims use primary documentation or source; issue reports are explicitly identified as reports rather than current product behavior.",
+    "limits": [
+      "No live browser, Browser Use agent, MCP client, Playwright workflow or paid service was launched.",
+      "Search results, issue text and mutable main-branch documentation are snapshots observed on 2026-10-22.",
+      "No displayed read counts, search volumes, ranks, GSC/Bing data or BrowserHub traffic measurements were available or inferred.",
+      "No public CSDN result with a verifiable article-level counter was established for these exact article intents, so no CSDN volume or readership claim is made.",
+      "Examples are source-checked and syntax-checked only; they do not prove compatibility with every installed package, remote browser vendor or target site."
+    ]
+  },
+  "topics": [
+    {
+      "slug": "browser-agent-download-files",
+      "intent": "A browser-agent developer needs to detect, finish, save and hand off a downloaded file, including when Playwright context cleanup or a remote browser filesystem causes a missing file.",
+      "distinctFrom": "The existing session attachment articles explain how to connect an agent to an open browser. This guide owns download event lifecycle, safe destination naming, context cleanup and the boundary between browser-host storage and worker storage.",
+      "publicDemandSignals": [
+        {
+          "url": "https://stackoverflow.com/questions/79668781/how-do-i-retain-the-correct-filename-when-clicking-a-download-button-in-selenium",
+          "title": "How do I retain the correct filename when clicking a download button in Selenium?",
+          "observedOn": "2026-10-22",
+          "signalType": "Public developer question",
+          "observedSignal": "The question explicitly asks how to preserve a download filename; its accepted discussion mentions Playwright suggested filenames and SaveAs.",
+          "metrics": {
+            "displayedViews": null,
+            "displayedVotes": null,
+            "searchVolume": null
+          },
+          "interpretation": "Evidence of a concrete filename-handling implementation question, not a demand estimate or product-specific benchmark."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/issues/3136",
+          "title": "Bug: Downloads path not saving files in worker pod",
+          "observedOn": "2026-10-22",
+          "signalType": "Public developer issue",
+          "observedSignal": "The report describes downloads residing in a separate CDP/browser pod while the worker process checks its own filesystem.",
+          "metrics": {
+            "displayedReadCount": null,
+            "searchVolume": null
+          },
+          "interpretation": "The issue illustrates a host-boundary integration question; it is not presented as a defect in the current Browser Use release."
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://playwright.dev/docs/downloads",
+          "title": "Playwright: Downloads",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "A page emits a download event for an attachment.",
+            "The waiter should be registered before the action that triggers download.",
+            "Downloads are stored temporarily and removed when their producing browser context closes.",
+            "saveAs copies a download to a chosen location."
+          ]
+        },
+        {
+          "url": "https://playwright.dev/docs/api/class-download",
+          "title": "Playwright: Download API",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "The Download object provides failure(), saveAs(), path() and suggestedFilename().",
+            "path() is unavailable for remote connections.",
+            "suggestedFilename is derived from the response Content-Disposition header or a download attribute and browser logic can differ."
+          ]
+        },
+        {
+          "url": "https://playwright.dev/docs/api/class-browsertype#browser-type-launch",
+          "title": "Playwright: BrowserType launch API",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "BrowserType.launch supports a downloadsPath launch option. Browser contexts have a separate acceptDownloads setting."
+          ]
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/skills/open-source/references/browser.md",
+          "title": "Browser Use: Browser configuration reference",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "The current reference documents accept_downloads and downloads_path settings."
+          ]
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/browser/profile.py",
+          "title": "Browser Use: BrowserProfile source",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "Current BrowserProfile defines downloads_path with compatibility aliases."
+          ]
+        }
+      ],
+      "editorialBoundaries": {
+        "remoteHost": "Storage ownership is flow-specific. Native-CDP can report remote paths; other fetch flows write bytes from Python. Check the implementation/provider and worker readability; a path alone is not a transfer contract.",
+        "issueInterpretation": "Issue 3136 and its environment description are treated as a report, not as proof of a current library defect.",
+        "credentialHandling": "Do not include signed query strings, cookies, session IDs or secrets in saved manifests or logs.",
+        "handsOnTestingClaim": false
+      },
+      "assets": [
+        "public/templates/agent-download-playwright.mjs"
+      ]
+    },
+    {
+      "slug": "browser-agent-structured-data-extraction",
+      "intent": "A Python browser-agent developer needs typed structured output and field-level provenance while distinguishing schema validity from factual correctness and complete page coverage.",
+      "distinctFrom": "Existing comparison and agent-session guides cover product choice, attachment and session state. This guide owns output model design, current Browser Use API names, nullable versus missing values, extraction versus final-output schemas and coverage validation.",
+      "publicDemandSignals": [
+        {
+          "url": "https://github.com/browser-use/browser-use/issues/5955",
+          "title": "Bug: structured done actions default incomplete tasks to success",
+          "observedOn": "2026-10-22",
+          "signalType": "Public developer issue",
+          "observedSignal": "A maintainer-facing report discusses the relationship between a custom output model and the agent task-completion status.",
+          "metrics": {
+            "displayedReadCount": null,
+            "searchVolume": null
+          },
+          "interpretation": "Signals a practical question about parsed data versus task success. The article treats it as a version-specific report and directs readers to verify their pinned version."
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/examples/features/custom_output.py",
+          "title": "Browser Use custom output example",
+          "observedOn": "2026-10-22",
+          "signalType": "Official developer example",
+          "observedSignal": "The repository maintains a runnable example of output_model_schema and Pydantic result parsing.",
+          "metrics": {
+            "displayedReadCount": null,
+            "searchVolume": null
+          },
+          "interpretation": "Evidence that structured output is a documented integration task; not a readership or demand metric."
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/examples/features/custom_output.py",
+          "title": "Browser Use: custom structured output example",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "Current Python example uses output_model_schema with a Pydantic model and model_validate_json for final output."
+          ]
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/agent/service.py",
+          "title": "Browser Use: Agent service source",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "Agent output_model_schema configures the final result schema.",
+            "extraction_schema is a separate per-page extraction setting.",
+            "The service deliberately does not copy the final task schema to a page extraction action."
+          ]
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/tools/views.py",
+          "title": "Browser Use: action and extraction schema source",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "The Extract action has an optional output_schema for validated JSON extraction.",
+            "StructuredOutputAction wraps user data and completion metadata."
+          ]
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/agent/views.py",
+          "title": "Browser Use: AgentHistoryList source",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "Current history object can parse structured output from its final result when the schema is available.",
+            "Current source separately exposes success state and history results."
+          ]
+        },
+        {
+          "url": "https://docs.pydantic.dev/latest/concepts/fields/",
+          "title": "Pydantic: Fields",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "In Pydantic v2 a nullable annotation and a default determine separately whether a field is required; an Optional type alone does not make it omittable."
+          ]
+        },
+        {
+          "url": "https://playwright.dev/docs/locators",
+          "title": "Playwright: Locators",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "Locator actions use auto-waiting behavior; this does not define a site's pagination completion condition."
+          ]
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/issues/5955",
+          "title": "Browser Use issue: structured completion status and output schema",
+          "observedOn": "2026-10-22",
+          "claimsUsed": [
+            "A public version-specific report discusses structured output and task success; it is not generalized as a current all-version defect."
+          ]
+        }
+      ],
+      "apiVersionNote": "The current repository example uses output_model_schema. Do not silently reuse the older output_model spelling without checking the installed package and version.",
+      "validationBoundary": "The local template validates synthetic JSON types, requiredness, date and URL formats using Pydantic v2. It does not observe a browser, invoke a model, establish factual correctness or prove page coverage.",
+      "assets": [
+        "public/templates/agent-extraction-validation.py",
+        "public/templates/agent-extraction-fixture.json"
+      ]
+    }
+  ],
+  "humanizerPass": {
+    "date": "2026-10-22",
+    "skillsApplied": [
+      {
+        "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+        "version": "3.1.0",
+        "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      },
+      {
+        "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+        "version": "3.1.0",
+        "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    ],
+    "method": "Embedded edit after drafting each locale. Removed staged openings, repeat summaries and unsupported claims while preserving the code concepts, API distinctions, version qualifications, links and explicit validation boundaries.",
+    "independentReview": "Source and style re-read after editing; standalone Sol review was not invoked in this executor task."
+  },
+  "validation": {
+    "typescriptEslint": true,
+    "jsonParse": true,
+    "nodeSyntaxCheck": true,
+    "pythonAstParse": true,
+    "offlineValidatorExecuted": false,
+    "browserOrModelExecution": false,
+    "productionBuildOrDeployment": false,
+    "unknownMetrics": [
+      "BrowserHub organic traffic for both topics",
+      "Search volume and ranking",
+      "Unique readers or current growth for the cited discussions"
+    ]
+  },
+  "correctionAttempts": [
+    {
+      "attempt": 2,
+      "trigger": "Independent review found an unhandled-rejection risk in the download waiter and a check-then-save overwrite race in the sample.",
+      "issue": "A standalone waitForEvent promise could reject while click() was still awaiting; access() followed by saveAs() was not atomic across parallel writers.",
+      "correction": "Start waitForEvent and click together with Promise.all so both outcomes are handled. Create a unique per-invocation output directory with mkdtemp and remove the access-then-save check. Update both locales to describe the unique run directory and duplicate names within one run.",
+      "filesCorrected": [
+        "public/templates/agent-download-playwright.mjs",
+        "src/data/ai-data-2026-10-22.ts",
+        "docs/seo/research-ai-data-2026-10-22.json"
+      ],
+      "validation": "ESLint, node --check, JSON parse and Python AST parse rerun after correction; no browser or model was launched."
+    }
+  ],
+  "coordinatorValidation": {
+    "scope": "Offline synthetic validator only",
+    "pydanticVersion": "2.12.5",
+    "passedCases": [
+      "valid synthetic fixture",
+      "missing source URL rejected",
+      "extra field rejected",
+      "non-HTTP source rejected"
+    ],
+    "browserOrModelExecuted": false,
+    "sourceCitationChange": "Stack Overflow demand-only source removed from public technical references; research signal retained.",
+    "proseAlignment": "English/Chinese now explicitly describe Promise.all for waiter and click rejection handling."
+  },
+  "coordinatorSourceCorrection": {
+    "url": "https://github.com/browser-use/browser-use/blob/main/browser_use/browser/watchdogs/downloads_watchdog.py",
+    "observedOn": "2026-10-22",
+    "scope": "Current native-CDP remote branch reports effective_path; separate network/PDF fetch flow gets response bytes and writes through Python anyio. Do not universalize downloads_path ownership.",
+    "changes": "Corrected intro, host-boundary section, symptom table and FAQ in both locales, added direct source. Independent Sol requested and will review final bytes."
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "date": "2026-10-22",
+  "requestedModel": "gpt-6-luna",
+  "modelEffective": null,
+  "reasoningEffort": "high",
+  "attempt": 1,
+  "skills": {
+    "english": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+    "chinese": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+    "method": "Read both installed skills. Drafted from sourced claims, then edited each language in embedded mode for filler, repeated framing, contrast formulas, and natural technical wording. Preserved code-free implementation guidance, attribution, dates, version and availability limits. No first-person testing claims were added."
+  },
+  "topics": [
+    {
+      "slug": "browser-use-vs-playwright",
+      "intent": "Developer selection: decide between Browser Use agent/runtime choices and Playwright automation APIs for fixed tests, known steps, exploratory browser work, or managed browser hosting.",
+      "distinctFrom": "The existing Playwright MCP vs Chrome DevTools MCP guide compares two MCP servers and Chrome diagnostics. This guide compares the Playwright framework/API with Browser Use agent, CLI, library, and browser infrastructure paths; it explicitly distinguishes Playwright MCP from the SDK and Test runner.",
+      "publicSignals": [
+        {
+          "url": "https://www.itechguides.com/browser-use-vs-playwright-which-should-you-use/",
+          "title": "Browser Use vs Playwright: Which Should You Use?",
+          "observedOn": "2026-10-22",
+          "evidence": "Public search surfaced a comparison dated 2026-09-29 with a developer selection framing around explicit repeatable automation versus an AI agent or hosted browser. The page describes itself as research-based and notes that vendor-reported task figures are not a matched independent comparison.",
+          "claimScope": "Evidence that the exact developer comparison intent is publicly addressed. No read count, search volume, ranking, traffic, or demand magnitude was established. No competitor prose or product facts were reused."
+        },
+        {
+          "url": "https://www.webfuse.com/blog/browser-use-vs-playwright-which-is-better-for-ai-agent-control",
+          "title": "Browser-Use vs. Playwright: Which is Better for AI Agent Control?",
+          "observedOn": "2026-10-22",
+          "evidence": "Public search surfaced a separate comparison focused on architecture and use cases.",
+          "claimScope": "Evidence of recurring public comparison framing only; not product documentation, a validated benchmark, or quantitative demand."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://github.com/browser-use/browser-use",
+          "title": "Browser Use official repository and README",
+          "observedOn": "2026-10-22",
+          "claimScope": "Documents the current open-source Python agent, local or cloud browser paths, hosted API, CLI and project integrations. Mutable main branch; no independent performance claim was taken from its benchmark section."
+        },
+        {
+          "url": "https://docs.browser-use.com/open-source/quickstart",
+          "title": "Browser Use official documentation: Human Quickstart",
+          "observedOn": "2026-10-22",
+          "claimScope": "Current official open-source quickstart for package installation, browser installation, supported model integrations, and the human-run agent example. The GitHub docs quickstart previously referenced here was stale; it has been replaced. No vendor speed/accuracy marketing claim is reused."
+        },
+        {
+          "url": "https://raw.githubusercontent.com/browser-use/browser-use/main/pyproject.toml",
+          "title": "Browser Use official pyproject.toml",
+          "observedOn": "2026-10-22",
+          "claimScope": "Current mutable dependency manifest at version 0.13.13. It lists cdp-use and does not list Playwright as a runtime dependency; this is evidence about the current manifest, not proof about every historical release. Browser Use's separate managed browser infrastructure documents Playwright integration."
+        },
+        {
+          "url": "https://browser-use.com/developers",
+          "title": "Browser Use Developers: Hosted agents and browser infrastructure",
+          "observedOn": "2026-10-22",
+          "claimScope": "Vendor description of hosted agents, browser infrastructure, Playwright/Puppeteer/CDP integration, and distinct service paths. Prices were not compared because cost depends on service and use."
+        },
+        {
+          "url": "https://playwright.dev/docs/intro",
+          "title": "Playwright official introduction",
+          "observedOn": "2026-10-22",
+          "claimScope": "Playwright Test and browser automation framework scope, supported languages and browser engines. Documentation is versioned and can change."
+        },
+        {
+          "url": "https://playwright.dev/docs/locators",
+          "title": "Playwright official locator guide",
+          "observedOn": "2026-10-22",
+          "claimScope": "Locator practices and user-facing role/label guidance used in the test selection example."
+        },
+        {
+          "url": "https://playwright.dev/docs/auth",
+          "title": "Playwright official authentication guide",
+          "observedOn": "2026-10-22",
+          "claimScope": "Authentication state handling and credential precautions."
+        },
+        {
+          "url": "https://playwright.dev/",
+          "title": "Playwright official website and MCP positioning",
+          "observedOn": "2026-10-22",
+          "claimScope": "The official website presents Playwright MCP as a separate MCP server option, supporting the article's distinction between the SDK/Test runner and MCP integration."
+        }
+      ],
+      "editorialDecision": "Publish as a task-based comparison that disambiguates Browser Use's product paths, separates deterministic test code from agent planning, and distinguishes its current open-source CDP dependency from Playwright support on managed browser infrastructure. Include practical scenarios, session/security boundaries, an evaluation checklist, current documentation links, and no unsupported benchmark or price winner."
+    },
+    {
+      "slug": "comet-vs-gemini-in-chrome",
+      "intent": "Consumer product choice: compare Perplexity's standalone Comet browser and Gemini features embedded in Chrome for research, page context, browser actions, device fit and availability.",
+      "distinctFrom": "The existing AI browser vs browser agent guide defines capability categories across product types. This topic helps a reader choose between two named products and checks their actual account, platform, language and policy constraints.",
+      "publicSignals": [
+        {
+          "url": "https://www.itechguides.com/compare/gemini-vs-comet/",
+          "title": "Gemini vs Comet (2026): AI Agent Assistants",
+          "observedOn": "2026-10-22",
+          "evidence": "Public search surfaced a comparison page updated in September 2026 for Gemini and Comet as AI assistants.",
+          "claimScope": "Evidence of a current named-product comparison intent only. No article reads, search volume, rank, or traffic were established; the page was not treated as a primary source."
+        },
+        {
+          "url": "https://www.browserbash.com/blog/chatgpt-atlas-vs-perplexity-comet-vs-gemini-in-chrome",
+          "title": "AI Browser Wars 2026: ChatGPT Atlas vs Comet vs Gemini in Chrome",
+          "observedOn": "2026-10-22",
+          "evidence": "Public search surfaced a three-product comparison that discusses Comet and Gemini in Chrome as distinct experiences.",
+          "claimScope": "A SERP discovery signal that readers encounter these two products in comparison content. No traffic or popularity inference; no product facts or prices were taken from this secondary page."
+        },
+        {
+          "url": "https://www.perplexityaimagazine.com/perplexity-hub/comet-vs-chrome-ai-browser-comparison/",
+          "title": "Comet vs Chrome: Which AI Browser Should You Use?",
+          "observedOn": "2026-10-22",
+          "evidence": "Public search surfaced a recent Comet/Chrome comparison that discusses Gemini integration and multi-tab browser assistance.",
+          "claimScope": "Search-discovery evidence of comparison coverage only. Not an official source; no claims, prices, or benchmarks were reused."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://www.perplexity.ai/comet",
+          "title": "Perplexity official Comet product page",
+          "observedOn": "2026-10-22",
+          "claimScope": "Current product page lists Comet for Mac, Windows, iOS and Android. Platform support does not establish feature parity across devices."
+        },
+        {
+          "url": "https://www.perplexity.ai/comet/gettingstarted",
+          "title": "Perplexity official Ways to Use Comet guide",
+          "observedOn": "2026-10-22",
+          "claimScope": "Vendor examples of tab references, assistant, actions and browser setup; used to describe documented examples, not guarantee uniform operation."
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/17140089?co=GENIE.Platform%3DDesktop&hl=en",
+          "title": "Google Gemini Apps Help: Gemini in Chrome availability",
+          "observedOn": "2026-10-22",
+          "claimScope": "Broader regular Gemini in Chrome eligibility: age 13+ or the applicable age in a user's country, supported region/language, Chromebook Plus/Mac/Windows, latest Chrome, signed-in Chrome, unavailable in Incognito; adult work/school access requires admin enablement. Does not grant Auto Browse eligibility."
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/16283624?hl=en",
+          "title": "Google Gemini Apps Help: Use Gemini in Chrome",
+          "observedOn": "2026-10-22",
+          "claimScope": "Current usage instructions, current-tab context, desktop sharing of up to ten open tabs, and opt-in behavior."
+        },
+        {
+          "url": "https://support.google.com/chrome/a/answer/16291696?hl=en",
+          "title": "Google Chrome Enterprise Help: Configure Gemini in Chrome",
+          "observedOn": "2026-10-22",
+          "claimScope": "Enterprise policy and administrator configuration. The article does not claim all Workspace accounts have access."
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/changelog/what-we-shipped-october-3rd",
+          "title": "Perplexity changelog: Comet now available for everyone",
+          "published": "2025-10-02",
+          "observedOn": "2026-10-22",
+          "claimScope": "Perplexity's October 2, 2025 changelog says the base Comet browser was free to download worldwide and identifies concurrent background assistants as a Max-subscriber capability. This establishes free base download at that announcement date and an example of plan-dependent advanced features, not a current full quota/pricing table.",
+          "order": 0
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/16821166",
+          "title": "Google Gemini Apps Help: Auto Browse requirements",
+          "observedOn": "2026-10-22",
+          "claimScope": "Distinct Auto Browse requirements observed 2026-10-22: age 18+, in the US, English device language, eligible and opted-in Gemini in Chrome, current Chrome, personal Google Account with Google AI Pro or Ultra, Standard or Enhanced Safe Browsing; unavailable in Incognito, when signed into a school account, and in Gemini in Chrome on iPhone/iPad; rollout is gradual. Google says the user reviews a task plan before starting, and the selected sites may receive personal information. Separate from broader regular Gemini in Chrome availability.",
+          "order": 1
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/13594961",
+          "title": "Google Gemini Apps Privacy Hub",
+          "lastUpdated": "2026-10-19",
+          "observedOn": "2026-10-22",
+          "claimScope": "Gemini Apps Privacy Hub, last updated October 19, 2026, includes a specific Gemini in Chrome section. Its notice includes browser page content shared with Gemini Apps among information collected. This is Google's policy statement, not an independent privacy audit.",
+          "order": 2
+        }
+      ],
+      "editorialDecision": "Publish a practical named-product comparison. Separate Comet's free-to-download base browser from plan-dependent advanced features, and separate the broader Gemini in Chrome assistant eligibility from Auto Browse's stricter conditions observed 2026-10-22. Include platform support, account-level checks, source-backed privacy guidance, and no invented dollar-price or feature-parity claim."
+    }
+  ],
+  "method": {
+    "observedOn": "2026-10-22",
+    "searchMethod": "Public web search for current comparison intent followed by direct access to official Browser Use, Playwright, Perplexity and Google documentation. Search-result and page snapshots may vary by account, region, crawl and time.",
+    "limitations": [
+      "Public SERP appearances are discovery evidence only. They are not our query logs, measured search volume, rankings, clicks, or BrowserHub traffic.",
+      "No reliable article read counters were present in the selected public comparison evidence; no read totals are claimed.",
+      "Official product documentation describes vendor-supported or announced capabilities and can change. It does not establish independent quality, reliability, or identical availability across users.",
+      "No software was installed, account was tested, browser task was run, or benchmark was performed for these topics.",
+      "No product price winner is claimed. Current price and entitlements should be checked against the reader's actual account and billing location."
+    ]
+  },
+  "humanizerPass": {
+    "englishSkillRead": true,
+    "chineseSkillRead": true,
+    "embeddedEditAfterFactDraft": true,
+    "claimsPreserved": true,
+    "inventedFirstPersonTests": false
+  },
+  "files": [
+    "src/data/ai-choices-2026-10-22.ts",
+    "docs/seo/research-ai-choices-2026-10-22.json"
+  ],
+  "reviewHistory": [
+    {
+      "attempt": 2,
+      "type": "initial factual clarification",
+      "scope": "Browser Use current dependency/runtime claim and Gemini/Comet basic feature distinction",
+      "result": "Recorded separately from independent review; corrected claims against current primary files."
+    },
+    {
+      "attempt": 3,
+      "type": "independent Sol review",
+      "scope": "Privacy Hub source correction, Comet free-download and platform facts, strict Auto Browse availability boundary, and replacement of a stale Browser Use quickstart URL with current official documentation",
+      "result": "Applied in the same independent Sol review iteration. These are distinct material corrections, not repeated failures of one issue."
+    }
+  ]
+}

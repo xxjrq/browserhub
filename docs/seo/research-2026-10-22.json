@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-22",
+  "selection": [
+    {
+      "slug": "browser-use-vs-playwright",
+      "intent": "SDK脚本与目标驱动智能体的选型，区别于昨日MCP工具比较",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "阅读昨日基础/接入文章后按具体任务拆分，非重写同义页"
+    },
+    {
+      "slug": "comet-vs-gemini-in-chrome",
+      "intent": "具体浏览器AI产品的任务/会话/可用性比较，区别于昨日类别定义",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "阅读昨日基础/接入文章后按具体任务拆分，非重写同义页"
+    },
+    {
+      "slug": "browser-agent-prompt-injection",
+      "intent": "网页内容与用户指令的信任边界及防御检查",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "阅读昨日基础/接入文章后按具体任务拆分，非重写同义页"
+    },
+    {
+      "slug": "browser-agent-download-files",
+      "intent": "点击下载、浏览器下载目录与实际持久文件的验收",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "阅读昨日基础/接入文章后按具体任务拆分，非重写同义页"
+    },
+    {
+      "slug": "browser-agent-structured-data-extraction",
+      "intent": "页面提取、最终结构化输出与字段事实校验",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "阅读昨日基础/接入文章后按具体任务拆分，非重写同义页"
+    }
+  ],
+  "backupCandidates": [
+    {
+      "topic": "浏览器智能体表单任务与人工确认",
+      "gate": "只有本批原候选来源不足或无独立增量时替换；先取当前官方依据"
+    },
+    {
+      "topic": "AI浏览器网页调研的引用与结果复核",
+      "gate": "避免与结构化提取和昨日类别指南重复；需独立应用需求证据"
+    }
+  ],
+  "currentPublicSignals": [
+    {
+      "query": "browser use vs playwright AI browser agent 2026",
+      "url": "https://browser-use.com/browser-use-alternatives",
+      "observedOn": "2026-10-22",
+      "kind": "public search excerpt of first-party comparison",
+      "supports": "厂商公开比较脚本、MCP、整任务智能体的不同用途，说明比较问题存在；不是独立评测或搜索量",
+      "notAdopted": "不继承厂商token/成功率/时间排行榜"
+    },
+    {
+      "query": "Comet Gemini Chrome comparison AI browser 2026",
+      "url": "https://toolchase.com/blog/best-ai-browsers-2026/",
+      "observedOn": "2026-10-22",
+      "kind": "public search excerpt of third-party comparison",
+      "supports": "可观察到专用AI浏览器与Chrome内置AI的选型讨论；技术/价格不以此作证"
+    },
+    {
+      "query": "browser agent prompt injection 2026",
+      "url": "https://arxiv.org/abs/2610.17457",
+      "observedOn": "2026-10-22",
+      "kind": "primary-paper search result",
+      "supports": "近期浏览器智能体提示注入研究话题；不转述未经阅读方法与场景的成功率"
+    },
+    {
+      "query": "site:github.com/browser-use/browser-use issues download file output_model extraction",
+      "url": "https://github.com/browser-use/browser-use/issues/4482",
+      "observedOn": "2026-10-22",
+      "kind": "first-party issue tracker user report",
+      "displayedDate": "2026-03-23",
+      "displayedState": "Closed as not planned",
+      "supports": "用户讨论下载文件与最终附件不同边界；不认定当前版本仍有该缺陷"
+    },
+    {
+      "query": "site:github.com/browser-use/browser-use structured extraction output",
+      "url": "https://github.com/browser-use/browser-use/discussions/5930",
+      "observedOn": "2026-10-22",
+      "kind": "first-party community discussion",
+      "displayedDate": "2026-09-27",
+      "supports": "本地文件读取和navigate到file URL混淆的开发问题；答复注明0.13.10，当前事实仍查源码"
+    }
+  ],
+  "primaryStartingPoints": [
+    "https://playwright.dev/docs/downloads",
+    "https://playwright.dev/docs/api/class-download",
+    "https://github.com/browser-use/browser-use/blob/main/browser_use/tools/views.py",
+    "https://github.com/browser-use/browser-use/blob/main/browser_use/agent/views.py",
+    "https://developer.chrome.com/docs/agents/security?hl=en"
+  ],
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "monthlySearchVolume": null,
+    "currentRank": null
+  },
+  "metricRule": "搜索结果是选题与问题信号；不等于本站query、热度增长、流量或排名。逐稿来源记录及独立审核决定可用技术事实。",
+  "editorialRoles": {
+    "executors": [
+      {
+        "agent": "daily_choices_20261022",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "topics": [
+          "browser-use-vs-playwright",
+          "comet-vs-gemini-in-chrome"
+        ]
+      },
+      {
+        "agent": "daily_data_20261022",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "topics": [
+          "browser-agent-download-files",
+          "browser-agent-structured-data-extraction"
+        ]
+      },
+      {
+        "agent": "daily_security_20261022",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "topics": [
+          "browser-agent-prompt-injection"
+        ]
+      }
+    ],
+    "reviewerRequired": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "skills": [
+    "content-strategy",
+    "ai-seo",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "priorCycles": {
+    "content-2026-10-21": "completed; two old-guide enhancements",
+    "content-2026-10-21-batch-02": "completed; five new topics; release20261021-094038",
+    "content-2026-10-20": "original needs_reconciliation preserved; project_manual_reconciled evidence checked; no replay"
+  },
+  "excluded": [
+    "index submission",
+    "new detection website",
+    "EasyBR client/backend",
+    "outreach",
+    "paid subscriptions or API calls"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "records": [
+    {
+      "name": "Sample item (synthetic fixture)",
+      "price_text": null,
+      "page_url": "https://example.invalid/catalog/sample",
+      "observed_on": "2026-10-22",
+      "evidence": "unknown"
+    }
+  ],
+  "complete": false,
+  "next_page": null
+}
