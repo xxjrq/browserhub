@@ -1,0 +1,285 @@
+{
+  "contentCycle": "content-2026-10-23",
+  "date": "2026-10-23",
+  "topics": [
+    {
+      "slug": "playwright-cli-vs-mcp",
+      "intent": "Choose an agent-facing browser integration and distinguish Playwright CLI, Playwright MCP, Playwright Test, and codegen.",
+      "distinctFromExisting": "The 2026-10-22 MCP vs Chrome DevTools MCP article compares two MCP servers. This guide covers Microsoft's separate coding-agent CLI, command naming, installation, session state, and when MCP fits the runtime. It does not repeat the previous MCP-server comparison or Browser Use vs Playwright product comparison.",
+      "demandSignals": [
+        {
+          "type": "developer discussion",
+          "url": "https://www.reddit.com/r/Playwright/comments/1vx2wew/playwright_mcp_vs_playwright_cli_the_comparison/",
+          "observedAt": "2026-10-23",
+          "displayedPublicationAge": "2mo ago",
+          "displayedCounts": {
+            "views": null,
+            "votes": null,
+            "comments": null
+          },
+          "signal": "The thread discusses CLI vs MCP and attaching an agent to an already-running end-to-end test. One reply describes trouble with the debug=cli session closing before attach. This indicates a concrete setup/debugging question; the post is an anecdotal discussion, not a prevalence measure."
+        },
+        {
+          "type": "developer discussion",
+          "url": "https://www.reddit.com/r/Playwright/comments/1x4pdvj/playwright_mcp_ate_my_context_window_on_a_basic/",
+          "observedAt": "2026-10-23",
+          "displayedPublicationAge": "9h ago",
+          "displayedCounts": {
+            "views": null,
+            "votes": null,
+            "comments": null
+          },
+          "signal": "A current discussion describes confusion over repeated page snapshots, context use, and choosing browser tools for interactive agent tasks versus tests. Treat the author's account as an anecdote; do not reuse its unsupported numeric/token claims."
+        },
+        {
+          "type": "official documentation and product change",
+          "url": "https://playwright.dev/agent-cli/introduction",
+          "observedAt": "2026-10-23",
+          "displayedPublicationAge": null,
+          "displayedCounts": {
+            "views": null,
+            "votes": null,
+            "comments": null
+          },
+          "signal": "Current official Playwright materials now provide a dedicated coding-agent CLI guide and distinguish CLI use from MCP use, showing an active product surface readers need to understand."
+        }
+      ],
+      "technicalClaimProvenance": [
+        {
+          "claim": "The current installation guide requires Node.js 20 or newer. It documents npx playwright cli when the project already has Playwright installed, and npm install -g @playwright/cli@latest for the global playwright-cli executable.",
+          "sources": [
+            "https://playwright.dev/agent-cli/installation"
+          ],
+          "scope": "Official installation guide checked 2026-10-23; page crawl displayed as three weeks earlier."
+        },
+        {
+          "claim": "The agent-facing Playwright CLI is a separate package/command surface from Playwright Test and codegen; current official setup documents @playwright/cli, playwright-cli, and npx playwright cli.",
+          "sources": [
+            "https://playwright.dev/agent-cli/introduction",
+            "https://github.com/microsoft/playwright-cli",
+            "https://github.com/microsoft/playwright/releases"
+          ],
+          "scope": "Official documentation checked 2026-10-23. Commands and installation requirements can change; verify the version in the project."
+        },
+        {
+          "claim": "CLI suits terminal coding-agent workflows; MCP is exposed through MCP hosts and can fit agent loops that use its session model. This is a task-fit recommendation, not a benchmark winner.",
+          "sources": [
+            "https://playwright.dev/agent-cli/introduction",
+            "https://github.com/microsoft/playwright-mcp"
+          ],
+          "scope": "Interpretation based on official product descriptions; no performance or token comparison was run."
+        },
+        {
+          "claim": "CLI browser state is held in memory by default for a session and can be persisted; named sessions are documented.",
+          "sources": [
+            "https://github.com/microsoft/playwright-cli"
+          ],
+          "scope": "Current repository documentation checked 2026-10-23; confirm behavior for the installed CLI release."
+        },
+        {
+          "claim": "MCP isolated sessions discard state when closed and support configured initial state/persistent user-data options; saved authentication state can carry sensitive cookies and headers.",
+          "sources": [
+            "https://github.com/microsoft/playwright-mcp",
+            "https://playwright.dev/docs/auth"
+          ],
+          "scope": "Official documentation checked 2026-10-23; follow organization rules for credentials and profile access."
+        },
+        {
+          "claim": "The Playwright Test CLI debugger can pause a test for attachment through playwright-cli, according to current release notes.",
+          "sources": [
+            "https://github.com/microsoft/playwright/releases"
+          ],
+          "scope": "Version-dependent feature; only use if the installed Playwright version documents it."
+        }
+      ],
+      "editorialLimits": [
+        "No comparative task run or token benchmark was performed.",
+        "Reddit content is user-generated anecdote and not a measure of broad demand, reliability, or current tool performance.",
+        "The article gives no claim that CLI universally replaces MCP or Playwright Test."
+      ]
+    },
+    {
+      "slug": "browser-agent-debugging-traces",
+      "intent": "Capture, select, inspect, troubleshoot, and safely share Playwright trace artifacts for browser-agent or test failures.",
+      "distinctFromExisting": "This is an operational failure-analysis guide about trace artifacts and their handling. It is not an MCP comparison or a generic browser-agent tool comparison.",
+      "demandSignals": [
+        {
+          "type": "official issue demonstrating report/trace debugging demand",
+          "url": "https://github.com/microsoft/playwright/issues/41281",
+          "observedAt": "2026-10-23",
+          "displayedPublicationAge": "opened 2026-06-12",
+          "displayedCounts": {
+            "views": null,
+            "comments": null,
+            "reactions": null
+          },
+          "signal": "A Playwright issue reports a trace link selecting the first run rather than the selected retry in a multi-result HTML report. The issue was closed and linked to another issue/fix; it is a version-specific case and not evidence of a current general bug."
+        },
+        {
+          "type": "developer tool feature request",
+          "url": "https://github.com/vercel-labs/agent-browser/issues/1280",
+          "observedAt": "2026-10-23",
+          "displayedPublicationAge": "opened 2026-04-21",
+          "displayedCounts": {
+            "views": null,
+            "comments": null,
+            "reactions": null
+          },
+          "signal": "An open issue catalogs agent-oriented trace inspection and debugging primitives, including command-line trace analysis, as capabilities requested for browser-agent workflows. This is one project's feature request, not a market-size measure."
+        },
+        {
+          "type": "official issue demonstrating trace viewer troubleshooting questions",
+          "url": "https://github.com/microsoft/playwright/issues/39845",
+          "observedAt": "2026-10-23",
+          "displayedPublicationAge": "opened 2026-03-25",
+          "displayedCounts": {
+            "views": null,
+            "comments": null,
+            "reactions": null
+          },
+          "signal": "A specific report describes a large trace that failed to open. It supports including a careful troubleshooting branch, not asserting a universal size limit or that the issue affects current users generally."
+        },
+        {
+          "type": "official current documentation and release surface",
+          "url": "https://playwright.dev/docs/trace-viewer",
+          "observedAt": "2026-10-23",
+          "displayedPublicationAge": null,
+          "displayedCounts": {
+            "views": null,
+            "votes": null,
+            "comments": null
+          },
+          "signal": "Current official docs cover trace recording, viewer workflows, CI retry configuration, and opening saved archives; current release notes additionally document CLI trace analysis for agents."
+        }
+      ],
+      "technicalClaimProvenance": [
+        {
+          "claim": "The Trace Viewer inspects recorded Playwright traces; saved files can be opened through npx playwright show-trace or trace.playwright.dev. The hosted viewer loads the trace in-browser and does not transmit trace data externally.",
+          "sources": [
+            "https://playwright.dev/docs/trace-viewer",
+            "https://playwright.dev/docs/api/class-tracing"
+          ],
+          "scope": "Official docs checked 2026-10-23. The privacy statement applies to trace loading by this viewer, not to public issue attachments or the file's storage/sharing."
+        },
+        {
+          "claim": "Playwright Test supports trace modes including on-first-retry, on-all-retries, retain-on-failure, on, and off; CI guidance recommends first-retry tracing, while full tracing can be expensive.",
+          "sources": [
+            "https://playwright.dev/docs/trace-viewer",
+            "https://playwright.dev/docs/test-use-options"
+          ],
+          "scope": "Current official docs checked 2026-10-23; exact defaults depend on the repository's config and installed version."
+        },
+        {
+          "claim": "The viewer exposes action sequence/timing, snapshots, logs, source, network, console, and error details; these are investigation evidence rather than a causal explanation of backend behavior.",
+          "sources": [
+            "https://playwright.dev/docs/trace-viewer",
+            "https://playwright.dev/docs/trace-viewer-intro"
+          ],
+          "scope": "Feature description from current official docs; the causal interpretation is editorial guidance."
+        },
+        {
+          "claim": "Saved authentication state can include sensitive cookies and headers that could impersonate a test account and should not be committed.",
+          "sources": [
+            "https://playwright.dev/docs/auth"
+          ],
+          "scope": "Direct warning in current Playwright auth documentation. Trace archives are separately advised for review because page snapshots and screenshots can contain private content."
+        },
+        {
+          "claim": "Issue 41281 reported a wrong trace link for a selected retry in a Playwright HTML report; issue 39845 reported a trace loading problem involving a large trace.",
+          "sources": [
+            "https://github.com/microsoft/playwright/issues/41281",
+            "https://github.com/microsoft/playwright/issues/39845"
+          ],
+          "scope": "Specific historical issue reports, not generalized current defects or known product limits."
+        },
+        {
+          "claim": "Issue 38207 concerned browser local-network permission behavior for a remote trace URL in Chrome versions around 142, and is historical.",
+          "sources": [
+            "https://github.com/microsoft/playwright/issues/38207"
+          ],
+          "scope": "Used only to contextualize a troubleshooting anecdote; the article does not present it as a current general restriction."
+        },
+        {
+          "claim": "The Playwright v1.59 release notes introduce the agent trace-analysis CLI commands. browserContext.tracing records browser operations and network activity but excludes Playwright Test assertions; Test-runner configuration includes those assertions in a fuller failure trace.",
+          "sources": [
+            "https://playwright.dev/docs/release-notes",
+            "https://playwright.dev/docs/api/class-tracing",
+            "https://playwright.dev/docs/trace-viewer"
+          ],
+          "scope": "The current official release notes group these commands under v1.59. Use npx playwright trace commands only with Playwright v1.59 or newer; the official API explicitly recommends Test-runner tracing when debugging assertions."
+        }
+      ],
+      "editorialLimits": [
+        "No test suite, browser agent, or trace archive was executed or captured for this article.",
+        "Example config is documentation-derived and not tested in this repository.",
+        "Issue reports are version-specific and do not establish prevalence or present-day impact.",
+        "Trace content sensitivity varies by the page and data captured; inspect artifacts before sharing."
+      ]
+    }
+  ],
+  "editorialReview": {
+    "humanizer": {
+      "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "version": "3.1.0",
+      "applied": true
+    },
+    "humanizerZh": {
+      "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+      "version": "local version recorded in docs/seo/editorial-style-2026-10-21.json",
+      "applied": true
+    },
+    "independentReview": {
+      "status": "pending parent workflow review",
+      "executorMustNotClaimComplete": true
+    }
+  },
+  "modelRecord": {
+    "requestedModel": "gpt-6-luna",
+    "actualModel": null,
+    "role": "executor",
+    "reasoningEffortRequested": "high",
+    "reasoningEffortActual": null,
+    "attempts": 4
+  },
+  "validation": {
+    "checkedAt": "2026-10-23",
+    "executedChecks": [
+      "TypeScript source parse: zero diagnostics.",
+      "Transpiled module evaluated: two guides and four locale copies loaded.",
+      "Runtime content scan: no FAQ/source-code residue in section body strings; FAQ entries contain plain text and no Markdown links.",
+      "Guide structure check: CLI guide has 6 sections and 3 FAQ entries; trace guide has 7 sections and 4 FAQ entries; all source entries resolve and sourcePath leaf slugs match.",
+      "Localized internal links checked: each guide has two locale-prefixed series links; targets were found in existing editorial catalog.",
+      "Official documentation checked 2026-10-23: CLI installation guide, Playwright v1.59 release notes, Tracing API, Trace Viewer, and Test use options.",
+      "Visible content counts from runtime objects: CLI EN 13,228 characters; CLI ZH 5,131 characters / 3,114 CJK; trace EN 14,676 characters; trace ZH 5,980 characters / 3,257 CJK."
+    ],
+    "notExecuted": [
+      "tests",
+      "build",
+      "publication",
+      "live-page review",
+      "browser task execution or trace capture"
+    ]
+  },
+  "attemptLog": [
+    {
+      "stage": "initial-draft",
+      "status": "completed",
+      "note": "Initial bilingual copy and research notes drafted."
+    },
+    {
+      "stage": "syntax-repair",
+      "status": "completed-but-insufficient",
+      "note": "A zero TypeScript parse-diagnostic result was recorded, but it did not detect literal draft fragments embedded in several exported body strings or the unresolved sources.issueNetwork reference."
+    },
+    {
+      "stage": "independent-review",
+      "status": "blocker-raised",
+      "note": "Review found serialized section/FAQ residue, the missing issueNetwork source object, inaccurate CLI install-path wording, missing exact trace CLI version and tracing API boundary, and nonlocalized internal guide paths."
+    },
+    {
+      "stage": "review-repair",
+      "status": "completed",
+      "note": "Rebuilt source from clean runtime copy values; replaced contaminated sections and FAQ; added source records; corrected CLI install paths and Node requirement; documented trace CLI v1.59 threshold and context.tracing vs Test-runner assertion capture; added locale-prefixed, catalog-verified internal links."
+    }
+  ]
+}

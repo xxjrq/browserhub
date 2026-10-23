@@ -3842,6 +3842,166 @@
         "browser-agent-prompt-injection",
         "browser-agent-download-files"
       ]
+    },
+    {
+      "id": "guides:ai-browser-research-source-verification",
+      "primaryKeyword": {
+        "en": "AI browser research source verification",
+        "zh-CN": "AI 浏览器资料研究与引用核验"
+      },
+      "intent": "逐项核对引用、日期、来源与矛盾证据，区别于产品比较和结构化提取 API。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-research-source-verification/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-research-source-verification/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-23",
+      "demandEvidence": "See research-2026-10-23.json and topic research records; public questions are not measured site queries or search volume.",
+      "originalGain": "逐项核对引用、日期、来源与矛盾证据，区别于产品比较和结构化提取 API。",
+      "relatedSlugs": [
+        "playwright-cli-vs-mcp",
+        "browser-agent-upload-files",
+        "browser-agent-form-submission",
+        "browser-agent-debugging-traces"
+      ]
+    },
+    {
+      "id": "guides:playwright-cli-vs-mcp",
+      "primaryKeyword": {
+        "en": "Playwright CLI vs MCP",
+        "zh-CN": "Playwright CLI 与 MCP 怎么选"
+      },
+      "intent": "比较编码智能体的两种工具接入，区别于已有 MCP 与 DevTools MCP 对比。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-cli-vs-mcp/",
+        "https://browserhub.co/zh-cn/guides/playwright-cli-vs-mcp/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-23",
+      "demandEvidence": "See research-2026-10-23.json and topic research records; public questions are not measured site queries or search volume.",
+      "originalGain": "比较编码智能体的两种工具接入，区别于已有 MCP 与 DevTools MCP 对比。",
+      "relatedSlugs": [
+        "ai-browser-research-source-verification",
+        "browser-agent-upload-files",
+        "browser-agent-form-submission",
+        "browser-agent-debugging-traces"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-upload-files",
+      "primaryKeyword": {
+        "en": "browser agent upload files",
+        "zh-CN": "浏览器智能体上传文件"
+      },
+      "intent": "处理文件输入、选择器、授权文件与本机/远端路径，区别于下载持久化。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-upload-files/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-upload-files/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-23",
+      "demandEvidence": "See research-2026-10-23.json and topic research records; public questions are not measured site queries or search volume.",
+      "originalGain": "处理文件输入、选择器、授权文件与本机/远端路径，区别于下载持久化。",
+      "relatedSlugs": [
+        "ai-browser-research-source-verification",
+        "playwright-cli-vs-mcp",
+        "browser-agent-form-submission",
+        "browser-agent-debugging-traces"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-form-submission",
+      "primaryKeyword": {
+        "en": "browser agent form submission approval",
+        "zh-CN": "浏览器智能体填写表单与提交确认"
+      },
+      "intent": "从填写、人工确认到提交结果及未知结果处理，区别于通用提示注入防护。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-form-submission/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-form-submission/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-23",
+      "demandEvidence": "See research-2026-10-23.json and topic research records; public questions are not measured site queries or search volume.",
+      "originalGain": "从填写、人工确认到提交结果及未知结果处理，区别于通用提示注入防护。",
+      "relatedSlugs": [
+        "ai-browser-research-source-verification",
+        "playwright-cli-vs-mcp",
+        "browser-agent-upload-files",
+        "browser-agent-debugging-traces"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-debugging-traces",
+      "primaryKeyword": {
+        "en": "browser agent debugging traces",
+        "zh-CN": "浏览器智能体调试与 Trace 排错"
+      },
+      "intent": "从失败动作、网络、页面状态和 Trace 还原定位问题，区别于会话接入教程。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-debugging-traces/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-debugging-traces/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-23",
+      "demandEvidence": "See research-2026-10-23.json and topic research records; public questions are not measured site queries or search volume.",
+      "originalGain": "从失败动作、网络、页面状态和 Trace 还原定位问题，区别于会话接入教程。",
+      "relatedSlugs": [
+        "ai-browser-research-source-verification",
+        "playwright-cli-vs-mcp",
+        "browser-agent-upload-files",
+        "browser-agent-form-submission"
+      ]
     }
   ],
   "futureCandidates": [
@@ -3904,5 +4064,17 @@
     "developerContent20261021": "按用户要求暂缓检测网站开发；以CSDN公开阅读/互动和当前搜索问题作为选题线索，优先开发内容增强；不是本站query或流量测量。",
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
-  "latestEditorialAddition": "2026-10-22"
+  "latestEditorialAddition": {
+    "date": "2026-10-23",
+    "cycleId": "content-2026-10-23",
+    "topics": [
+      "ai-browser-research-source-verification",
+      "playwright-cli-vs-mcp",
+      "browser-agent-upload-files",
+      "browser-agent-form-submission",
+      "browser-agent-debugging-traces"
+    ],
+    "newTopicCount": 5,
+    "publicationStatus": "consult workflow-delivery-2026-10-23.json after delivery"
+  }
 }

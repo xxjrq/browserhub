@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-23",
+  "slug": "ai-browser-research-source-verification",
+  "topic": "A practical, human-reviewed provenance workflow for using Comet or Gemini in Chrome to research a question, verify each source and claim, reconcile disagreement, and stop when evidence is missing.",
+  "intentOwnership": {
+    "distinctFrom": [
+      {
+        "slug": "comet-vs-gemini-in-chrome",
+        "distinction": "That guide compares tools by task; this guide provides a source-provenance and acceptance workflow usable across either product."
+      },
+      {
+        "slug": "browser-agent-structured-data-extraction",
+        "distinction": "That guide focuses on schema correctness and extraction completeness; this guide focuses on research claims, provenance, dates, authority, conflicts, and publishable notes."
+      }
+    ],
+    "audience": "Everyday AI-browser researchers, students, writers, and knowledge workers, as well as browser-agent users who need auditable citations; not limited to developers.",
+    "primaryTask": "Turn a question into an evidence ledger and cite only claims that a reader can retrace."
+  },
+  "research": {
+    "observedDate": "2026-10-23",
+    "publishedDate": "Article publication date not yet established by this research record.",
+    "recommendedDate": "2026-10-23",
+    "searches": [
+      {
+        "query": "site:reddit.com/r/GoogleGemini Gemini in Chrome source links verify research citations questions",
+        "observedDate": "2026-10-23",
+        "result": "Found a user discussion reporting difficulty opening or checking Gemini source links. Used as qualitative demand signal only; no prevalence claim."
+      },
+      {
+        "query": "site:reddit.com/r/perplexity_ai Comet browser research sources citations verify links",
+        "observedDate": "2026-10-23",
+        "result": "Found a user discussion reporting URL parsing and citation-to-claim verification concerns. Used as qualitative demand signal only; no prevalence claim."
+      },
+      {
+        "query": "site:support.google.com/gemini/answer/16283624?hl=en sources tabs Gemini in Chrome",
+        "observedDate": "2026-10-23",
+        "result": "Google Help confirms current-tab context, up to ten shared open tabs on computer, gradual availability, and account/device/language requirements."
+      },
+      {
+        "query": "site:perplexity.ai/help-center Pro Search sources citations links validate information",
+        "observedDate": "2026-10-23",
+        "result": "Perplexity Help Center describes direct source links and explicitly recommends validating information against sources. Treated as a product statement, not an independent accuracy finding."
+      }
+    ],
+    "publicDemandSignals": [
+      {
+        "url": "https://www.reddit.com/r/GeminiAI/comments/1qzye6g/gemini_doesnt_show_clickable_source_links_anymore/",
+        "title": "Gemini users report trouble opening or checking source links",
+        "sourceType": "public user discussion",
+        "publishedDate": "2026-02-09 (displayed in search result; thread has later comments)",
+        "observedDate": "2026-10-23",
+        "signal": "A user describes missing clickable source links for research; replies discuss URL behavior and checking sources.",
+        "engagementCounts": null,
+        "limits": "Anecdotal self-selected discussion. Does not establish frequency, current product state, or measured demand."
+      },
+      {
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1kpqy0c/perplexity_struggles_with_basic_url_parsingand/",
+        "title": "Perplexity users discuss URL parsing and citation verification",
+        "sourceType": "public user discussion",
+        "publishedDate": "Not reliably visible in the opened extract; do not infer exact date",
+        "observedDate": "2026-10-23",
+        "signal": "Discussion raises source URL parsing and citation-to-claim matching as practical research concerns.",
+        "engagementCounts": null,
+        "limits": "Anecdotal self-selected discussion; claims in the thread are not independently verified, and this record does not assign prevalence or a usage trend."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Perplexity Comet Quick Start Guide",
+        "url": "https://www.perplexity.ai/comet/resources/articles/comet-quick-start-guide",
+        "sourceType": "official product documentation",
+        "publishedDate": null,
+        "observedDate": "2026-10-23",
+        "supports": "Comet assistant sidebar, page analysis, cross-tab intelligence, and task automation are product-documented capabilities.",
+        "limitations": "Page does not establish that every page is fully read or that resulting claims are accurate."
+      },
+      {
+        "title": "Ways to Use Comet",
+        "url": "https://www.perplexity.ai/comet/gettingstarted",
+        "sourceType": "official product documentation",
+        "publishedDate": null,
+        "observedDate": "2026-10-23",
+        "supports": "Comet Assistant or Summarize can work from the current page; @tab can focus on open tabs.",
+        "limitations": "Feature descriptions are not an independent measurement of retrieval or source accuracy."
+      },
+      {
+        "title": "Google Gemini Help: Use Gemini in Chrome",
+        "url": "https://support.google.com/gemini/answer/16283624?hl=en",
+        "sourceType": "official product documentation",
+        "publishedDate": null,
+        "observedDate": "2026-10-23",
+        "supports": "Gemini in Chrome uses the current tab by default; computer users can share up to ten open tabs. The feature is gradually rolling out and has requirements.",
+        "limitations": "Availability can vary; documentation does not establish that every response faithfully cites page content."
+      },
+      {
+        "title": "Google Gemini Apps Privacy Hub",
+        "url": "https://support.google.com/gemini/answer/13594961?hl=en",
+        "sourceType": "official privacy documentation",
+        "publishedDate": "Page shows Last updated October 19, 2026; privacy notice shows October 13, 2026",
+        "observedDate": "2026-10-23",
+        "supports": "Shared page content and browser context are included among data described by Google; account and connected-app settings matter when deciding what to share.",
+        "limitations": "This source supports a bounded statement about Google's published privacy terms, not a comparison across vendors."
+      },
+      {
+        "title": "Perplexity Help Center: What is Pro Search?",
+        "url": "https://www.perplexity.ai/help-center/en/articles/10352903-what-is-pro-search",
+        "sourceType": "official product help",
+        "publishedDate": "Last updated July 21, 2026",
+        "observedDate": "2026-10-23",
+        "supports": "Pro Search product description says responses include direct source links and recommends validating information through those links.",
+        "limitations": "Vendor documentation, not an independent accuracy or success-rate assessment."
+      },
+      {
+        "title": "Perplexity Changelog: Role-based access controls, API credentials, and Brain for Max",
+        "url": "https://www.perplexity.ai/en-GB/changelog/role-based-access-controls-api-credentials-and-brain-for-max",
+        "sourceType": "official product changelog",
+        "publishedDate": "2026-07-27",
+        "observedDate": "2026-10-23",
+        "supports": "Changelog describes Check Sources for Search or Computer answers and a source side panel for inspecting evidence and cited passages.",
+        "limitations": "The entry identifies Search and Computer; it does not establish universal availability or availability in every Comet session. The linked support page was not accessible in this research run."
+      },
+      {
+        "title": "Reddit: Gemini users report trouble opening or checking source links",
+        "url": "https://www.reddit.com/r/GeminiAI/comments/1qzye6g/gemini_doesnt_show_clickable_source_links_anymore/",
+        "sourceType": "public user discussion",
+        "publishedDate": "2026-02-09 displayed on thread; comments extend later",
+        "observedDate": "2026-10-23",
+        "supports": "Qualitative user-question signal motivating link destination checks.",
+        "limitations": "Anecdotal, not product telemetry or proof of defect prevalence."
+      },
+      {
+        "title": "Reddit: Perplexity users discuss citation-to-claim mismatches",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1kpqy0c/perplexity_struggles_with_basic_url_parsingand/",
+        "sourceType": "public user discussion",
+        "publishedDate": null,
+        "observedDate": "2026-10-23",
+        "supports": "Qualitative user-question signal motivating citation matching and unknown-state guidance.",
+        "limitations": "Anecdotal and self-selected. Exact publication date and visible count not recorded; no popularity or prevalence inference."
+      }
+    ]
+  },
+  "contentRequirements": {
+    "languages": [
+      "en",
+      "zh-cn"
+    ],
+    "minimumEnglishWords": 900,
+    "minimumChineseCharacters": 2400,
+    "includes": [
+      "Direct answer and judgment",
+      "Synthetic evidence-ledger example on example.invalid",
+      "Source authority, URL, date and passage checks",
+      "Conflict reconciliation",
+      "Publishable notes and stop/unknown conditions",
+      "Common errors and four FAQs per locale",
+      "Two localized internal links per locale",
+      "No invented testing or citation accuracy claims"
+    ]
+  },
+  "execution": {
+    "requestedModel": "gpt-6-luna",
+    "requestedReasoning": "high",
+    "actualModel": null,
+    "actualReasoning": null,
+    "attempts": 2,
+    "editorialAttemptRecord": {
+      "attempt": 2,
+      "reason": "Independent Sol review found that the Chinese phrase 来源权限 could be read as access permission. Revised it to 来源权威性 and 来源能证明什么 where it refers to evidentiary authority; retained actual account and feature access requirements unchanged."
+    },
+    "modelProvenance": "Execution assignment specified gpt-6-luna/high; actual model identity was not exposed, so it remains null.",
+    "humanizerSkills": [
+      {
+        "name": "humanizer",
+        "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+        "read": true
+      },
+      {
+        "name": "humanizer-zh",
+        "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+        "read": true
+      }
+    ],
+    "createdFiles": [
+      "src/data/ai-research-2026-10-23.ts",
+      "docs/seo/research-ai-research-2026-10-23.json"
+    ],
+    "integration": "No shared integration or deployment performed.",
+    "integrationRevision": {
+      "editor": "root coordinator",
+      "requestedModel": null,
+      "actualModel": null,
+      "reason": "Independent reviewer identified two bare guide links per edition; prefixed EN /en/ and ZH /zh-cn/ to preserve reading language.",
+      "changedFacts": false
+    }
+  }
+}

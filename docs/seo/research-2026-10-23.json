@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-23",
+  "selection": [
+    {
+      "slug": "ai-browser-research-source-verification",
+      "intent": "逐项核对引用、日期、来源与矛盾证据，区别于产品比较和结构化提取 API。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "逐项核对引用、日期、来源与矛盾证据，区别于产品比较和结构化提取 API。"
+    },
+    {
+      "slug": "playwright-cli-vs-mcp",
+      "intent": "比较编码智能体的两种工具接入，区别于已有 MCP 与 DevTools MCP 对比。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "比较编码智能体的两种工具接入，区别于已有 MCP 与 DevTools MCP 对比。"
+    },
+    {
+      "slug": "browser-agent-upload-files",
+      "intent": "处理文件输入、选择器、授权文件与本机/远端路径，区别于下载持久化。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "处理文件输入、选择器、授权文件与本机/远端路径，区别于下载持久化。"
+    },
+    {
+      "slug": "browser-agent-form-submission",
+      "intent": "从填写、人工确认到提交结果及未知结果处理，区别于通用提示注入防护。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "从填写、人工确认到提交结果及未知结果处理，区别于通用提示注入防护。"
+    },
+    {
+      "slug": "browser-agent-debugging-traces",
+      "intent": "从失败动作、网络、页面状态和 Trace 还原定位问题，区别于会话接入教程。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "从失败动作、网络、页面状态和 Trace 还原定位问题，区别于会话接入教程。"
+    }
+  ],
+  "backups": [
+    {
+      "slug": "browser-agent-timeout-recovery",
+      "reason": "Recovery and stopping rules; hold to avoid overlap with form submission unknown results and trace debugging."
+    },
+    {
+      "slug": "ai-browser-multi-tab-context",
+      "reason": "Research context across tabs; hold to avoid overlapping today’s source verification workflow."
+    }
+  ],
+  "publicSignals": [
+    {
+      "query": "Playwright CLI vs MCP skills browser agents official",
+      "url": "https://github.com/microsoft/playwright/blob/main/README.md?plain=1",
+      "observedOn": "2026-10-23",
+      "kind": "current official project tool split",
+      "supports": "Project documents agent-focused CLI and MCP as separate interfaces.",
+      "displayedCount": null
+    },
+    {
+      "query": "browser agent upload files Playwright browser use allowed_file_paths",
+      "url": "https://github.com/browser-use/browser-use/issues/619",
+      "observedOn": "2026-10-23",
+      "kind": "historical first-party user question",
+      "supports": "User asks how local files reach a cloud upload workflow; source code is checked separately for current facts.",
+      "displayedCount": null
+    },
+    {
+      "query": "browser agent traces local network viewer failure",
+      "url": "https://github.com/microsoft/playwright/issues/38207",
+      "observedOn": "2026-10-23",
+      "kind": "historical first-party user issue",
+      "supports": "Concrete trace-viewer troubleshooting question; not proof of a current unfixed defect.",
+      "displayedCount": null
+    },
+    {
+      "query": "browser agent repeated submit max failures",
+      "url": "https://github.com/browser-use/browser-use/issues/3576",
+      "observedOn": "2026-10-23",
+      "kind": "closed historical user report",
+      "supports": "Real question on stopping repeat actions; does not establish present API bug.",
+      "displayedCount": null
+    },
+    {
+      "query": "Comet research verify cited sources",
+      "url": "https://www.perplexity.ai/en-GB/changelog/role-based-access-controls-api-credentials-and-brain-for-max",
+      "observedOn": "2026-10-23",
+      "kind": "first-party feature and problem evidence",
+      "displayedPublicationDate": "27/07/26",
+      "supports": "Official source checking and side-panel documentation demonstrate the research-verification task. Product claims remain feature-specific.",
+      "displayedCount": null
+    }
+  ],
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "monthlySearchVolume": null,
+    "currentRank": null
+  },
+  "metricRule": "Public search/issue/product-document signals establish questions and source material, not our traffic, measured keyword volume or a demonstrated trend. Individual topic records document actual observations and limitations.",
+  "editorialRoles": {
+    "executors": [
+      {
+        "agent": "ai_tools_20261023",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "topics": [
+          "playwright-cli-vs-mcp",
+          "browser-agent-debugging-traces"
+        ]
+      },
+      {
+        "agent": "ai_actions_20261023",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "topics": [
+          "browser-agent-upload-files",
+          "browser-agent-form-submission"
+        ]
+      },
+      {
+        "agent": "ai_research_20261023",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "topics": [
+          "ai-browser-research-source-verification"
+        ]
+      }
+    ],
+    "reviewerRequired": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "skills": [
+    "content-strategy",
+    "ai-seo",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "priorCycles": {
+    "content-2026-10-22": "completed; five independent topics, release20261022-092102",
+    "content-2026-10-20": "historical project_manual_reconciled release and four successful live results verified; original journal not replayed"
+  },
+  "excluded": [
+    "index submission",
+    "new detection website",
+    "EasyBR client/backend",
+    "outreach",
+    "paid subscriptions or API calls"
+  ]
+}

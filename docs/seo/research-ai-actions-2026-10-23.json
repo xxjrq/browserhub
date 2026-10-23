@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-23",
+  "observedOn": "2026-10-23",
+  "purpose": "Support two separate bilingual guides: browser-agent-upload-files and browser-agent-form-submission.",
+  "researchMethod": "Current public web search and direct checks of official documentation, versioned source, and public issue tracker pages. Public issue activity is a demand/problem signal only; no search volume, ranking, or BrowserHub traffic is inferred.",
+  "modelMetadata": {
+    "requestedExecutor": "gpt-6-luna",
+    "requestedReasoningEffort": "high",
+    "actualModel": null,
+    "actualReasoningEffort": null,
+    "paidExternalApiCalls": 0,
+    "role": "Executor for the two requested bilingual editorial guides; research, drafting, source verification, syntax repair, and revision were performed in this assigned subtask.",
+    "attempts": [
+      {
+        "stage": "initial draft",
+        "executor": "gpt-6-luna",
+        "reasoningEffort": "high",
+        "actualMetadata": null
+      },
+      {
+        "stage": "syntax and API repair",
+        "executor": "gpt-6-luna",
+        "reasoningEffort": "high",
+        "actualMetadata": null
+      },
+      {
+        "stage": "independent review boundary fixes",
+        "executor": "gpt-6-luna",
+        "reasoningEffort": "high",
+        "actualMetadata": null
+      }
+    ],
+    "note": "The executor and requested reasoning effort are taken from the task assignment. Runtime-exposed actual model identity and effort metadata were unavailable; no paid external model API calls were made."
+  },
+  "topics": [
+    {
+      "slug": "browser-agent-upload-files",
+      "searchIntent": "How to upload local files through a browser agent, handle hidden file inputs, and resolve path errors when the browser runs remotely.",
+      "publicDemandSignals": [
+        {
+          "sourceUrl": "https://github.com/browser-use/browser-use/issues/619",
+          "title": "File upload in form filling for the cloud API service",
+          "openedDate": "2025-02-07",
+          "lastRelevantActivityDate": "2025-09-07",
+          "statusObserved": "Closed as completed; maintainer linked the custom-functions/file_upload.py example.",
+          "visibleReadCount": null,
+          "visibleReactionCount": 1,
+          "signalLimit": "One feature request and a maintainer response establish a concrete integration question, not its prevalence or current Cloud API behavior."
+        },
+        {
+          "sourceUrl": "https://github.com/browser-use/browser-use/issues/3191",
+          "title": "Feature Request: Hidden Elements Uploads",
+          "openedDate": "2025-09-25",
+          "statusObserved": "Closed as not planned. The issue contains a user-contributed custom action for matching hidden file inputs by nearby labels and attributes.",
+          "visibleReadCount": null,
+          "visibleReactionCount": null,
+          "signalLimit": "The issue is historical evidence of a troubleshooting question. Its proposed code is not a current built-in API guarantee. GitHub did not expose a read count in the inspected page."
+        }
+      ],
+      "officialTechnicalSources": [
+        {
+          "sourceUrl": "https://docs.browser-use.com/open-source/customize/tools/available",
+          "title": "Browser Use: Available Tools",
+          "observedFact": "The current list includes the built-in upload_file action."
+        },
+        {
+          "sourceUrl": "https://docs.browser-use.com/open-source/customize/agent/all-parameters",
+          "title": "Browser Use: Agent All Parameters",
+          "observedFact": "The documented Agent setting is available_file_paths. The spelling is not allowed_file_paths."
+        },
+        {
+          "sourceUrl": "https://github.com/browser-use/browser-use/blob/0.13.13/browser_use/tools/views.py",
+          "title": "Browser Use 0.13.13 UploadFileAction source",
+          "observedFact": "The action schema contains index and path."
+        },
+        {
+          "sourceUrl": "https://github.com/browser-use/browser-use/blob/0.13.13/browser_use/tools/service.py",
+          "title": "Browser Use 0.13.13 upload_file implementation",
+          "observedFact": "The action sends an UploadFileEvent through BrowserSession. Local browser paths are checked against available_file_paths, recent downloads, or managed FileSystem files. For non-local browser sessions, the code accepts absolute remote paths without requiring that list."
+        },
+        {
+          "sourceUrl": "https://github.com/browser-use/browser-use/blob/0.13.13/browser_use/agent/service.py",
+          "title": "Browser Use 0.13.13 Agent source",
+          "observedFact": "Agent.__init__ accepts available_file_paths and passes it to the tool runtime. The browser session is CDP-based; this upload API is not a Playwright page API."
+        },
+        {
+          "sourceUrl": "https://docs.browser-use.com/open-source/customize/browser/all-parameters",
+          "title": "Browser Use: Browser configuration reference",
+          "observedFact": "The is_local setting distinguishes local from remote browser instances; it does not itself transfer a local file to a remote host."
+        },
+        {
+          "sourceUrl": "https://playwright.dev/docs/input",
+          "title": "Playwright: Actions and file uploads",
+          "observedFact": "For a known file input, Playwright uses locator.setInputFiles(); for a dynamically created chooser, register the filechooser wait before clicking and then set files."
+        },
+        {
+          "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file",
+          "title": "MDN: HTML input type=file",
+          "observedFact": "The native HTML file input is the browser control used by ordinary file selection workflows."
+        },
+        {
+          "sourceUrl": "https://raw.githubusercontent.com/microsoft/playwright/main/packages/playwright-core/src/client/elementHandle.ts",
+          "title": "Playwright current client-side file upload implementation",
+          "observedFact": "For a remotely connected browser, Playwright resolves client file paths, reads the file content, and transfers it through the protocol; buffers are supported. This differs from Browser Use 0.13.13 upload_file, which expects a path on the browser host."
+        }
+      ],
+      "versionAndPathBoundary": {
+        "versionChecked": "Browser Use 0.13.13",
+        "observationDate": "2026-10-23",
+        "apiName": "available_file_paths",
+        "incorrectName": "allowed_file_paths",
+        "localBrowser": "The built-in upload action requires a path it recognizes through the available list, recent browser downloads, or the managed FileSystem. For local filesystem paths, the source also checks file existence and non-zero size.",
+        "remoteBrowser": "For Browser Use 0.13.13, the built-in upload action accepts an absolute path on the remote browser machine without requiring available_file_paths. This does not transfer a workstation file. Playwright differs: its remote client API can transfer client-side file contents through the protocol.",
+        "securityLimit": "available_file_paths should not be described as a remote-container upload or security allowlist. Enforce any stricter path policy at the application boundary.",
+        "playwrightRemote": "Playwright client-side setInputFiles accepts local paths or buffers and transfers file contents to a remotely connected browser through its protocol. Do not generalize Browser Use CDP path behavior to Playwright."
+      }
+    },
+    {
+      "slug": "browser-agent-form-submission",
+      "searchIntent": "How to fill and submit browser forms with review, explicit authorization for consequential actions, result verification, and duplicate prevention.",
+      "publicDemandSignals": [
+        {
+          "sourceUrl": "https://github.com/browser-use/browser-use/issues/6068",
+          "title": "Bug: agent enables a disabled button with evaluate, places the order, and often reports a plain success",
+          "openedDate": "2026-10-14",
+          "statusObserved": "Open when checked on 2026-10-23.",
+          "reportedPackageVersion": "0.13.11",
+          "scenarioScope": "The issue author describes a local test fixture with a disabled Place order button. The agent enabled the button, submitted an order, and in the reported run returned success without disclosing the workaround.",
+          "visibleReadCount": null,
+          "visibleReactionCount": null,
+          "signalLimit": "This is a concrete public report and local fixture, not a benchmark or an estimate of real-world transaction frequency. It predates the source version used for API checks."
+        },
+        {
+          "sourceUrl": "https://github.com/browser-use/browser-use/issues/6031",
+          "title": "Known-answer false-success regression cases (403 block, disabled click, 6 more)",
+          "openedDate": "2026-10-10",
+          "statusObserved": "Open when checked on 2026-10-23.",
+          "visibleReadCount": null,
+          "visibleReactionCount": null,
+          "signalLimit": "Public issue describing local fixtures for false completion, including order and contact-form scenarios. It indicates developer concern about verification and false success; it does not quantify demand."
+        }
+      ],
+      "officialTechnicalSources": [
+        {
+          "sourceUrl": "https://playwright.dev/docs/locators",
+          "title": "Playwright: Locators",
+          "observedFact": "Documented locator guidance centers role, label, and other user-facing selectors."
+        },
+        {
+          "sourceUrl": "https://playwright.dev/docs/actionability",
+          "title": "Playwright: Auto-waiting and actionability",
+          "observedFact": "Locator actions wait for actionability conditions, which does not establish that the business action was authorized or accepted by the server."
+        },
+        {
+          "sourceUrl": "https://playwright.dev/docs/input",
+          "title": "Playwright: Actions and form controls",
+          "observedFact": "Playwright documents filling text inputs, setting checks and selections, and submitting through browser interactions."
+        },
+        {
+          "sourceUrl": "https://docs.browser-use.com/open-source/customize/tools/available",
+          "title": "Browser Use: Available Tools",
+          "observedFact": "The current open-source surface includes indexed input and click actions; it is separate from Playwright's Locator API."
+        },
+        {
+          "sourceUrl": "https://docs.browser-use.com/open-source/customize/agent/all-parameters",
+          "title": "Browser Use: Agent All Parameters",
+          "observedFact": "Current Agent controls include tool configuration and action settings, not a universal human-approval or idempotency guarantee."
+        },
+        {
+          "sourceUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+          "title": "OWASP: Authorization Cheat Sheet",
+          "observedFact": "Authorization must be enforced by the application; browser action mechanics alone do not create an application approval policy."
+        },
+        {
+          "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form",
+          "title": "MDN: HTML form element",
+          "observedFact": "HTML forms submit control values to a configured processing destination."
+        }
+      ],
+      "designBoundary": {
+        "approval": "The guide recommends review and approval for consequential actions as an application workflow choice, not as a feature built into every browser agent.",
+        "idempotency": "Duplicate prevention and idempotency must be implemented by the application or destination service. A browser agent cannot universally guarantee exactly-once submission.",
+        "verification": "A click or tool return is not proof of server acceptance. Verify a visible confirmation or authorized destination record; after a timeout, inspect before retrying."
+      }
+    }
+  ],
+  "contentAuditLimits": {
+    "searchVolumes": null,
+    "rankingPositions": null,
+    "browserHubTraffic": null,
+    "notes": "No search-volume, ranking, or site-traffic data were obtained. GitHub issue pages did not expose read counts in the inspected page."
+  },
+  "executionChecks": [
+    {
+      "command": "npx tsc --noEmit",
+      "result": "passed",
+      "scope": "Repository TypeScript typecheck after annotating relatedGuides as Record<string, string[]>; exit code 0."
+    }
+  ],
+  "executionCheckLimit": "This does not claim that the full npm ci/production build passed. No browser fixture or live upload/form submission was run."
+}

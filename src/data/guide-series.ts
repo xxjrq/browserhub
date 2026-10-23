@@ -3,10 +3,10 @@ export const guideSeries = [
 	{
 		id: "ai-browser-development",
 		copy: {
-			en: { title: "AI browsers and browser agents", description: "Compare AI browser tools, connect a session, validate extracted data and handle downloads or untrusted page content." },
-			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "按任务比较 AI 浏览器与开发工具，接入会话，核验提取结果和下载文件，并处理不可信网页内容。" }
+			en: { title: "AI browsers and browser agents", description: "Research with traceable sources, choose agent tools, connect sessions, handle files and forms, and debug browser tasks." },
+			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "用可核查来源完成资料研究，按任务选择智能体工具，接入会话，处理文件与表单，并排查执行问题。" }
 		},
-		slugs: ["browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
+		slugs: ["ai-browser-research-source-verification", "playwright-cli-vs-mcp", "browser-agent-upload-files", "browser-agent-form-submission", "browser-agent-debugging-traces", "browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
 	},
 	{
 		id: "browser-selection",
