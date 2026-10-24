@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-24",
+  "purpose": "Research record for two original BrowserHub browser-agent implementation guides: iframe targeting and action-triggered pages/popups.",
+  "topicSelection": {
+    "primarySignal": "Browser Use repository issue reports show recurring developer questions about iframe interaction and detecting pages opened by an interaction. These are public support signals, not search volume or BrowserHub traffic.",
+    "topics": [
+      {
+        "slug": "browser-agent-iframes",
+        "signal": "Browser Use issue #3109: iframe interaction question, opened 2025-09-14; issue body reports Browser Use 0.7.7 and a CAPTCHA checkbox. Historical demand only. The article does not advise solving or bypassing CAPTCHA.",
+        "url": "https://github.com/browser-use/browser-use/issues/3109",
+        "stateObserved": "closed",
+        "reportVersion": "0.7.7"
+      },
+      {
+        "slug": "browser-agent-tabs-popups",
+        "signal": "Browser Use issue #3657: interaction-opened background tab report, opened 2025-11-22; issue body reports Browser Use 0.9.7. Issue #4136: BrowserStateSummary reported to omit an interaction-opened tab, opened 2026-02-20 against 0.11.11 and 0.11.9, closed 2026-02-27 after a referenced fix was completed. Both are historical version-specific reports, not current bug claims.",
+        "urls": [
+          "https://github.com/browser-use/browser-use/issues/3657",
+          "https://github.com/browser-use/browser-use/issues/4136"
+        ],
+        "statesObserved": ["closed", "closed"],
+        "reportVersions": ["0.9.7", "0.11.11", "0.11.9"]
+      }
+    ],
+    "signalLimits": "GitHub issue existence, title, reporter-provided version, issue date, and observed state only. No public read count or current search-volume value was found or used. A closed issue is not evidence that every deployment contains the fix."
+  },
+  "officialTechnicalSources": [
+    {
+      "title": "Playwright: Frames",
+      "url": "https://playwright.dev/docs/frames",
+      "checked": "2026-10-24",
+      "factsUsed": ["Page has a main frame and can have iframe child frames", "page-level interactions default to main frame", "frameLocator targets iframe contents"]
+    },
+    {
+      "title": "Playwright: FrameLocator API",
+      "url": "https://playwright.dev/docs/api/class-framelocator",
+      "checked": "2026-10-24",
+      "factsUsed": ["frame locators are strict", "nested frame locators are supported", "a selector matching multiple frames throws"]
+    },
+    {
+      "title": "Playwright: Pages",
+      "url": "https://playwright.dev/docs/pages",
+      "checked": "2026-10-24",
+      "factsUsed": ["one browser context can have multiple pages", "popup event wait must be installed before triggering click", "new page event can be awaited on a context"]
+    },
+    {
+      "title": "Playwright: BrowserContext API",
+      "url": "https://playwright.dev/docs/api/class-browsercontext",
+      "checked": "2026-10-24",
+      "factsUsed": ["page event covers new pages in a context, including popup pages", "new page may still be loading"]
+    },
+    {
+      "title": "Playwright: Page API",
+      "url": "https://playwright.dev/docs/api/class-page",
+      "checked": "2026-10-24",
+      "factsUsed": ["popup is emitted for a new tab/window associated with a page", "popup event wait-before-click example", "closed opener can make popup opener lookup null"]
+    }
+  ],
+  "offlineFixture": {
+    "path": "public/templates/agent-frame-popup-playwright.mjs",
+    "purpose": "Small reusable teaching fixture for the frame-locator and popup-event workflows in both guides.",
+    "scope": "Uses only Playwright with synthetic srcdoc iframe content and a trusted local button click that opens about:blank. A route handler aborts application-context requests, the script does not navigate to an external URL, use credentials, test CAPTCHA, or inspect a detection website. Browser or operating-system background traffic is outside the fixture's assertion.",
+    "prerequisite": "Install Playwright in the consuming project and provide an installed Chromium browser; PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH can select its executable. The public script does not install packages.",
+    "executionStatus": "Executed successfully by the root agent on 2026-10-24. The public asset was copied byte-for-byte into a private fixture directory and passed with exit code 0.",
+    "executionEvidence": {
+      "checkedAt": "2026-10-24T01:05:55.566320Z",
+      "assetSha256": "311fabeefec1854134a32fc688cdc423ae706051f956ba365b53b8e1bf74f9be",
+      "node": "22.22.3",
+      "playwright": "1.64.1",
+      "operatingSystem": "macOS 15.6",
+      "installedChromeAppVersion": "155.0.8059.85",
+      "browserReportedVersion": null,
+      "exitCode": 0,
+      "stdout": "{\"fixture\":\"synthetic fixture; application requests blocked\",\"frame\":\"passed\",\"popup\":\"passed\",\"authentication\":\"not used\"}",
+      "stderr": "",
+      "assertions": [
+        "srcdoc iframe labeled field fill and save action",
+        "about:blank popup URL",
+        "popup opener identity",
+        "popup heading content"
+      ],
+      "limits": "Context application requests were blocked. Browser or OS background traffic is outside the assertion. No external site, cross-origin fixture, MFA, agent/LLM, CAPTCHA, or production task was tested; this is not a general reliability result."
+    }
+  },
+  "claimsAndBoundaries": [
+    "The implementation advice is scoped to the documented Playwright JavaScript API. Browser Use, other agent frameworks, and MCP servers may expose different interfaces; no universal compatibility is claimed.",
+    "Cross-origin frame guidance distinguishes browser page-JavaScript same-origin restrictions from supported automation APIs. It does not recommend evading access controls.",
+    "The offline synthetic fixture completed successfully for its srcdoc iframe and about:blank popup assertions. No external fixture, live target site, CAPTCHA, MFA, agent/LLM, or production workflow was tested; this is not a general reliability result.",
+    "No Playwright current version number or Browser Use latest version is claimed in article copy. Official docs are a moving target, and the copy records its check date."
+  ],
+  "delivery": {
+    "model": "gpt-6-luna",
+    "requestedReasoning": "high",
+    "actualModel": null,
+    "actualModelNote": "The parent task supplied the requested model but no runtime model identity evidence.",
+    "role": "content executor",
+    "files": [
+      "src/data/ai-context-2026-10-24.ts",
+      "docs/seo/research-ai-context-2026-10-24.json"
+    ],
+    "localChecks": [
+      "Article locale lengths were counted from source: each English copy exceeds 900 words and each Chinese copy exceeds 2,300 non-whitespace characters.",
+      "TypeScript transpilation and runtime evaluation exported two guides with both locale copies; required metadata, source count, section and FAQ floors, and absence of inline or fenced code were checked.",
+      "`node --check public/templates/agent-frame-popup-playwright.mjs` passed before the root agent's browser run.",
+      "npx tsc --noEmit --pretty false completed successfully.",
+      "Research JSON parsed successfully."
+    ],
+    "limitations": [
+      "No independent Sol review was performed in this delegated pass.",
+      "No repository build, deployment, indexing operation, external outreach, or paid API request was performed."
+    ]
+  }
+}

@@ -4002,6 +4002,166 @@
         "browser-agent-upload-files",
         "browser-agent-form-submission"
       ]
+    },
+    {
+      "id": "guides:comet-vs-dia",
+      "primaryKeyword": {
+        "en": "Comet vs Dia browser",
+        "zh-CN": "Comet 和 Dia 浏览器怎么选"
+      },
+      "intent": "针对 AI 浏览器的日常研究、工作上下文、平台与付费条件比较；区别于已有 Comet/Gemini 比较和类别定义。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-vs-dia/",
+        "https://browserhub.co/zh-cn/guides/comet-vs-dia/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-24",
+      "demandEvidence": "See research-2026-10-24.json and topic research records. Public issue/discussion counts are not site traffic or keyword volume.",
+      "originalGain": "针对 AI 浏览器的日常研究、工作上下文、平台与付费条件比较；区别于已有 Comet/Gemini 比较和类别定义。",
+      "relatedSlugs": [
+        "ai-browser-pdf-summary",
+        "browser-agent-human-takeover",
+        "browser-agent-iframes",
+        "browser-agent-tabs-popups"
+      ]
+    },
+    {
+      "id": "guides:ai-browser-pdf-summary",
+      "primaryKeyword": {
+        "en": "AI browser PDF summary",
+        "zh-CN": "AI 浏览器总结 PDF"
+      },
+      "intent": "按文本 PDF、扫描/OCR、查看器与助手输入路径排查，并复核页码和表格，区别于通用引用核验或下载指南。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-pdf-summary/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-pdf-summary/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-24",
+      "demandEvidence": "See research-2026-10-24.json and topic research records. Public issue/discussion counts are not site traffic or keyword volume.",
+      "originalGain": "按文本 PDF、扫描/OCR、查看器与助手输入路径排查，并复核页码和表格，区别于通用引用核验或下载指南。",
+      "relatedSlugs": [
+        "comet-vs-dia",
+        "browser-agent-human-takeover",
+        "browser-agent-iframes",
+        "browser-agent-tabs-popups"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-human-takeover",
+      "primaryKeyword": {
+        "en": "browser agent human takeover",
+        "zh-CN": "浏览器智能体人工接管"
+      },
+      "intent": "具体登录、MFA 或验证页停下后，保留同一会话、由人完成、重新观察再恢复的操作交接，区别于提交前批准。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-human-takeover/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-human-takeover/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-24",
+      "demandEvidence": "See research-2026-10-24.json and topic research records. Public issue/discussion counts are not site traffic or keyword volume.",
+      "originalGain": "具体登录、MFA 或验证页停下后，保留同一会话、由人完成、重新观察再恢复的操作交接，区别于提交前批准。",
+      "relatedSlugs": [
+        "comet-vs-dia",
+        "ai-browser-pdf-summary",
+        "browser-agent-iframes",
+        "browser-agent-tabs-popups"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-iframes",
+      "primaryKeyword": {
+        "en": "browser agent iframe handling",
+        "zh-CN": "浏览器智能体 iframe 定位"
+      },
+      "intent": "选中正确嵌入文档、嵌套 frame、跨源与刷新后定位边界，区别于一般 Trace 排错或表单填写。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-iframes/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-iframes/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-24",
+      "demandEvidence": "See research-2026-10-24.json and topic research records. Public issue/discussion counts are not site traffic or keyword volume.",
+      "originalGain": "选中正确嵌入文档、嵌套 frame、跨源与刷新后定位边界，区别于一般 Trace 排错或表单填写。",
+      "relatedSlugs": [
+        "comet-vs-dia",
+        "ai-browser-pdf-summary",
+        "browser-agent-human-takeover",
+        "browser-agent-tabs-popups"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-tabs-popups",
+      "primaryKeyword": {
+        "en": "browser agent tabs and popups",
+        "zh-CN": "浏览器智能体标签页与弹窗"
+      },
+      "intent": "监听新页面、确认目标和返回原页，避免盲点最后标签或重复点击；区别于持久会话接入。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-tabs-popups/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-tabs-popups/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-24",
+      "demandEvidence": "See research-2026-10-24.json and topic research records. Public issue/discussion counts are not site traffic or keyword volume.",
+      "originalGain": "监听新页面、确认目标和返回原页，避免盲点最后标签或重复点击；区别于持久会话接入。",
+      "relatedSlugs": [
+        "comet-vs-dia",
+        "ai-browser-pdf-summary",
+        "browser-agent-human-takeover",
+        "browser-agent-iframes"
+      ]
     }
   ],
   "futureCandidates": [
@@ -4065,16 +4225,16 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-10-23",
-    "cycleId": "content-2026-10-23",
+    "date": "2026-10-24",
+    "cycleId": "content-2026-10-24",
     "topics": [
-      "ai-browser-research-source-verification",
-      "playwright-cli-vs-mcp",
-      "browser-agent-upload-files",
-      "browser-agent-form-submission",
-      "browser-agent-debugging-traces"
+      "comet-vs-dia",
+      "ai-browser-pdf-summary",
+      "browser-agent-human-takeover",
+      "browser-agent-iframes",
+      "browser-agent-tabs-popups"
     ],
     "newTopicCount": 5,
-    "publicationStatus": "consult workflow-delivery-2026-10-23.json after delivery"
+    "publicationStatus": "consult workflow-delivery-2026-10-24.json after delivery"
   }
 }

@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-24",
+  "selection": [
+    {
+      "slug": "comet-vs-dia",
+      "intent": "针对 AI 浏览器的日常研究、工作上下文、平台与付费条件比较；区别于已有 Comet/Gemini 比较和类别定义。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "针对 AI 浏览器的日常研究、工作上下文、平台与付费条件比较；区别于已有 Comet/Gemini 比较和类别定义。"
+    },
+    {
+      "slug": "ai-browser-pdf-summary",
+      "intent": "按文本 PDF、扫描/OCR、查看器与助手输入路径排查，并复核页码和表格，区别于通用引用核验或下载指南。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "按文本 PDF、扫描/OCR、查看器与助手输入路径排查，并复核页码和表格，区别于通用引用核验或下载指南。"
+    },
+    {
+      "slug": "browser-agent-human-takeover",
+      "intent": "具体登录、MFA 或验证页停下后，保留同一会话、由人完成、重新观察再恢复的操作交接，区别于提交前批准。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "具体登录、MFA 或验证页停下后，保留同一会话、由人完成、重新观察再恢复的操作交接，区别于提交前批准。"
+    },
+    {
+      "slug": "browser-agent-iframes",
+      "intent": "选中正确嵌入文档、嵌套 frame、跨源与刷新后定位边界，区别于一般 Trace 排错或表单填写。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "选中正确嵌入文档、嵌套 frame、跨源与刷新后定位边界，区别于一般 Trace 排错或表单填写。"
+    },
+    {
+      "slug": "browser-agent-tabs-popups",
+      "intent": "监听新页面、确认目标和返回原页，避免盲点最后标签或重复点击；区别于持久会话接入。",
+      "existingOwner": null,
+      "status": "drafting_not_published",
+      "knownPriorOverlap": "监听新页面、确认目标和返回原页，避免盲点最后标签或重复点击；区别于持久会话接入。"
+    }
+  ],
+  "backups": [
+    {
+      "slug": "ai-browser-shopping-research",
+      "reason": "Product-variant and total-cost research workflow, only after verifying independent demand and avoiding unauthorized purchase actions."
+    },
+    {
+      "slug": "browser-agent-spa-waiting",
+      "reason": "SPA hydration/action readiness, held to avoid overlap with current iframe/tab and previous trace article."
+    }
+  ],
+  "publicSignals": [
+    {
+      "query": "Dia browser October 2026 AI features support",
+      "url": "https://www.diabrowser.com/changelog",
+      "observedOn": "2026-10-24",
+      "kind": "current first-party release evidence",
+      "displayedPublicationDate": "October 22, 2026",
+      "displayedVersion": "Mac v1.54.0; Windows v1.3.0",
+      "supports": "Platform and task-based product-choice content can be tied to a current documented release, not an assumed trend."
+    },
+    {
+      "query": "Dia browser October 2026 AI features support",
+      "url": "https://www.reddit.com/r/browsers/comments/1wzt4vb/dia_browser_the_successor_to_arc_is_officially/",
+      "observedOn": "2026-10-24",
+      "kind": "public discussion search snapshot",
+      "displayedPublicationDate": "Wednesday October 07 2026",
+      "displayedCountLiteral": "+157 votes",
+      "supports": "A visible discussion of Windows availability and AI subscription conditions; engagement is a snapshot, not site traffic, search volume or growth."
+    },
+    {
+      "query": "Comet browser PDF cannot read scanned PDF issue",
+      "url": "https://www.reddit.com/r/cometbrowser/comments/1sgmrgq/all_models_are_unable_to_read_pdf_since_today/",
+      "observedOn": "2026-10-24",
+      "kind": "historical public question search snapshot",
+      "displayedPublicationDate": "Thursday April 09 2026",
+      "displayedCountLiteral": "+1 votes",
+      "supports": "User PDF-reading question; not evidence the reported failure persists today."
+    },
+    {
+      "query": "browser agent iframe tabs popup captcha human takeover issues",
+      "url": "https://www.reddit.com/r/LangChain/comments/1s9hgxi/what_do_you_do_when_your_agent_gets_stuck_on_a/",
+      "observedOn": "2026-10-24",
+      "kind": "public question search snapshot",
+      "displayedPublicationAge": "6 months ago",
+      "displayedCountLiteral": null,
+      "supports": "Concrete need for human takeover at login or a challenge; no inferred bypass or prevalence claim."
+    },
+    {
+      "query": "browser agent iframe tabs popup captcha human takeover issues",
+      "url": "https://github.com/browser-use/browser-use/issues/3109",
+      "observedOn": "2026-10-24",
+      "kind": "historical first-party issue tracker question",
+      "displayedCountLiteral": null,
+      "supports": "Frame-selection limitation reported in an older version. Current APIs verified separately; no CAPTCHA bypass tutorial."
+    },
+    {
+      "query": "site:github.com/browser-use/browser-use issues new tab popup",
+      "url": "https://github.com/browser-use/browser-use/issues/3657",
+      "observedOn": "2026-10-24",
+      "kind": "historical first-party issue tracker question",
+      "displayedCountLiteral": null,
+      "supports": "Automatically opened tab handling is a distinct developer question, not proof of current SDK defect."
+    }
+  ],
+  "primarySourceCautions": [
+    {
+      "url": "https://www.diabrowser.com/plans",
+      "observedOn": "2026-10-24",
+      "observation": "The Better Answers card says $10/month while its FAQ says $20/month. Do not collapse contradictory official statements into a single verified current price."
+    },
+    {
+      "url": "https://support.google.com/chrome/answer/16215622?hl=EN-GB",
+      "observedOn": "2026-10-24",
+      "observation": "Current Chrome PDF viewer documentation describes automatic OCR for scanned PDFs. Viewer text selection does not prove all AI browser assistants receive that text or support the same feature."
+    }
+  ],
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "monthlySearchVolume": null,
+    "currentRank": null
+  },
+  "metricRule": "Current public search/issue/release observations identify questions and source material. No own-site query dataset, traffic, volume or ranking has been obtained. Search snapshots and direct page observations remain distinct.",
+  "editorialRoles": {
+    "executors": [
+      {
+        "agent": "ai_choices_20261024",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "role": "executor",
+        "topics": [
+          "comet-vs-dia",
+          "ai-browser-pdf-summary"
+        ]
+      },
+      {
+        "agent": "ai_context_20261024",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "role": "executor",
+        "topics": [
+          "browser-agent-iframes",
+          "browser-agent-tabs-popups"
+        ]
+      },
+      {
+        "agent": "ai_handoff_20261024",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "role": "executor",
+        "topics": [
+          "browser-agent-human-takeover"
+        ]
+      }
+    ],
+    "reviewerRequired": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "skills": [
+    "content-strategy",
+    "ai-seo",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "priorCycles": {
+    "content-2026-10-23": "completed; five independent topics, release20261023-093540",
+    "content-2026-10-20": "Reviewed manual reconciliation, original push/publish success and four live results verified; original journal untouched."
+  },
+  "excluded": [
+    "index submission",
+    "new detection website",
+    "EasyBR client/backend",
+    "outreach",
+    "paid subscriptions or API calls"
+  ],
+  "oldEnhancements": [
+    {
+      "slug": "comet-vs-gemini-in-chrome",
+      "scope": "Current Comet Browser Agent query entitlement and source refreshed in existing two-language product comparison.",
+      "countedAsNewTopic": false,
+      "source": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+      "checkedOn": "2026-10-24",
+      "status": "revision awaiting final review"
+    }
+  ],
+  "originalExample": {
+    "asset": "public/templates/agent-frame-popup-playwright.mjs",
+    "kind": "synthetic offline frame and popup assertions",
+    "actualExecution": "passed",
+    "checkedOn": "2026-10-24",
+    "playwrightVersion": "1.64.1",
+    "macOS": "15.6",
+    "installedChromeAppVersion": "155.0.8059.85",
+    "browserReportedVersion": null,
+    "sha256": "311fabeefec1854134a32fc688cdc423ae706051f956ba365b53b8e1bf74f9be",
+    "limits": "No external site, cross-origin fixture, authentication, CAPTCHA, LLM or production-task validation. Application requests blocked; browser/OS background traffic outside assertion."
+  }
+}

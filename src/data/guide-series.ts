@@ -3,10 +3,10 @@ export const guideSeries = [
 	{
 		id: "ai-browser-development",
 		copy: {
-			en: { title: "AI browsers and browser agents", description: "Research with traceable sources, choose agent tools, connect sessions, handle files and forms, and debug browser tasks." },
-			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "用可核查来源完成资料研究，按任务选择智能体工具，接入会话，处理文件与表单，并排查执行问题。" }
+			en: { title: "AI browsers and browser agents", description: "Choose AI browsers, read PDFs, verify sources, hand tasks to a person, and handle browser-agent sessions, frames and tabs." },
+			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "按任务选择 AI 浏览器，阅读 PDF、核验资料、接管智能体，并处理开发中的会话、嵌入页面与标签页。" }
 		},
-		slugs: ["ai-browser-research-source-verification", "playwright-cli-vs-mcp", "browser-agent-upload-files", "browser-agent-form-submission", "browser-agent-debugging-traces", "browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
+		slugs: ["comet-vs-dia", "ai-browser-pdf-summary", "browser-agent-human-takeover", "browser-agent-iframes", "browser-agent-tabs-popups", "ai-browser-research-source-verification", "playwright-cli-vs-mcp", "browser-agent-upload-files", "browser-agent-form-submission", "browser-agent-debugging-traces", "browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
 	},
 	{
 		id: "browser-selection",

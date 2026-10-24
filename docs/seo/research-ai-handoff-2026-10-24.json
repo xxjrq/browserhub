@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "cycleId": "content-2026-10-24",
+  "status": "research_and_draft_complete_pending_independent_review_and_integration",
+  "topic": {
+    "slug": "browser-agent-human-takeover",
+    "intent": "Implement runtime human takeover for a browser agent blocked on an interaction requiring an authorized person; preserve the live session, stop automation, verify completion, and resume from fresh state.",
+    "distinctFrom": [
+      "attaching an existing browser session",
+      "approval before a consequential action",
+      "prompt injection defense"
+    ],
+    "articlePath": "src/data/ai-handoff-2026-10-24.ts"
+  },
+  "publicSignals": [
+    {
+      "url": "https://www.reddit.com/r/LangChain/comments/1s9hgxi/what_do_you_do_when_your_agent_gets_stuck_on_a/",
+      "observed": "2026-10-24",
+      "visibleSignal": "Question asks how to handle a Browser Use automation that stops at CAPTCHA, 2FA or changed layouts, and asks about overnight failures. A commenter discusses a human takeover primitive.",
+      "relativeAgeAsDisplayed": "question: 7mo ago; commenter: 7mo ago; update/comment: 6mo ago",
+      "counts": {
+        "upvotes": null,
+        "comments": null,
+        "views": null
+      },
+      "interpretation": "Qualitative public question only. Reddit display age is relative and can change; no volume, growth, or BrowserHub traffic inference."
+    },
+    {
+      "url": "https://github.com/browser-use/browser-use/issues/3659",
+      "observed": "2026-10-24",
+      "visibleSignal": "Issue title asks how to stop an agent to obtain required information from the user; issue opened 2025-11-22, references Browser Use 0.9.7, and is closed.",
+      "counts": {
+        "reactions": null,
+        "comments": null,
+        "views": null
+      },
+      "interpretation": "Evidence that a related tool-calling question was raised, not current API advice; old issue version is explicitly not used as current implementation guidance."
+    }
+  ],
+  "primaryEvidence": [
+    {
+      "url": "https://docs.browser-use.com/open-source/customize/tools/add",
+      "checked": "2026-10-24",
+      "supports": "Current docs describe custom Python tools including human-in-the-loop and 2FA-related examples; tools are registered with @tools.action and receive documented typed parameters. Not a claim of a built-in universal takeover product."
+    },
+    {
+      "url": "https://docs.browser-use.com/open-source/customize/tools/basics",
+      "checked": "2026-10-24",
+      "supports": "Current docs show a custom ask_human function and emphasize exact browser_session parameter name and BrowserSession type for injected context."
+    },
+    {
+      "url": "https://github.com/browser-use/browser-use/blob/main/skills/open-source/references/browser.md",
+      "checked": "2026-10-24",
+      "supports": "Current upstream open-source docs describe Browser keep_alive lifecycle option and retained browser between tasks. This is not a guarantee that an owned Chrome process/page survives every Agent cleanup path; article cautions to check installed release and ownership."
+    },
+    {
+      "url": "https://playwright.dev/docs/debug",
+      "checked": "2026-10-24",
+      "supports": "Playwright debugging documentation describes page.pause/Inspector for headed interactive debugging; article distinguishes it from durable production handoff orchestration."
+    },
+    {
+      "url": "https://playwright.dev/docs/auth",
+      "checked": "2026-10-24",
+      "supports": "Authentication docs explain storage of authenticated state and warn that state files can contain cookies/headers usable to impersonate an account; supports source-control caution and distinction from current live page takeover."
+    }
+  ],
+  "scope": {
+    "articleType": "framework-neutral runtime handoff design with framework-specific Browser Use and Playwright boundaries",
+    "captcha": "No solvers, bypass, evasion, or proxy-switching tips. CAPTCHA alone is not diagnosed as fingerprint/proxy failure.",
+    "hostedLiveView": "Only described conditionally when provider and plan support is verified; no broad hosted-product availability claim.",
+    "code": "No version-ambiguous runnable API snippet. Provides concrete state contract, event requirements, controller checks, error table, and actual current SDK guidance."
+  },
+  "verification": {
+    "englishWordsApprox": 1569,
+    "chineseHanCharacters": 2425,
+    "counts": "Recounted from final serialized title, description, content, section headings/bodies and FAQ after the same independent review pass.",
+    "runtimeEvaluation": "Passed TypeScript transpilation and actual CommonJS module evaluation; one guide and both locales resolved. Confirmed requested Chinese phrase and exactly two setup links per locale in the introduction only; no duplicate setup links remain in section one.",
+    "testsAdded": false
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffortRequested": "high",
+    "modelEffective": null,
+    "modelSource": "Unknown to this execution context; do not infer from requested model.",
+    "attempts": 2,
+    "attemptSource": "Two distinct executor passes: initial requested gpt-6-luna/high pass; second localization correction and validation pass after independent Sol review feedback. Effective model remains unknown.",
+    "toolResults": "Official Browser Use docs, official Playwright docs, Reddit page and GitHub issue opened directly on 2026-10-24; current docs checked instead of the issue's 2025 Browser Use version.",
+    "attemptHistory": [
+      {
+        "attempt": 1,
+        "requestedModel": "gpt-6-luna",
+        "reasoningEffort": "high",
+        "effectiveModel": null,
+        "result": "Completed draft and initial runtime evaluation; independent review identified untranslated English intro links in Chinese edition."
+      },
+      {
+        "attempt": 2,
+        "requestedModel": "gpt-6-luna",
+        "reasoningEffort": "high",
+        "effectiveModel": null,
+        "result": "After independent review, localized both Chinese link labels/connective wording; in the same review pass corrected the account-change phrase and removed duplicate setup links from section one while retaining both intro links in each locale. Revalidated module, locale link placement, and counts."
+      }
+    ]
+  }
+}

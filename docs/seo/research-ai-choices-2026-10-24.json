@@ -1,0 +1,347 @@
+{
+  "date": "2026-10-24",
+  "cycleId": "content-2026-10-24",
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "reasoningEffortEffective": null,
+    "attempts": 1,
+    "attemptNotes": [
+      "Completed initial two-topic bilingual content pass; no model switch or paid API call.",
+      "Review revision attempt 2: applied independent Sol findings, fetched current Gemini upload and eligibility instructions, tightened Perplexity plan entitlements, and made a limited Comet-vs-Gemini refresh. No model switch or paid API call."
+    ],
+    "sourceOfAssignment": "Parent agent task message for BrowserHub content-2026-10-24",
+    "reviewRevisionAttempts": 2
+  },
+  "scope": {
+    "files": [
+      "src/data/ai-choices-2026-10-24.ts",
+      "docs/seo/research-ai-choices-2026-10-24.json",
+      "src/data/ai-choices-2026-10-22.ts"
+    ],
+    "topics": [
+      "comet-vs-dia",
+      "ai-browser-pdf-summary"
+    ],
+    "locales": [
+      "en",
+      "zh-cn"
+    ],
+    "claimsAreDocumentationBased": true,
+    "handsOnProductTestsPerformed": false,
+    "paidCallsOrSubscriptions": false,
+    "refreshes": [
+      {
+        "slug": "comet-vs-gemini-in-chrome",
+        "originalPublicationDate": "2026-10-22",
+        "refreshDate": "2026-10-24",
+        "scope": "English/Chinese Comet plan-access paragraph and free-plan FAQ/source array only. Added current Browser Agent (Comet Assistant) query entitlement and primary source. Browser Use comparison untouched. This is a substantial old-page fact refresh, not a new topic."
+      }
+    ]
+  },
+  "observedAt": "2026-10-24",
+  "research": {
+    "comet-vs-dia": {
+      "intent": "Help a reader choose between Comet and Dia for actual tab research, profile/workspace management, connected work services and task handoff; distinguish current platform support and uncertain plan pricing.",
+      "demandSignals": [
+        {
+          "sourceUrl": "https://www.reddit.com/r/browsers/comments/1wzt4vb/dia_browser_the_successor_to_arc_is_officially/",
+          "sourceType": "public Reddit discussion; anecdotal demand signal",
+          "publicationDateFromSearchSnapshot": "2026-10-07",
+          "observationDate": "2026-10-24",
+          "searchSnapshotLiteral": "[Wednesday October 07 2026] [+157 votes]",
+          "directPageLiteralAtObservation": "• 1d ago; score was not visible in the opened page text",
+          "countsAndDatesAreSeparateObservations": true,
+          "interpretation": "A Windows-release discussion and replies mention platform availability, the Arc transition, product trust/privacy, and interest in trying or declining Dia. This one public thread signals reader questions; it is not traffic, search volume, representative sentiment or a trend estimate. The search snapshot publication date and score are kept separate from the direct page's relative-age display."
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/diabrowser/comments/1xcdlwz/is_there_anyone_who_really_satisfied_with_dia/",
+          "sourceType": "public Reddit discussion; anecdotal demand signal",
+          "publicationDateFromSearchSnapshot": "2026-10-23 (comment shown in search excerpt); post date not resolved",
+          "observationDate": "2026-10-24",
+          "visibleLiteral": "search excerpt shows a Windows-versus-Mac satisfaction discussion and a Thursday October 22 2026 comment marked +4 votes",
+          "countScope": "one visible comment only; not the post score",
+          "interpretation": "Supports checking platform-specific fit and user workflow questions. Search excerpt timing/count is not a measure of readership or general satisfaction."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://www.diabrowser.com/",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Current homepage says free download and macOS and Windows availability.",
+            "Homepage describes Morning Brief, connected work synthesis, profiles, Live Work, Better Meetings, Splits, Decks and Organized Tabs.",
+            "Named integrations shown include Slack, Notion, Teams and GSuite."
+          ],
+          "limitations": [
+            "These are vendor product statements, not independent feature tests.",
+            "Homepage language does not establish availability in every account, region, or plan."
+          ]
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Release log shows Oct 22, 2026 Mac v1.54.0 and Windows v1.3.0.",
+            "Windows 1.3.0 notes Focus Mode and Dia Sync with Mac, including merging matching profiles.",
+            "Mac 1.54.0 notes faster chat starts, shortcuts and Chromium upgrade."
+          ],
+          "limitations": [
+            "Release notes are platform-specific. No claim of complete feature parity is made."
+          ]
+        },
+        {
+          "url": "https://www.diabrowser.com/plans",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Better Browser card says Free; FAQ explicitly says it has no AI features.",
+            "Better Answers card says $10/month; FAQ says $20/month, creating a direct same-page price conflict.",
+            "FAQ says new users get a 14-day Better Days trial with no card required; AI pauses after the trial unless a paid plan is chosen.",
+            "FAQ states paid plans are rolling out to most new Mac users; existing users keep current free access for now; Windows stays as it is for now.",
+            "FAQ explains task-based limits and AI pauses when allowance is exhausted."
+          ],
+          "limitations": [
+            "Do not select either Better Answers price as the single correct current price. Advise checking actual account checkout.",
+            "Trial and paid-plan availability varies by rollout, platform and account.",
+            "The page is live and can change."
+          ]
+        },
+        {
+          "url": "https://www.perplexity.ai/comet/resources/articles/comet-quick-start-guide",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Quick Start describes page analysis, cross-tab intelligence, task automation and autonomous navigation.",
+            "One-click Summarization is described for articles, videos, PDFs and social media."
+          ],
+          "limitations": [
+            "The article mentions PDFs but does not specify scanned-PDF/OCR behavior, citations, or reliability for all files.",
+            "The page includes platform/support copy that can become stale; article uses only the cited feature claims with caveat."
+          ]
+        },
+        {
+          "url": "https://www.perplexity.ai/comet",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Official Comet product overview consulted for positioning and base browser download availability."
+          ],
+          "limitations": [
+            "A free browser download does not establish free AI-agent query entitlement. See current plan comparison."
+          ]
+        },
+        {
+          "url": "https://www.perplexity.ai/comet/gettingstarted",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Ways to Use Comet describes Assistant and Summarize controls for answers and summaries from a page."
+          ],
+          "limitations": [
+            "Current UI and shortcut availability should be checked in installed build/account."
+          ]
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Current plan table says Browser Agent (Comet Assistant) Queries: Free = No; paid tiers have monthly limits/allowances.",
+            "Free tier has limited file uploads and basic searches; this article uses only the Browser Agent query row."
+          ],
+          "limitations": [
+            "The Browser Agent query row does not mean all Perplexity search/chat features are unavailable on Free.",
+            "Do not equate free Comet browser download with free Comet Assistant queries."
+          ]
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Current plan table says Browser Agent (Comet Assistant) Queries: Free = No; paid tiers have monthly limits/allowances.",
+            "Free tier has limited file uploads and basic searches; the article limits its claim to the Browser Agent query row."
+          ],
+          "limitations": [
+            "The Browser Agent query row does not mean all Perplexity search/chat features are unavailable on Free.",
+            "Do not equate free Comet browser download with free Comet Assistant queries."
+          ]
+        }
+      ],
+      "decision": "Comet is the first evaluation for cross-tab research because its current official quick-start explicitly documents that workflow. Dia is the first evaluation for persistent workspaces, profiles and connected work context because that is its current public positioning. This is a task-fit recommendation, not an accuracy, speed, privacy or performance benchmark."
+    },
+    "ai-browser-pdf-summary": {
+      "intent": "Give readers a practical PDF workflow covering selectable text versus image scans, product-specific file routes, page citations, printed versus viewer pagination, table extraction, OCR boundaries and failure recovery. This is narrower than generic source verification, download, or structured extraction guides.",
+      "demandSignals": [
+        {
+          "sourceUrl": "https://www.reddit.com/r/perplexity_ai/comments/1sgmr8n/all_models_are_unable_to_read_pdf_since_today/",
+          "sourceType": "public support discussion; anecdotal demand signal",
+          "observationDate": "2026-10-24",
+          "directPageLiteral": "• 4mo ago; post score not shown in opened page text",
+          "postTextObserved": "Poster says Comet/Perplexity stopped reading a PDF and reports encoded/noisy characters; replies include a contrasting report and a workaround involving upload via phone app.",
+          "publicationDate": "Not resolved to an exact date in direct observation; relative time retained as shown",
+          "interpretation": "This is an individual historical troubleshooting report, not evidence of a current outage or a general Comet defect. It supports including an upload-route diagnostic and explicit account/version evidence.",
+          "countsAndDatesAreSeparateObservations": true
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/cometbrowser/comments/1sgmrgq/all_models_are_unable_to_read_pdf_since_today/",
+          "sourceType": "crossposted public support discussion; anecdotal demand signal",
+          "observationDate": "2026-10-24",
+          "directPageLiteral": "• 7mo ago; score not exposed in opened page text",
+          "publicationDate": "Not resolved to an exact date in direct observation; relative time retained as shown",
+          "interpretation": "Crosspost duplicates the same report and is not counted as an independent issue or second user. The strange relative age differs from the source subreddit's current relative-age string; do not derive an exact date without separate platform metadata.",
+          "countsAndDatesAreSeparateObservations": true
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/PerplexityComet/comments/1ojtd6b",
+          "sourceType": "public Reddit discussion; anecdotal workflow question",
+          "observationDate": "2026-10-24",
+          "publicationDateFromSearchSnapshot": "2025-10-30",
+          "searchSnapshotLiteral": "[Thursday October 30 2025] [+1 votes]",
+          "visibleQuestion": "Student says assistant sometimes cannot see a PDF opened as a website and sometimes enters agent mode to scroll it; one reply recommends uploading as an attachment.",
+          "interpretation": "Supports distinguishing browser viewer context from attachment upload. It is anecdotal and does not establish current product behavior or prevalence."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://www.perplexity.ai/comet/resources/articles/comet-quick-start-guide",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Comet Quick Start lists one-click summarization for PDFs.",
+            "It also describes PDF summaries in the context of a page summarization control."
+          ],
+          "limitations": [
+            "Does not document every viewer, file route, scan/OCR condition, citation behavior, or accuracy. No universal scan claim is made."
+          ]
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/14903178?hl=en",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Gemini Apps web app has Add files routes for local supported file upload and Drive file add.",
+            "A separate In Gemini in Chrome section documents Add files → Files → Submit for supported local files.",
+            "Drive use on work/school accounts may require administrator enablement; the help page describes feature-dependent file limits and availability."
+          ],
+          "limitations": [
+            "Gemini Apps and Gemini in Chrome have distinct surfaces; follow each surface controls and account conditions.",
+            "Uploads are documented in both surfaces; do not imply App-exclusive upload."
+          ]
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/16275805?hl=en",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Gemini Apps feature use is subject to account- and feature-dependent limits."
+          ],
+          "limitations": [
+            "No specific current numeric PDF limit stated in the article."
+          ]
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/16283624?hl=en",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Official Gemini in Chrome page opened successfully on review revision attempt 2.",
+            "Rollout is gradual; conditions include supported region/language, Chromebook Plus/Mac/Windows, latest Chrome, signed-in non-Incognito session and applicable minimum age; adult work/school users may need admin enablement."
+          ],
+          "limitations": [
+            "First attempt on 2026-10-24 timed out; successful fetch on review revision attempt 2 resolved that earlier limitation. Eligibility can change."
+          ]
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/16215622?co=GENIE.Platform%3DDesktop&hl=en-GB",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Desktop-specific Chrome Help says scanned PDFs opened in Chrome PDF viewer are converted on-device to searchable/selectable text by OCR, without sending data to Google or third parties."
+          ],
+          "limitations": [
+            "This is a Chrome desktop PDF-viewer behavior. It does not establish that Comet, Gemini, or another assistant can access that text, nor that their separate upload pipeline uses Chrome's OCR."
+          ]
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/13594961?hl=en",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Privacy documentation is linked as a review point before uploading sensitive documents."
+          ],
+          "limitations": [
+            "No unsupported retention or privacy guarantee is quoted in the article."
+          ]
+        },
+        {
+          "url": "https://www.diabrowser.com/",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Checked current product overview for PDF support; page describes page/tool context and workspaces but does not document a PDF-specific upload or summary workflow."
+          ],
+          "limitations": [
+            "Absence from the reviewed public page is not proof the app cannot handle a PDF; article asks readers to verify in current app or with vendor."
+          ]
+        },
+        {
+          "url": "https://www.diabrowser.com/plans",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Checked current plans/FAQ for PDF upload or PDF summarization documentation; none found."
+          ],
+          "limitations": [
+            "Page is retained because the article explicitly says it was reviewed; do not infer that Dia cannot process PDFs."
+          ]
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+          "observationDate": "2026-10-24",
+          "claimsUsed": [
+            "Current plan table distinguishes free Comet browser download from Browser Agent (Comet Assistant) query entitlements; Free has no Browser Agent queries."
+          ],
+          "limitations": [
+            "Does not establish that every Perplexity search/chat feature is unavailable on Free."
+          ]
+        }
+      ],
+      "validationMethod": [
+        "Check selectable text in a PDF viewer on multiple pages.",
+        "Test assistant access separately from viewer OCR/searchability.",
+        "Record file route, account and browser version.",
+        "Require viewer page plus printed label when available, then verify against original.",
+        "Check table headers, units, dates, footnotes and numeric values."
+      ],
+      "decision": "Treat text-layer detection, viewer OCR, assistant access, upload route, citations and table extraction as separate checks. The Chrome OCR statement is explicitly scoped to Google's desktop Chrome PDF viewer and is not generalized to AI-browser assistant access."
+    }
+  },
+  "copyChecks": {
+    "requiredSectionsPerTopic": 5,
+    "requiredFaqsPerLocale": 3,
+    "requiredInlineInternalLinksPerLocale": 2,
+    "faqAnswersPlainText": true,
+    "inlineCodeOrFencedCode": false,
+    "sourcePaths": "src/data/ai-choices-2026-10-24.ts#<slug>",
+    "availableLocales": [
+      "en",
+      "zh-cn"
+    ],
+    "refreshesReportedSeparately": true
+  },
+  "checksActuallyRun": [
+    {
+      "check": "Official-source recheck and targeted humanizer edit",
+      "result": "Passed on revision attempt 2: Dia FAQ confirms the free Better Browser tier has no AI, the 14-day Better Days trial, AI pausing unless a paid plan is chosen, and staged platform rollout. Gemini Help confirms upload controls in both Gemini Apps and Gemini in Chrome, plus gradual rollout and eligibility conditions. Current Perplexity plan table confirms Free has no Browser Agent (Comet Assistant) queries; this is scoped to agent queries. Applied a focused bilingual prose pass preserving conditions and distinctions."
+    },
+    {
+      "check": "TypeScript parser, transpile and VM runtime evaluation",
+      "result": "Passed on final bytes for both content modules with zero TypeScript syntax diagnostics. 2026-10-24 runtime copies: comet-vs-dia EN 1618 words, ZH-CN 2469 Han characters; ai-browser-pdf-summary EN 1671 words, ZH-CN 2520 Han characters. Both meet section/FAQ/internal-link requirements and keep FAQ strings plain. 2026-10-22 guide module parse and runtime exports also passed."
+    },
+    {
+      "check": "Research JSON parse",
+      "result": "Passed after final evidence updates."
+    },
+    {
+      "check": "Build, full test suite, product trial, deployment, live page, indexing",
+      "result": "Not run. No product trial, paid call, publication or indexing request was performed."
+    }
+  ],
+  "openCaveats": [
+    "Search-snapshot vote counts and publication dates are frozen separately from current direct-page relative age; public Reddit counts can change.",
+    "Reddit evidence is anecdotal and is not site traffic, search volume, representative sentiment or proof of trend.",
+    "Dia Better Answers pricing conflict remains unresolved pending checkout confirmation.",
+    "Gemini in Chrome help timed out on the first research pass and was successfully fetched on review revision attempt 2; eligibility statements reflect 2026-10-24.",
+    "Comet is free to download, while the current plan matrix lists no Browser Agent queries on Free; the article does not generalize that row to all search/chat features."
+  ]
+}
