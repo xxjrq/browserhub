@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-25",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "attentionRequired": false,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "48bf9f4a0080fb95f54b101b0ca39e7f677b166e83622e2608891b3230ea0900",
+  "commit": "92b8689acee26012687d55eff2398ccefd9d0ab2",
+  "release": "/opt/browsertools/releases/20261025-092635",
+  "completedAt": "2026-10-25T01:27:36.435Z",
+  "newTopics": [
+    "gemini-in-chrome-vs-copilot-in-edge",
+    "ai-browser-youtube-summary",
+    "browser-agent-shadow-dom",
+    "browser-agent-date-picker",
+    "browser-agent-scroll-pagination"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "urls": [
+    "https://browserhub.co/en/guides/gemini-in-chrome-vs-copilot-in-edge/",
+    "https://browserhub.co/zh-cn/guides/gemini-in-chrome-vs-copilot-in-edge/",
+    "https://browserhub.co/en/guides/ai-browser-youtube-summary/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-youtube-summary/",
+    "https://browserhub.co/en/guides/browser-agent-shadow-dom/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-shadow-dom/",
+    "https://browserhub.co/en/guides/browser-agent-date-picker/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-date-picker/",
+    "https://browserhub.co/en/guides/browser-agent-scroll-pagination/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-scroll-pagination/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "dailyTarget": {
+    "minimumNewTopics": 5,
+    "newTopicsDelivered": 5,
+    "completeEditionsDelivered": 10,
+    "bilingualCounting": "English and Chinese count as one independent topic.",
+    "delayedPreviousCycleExcluded": "The five24October topics published on25October are excluded; this is a separate five-topic25October release."
+  },
+  "skills": [
+    "content-strategy",
+    "ai-seo",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "editorialProcess": "Five distinct demand/ownership checks; current public questions and primary documentation; original complete bilingual copy; embedded English/Chinese Humanizer editing; independent Sol actual-source and generated-HTML review; final source SHA256; preflight CI and scoped Git read; frozen original formalgraph CI, commit, push, atomicdeploy and dual-domain acceptance.",
+  "review": {
+    "decision": "approved",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "independentContext": true,
+    "files": 15,
+    "sha256": "ba607433954ceda8493285d9c897e30f6d688d96070d0e90a463fc2f3688b3f3",
+    "exportEvidenceSha256": "709b0fcdc67a5f42661a4b39d5b4f17907f7355adad877cbb2a4ea365715f1fe",
+    "newArticleHtmlCount": 10,
+    "canonicalPages": 14,
+    "remainingBlockers": []
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "agents": [
+      "ai_choices_20261025",
+      "ai_controls_20261025",
+      "ai_navigation_20261025"
+    ],
+    "executionAttempts": [
+      {
+        "agent": "ai_choices_20261025",
+        "attempt": 1,
+        "scope": "Two bilingual browsercomparison and YouTube task articles with currentprimary research."
+      },
+      {
+        "agent": "ai_choices_20261025",
+        "attempt": 2,
+        "reason": "Rebuild malformed serializeddraft and confirm exactlytwo exportedtopics/fourcompleteeditionobjects; actualruntime+fullTypeScript pass."
+      },
+      {
+        "agent": "ai_controls_20261025",
+        "attempt": 1,
+        "scope": "Two bilingual openShadowDOM/datecontrol guides and originalprivatefixture."
+      },
+      {
+        "agent": "ai_controls_20261025",
+        "attempt": 2,
+        "reason": "Integrate exact-byte rootexecuted fixture, concise runinstructions and scoped realtest evidence."
+      },
+      {
+        "agent": "ai_navigation_20261025",
+        "attempt": 1,
+        "scope": "Bilingual boundedpagination/infinite-scroll guide and demandresearch."
+      },
+      {
+        "agent": "ai_navigation_20261025",
+        "attempt": 2,
+        "reason": "Rebuild malformed draftserialization; independent review required prelaunchURLvalidation, boundedwaiting and try/finally browser cleanup; finalactualruntimecheck passed."
+      },
+      {
+        "agent": "ai_choices_20261025",
+        "attempt": 3,
+        "reason": "Correct Google/Microsoft source attribution in video-summary introduction."
+      },
+      {
+        "agent": "ai_controls_20261025",
+        "attempt": 3,
+        "reason": "Correct preliminary-review status and historical TypeScript issue wording; correct unaccepted StackOverflow-answer attribution; distinct metadata/factual repairs."
+      },
+      {
+        "agent": "ai_controls_20261025",
+        "attempt": 4,
+        "reason": "Adapt code presentation to actual paragraph/list/table/link renderer; retain tested code as downloadable fixture and preserve operations in prose."
+      },
+      {
+        "agent": "ai_navigation_20261025",
+        "attempt": 3,
+        "reason": "Move exact reviewed bounded CommonJS sample into syntax-checked downloadable asset; replace unsupported fenced presentation with prose and readable run instructions."
+      },
+      {
+        "agent": "ai_navigation_20261025",
+        "attempt": 4,
+        "reason": "Narrow CommonJS-download lint correction: dynamicimport inside existingasync entry afterURLvalidation; node syntax, targetedESLint and reviewer codecheck passed. No browser/livewebsite execution."
+      }
+    ],
+    "coordination": "Root integrated sharedmetadata, seriesnavigation, homepage, keywordownership, auditallowlist and research; rootexecuted the exact-byte syntheticcontrolsfixture and ten-edition runtimecontract. Independent Sol reviewed actual primarysources,15final sourcefiles,10article editions,14canonical exportedpages and bothassets, then approved final hashes after CI03 passed. Model effective identities and tokenusage were not reported. Only the original formal graph committed/pushed/deployed content.",
+    "escalationAssessment": "No same unresolved problem persisted after three distinct corrective approaches; separate draftserialization, code-lifecycle and integration concerns resolved. Requested rolemodels retained.",
+    "attemptAccounting": "Stages preserved, including separate factual and renderer-compatibility changes; these are not three unsuccessful approaches to the same unresolved issue. No shared runtime/component/contract change."
+  },
+  "resolvedFindings": [
+    "Rebuilt malformed initial serialization; final runtime checks confirm all five topic keys and ten complete copies.",
+    "Corrected Google/Microsoft route attribution, StackOverflow unaccepted-answer wording and preliminary-review receipt wording.",
+    "Bounded navigation sample validates HTTP(S) URL before browser launch, handles empty results, uses finite waits, finally browser cleanup and outer rejection handling.",
+    "Existing SectionBody supports paragraphs/lists/tables/links, not fenced code. Kept readable operations in prose and moved runnable samples into reviewed downloads; no renderer/runtime/contract changes.",
+    "CommonJS example uses dynamic import inside the async entry to satisfy project lint, with reader-project-root save/run instructions."
+  ],
+  "validation": {
+    "preflightCiAttempts": [
+      {
+        "attempt": 1,
+        "exitCode": 0,
+        "note": "Initial build passed; independent review then identified factual/render presentation issues."
+      },
+      {
+        "attempt": 2,
+        "exitCode": 1,
+        "note": "Only new CommonJS example require import failed the project ESLint rule; narrow source fix followed."
+      },
+      {
+        "attempt": 3,
+        "exitCode": 0,
+        "logPath": ".local/workflows/cycles/content-2026-10-25/preflight-ci-03.log",
+        "checkedAt": "2026-10-25T01:22:46.350343+00:00"
+      }
+    ],
+    "readOnlyGitPreflight": {
+      "checkedAt": "2026-10-25T01:21:27.974199+00:00",
+      "scopedUsername": "xxjrq",
+      "exitCode": 0,
+      "stdout": "e271662f025b7f53e34ccc78d9a1b3e66457c371\trefs/heads/main\n",
+      "stderr": ""
+    },
+    "formalGraphCiExitCode": 0,
+    "htmlFiles": 1218,
+    "guideTopics": 54,
+    "completeGuideEditions": 108,
+    "seoAudit": {
+      "htmlPages": 1214,
+      "sitemapUrls": 976,
+      "internalLinks": 40575,
+      "alternateLinks": 7430,
+      "fallbackPages": 60,
+      "editorialGuides": 108,
+      "errors": 0
+    },
+    "productEvidence": {
+      "products": 36,
+      "confirmedPriceOrLicenceRecords": 26,
+      "explicitlyUnverifiedPrices": 10
+    },
+    "workspaceScope": "Exactly15 reviewed content/research/navigation/audit/template files; unrelated changes absent.",
+    "serverCurrentReadlink": {
+      "checkedAt": "2026-10-25T01:27:43.863519+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261025-092635",
+      "expectedRelease": "/opt/browsertools/releases/20261025-092635",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "ok": true,
+    "checkedAt": "2026-10-25T01:27:36.339Z",
+    "responseCount": 28,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-youtube-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-youtube-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-youtube-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-youtube-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-shadow-dom/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-shadow-dom/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-shadow-dom/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-shadow-dom/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-date-picker/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-date-picker/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-date-picker/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-date-picker/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-scroll-pagination/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-scroll-pagination/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-scroll-pagination/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-scroll-pagination/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-25T01:27:45.265999+00:00",
+    "ok": true,
+    "release": "/opt/browsertools/releases/20261025-092635",
+    "results": [
+      {
+        "url": "https://browserhub.co/templates/agent-shadow-date-playwright.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "3134f6c4afcf06c4f6b3c46b7807cff017cf1f8d81621771fb2a80bca05d6d9a",
+        "expectedSha256": "3134f6c4afcf06c4f6b3c46b7807cff017cf1f8d81621771fb2a80bca05d6d9a",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/agent-shadow-date-playwright.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "3134f6c4afcf06c4f6b3c46b7807cff017cf1f8d81621771fb2a80bca05d6d9a",
+        "expectedSha256": "3134f6c4afcf06c4f6b3c46b7807cff017cf1f8d81621771fb2a80bca05d6d9a",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browserhub.co/templates/agent-pagination-playwright.cjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "b4d7c51988481900195ab85720028a3d4955ee25459e306235537c69aa610aca",
+        "expectedSha256": "b4d7c51988481900195ab85720028a3d4955ee25459e306235537c69aa610aca",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/agent-pagination-playwright.cjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "b4d7c51988481900195ab85720028a3d4955ee25459e306235537c69aa610aca",
+        "expectedSha256": "b4d7c51988481900195ab85720028a3d4955ee25459e306235537c69aa610aca",
+        "bytesMatch": true,
+        "error": null
+      }
+    ],
+    "scope": "Read-only HTTP and exact source/export/download byte verification; does not execute remote example tasks."
+  },
+  "offlineValidation": {
+    "cycleId": "content-2026-10-25",
+    "checkedAt": "2026-10-25T01:09:17.339121+00:00",
+    "asset": "public/templates/agent-shadow-date-playwright.mjs",
+    "sourcePrivatePath": ".local/workflows/cycles/content-2026-10-25/proposed-controls-fixture.mjs",
+    "sha256": "3134f6c4afcf06c4f6b3c46b7807cff017cf1f8d81621771fb2a80bca05d6d9a",
+    "byteIdenticalPrivateCopy": true,
+    "execution": {
+      "node": "v22.22.3",
+      "playwright": "1.64.1",
+      "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "installedChromeAppVersion": "155.0.8059.85",
+      "browserReportedVersion": null,
+      "macOsVersion": "15.6",
+      "exitCode": 0,
+      "stdout": "{\"fixture\":\"synthetic local HTML; application requests blocked\",\"shadowDom\":\"passed\",\"nativeDateInput\":\"passed\",\"customDateDialog\":\"passed\",\"externalNavigation\":\"not used\",\"realFormSubmission\":\"not used\"}\n",
+      "stderr": ""
+    },
+    "scope": "Original synthetic local HTML assertions for open Shadow DOM button/dialog, native date input ISO value, custom dialog date selection/value/closure. Application context requests blocked; browser/OS background traffic outside assertion. No external sites, closed roots, slots, browser-owned native picker UI, locale matrix, real form submission, MFA, CAPTCHA or LLM/agent performance tested."
+  },
+  "navigationExampleValidation": {
+    "asset": "public/templates/agent-pagination-playwright.cjs",
+    "sha256": "b4d7c51988481900195ab85720028a3d4955ee25459e306235537c69aa610aca",
+    "syntaxCheck": "passed",
+    "targetedEslint": "passed",
+    "independentCodeReview": "passed",
+    "browserExecution": false,
+    "scope": "Documented bounded navigation example, not a live-site or agent benchmark. Download byte checks do not execute the script."
+  },
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "measuredSearchVolume": null,
+    "rank": null,
+    "note": "Public SERP questions and platform counts are editorial evidence, not BrowserHub queries/traffic; publication and page counts do not establish growth."
+  },
+  "sourceRecords": [
+    "docs/seo/research-2026-10-25.json",
+    "docs/seo/research-ai-choices-2026-10-25.json",
+    "docs/seo/research-ai-controls-2026-10-25.json",
+    "docs/seo/research-ai-navigation-2026-10-25.json"
+  ],
+  "operationsNotPerformed": [
+    "Index or sitemap submissions",
+    "New detection website development",
+    "EasyBR client/backend changes",
+    "Outreach",
+    "New paid subscriptions or paid model API calls"
+  ],
+  "history": {
+    "content-2026-10-20": "Historical user-permitted manual business completion and four dual-domain live receipts checked; original graph preserved, no replay.",
+    "content-2026-10-24": "Explicit human-authorized manual business completion checked against successful original push, supplementalpublish/currentrelease,32HTML+2assetchecks; originaljournal preserved and not replayed. Delayed topics not recounted today.",
+    "otherPriorCompletedCycles": "21,21batch02,22,23 preserved, not rerun."
+  }
+}
