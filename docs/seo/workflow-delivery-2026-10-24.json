@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "publishedDateAsiaShanghai": "2026-10-25",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-24",
+  "status": "project_manual_reconciled",
+  "runtimeStatus": "needs_reconciliation",
+  "graphExecutionCompleted": false,
+  "attentionRequired": false,
+  "commit": "e5933ddb36826ca05ee6f6ad38e413f01b7c87be",
+  "release": "/opt/browsertools/releases/20261025-085322",
+  "completedAt": "2026-10-25T00:54:22.622Z",
+  "manifestSha256": "d1db10551516c0d45af6d51253b6682c6c200f55c0342a4030e17a596f69530a",
+  "newTopics": [
+    "comet-vs-dia",
+    "ai-browser-pdf-summary",
+    "browser-agent-human-takeover",
+    "browser-agent-iframes",
+    "browser-agent-tabs-popups"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "oldEnhancements": [
+    "comet-vs-gemini-in-chrome"
+  ],
+  "oldEnhancementCount": 1,
+  "dailyCounting": "Five new topics belong to the original 24 October editorial cycle; bilingual editions count once. Delayed publication on 25 October is not five additional 25 October topics.",
+  "urls": [
+    "https://browserhub.co/en/guides/comet-vs-dia/",
+    "https://browserhub.co/zh-cn/guides/comet-vs-dia/",
+    "https://browserhub.co/en/guides/ai-browser-pdf-summary/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-pdf-summary/",
+    "https://browserhub.co/en/guides/browser-agent-human-takeover/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-human-takeover/",
+    "https://browserhub.co/en/guides/browser-agent-iframes/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-iframes/",
+    "https://browserhub.co/en/guides/browser-agent-tabs-popups/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-tabs-popups/",
+    "https://browserhub.co/en/guides/comet-vs-gemini-in-chrome/",
+    "https://browserhub.co/zh-cn/guides/comet-vs-gemini-in-chrome/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "agents": [
+      "ai_choices_20261024",
+      "ai_context_20261024",
+      "ai_handoff_20261024"
+    ],
+    "executionAttempts": [
+      {
+        "agent": "ai_choices_20261024",
+        "attempt": 1,
+        "scope": "Two bilingual consumer guides, Comet/Dia and PDF workflow"
+      },
+      {
+        "agent": "ai_choices_20261024",
+        "attempt": 2,
+        "reason": "Independent source review: explicit no-AI free Dia tier, Chrome native upload route/current eligibility, precise Comet Browser Agent queries paid-tier distinction and narrow old-guide factual enhancement; final runtime serialization verified"
+      },
+      {
+        "agent": "ai_context_20261024",
+        "attempt": 1,
+        "scope": "Two bilingual developer guides on frames and tabs/popups"
+      },
+      {
+        "agent": "ai_context_20261024",
+        "attempt": 2,
+        "reason": "Root requested original offline synthetic fixture; finite timeout and application request blocking; missing Page API added; syntax corrected and actual root execution passed"
+      },
+      {
+        "agent": "ai_handoff_20261024",
+        "attempt": 1,
+        "scope": "Bilingual manual takeover workflow"
+      },
+      {
+        "agent": "ai_handoff_20261024",
+        "attempt": 2,
+        "reason": "Independent review: localized Chinese English link wrapper, corrected account-change wording and removed duplicate setup links"
+      }
+    ],
+    "coordination": "Root integrated shared data/navigation/keyword/audit/research and ran exact-byte synthetic browser fixture; Sol independently reviews actual source, facts and final export. Actual model identifiers unreported. Root normalized eight context article prose guide links to canonical trailing slashes. A private validation false-positive for language-neutral template links was corrected before final CI.",
+    "escalationAssessment": "Initial syntax and independent source/localization findings resolved with actual runtime/CI verification. No same unresolved issue after three distinct execution approaches. Assigned role models retained; actual identifiers unknown."
+  },
+  "skills": [
+    "content-strategy",
+    "ai-seo",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "review": {
+    "decision": "approved",
+    "files": 15,
+    "sha256": "dcfc8b553ed142eba857a51591b5599b617f5ea35e7bde5aa836a4bcbb80eb5e",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "independentContext": true,
+    "currentExportReviewSha256": "ef8d695cba8ac9228be388378ca2ff0b741e5b3fa13529ae80a00baa8503315b",
+    "operationReviewSha256": "4c478aab05a097f5b8a8e23366bcc491afe382d7f3e20ef48d56c22c8380218d"
+  },
+  "validation": {
+    "formalGraphCiExitCode": 0,
+    "htmlFiles": 1203,
+    "auditedHtmlPages": 1199,
+    "sitemapUrls": 966,
+    "guideTopics": 49,
+    "completeGuideEditions": 98,
+    "seoErrors": 0,
+    "productEvidence": {
+      "products": 36,
+      "confirmedPriceOrLicenceRecords": 26,
+      "explicitlyUnverifiedPrices": 10
+    },
+    "frozenOutputFiles": 6054,
+    "frozenOutputManifestSha256": "4006e6935b62b370507e0d5631107549984209c9c7b51e3700a11c73aa7e6c03"
+  },
+  "live": {
+    "ok": true,
+    "checkedAt": "2026-10-25T00:54:16.462Z",
+    "responseCount": 32,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-vs-dia/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-vs-dia/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-vs-dia/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-vs-dia/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-pdf-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-pdf-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-pdf-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-pdf-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-human-takeover/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-human-takeover/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-human-takeover/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-human-takeover/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-iframes/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-iframes/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-iframes/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-iframes/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-tabs-popups/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-tabs-popups/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-tabs-popups/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-tabs-popups/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-vs-gemini-in-chrome/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-25T00:54:18.427Z",
+    "expectedSha256": "311fabeefec1854134a32fc688cdc423ae706051f956ba365b53b8e1bf74f9be",
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/templates/agent-frame-popup-playwright.mjs",
+        "status": 200,
+        "exitCode": 0,
+        "sha256": "311fabeefec1854134a32fc688cdc423ae706051f956ba365b53b8e1bf74f9be",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/agent-frame-popup-playwright.mjs",
+        "status": 200,
+        "exitCode": 0,
+        "sha256": "311fabeefec1854134a32fc688cdc423ae706051f956ba365b53b8e1bf74f9be",
+        "bytesMatch": true
+      }
+    ]
+  },
+  "offlineValidation": {
+    "cycleId": "content-2026-10-24",
+    "checkedAt": "2026-10-24T01:05:55.566320+00:00",
+    "asset": "public/templates/agent-frame-popup-playwright.mjs",
+    "sha256": "311fabeefec1854134a32fc688cdc423ae706051f956ba365b53b8e1bf74f9be",
+    "byteIdenticalPrivateCopy": true,
+    "execution": {
+      "node": "v22.22.3",
+      "playwright": "1.64.1",
+      "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "installedChromeAppVersion": "155.0.8059.85",
+      "browserReportedVersion": null,
+      "macOsVersion": "15.6",
+      "exitCode": 0,
+      "stdout": "{\"fixture\":\"synthetic fixture; application requests blocked\",\"frame\":\"passed\",\"popup\":\"passed\",\"authentication\":\"not used\"}\n",
+      "stderr": ""
+    },
+    "scope": "Actual offline synthetic srcdoc iframe field/action and about:blank popup URL/opener/content assertions. Context blocks application requests. Browser/OS background traffic is outside this assertion. No real site, cross-origin fixture, agent/LLM, auth, CAPTCHA or production-task success tested."
+  },
+  "manualReconciliation": {
+    "humanAuthorizedDateAsiaShanghai": "2026-10-25",
+    "authorizationReceiptSha256": "2625ee0b3644ef0be538a8e419e8805526ce40cde15213d281bc22e143e1a919",
+    "scope": "User explicitly authorized supplemental publication of the same original cycle and approved commit, retaining the original journal.",
+    "originalPublishExitCode": 255,
+    "originalPublishReceiptSha256": "616134c50cc3efade85a1db45ce9b0fe4b28e0ba835155ebe1bbd35dc4cbd5fd",
+    "originalPushReceiptSha256": "ae324761ef88d8dc062e48bf7ae22f17575fdf5a8804ecf68307ff0413c7244f",
+    "supplementalPublishReceiptSha256": "d9e71c2d70982b383296986308ffe6f17bf0b7fdfcdac4555458c041673bfd25",
+    "supplementalExecutor": "scripts/deploy.sh",
+    "intentPreserved": true,
+    "originalJournalPreserved": true,
+    "originalRuntimeStatus": "needs_reconciliation",
+    "graphExecutionCompleted": false,
+    "businessAcceptance": "Original push succeeded; authorized same-cycle supplemental deployment succeeded; recorded release matches current; all32 dual-domain HTML and2 downloadable-asset checks passed. Do not resend or resume original unknown publication.",
+    "exceptionScope": "This explicit authorization and completed evidence apply only to content-2026-10-24; unrelated unknown external outcomes retain reconciliation restrictions."
+  },
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "measuredSearchVolume": null,
+    "rank": null,
+    "note": "Public research signals are editorial evidence, not site queries or traffic. Publication/page counts are not proof of growth."
+  },
+  "sourceRecords": [
+    "docs/seo/research-2026-10-24.json",
+    "docs/seo/research-ai-choices-2026-10-24.json",
+    "docs/seo/research-ai-context-2026-10-24.json",
+    "docs/seo/research-ai-handoff-2026-10-24.json"
+  ],
+  "operationsNotPerformed": [
+    "Index or sitemap submissions",
+    "Detection website development",
+    "EasyBR client/backend changes",
+    "Outreach",
+    "New paid subscriptions or paid model API calls"
+  ]
+}
