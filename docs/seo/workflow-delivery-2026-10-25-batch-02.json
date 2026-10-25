@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-25-batch-02",
+  "status": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeStatus": "completed",
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "commit": "061956661d182489517264b9f2a36e9b2d5cb91f",
+  "release": "/opt/browsertools/releases/20261025-104049",
+  "completedAt": "2026-10-25T03:00:53.565Z",
+  "newTopicCount": 0,
+  "oldEnhancements": [
+    "chrome-devtools-mcp-existing-browser",
+    "playwright-mcp-vs-chrome-devtools-mcp"
+  ],
+  "oldEnhancementCount": 2,
+  "completeLocalizedCopiesUpdated": 4,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "dailyNewTopicsDeliveredInBaseCycle": 5,
+  "dailyCounting": "Base25five independent new topics remain counted once. This batch adds two existing-owner refreshes, not new topics. Delayed24topics are excluded.",
+  "urls": [
+    "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+    "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+    "https://browserhub.co/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+    "https://browserhub.co/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "editorialProcess": "Current public demand/competitor research; existing intent ownership; official version documentation; original bounded reproducible local fixture; embedded EN/ZH Humanizer editing; independent actual-source/export review; final SHA256 freeze; original formal CI/commit/push/atomic release/dual-domain verification.",
+  "review": {
+    "decision": "approved",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffort": null,
+    "independentContext": true,
+    "fileCount": 9,
+    "sha256": "347c023572a7e14da32e88ada57517655ec3627c5f67a6c68f27aa9994ee39b7"
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "agent": "mcp_execution_refresh_20261025",
+    "executionAttempts": [
+      {
+        "attempt": 1,
+        "scope": "Current official sources, isolated deterministic MCP SDK fixture and bilingual owner refresh."
+      },
+      {
+        "attempt": 2,
+        "reason": "Strengthen assertion to separate post-Save output, add finite cleanup and preserve real execution metadata."
+      },
+      {
+        "attempt": 3,
+        "reason": "Replace unexecuted custom public protocol client with exact proven SDK runner and execute final public bytes; correct provenance and Node engine copy."
+      }
+    ],
+    "escalationAssessment": "Separate source/assertion/public-portability concerns resolved; no same unresolved problem after three different approaches. No architecture/runtime changes.",
+    "integration": "Root maintained homepage, keyword ownership, strategy and handoff. Requested model identities recorded; actual identities and token usage unreported. Independent export review found English localized home used oldest-eight order; root promoted two existing owners without changing rendering or routing."
+  },
+  "validation": {
+    "preflight": {
+      "checkedAt": "2026-10-25T02:33:04.585650+00:00",
+      "command": "npm run ci",
+      "attempt": 2,
+      "exitCode": 0,
+      "reasonForRepeat": "After first pass, independent export review found English home missing refreshed-owner entry. Minimal homepage navigation correction required new preflight.",
+      "logPath": ".local/workflows/cycles/content-2026-10-25-batch-02/preflight-ci-02.log",
+      "logSha256": "b60756acc06c93c4088f5252ee580ff653f79b9fd5c56fa3d1197a2f7559005c",
+      "htmlFiles": 1218,
+      "seoAudit": {
+        "htmlPages": 1214,
+        "sitemapUrls": 976,
+        "internalLinks": 40596,
+        "alternateLinks": 7430,
+        "fallbackPages": 60,
+        "editorialGuides": 108,
+        "errors": 0
+      },
+      "productEvidence": {
+        "products": 36,
+        "confirmedPriceOrLicenceRecords": 26,
+        "explicitlyUnverifiedPrices": 10
+      }
+    },
+    "preflightFirstAttempt": "Passed; independent export review then found English home lacked featured owners. Minimal navigation correction justified second CI; prior logs retained.",
+    "gitRead": {
+      "checkedAt": "2026-10-25T02:24:09.379470+00:00",
+      "command": "git ls-remote origin refs/heads/main",
+      "exitCode": 0,
+      "remote": "https://github.com/xxjrq/browserhub.git",
+      "main": "e036dfabee2da475a310de03b723559f79f64500",
+      "repositoryScopedUsername": "xxjrq",
+      "credentialSource": "repository helper reads local account tool; no secrets output or persisted; global account unchanged"
+    },
+    "formalCiExitCode": 0,
+    "serverCurrent": {
+      "checkedAt": "2026-10-25T02:54:01.128642+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261025-104049",
+      "expectedRelease": "/opt/browsertools/releases/20261025-104049",
+      "matches": true,
+      "command": "ssh browserhub-deploy readlink -f /opt/browsertools/current"
+    }
+  },
+  "live": {
+    "checkedAt": "2026-10-25T03:00:53.388Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-25T02:50:26.174486+00:00",
+    "ok": true,
+    "release": "/opt/browsertools/releases/20261025-104049",
+    "results": [
+      {
+        "url": "https://browserhub.co/templates/mcp-local-attach-check.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "e8fe4c219e8c2c919ed924c0200a2b07fc53242440caf85c676a9b155353ea51",
+        "expectedSha256": "e8fe4c219e8c2c919ed924c0200a2b07fc53242440caf85c676a9b155353ea51",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/mcp-local-attach-check.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "e8fe4c219e8c2c919ed924c0200a2b07fc53242440caf85c676a9b155353ea51",
+        "expectedSha256": "e8fe4c219e8c2c919ed924c0200a2b07fc53242440caf85c676a9b155353ea51",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browserhub.co/templates/mcp-local-attach-results.json",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "50fc43af0c2c941fc4725b00051676ddc57302b578e4010f1f8981c6295aa4e4",
+        "expectedSha256": "50fc43af0c2c941fc4725b00051676ddc57302b578e4010f1f8981c6295aa4e4",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/mcp-local-attach-results.json",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "50fc43af0c2c941fc4725b00051676ddc57302b578e4010f1f8981c6295aa4e4",
+        "expectedSha256": "50fc43af0c2c941fc4725b00051676ddc57302b578e4010f1f8981c6295aa4e4",
+        "bytesMatch": true,
+        "error": null
+      }
+    ],
+    "scope": "Read-only HTTP and exact source/export/download byte verification; does not execute remote example tasks."
+  },
+  "localExecution": {
+    "sourceRecord": "docs/seo/research-mcp-refresh-2026-10-25.json",
+    "publicRunner": {
+      "path": "public/templates/mcp-local-attach-check.mjs",
+      "sha256": "e8fe4c219e8c2c919ed924c0200a2b07fc53242440caf85c676a9b155353ea51"
+    },
+    "finalPublicBytesExecuted": true,
+    "exitCode": 0,
+    "assertions": "Both packages produced synthetic-ok in separate post-Save output nodes.",
+    "scope": "Pinned SDK calls, Chrome155, disposable profiles and local synthetic form only. No LLM agent, production data, external site, autoConnect consent or reliability benchmark."
+  },
+  "sourceRecords": [
+    "docs/seo/strategy-research-2026-10-25.json",
+    "docs/seo/research-mcp-refresh-2026-10-25.json"
+  ],
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "rank": null,
+    "measuredSearchVolume": null,
+    "note": "This is publication acceptance, not proof of traffic growth. Effect cohorts and account analytics remain private; weekly iteration continues."
+  },
+  "operationsNotPerformed": [
+    "Index submissions",
+    "New detection website",
+    "Client/backend changes",
+    "Outreach",
+    "New paid subscriptions/APIs"
+  ],
+  "resolvedPublicationIssue": {
+    "cause": "Cloudflare Email Address Obfuscation rewrote three literal npm package/version strings in each comparison locale body. Origin already matched reviewed export.",
+    "firstVerification": {
+      "ok": false,
+      "bodyMismatches": 2,
+      "allHttp200": true,
+      "rawFailurePreserved": true
+    },
+    "remediation": {
+      "zone": "browserhub.co",
+      "ruleName": "Preserve MCP installation commands",
+      "host": "browserhub.co",
+      "exactPaths": [
+        "/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/"
+      ],
+      "settings": {
+        "email_obfuscation": false
+      },
+      "activeRuleCount": 1,
+      "persistedReadbackVerified": true,
+      "independentSupplementalReview": true,
+      "officialReference": "https://developers.cloudflare.com/waf/tools/scrape-shield/email-address-obfuscation/"
+    },
+    "recovery": "Resumed original failed read-only verification node; successful content commit, push and atomic deployment were preserved and not repeated. Source hashes, definition and original journal unchanged.",
+    "finalVerification": {
+      "ok": true,
+      "dualDomainResponses": 16
+    }
+  }
+}
