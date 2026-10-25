@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "status": "researched_execution_plan_not_a_content_release",
+  "purpose": "Learn evidenced SEO/content methods and apply a bounded strategy to BrowserHub instead of quota-driven publishing. No traffic, ranking or backlink gain is claimed.",
+  "researchMethod": {
+    "liveWeb": true,
+    "primarySourcesOpened": true,
+    "firecrawl": "Previously observed insufficient credits; existing web search used without new subscription.",
+    "paidSeoDatasetsAvailable": false,
+    "searchVolumes": null,
+    "competitorTraffic": null,
+    "competitorReferringDomains": null,
+    "publicSearchNotSiteQueries": true
+  },
+  "sources": [
+    {
+      "url": "https://ahrefs.com/blog/seo-content-strategy/",
+      "observedOn": "2026-10-25",
+      "sourceDateDisplayed": "2022-11-22",
+      "type": "Publisher explains its own framework",
+      "observed": "Selection includes search traffic potential, business value, ranking feasibility, intent fit and maintenance.",
+      "adaptation": "Before work, record who searches, the task, why BrowserHub can answer distinctly, and the next useful reader action. No paid volume estimates fabricated."
+    },
+    {
+      "url": "https://ahrefs.com/blog/republishing-content/",
+      "observedOn": "2026-10-25",
+      "sourceDateDisplayed": "Updated2025-10-30",
+      "type": "Publisher refresh workflow and self-reported examples",
+      "observed": "Prioritize pages, validate update value, inspect competing results, fill gaps, then measure and iterate.",
+      "adaptation": "Improve existing intent owners with substantial changes. Do not merely change dates or promise their self-reported uplift."
+    },
+    {
+      "url": "https://www.animalz.co/blog/information-gain",
+      "observedOn": "2026-10-25",
+      "sourceDateDisplayed": "Original2022-06-28; refreshed2025-11-14",
+      "type": "Content-agency argument; not official ranking mechanism",
+      "observed": "Argues for additive original information instead of repeating comprehensive guides; explicitly distinguishes theory from confirmed Google use.",
+      "adaptation": "Require a concrete added benefit such as a reproducible failure case, original local test or useful decision aid. No claim of a confirmed Google information-gain score."
+    },
+    {
+      "url": "https://www.browserbase.com/templates/playwright",
+      "observedOn": "2026-10-25",
+      "type": "Directly observed developer content/activation flow",
+      "observed": "Named task, TypeScript/Python entry points, scaffold commands, prerequisite service key and explicit steps.",
+      "adaptation": "Keep examples findable and runnable with prerequisites and expected outputs. Do not imply their cloud service is free or locally tested by BrowserHub."
+    },
+    {
+      "url": "https://www.checklyhq.com/blog/playwright-tests-in-sequence/",
+      "observedOn": "2026-10-25",
+      "sourceDateDisplayed": "2025-03-04; updated2025-03-31",
+      "type": "Vendor-authored technical article",
+      "observed": "Starts with a concrete developer problem; explains fixtures/hooks with code, video and docs links.",
+      "adaptation": "Write around a complete developer task, explain failure causes, and link to the next relevant solution. Product-led usefulness is an observed pattern, not causal traffic proof."
+    },
+    {
+      "url": "https://docs.browserless.io/examples",
+      "observedOn": "2026-10-25",
+      "type": "Directly observed examples navigation",
+      "observed": "Examples organized by tasks, frameworks and languages, including login/session reuse and downloads.",
+      "adaptation": "Group existing articles/assets into practical journeys instead of an undifferentiated long series. Do not build the deferred detection website."
+    },
+    {
+      "url": "https://launchrepo.dev/compare/playwright-mcp-vs-chrome-devtools-mcp/",
+      "observedOn": "2026-10-25",
+      "sourceDateDisplayed": "2026-09-30",
+      "type": "Directly observed comparison with author-reported test method",
+      "observed": "Separates reported test results from documented-only features, lists pinned versions and repetition, and offers reproduction.",
+      "adaptation": "Borrow the evidence structure, not their numbers or prose. Their reported results were not independently reproduced in this research."
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "observedOn": "2026-10-25",
+      "type": "Official Google guidance, opened in sameongoingconversation",
+      "observed": "Original useful information, substantive value and clear sourcing; production volume alone is not evidence of quality.",
+      "adaptation": "No word quota, schema/skill-count ranking promise or fabricated experience."
+    }
+  ],
+  "installedSkills": [
+    {
+      "name": "competitor-profiling",
+      "path": "/Users/myd/.codex/skills/competitor-profiling/SKILL.md",
+      "version": "2.1.4",
+      "sha256": "dd97331ef22b65be8dc75ee36e6ccb154096e2303aac2f7d627f3d002191a8ae",
+      "repository": "https://github.com/coreyhaines31/marketingskills",
+      "ref": "e85f3cbc2e4a79bf33b2a12e9bdd9087d414735b",
+      "sourcePath": "skills/competitor-profiling",
+      "status": "installed_and_core_instructions_read; automatically available nextturn",
+      "executedExternalActions": false
+    },
+    {
+      "name": "analytics",
+      "path": "/Users/myd/.codex/skills/analytics/SKILL.md",
+      "version": "2.2.1",
+      "sha256": "675e284b745837d595aa4d36903cb54b3921181fd343cc519d31f34fe8002196",
+      "repository": "https://github.com/coreyhaines31/marketingskills",
+      "ref": "e85f3cbc2e4a79bf33b2a12e9bdd9087d414735b",
+      "sourcePath": "skills/analytics",
+      "status": "installed_and_core_instructions_read; automatically available nextturn",
+      "executedExternalActions": false
+    },
+    {
+      "name": "site-architecture",
+      "path": "/Users/myd/.codex/skills/site-architecture/SKILL.md",
+      "version": "2.1.0",
+      "sha256": "55c0128ac29f628944444f8850b97913517f57131673824ebcad4d5ffb26ddd2",
+      "repository": "https://github.com/coreyhaines31/marketingskills",
+      "ref": "e85f3cbc2e4a79bf33b2a12e9bdd9087d414735b",
+      "sourcePath": "skills/site-architecture",
+      "status": "installed_and_core_instructions_read; automatically available nextturn",
+      "executedExternalActions": false
+    },
+    {
+      "name": "link-building",
+      "path": "/Users/myd/.codex/skills/link-building/SKILL.md",
+      "version": "1.0.1",
+      "sha256": "1ba02b7d18057351f654bdd9c4105dfbcbd94e19cf973f5ca1db6115d96ea321",
+      "repository": "https://github.com/coreyhaines31/marketingskills",
+      "ref": "e85f3cbc2e4a79bf33b2a12e9bdd9087d414735b",
+      "sourcePath": "skills/link-building",
+      "status": "installed_and_core_instructions_read; automatically available nextturn",
+      "executedExternalActions": false
+    }
+  ],
+  "retainedSkills": [
+    "seo-audit",
+    "content-strategy",
+    "ai-seo",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "qualityGates": [
+    {
+      "id": "demand",
+      "deliverable": "Target question, current result URLs, observed public demand and existing owner; distinguish ownGSC queries from public discovery.",
+      "reject": "Only a fashionable title with no user task or evidence."
+    },
+    {
+      "id": "feasibility",
+      "deliverable": "Read at least3 relevant competing pages and note which part BrowserHub can make more useful; link/authority metrics unknown unless actually obtained.",
+      "reject": "Assuming a new domain will beat official docs by writing longer."
+    },
+    {
+      "id": "added-value",
+      "deliverable": "A specific original explanation, configuration, tested example or clearly labeled proposed procedure that adds utility.",
+      "reject": "Rewording official docs plus genericFAQ."
+    },
+    {
+      "id": "structure",
+      "deliverable": "Clear next step and relevant internal links within task clusters; keep existing URLs stable.",
+      "reject": "A long unstructured series or repeated keyword pages."
+    },
+    {
+      "id": "distribution",
+      "deliverable": "Inventory existing useful assets, relevant resource pages and genuine mentions; determine page-level authority gap only with data.",
+      "reject": "Assuming no backlinks, buying ranking links or sending unauthorized outreach."
+    },
+    {
+      "id": "measurement",
+      "deliverable": "Matched date/page/language cohorts and validated events with missing values explicit; include reader action after landing.",
+      "reject": "Counting publication, crawlers, totalrequests or skill installs as SEO results."
+    }
+  ],
+  "boundedExistingPageBriefs": [
+    {
+      "owner": "chrome-devtools-mcp-existing-browser",
+      "stage": "candidate_refresh_not_yet_authored_or_published",
+      "evidence": "Existing rendered article and current public results inspected; private analytics has only a very small page-level signal.",
+      "observedExistingAssets": [
+        "Manual attach JSON download",
+        "autoConnect/manual endpoint explanation",
+        "Security and version limits",
+        "Common connection-failure prose"
+      ],
+      "gapToValidate": "No independently documented real connection walkthrough with versioned execution evidence was found in the inspected article.",
+      "proposedIncrement": [
+        "Reuse the currentowner URL",
+        "Add a connection-mode decision matrix",
+        "Use dedicated disposable localprofiles and exact versions for a bounded read-only attach demonstration",
+        "Record actual errors/observed outputs/screenshots if executed; no realuser-account exposure or fakecompatibility claim",
+        "Keep originalconfiguration download and link related setup/comparison guides naturally"
+      ],
+      "notClaimed": "No rewrite or new hands-on test completed by this research."
+    },
+    {
+      "owner": "playwright-mcp-vs-chrome-devtools-mcp",
+      "stage": "candidate_refresh_not_yet_authored_or_published",
+      "evidence": "Existing source and current competing comparison inspected.",
+      "observedExistingAssets": [
+        "Source-based capability comparison",
+        "Links to setup owners",
+        "Explicit no-hands-on-benchmark qualification"
+      ],
+      "proposedIncrement": [
+        "Compare the same small permitted local task with versioned fixtures if resources justify it",
+        "Separate documented capabilities, actually observed results and untested areas",
+        "Include reproducible inputs, failures and cleanup",
+        "Reuse existing synthetic fixtures where applicable; no paidLLM invocation needed for deterministic tool calls"
+      ],
+      "notClaimed": "No competitor benchmark copied; no independent ranking or traffic forecast."
+    }
+  ],
+  "costPolicy": {
+    "batchArticleQuota": "Paused; no automatic five-topics-daily production",
+    "scope": "Prioritize a maximum of1–2 evidence-backed existing-page improvements; do not automatically expand newtopics",
+    "cadence": "Weekly performance review; source research reused until a real change warrants rechecking",
+    "modelUse": "Use code for routine checks; Lunaexecution and independentSolreview only when genuine site/contentchanges are warranted",
+    "publication": "Existing approval, frozen source, CI, original durable workflow and dual-domain acceptance remain required; no bypass or journal rewrite."
+  },
+  "limitations": [
+    "Cannot infer why a competitor ranks or its ROI from public page format alone.",
+    "Ahrefs/agency examples are their own case reports, not a BrowserHub forecast.",
+    "New skills are instructions, not paid keyword data or guaranteed outcomes.",
+    "No paid tools/subscriptions, outreach, new articles, account settings, indexsubmission or website deployment in this research."
+  ]
+}
