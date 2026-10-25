@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "observedAt": "2026-10-25T01:06:29.959633+00:00",
+  "cycleId": "content-2026-10-25",
+  "status": "research_complete_content_prepared_publication_recorded_separately",
+  "primaryDirection": "AI browsers and browser agents",
+  "previousCycle": "24 October five topics were delayed-published on25; excluded from25 new-topic count. Original manual completion receipts verified, not rerun.",
+  "newTopicCountPlanned": 5,
+  "topicPlan": [
+    {
+      "slug": "gemini-in-chrome-vs-copilot-in-edge",
+      "independentIntent": "在现有Chrome与Edge之间按页面上下文、多页研究、权限与可用性选择浏览器内AI，区别于Comet对比和普通AI定义。",
+      "existingOwnerCheck": "All49 existing guide slugs and relevant prior guide headings checked; new independent owner proposed, subject to source and independent review.",
+      "searchVolume": null,
+      "rank": null,
+      "siteQuery": false
+    },
+    {
+      "slug": "ai-browser-youtube-summary",
+      "independentIntent": "为YouTube视频选择受支持的总结路径，核验时间戳和字幕/视频访问边界；区别于PDF和一般资料调研。",
+      "existingOwnerCheck": "All49 existing guide slugs and relevant prior guide headings checked; new independent owner proposed, subject to source and independent review.",
+      "searchVolume": null,
+      "rank": null,
+      "siteQuery": false
+    },
+    {
+      "slug": "browser-agent-shadow-dom",
+      "independentIntent": "排查open shadow DOM、XPath与closed roots的能力边界；区别于iframe和页面生命周期。",
+      "existingOwnerCheck": "All49 existing guide slugs and relevant prior guide headings checked; new independent owner proposed, subject to source and independent review.",
+      "searchVolume": null,
+      "rank": null,
+      "siteQuery": false
+    },
+    {
+      "slug": "browser-agent-date-picker",
+      "independentIntent": "区分原生HTML日期输入与自定义日历，按完整日期选择并核验表单值；区别于一般表单提交。",
+      "existingOwnerCheck": "All49 existing guide slugs and relevant prior guide headings checked; new independent owner proposed, subject to source and independent review.",
+      "searchVolume": null,
+      "rank": null,
+      "siteQuery": false
+    },
+    {
+      "slug": "browser-agent-scroll-pagination",
+      "independentIntent": "识别分页、滚动加载与虚拟列表，设置有限推进和结束证据；区别于结构化抽取字段设计。",
+      "existingOwnerCheck": "All49 existing guide slugs and relevant prior guide headings checked; new independent owner proposed, subject to source and independent review.",
+      "searchVolume": null,
+      "rank": null,
+      "siteQuery": false
+    }
+  ],
+  "backupTopics": [
+    {
+      "slug": "browser-agent-waiting-timeouts",
+      "gate": "Only substitute after distinct intent/source check against debugging-traces owner."
+    },
+    {
+      "slug": "browser-agent-select-dropdowns",
+      "gate": "Only substitute after checking native/custom listbox gap versus forms and scroll owner."
+    }
+  ],
+  "discovery": {
+    "provider": "Available web search fallback",
+    "firecrawlStatus": {
+      "authenticated": true,
+      "creditsDisplayed": "-240 / 1,000",
+      "action": "No further Firecrawl calls or new subscription. Existing web tool used."
+    },
+    "queries": [
+      "Gemini in Chrome vs Copilot Edge current browser compare",
+      "AI browser summarize YouTube video Gemini Chrome Copilot Edge",
+      "Playwright shadow DOM closed root locator problem",
+      "Playwright date picker input type date custom calendar",
+      "Playwright infinite scroll pagination virtual list items no new content",
+      "site:blog.csdn.net playwright 日期选择器 阅读",
+      "site:blog.csdn.net playwright shadow DOM 阅读",
+      "site:blog.csdn.net playwright 无限滚动 分页 阅读"
+    ],
+    "evidenceBoundary": "Observed public SERP results indicate existing questions/content. Not BrowserHub search queries, traffic, measured keyword volume, rank or proof of trending. No CSDN article-level metrics obtained in root combined search; authors must only record what they actually observe."
+  },
+  "initialSignals": [
+    {
+      "url": "https://www.reddit.com/r/GeminiAI/comments/1t1mgza/how_to_let_gemini_know_what_is_in_my_browser/",
+      "observedVia": "search excerpt",
+      "question": "How to let Gemini know what is in my browser",
+      "dateLabel": "search published5monthsago; not used as exactpublicationdate",
+      "displayedReadCount": null,
+      "interpretation": "Historical confusion about webapp and browser context; verify present capabilities from Google/Microsoft official sources."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZkPaJcq2EQo",
+      "observedVia": "search result metadata",
+      "title": "How To Summarize YouTube Videos with AI (FREE)",
+      "publicationDate": "2025-02-15",
+      "displayedViews": "12953 views",
+      "displayedLikes": "64 likes",
+      "interpretation": "Older cumulative publicvideo metadata; not currentgrowth or BrowserHub traffic, not freeplan proof."
+    },
+    {
+      "url": "https://www.reddit.com/r/Playwright/comments/1v4je06/three_playwright_problems_i_got_tired_of_working/",
+      "observedVia": "search excerpt",
+      "title": "Three Playwright problems I got tired of working around (Shadow DOM, fragile selectors, 99K token pages)",
+      "displayedReadCount": null,
+      "interpretation": "Public question/author statement only; official docs determine locator support."
+    },
+    {
+      "url": "https://www.reddit.com/r/webscraping/comments/1qn6gi6/having_a_hard_time_with_infinite_scroll_site/",
+      "observedVia": "search excerpt",
+      "title": "Having a hard time with infinite scroll site",
+      "displayedReadCount": null,
+      "interpretation": "Reported partial extraction is unverified user experience, not our result; technical workflow must use primary docs."
+    }
+  ],
+  "sourceLeafRecords": [
+    "docs/seo/research-ai-choices-2026-10-25.json",
+    "docs/seo/research-ai-controls-2026-10-25.json",
+    "docs/seo/research-ai-navigation-2026-10-25.json"
+  ],
+  "validationPolicy": "Primary official facts, original bilingual content, embedded Humanizer edits, independent Sol actual source/file review, final hashes, preflight CI and scopedGit read, freeze then original formal graph. No liveuser-task benchmarks or productfeatureclaims without evidence.",
+  "modelRoles": {
+    "executor": {
+      "requested": "gpt-6-luna",
+      "effective": null,
+      "reasoning": "high"
+    },
+    "reviewer": {
+      "requested": "gpt-6.1-sol",
+      "effective": null,
+      "reasoning": "high"
+    }
+  },
+  "deferred": [
+    "Index submission",
+    "Detection website development",
+    "EasyBR client/backend",
+    "Outreach",
+    "Paid subscription/API calls"
+  ],
+  "contentPreparedAt": "2026-10-25T01:14:28.062327+00:00",
+  "offlineValidation": {
+    "receipt": ".local/workflows/cycles/content-2026-10-25/fixture-execution.json",
+    "asset": "public/templates/agent-shadow-date-playwright.mjs",
+    "scope": "Actual synthetic local open Shadow DOM, native date value and custom dialog assertions; no external/closedroot/locale matrix/agent benchmark. See topic research record for exact environment and bounds."
+  },
+  "editorialSkillProvenance": [
+    {
+      "name": "humanizer",
+      "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "mode": "embedded actualfile editing; finalcopy independently reviewed; no AI-detection score/authoridentity claim"
+    },
+    {
+      "name": "humanizer-zh",
+      "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+      "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df",
+      "mode": "embedded actualfile editing; finalcopy independently reviewed; no AI-detection score/authoridentity claim"
+    }
+  ],
+  "resolvedEditorialFindings": [
+    "Rebuilt initial malformed serialization; actualruntime keys check covers all10editions.",
+    "Corrected Google/Microsoft route attribution and unaccepted StackOverflow answer provenance.",
+    "Navigationexample now validatesURLbeforelaunch and uses finitewaits,empty-result handling,finallycleanup and rejectedpromise handling.",
+    "Existingrenderer supports nofencedcode; runnableexamples linked as revieweddownloads, technicaloperations explained inprose. Finalexport must bechecked afterrebuild."
+  ],
+  "downloadValidation": [
+    {
+      "path": "public/templates/agent-shadow-date-playwright.mjs",
+      "sha256": "3134f6c4afcf06c4f6b3c46b7807cff017cf1f8d81621771fb2a80bca05d6d9a",
+      "scope": "executed offline synthetic local controls assertions"
+    },
+    {
+      "path": "public/templates/agent-pagination-playwright.cjs",
+      "sha256": "b4d7c51988481900195ab85720028a3d4955ee25459e306235537c69aa610aca",
+      "scope": "node syntax check and independent code/source review only; no live-site run"
+    }
+  ]
+}

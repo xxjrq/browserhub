@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-25",
+  "purpose": "Research record for two distinct browser-agent implementation guides: locating controls across open Shadow DOM boundaries and selecting dates in native versus application-built pickers.",
+  "topicSelection": {
+    "searchObservedAt": "2026-10-25T01:05Z",
+    "searchMethod": "Public web search via the available web search tool, followed by opening the selected public pages. Search result totals and provider-side query volume were not exposed.",
+    "queries": [
+      {
+        "query": "site:stackoverflow.com/questions Playwright shadow DOM locator closed shadow root",
+        "resultCount": null,
+        "observedRelevantResult": "A Playwright locator issue report about a shadow DOM slot selector (issue #33547; version 1.48.2).",
+        "url": "https://github.com/microsoft/playwright/issues/33547"
+      },
+      {
+        "query": "site:stackoverflow.com/questions Playwright date picker calendar input type date",
+        "resultCount": null,
+        "observedRelevantResult": "A Stack Overflow question asks how to inspect the native HTML date picker DOM; one public answer distinguishes application form input from the browser-owned picker UI. The question has no accepted answer.",
+        "url": "https://stackoverflow.com/questions/79010531/how-to-inspect-the-dom-of-the-html-date-picker-calendar"
+      },
+      {
+        "query": "site:playwright.dev/docs locators shadow DOM XPath",
+        "resultCount": null,
+        "observedRelevantResult": "Current Playwright locator documentation states default Shadow DOM behavior and the XPath and closed-root exceptions.",
+        "url": "https://playwright.dev/docs/locators"
+      },
+      {
+        "query": "site:developer.mozilla.org input type date value locale",
+        "resultCount": null,
+        "observedRelevantResult": "MDN documents locale-dependent display and normalized yyyy-mm-dd value for the native date input.",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date"
+      },
+      {
+        "query": "WAI ARIA APG date picker dialog example keyboard accessible",
+        "resultCount": null,
+        "observedRelevantResult": "W3C APG provides a date-picker dialog example with a grid, keyboard behavior, focus management, and an explicit example-only implementation warning.",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/"
+      }
+    ],
+    "publicDemandSignals": [
+      {
+        "topic": "browser-agent-shadow-dom",
+        "signal": "Playwright GitHub issue #33547 was opened 2024-11-11 for version 1.48.2. The author reported a timeout when a direct-child CSS selector crossed a slot and said a descendant selector worked in that reproduction. The issue is closed. This is a historical, version-specific developer report; it does not establish a current general Playwright bug or indicate search volume.",
+        "url": "https://github.com/microsoft/playwright/issues/33547",
+        "reportedVersion": "1.48.2",
+        "stateObserved": "closed",
+        "articleIntent": "Diagnose the DOM boundary and choose supported locators across open roots; distinguish XPath, slot, closed-root, iframe, and agent-interface limits."
+      },
+      {
+        "topic": "browser-agent-date-picker",
+        "signal": "The Stack Overflow question 'How to inspect the dom of the HTML date picker calendar?' has a public answer recommending filling a date input when the application behavior, rather than the browser's own picker UI, is under test. It was answered 2024-09-21 and edited 2024-09-23. The result page shows an answer score of 4 at observation time; no query volume or search-result total was exposed.",
+        "url": "https://stackoverflow.com/questions/79010531/how-to-inspect-the-dom-of-the-html-date-picker-calendar",
+        "answerDate": "2024-09-21",
+        "editedDate": "2024-09-23",
+        "displayedAnswerScoreAtObservation": 4,
+        "articleIntent": "Choose an appropriate path for native date inputs versus custom calendar widgets and verify the accepted value without assuming a universal picker API."
+      }
+    ],
+    "signalLimits": "Observed public questions and official documentation only. Search result counts, search volume, rankings, BrowserHub traffic, and current prevalence are unknown; no hotness or demand magnitude is claimed. Cumulative question scores are observations, not traffic metrics."
+  },
+  "officialTechnicalSources": [
+    {
+      "title": "Playwright: Locators",
+      "url": "https://playwright.dev/docs/locators",
+      "checkedAt": "2026-10-25",
+      "factsUsed": [
+        "Playwright locators work with Shadow DOM by default",
+        "XPath does not pierce shadow roots",
+        "Closed-mode shadow roots are not supported",
+        "Locators are strict for single-element actions"
+      ]
+    },
+    {
+      "title": "Playwright: Other locators",
+      "url": "https://playwright.dev/docs/other-locators",
+      "checkedAt": "2026-10-25",
+      "factsUsed": ["Playwright CSS selectors pierce open shadow DOM", "User-facing locators are preferred over structure-dependent CSS"]
+    },
+    {
+      "title": "Playwright: Locator API",
+      "url": "https://playwright.dev/docs/api/class-locator",
+      "checkedAt": "2026-10-25",
+      "factsUsed": ["Locator role and label methods", "Locator actions and timeout behavior"]
+    },
+    {
+      "title": "MDN: <input type=\"date\">",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date",
+      "checkedAt": "2026-10-25",
+      "factsUsed": [
+        "The native date input value is normalized to yyyy-mm-dd",
+        "The displayed format varies with browser locale",
+        "The control supports min, max, and step constraints"
+      ]
+    },
+    {
+      "title": "W3C WAI ARIA APG: Date picker dialog example",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/",
+      "checkedAt": "2026-10-25",
+      "factsUsed": [
+        "Illustrative dialog and grid structure for a custom date picker",
+        "Keyboard behavior and focus management example",
+        "The example warns that it is not production code and requires support testing"
+      ]
+    }
+  ],
+  "claimsAndBoundaries": [
+    "Playwright examples are scoped to the documented JavaScript API; no compatibility claim is made for Browser Use, arbitrary MCP servers, other agents, or every browser integration.",
+    "Open and closed Shadow DOM behavior, XPath limitations, and slot diagnostics are attributed to Playwright documentation and a historical, closed issue. No current defect is inferred from the issue.",
+    "The yyyy-mm-dd value applies to the HTML date input. It does not define custom widget formats, native picker DOM, server acceptance, or successful form submission.",
+    "The W3C APG calendar is an illustrative accessibility pattern, not a required implementation or a certification of a production widget.",
+    "The offline synthetic fixture executed successfully for its listed local assertions only. This does not establish browser-agent or LLM performance, compatibility beyond the recorded environment, or behavior on production forms. Other picker implementations, locale configurations, and Shadow DOM structures are outside the fixture scope."
+  ],
+  "offlineFixture": {
+    "publicPath": "public/templates/agent-shadow-date-playwright.mjs",
+    "privateSourcePath": ".local/workflows/cycles/content-2026-10-25/proposed-controls-fixture.mjs",
+    "executionReceipt": ".local/workflows/cycles/content-2026-10-25/fixture-execution.json",
+    "sha256": "3134f6c4afcf06c4f6b3c46b7807cff017cf1f8d81621771fb2a80bca05d6d9a",
+    "byteIdenticalPrivateCopy": true,
+    "status": "public asset run successfully by parent reviewer",
+    "prerequisitesAndRun": "Requires the Playwright package and its installed Chromium browser. Run `node agent-shadow-date-playwright.mjs` from the local project; PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH optionally selects a compatible installed executable.",
+    "execution": {
+      "checkedAt": "2026-10-25T01:09:17.339121Z",
+      "node": "22.22.3",
+      "playwright": "1.64.1",
+      "operatingSystem": "macOS 15.6",
+      "installedChromeAppVersion": "155.0.8059.85",
+      "browserReportedVersion": null,
+      "exitCode": 0,
+      "stdout": "{\"fixture\":\"synthetic local HTML; application requests blocked\",\"shadowDom\":\"passed\",\"nativeDateInput\":\"passed\",\"customDateDialog\":\"passed\",\"externalNavigation\":\"not used\",\"realFormSubmission\":\"not used\"}",
+      "assertions": [
+        "Open Shadow DOM button and dialog interaction",
+        "Native date input accepts and retains 2026-06-15",
+        "Custom date dialog selects June 15, 2026, updates its field value, and closes"
+      ],
+      "scope": "Synthetic local HTML only. Application-context requests were blocked; browser/OS background traffic was outside the assertion. No external site, real form submission, LLM/agent behavior, or production workflow was tested."
+    }
+  },
+  "delivery": {
+    "requestedModel": "gpt-6-luna",
+    "requestedReasoning": "high",
+    "actualModel": null,
+    "actualModelNote": "The delegated task supplied the requested model but no runtime model identity evidence.",
+    "role": "content executor",
+    "files": [
+      "src/data/ai-controls-2026-10-25.ts",
+      "docs/seo/research-ai-controls-2026-10-25.json"
+    ],
+    "localChecks": [
+      "Target TypeScript file passed an isolated `tsc --noEmit` check with project-independent options.",
+      "TypeScript transpilation and runtime evaluation exported both guides and both locale copies; checks covered locale metadata, source/section/FAQ floors, required copy fields, and plain FAQ text.",
+      "English body counts were 889 and 1,000 whitespace-delimited words; Chinese body counts were 2,199 and 2,385 non-whitespace characters.",
+      "Research JSON parsed successfully.",
+      "Private fixture passed `node --check` before it was copied byte-identically into the public templates path.",
+      "Parent execution receipt records exit code 0 for the published synthetic fixture, with application-context requests blocked and only its listed local assertions covered.",
+      "After adding locale-prefixed article links and run instructions, runtime-copy checks passed for both locales and both guides; the public fixture SHA-256 matched the execution receipt.",
+      "After converting code snippets into prose for the existing article renderer, TypeScript transpilation, runtime copies, four-locale asset links, no-fence/no-backtick checks, plain FAQs, and isolated TypeScript checking passed."
+    ],
+    "limitations": [
+      "Preliminary independent source review; final review pending.",
+      "At the initial delegated check, full-repository `npx tsc --noEmit --pretty false` was blocked by syntax errors in src/data/ai-choices-2026-10-25.ts and src/data/ai-navigation-2026-10-25.ts; the parent records the final preflight separately.",
+      "No package installation, paid Firecrawl call, deployment, indexing, or external outreach was performed by this delegated pass; the parent executed the fixture in its already configured environment."
+    ]
+  }
+}

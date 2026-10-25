@@ -1,0 +1,206 @@
+{
+  "date": "2026-10-25",
+  "purpose": "Research record for the original bilingual BrowserHub guide on navigating lazy-loaded, infinite-scroll, virtualized and paginated browser content.",
+  "topicSelection": {
+    "slug": "browser-agent-scroll-pagination",
+    "primaryIntent": "Advance a browser agent through dynamic result lists without looping forever, skipping virtualized rows, misreading pagination, or claiming completeness without evidence.",
+    "ownershipReview": {
+      "checkedAt": "2026-10-25",
+      "existingOwners": [
+        {
+          "slug": "browser-agent-structured-data-extraction",
+          "url": "https://browserhub.co/en/guides/browser-agent-structured-data-extraction/",
+          "ownedIntent": "Output schemas, provenance, extraction coverage and returned-data completeness. It briefly recommends pagination coverage rules but does not teach bounded navigation through scroll, load-more, pagination and virtualized UI states."
+        },
+        {
+          "slug": "browser-agent-debugging-traces",
+          "url": "https://browserhub.co/en/guides/browser-agent-debugging-traces/",
+          "ownedIntent": "Failure evidence and debugging traces. This new guide owns the navigation control loop and stopping decision, not general trace collection."
+        }
+      ],
+      "distinctiveCoverage": "Navigation rather than result schema: classify the list, locate the scroll owner, advance once, wait for a state change, collect IDs across recycled viewports, confirm page transitions, and state a bounded stop reason."
+    },
+    "searches": [
+      {
+        "query": "site:stackoverflow.com/questions playwright infinite scroll load more pagination",
+        "observedAt": "2026-10-25",
+        "results": [
+          {
+            "title": "Playwright: How to loop scroll down or show more or page down in a lazy loading page",
+            "url": "https://stackoverflow.com/questions/72069363/playwright-how-to-loop-scroll-down-or-show-more-or-page-down-in-a-lazy-loading",
+            "questionDate": null,
+            "displayedRelativeDate": "Asked about 4 years, 4 months ago (observed 2026-10-25)",
+            "displayedViewCount": "10k (observed 2026-10-25)",
+            "signal": "The question describes a lazy-loading feed, a show-more control, and a loop that runs indefinitely when timeout is disabled. The displayed cumulative page views are a public question-level signal, not keyword volume, current demand, BrowserHub traffic or a unique-user count."
+          },
+          {
+            "title": "How to handle infinite scrolling using Playwright-Test?",
+            "url": "https://stackoverflow.com/questions/73800529/how-to-handle-infinite-scrolling-using-playwright-test",
+            "questionDate": null,
+            "displayedRelativeDate": "Asked about 4 years ago (observed 2026-10-25)",
+            "displayedViewCount": null,
+            "signal": "The question explains that a target item is not in the DOM yet and therefore cannot first be scrolled into view. A current public view count was not recorded."
+          }
+        ]
+      },
+      {
+        "query": "site:github.com/browser-use/browser-use/issues infinite scroll pagination",
+        "observedAt": "2026-10-25",
+        "results": [],
+        "note": "Search results did not provide a specific current Browser Use issue that directly supports this navigation topic; no Browser Use bug claim is made."
+      },
+      {
+        "query": "site:playwright.dev/docs infinite scrolling lazy loaded content scroll locator mouse wheel",
+        "observedAt": "2026-10-25",
+        "results": [
+          {
+            "title": "Playwright: Actions and scrolling",
+            "url": "https://playwright.dev/docs/input#scrolling",
+            "signal": "Official documentation explicitly discusses scrolling to force an infinite list to load more and documents scrollIntoViewIfNeeded, mouse.wheel and locator.evaluate patterns."
+          }
+        ]
+      },
+      {
+        "query": "site:playwright.dev/docs/api/class-page waitForResponse locator waitFor function scrollBy",
+        "observedAt": "2026-10-25",
+        "results": [
+          {
+            "title": "Playwright: Page API",
+            "url": "https://playwright.dev/docs/api/class-page",
+            "signal": "Documents response waits and discourages using networkidle as a testing readiness condition; the page API supports bounded, predicate-based waits."
+          },
+          {
+            "title": "Playwright: Locator API",
+            "url": "https://playwright.dev/docs/api/class-locator",
+            "signal": "Documents locator waiting, dynamic list caveats and custom wait functions."
+          }
+        ]
+      },
+      {
+        "query": "site:docs.browser-use.com scroll browser-use agent scroll action documentation",
+        "observedAt": "2026-10-25",
+        "results": [],
+        "note": "The search returned general Browser Use documentation, but no directly relevant official scrolling reference was found. The guide therefore does not claim Playwright API compatibility with Browser Use."
+      }
+    ],
+    "signalLimits": "Only page-level question views were visible for one older Stack Overflow question. No keyword search volume, ranking, recent growth, unique users or BrowserHub traffic was measured. Dates and counts are recorded separately from the observation date. The claim of recurring/current user demand is not made from these historical questions alone."
+  },
+  "serpAndEditorialNotes": {
+    "observedAt": "2026-10-25",
+    "currentSearch": "Search returned many general Playwright scrolling recipes and two relevant Stack Overflow questions. A separate root review identified several near-duplicate generic SEO recipes dated 2026-10-04, so the article avoids copying their recipe structure and adds an explicit bounded decision model, virtualized-list key capture, duplicate-click safeguards and honest completion reporting.",
+    "additionalPublicSignal": {
+      "url": "https://www.reddit.com/r/webscraping/comments/1qn6gi6/having_a_hard_time_with_infinite_scroll_site/",
+      "date": null,
+      "observation": "A current search surfaced a user report that a listing appeared to contain 254 results while their browser script obtained 11–20 at a time. This is a user-reported example, not independently verified page behavior or a traffic metric; post date was not verified for this record."
+    }
+  },
+  "officialTechnicalSources": [
+    {
+      "title": "Playwright: Actions and scrolling",
+      "url": "https://playwright.dev/docs/input#scrolling",
+      "checked": "2026-10-25",
+      "factsUsed": [
+        "Playwright often scrolls elements into view automatically before actions.",
+        "The official guide gives scrolling an element into view as a way to trigger an infinite list.",
+        "For more precise scrolling, it documents mouse.wheel() and locator.evaluate() against a specific scrolling container."
+      ]
+    },
+    {
+      "title": "Playwright: Locator API",
+      "url": "https://playwright.dev/docs/api/class-locator",
+      "checked": "2026-10-25",
+      "factsUsed": [
+        "Locators re-resolve elements and support auto-waiting.",
+        "locator.all() returns the current matches immediately and may be unpredictable for a changing list.",
+        "Locator wait functions can wait for a custom observable condition."
+      ]
+    },
+    {
+      "title": "Playwright: Page API",
+      "url": "https://playwright.dev/docs/api/class-page",
+      "checked": "2026-10-25",
+      "factsUsed": [
+        "page.waitForResponse() can match a URL or predicate and should be set before the triggering action.",
+        "Playwright discourages networkidle as a general readiness wait in tests; prefer observable web assertions or locator conditions.",
+        "waitForFunction() can wait for a page-specific condition."
+      ]
+    },
+    {
+      "title": "Playwright: Network",
+      "url": "https://playwright.dev/docs/network",
+      "checked": "2026-10-25",
+      "factsUsed": [
+        "Network events and response waits can be used to observe page requests when a relevant endpoint is known."
+      ]
+    }
+  ],
+  "claimsAndBoundaries": [
+    "The sample code is a bounded template for an append-only list with inspected selectors; it was not run against a live site or fixture in this delegated task.",
+    "A fixed advance cap makes execution bounded; reaching the cap does not prove the list is complete.",
+    "Virtualized DOM row count is not a total. Preserve stable record IDs as viewports change and use explicit end or total signals where available.",
+    "Dynamic URLs can be poor deduplication keys; retain originals and normalize only understood parameters.",
+    "Playwright API names are scoped to Playwright and are not claimed as universal Browser Use, MCP or agent interfaces.",
+    "The guide does not recommend CAPTCHA, authentication, or access-control bypasses. It tells an agent to stop at those boundaries.",
+    "No paid search product or API was used. Firecrawl usage was not increased. No site was contacted by the sample code.",
+    "The sample was moved verbatim from the reviewed article draft into a downloadable .cjs asset. Only node --check was run; it was not executed against Chromium, a live URL, or a synthetic fixture."
+  ],
+  "delivery": {
+    "requestedModel": "gpt-6-luna",
+    "requestedReasoning": "high",
+    "actualModel": null,
+    "actualModelNote": "Runtime model identity was not exposed to this delegated executor; no actual model is claimed.",
+    "role": "content executor",
+    "files": [
+      "src/data/ai-navigation-2026-10-25.ts",
+      "docs/seo/research-ai-navigation-2026-10-25.json",
+      "public/templates/agent-pagination-playwright.cjs"
+    ],
+    "checks": [
+      "The TypeScript article leaf was transpiled and its bilingual runtime exports were checked after replacing rendered code blocks with localized download instructions.",
+      "An isolated strict TypeScript check of the leaf and imported type declaration passed after the rendering update.",
+      "The research JSON parsed successfully after the final updates.",
+      "node --check and ESLint both passed for public/templates/agent-pagination-playwright.cjs after moving the Playwright import to dynamic import inside the async entry point.",
+      "Runtime checks confirmed one guide, six sections and five FAQs per locale, and no fenced or inline backtick code formatting in article section bodies or FAQs.",
+      "The asset SHA256 in this record matches the final .cjs file.",
+      "No browser execution, full repository build, deployment, indexing operation, external outreach or paid request was performed by this delegated executor."
+    ],
+    "reviewHistory": [
+      {
+        "attempt": 2,
+        "source": "Root relayed independent reviewer feedback after the initial draft.",
+        "finding": "The runnable sample needed URL validation before launch, finite navigation/action defaults, empty-result handling, cleanup in finally, and rejection handling.",
+        "resolution": "Added HTTP(S) URL validation before launch; bounded navigation and action timeouts; a clear empty-card error; browser cleanup in finally; an outer rejection handler; and an explicit incomplete_or_stalled completion result when the end marker was not observed.",
+        "recheck": "Leaf transpilation, runtime bilingual object checks, and isolated strict TypeScript check passed after the fixes.",
+        "reviewerModel": null,
+        "reviewerModelNote": "The reviewer findings were relayed by the root agent; runtime reviewer model identity was not independently verified by this executor."
+      }
+    ],
+    "limitations": [
+      "No independent reviewer model was invoked in this delegated pass.",
+      "Current official documentation pages are moving sources; the check date is recorded, and no current Playwright package version is asserted."
+    ]
+  },
+  "sampleArtifact": {
+    "path": "public/templates/agent-pagination-playwright.cjs",
+    "linkedFrom": [
+      "en",
+      "zh-cn"
+    ],
+    "purpose": "Downloadable CommonJS bounded Playwright example. The bilingual article points to it because the article renderer does not support fenced code blocks or inline backtick formatting.",
+    "content": "The full bounded sample previously reviewed: HTTP(S) URL validation before browser launch; finite 10-second action, 15-second navigation, and 8-second last-key waits; empty-card error; at most 40 scroll advances; end-marker-only complete status; try/finally cleanup; outer rejected-promise handler. The Playwright package is loaded with dynamic import inside the async entry point to satisfy the repository lint rule against require imports.",
+    "sha256": "b4d7c51988481900195ab85720028a3d4955ee25459e306235537c69aa610aca",
+    "lintFix": {
+      "reason": "Repository ESLint rule @typescript-eslint/no-require-imports rejected the original top-level require in the downloadable .cjs asset.",
+      "change": "The Playwright import now uses await import(\"playwright\") inside the validated async entry point, immediately before browser launch.",
+      "validation": [
+        "node --check public/templates/agent-pagination-playwright.cjs",
+        "npx eslint public/templates/agent-pagination-playwright.cjs"
+      ]
+    }
+  },
+  "renderingUpdate": {
+    "date": "2026-10-25",
+    "reason": "The article body renderer supports paragraphs, lists, tables and links, but not fenced code blocks or inline backtick styling.",
+    "change": "Both locale copies now explain the sample and link to the .cjs asset with prerequisites and run instructions. Backtick delimiters and the fenced source were removed from section prose. Navigation, bounds, waits, safety checks and completion caveats remain in the source asset and accompanying prose."
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "date": "2026-10-25",
+  "observedAt": "2026-10-25T09:05:00+08:00",
+  "batch": "content-2026-10-25",
+  "scope": {
+    "files": [
+      "src/data/ai-choices-2026-10-25.ts",
+      "docs/seo/research-ai-choices-2026-10-25.json"
+    ],
+    "topics": [
+      "gemini-in-chrome-vs-copilot-in-edge",
+      "ai-browser-youtube-summary"
+    ],
+    "locales": [
+      "en",
+      "zh-cn"
+    ],
+    "claimsAreDocumentationBased": true,
+    "handsOnProductTestsPerformed": false,
+    "paidCallsOrSubscriptions": false,
+    "externalOutreach": false,
+    "deploymentOrPublishing": false
+  },
+  "execution": {
+    "requestedModel": "gpt-6-luna",
+    "requestedReasoning": "high",
+    "actualModel": null,
+    "modelAttempts": 0,
+    "modelTokenUsage": null,
+    "notes": "This content was prepared from public search results, official documentation and local editorial patterns. No separate model call was made or represented as an independent review."
+  },
+  "researchMethod": {
+    "searchType": "public web search plus direct page observations",
+    "observedAt": "2026-10-25T09:05:00+08:00",
+    "siteSearchTerms": null,
+    "searchVolume": null,
+    "keywordDifficulty": null,
+    "browserhubTraffic": null,
+    "rankings": null,
+    "countsUnknownAreNull": true,
+    "limitations": [
+      "Public discussions are anecdotal examples of questions and failure modes, not representative surveys or proof of prevalence.",
+      "Search snippets and user vote counts are observation-time snapshots. They are not BrowserHub visits, Google Search Console queries, measured search volume or ranking data.",
+      "No CSDN article-level read, collection or comment count was verified for either topic in this research pass."
+    ]
+  },
+  "research": {
+    "gemini-in-chrome-vs-copilot-in-edge": {
+      "intent": "Help a Chrome or Edge user decide which built-in assistant fits page summaries, chosen multi-tab research, video questions, work account context and privacy controls. Keep consumer chat, workspace-managed behavior and browser-agent actions separate.",
+      "duplicateCheck": {
+        "checked": [
+          "comet-vs-gemini-in-chrome",
+          "comet-vs-dia",
+          "ai-browser-vs-browser-agent",
+          "ai-browser-pdf-summary",
+          "existing browser context and AI selection guides"
+        ],
+        "decision": "New head-to-head comparison. The existing Comet vs Gemini guide compares a dedicated research browser with Chrome's integrated assistant; it does not answer whether Chrome or Edge better fits the reader's built-in browser context, account controls or current feature eligibility. The new guide focuses on that task boundary and does not repeat product pricing or claim a model-quality winner."
+      },
+      "searchQueries": [
+        {
+          "query": "\"Gemini in Chrome\" \"Copilot in Edge\" which comparison 2026",
+          "observationDate": "2026-10-25",
+          "resultUrls": [
+            "https://www.reddit.com/r/GeminiAI/comments/1t1mgza/how_to_let_gemini_know_what_is_in_my_browser/",
+            "https://www.reddit.com/r/MicrosoftEdge/comments/1x9hdy1/can_i_replace_bings_ai_mode_in_edge_with_google/"
+          ]
+        },
+        {
+          "query": "\"Copilot Edge vs Gemini Chrome\"",
+          "observationDate": "2026-10-25",
+          "resultUrls": [
+            "https://www.reddit.com/r/MicrosoftEdge/comments/1x9hdy1/can_i_replace_bings_ai_mode_in_edge_with_google/",
+            "https://www.reddit.com/r/GeminiAI/comments/1t1mgza/how_to_let_gemini_know_what_is_in_my_browser/"
+          ]
+        },
+        {
+          "query": "site:reddit.com/r/edge Copilot in Edge Gemini in Chrome compare browser",
+          "observationDate": "2026-10-25",
+          "resultUrls": [
+            "https://www.reddit.com/r/GeminiAI/comments/1t1mgza/how_to_let_gemini_know_what_is_in_my_browser/"
+          ]
+        },
+        {
+          "query": "site:reddit.com/r/chrome Copilot Edge Gemini browser context",
+          "observationDate": "2026-10-25",
+          "resultUrls": [
+            "https://www.reddit.com/r/MicrosoftEdge/comments/1x9hdy1/can_i_replace_bings_ai_mode_in_edge_with_google/"
+          ]
+        },
+        {
+          "query": "site:reddit.com/r/edge Copilot in Edge Gemini in Chrome compare browser context",
+          "observationDate": "2026-10-25",
+          "resultUrls": [
+            "https://www.reddit.com/r/GeminiAI/comments/1t1mgza/how_to_let_gemini_know_what_is_in_my_browser/"
+          ]
+        }
+      ],
+      "demandSignals": [
+        {
+          "sourceUrl": "https://www.reddit.com/r/GeminiAI/comments/1t1mgza/how_to_let_gemini_know_what_is_in_my_browser/",
+          "sourceType": "public Reddit question and replies; anecdotal workflow signal",
+          "publicationDate": "2026-05-02 (search snapshot literal: Saturday May 02 2026)",
+          "observationDate": "2026-10-25",
+          "searchSnapshotLiteral": "Can Gemini do the similar stuff in Edge or Chrome? ... Or do I always need to pass the website to Gemini in order to let it know what I am watching?",
+          "directPageLiteral": "I am using Edge, Copilot in Edge can be opened directly in sidebar and read what is on my screen (within the browser), what is current tab, and what tabs do I have. Can Gemini do the similar stuff in Edge or Chrome? Or do I always need to pass the website to Gemini in order to let it know what I am watching?",
+          "visibleScoreAtSearchSnapshot": 1,
+          "countScope": "one visible post score in the search snapshot",
+          "interpretation": "A direct user question compares browser page/tab access and asks whether a separate URL handoff is needed. Replies include a later mention of Gemini's Chrome side panel and tab sharing. This supports a dated comparison focused on actual browser context; it does not establish current product behavior, broad demand or feature parity."
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/MicrosoftEdge/comments/1x9hdy1/can_i_replace_bings_ai_mode_in_edge_with_google/",
+          "sourceType": "public Reddit feature-selection question and replies; anecdotal workflow signal",
+          "publicationDate": "2026-10-18 (search snapshot literal: Sunday October 18 2026)",
+          "observationDate": "2026-10-25",
+          "searchSnapshotLiteral": "Can I replace Bing's AI Mode in Edge with Google Gemini? I'm using Microsoft Edge on Windows and want the Bing AI Mode button to open Google Gemini instead of Copilot.",
+          "visibleScoreAtSearchSnapshot": 6,
+          "countScope": "one visible post score in the search snapshot",
+          "interpretation": "A recent user asks whether they can replace Edge's AI entry point with Gemini, with replies contrasting the default product pairing. This supports clarifying browser choice versus assistant replacement. A small Reddit score is not search volume or evidence of general preference."
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/MicrosoftEdge/comments/1s814kc/copilot_sidebar_this_is_becoming_a_huge_problem/",
+          "sourceType": "public Reddit discussion; anecdotal privacy/context concern",
+          "publicationDate": "2026 (direct page presents relative age; exact date not resolved in this pass)",
+          "observationDate": "2026-10-25",
+          "visibleQuestionOrClaim": "Poster expresses concern about Copilot sidebar access to non-focused browser tabs and contrasts it with a more isolated chatbot experience.",
+          "score": null,
+          "countScope": null,
+          "interpretation": "The thread illustrates why readers ask what page or tab context a sidebar can use. It is an individual claim, not a verified finding about current Edge behavior. The guide therefore follows Microsoft's current documentation for context and settings rather than repeating the thread's allegation."
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/GeminiAI/comments/1t1mgza/how_to_let_gemini_know_what_is_in_my_browser/",
+          "sourceType": "public Reddit question and replies; anecdotal workflow signal",
+          "publicationDate": "2026-05-02 (search snapshot literal: Saturday May 02 2026)",
+          "observationDate": "2026-10-25",
+          "searchSnapshotLiteral": "Can Gemini do the similar stuff in Edge or Chrome? ... Or do I always need to pass the website to Gemini in order to let it know what I am watching?",
+          "directPageLiteral": "I am using Edge, Copilot in Edge can be opened directly in sidebar and read what is on my screen (within the browser), what is current tab, and what tabs do I have. Can Gemini do the similar stuff in Edge or Chrome? Or do I always need to pass the website to Gemini in order to let it know what I am watching?",
+          "visibleScoreAtSearchSnapshot": 1,
+          "countScope": "one visible post score in search snapshot",
+          "interpretation": "A direct reader question compares browser page/tab context and asks whether a separate URL handoff is needed. A reply mentions Chrome Gemini side panel and tab sharing. This supports a dated comparison about real browser context; it does not establish current behavior or representative demand."
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/MicrosoftEdge/comments/1x9hdy1/can_i_replace_bings_ai_mode_in_edge_with_google/",
+          "sourceType": "public Reddit feature-selection question and replies; anecdotal workflow signal",
+          "publicationDate": "2026-10-18 (search snapshot literal: Sunday October 18 2026)",
+          "observationDate": "2026-10-25",
+          "searchSnapshotLiteral": "Can I replace Bing's AI Mode in Edge with Google Gemini? I'm using Microsoft Edge on Windows and want the Bing AI Mode button to open Google Gemini instead of Copilot.",
+          "visibleScoreAtSearchSnapshot": 6,
+          "countScope": "one visible post score in search snapshot",
+          "interpretation": "A recent user asks whether an Edge AI entry point can be replaced with Gemini; replies distinguish Chrome Gemini from Edge Copilot. The small Reddit score is not search volume or evidence of general preference."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://support.google.com/chrome/answer/16283624?hl=en",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Gemini in Chrome uses current-tab page content by default and a user can share up to 10 open tabs or remove a shared tab.",
+            "The guide lists article summaries, cross-page comparisons and questions about audio or video already played on media websites.",
+            "Starting a new chat shares the current tab by default unless the preference is changed.",
+            "A shared Google Workspace page may allow Gemini direct Workspace account access to respond about more than visible tab text.",
+            "The guide describes the media understanding setting and account controls."
+          ],
+          "limitations": [
+            "This is Google's product documentation, not an independent comparison or accuracy test.",
+            "Feature availability and behavior depend on account, region, language, browser version and organization settings.",
+            "The page describes Gemini in Chrome, not every Gemini Apps or mobile YouTube workflow."
+          ]
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/17140089?co=GENIE.Platform%3DDesktop&hl=en",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Gemini in Chrome is gradually rolling out and not available to every user.",
+            "Current computer eligibility includes supported region and language, Chromebook Plus/Mac/Windows, latest Chrome, signed-in non-Incognito profile and applicable age conditions.",
+            "Adult work or school Google accounts require administrator enablement."
+          ],
+          "limitations": [
+            "Eligibility lists can change; no fixed completeness claim is made beyond the help page observed on the listed date.",
+            "The supported country and language lists are not copied into the article because readers should consult the live source."
+          ]
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/edge/copilot/getting-started-with-copilot-in-microsoft-edge",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Copilot in Edge documents page, video and PDF summaries and questions about the current page.",
+            "Depending on the prompt, Edge may use the query, recent conversation, current webpage, title, open tabs and browsing history.",
+            "Edge has an 'Allow Copilot to read context clues on the web' control and explains or asks permission before browser information is used, depending on region.",
+            "The consumer setup instructions ask the user to sign in with a personal Microsoft account."
+          ],
+          "limitations": [
+            "Microsoft describes behavior conditionally based on prompt and settings; the article does not claim every answer uses every source.",
+            "Work accounts are governed by separate organization and administrator guidance.",
+            "This is documentation, not a direct test of the current UI in the author's account."
+          ]
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/using-microsoft-copilot-in-edge-at-work",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Workplace Copilot context can depend on organization settings and administrator policy.",
+            "Protected pages may be unavailable through Copilot where DLP rules restrict access."
+          ],
+          "limitations": [
+            "The article avoids blanket claims about enterprise privacy or retention; behavior depends on organization configuration and feature."
+          ]
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/edge/copilot/browse-with-copilot",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Browse with Copilot is an agentic flow that can click, type and navigate, with actions visible and interruptible.",
+            "Microsoft documents a separate consumer rollout for Microsoft 365 Premium subscribers in the US, with more markets to follow.",
+            "Microsoft describes the feature as experimental and recommends monitoring its actions."
+          ],
+          "limitations": [
+            "The article distinguishes this browser-action feature from ordinary sidebar question answering.",
+            "Availability language is time sensitive and is not generalized to Edge sidebar summaries."
+          ]
+        }
+      ],
+      "decision": "Use task fit, page/tab context, consent and account eligibility to choose which browser to try. Do not claim a general winner or compare answer quality without a controlled trial."
+    },
+    "ai-browser-youtube-summary": {
+      "intent": "Help a reader select a documented Gemini in Chrome, Gemini Apps with YouTube, Edge Copilot or transcript-led workflow, then verify that the assistant addressed the intended video and that each important claim and timestamp matches the original.",
+      "duplicateCheck": {
+        "checked": [
+          "ai-browser-pdf-summary",
+          "comet-vs-gemini-in-chrome",
+          "ai-browser-vs-browser-agent",
+          "existing source-verification and browser context guides"
+        ],
+        "decision": "New video-specific intent. The existing PDF guide handles document parsing, page numbers, scans and tables. This topic covers played media, YouTube search/connected-service context, caption transcripts, video frames, timestamps, wrong-video replies and restricted video access."
+      },
+      "searchQueries": [
+        {
+          "query": "site:reddit.com/r/chrome Gemini in Chrome summarize YouTube video Gemini Chrome",
+          "observationDate": "2026-10-25",
+          "resultUrls": [
+            "https://www.reddit.com/r/GeminiAI/comments/1wfgus0/ive_been_getting_better_gemini_summaries_by/",
+            "https://www.reddit.com/r/GeminiAI/comments/1t8lhep/youtube_summaries_no_longer_work/",
+            "https://www.reddit.com/r/GeminiAI/comments/1t1inh3/gemini_no_longer_support_youtube_video/"
+          ]
+        },
+        {
+          "query": "CSDN Gemini 总结 YouTube 视频 Chrome Edge Copilot",
+          "observationDate": "2026-10-25",
+          "resultUrls": [],
+          "note": "No relevant CSDN article-level public signal was verified in this pass."
+        },
+        {
+          "query": "Gemini summary of YouTube video transcript vs link vague wrong video 2026",
+          "observationDate": "2026-10-25",
+          "resultUrls": [
+            "https://www.reddit.com/r/GeminiAI/comments/1wfgus0/ive_been_getting_better_gemini_summaries_by/",
+            "https://www.reddit.com/r/GeminiAI/comments/1t8lhep/youtube_summaries_no_longer_work/"
+          ]
+        }
+      ],
+      "demandSignals": [
+        {
+          "sourceUrl": "https://www.reddit.com/r/GeminiAI/comments/1wfgus0/ive_been_getting_better_gemini_summaries_by/",
+          "sourceType": "public Reddit question and self-disclosed workaround; anecdotal troubleshooting signal",
+          "searchSnapshotPublicationDate": "2026-09-13 (search snapshot literal: Sunday September 13 2026)",
+          "directPageLiteralAtObservation": "1mo ago",
+          "observationDate": "2026-10-25",
+          "searchSnapshotLiteral": "Has anyone else noticed Gemini giving pretty vague summaries when you just send it a YouTube link? ... Curious whether people have noticed a difference between sending the YouTube link and pasting the transcript.",
+          "directPageTextObserved": "Poster reports that link-only summaries sometimes sound convincing but miss remembered details; says pasting the transcript produced more specific summaries in their own informal use, and discloses that the poster built a transcript-copy extension.",
+          "visibleScoreAtSearchSnapshot": 4,
+          "visibleCommentSignal": "A reply says they had noticed the YouTube link issue and would try the transcript route; search snapshot shows +2 votes on that reply.",
+          "countScope": "one post score and one visible reply score in the search snapshot; not readership or independent tests",
+          "interpretation": "The post asks a directly relevant link-versus-transcript question and describes a possible verification fallback. It is self-reported, includes product self-promotion and does not prove current Gemini behavior or a general transcript advantage."
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/GeminiAI/comments/1t8lhep/youtube_summaries_no_longer_work/",
+          "sourceType": "public Reddit troubleshooting discussion; anecdotal failure report",
+          "publicationDate": "Exact date not resolved; direct page displayed '5mo ago' at observation",
+          "observationDate": "2026-10-25",
+          "directPageQuestion": "When I paste a Youtube link, completely different (and random) other video is summarizied. What is going on?",
+          "directPageObservation": "Replies report different outcomes, and some commenters speculate about region, account or access conditions.",
+          "score": null,
+          "countScope": null,
+          "interpretation": "Supports an identity check for title/channel and a wrong-video recovery step. The thread is not proof of a current outage, root cause, frequency or supported account behavior."
+        },
+        {
+          "sourceUrl": "https://www.reddit.com/r/GeminiAI/comments/1t1inh3/gemini_no_longer_support_youtube_video/",
+          "sourceType": "public Reddit question and replies; anecdotal feature availability signal",
+          "publicationDate": "Exact date not resolved; direct page displayed '6mo ago' at observation",
+          "observationDate": "2026-10-25",
+          "directPageQuestion": "I used to be able to summarise YouTube video like maybe 2 weeks ago? They removed the capability? someone my friend can but I can’t we both have pro",
+          "directPageObservation": "Replies mention the feature appearing or disappearing for different users and identify different browser/mobile entry points.",
+          "score": null,
+          "countScope": null,
+          "interpretation": "Supports explaining that product surface and account availability can be confused. Historical relative dates and comments do not describe the current release state. The article relies on current official documentation."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://support.google.com/chrome/answer/16283624?hl=en",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Gemini in Chrome can answer about audio and video already played on media websites and can summarize or recall details.",
+            "The current Chrome tab is shared by default; users can manage shared tabs and the media understanding setting.",
+            "Eligibility conditions and gradual availability are separately documented."
+          ],
+          "limitations": [
+            "The page does not promise access to every YouTube video or explain caption, paywall or age restriction behavior in full.",
+            "Do not infer transcript-only or frame-by-frame processing from the general media-understanding description."
+          ]
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/16622858?hl=en",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Gemini Apps can use public YouTube information to find videos/playlists/channels and answer about video content.",
+            "The user must be signed into Gemini Apps and Keep Activity must be on; the YouTube feature is unavailable in Live chats and Gemini in Google Messages.",
+            "YouTube connected-app actions such as saving a video or commenting are not supported in this documented workflow."
+          ],
+          "limitations": [
+            "The source describes Gemini Apps connected to YouTube and is distinct from Gemini in Chrome's browser-page context.",
+            "Public information support does not establish access to private, restricted or every linked video."
+          ]
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/edge/copilot/getting-started-with-copilot-in-microsoft-edge",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "The Edge sidebar can summarize a website, video or PDF and answer a page-content prompt.",
+            "Context can include current page, page title, open tabs and browser history depending on the prompt and settings.",
+            "Users can turn off Allow Copilot to read context clues on the web."
+          ],
+          "limitations": [
+            "The help page does not promise every video site, restriction, caption format or account state is supported.",
+            "Enterprise or work-profile controls can limit page access."
+          ]
+        },
+        {
+          "url": "https://support.google.com/youtube/answer/15930243?co=GENIE.Platform%3DDesktop&hl=en",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "A transcript can be viewed for a video with captions from Show transcript in the description.",
+            "The transcript scrolls during playback, and selecting a caption line jumps to that point."
+          ],
+          "limitations": [
+            "A transcript helps locate spoken text; it does not provide every visual detail or prove that an AI assistant received the transcript.",
+            "The help page does not say every video has captions or a transcript."
+          ]
+        },
+        {
+          "url": "https://support.google.com/youtube/answer/2734796?guide=2734661&hl=en",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "YouTube supports manually added captions and automatically generated captions where available."
+          ],
+          "limitations": [
+            "Automatic captions are not guaranteed for every video and are limited by recognition conditions and language support."
+          ]
+        },
+        {
+          "url": "https://support.google.com/youtube/answer/9884579?hl=en",
+          "observationDate": "2026-10-25",
+          "claimsUsed": [
+            "Chapters split a video into sections to help viewers replay parts; creators can add their own or use automatic chapters.",
+            "Not all videos are eligible for automatic chapters and not every eligible video has them."
+          ],
+          "limitations": [
+            "Chapters help navigation and do not verify a summary or claim."
+          ]
+        }
+      ],
+      "decision": "Select the surface that is explicitly documented for the material: Gemini in Chrome for media already played in Chrome, Gemini Apps for the connected YouTube/public-information path, Edge Copilot for the current video page, or a transcript-led workflow for locating speech. Verify title, channel, timestamps, captions and playback before treating a summary as evidence."
+    }
+  },
+  "copyChecks": {
+    "requiredSectionsPerTopic": 5,
+    "requiredFaqsPerLocale": 4,
+    "requiredInlineInternalLinksPerLocale": 2,
+    "faqAnswersPlainText": true,
+    "inlineCodeOrFencedCode": false,
+    "sourcePaths": "src/data/ai-choices-2026-10-25.ts#<slug>",
+    "availableLocales": [
+      "en",
+      "zh-cn"
+    ],
+    "substantialEnglishArticleWordTarget": "800-1300 words, excluding FAQs",
+    "chineseLength": "Substantial original Chinese copy; report Han-character counts rather than mapping them to English word counts.",
+    "refreshesReportedSeparately": true
+  },
+  "checksActuallyRun": [
+    {
+      "check": "Source and public-demand review",
+      "result": "Passed: opened current official Google, Microsoft and YouTube help pages and direct Reddit threads. Preserved anecdotal/relative-time caveats; did not estimate search volume, traffic or popularity."
+    },
+    {
+      "check": "TypeScript parser, transpile and runtime exports",
+      "result": "Passed on final bytes: zero TypeScript parser diagnostics; VM runtime evaluation exposes exactly both expected slugs and four complete locale editions, with 5-6 structured sections, five plain-text FAQs and two locale-prefixed trailing-slash internal links per edition. English article text excluding FAQs is 914 and 1,033 words; Chinese copy has 1,398 and 1,614 Han characters."
+    },
+    {
+      "check": "JSON parse and structure check",
+      "result": "Passed: parsed with JSON.parse and python json.tool; both topic records include dated query strings, public demand observations, primary sources, limitations and explicit unknown model/traffic fields."
+    },
+    {
+      "check": "Build, integration publication, live page, product test or indexing",
+      "result": "Not run. This task was limited to new source and research files."
+    }
+  ],
+  "openCaveats": [
+    "Reddit posts are anecdotal. One YouTube transcript workaround post contains the author's own extension promotion and is not an independent test.",
+    "Gemini in Chrome availability is gradual and may change by region, language, device and account; readers should consult Google's current requirements.",
+    "The exact date behind relative-age Reddit labels was not resolved when the direct page did not expose an absolute publication date.",
+    "The article's transcript workflow recommends human verification. No product account, live YouTube video, paid service or subscription was tested."
+  ]
+}

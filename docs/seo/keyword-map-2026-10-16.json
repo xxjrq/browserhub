@@ -4162,6 +4162,166 @@
         "browser-agent-human-takeover",
         "browser-agent-iframes"
       ]
+    },
+    {
+      "id": "guides:gemini-in-chrome-vs-copilot-in-edge",
+      "primaryKeyword": {
+        "en": "Chrome Gemini vs Edge Copilot",
+        "zh-CN": "Chrome Gemini 与 Edge Copilot 对比"
+      },
+      "intent": "区分浏览器侧栏与独立Web聊天，按上下文范围、账号可用性和权限做选型，避免与Comet对比重叠。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "https://browserhub.co/zh-cn/guides/gemini-in-chrome-vs-copilot-in-edge/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-25",
+      "demandEvidence": "See research-2026-10-25.json and topic research records. Public SERP questions and platform counts are not site search queries or traffic.",
+      "originalGain": "区分浏览器侧栏与独立Web聊天，按上下文范围、账号可用性和权限做选型，避免与Comet对比重叠。",
+      "relatedSlugs": [
+        "ai-browser-youtube-summary",
+        "browser-agent-shadow-dom",
+        "browser-agent-date-picker",
+        "browser-agent-scroll-pagination"
+      ]
+    },
+    {
+      "id": "guides:ai-browser-youtube-summary",
+      "primaryKeyword": {
+        "en": "AI browser YouTube summary",
+        "zh-CN": "AI 浏览器总结 YouTube 视频"
+      },
+      "intent": "按受支持视频入口、字幕和时间戳核验做视频摘要，区别于PDF阅读和一般网页研究。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-youtube-summary/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-youtube-summary/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-25",
+      "demandEvidence": "See research-2026-10-25.json and topic research records. Public SERP questions and platform counts are not site search queries or traffic.",
+      "originalGain": "按受支持视频入口、字幕和时间戳核验做视频摘要，区别于PDF阅读和一般网页研究。",
+      "relatedSlugs": [
+        "gemini-in-chrome-vs-copilot-in-edge",
+        "browser-agent-shadow-dom",
+        "browser-agent-date-picker",
+        "browser-agent-scroll-pagination"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-shadow-dom",
+      "primaryKeyword": {
+        "en": "browser agent Shadow DOM",
+        "zh-CN": "浏览器智能体 Shadow DOM"
+      },
+      "intent": "区分open shadow roots、XPath例外、closed roots和iframe，定位可支持边界。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-shadow-dom/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-shadow-dom/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-25",
+      "demandEvidence": "See research-2026-10-25.json and topic research records. Public SERP questions and platform counts are not site search queries or traffic.",
+      "originalGain": "区分open shadow roots、XPath例外、closed roots和iframe，定位可支持边界。",
+      "relatedSlugs": [
+        "gemini-in-chrome-vs-copilot-in-edge",
+        "ai-browser-youtube-summary",
+        "browser-agent-date-picker",
+        "browser-agent-scroll-pagination"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-date-picker",
+      "primaryKeyword": {
+        "en": "browser agent date picker",
+        "zh-CN": "浏览器智能体日期选择器"
+      },
+      "intent": "区分ISO原生日期值与自定义日历，选择完整日期并核验范围、可用性和结果。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-date-picker/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-date-picker/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-25",
+      "demandEvidence": "See research-2026-10-25.json and topic research records. Public SERP questions and platform counts are not site search queries or traffic.",
+      "originalGain": "区分ISO原生日期值与自定义日历，选择完整日期并核验范围、可用性和结果。",
+      "relatedSlugs": [
+        "gemini-in-chrome-vs-copilot-in-edge",
+        "ai-browser-youtube-summary",
+        "browser-agent-shadow-dom",
+        "browser-agent-scroll-pagination"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-scroll-pagination",
+      "primaryKeyword": {
+        "en": "browser agent infinite scroll and pagination",
+        "zh-CN": "浏览器智能体无限滚动与分页"
+      },
+      "intent": "识别分页、无限追加与虚拟列表，选择推进信号、有限停止条件并诚实报告完整性。",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-scroll-pagination/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-scroll-pagination/"
+      ],
+      "status": "current-release-candidate; publication evidence is in workflow delivery receipt",
+      "observedOn": "2026-10-25",
+      "demandEvidence": "See research-2026-10-25.json and topic research records. Public SERP questions and platform counts are not site search queries or traffic.",
+      "originalGain": "识别分页、无限追加与虚拟列表，选择推进信号、有限停止条件并诚实报告完整性。",
+      "relatedSlugs": [
+        "gemini-in-chrome-vs-copilot-in-edge",
+        "ai-browser-youtube-summary",
+        "browser-agent-shadow-dom",
+        "browser-agent-date-picker"
+      ]
     }
   ],
   "futureCandidates": [
@@ -4225,16 +4385,16 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-10-24",
-    "cycleId": "content-2026-10-24",
+    "date": "2026-10-25",
+    "cycleId": "content-2026-10-25",
     "topics": [
-      "comet-vs-dia",
-      "ai-browser-pdf-summary",
-      "browser-agent-human-takeover",
-      "browser-agent-iframes",
-      "browser-agent-tabs-popups"
+      "gemini-in-chrome-vs-copilot-in-edge",
+      "ai-browser-youtube-summary",
+      "browser-agent-shadow-dom",
+      "browser-agent-date-picker",
+      "browser-agent-scroll-pagination"
     ],
     "newTopicCount": 5,
-    "publicationStatus": "consult workflow-delivery-2026-10-24.json after delivery"
+    "publicationStatus": "consult workflow-delivery-2026-10-25.json after delivery"
   }
 }

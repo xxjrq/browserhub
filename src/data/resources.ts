@@ -1,3 +1,6 @@
+import { aiChoicesGuides25 } from "./ai-choices-2026-10-25";
+import { aiControlsGuides25 } from "./ai-controls-2026-10-25";
+import { aiNavigationGuides25 } from "./ai-navigation-2026-10-25";
 import { aiChoicesGuides as aiChoicesGuides24 } from "./ai-choices-2026-10-24";
 import { aiContextGuides } from "./ai-context-2026-10-24";
 import { aiHandoffGuides } from "./ai-handoff-2026-10-24";
@@ -266,7 +269,7 @@ export const technologies: TechnologyResource[] = technologyRows.map(item => ({
 
 export const useCases: UseCaseResource[] = (useCaseCatalog.useCases as Array<{ id: string; name: string; recommendedCategories: string[] }>).map(item => ({ ...item, slug: item.id }));
 
-export const guides: GuideResource[] = [...aiChoicesGuides24, ...aiHandoffGuides, ...aiContextGuides, ...aiResearchGuides, ...aiToolsGuides, ...aiActionsGuides, ...aiChoicesGuides, ...aiSecurityGuides, ...aiDataGuides, ...aiSelectionGuides, ...aiSessionGuides, ...aiPlaywrightGuides, ...dailyGuides, ...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
+export const guides: GuideResource[] = [...aiChoicesGuides25, ...aiControlsGuides25, ...aiNavigationGuides25, ...aiChoicesGuides24, ...aiHandoffGuides, ...aiContextGuides, ...aiResearchGuides, ...aiToolsGuides, ...aiActionsGuides, ...aiChoicesGuides, ...aiSecurityGuides, ...aiDataGuides, ...aiSelectionGuides, ...aiSessionGuides, ...aiPlaywrightGuides, ...dailyGuides, ...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
 
 const rawComparisons: ComparisonResource[] = [
 	{ title: "EasyBR vs AdsPower", slug: "easybr-vs-adspower", description: "比较本地优先与电商自动化工作流。", browsers: ["easybr", "adspower"] },

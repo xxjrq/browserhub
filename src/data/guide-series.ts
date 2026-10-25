@@ -3,10 +3,10 @@ export const guideSeries = [
 	{
 		id: "ai-browser-development",
 		copy: {
-			en: { title: "AI browsers and browser agents", description: "Choose AI browsers, read PDFs, verify sources, hand tasks to a person, and handle browser-agent sessions, frames and tabs." },
-			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "按任务选择 AI 浏览器，阅读 PDF、核验资料、接管智能体，并处理开发中的会话、嵌入页面与标签页。" }
+			en: { title: "AI browsers and browser agents", description: "Compare browser AI assistants, summarize videos and PDFs, verify sources, and develop browser agents for sessions, forms and dynamic pages." },
+			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "按任务比较浏览器内 AI，整理视频与 PDF，核验资料，并处理智能体开发中的会话、表单和动态页面。" }
 		},
-		slugs: ["comet-vs-dia", "ai-browser-pdf-summary", "browser-agent-human-takeover", "browser-agent-iframes", "browser-agent-tabs-popups", "ai-browser-research-source-verification", "playwright-cli-vs-mcp", "browser-agent-upload-files", "browser-agent-form-submission", "browser-agent-debugging-traces", "browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
+		slugs: ["gemini-in-chrome-vs-copilot-in-edge", "ai-browser-youtube-summary", "browser-agent-shadow-dom", "browser-agent-date-picker", "browser-agent-scroll-pagination", "comet-vs-dia", "ai-browser-pdf-summary", "browser-agent-human-takeover", "browser-agent-iframes", "browser-agent-tabs-popups", "ai-browser-research-source-verification", "playwright-cli-vs-mcp", "browser-agent-upload-files", "browser-agent-form-submission", "browser-agent-debugging-traces", "browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
 	},
 	{
 		id: "browser-selection",
