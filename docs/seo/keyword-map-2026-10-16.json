@@ -3571,7 +3571,10 @@
         "gscImpressions": null,
         "gscClicks": null
       },
-      "existingUrls": [],
+      "existingUrls": [
+        "https://browserhub.co/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
+        "https://browserhub.co/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/"
+      ],
       "targetUrls": [
         "https://browserhub.co/en/guides/playwright-mcp-vs-chrome-devtools-mcp/",
         "https://browserhub.co/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/"
@@ -3579,13 +3582,17 @@
       "status": "reviewed-release-candidate; not yet claimed published",
       "observedOn": "2026-10-21",
       "demandEvidence": "公开搜索与CSDN具体阅读线索见本批三份research-ai记录；不是本站query或已测量搜索量。",
-      "originalGain": "比较两种MCP工具的交互、调试及会话模式",
+      "originalGain": "Pinned-version local HTTP CDP attachment through both MCP servers, separate post-Save output assertions, deliberately malformed call examples, downloadable exact-byte executed SDK runner and sanitized results; deterministic tool calls, no LLM/reliability benchmark.",
       "relatedSlugs": [
         "ai-browser-vs-browser-agent",
         "browser-use-existing-browser-session",
         "chrome-devtools-mcp-existing-browser",
         "playwright-mcp-existing-browser"
-      ]
+      ],
+      "lastSubstantiveRefresh": "2026-10-25",
+      "refreshCycle": "content-2026-10-25-batch-02",
+      "refreshEvidence": "docs/seo/research-mcp-refresh-2026-10-25.json",
+      "refreshStatus": "final source prepared; publication requires workflow delivery receipt"
     },
     {
       "id": "guides:browser-use-existing-browser-session",
@@ -3635,7 +3642,10 @@
         "gscImpressions": null,
         "gscClicks": null
       },
-      "existingUrls": [],
+      "existingUrls": [
+        "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+        "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/"
+      ],
       "targetUrls": [
         "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
         "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/"
@@ -3643,13 +3653,17 @@
       "status": "reviewed-release-candidate; not yet claimed published",
       "observedOn": "2026-10-21",
       "demandEvidence": "公开搜索与CSDN具体阅读线索见本批三份research-ai记录；不是本站query或已测量搜索量。",
-      "originalGain": "Chrome DevTools MCP自动连接与手动调试端点配置",
+      "originalGain": "Pinned-version local HTTP CDP attachment through both MCP servers, separate post-Save output assertions, deliberately malformed call examples, downloadable exact-byte executed SDK runner and sanitized results; deterministic tool calls, no LLM/reliability benchmark.",
       "relatedSlugs": [
         "ai-browser-vs-browser-agent",
         "playwright-mcp-vs-chrome-devtools-mcp",
         "browser-use-existing-browser-session",
         "playwright-mcp-existing-browser"
-      ]
+      ],
+      "lastSubstantiveRefresh": "2026-10-25",
+      "refreshCycle": "content-2026-10-25-batch-02",
+      "refreshEvidence": "docs/seo/research-mcp-refresh-2026-10-25.json",
+      "refreshStatus": "final source prepared; publication requires workflow delivery receipt"
     },
     {
       "id": "guides:playwright-mcp-existing-browser",
@@ -4396,5 +4410,17 @@
     ],
     "newTopicCount": 5,
     "publicationStatus": "consult workflow-delivery-2026-10-25.json after delivery"
+  },
+  "latestEditorialEnhancement": {
+    "date": "2026-10-25",
+    "cycleId": "content-2026-10-25-batch-02",
+    "newTopicCount": 0,
+    "substantialExistingTopics": [
+      "chrome-devtools-mcp-existing-browser",
+      "playwright-mcp-vs-chrome-devtools-mcp"
+    ],
+    "completeLocaleCopiesUpdated": 4,
+    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-25-batch-02.json when completed",
+    "metrics": null
   }
 }

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "method": "Deterministic MCP SDK calls to a disposable local fixture. No LLM agent was used.",
+  "runtime": {
+    "node": "v22.22.3",
+    "npm": "10.9.8",
+    "chrome": "155.0.8059.85",
+    "mcpSdk": "@modelcontextprotocol/sdk 1.32.2"
+  },
+  "fixture": {
+    "origin": "127.0.0.1 with a temporary port",
+    "task": "Read a local form snapshot, fill Task label with synthetic-ok, click Save, then inspect the separate status output.",
+    "data": "No remote site, user profile, account, CAPTCHA, or production data was used."
+  },
+  "results": [
+    {
+      "package": "@playwright/mcp 0.0.83",
+      "connection": "--cdp-endpoint to a dedicated temporary Chrome process and profile",
+      "tools": ["browser_snapshot", "browser_fill_form", "browser_click", "browser_snapshot"],
+      "postSaveStatus": "synthetic-ok",
+      "assertion": true
+    },
+    {
+      "package": "chrome-devtools-mcp 1.12.0",
+      "connection": "--browser-url to a dedicated temporary Chrome process and profile",
+      "tools": ["list_pages", "take_snapshot", "fill", "click"],
+      "postSaveStatus": "synthetic-ok",
+      "assertion": true
+    }
+  ],
+  "limitations": [
+    "One retained run per package is a local smoke check, not a speed, reliability, or general capability benchmark.",
+    "The test covers manual loopback HTTP CDP attachment. Chrome DevTools MCP autoConnect and its consent dialog were not tested.",
+    "Tool names and argument schemas can change; inspect the installed server's tools/list and current documentation."
+  ]
+}

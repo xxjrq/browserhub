@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "status": "bounded_existing_owner_refresh_executed_not_published",
+  "cycleId": "content-2026-10-25-batch-02",
+  "scope": {
+    "owners": [
+      "chrome-devtools-mcp-existing-browser",
+      "playwright-mcp-vs-chrome-devtools-mcp"
+    ],
+    "sourceFiles": [
+      "src/data/ai-session-guides.ts",
+      "src/data/ai-selection-guides.ts"
+    ],
+    "outsideScope": [
+      "new topics",
+      "detection website",
+      "product backend/client",
+      "outreach",
+      "paid APIs",
+      "website publication or deployment"
+    ]
+  },
+  "demandContext": {
+    "source": "docs/seo/strategy-research-2026-10-25.json",
+    "sourceOwner": "predecessor batch research",
+    "observed": "Existing-owner refresh candidate; current public results and competitor-reported method were already reviewed in the predecessor research.",
+    "notAvailable": [
+      "search volume",
+      "competitor traffic",
+      "site-level organic impact"
+    ],
+    "noNewKeywordOrTopicClaim": true
+  },
+  "officialFactsChecked": [
+    {
+      "url": "https://github.com/microsoft/playwright-mcp/blob/main/README.md",
+      "observedOn": "2026-10-25",
+      "facts": [
+        "The installed @playwright/mcp package exposes --cdp-endpoint for connecting to a browser endpoint.",
+        "The current README states Node.js 18 or newer."
+      ],
+      "sourceType": "official project README; installed npm package checked locally"
+    },
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md",
+      "observedOn": "2026-10-25",
+      "facts": [
+        "--browser-url connects to a running debuggable Chrome instance.",
+        "--autoConnect is documented for local Chrome 144 or newer and requires remote debugging to be enabled in Chrome.",
+        "--isolated creates a temporary user-data directory cleaned after Chrome closes."
+      ],
+      "sourceType": "official project configuration reference"
+    },
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/advanced-usage.md",
+      "observedOn": "2026-10-25",
+      "facts": [
+        "Manual attach uses --browser-url and a Chrome process launched with a debugging port and non-default data directory.",
+        "The browser endpoint can control the whole instance; sensitive profiles should not be exposed while debugging is open.",
+        "autoConnect uses the default profile for the selected Chrome channel and asks for user approval."
+      ],
+      "sourceType": "official project advanced-usage guide"
+    },
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md",
+      "observedOn": "2026-10-25",
+      "facts": [
+        "Troubleshooting recommends checking that Chrome and the MCP server use the intended Node/npm environment and reading server errors.",
+        "VM-to-host CDP may require localhost forwarding; an MCP sandbox may need manual attach to a Chrome process started outside it."
+      ],
+      "sourceType": "official project troubleshooting guide"
+    },
+    {
+      "url": "https://developer.chrome.com/blog/remote-debugging-port",
+      "observedOn": "2026-10-25",
+      "facts": [
+        "Chrome 136 and newer require a non-default user-data directory for command-line remote debugging."
+      ],
+      "sourceType": "Chrome for Developers"
+    },
+    {
+      "url": "https://registry.npmjs.org/@playwright%2fmcp/latest",
+      "observedOn": "2026-10-25",
+      "facts": [
+        "npm view reported @playwright/mcp 0.0.83 with Node engine >=18."
+      ],
+      "sourceType": "npm registry metadata queried with npm view"
+    },
+    {
+      "url": "https://registry.npmjs.org/chrome-devtools-mcp/latest",
+      "observedOn": "2026-10-25",
+      "facts": [
+        "npm view reported chrome-devtools-mcp 1.12.0 with Node engine ^20.19.0 || ^22.12.0 || >=23."
+      ],
+      "sourceType": "npm registry metadata queried with npm view"
+    }
+  ],
+  "execution": {
+    "method": "The published runner was copied byte-for-byte into the private harness and executed using deterministic MCP SDK client calls; no LLM agent was run.",
+    "privateHarness": ".local/workflows/cycles/content-2026-10-25-batch-02/harness/run.mjs",
+    "privateRawStdout": ".local/workflows/cycles/content-2026-10-25-batch-02/harness/evidence-2026-10-25.json",
+    "privateStderr": ".local/workflows/cycles/content-2026-10-25-batch-02/harness/evidence-2026-10-25.stderr.log",
+    "privateRunMetadata": ".local/workflows/cycles/content-2026-10-25-batch-02/harness/evidence-2026-10-25.runmeta",
+    "runMetadata": {
+      "startedUtc": "2026-10-25T02:21:21Z",
+      "finishedUtc": "2026-10-25T02:21:28Z",
+      "exitCode": 0
+    },
+    "runtime": {
+      "node": "v22.22.3",
+      "npm": "10.9.8",
+      "chrome": "155.0.8059.85",
+      "sdk": "@modelcontextprotocol/sdk 1.32.2"
+    },
+    "packages": [
+      {
+        "name": "@playwright/mcp",
+        "version": "0.0.83",
+        "nodeEngine": ">=18"
+      },
+      {
+        "name": "chrome-devtools-mcp",
+        "version": "1.12.0",
+        "nodeEngine": "^20.19.0 || ^22.12.0 || >=23"
+      }
+    ],
+    "fixture": {
+      "origin": "127.0.0.1 with an ephemeral port",
+      "page": "One synthetic form with a labeled textbox, Save button and separate output element",
+      "input": "synthetic-ok",
+      "assertion": "After clicking Save, the separate status/output node contained exactly synthetic-ok.",
+      "dataExposure": "No remote sites, user accounts, credentials, existing browser profiles, CAPTCHA, or production data were used."
+    },
+    "cases": [
+      {
+        "package": "@playwright/mcp 0.0.83",
+        "connection": "--cdp-endpoint to a fresh headless Chrome process with a temporary non-default user-data directory and an ephemeral loopback CDP port",
+        "tools": [
+          "browser_snapshot",
+          "browser_fill_form",
+          "browser_click",
+          "browser_snapshot"
+        ],
+        "observedPageOutput": "status: synthetic-ok",
+        "assertion": true,
+        "schemaCorrection": "After tools/list, a deliberately malformed browser_type call was rejected for a missing target. The corrected browser_fill_form call used textbox ref e3; browser_click used button ref e4. The final snapshot status node contained synthetic-ok."
+      },
+      {
+        "package": "chrome-devtools-mcp 1.12.0",
+        "connection": "--browser-url to a fresh headless Chrome process with a temporary non-default user-data directory and an ephemeral loopback CDP port",
+        "tools": [
+          "list_pages",
+          "take_snapshot",
+          "fill",
+          "click"
+        ],
+        "observedPageOutput": "Snapshot status node uid=3_0 contained synthetic-ok",
+        "assertion": true,
+        "schemaCorrection": "After tools/list, a deliberately malformed fill call was rejected for missing pageId. The page snapshot supplied page ID 1, textbox UID 1_3 and button UID 1_4; the final snapshot status node contained synthetic-ok."
+      }
+    ],
+    "cleanup": "Harness closes MCP client, MCP process, Chrome process, fixture server and temporary profile in finally; client calls, startup and shutdown have finite timeouts.",
+    "notes": [
+      "The final published runner bytes were executed in the private harness after package installation. The retained run has one successful case per package.",
+      "Each server-tool rejection was deliberately submitted after tools/list; the accepted calls used the installed version’s known input structure and refs from its page snapshot. These validation responses are not browser connection failures.",
+      "The test exercises manual HTTP CDP attachment only. Chrome DevTools MCP autoConnect and its consent dialog were documented from source, not tested.",
+      "No comparative latency, success-rate, reliability, or cross-browser-engine claim is made."
+    ],
+    "model": {
+      "requested": null,
+      "effective": null,
+      "reasoningEffort": null,
+      "tokens": null,
+      "llmAgentUsed": false,
+      "note": "A deterministic SDK client performed protocol calls; actual agent model and token usage are not applicable and are not imputed."
+    },
+    "publicRunnerBytesExecuted": true,
+    "publicRunnerPrerequisites": [
+      "Node.js 22.12 or later",
+      "npm",
+      "@modelcontextprotocol/sdk 1.32.2",
+      "@playwright/mcp 0.0.83",
+      "chrome-devtools-mcp 1.12.0",
+      "Chrome or Chromium executable"
+    ]
+  },
+  "evidenceSha256": {
+    "harness": "e8fe4c219e8c2c919ed924c0200a2b07fc53242440caf85c676a9b155353ea51",
+    "playwrightPackageTarball": "f0014a13361b1ee2d8607a4e187868ab9a6e8ac637dbcd66e4af43f738d0c8cb",
+    "chromeDevtoolsPackageTarball": "4aade3167c3e781c797d6109ed603a0ca5b8cb363a289e2eaacaa9b0c5d2a360",
+    "rawRunStdout": "383434652ef71ee24a83ad61427cd41c40e44fad7d77684659e3be2ef612cdec",
+    "runMetadata": "34b8b68fa0b5a5d282d9ab3659e41ccf02343437981800b31ab2aa4c9819498e",
+    "updatedEnglishChineseOwnerSource": {
+      "src/data/ai-session-guides.ts": "c643856a5a5eeb8f3fe23d86bacb61b1720c2640e05a62a5d5b88a0ba0c56a22",
+      "src/data/ai-selection-guides.ts": "0ec3dad4b67f79c1db7bcee857d0b50e78561bc840ddb82b6db9906e6453384f"
+    },
+    "publicRunner": "e8fe4c219e8c2c919ed924c0200a2b07fc53242440caf85c676a9b155353ea51",
+    "publicSanitizedResults": "50fc43af0c2c941fc4725b00051676ddc57302b578e4010f1f8981c6295aa4e4"
+  },
+  "limits": [
+    "One recorded run per MCP package against one Chrome version and a synthetic localhost task does not establish universal capability or reliability.",
+    "Version-specific tool names, arguments, client behavior and permissions may change; inspect tools/list and current official documentation for the installed release.",
+    "The autoConnect permission flow and Chrome builds below 155 were not exercised."
+  ]
+}

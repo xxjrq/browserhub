@@ -213,6 +213,10 @@ Browser Use 连上后如果看到错误的账号或标签页，先停止智能�
         url: "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       },
       {
+        title: "Microsoft Playwright MCP: README and CDP options",
+        url: "https://github.com/microsoft/playwright-mcp/blob/main/README.md",
+      },
+      {
         title: "Chrome for Developers: Changes to remote debugging switches",
         url: "https://developer.chrome.com/blog/remote-debugging-port",
       },
@@ -250,6 +254,12 @@ Chrome 136 and later ignore the command-line remote debugging port and pipe swit
             body: `A browser connection is broader than a single tab. With autoConnect, the server selects the default profile for the chosen Chrome channel and can access all its open windows. With a manual endpoint, it can inspect the browser instance behind that port. Chrome DevTools MCP says the MCP client can inspect, debug and modify browser data; treat page content and signed-in state as shared with that client.
 
 The server’s default behavior is to launch a dedicated profile. That profile persists between runs unless isolated mode is enabled; isolated mode creates a temporary data directory that is cleared when Chrome closes. Choosing an existing browser changes that lifecycle. Decide which tabs and accounts may be exposed before connecting, and close or move unrelated pages out of the selected profile.`,
+          },
+          {
+            heading: "A bounded local attach check",
+            body: `On October 25, 2026, I connected Chrome DevTools MCP 1.12.0 to a fresh Chrome 155.0.8059.85 process through its loopback CDP endpoint. The only page was a local form with a synthetic field value. I listed pages, took a page snapshot, filled the labeled field, clicked Save, and checked the output. The page displayed synthetic-ok. This verifies that this package and browser combination completed that small task; it does not measure reliability or establish support for every Chrome build.
+
+The server tools use page IDs and element UIDs from a page snapshot. In the retained harness run, a deliberately incomplete fill call omitted pageId and the server rejected it. The harness then took a snapshot, passed the page ID and textbox UID, and completed the form. If a call fails validation, inspect the installed server's input schema and refresh the snapshot before reusing a UID. That error was a tool-argument problem, not a browser connection failure. The [comparison guide](/en/guides/playwright-mcp-vs-chrome-devtools-mcp/) records the same local form task with both servers; the [runnable local check](/templates/mcp-local-attach-check.mjs) and [sanitized result](/templates/mcp-local-attach-results.json) are also available.`,
           },
           {
             heading: "Check versions and common connection failures",
@@ -320,6 +330,12 @@ Chrome 136 及更新版本会忽略针对默认数据目录的命令行远程调
 服务默认启动一个专用配置。除非启用 isolated，它会在多次运行间保留数据；isolated 会创建临时目录，并在 Chrome 关闭后清理。连接到已有浏览器会改变数据生命周期。连接前先决定哪些标签页和账号允许暴露，把无关页面移出选定配置。`,
           },
           {
+            heading: "一次范围有限的本地连接检查",
+            body: `2026 年 10 月 25 日，我用 Chrome DevTools MCP 1.12.0 连接到一个全新启动的 Chrome 155.0.8059.85 进程，端点仅开放在本机环回地址。页面是本地表单，只填入了合成测试值。我先列出页面并读取快照，再填写有标签的输入框、点击保存并检查结果。页面显示 synthetic-ok。这只能说明这组版本完成了这个小任务，不能说明普遍可靠，也不能证明支持所有 Chrome 构建版本。
+
+该服务的工具使用页面 ID 和快照中的元素 UID。保留的运行记录中，我故意发出了一次缺少 pageId 的填写调用，服务按预期拒绝了参数。之后脚本读取页面快照，传入 page ID 和输入框 UID，表单操作成功。如果参数校验失败，应查看当前服务的输入结构，并刷新快照后再使用 UID。这是工具参数问题，不是浏览器连接失败。[Playwright MCP 与 Chrome DevTools MCP 对比](/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/)记录了两种服务操作本地表单的结果和边界，也可下载[本地检查脚本](/templates/mcp-local-attach-check.mjs)与[精简结果](/templates/mcp-local-attach-results.json)。`,
+          },
+          {
             heading: "检查版本与常见连接故障",
             body: `如果服务不认识 --autoConnect，确认安装的是当前 chrome-devtools-mcp 包，并使用该版本文档中的参数拼写。如果 Chrome 没有远程调试开关，或服务找不到浏览器，检查 Chrome 是否为 144 或更新版本、channel 是否正确，以及 Chrome 是否已经运行。若用户拒绝了授权提示，应先回到 Chrome 处理权限，再重试。
 
@@ -362,7 +378,10 @@ Chrome 136 及更新版本会忽略针对默认数据目录的命令行远程调
 export const aiSessionGuides: EditorialGuide[] = articles.map((article) => ({
   ...article.copy["zh-cn"],
   slug: article.slug,
-  date: "2026-10-21",
+  date:
+    article.slug === "chrome-devtools-mcp-existing-browser"
+      ? "2026-10-25"
+      : "2026-10-21",
   sourcePath: `src/data/ai-session-guides.ts#${article.slug}`,
   availableLocales: ["en", "zh-cn"],
   relatedBrowsers: [],

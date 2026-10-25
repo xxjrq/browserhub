@@ -164,7 +164,7 @@
   "boundedExistingPageBriefs": [
     {
       "owner": "chrome-devtools-mcp-existing-browser",
-      "stage": "candidate_refresh_not_yet_authored_or_published",
+      "stage": "authored_with_bounded_local_execution_pending_final_review_and_publication",
       "evidence": "Existing rendered article and current public results inspected; private analytics has only a very small page-level signal.",
       "observedExistingAssets": [
         "Manual attach JSON download",
@@ -176,15 +176,16 @@
       "proposedIncrement": [
         "Reuse the currentowner URL",
         "Add a connection-mode decision matrix",
-        "Use dedicated disposable localprofiles and exact versions for a bounded read-only attach demonstration",
+        "Use dedicated disposable localprofiles and exact versions for a bounded synthetic local form interaction",
         "Record actual errors/observed outputs/screenshots if executed; no realuser-account exposure or fakecompatibility claim",
         "Keep originalconfiguration download and link related setup/comparison guides naturally"
       ],
-      "notClaimed": "No rewrite or new hands-on test completed by this research."
+      "notClaimed": "No traffic uplift or comparative reliability benchmark; publication requires completed workflow receipt.",
+      "executionEvidence": "docs/seo/research-mcp-refresh-2026-10-25.json"
     },
     {
       "owner": "playwright-mcp-vs-chrome-devtools-mcp",
-      "stage": "candidate_refresh_not_yet_authored_or_published",
+      "stage": "authored_with_bounded_local_execution_pending_final_review_and_publication",
       "evidence": "Existing source and current competing comparison inspected.",
       "observedExistingAssets": [
         "Source-based capability comparison",
@@ -197,20 +198,33 @@
         "Include reproducible inputs, failures and cleanup",
         "Reuse existing synthetic fixtures where applicable; no paidLLM invocation needed for deterministic tool calls"
       ],
-      "notClaimed": "No competitor benchmark copied; no independent ranking or traffic forecast."
+      "notClaimed": "No traffic uplift or comparative reliability benchmark; publication requires completed workflow receipt.",
+      "executionEvidence": "docs/seo/research-mcp-refresh-2026-10-25.json"
     }
   ],
   "costPolicy": {
-    "batchArticleQuota": "Paused; no automatic five-topics-daily production",
-    "scope": "Prioritize a maximum of1–2 evidence-backed existing-page improvements; do not automatically expand newtopics",
-    "cadence": "Weekly performance review; source research reused until a real change warrants rechecking",
-    "modelUse": "Use code for routine checks; Lunaexecution and independentSolreview only when genuine site/contentchanges are warranted",
-    "publication": "Existing approval, frozen source, CI, original durable workflow and dual-domain acceptance remain required; no bypass or journal rewrite."
+    "batchArticleQuota": "Daily publication restored under original approximatelyfive independentnewtopics target; do not repeat completedbatches or manufacture weakarticles.",
+    "scope": "Evidence-backed existingowner improvements and genuinely distinct newtopics, with quality gates and cost controls.",
+    "cadence": "Daily09:00 publishing; Monday effect review in the same task.",
+    "modelUse": "Code for routine checks; defaultone Lunaexecution coordinator and one independentSolreview. Additional delegation only when needed.",
+    "publication": "Reviewed frozen source, preflightCI/scopedGit, original formalgraph and dual-domain acceptance remain mandatory."
   },
   "limitations": [
     "Cannot infer why a competitor ranks or its ROI from public page format alone.",
     "Ahrefs/agency examples are their own case reports, not a BrowserHub forecast.",
     "New skills are instructions, not paid keyword data or guaranteed outcomes.",
     "No paid tools/subscriptions, outreach, new articles, account settings, indexsubmission or website deployment in this research."
-  ]
+  ],
+  "executionUpdate": {
+    "date": "2026-10-25",
+    "userCorrection": "发布文章肯定要发布的，你按照上面能有计划的搞了吗",
+    "interpretation": "Continue publishing under researched plan. Prior automatic pause was assistant overreach, revoked. Keep cost discipline and effect reviews.",
+    "activeCycle": "content-2026-10-25-batch-02",
+    "plannedChanges": [
+      "Enhance existing chrome-devtools-mcp-existing-browser EN/ZH",
+      "Enhance existing playwright-mcp-vs-chrome-devtools-mcp EN/ZH"
+    ],
+    "newTopicsInThisBatch": 0,
+    "publicationStatus": "Final source and reproducible local run prepared; independent final review and formal publication pending. Consult workflow-delivery-2026-10-25-batch-02.json for completed delivery."
+  }
 }
