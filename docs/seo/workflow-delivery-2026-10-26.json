@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-26",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "a854b56ae19a265de5030d409af95ea7bc3ee56b7bd6fe3ba488575ec8bc0875",
+  "commit": "1201b7e14a9d66617912831849974f000904dd36",
+  "release": "/opt/browsertools/releases/20261026-092730",
+  "publicationReceiptAt": "2026-10-26T01:28:11.032Z",
+  "completedAt": "2026-10-26T01:28:12.869Z",
+  "newTopics": [
+    "chatgpt-atlas-retirement-data-transition",
+    "chatgpt-desktop-browser-vs-comet",
+    "ai-browser-webpage-translation",
+    "browser-agent-wait-for-page-ready",
+    "browser-agent-accessibility-snapshot-vs-screenshot"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/chatgpt-atlas-retirement-data-transition/",
+    "https://browserhub.co/zh-cn/guides/chatgpt-atlas-retirement-data-transition/",
+    "https://browserhub.co/en/guides/chatgpt-desktop-browser-vs-comet/",
+    "https://browserhub.co/zh-cn/guides/chatgpt-desktop-browser-vs-comet/",
+    "https://browserhub.co/en/guides/ai-browser-webpage-translation/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-webpage-translation/",
+    "https://browserhub.co/en/guides/browser-agent-wait-for-page-ready/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-wait-for-page-ready/",
+    "https://browserhub.co/en/guides/browser-agent-accessibility-snapshot-vs-screenshot/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-accessibility-snapshot-vs-screenshot/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Complete English and Chinese count as one independenttopic. No priorcycle themes repeated; all54existingmetadata/copies preserved.",
+  "editorialSelection": "Five task intents have currentpublicquestions/competingpages, currentprimaryfacts and explicitaddedvalue. RetiredAtlas livecomparison/memory-control candidate rejected; one qualifieddata-transition task pluscurrentdesktopbrowserchoice retained. No claimretirementoccurredtoday.",
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful deploymentreceipt time, not search-engine discovery or exact firstreader request.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-02T01:28:11.032000+00:00",
+      "14day": "2026-11-09T01:28:11.032000+00:00",
+      "28day": "2026-11-23T01:28:11.032000+00:00"
+    },
+    "dateOnlyReminder": "Nov2/Nov9/Nov23 are calendar reminders; compare only after exact maturetime and use matched closedwindows. Immature results pending, not failed."
+  },
+  "review": {
+    "decision": "approved",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "independentContext": true,
+    "fileCount": 13,
+    "sha256": "5b0f7c1237da7e6f696fe8b501d0a35d7734f2fe30cc5c16f2c11b197d6e6d4a",
+    "generatedEvidenceSha256": "7efe402f2defdd6d218a3bbeecf4e21ed2ec41b9ee34baa93b4b3464c8bb76fd"
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "agent": "content_execution_20261026",
+    "executionAttempts": [
+      {
+        "attempt": 1,
+        "scope": "Five distinct intent briefs with currentprimary docs/publicproblem/competitorresearch; retiredAtlas framing corrected beforedrafting."
+      },
+      {
+        "attempt": 2,
+        "reason": "Repair draft serialization and focus source arrays; independent factual review corrected published/observed dates, conditional password/history claims, questionview/reputation distinction, version parity and evidence paths."
+      },
+      {
+        "attempt": 3,
+        "reason": "Bounded syntheticfixture corrected fileURL and deterministic initialstate; selfcontained packaging avoids serving publicsampleHTML. Root executed exactfinalscript, factualrunrecord integrated."
+      }
+    ],
+    "attemptAccounting": "Separate draft/source/fixture-packaging issues resolved; no same unresolved issue after three distinct approaches. No runtime, workflow definition, dependency or global account change.",
+    "integration": "Root integrated resources/editions/series/bothhomes/keywordownership/audit/rootresearch and ran actual local fixture, protectedcontent contract, plus private Mondayanalytics. Sol independently reviewed actualsources/code and will reviewfinalexports before signing."
+  },
+  "skills": [
+    "content-strategy",
+    "ai-seo",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "validation": {
+    "preflight": {
+      "startedAt": "2026-10-26T01:22:26.745630+00:00",
+      "checkedAt": "2026-10-26T01:22:54.771626+00:00",
+      "command": "npm run ci",
+      "exitCode": 0,
+      "logPath": ".local/workflows/cycles/content-2026-10-26/preflight-ci.log",
+      "logSha256": "0c24a7b0ea80af71707fc625bf91cee3ea4caa387acbe97bbbcd574a0af1a719"
+    },
+    "gitRead": {
+      "checkedAt": "2026-10-26T01:22:29.445724+00:00",
+      "scopedUsername": "xxjrq",
+      "exitCode": 0,
+      "stdout": "85447676c8e6d4336c722adc1a78df9e84c331a9\trefs/heads/main\n",
+      "stderr": "",
+      "credentialSource": "Repository-scoped local account tool helper; no secrets output or persisted; global GitHub account unchanged"
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1233,
+    "seoAudit": {
+      "htmlPages": 1229,
+      "sitemapUrls": 986,
+      "internalLinks": 41192,
+      "alternateLinks": 7475,
+      "fallbackPages": 60,
+      "editorialGuides": 118,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-10-26T01:21:04.253Z",
+      "status": "passed",
+      "existingTopicsPreserved": 54,
+      "totalTopics": 59,
+      "completeEditions": 118,
+      "newTopics": 5,
+      "details": [
+        {
+          "slug": "chatgpt-atlas-retirement-data-transition",
+          "locale": "en",
+          "sections": 5,
+          "faq": 5,
+          "status": "valid"
+        },
+        {
+          "slug": "chatgpt-atlas-retirement-data-transition",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 5,
+          "status": "valid"
+        },
+        {
+          "slug": "chatgpt-desktop-browser-vs-comet",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "chatgpt-desktop-browser-vs-comet",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "ai-browser-webpage-translation",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "ai-browser-webpage-translation",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-wait-for-page-ready",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-wait-for-page-ready",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-accessibility-snapshot-vs-screenshot",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-accessibility-snapshot-vs-screenshot",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        }
+      ]
+    },
+    "workspaceScope": "Exactly13 reviewed content/data/navigation/audit/research/download files; no framework/renderer/runtime/dependency change.",
+    "documentationBookkeeping": "Final JSON packaging summary and root-run attribution aligned duringreview, parsed and independentlyreviewed; generatedsource/assetbytes unchanged afterpreflight.",
+    "productEvidence": {
+      "products": 36,
+      "confirmedPriceOrLicenceRecords": 26,
+      "explicitlyUnverifiedPrices": 10,
+      "catalogueFactDate": "2026-10-16; productiondate doesnotrecertify prices."
+    },
+    "serverCurrent": {
+      "checkedAt": "2026-10-26T01:29:40.315771+00:00",
+      "command": "ssh browserhub-deploy readlink -f /opt/browsertools/current",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261026-092730",
+      "expectedRelease": "/opt/browsertools/releases/20261026-092730",
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-26T01:28:12.825Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chatgpt-atlas-retirement-data-transition/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chatgpt-atlas-retirement-data-transition/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chatgpt-atlas-retirement-data-transition/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chatgpt-atlas-retirement-data-transition/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chatgpt-desktop-browser-vs-comet/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chatgpt-desktop-browser-vs-comet/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chatgpt-desktop-browser-vs-comet/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chatgpt-desktop-browser-vs-comet/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-webpage-translation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-webpage-translation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-webpage-translation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-webpage-translation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-wait-for-page-ready/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-wait-for-page-ready/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-wait-for-page-ready/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-wait-for-page-ready/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-accessibility-snapshot-vs-screenshot/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-accessibility-snapshot-vs-screenshot/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-accessibility-snapshot-vs-screenshot/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-accessibility-snapshot-vs-screenshot/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-26T01:29:21.830345+00:00",
+    "ok": true,
+    "release": "/opt/browsertools/releases/20261026-092730",
+    "results": [
+      {
+        "url": "https://browserhub.co/templates/agent-readiness-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "396bcec2e0d7aad25b88ced531672e77529ca8751faae45f6a52a279f4a1f595",
+        "expectedSha256": "396bcec2e0d7aad25b88ced531672e77529ca8751faae45f6a52a279f4a1f595",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/agent-readiness-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "396bcec2e0d7aad25b88ced531672e77529ca8751faae45f6a52a279f4a1f595",
+        "expectedSha256": "396bcec2e0d7aad25b88ced531672e77529ca8751faae45f6a52a279f4a1f595",
+        "bytesMatch": true,
+        "error": null
+      }
+    ],
+    "scope": "Read-only HTTP and exact source/export/download byte verification; does not execute remote example tasks."
+  },
+  "offlineValidation": {
+    "startedAt": "2026-10-26T01:20:21.666043+00:00",
+    "finishedAt": "2026-10-26T01:20:22.844754+00:00",
+    "exitCode": 0,
+    "files": {
+      "public/templates/agent-readiness-fixture.mjs": "396bcec2e0d7aad25b88ced531672e77529ca8751faae45f6a52a279f4a1f595"
+    },
+    "node": "v22.22.3",
+    "playwright": "1.64.0-alpha-1790635538000",
+    "chromeInstalledAppVersion": "155.0.8059.85",
+    "stdout": "{\n  \"result\": \"synthetic_fixture_passed\",\n  \"initialText\": \"Loading report\",\n  \"readyText\": \"Ready: report is available\",\n  \"actionEnabled\": true,\n  \"accessibilitySnapshotContainsReadyStatus\": true,\n  \"accessibilitySnapshotContainsChartDescription\": true,\n  \"screenshotCaptured\": true,\n  \"temporaryScreenshotRemovedAfterCapture\": true\n}\n",
+    "stderr": "",
+    "replaces": "Earlier paired MJS/HTML run preserved as .paired-first; packaging changed to self-contained script to avoid public HTML demo page.",
+    "scope": "One final self-contained publicscript executed unchanged. Own temporary local HTML fixture and fresh headlesscontext/mockkeychain. Observes initialLoading, triggersandawaitsReady, enabledbutton, ARIAstatus/chartdescription, capturesPNGfile then cleans own temporarydirectory. No visual/LLMinterpretation, realwebsite, userprofile/accounts, crossengine/reliability/agentbenchmark. Browser/OS backgroundnetworking outside assertion."
+  },
+  "mondayReview": {
+    "status": "completed_privately_limited_data",
+    "scope": "ExistingauthorizedBaidu closed-date analytics read; GSCtransportunavailable, Bingusedsessionnonauthenticated. No indexsubmission/settingschange.",
+    "privateDirectory": ".local/workflows/measurement/2026-10-26",
+    "limits": "No measuredtrafficuplift/ROI/pagewinnerassertion. Preserve closedwindow, attribution/UVreconciliation and pagecohort maturity qualifications. Rawaccount/log/analytics data not committed."
+  },
+  "sourceRecords": [
+    "docs/seo/research-2026-10-26.json",
+    "docs/seo/research-ai-usage-2026-10-26.json",
+    "docs/seo/research-ai-readiness-2026-10-26.json"
+  ],
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "rank": null,
+    "measuredSearchVolume": null,
+    "note": "Publicquestioncounts are not BrowserHub queries/volume/traffic. Publication acceptance is separate from trafficeffect."
+  },
+  "operationsNotPerformed": [
+    "Index/sitemap submission",
+    "New detection website or publiclyserved testHTML",
+    "Client/backend changes",
+    "Outreach",
+    "New paid subscriptions/APIs",
+    "Cloudflare/accountauth/analyticsconfiguration changes"
+  ]
+}
