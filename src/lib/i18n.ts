@@ -4,6 +4,7 @@ import { comparisonEditorial } from "@/data/browser-editorial";
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
 import { localizedGuideCopy } from "@/data/guide-translations";
 import { fingerprintCategoryLabel, fingerprintSignalSummary } from "@/data/fingerprint-sections";
+import { infoDescription } from "@/data/info-sections";
 
 import { locales, localeMeta, localePath, contentLocales, contentPath, t, type Locale } from "./locale-ui";
 export * from "./locale-ui";
@@ -49,7 +50,7 @@ export function pageMeta(locale: Locale, path: string) {
 	if (!slug) {
 		if (kind === "home") return { title: locale === "en" ? "Anti-Detect Browser Resource Hub" : labels.homeTitle, description: labels.homeDescription };
 		const sectionCopy: Record<string, [string, string]> = {
-			browsers: [labels.browsers, labels.browserIntro], tools: [labels.tools, labels.toolIntro], fingerprint: [labels.fingerprint, labels.fingerprintIntro], guides: [labels.guides, labels.guideIntro], compare: [labels.compare, labels.compareIntro], about: [labels.about, `${labels.about}: ${labels.homeDescription}`], contact: [labels.contact, `${labels.contact}: ${labels.homeDescription}`], privacy: [labels.privacy, `${labels.privacy}: ${labels.homeDescription}`]
+			browsers: [labels.browsers, labels.browserIntro], tools: [labels.tools, labels.toolIntro], fingerprint: [labels.fingerprint, labels.fingerprintIntro], guides: [labels.guides, labels.guideIntro], compare: [labels.compare, labels.compareIntro], about: [labels.about, infoDescription("about", locale)], contact: [labels.contact, infoDescription("contact", locale)], privacy: [labels.privacy, infoDescription("privacy", locale)]
 		};
 		const [title, description] = sectionCopy[kind] ?? [labels.homeTitle, labels.homeDescription];
 		return { title, description };

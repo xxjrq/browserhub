@@ -8,7 +8,8 @@ import { fingerprintCategoryLabel, fingerprintSectionsFor } from "@/data/fingerp
 import { browserSectionsFor } from "@/data/browser-sections";
 import { browserDisplay } from "@/data/browser-editorial";
 import { SectionBody } from "@/components/section-body";
-import { PrivacyNotice } from "@/components/privacy-notice";
+import { InfoPage } from "@/components/info-page";
+import { infoFaq } from "@/data/info-sections";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -23,7 +24,6 @@ import { allLocaleParams, browserSpecLabel, comparisonApiAnswer, comparisonCopy,
 import { localizedGuideCopy } from "@/data/guide-translations";
 import { GuideArticle, guideFaq } from "@/components/guide-article";
 import { contentLocales, contentPath } from "@/lib/i18n";
-import { EditorialPolicy } from "@/components/editorial-policy";
 import { cn } from "@/lib/utils";
 import { HomePage } from "@/app/page";
 
@@ -127,11 +127,8 @@ function Collection({ locale, kind }: { locale: Locale; kind: LocalizedKind }) {
 	return <Shell locale={locale} path={kind}><PageHeader locale={locale} eyebrow={config.eyebrow} title={config.title} description={config.intro} count={config.items.length} />{kind === "guides" && <GuideSeriesIndex locale={locale} />}<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{config.items.map(item => { const name = "content" in item ? localizedGuideCopy(locale, item.slug, item).title : "name" in item ? item.name : "title" in item ? item.title : ""; const description = localizedResourceDescription(locale, kind, item); return <Link key={item.slug} href={contentPath(locale, `${kind}/${item.slug}`)} className="group flex h-full flex-col rounded-xl border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-foreground/30"><div className="flex items-start gap-3">{"name" in item && "website" in item && <ResourceIcon name={item.name} src={item.icon} website={item.website} size={40} />}<div className="min-w-0 flex-1"><h2 className="font-semibold tracking-tight">{name}</h2><p className="mt-1 font-mono text-[11px] uppercase text-muted-foreground">{"category" in item ? kind === "guides" ? guideCategoryLabel(locale, item.category) : item.category : kind}</p></div>{"status" in item && <StatusBadge status={item.status} locale={locale} />}</div><p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{description}</p><span className="mt-5 inline-flex items-center gap-1 border-t pt-3 text-sm font-medium text-muted-foreground group-hover:text-primary">{labels.details}<ArrowRight className="h-3.5 w-3.5" /></span></Link>; })}</div></Shell>;
 }
 
-function InfoPage({ locale, kind }: { locale: Locale; kind: "about" | "contact" | "privacy" }) {
-	const labels = t(locale);
-	const title = labels[kind];
-	const body = kind === "about" ? labels.homeDescription : kind === "contact" ? `${labels.contact}: ${locale === "zh-cn" ? "GitHub、Gitee、Telegram 与 QQ 社区渠道均在页脚提供。" : locale === "en" ? "GitHub, Gitee, Telegram and QQ community channels are available from the project footer." : labels.sourceNote}` : `${labels.privacy}: ${locale === "zh-cn" ? "BrowserHub 是一个静态资源目录，使用每个外部服务前请先阅读其隐私政策。" : locale === "en" ? "BrowserHub is a static resource directory. Review the privacy policy of each linked service before using it." : labels.sourceNote}`;
-	return <Shell locale={locale} path={kind}><article className="mx-auto max-w-3xl"><p className="eyebrow text-primary">BrowserHub</p><h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">{title}</h1><Card className="mt-8"><CardContent className="pt-6"><p className="text-base leading-8 text-muted-foreground">{body}</p>{kind === "about" && <EditorialPolicy locale={locale} />}{kind === "privacy" && <PrivacyNotice locale={locale} />}</CardContent></Card></article></Shell>;
+function InfoRoute({ locale, kind }: { locale: Locale; kind: "about" | "contact" | "privacy" }) {
+	return <Shell locale={locale} path={kind}><InfoPage locale={locale} kind={kind} /></Shell>;
 }
 
 function Detail({ locale, kind, item: rawItem }: { locale: Locale; kind: LocalizedKind; item: BrowserResource | ToolResource | TechnologyResource | GuideResource | ComparisonResource }) {
@@ -203,7 +200,17 @@ export default async function LocalizedPage({ params }: { params: Promise<{ loca
 	const path = segments.join("/");
 	const [kindRaw, slug] = segments;
 	if (!path) return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, path, t(locale).homeTitle, t(locale).homeDescription, "WebSite")) }} />{locale === "zh-cn" ? <HomePage /> : <Home locale={locale} />}</>;
-	if (["about", "contact", "privacy"].includes(kindRaw) && !slug) return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, path, pageMeta(locale, path).title, pageMeta(locale, path).description, "AboutPage")) }} /><InfoPage locale={locale} kind={kindRaw as "about" | "contact" | "privacy"} /></>;
+	if (["about", "contact", "privacy"].includes(kindRaw) && !slug) {
+		const infoKind = kindRaw as "about" | "contact" | "privacy";
+		const meta = pageMeta(locale, path);
+		const faq = infoFaq(infoKind, locale);
+		// The visible FAQ block and this structured data read from the same source,
+		// so the answers can never drift apart. `audit-seo` cross-checks that every
+		// question and answer appears in the rendered article text.
+		const graph = jsonLd(locale, path, meta.title, meta.description, infoKind === "contact" ? "ContactPage" : "WebPage");
+		graph.push({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(row => ({ "@type": "Question", name: row.question, acceptedAnswer: { "@type": "Answer", text: row.answer } })) });
+		return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} /><InfoRoute locale={locale} kind={infoKind} /></>;
+	}
 	const kind = kindRaw as LocalizedKind;
 	if (!["browsers", "tools", "fingerprint", "guides", "compare"].includes(kind)) notFound();
 	if (!slug) return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(locale, path, pageMeta(locale, path).title, pageMeta(locale, path).description, "CollectionPage")) }} /><Collection locale={locale} kind={kind} /></>;
