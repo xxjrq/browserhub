@@ -3,10 +3,10 @@ export const guideSeries = [
 	{
 		id: "ai-browser-development",
 		copy: {
-			en: { title: "AI browsers and browser agents", description: "Compare browser AI assistants, summarize videos and PDFs, verify sources, and develop browser agents for sessions, forms and dynamic pages." },
-			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "按任务比较浏览器内 AI，整理视频与 PDF，核验资料，并处理智能体开发中的会话、表单和动态页面。" }
+			en: { title: "AI browsers and browser agents", description: "Choose current browser assistants, handle retired-browser data, translate pages, and develop browser agents with observable page state." },
+			"zh-cn": { title: "AI 浏览器与智能体开发系列", description: "按任务选择当前浏览器助手，处理停用浏览器的数据，翻译网页，并为智能体确认页面状态。" }
 		},
-		slugs: ["gemini-in-chrome-vs-copilot-in-edge", "ai-browser-youtube-summary", "browser-agent-shadow-dom", "browser-agent-date-picker", "browser-agent-scroll-pagination", "comet-vs-dia", "ai-browser-pdf-summary", "browser-agent-human-takeover", "browser-agent-iframes", "browser-agent-tabs-popups", "ai-browser-research-source-verification", "playwright-cli-vs-mcp", "browser-agent-upload-files", "browser-agent-form-submission", "browser-agent-debugging-traces", "browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
+		slugs: ["chatgpt-atlas-retirement-data-transition", "chatgpt-desktop-browser-vs-comet", "ai-browser-webpage-translation", "browser-agent-wait-for-page-ready", "browser-agent-accessibility-snapshot-vs-screenshot", "gemini-in-chrome-vs-copilot-in-edge", "ai-browser-youtube-summary", "browser-agent-shadow-dom", "browser-agent-date-picker", "browser-agent-scroll-pagination", "comet-vs-dia", "ai-browser-pdf-summary", "browser-agent-human-takeover", "browser-agent-iframes", "browser-agent-tabs-popups", "ai-browser-research-source-verification", "playwright-cli-vs-mcp", "browser-agent-upload-files", "browser-agent-form-submission", "browser-agent-debugging-traces", "browser-use-vs-playwright", "comet-vs-gemini-in-chrome", "browser-agent-prompt-injection", "browser-agent-download-files", "browser-agent-structured-data-extraction", "ai-browser-vs-browser-agent", "playwright-mcp-vs-chrome-devtools-mcp", "playwright-mcp-existing-browser", "chrome-devtools-mcp-existing-browser", "browser-use-existing-browser-session"]
 	},
 	{
 		id: "browser-selection",

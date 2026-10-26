@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "purpose": "Research record for three independent bilingual guides on Atlas retirement data recovery, choosing between the ChatGPT desktop browser and Comet, and webpage translation scope.",
+  "researchMethod": {
+    "liveWeb": true,
+    "openedPrimarySources": true,
+    "openedPublicProblemAndCompetitorPages": true,
+    "observedOn": "2026-10-26",
+    "firecrawl": "Not used; previously observed insufficient credits.",
+    "paidSeoDatasets": false,
+    "searchVolume": null,
+    "keywordDifficulty": null,
+    "siteQueryData": null,
+    "competitorTraffic": null,
+    "publicSearchIsNotSiteQueries": true
+  },
+  "model": {
+    "role": "content executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffortRequested": "high",
+    "modelActual": null,
+    "modelActualNote": "Runtime model identity was not exposed. No effective model or token usage is claimed.",
+    "attempts": 1,
+    "scope": "Live public research, source verification, bilingual editorial drafts and leaf content files only; no shared resource registry, edition, series, keyword map, home page, audit list, CI, publication, Git, or deployment work."
+  },
+  "topics": [
+    {
+      "slug": "chatgpt-atlas-retirement-data-transition",
+      "candidateChange": {
+        "original": "chatgpt-atlas-vs-comet live product selection",
+        "reason": "OpenAI's current official retirement Help Center says Atlas has retired and no longer receives updates; keeping it as a current product option would be misleading.",
+        "newIntent": "After Atlas retirement, determine what browser data can still be recovered, import a previously exported bookmark file, and understand which data must be re-created or requested through Support.",
+        "otherAtlasMemoryArticleDropped": "A separate current Atlas memory-control how-to would imply that retired app settings remain accessible and would substantially overlap the recovery task."
+      },
+      "ownershipReview": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "ai-browser-vs-browser-agent",
+            "url": "https://browserhub.co/en/guides/ai-browser-vs-browser-agent/",
+            "intent": "Explain product category and task selection; it does not cover retired browser data recovery."
+          },
+          {
+            "slug": "browser-agent-download-files",
+            "url": "https://browserhub.co/en/guides/browser-agent-download-files/",
+            "intent": "Preserve files downloaded by an automation agent, not browser bookmarks/history after Atlas retirement."
+          }
+        ],
+        "distinctiveCoverage": "A dated, supported transition inventory distinguishing imported bookmark HTML, old tabs/history, sign-in sessions, and ChatGPT conversations; no local-profile recovery promise."
+      },
+      "demandAndCompetitorEvidence": [
+        {
+          "url": "https://www.reddit.com/r/ChatGPT/comments/1vqqvch/atlast_is_gone_i_woke_up_to_this_was_using_it_as/",
+          "type": "Public user problem thread",
+          "publishedOn": "2026-08-17",
+          "observedOn": "2026-10-26",
+          "observed": "The thread, checked on 2026-10-26, was published on 2026-08-17. It asked whether Atlas history and bookmarks could still be exported/recovered after the browser disappeared. Search result showed +47 votes; an individual reply asked how to export history/bookmarks. This is a public problem signal, not proof a recovery method works.",
+          "practicalGap": "The discussion contains speculation about local profile folders and recovery. The guide avoids recommending it and points readers to the current official support route."
+        },
+        {
+          "url": "https://community.openai.com/t/feature-request-allow-offline-data-export-for-deprecated-chatgpt-atlas/1391381",
+          "type": "OpenAI Developer Community feature request, not policy or support instructions",
+          "publishedOn": "2026-08-20 (as displayed in search result)",
+          "observedOn": "2026-10-26",
+          "observed": "Requests offline bookmark, password, and session/history export after deprecation. No count was captured.",
+          "practicalGap": "A request is not a supported data-export method; the guide separates it from official instructions."
+        },
+        {
+          "url": "https://yetanotherbrowser.com/compare/atlas-vs-comet",
+          "type": "Current competitor comparison page",
+          "observedOn": "2026-10-26",
+          "sourceDateDisplayed": "Checked October 9, 2026",
+          "observed": "The page's comparison table records Atlas shut down August 9, 2026 and compares surviving Comet features and platforms.",
+          "practicalGap": "A product comparison is not a recovery checklist; this guide focuses on the post-retirement data path, and avoids copying its table or pricing."
+        },
+        {
+          "url": "https://cybernews.com/ai-tools/chatgpt-atlas-vs-perplexity-comet/",
+          "type": "Competitor head-to-head article",
+          "observedOn": "2026-10-26",
+          "sourceDateDisplayed": "Updated December 3, 2025",
+          "observed": "The page says it compares hands-on experience and testing in 2025.",
+          "practicalGap": "Its pre-retirement comparison framing is stale for a 2026 recovery need; the draft is based on current official retirement instructions."
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://help.openai.com/en/articles/20001371-chatgpt-atlas-retirement",
+          "title": "ChatGPT Atlas retirement",
+          "type": "Official OpenAI Help Center",
+          "observedOn": "2026-10-26",
+          "observed": "Atlas is retired and no longer receives updates. Previously exported bookmark HTML can be imported into Chrome; tabs and history do not automatically transfer; users should sign in again rather than migrate session files; ChatGPT conversations are separate. The page directs unresolved saved-data needs to Support before deleting local browser data. If users previously exported a compatible password CSV, the article directs them to Google Password Manager import instructions and tells them to delete the readable-password CSV after import. For missing data with no prior export, recovery is not guaranteed and OpenAI Support is the documented route. The page also says Browser memories are distinct from ChatGPT Memory, warns not to assume changing ChatGPT Memory settings or uninstalling Atlas deletes Atlas data, and directs data requests to the Privacy Portal or Support."
+        },
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "title": "ChatGPT release notes, Atlas retirement section",
+          "type": "Official OpenAI Help Center",
+          "observedOn": "2026-10-26",
+          "observed": "The retirement notice describes the Atlas-to-desktop/Chrome transition and states Atlas browser data does not transfer automatically."
+        },
+        {
+          "url": "https://www.perplexity.ai/comet/gettingstarted",
+          "title": "Ways to Use Comet",
+          "type": "Official Perplexity product guide",
+          "observedOn": "2026-10-26",
+          "observed": "Comet offers an import flow in Settings and can reference open tabs; it does not establish that Atlas history, cookies or sessions import."
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/13068232?hl=en",
+          "title": "Google Password Manager Help: Import passwords",
+          "type": "Official Google Chrome Help",
+          "observedOn": "2026-10-26",
+          "observed": "Documents importing a previously exported compatible password CSV and deleting it after import because the file contains readable passwords."
+        }
+      ],
+      "originalAddedValue": "A data-type decision table, concrete bookmark import path, cautious Support escalation and a verification checklist distinguishing bookmarks from history, passwords, sessions, and ChatGPT chats.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "rank": null,
+        "traffic": null,
+        "reason": "No site analytics or paid search data accessed."
+      }
+    },
+    {
+      "slug": "chatgpt-desktop-browser-vs-comet",
+      "topicSelection": {
+        "intent": "Choose between a browser state inside the ChatGPT desktop app, the ChatGPT Chrome extension for existing Chrome context, and Perplexity's standalone Comet browser.",
+        "scopeBoundary": "Current ChatGPT in-app browser vs Comet task-fit and state-boundary selection. This is distinct from the retired Atlas transition guide, Comet-vs-Dia or Comet-vs-Gemini product comparisons, and the browser-agent-vs-AI-browser category explainer."
+      },
+      "ownershipReview": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "comet-vs-dia",
+            "intent": "Compare Perplexity Comet and Dia; does not compare in-app ChatGPT browser with standalone Comet."
+          },
+          {
+            "slug": "comet-vs-gemini-in-chrome",
+            "intent": "Compare two browser AI products; does not explain ChatGPT desktop browser state and existing Chrome profile boundary."
+          },
+          {
+            "slug": "ai-browser-vs-browser-agent",
+            "intent": "Define product categories and general task selection, not current product access/state choice."
+          }
+        ],
+        "distinctiveCoverage": "A decision matrix based on existing Chrome context vs separate app browser state, standalone browser import, connected services, permission checks and qualified account availability. No unverified credit or benchmark claims."
+      },
+      "demandAndCompetitorEvidence": [
+        {
+          "url": "https://www.reddit.com/r/ChatGPT/comments/1x550lk/ai_cant_connect_to_built_in_browser/",
+          "type": "Public troubleshooting question",
+          "publishedOn": "2026-10-13 (displayed in result)",
+          "observedOn": "2026-10-26",
+          "observed": "User says the desktop app can see a built-in browser page but cannot connect to it; +3 votes observed in search result. This single report is not evidence of a widespread defect.",
+          "practicalGap": "The guide distinguishes built-in browser access from the Chrome-extension path and asks readers to check current account/workspace availability; it does not diagnose a global outage."
+        },
+        {
+          "url": "https://www.reddit.com/r/ChatGPT/comments/1wkq869/does_using_the_chrome_extension_always_use_up/",
+          "type": "Public account/usage question",
+          "publishedOn": "2026-09-19",
+          "observedOn": "2026-10-26",
+          "observed": "The post, checked on 2026-10-26, was published on 2026-09-19. User asks if the Chrome extension or built-in browser consumes Work credits. No reliable official answer or universal quota was established.",
+          "practicalGap": "The guide explicitly treats exact credit consumption as unknown and sends readers to account usage information rather than repeating user speculation."
+        },
+        {
+          "url": "https://yetanotherbrowser.com/compare/atlas-vs-comet",
+          "type": "Competitor comparison page",
+          "observedOn": "2026-10-26",
+          "observed": "Compares Atlas and Comet by platform, functions, price and privacy, and acknowledges Atlas shutdown.",
+          "practicalGap": "The page is centered on a discontinued product; this guide compares current ChatGPT desktop browser/Chrome extension routes with a surviving standalone browser and focuses on profile state."
+        },
+        {
+          "url": "https://cybernews.com/ai-tools/chatgpt-atlas-vs-perplexity-comet/",
+          "type": "Competitor comparison page",
+          "observedOn": "2026-10-26",
+          "sourceDateDisplayed": "Updated December 3, 2025",
+          "observed": "A product comparison based on a 2025 head-to-head framing and claimed hands-on experience.",
+          "practicalGap": "Its Atlas comparison no longer answers a current setup choice; the new article uses current official documents and avoids asserting independent test outcomes."
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app",
+          "title": "Using the built-in browser in the ChatGPT desktop app",
+          "type": "Official OpenAI Help Center",
+          "observedOn": "2026-10-26",
+          "sourceDateDisplayed": "Updated 3 days before observation",
+          "observed": "Built-in browser is in ChatGPT desktop on macOS and Windows, has separate browser state, and feature access may depend on plan/workspace. The page says to use the Chrome extension when existing Chrome profile, session, tabs or extensions matter, and to review the active account/website permissions."
+        },
+        {
+          "url": "https://www.perplexity.ai/comet/gettingstarted",
+          "title": "Ways to Use Comet",
+          "type": "Official Perplexity product guide",
+          "observedOn": "2026-10-26",
+          "observed": "Describes Comet as its own browser and documents tab context, import, browser actions and connected email/calendar tasks. Vendor claims are not independent validation."
+        },
+        {
+          "url": "https://www.perplexity.ai/comet/resources/articles/comet-quick-start-guide",
+          "title": "Comet Quick Start Guide",
+          "type": "Official Perplexity resource page",
+          "observedOn": "2026-10-26",
+          "observed": "Documents installation and data import from Chrome, including bookmarks and extensions; the guide does not establish all Atlas or all Chrome-profile data transfer."
+        },
+        {
+          "url": "https://www.perplexity.ai/platforms",
+          "title": "Perplexity platforms, Comet listing",
+          "type": "Official Perplexity product page",
+          "observedOn": "2026-10-26",
+          "observed": "Lists Comet availability for macOS, Windows, Android and iPhone at observation time."
+        }
+      ],
+      "originalAddedValue": "An up-to-date, reversible decision aid that distinguishes in-app state from an existing Chrome profile and a separate browser import, with a low-risk trial and a clear evidence limit on credits, performance and answer quality.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "rank": null,
+        "traffic": null,
+        "reason": "Public problem threads are not BrowserHub analytics or search volume."
+      }
+    },
+    {
+      "slug": "ai-browser-webpage-translation",
+      "topicSelection": {
+        "intent": "Choose whole-page translation, selection translation or AI explanation for a specific language-access task, then check omissions and high-consequence terms.",
+        "scopeBoundary": "Practical reader workflow for built-in Chrome/Edge translation and selected text, not a general translation-product ranking, site localization guide or claim that an AI assistant translates a whole page."
+      },
+      "ownershipReview": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "ai-browser-pdf-summary",
+            "intent": "Using Comet/other product flows for PDF summary or translation, not whole webpage vs text selection."
+          },
+          {
+            "slug": "ai-browser-youtube-summary",
+            "intent": "Summarize video content, not translate browser page/selection."
+          }
+        ],
+        "distinctiveCoverage": "Feature-level selection matrix and verification workflow separating page translation from assistant summary/explanation, with specific missed-content and high-consequence checks."
+      },
+      "demandAndCompetitorEvidence": [
+        {
+          "url": "https://www.reddit.com/r/chrome/comments/1s3mt7u/is_the_built_in_translation_feature_in_chrome_not/",
+          "type": "Public translation troubleshooting thread",
+          "publishedOn": "2026-03-25 (displayed in thread)",
+          "observedOn": "2026-10-26",
+          "observed": "Users describe Chrome selected-text translation failing while page translation works, and difficulty choosing language pairs. Search result displayed +5 votes; a support manager reply in the thread says a server-side update was rolling out. This is a dated report, not evidence of a current bug.",
+          "practicalGap": "The guide distinguishes whole-page and selection controls, includes language/settings checks, and labels community reports as historical symptoms."
+        },
+        {
+          "url": "https://www.reddit.com/r/vivaldibrowser/comments/1s7qezy/change_translate_engine_from_lingvanex_to_google/",
+          "type": "Public browser translation feature discussion",
+          "publishedOn": "2026-03-30 (displayed in result)",
+          "observedOn": "2026-10-26",
+          "observed": "A user distinguishes whole-page translation from selection/extension flows and describes different behavior. Displayed +6 votes in the result.",
+          "practicalGap": "The article maps user task to native browser control rather than an extension or another engine; does not generalize across browsers."
+        },
+        {
+          "url": "https://www.reddit.com/r/chrome_extensions/comments/1wvobhv/bilingual_page_translation_that_runs_on_chromes/",
+          "type": "Public translator extension discussion",
+          "publishedOn": "2026-10-02 (displayed in result)",
+          "observedOn": "2026-10-26",
+          "observed": "A developer distinguishes inline bilingual page reading and selection translation, while noting language support and browser requirements. This is a self-reported extension description, not independent verification.",
+          "practicalGap": "The guide stays with vendor-documented browser controls and identifies where images, embedded content and specialist text need additional review."
+        },
+        {
+          "url": "https://support.google.com/chrome/thread/283193872?hl=en&msgid=294984542",
+          "type": "Google Chrome Community support thread",
+          "publishedOn": "2024-07-02 (displayed in result)",
+          "observedOn": "2026-10-26",
+          "observed": "The question reports page translation no longer working via an extension; a Chrome Support Manager points users to native Chrome page translation. This is an older help thread, not a current defect signal.",
+          "practicalGap": "The guide links users to current Chrome Help and distinguishes the built-in control from a discontinued extension flow."
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://support.google.com/chrome/answer/173424?hl=en",
+          "title": "Translate pages and change Chrome languages",
+          "type": "Official Google Chrome Help",
+          "observedOn": "2026-10-26",
+          "observed": "Documents page translation, selected-text translation, language preference, enable/disable and automatic/never-translate settings."
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/edge/use-microsoft-translator-in-microsoft-edge-browser",
+          "title": "Use Microsoft Translator in Microsoft Edge browser",
+          "type": "Official Microsoft Support",
+          "observedOn": "2026-10-26",
+          "observed": "Documents language detection, whole webpage translation, manual translation, returning to original and offer-translation setting."
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/edge/use-immersive-reader-in-microsoft-edge",
+          "title": "Use Reading mode in Microsoft Edge",
+          "type": "Official Microsoft Support",
+          "observedOn": "2026-10-26",
+          "observed": "Documents Reader translation and separate Copilot summarize/explain/chat features. This supports a feature boundary, not quality claims."
+        },
+        {
+          "url": "https://support.google.com/translate/answer/2534559?hl=en",
+          "title": "Translate documents and websites",
+          "type": "Official Google Translate Help",
+          "observedOn": "2026-10-26",
+          "observed": "Website translation may not be supported in all regions; scanned PDF image text may appear but not be translated."
+        }
+      ],
+      "originalAddedValue": "A fit table, current browser-menu directions, practical page-element checks and a clear boundary among translation, summary and explanation; no promise that every region, language pair or specialized term works.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "rank": null,
+        "traffic": null,
+        "reason": "Public forums and vendor support pages do not measure site demand."
+      }
+    }
+  ],
+  "searches": [
+    {
+      "query": "ChatGPT Atlas retirement official OpenAI help browser data export",
+      "observedOn": "2026-10-26",
+      "result": "Opened the official retirement article; status and data-boundary claims are sourced from it."
+    },
+    {
+      "query": "ChatGPT desktop built-in browser vs Comet current availability browser state",
+      "observedOn": "2026-10-26",
+      "result": "Opened OpenAI built-in browser guidance and Perplexity Comet product documentation. Public questions reflect setup and credit uncertainty."
+    },
+    {
+      "query": "Chrome Edge whole-page translation selected text translation help",
+      "observedOn": "2026-10-26",
+      "result": "Opened current Chrome and Edge support docs plus dated public translation questions."
+    }
+  ],
+  "signalLimits": "No search-volume dataset, BrowserHub Search Console/Bing queries, traffic, rank, unique-user count or competitor traffic was accessed. Public question text, dates and displayed votes are qualitative signals only; no article-level traffic is inferred. Product status and controls were checked on 2026-10-26 and may change."
+}

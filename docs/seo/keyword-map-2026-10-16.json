@@ -4336,6 +4336,255 @@
         "browser-agent-shadow-dom",
         "browser-agent-date-picker"
       ]
+    },
+    {
+      "id": "guides:chatgpt-atlas-retirement-data-transition",
+      "primaryKeyword": {
+        "en": "chatgpt atlas retirement data transition",
+        "zh-CN": "ChatGPT Atlas 停用后数据迁移"
+      },
+      "intent": "After Atlas retirement, determine what browser data can still be recovered, import a previously exported bookmark file, and understand which data must be re-created or requested through Support.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chatgpt-atlas-retirement-data-transition/",
+        "https://browserhub.co/zh-cn/guides/chatgpt-atlas-retirement-data-transition/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-26",
+      "demandEvidence": "Dated current public problem/competitor pages and primarydocumentation in this topic research; not BrowserHub queries, search volume or measured traffic.",
+      "sourceRecord": "docs/seo/research-ai-usage-2026-10-26.json",
+      "originalGain": "A data-type decision table, concrete bookmark import path, cautious Support escalation and a verification checklist distinguishing bookmarks from history, passwords, sessions, and ChatGPT chats.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "ai-browser-vs-browser-agent",
+            "url": "https://browserhub.co/en/guides/ai-browser-vs-browser-agent/",
+            "intent": "Explain product category and task selection; it does not cover retired browser data recovery."
+          },
+          {
+            "slug": "browser-agent-download-files",
+            "url": "https://browserhub.co/en/guides/browser-agent-download-files/",
+            "intent": "Preserve files downloaded by an automation agent, not browser bookmarks/history after Atlas retirement."
+          }
+        ],
+        "distinctiveCoverage": "A dated, supported transition inventory distinguishing imported bookmark HTML, old tabs/history, sign-in sessions, and ChatGPT conversations; no local-profile recovery promise."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-02",
+        "14day": "2026-11-09",
+        "28day": "2026-11-23"
+      }
+    },
+    {
+      "id": "guides:chatgpt-desktop-browser-vs-comet",
+      "primaryKeyword": {
+        "en": "chatgpt desktop browser vs comet",
+        "zh-CN": "ChatGPT 桌面浏览器与 Comet 对比"
+      },
+      "intent": "Choose between a browser state inside the ChatGPT desktop app, the ChatGPT Chrome extension for existing Chrome context, and Perplexity's standalone Comet browser.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chatgpt-desktop-browser-vs-comet/",
+        "https://browserhub.co/zh-cn/guides/chatgpt-desktop-browser-vs-comet/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-26",
+      "demandEvidence": "Dated current public problem/competitor pages and primarydocumentation in this topic research; not BrowserHub queries, search volume or measured traffic.",
+      "sourceRecord": "docs/seo/research-ai-usage-2026-10-26.json",
+      "originalGain": "An up-to-date, reversible decision aid that distinguishes in-app state from an existing Chrome profile and a separate browser import, with a low-risk trial and a clear evidence limit on credits, performance and answer quality.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "comet-vs-dia",
+            "intent": "Compare Perplexity Comet and Dia; does not compare in-app ChatGPT browser with standalone Comet."
+          },
+          {
+            "slug": "comet-vs-gemini-in-chrome",
+            "intent": "Compare two browser AI products; does not explain ChatGPT desktop browser state and existing Chrome profile boundary."
+          },
+          {
+            "slug": "ai-browser-vs-browser-agent",
+            "intent": "Define product categories and general task selection, not current product access/state choice."
+          }
+        ],
+        "distinctiveCoverage": "A decision matrix based on existing Chrome context vs separate app browser state, standalone browser import, connected services, permission checks and qualified account availability. No unverified credit or benchmark claims."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-02",
+        "14day": "2026-11-09",
+        "28day": "2026-11-23"
+      }
+    },
+    {
+      "id": "guides:ai-browser-webpage-translation",
+      "primaryKeyword": {
+        "en": "ai browser webpage translation",
+        "zh-CN": "AI 浏览器网页翻译"
+      },
+      "intent": "Choose whole-page translation, selection translation or AI explanation for a specific language-access task, then check omissions and high-consequence terms.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-webpage-translation/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-webpage-translation/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-26",
+      "demandEvidence": "Dated current public problem/competitor pages and primarydocumentation in this topic research; not BrowserHub queries, search volume or measured traffic.",
+      "sourceRecord": "docs/seo/research-ai-usage-2026-10-26.json",
+      "originalGain": "A fit table, current browser-menu directions, practical page-element checks and a clear boundary among translation, summary and explanation; no promise that every region, language pair or specialized term works.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "ai-browser-pdf-summary",
+            "intent": "Using Comet/other product flows for PDF summary or translation, not whole webpage vs text selection."
+          },
+          {
+            "slug": "ai-browser-youtube-summary",
+            "intent": "Summarize video content, not translate browser page/selection."
+          }
+        ],
+        "distinctiveCoverage": "Feature-level selection matrix and verification workflow separating page translation from assistant summary/explanation, with specific missed-content and high-consequence checks."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-02",
+        "14day": "2026-11-09",
+        "28day": "2026-11-23"
+      }
+    },
+    {
+      "id": "guides:browser-agent-wait-for-page-ready",
+      "primaryKeyword": {
+        "en": "browser agent wait for page ready",
+        "zh-CN": "浏览器智能体等待页面就绪"
+      },
+      "intent": "Choose bounded, observable waits that match the next browser action, instead of treating fixed sleeps or network idle as generic page readiness.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-wait-for-page-ready/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-wait-for-page-ready/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-26",
+      "demandEvidence": "Dated current public problem/competitor pages and primarydocumentation in this topic research; not BrowserHub queries, search volume or measured traffic.",
+      "sourceRecord": "docs/seo/research-ai-readiness-2026-10-26.json",
+      "originalGain": "A precise distinction among navigation milestones, actionability, application state and post-action transition; plus the self-contained local-only fixture that returns the last seen state and never targets a real site.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "browser-agent-debugging-traces",
+            "intent": "Capture and interpret evidence after a failed action; this guide owns the readiness predicate selected before/after a specific action."
+          },
+          {
+            "slug": "browser-agent-scroll-pagination",
+            "intent": "Advance dynamic lists and observe list progress/end conditions, not general page-ready or control hydration waits."
+          },
+          {
+            "slug": "browser-agent-form-submission",
+            "intent": "Fill, approve, submit and verify consequences; this guide is a reusable wait-condition choice, with no generic submission recipe."
+          }
+        ],
+        "distinctiveCoverage": "A next-action decision table, reason lifecycle events differ from app readiness, capture-before/action/after pattern, finite timeout reporting, and a runnable local status-change fixture."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-02",
+        "14day": "2026-11-09",
+        "28day": "2026-11-23"
+      }
+    },
+    {
+      "id": "guides:browser-agent-accessibility-snapshot-vs-screenshot",
+      "primaryKeyword": {
+        "en": "browser agent accessibility snapshot vs screenshot",
+        "zh-CN": "浏览器智能体无障碍快照与截图"
+      },
+      "intent": "Choose semantic snapshots for accessible names, roles and state; choose screenshots for layout and visual content; combine and refresh when both are required.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-accessibility-snapshot-vs-screenshot/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-accessibility-snapshot-vs-screenshot/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-26",
+      "demandEvidence": "Dated current public problem/competitor pages and primarydocumentation in this topic research; not BrowserHub queries, search volume or measured traffic.",
+      "sourceRecord": "docs/seo/research-ai-readiness-2026-10-26.json",
+      "originalGain": "A reader-facing task matrix; nuances of snapshot completeness, off-screen elements and stale references; screenshot privacy/hidden-state limits; and a concrete rule for pairing rather than picking one universal winner.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "playwright-mcp-vs-chrome-devtools-mcp",
+            "intent": "Choose between two MCP integrations; this article chooses which page evidence to request after a tool has been chosen."
+          },
+          {
+            "slug": "browser-agent-prompt-injection",
+            "intent": "Set trust boundaries for page content; this article treats page content as untrusted only as a representation limitation."
+          },
+          {
+            "slug": "browser-agent-debugging-traces",
+            "intent": "Collect traces/screenshots during failure diagnosis; this guide is input selection before action."
+          }
+        ],
+        "distinctiveCoverage": "A semantic-versus-visual task matrix, specific omission limits in each representation, stale-reference boundaries, and when combining them is necessary."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-02",
+        "14day": "2026-11-09",
+        "28day": "2026-11-23"
+      }
     }
   ],
   "futureCandidates": [
@@ -4399,17 +4648,20 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-10-25",
-    "cycleId": "content-2026-10-25",
-    "topics": [
-      "gemini-in-chrome-vs-copilot-in-edge",
-      "ai-browser-youtube-summary",
-      "browser-agent-shadow-dom",
-      "browser-agent-date-picker",
-      "browser-agent-scroll-pagination"
+    "date": "2026-10-26",
+    "cycleId": "content-2026-10-26",
+    "newTopics": [
+      "chatgpt-atlas-retirement-data-transition",
+      "chatgpt-desktop-browser-vs-comet",
+      "ai-browser-webpage-translation",
+      "browser-agent-wait-for-page-ready",
+      "browser-agent-accessibility-snapshot-vs-screenshot"
     ],
     "newTopicCount": 5,
-    "publicationStatus": "consult workflow-delivery-2026-10-25.json after delivery"
+    "completeEditions": 10,
+    "oldEnhancements": [],
+    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-26.json when completed",
+    "notClaimed": "Publication is not traffic growth. Measuredquery/volume/rank/session remain unavailable here."
   },
   "latestEditorialEnhancement": {
     "date": "2026-10-25",

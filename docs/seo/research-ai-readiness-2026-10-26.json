@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "purpose": "Research record for two bilingual browser-agent guides: waiting on observable readiness state and choosing semantic accessibility snapshots versus screenshots.",
+  "researchMethod": {
+    "liveWeb": true,
+    "openedPrimarySources": true,
+    "openedPublicProblemAndProjectIssuePages": true,
+    "observedOn": "2026-10-26",
+    "firecrawl": "Not used; previously observed insufficient credits.",
+    "paidSeoDatasets": false,
+    "searchVolume": null,
+    "keywordDifficulty": null,
+    "siteQueryData": null,
+    "competitorTraffic": null,
+    "publicSearchIsNotSiteQueries": true
+  },
+  "model": {
+    "role": "content executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffortRequested": "high",
+    "modelActual": null,
+    "modelActualNote": "Runtime model identity was not exposed. No effective model or token usage is claimed.",
+    "attempts": 1,
+    "scope": "Live public research, source verification, bilingual editorial drafts, one local-only synthetic fixture and downloadable example. No shared resource registry, edition, series, keyword map, home page, audit list, CI, publication, Git, or deployment work."
+  },
+  "topics": [
+    {
+      "slug": "browser-agent-wait-for-page-ready",
+      "topicSelection": {
+        "intent": "Choose bounded, observable waits that match the next browser action, instead of treating fixed sleeps or network idle as generic page readiness.",
+        "scopeBoundary": "Playwright readiness condition selection and a local synthetic fixture. Distinct from scroll/pagination progress, form submission, and failure trace collection."
+      },
+      "ownershipReview": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "browser-agent-debugging-traces",
+            "intent": "Capture and interpret evidence after a failed action; this guide owns the readiness predicate selected before/after a specific action."
+          },
+          {
+            "slug": "browser-agent-scroll-pagination",
+            "intent": "Advance dynamic lists and observe list progress/end conditions, not general page-ready or control hydration waits."
+          },
+          {
+            "slug": "browser-agent-form-submission",
+            "intent": "Fill, approve, submit and verify consequences; this guide is a reusable wait-condition choice, with no generic submission recipe."
+          }
+        ],
+        "distinctiveCoverage": "A next-action decision table, reason lifecycle events differ from app readiness, capture-before/action/after pattern, finite timeout reporting, and a runnable local status-change fixture."
+      },
+      "demandAndCompetitorEvidence": [
+        {
+          "url": "https://stackoverflow.com/questions/79714284/how-to-wait-for-angular-lazy-loaded-chunks-before-interacting-with-elements-in-p",
+          "type": "Public developer question",
+          "publishedOn": "2025-07-25 (displayed on page)",
+          "observedOn": "2026-10-26",
+          "observed": "The asker reports a button present in the DOM but not yet wired because a lazy-loaded chunk has not executed; they ask how to avoid networkidle and fixed waits. 551 question views were displayed in the opened page (observed 2026-10-26); this is a cumulative page-view count, not search volume or unique users. The question is closed.",
+          "practicalGap": "The guide names app readiness as an explicit state and recommends app-owned loading/disabled state when possible, rather than waiting for all chunks globally."
+        },
+        {
+          "url": "https://stackoverflow.com/questions/76756959/check-for-loading-spinner-or-content-in-python-playwright",
+          "type": "Public developer question",
+          "publishedOn": "2023 (question page displayed relative age; exact publication date not relied on)",
+          "observedOn": "2026-10-26",
+          "observed": "The question asks how to distinguish a cleared spinner, error state or loaded content after noting that network-idle is not recommended. No current view count recorded.",
+          "practicalGap": "The article maps the next task to a visible/changed application condition and tells readers to report the last observed state when timeout occurs."
+        },
+        {
+          "url": "https://stackoverflow.com/questions/74903580/how-to-increase-the-waiting-time-on-networkidle-in-playwright",
+          "type": "Public developer question and answer",
+          "publishedOn": "2022-12-23 (displayed on page)",
+          "observedOn": "2026-10-26",
+          "observed": "The asker asks how to increase the network-idle period; answer notes analytics can keep it active and recommends auto-wait/locator conditions. Search result showed 5k views; treated as cumulative public page views only.",
+          "practicalGap": "The guide explicitly separates document lifecycle, actionability and application state instead of presenting one replacement wait as universal."
+        },
+        {
+          "url": "https://github.com/microsoft/playwright/issues/37226",
+          "type": "Playwright GitHub issue",
+          "observedOn": "2026-10-26",
+          "observed": "Issue author asks for an alternative to waitForLoadState(networkidle) when a page has a WebSocket connection. This is an individual report, not Playwright guidance or a confirmed general rule. Playwright documentation itself marks networkidle discouraged for testing.",
+          "practicalGap": "This issue documents one user question about waiting on a page with a WebSocket connection. The guide does not infer general product behavior or a recommended fix from that report; its readiness guidance comes from the official Page and actionability documentation."
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://playwright.dev/docs/api/class-page",
+          "title": "Playwright Page API",
+          "type": "Official Playwright documentation",
+          "observedOn": "2026-10-26",
+          "observed": "Documents lifecycle wait states and marks networkidle as discouraged for testing; page.waitForTimeout is discouraged for production. The API recommends web assertions for readiness."
+        },
+        {
+          "url": "https://playwright.dev/docs/actionability",
+          "title": "Playwright Auto-waiting",
+          "type": "Official Playwright documentation",
+          "observedOn": "2026-10-26",
+          "observed": "Documents checks before actions such as locator resolution, visibility, stability, event reception and enabled state, plus retrying assertions."
+        },
+        {
+          "url": "https://playwright.dev/docs/test-assertions",
+          "title": "Playwright Assertions",
+          "type": "Official Playwright documentation",
+          "observedOn": "2026-10-26",
+          "observed": "Web-first assertions wait and retry for expected state."
+        }
+      ],
+      "originalAddedValue": "A precise distinction among navigation milestones, actionability, application state and post-action transition; plus the self-contained local-only fixture that returns the last seen state and never targets a real site.",
+      "sampleArtifact": {
+        "script": "public/templates/agent-readiness-fixture.mjs",
+        "purpose": "Local-only synthetic page whose status changes after a short delay; script waits for named status, verifies an enabled button, captures a screenshot and aria snapshot, and reports observed values.",
+        "networkTargets": "None; opens the script-generated local file URL only.",
+        "browserExecutionByExecutor": false,
+        "codeCheck": "node --check passed for the final self-contained .mjs bytes.",
+        "claimsBoundary": "Do not call this a live-site test, LLM evaluation, benchmark or proof of Playwright reliability.",
+        "prerequisites": "Node.js, npm, a project directory containing the .mjs file, and Playwright installed in that project. The script can use a PLAYWRIGHT_MODULE_URL override for an existing module and CHROME_EXECUTABLE_PATH for a specific browser; on macOS it detects Google Chrome when present.",
+        "fixtureSource": "HTML is embedded in the .mjs file, written with exclusive create into the script-owned temporary output directory, opened through a file URL, then removed with that directory.",
+        "projectExecutionStatus": "executed_successfully_for_final_self_contained_script_bytes",
+        "supersededExecutionNote": "An earlier two-file script+HTML version passed once and is preserved separately as superseded evidence; it is not the basis for this final execution record.",
+        "finalExecution": {
+          "executor": "root",
+          "startedAt": "2026-10-26T01:20:21.666Z",
+          "endedAt": "2026-10-26T01:20:22.844Z",
+          "exitCode": 0,
+          "scriptSha256": "396bcec2e0d7aad25b88ced531672e77529ca8751faae45f6a52a279f4a1f595",
+          "runtime": "Node.js 22.22.3; Playwright 1.64.0-alpha-1790635538000; Chrome 155.0.8059.85",
+          "result": "All stdout assertions passed: loading to ready status, enabled button, expected accessibility snapshot content, and screenshot capture on the synthetic local fixture.",
+          "limits": "Single local synthetic fixture run; no real website, user account, cross-engine, reliability, visual-quality or LLM interpretation claim."
+        },
+        "browserExecutionByRoot": true
+      },
+      "metrics": {
+        "monthlySearchVolume": null,
+        "rank": null,
+        "traffic": null,
+        "reason": "No BrowserHub analytics or paid search dataset accessed."
+      }
+    },
+    {
+      "slug": "browser-agent-accessibility-snapshot-vs-screenshot",
+      "topicSelection": {
+        "intent": "Choose semantic snapshots for accessible names, roles and state; choose screenshots for layout and visual content; combine and refresh when both are required.",
+        "scopeBoundary": "Select the browser input representation for a task, not compare MCP server products, not promise that vision or accessibility data is complete, and not provide a general prompt-injection guide."
+      },
+      "ownershipReview": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all 120 rows inspected",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "playwright-mcp-vs-chrome-devtools-mcp",
+            "intent": "Choose between two MCP integrations; this article chooses which page evidence to request after a tool has been chosen."
+          },
+          {
+            "slug": "browser-agent-prompt-injection",
+            "intent": "Set trust boundaries for page content; this article treats page content as untrusted only as a representation limitation."
+          },
+          {
+            "slug": "browser-agent-debugging-traces",
+            "intent": "Collect traces/screenshots during failure diagnosis; this guide is input selection before action."
+          }
+        ],
+        "distinctiveCoverage": "A semantic-versus-visual task matrix, specific omission limits in each representation, stale-reference boundaries, and when combining them is necessary."
+      },
+      "demandAndCompetitorEvidence": [
+        {
+          "url": "https://github.com/microsoft/playwright/issues/39955",
+          "type": "Public Playwright MCP bug report",
+          "observedOn": "2026-10-26",
+          "observed": "Reporter says the accessibility snapshot included off-screen elements that an agent treated as reachable. The issue describes one reported implementation/version, not a universal defect or official statement.",
+          "practicalGap": "The article labels the issue as a report, advises checking current targets, and explains that accessible-tree presence does not imply viewport visibility."
+        },
+        {
+          "url": "https://github.com/microsoft/playwright-mcp/issues/1479",
+          "type": "Public security issue report",
+          "observedOn": "2026-10-26",
+          "observed": "Issue author discusses indirect prompt-injection text inside accessibility snapshots. It is an issue report and threat scenario, not a verified universal exploit claim.",
+          "practicalGap": "The article preserves the content-trust boundary regardless of whether page text arrived as snapshot or screenshot."
+        },
+        {
+          "url": "https://playwright.dev/mcp/snapshots",
+          "type": "Official Playwright MCP documentation / competing product guidance",
+          "observedOn": "2026-10-26",
+          "observed": "Explains snapshot refs, current-lifetime behavior, and recommends combining snapshots with screenshots for canvas apps, charts and image-heavy layouts. The page includes a comparison table about token cost, precision, speed and reliability.",
+          "practicalGap": "The article converts vendor guidance into task-specific input selection and highlights representation failures/verification; it avoids repeating the docs' unsupported-as-general benchmark table or assuming screenshots are always less accurate."
+        },
+        {
+          "url": "https://github.com/microsoft/playwright/blob/main/packages/playwright-core/src/tools/backend/screenshot.ts",
+          "type": "Playwright source-code note for its MCP tool",
+          "observedOn": "2026-10-26",
+          "observed": "Source comment says screenshot is not for performing actions; use browser_snapshot for actions in that particular tool implementation.",
+          "practicalGap": "The article clearly distinguishes visual grounding from action targets and scopes such rules to a tool's own docs."
+        }
+      ],
+      "officialSources": [
+        {
+          "url": "https://playwright.dev/docs/api/class-locator",
+          "title": "Playwright Locator API and ariaSnapshot",
+          "type": "Official Playwright documentation",
+          "observedOn": "2026-10-26",
+          "observed": "Documents locator.ariaSnapshot (added in v1.49), AI mode and depth (v1.59), and optional bounding boxes (v1.60). These version boundaries matter when applying examples to older Playwright releases."
+        },
+        {
+          "url": "https://playwright.dev/docs/api/class-page#page-screenshot",
+          "title": "Playwright Page screenshot API",
+          "type": "Official Playwright documentation",
+          "observedOn": "2026-10-26",
+          "observed": "Documents page screenshot options including full-page capture. A screenshot records pixels rather than hidden DOM state."
+        },
+        {
+          "url": "https://playwright.dev/mcp/snapshots",
+          "title": "Playwright MCP Snapshots",
+          "type": "Official Playwright MCP documentation",
+          "observedOn": "2026-10-26",
+          "observed": "Recommends resnapshot after navigation, find on large pages, and combining screenshot when visual context is needed."
+        }
+      ],
+      "originalAddedValue": "A reader-facing task matrix; nuances of snapshot completeness, off-screen elements and stale references; screenshot privacy/hidden-state limits; and a concrete rule for pairing rather than picking one universal winner.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "rank": null,
+        "traffic": null,
+        "reason": "Issue volume and docs readership are not BrowserHub traffic or keyword volume."
+      }
+    }
+  ],
+  "searches": [
+    {
+      "query": "Playwright wait for page ready fixed timeout networkidle visible loaded state",
+      "observedOn": "2026-10-26",
+      "result": "Opened Playwright Page/actionability/assertion docs, Stack Overflow problem pages and a reported WebSocket/network-idle issue. WebSocket behavior in that issue remains an individual report, not a general product claim."
+    },
+    {
+      "query": "Playwright MCP accessibility snapshot vs screenshot limitation offscreen chart injection",
+      "observedOn": "2026-10-26",
+      "result": "Opened Playwright MCP snapshot guidance, Locator API, issue reports and screenshot source note."
+    }
+  ],
+  "signalLimits": "A cumulative Stack Overflow view count is recorded only where visibly observed; it is not keyword volume, recent growth, unique users or BrowserHub traffic. GitHub and community issues are reports, not necessarily confirmed bugs. Official docs are moving; their observation date is recorded. No live-site, account or LLM evaluation was performed."
+}
