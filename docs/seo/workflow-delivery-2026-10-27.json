@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-27",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "1ef93fe82d5f0d91b0d6ce731d2177b2580280cea6c58aa0c4422fd814bc0ae7",
+  "commit": "0969890a801c2a41afbaf11fd0659a5b3b86799c",
+  "release": "/opt/browsertools/releases/20261027-094723",
+  "publicationReceiptAt": "2026-10-27T01:48:04.114Z",
+  "completedAt": "2026-10-27T01:48:07.147Z",
+  "newTopics": [
+    "browser-agent-clipboard-read-write",
+    "playwright-geolocation-permission-tests",
+    "playwright-javascript-dialog-hangs",
+    "browser-agent-cookie-consent-choice",
+    "browser-agent-shopping-cart-verification"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/browser-agent-clipboard-read-write/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-clipboard-read-write/",
+    "https://browserhub.co/en/guides/playwright-geolocation-permission-tests/",
+    "https://browserhub.co/zh-cn/guides/playwright-geolocation-permission-tests/",
+    "https://browserhub.co/en/guides/playwright-javascript-dialog-hangs/",
+    "https://browserhub.co/zh-cn/guides/playwright-javascript-dialog-hangs/",
+    "https://browserhub.co/en/guides/browser-agent-cookie-consent-choice/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-cookie-consent-choice/",
+    "https://browserhub.co/en/guides/browser-agent-shopping-cart-verification/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-shopping-cart-verification/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Complete English and Chinese count as one independent topic; no previous-day article counted again. All59 existing guide metadata/translations retained.",
+  "editorialSelection": "Five distinct clipboard, geolocation permission, JavaScript dialog, consent-choice and shopping-cart tasks. Current public problems/competitive pages and primary facts inform qualitative selection; no measured query demand or ranking claim.",
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful deployment receipt time, not search-engine discovery or exact first reader request.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-03T01:48:04.114000+00:00",
+      "14day": "2026-11-10T01:48:04.114000+00:00",
+      "28day": "2026-11-24T01:48:04.114000+00:00"
+    },
+    "dateOnlyReminder": "November3/10/24 reminders alone do not establish maturity. Compare after exact mature time and with matched closed windows."
+  },
+  "review": {
+    "decision": "approved",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffort": null,
+    "independentContext": true,
+    "fileCount": 11,
+    "sha256": "3a8fe3a0f5113cf6ef11b8b4c4ceb78ef17eed64c6d3bb1e7e630173957164d6"
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "agent": "content_execution_20261027",
+    "executionAttempts": [
+      {
+        "attempt": 1,
+        "scope": "Five distinct intent briefs with public search/problems, at least three competing pages per topic and current primary facts. Prior59 published topics/125 keyword rows checked."
+      },
+      {
+        "attempt": 2,
+        "scope": "Draft serialization and approved slug alignment; exact source facts corrected including clipboard issue actual Docker cause and map baseline versus current counts. Source syntax/JSON/whitespace checks passed."
+      },
+      {
+        "attempt": 3,
+        "scope": "Asset configuration, cleanup and network scope hardened before a single successful root execution. Independent Sol revisions clarify denied-permission test setup and beforeunload semantics; source fidelity and natural expression checked."
+      }
+    ],
+    "attemptAccounting": "Resolved distinct editorial/packaging issues; no one unresolved issue remained after three different execution approaches. No model escalation or silent fallback. Actual model not reported.",
+    "integration": "Root integrates shared resource/edition/series/navigation/audit/keyword records and runs the exact-byte synthetic fixture. Sol independently reviews sources, actual files and final exports; no source mutation or execution claimed on behalf of reviewer.",
+    "preflightCorrection": {
+      "firstCi": "TypeScript rejected string[] | undefined for inline relatedGuides lookup; no external graph node had run.",
+      "change": "Luna moved exact mappings to Record<string,string[]> and supplied an empty-array fallback; no prose or asset change.",
+      "validation": "Luna actual npx tsc --noEmit exits0; root reruns full CI after this source fix. Syntax-only transpilation was not a full typecheck.",
+      "receipts": "preflight-ci-first-failed.json/log preserved"
+    },
+    "contentCompletenessCorrection": {
+      "secondCi": "Full build and TypeScript passed; SEO audit flagged two Chinese editions below existing visible text floor.",
+      "response": "Keep audit threshold; add specific consent-choice and cart-verification worked examples in both languages, then re-review and rebuild.",
+      "receipts": "preflight-ci-second-failed.json/log preserved",
+      "scope": "Distinct content completeness issue from resolved type inference; no repeated unresolved issue escalation bypass."
+    },
+    "integrationPrecisionCorrection": "Root applied the independent reviewer’s exact English sentence correction: final line-item quantity compared with prior line-item quantity, avoiding money/quantity ambiguity. Chinese already accurate. Full CI rerun required for final changed source."
+  },
+  "skills": [
+    "content-strategy",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "validation": {
+    "preflight": {
+      "startedAt": "2026-10-27T01:43:12.095767+00:00",
+      "checkedAt": "2026-10-27T01:43:25.097596+00:00",
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 4,
+      "reason": "Prior full CI passed. Required final rerun after independent reviewer’s single English cart quantity precision edit; asset unchanged.",
+      "priorReceiptsPreserved": [
+        "preflight-ci-first-failed.json",
+        "preflight-ci-second-failed.json",
+        "preflight-ci-passed-before-precision.json"
+      ],
+      "logPath": ".local/workflows/cycles/content-2026-10-27/preflight-ci.log",
+      "logSha256": "759b23227751c2c8717d0670803d3f2bab4d850e9715c8612f75e653fee33b17"
+    },
+    "gitRead": {
+      "checkedAt": "2026-10-27T01:37:42.537514+00:00",
+      "scopedUsername": "xxjrq",
+      "exitCode": 0,
+      "stdout": "b318eaf70b8abba581b6822943a0252d55558241\trefs/heads/main\n",
+      "stderr": "",
+      "credentialSource": "Repository-scoped local account tool helper; no secrets output or persisted; global GitHub account unchanged"
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1248,
+    "seoAudit": {
+      "htmlPages": 1244,
+      "sitemapUrls": 996,
+      "internalLinks": 41872,
+      "alternateLinks": 7520,
+      "fallbackPages": 60,
+      "editorialGuides": 128,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-10-27T01:43:12.088Z",
+      "status": "passed",
+      "existingTopicsPreserved": 59,
+      "totalTopics": 64,
+      "completeEditions": 128,
+      "newTopics": 5,
+      "details": [
+        {
+          "slug": "browser-agent-clipboard-read-write",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-clipboard-read-write",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "playwright-geolocation-permission-tests",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "playwright-geolocation-permission-tests",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "playwright-javascript-dialog-hangs",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "playwright-javascript-dialog-hangs",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-cookie-consent-choice",
+          "locale": "en",
+          "sections": 6,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-cookie-consent-choice",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-shopping-cart-verification",
+          "locale": "en",
+          "sections": 6,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-shopping-cart-verification",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 3,
+          "status": "valid"
+        }
+      ]
+    },
+    "workspaceScope": "Exactly11 reviewed content/data/navigation/audit/research/download files; no framework/renderer/runtime/dependency change.",
+    "priorBaseline": {
+      "commit": "b318eaf70b8abba581b6822943a0252d55558241",
+      "alreadyLiveRelease": "/opt/browsertools/releases/20261026-214437",
+      "all24InfoRoutesMatchedSourceBeforeEdits": true,
+      "handling": "Retained already-committed and live site-info baseline; not daily new content."
+    },
+    "productEvidence": {
+      "products": 36,
+      "confirmedPriceOrLicenceRecords": 26,
+      "explicitlyUnverifiedPrices": 10,
+      "catalogueFactDate": "2026-10-16; production date does not recertify prices."
+    },
+    "serverCurrent": {
+      "checkedAt": "2026-10-27T01:48:28.984776+00:00",
+      "exitCode": 0,
+      "current": "/opt/browsertools/releases/20261027-094723",
+      "expected": "/opt/browsertools/releases/20261027-094723",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-27T01:48:07.047Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-clipboard-read-write/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-clipboard-read-write/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-clipboard-read-write/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-clipboard-read-write/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-geolocation-permission-tests/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-geolocation-permission-tests/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-geolocation-permission-tests/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-geolocation-permission-tests/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-javascript-dialog-hangs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-javascript-dialog-hangs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-javascript-dialog-hangs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-javascript-dialog-hangs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-cookie-consent-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-cookie-consent-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-cookie-consent-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-cookie-consent-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-shopping-cart-verification/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-shopping-cart-verification/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-shopping-cart-verification/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-shopping-cart-verification/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-27T01:48:25.640154+00:00",
+    "ok": true,
+    "release": "/opt/browsertools/releases/20261027-094723",
+    "results": [
+      {
+        "url": "https://browserhub.co/templates/browser-agent-task-fixtures.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658",
+        "expectedSha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/browser-agent-task-fixtures.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658",
+        "expectedSha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658",
+        "bytesMatch": true,
+        "error": null
+      }
+    ],
+    "scope": "Read-only HTTP and exact source/export/download byte verification; does not execute remote example tasks."
+  },
+  "offlineValidation": {
+    "startedAt": "2026-10-27T01:36:32.147962+00:00",
+    "finishedAt": "2026-10-27T01:36:33.090431+00:00",
+    "command": "node public/templates/browser-agent-task-fixtures.mjs",
+    "assetPath": "public/templates/browser-agent-task-fixtures.mjs",
+    "assetSha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658",
+    "exitCode": 0,
+    "nodeVersion": "v22.22.3",
+    "playwrightVersion": "1.64.0-alpha-1790635538000",
+    "browserVersion": "155.0.8059.85",
+    "stdout": {
+      "result": "local_synthetic_fixture_passed",
+      "nodeVersion": "v22.22.3",
+      "browserVersion": "155.0.8059.85",
+      "geolocation": "synthetic_coordinates_returned_for_loopback_origin",
+      "dialog": "registered_before_click_and_dismissed",
+      "clipboard": "in_memory_stub_only_no_host_clipboard_access",
+      "realSites": false,
+      "accounts": false,
+      "payment": false,
+      "pageNavigations": "loopback_only",
+      "browserBackgroundNetworkingAudited": false,
+      "nativeClipboard": false,
+      "llmTesting": false,
+      "consentManagerTesting": false,
+      "storeTesting": false
+    },
+    "stderrEmpty": true,
+    "temporaryOutputCleaned": true,
+    "scope": "Actual exact-byte local loopback syntheticfixture, mocked geolocation, dismissed nativeconfirm, in-memoryclipboardstub. Not real OSclipboard/realaccounts/stores/CMPs/vision/LLM/benchmark. Browserbackgroundnetworking not independentlyaudited."
+  },
+  "measurement": {
+    "status": "Prior Monday closed-window review reused privately; no new mature cohort/window today.",
+    "privateDirectory": ".local/workflows/measurement/2026-10-27",
+    "limits": "No traffic uplift, ROI, ranking or page winner assertion. Publication and template execution are delivery evidence, not SEO effect."
+  },
+  "sourceRecords": [
+    "docs/seo/research-2026-10-27.json",
+    "docs/seo/research-ai-tasks-2026-10-27.json"
+  ],
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "rank": null,
+    "measuredSearchVolume": null
+  },
+  "operationsNotPerformed": [
+    "Index or sitemap submissions",
+    "Detection website",
+    "EasyBR client/backend changes",
+    "Outreach",
+    "New paid subscriptions/tools/model APIs",
+    "Cloudflare/account/analytics configuration changes"
+  ]
+}
