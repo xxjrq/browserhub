@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "cycleId": "content-2026-10-27",
+  "status": "content_prepared_for_independent_review; publication_is_separate",
+  "project": "BrowserHub",
+  "primaryDirection": "AI browsers and browser agents: practical web tasks and developer troubleshooting. Fingerprint/proxy material remains supporting only.",
+  "selectionMethod": {
+    "framework": "Reuse source-backed strategy-research-2026-10-25: demand/problem, business relevance, competitive feasibility, unique increment, existing intent ownership and maintenance.",
+    "searchMethod": "Current public web search and directly opened primary/product/problem/competing pages, recorded in topic sourceRecord. Not the site’s GSC queries; no measured volume/KD/ranking dataset.",
+    "competitiveGate": "Executor reports at least three competing/problem pages opened per selected topic. Independent reviewer must verify actual evidence and distinguish official feature facts from third-party problem reports.",
+    "noveltyGate": "59existingtopics/125priorownershiprows inspected; iframe, tab/popups and PDF duplicates rejected. Five distinct intents selected; nearest owners recorded.",
+    "weakness": "Public problem existence and examples do not demonstrate high query volume, recent growth or ranking feasibility metrics. No claim that a newly published recipe outranks official documentation.",
+    "backup": "Camera/microphone permission tests only if a selected topic failed evidence or independent ownership gate; not drafted/counted."
+  },
+  "newTopicCount": 5,
+  "completeEditions": 10,
+  "oldEnhancements": [],
+  "topics": [
+    {
+      "slug": "browser-agent-clipboard-read-write",
+      "targetQuestion": "Read or write approved text via Clipboard API and diagnose secure-context, user-activation and permission boundaries; verify contents rather than a copy toast.",
+      "sourceRecord": "docs/seo/research-ai-tasks-2026-10-27.json",
+      "addedValue": "A practical failure tree covering secure context, activation, per-origin permissions and frame policy; clipboard content vs notification and a no-host-clipboard validation boundary.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-upload-files",
+          "browser-agent-structured-data-extraction",
+          "browser-agent-form-submission"
+        ],
+        "distinctiveCoverage": "Read or write approved text via Clipboard API and diagnose secure-context, user-activation and permission boundaries; verify contents rather than a copy toast."
+      },
+      "urls": [
+        "https://browserhub.co/en/guides/browser-agent-clipboard-read-write/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-clipboard-read-write/"
+      ]
+    },
+    {
+      "slug": "playwright-geolocation-permission-tests",
+      "targetQuestion": "Test location-dependent browser-agent UI with origin-scoped permission and emulated coordinates, distinguish denied/unavailable/cache states from network IP.",
+      "sourceRecord": "docs/seo/research-ai-tasks-2026-10-27.json",
+      "addedValue": "Origin and permission/coordinate decision table, redirect and cached-position pitfalls, a reproducible synthetic test if verified, and explicit separation from IP routing.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-timezone-language-check",
+          "browser-fingerprint-testing-checklist",
+          "browser-profile-permissions"
+        ],
+        "distinctiveCoverage": "Test location-dependent browser-agent UI with origin-scoped permission and emulated coordinates, distinguish denied/unavailable/cache states from network IP."
+      },
+      "urls": [
+        "https://browserhub.co/en/guides/playwright-geolocation-permission-tests/",
+        "https://browserhub.co/zh-cn/guides/playwright-geolocation-permission-tests/"
+      ]
+    },
+    {
+      "slug": "playwright-javascript-dialog-hangs",
+      "targetQuestion": "Resolve a browser action hanging on native alert/confirm/prompt dialogs by registering and resolving the correct event, distinct from DOM modals and new tabs.",
+      "sourceRecord": "docs/seo/research-ai-tasks-2026-10-27.json",
+      "addedValue": "Native JavaScript dialog vs HTML modal diagnosis, logging-only listener deadlock explanation, conditional accept/dismiss and result verification.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-tabs-popups",
+          "browser-agent-form-submission",
+          "browser-agent-debugging-traces"
+        ],
+        "distinctiveCoverage": "Resolve a browser action hanging on native alert/confirm/prompt dialogs by registering and resolving the correct event, distinct from DOM modals and new tabs."
+      },
+      "urls": [
+        "https://browserhub.co/en/guides/playwright-javascript-dialog-hangs/",
+        "https://browserhub.co/zh-cn/guides/playwright-javascript-dialog-hangs/"
+      ]
+    },
+    {
+      "slug": "browser-agent-cookie-consent-choice",
+      "targetQuestion": "Map a user-stated cookie preference to actual CMP choices and verify recorded state, distinguishing hiding an overlay from consent.",
+      "sourceRecord": "docs/seo/research-ai-tasks-2026-10-27.json",
+      "addedValue": "User preference to CMP state checklist; reject/accept/customize and missing-option handling, state verification instead of merely removing the banner.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-iframes",
+          "browser-agent-prompt-injection",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Map a user-stated cookie preference to actual CMP choices and verify recorded state, distinguishing hiding an overlay from consent."
+      },
+      "urls": [
+        "https://browserhub.co/en/guides/browser-agent-cookie-consent-choice/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-cookie-consent-choice/"
+      ]
+    },
+    {
+      "slug": "browser-agent-shopping-cart-verification",
+      "targetQuestion": "Match exact product variant, quantity and constraints, verify a persisted cart line item, and stop at the authorized checkout boundary.",
+      "sourceRecord": "docs/seo/research-ai-tasks-2026-10-27.json",
+      "addedValue": "Variant/quantity/cart state verification checklist with failure cases and a precise stop point; document-based, no automated-store benchmark or purchase claim.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-structured-data-extraction",
+          "browser-agent-form-submission",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Match exact product variant, quantity and constraints, verify a persisted cart line item, and stop at the authorized checkout boundary."
+      },
+      "urls": [
+        "https://browserhub.co/en/guides/browser-agent-shopping-cart-verification/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-shopping-cart-verification/"
+      ]
+    }
+  ],
+  "sourceRecords": [
+    "docs/seo/research-ai-tasks-2026-10-27.json"
+  ],
+  "editorial": {
+    "skills": [
+      "content-strategy",
+      "humanizer",
+      "humanizer-zh"
+    ],
+    "format": "Direct answer plus task-specific decision tables/steps, actual failure diagnosis, relevant next links, FAQ and primary sources. No prose copied from competitors, fabricated experience or universal benchmark.",
+    "sourceFactDates": "Topic documentation checked 2026-10-27. Existing catalogue fact dates remain 2026-10-16; publication does not recertify prices.",
+    "language": "Complete English and Simplified Chinese only; pair counts one topic.",
+    "fixtureBoundary": "Original synthetic local fixture, subject to exact byte validation before any execution claim. The clipboard stub does not exercise the host OS clipboard. No live shopping, CMP, account or LLM execution implied.",
+    "localValidation": {
+      "executorPerformed": false,
+      "rootPerformed": true,
+      "startedAt": "2026-10-27T01:36:32.147962+00:00",
+      "finishedAt": "2026-10-27T01:36:33.090431+00:00",
+      "assetPath": "public/templates/browser-agent-task-fixtures.mjs",
+      "assetSha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658",
+      "exitCode": 0,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.0-alpha-1790635538000",
+      "browserVersion": "155.0.8059.85",
+      "observed": {
+        "result": "local_synthetic_fixture_passed",
+        "nodeVersion": "v22.22.3",
+        "browserVersion": "155.0.8059.85",
+        "geolocation": "synthetic_coordinates_returned_for_loopback_origin",
+        "dialog": "registered_before_click_and_dismissed",
+        "clipboard": "in_memory_stub_only_no_host_clipboard_access",
+        "realSites": false,
+        "accounts": false,
+        "payment": false,
+        "pageNavigations": "loopback_only",
+        "browserBackgroundNetworkingAudited": false,
+        "nativeClipboard": false,
+        "llmTesting": false,
+        "consentManagerTesting": false,
+        "storeTesting": false
+      },
+      "temporaryOutputCleaned": true,
+      "limits": "One exact-byte local synthetic run. No host OS clipboard, denied/unavailable/cached location branches, real sites/accounts/CMP/store, LLM or benchmark evaluated. Browser background networking not audited."
+    }
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "selectionSource": "role_default",
+      "agent": "content_execution_20261027"
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "selectionSource": "role_default",
+      "agent": "review_20261027"
+    },
+    "policy": "No silent fallback or invented model/token usage. The same unresolved issue after three different approaches escalates to Sol 6.1 xhigh; attempts recorded in handoff."
+  },
+  "measurement": {
+    "lastClosedWindowReview": "2026-10-26 privateMondayreview; not reproduced in publicresearch.",
+    "rawDataDirectory": ".local/workflows/measurement",
+    "newlyMeasuredQueries": null,
+    "organicClicks": null,
+    "organicSessions": null,
+    "searchVolume": null,
+    "trafficUplift": null,
+    "decision": "Continue authorized daily publication; no new mature window today. Keep the October 25 MCP refresh stable until its seven-day review.",
+    "cohorts": "Exact successful publication receipt time +7/+14/+28 days recorded after completion; November 3/10/24 are calendar reminders, not proof of cohort maturity."
+  },
+  "publicationContract": "Original content-2026-10-27 formal graph, independent final SHA review, CI and Git read-only preflight before freezing, then commit, push, atomic deployment and dual-domain body/canonical verification.",
+  "outOfScope": [
+    "Index/sitemap submissions",
+    "Detection website",
+    "EasyBR client/backend",
+    "Outreach",
+    "New paid subscriptions, tools or model APIs",
+    "Analytics/account configuration changes"
+  ],
+  "siteBaseline": "Already committed and live b318eaf site-level pages retained; not counted among daily articles."
+}

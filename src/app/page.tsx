@@ -19,7 +19,7 @@ const categories = [
 
 export function HomePage() {
 	const featured = browsers.find(browser => browser.featured) ?? browsers[0];
-	const featuredGuides = ["chatgpt-atlas-retirement-data-transition", "chatgpt-desktop-browser-vs-comet", "ai-browser-webpage-translation", "browser-agent-wait-for-page-ready", "browser-agent-accessibility-snapshot-vs-screenshot"].map(slug => guides.find(guide => guide.slug === slug)).filter((guide): guide is (typeof guides)[number] => Boolean(guide));
+	const featuredGuides = ["browser-agent-clipboard-read-write", "playwright-geolocation-permission-tests", "playwright-javascript-dialog-hangs", "browser-agent-cookie-consent-choice", "browser-agent-shopping-cart-verification"].map(slug => guides.find(guide => guide.slug === slug)).filter((guide): guide is (typeof guides)[number] => Boolean(guide));
 	const featuredRest = browsers.filter(browser => browser.slug !== featured.slug && ["gologin", "adspower", "multilogin"].includes(browser.slug)).slice(0, 3);
 	const stats = [
 		{ value: `${browsers.length}+`, label: "浏览器及相关资源" },

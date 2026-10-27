@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "cycleId": "content-2026-10-27",
+  "status": "research_complete_draft_pending_independent_review",
+  "purpose": "Select five distinct browser-agent support and developer tasks using current public problem evidence, primary documentation and a checked ownership map. This is not a content release or traffic report.",
+  "method": {
+    "liveWebSearched": true,
+    "competitionPagesOpened": 15,
+    "primaryDocumentationOpened": true,
+    "searchVolumes": null,
+    "siteSearchQueries": null,
+    "browserHubTraffic": null,
+    "competitorTraffic": null,
+    "observationsAreNotSearchVolume": true,
+    "observationDate": "2026-10-27",
+    "keywordMap": {
+      "path": "docs/seo/keyword-map-2026-10-16.json",
+      "totalRowsReviewed": 125,
+      "guideRowsReviewed": 59,
+      "exactOwnersForSelectedTasks": false,
+      "scopeNote": "The 125-row map snapshot used for selection contained 59 guide owners. Root integration later added five approved topics, yielding the current 130-row, 64-guide map. All base rows and related guide intents were checked before selection.",
+      "baselineRowsReviewed": 125,
+      "baselineGuideRowsReviewed": 59,
+      "postIntegrationRowsReviewed": 130,
+      "postIntegrationGuideRowsReviewed": 64
+    },
+    "minimumCompetitionPagesOpenedPerTopic": 3
+  },
+  "topics": [
+    {
+      "slug": "browser-agent-clipboard-read-write",
+      "primaryKeyword": {
+        "en": "browser agent clipboard read write",
+        "zh-CN": "浏览器智能体读写剪贴板"
+      },
+      "intent": "Test copy and paste behavior without reading a developer's host clipboard; diagnose permission, secure-context, origin, focus and frame-policy boundaries.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "browser-agent-upload-files",
+            "intent": "Local or remote file chooser and path handling, not the operating-system clipboard API."
+          },
+          {
+            "slug": "browser-agent-structured-data-extraction",
+            "intent": "Extract and verify page data, not clipboard reads/writes."
+          },
+          {
+            "slug": "browser-agent-form-submission",
+            "intent": "Approval and submission consequences, not copy/paste transport."
+          }
+        ],
+        "distinctiveCoverage": "A value-at-the-boundary assertion and an in-memory clipboard stub, with explicit secure-context, browser-permission and cross-origin Permissions Policy boundaries."
+      },
+      "demandEvidence": [
+        {
+          "url": "https://www.reddit.com/r/Playwright/comments/1wak1on/how_do_you_test_clipboard_interactions_in_playwright_would/",
+          "sourceDateDisplayed": "2026-09 (relative label: last month at observation)",
+          "observedOn": "2026-10-27",
+          "type": "Public developer question",
+          "note": "The question describes permission setup and asynchronous timing as friction when testing clipboard behavior. Counts are not interpreted as search demand."
+        },
+        {
+          "url": "https://github.com/microsoft/playwright/issues/38670",
+          "sourceDateDisplayed": "Issue activity Jan 3, 2026",
+          "observedOn": "2026-10-27",
+          "type": "Public issue report and follow-up",
+          "note": "The initial report suspected permission timing in CI; the author later clarified that missing Docker setup for Firebase emulators was the actual failure cause. It is a debugging discussion, not evidence of a Playwright permission defect."
+        },
+        {
+          "url": "https://github.com/microsoft/playwright/issues/29509",
+          "sourceDateDisplayed": "Published about 2.7 years before observation",
+          "observedOn": "2026-10-27",
+          "type": "Public issue report",
+          "note": "A separate report asks about clipboard permissions in Chromium/BrowserStack. Aged report retained as a recurring problem example, not current compatibility evidence."
+        }
+      ],
+      "competition": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API",
+          "sourceDateDisplayed": "Updated/compatibility snapshot not clearly displayed in search result",
+          "observedOn": "2026-10-27",
+          "pageType": "Primary technical documentation",
+          "observed": "Explains secure contexts, user activation, permissions and cross-browser clipboard differences."
+        },
+        {
+          "url": "https://helpcenter.autify.com/docs/verifying-clipboard-content",
+          "sourceDateDisplayed": "Published date not displayed; observed online 2026-10-27",
+          "observedOn": "2026-10-27",
+          "pageType": "Automation vendor guide",
+          "observed": "Shows reading clipboard text after a copy action and warns the recipe may capture other content copied on the machine during the run."
+        },
+        {
+          "url": "https://qaskills.sh/blog/playwright-clipboard-read-write-permissions",
+          "sourceDateDisplayed": "2026-07-13",
+          "observedOn": "2026-10-27",
+          "pageType": "Playwright testing tutorial",
+          "observed": "Distinguishes toast notification from clipboard value and covers origin grants, denial, and browser differences."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://playwright.dev/docs/api/class-browsercontext",
+          "sourceDateDisplayed": "Current official API page; version-specific permission names vary",
+          "observedOn": "2026-10-27",
+          "factUse": "BrowserContext permission grants are origin-scoped when an origin is supplied; supported permissions vary by browser and version."
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API",
+          "sourceDateDisplayed": "Current page observed 2026-10-27",
+          "factUse": "Secure-context, activation, policy and Chromium versus Firefox/Safari compatibility boundaries."
+        }
+      ],
+      "claimBoundaries": [
+        "Fixture uses an in-memory navigator.clipboard stub; no host clipboard access.",
+        "No cross-browser test was run by this research author.",
+        "Clipboard permission support must be checked against the current browser version."
+      ]
+    },
+    {
+      "slug": "playwright-geolocation-permission-tests",
+      "primaryKeyword": {
+        "en": "Playwright geolocation permission tests",
+        "zh-CN": "Playwright 地理位置权限测试"
+      },
+      "intent": "Test an owned location-aware web app using separate permission, synthetic coordinate, denied and unavailable-position branches.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "browser-timezone-language-check",
+            "intent": "Diagnose IP, locale, language and time-zone mismatch; not geolocation API emulation in a local app test."
+          },
+          {
+            "slug": "browser-fingerprint-testing-checklist",
+            "intent": "Broad environment inspection checklist; not origin-scoped application test setup."
+          },
+          {
+            "slug": "browser-profile-permissions",
+            "intent": "Team access to browser profiles; not page-level Geolocation API permission."
+          }
+        ],
+        "distinctiveCoverage": "A test matrix separating permission denied from position unavailable, redirect/final-origin mistakes, stale app UI and synthetic browser position from network/IP/device location."
+      },
+      "demandEvidence": [
+        {
+          "url": "https://stackoverflow.com/questions/78697398/playwright-geolocation-not-setting-up-properly",
+          "sourceDateDisplayed": "Published about 2.3 years before observation",
+          "observedOn": "2026-10-27",
+          "type": "Public developer question",
+          "note": "The question reports configured Playwright geolocation while a tested page still shows another position. This is a problem signal, not verified root cause."
+        },
+        {
+          "url": "https://stackoverflow.com/questions/79216839/configure-playwright-to-avoid-browser-notifications-such-as-this-page-wants-to",
+          "sourceDateDisplayed": "Accepted answer Nov 23, 2024",
+          "observedOn": "2026-10-27",
+          "type": "Public developer question/answer",
+          "note": "The thread distinguishes a browser geolocation permission prompt from a page popup and links to BrowserContext.grantPermissions."
+        },
+        {
+          "url": "https://www.qabattle.com/blog/pair-geolocation-with-browser-permissions",
+          "sourceDateDisplayed": "Search label: published 3 months before observation; exact date not displayed in opened text",
+          "observedOn": "2026-10-27",
+          "type": "Testing vendor tutorial",
+          "note": "Describes how stale application display, origin-scoped permission and synthetic location can be confused."
+        }
+      ],
+      "competition": [
+        {
+          "url": "https://playwright.dev/docs/api/class-browsercontext",
+          "sourceDateDisplayed": "Current official API page observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "pageType": "Primary technical documentation",
+          "observed": "Documents setGeolocation, the use of grantPermissions, valid coordinate range, and null/undefined for unavailable position."
+        },
+        {
+          "url": "https://www.qabattle.com/blog/pair-geolocation-with-browser-permissions",
+          "sourceDateDisplayed": "Search label: 3 months before observation",
+          "observedOn": "2026-10-27",
+          "pageType": "Testing vendor guide",
+          "observed": "Provides origin-scoped examples and distinguishes browser result from stale application state."
+        },
+        {
+          "url": "https://stackoverflow.com/questions/78697398/playwright-geolocation-not-setting-up-properly",
+          "sourceDateDisplayed": "About 2.3 years before observation",
+          "observedOn": "2026-10-27",
+          "pageType": "Developer troubleshooting thread",
+          "observed": "Shows a developer question about coordinates not taking effect."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://playwright.dev/docs/api/class-browsercontext",
+          "sourceDateDisplayed": "Current official API page observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "factUse": "Context-scoped permission and synthetic position controls; null position behavior."
+        },
+        {
+          "url": "https://www.w3.org/TR/geolocation/",
+          "sourceDateDisplayed": "W3C Candidate Recommendation Snapshot 2026-03-26; page notes the API was a W3C Recommendation in 2022 and returned to CR in March 2026",
+          "observedOn": "2026-10-27",
+          "factUse": "Geolocation access is sensitive and permission and position errors are separate API outcomes."
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API",
+          "sourceDateDisplayed": "Current MDN reference observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "factUse": "Web API usage and browser context boundaries."
+        }
+      ],
+      "claimBoundaries": [
+        "Geolocation is framed as testing an owned local or staging application.",
+        "Synthetic browser coordinates do not alter proxy IP geolocation, emulate a physical device GPS, or establish privacy/fingerprint resistance."
+      ]
+    },
+    {
+      "slug": "playwright-javascript-dialog-hangs",
+      "primaryKeyword": {
+        "en": "Playwright JavaScript dialog hangs",
+        "zh-CN": "Playwright JavaScript 弹窗导致操作卡住"
+      },
+      "intent": "Identify native alert/confirm/prompt/beforeunload events, register a handler before the triggering action, and assert the selected outcome.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "browser-agent-tabs-popups",
+            "intent": "New page/tab lifecycle, not native JavaScript dialog blocking."
+          },
+          {
+            "slug": "browser-agent-form-submission",
+            "intent": "Submission approval and consequence handling, not dialog event registration."
+          },
+          {
+            "slug": "browser-agent-debugging-traces",
+            "intent": "Inspect failed action evidence, not pre-trigger native dialog handling."
+          }
+        ],
+        "distinctiveCoverage": "A concise blocker diagnostic separating native dialogs, DOM modals, browser permission prompts and new pages, with correct listener order and branch assertions."
+      },
+      "demandEvidence": [
+        {
+          "url": "https://www.reddit.com/r/Playwright/comments/1qtp3r5/how_to_handle_browser_dialog_box/",
+          "sourceDateDisplayed": "About 8 months before observation",
+          "observedOn": "2026-10-27",
+          "type": "Public developer question",
+          "note": "A developer asks how to interact with fields in a browser dialog. A reply identifies a native JavaScript prompt and points to Playwright docs."
+        },
+        {
+          "url": "https://www.reddit.com/r/Playwright/comments/1gwl2pu/dialog_accepted_in_debug_mode_but_not_in_headless_flaky_test/",
+          "sourceDateDisplayed": "About 1.9 years before observation",
+          "observedOn": "2026-10-27",
+          "type": "Public troubleshooting thread",
+          "note": "A flaky dialog test discussion; retained as a historical problem report, not current behavior evidence."
+        }
+      ],
+      "competition": [
+        {
+          "url": "https://playwright.dev/docs/dialogs",
+          "sourceDateDisplayed": "Current official guide observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "pageType": "Primary documentation",
+          "observed": "States unhandled listeners stall the triggering action; without a listener, dialogs auto-dismiss."
+        },
+        {
+          "url": "https://applitools.com/resources/videos/interacting-with-alerts-in-playwright-js/",
+          "sourceDateDisplayed": "Publication date not displayed in opened page",
+          "observedOn": "2026-10-27",
+          "pageType": "Test automation vendor tutorial",
+          "observed": "Provides Playwright alert and confirmation examples with assertions."
+        },
+        {
+          "url": "https://playwright-php.dev/recipes/handle-a-javascript-dialog",
+          "sourceDateDisplayed": "Current recipe observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "pageType": "Language-specific Playwright guide",
+          "observed": "Registers the handler before the action and distinguishes accept/dismiss behavior."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://playwright.dev/docs/dialogs",
+          "sourceDateDisplayed": "Current official guide observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "factUse": "Native dialogs are auto-dismissed without a listener; when a listener is registered it must handle the dialog or action stalls."
+        },
+        {
+          "url": "https://playwright.dev/docs/api/class-dialog",
+          "sourceDateDisplayed": "Current official API reference observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "factUse": "Dialog type, message, accept and dismiss methods."
+        }
+      ],
+      "claimBoundaries": [
+        "Fixture uses a local synthetic confirm dialog and never opens a real site.",
+        "Permission prompts, consent banners and new pages are not JavaScript dialogs."
+      ]
+    },
+    {
+      "slug": "browser-agent-cookie-consent-choice",
+      "primaryKeyword": {
+        "en": "browser agent cookie consent choice",
+        "zh-CN": "浏览器智能体 Cookie 同意选择"
+      },
+      "intent": "Honor a user-stated consent preference, verify the interface's recorded/visible result, and pause when the available choice lacks authorization.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "browser-agent-iframes",
+            "intent": "Targeting an embedded document, not the meaning of consent choices."
+          },
+          {
+            "slug": "browser-agent-prompt-injection",
+            "intent": "Treat page text as untrusted instructions, not make privacy preference decisions."
+          },
+          {
+            "slug": "browser-agent-human-takeover",
+            "intent": "Human handoff for login/MFA or verification, not routine consent preference handling."
+          }
+        ],
+        "distinctiveCoverage": "A user-preference mapping and state-verification workflow; explicitly avoids legal advice, compliance claims, universal selectors, or silently accepting."
+      },
+      "demandEvidence": [
+        {
+          "url": "https://www.reddit.com/r/browsers/comments/1xfura8/hiding_a_cookie_banner_and_actually_rejecting/",
+          "sourceDateDisplayed": "Published today (2026-10-27) in search result",
+          "observedOn": "2026-10-27",
+          "type": "Public user discussion",
+          "note": "Asks whether hiding a banner is equivalent to recording a rejection and whether a tool should ever accept on a user's behalf. This is a public discussion, not a measured search-query count."
+        },
+        {
+          "url": "https://www.reddit.com/r/AI_Agents/comments/1vnydav/my_agent_spent_40_minutes_on_a_task_that_takes_me/",
+          "sourceDateDisplayed": "About 2 months before observation",
+          "observedOn": "2026-10-27",
+          "type": "Public user discussion",
+          "note": "Describes browser-agent loops around popups and cookie banners. The post is anecdotal and not a frequency estimate."
+        }
+      ],
+      "competition": [
+        {
+          "url": "https://browserberg.com/docs/concepts/consent-autopilot",
+          "sourceDateDisplayed": "Last updated 2026-09-02",
+          "observedOn": "2026-10-27",
+          "pageType": "Browser-agent vendor documentation",
+          "observed": "Documents a product-specific consent option, fresh-session recurrence, and explicit acceptance behavior."
+        },
+        {
+          "url": "https://github.com/browserless/browserless-mcp/blob/main/src/skills/cookie-consent.md",
+          "sourceDateDisplayed": "Current repository page observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "pageType": "Browser automation tool instructions",
+          "observed": "Suggests snapshotting choices and warns that removing the banner DOM element leaves consent state unresolved and handlers active."
+        },
+        {
+          "url": "https://github.com/duckduckgo/autoconsent",
+          "sourceDateDisplayed": "Current repository README observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "pageType": "Open-source consent-management project",
+          "observed": "Describes rules running in a browser extension or Playwright-orchestrated browser and product-specific integration."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://playwright.dev/docs/best-practices",
+          "sourceDateDisplayed": "Current official guide observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "factUse": "Overlays and external page content can affect test stability; test controlled pages rather than external dependencies."
+        }
+      ],
+      "claimBoundaries": [
+        "No legal interpretation or compliance guarantee.",
+        "A closed banner does not prove every site script honored a choice.",
+        "The article does not recommend a universal selector or automatic acceptance.",
+        "No real consent manager was contacted or tested."
+      ]
+    },
+    {
+      "slug": "browser-agent-shopping-cart-verification",
+      "primaryKeyword": {
+        "en": "browser agent shopping cart verification",
+        "zh-CN": "浏览器智能体核对购物车"
+      },
+      "intent": "Convert a user's shopping request into explicit product and variant constraints; verify the cart line and use payment as a separately authorized stop boundary.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "browser-agent-structured-data-extraction",
+            "intent": "Read and serialize page data, not select products and verify cart mutations."
+          },
+          {
+            "slug": "browser-agent-form-submission",
+            "intent": "Submission approval and uncertain outcomes, not product/variant selection and cart checks."
+          },
+          {
+            "slug": "best-antidetect-browsers-2026",
+            "intent": "Compare browser products for selection, not shopping tasks performed by a browser agent."
+          }
+        ],
+        "distinctiveCoverage": "A user-facing product/variant constraint checklist, cart-state verification, visible price boundary and explicit stop before payment; no live store test or benchmark claim."
+      },
+      "demandEvidence": [
+        {
+          "url": "https://browser-use.com/benchmarks/consumer",
+          "sourceDateDisplayed": "Selection V10 published 2026-10-24; displayed runs dated 2026-10-12 through 2026-10-24",
+          "observedOn": "2026-10-27",
+          "type": "Vendor-published live-store task benchmark",
+          "note": "Describes 500 tasks across store pages and states that tasks stop before checkout. Vendor-published benchmark; methodology and retained-run limits are explicit."
+        },
+        {
+          "url": "https://www.arcreport.ai/agent-index",
+          "sourceDateDisplayed": "Latest test in opened view: 2026-10-12",
+          "observedOn": "2026-10-27",
+          "type": "Public browser-agent checkout report",
+          "note": "Separates catalog checks from browser cart tasks and reports dated store observations. It is not a universal product capability or BrowserHub test."
+        },
+        {
+          "url": "https://wbsg-uni-mannheim.github.io/WebMall/",
+          "sourceDateDisplayed": "Accepted at SIGIR 2026; page note dated 2026-04-14",
+          "observedOn": "2026-10-27",
+          "type": "Academic benchmark description",
+          "note": "Includes cross-store search and offer-comparison tasks, cart operations and checkout tasks. Benchmark tasks demonstrate research attention, not public search volume."
+        },
+        {
+          "url": "https://vibrantlabs.com/research/ecom-bench",
+          "sourceDateDisplayed": "Published 2026-06-23",
+          "observedOn": "2026-10-27",
+          "type": "Research/vendor benchmark description",
+          "note": "Describes 40 live-store cart-building tasks requiring exact variants, quantities and constraints; the source discusses changing catalog and stock behavior."
+        }
+      ],
+      "competition": [
+        {
+          "url": "https://browser-use.com/benchmarks/consumer",
+          "sourceDateDisplayed": "Selection V10 published 2026-10-24",
+          "observedOn": "2026-10-27",
+          "pageType": "Browser-agent benchmark",
+          "observed": "Shows dated real-store task evidence and explicitly stops before checkout."
+        },
+        {
+          "url": "https://www.arcreport.ai/agent-index",
+          "sourceDateDisplayed": "Latest view test 2026-10-12",
+          "observedOn": "2026-10-27",
+          "pageType": "Browser agent checkout report",
+          "observed": "Distinguishes agent catalog from browser shoppers and labels product/cart result boundaries."
+        },
+        {
+          "url": "https://wbsg-uni-mannheim.github.io/WebMall/",
+          "sourceDateDisplayed": "SIGIR 2026 paper acceptance noted 2026-04-14",
+          "observedOn": "2026-10-27",
+          "pageType": "Academic benchmark",
+          "observed": "Defines product search, comparison, cart and checkout task groups in a multi-shop setting."
+        }
+      ],
+      "primarySources": [
+        {
+          "url": "https://playwright.dev/docs/actionability",
+          "sourceDateDisplayed": "Current official guide observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "factUse": "Playwright locator actionability checks for an enabled and unobstructed control."
+        },
+        {
+          "url": "https://playwright.dev/docs/test-assertions",
+          "sourceDateDisplayed": "Current official guide observed 2026-10-27",
+          "observedOn": "2026-10-27",
+          "factUse": "Web-first assertions wait for a user-visible condition."
+        }
+      ],
+      "claimBoundaries": [
+        "This guide is document-based; no live store or cart was used.",
+        "No purchase, checkout, payment, price or stock claim is made.",
+        "Benchmark results reflect their stated task sets, dates and methods; they are not generalized to other agents or stores."
+      ]
+    }
+  ],
+  "fixture": {
+    "path": "public/templates/browser-agent-task-fixtures.mjs",
+    "status": "executed_by_root",
+    "scope": "Local loopback page navigation only: geolocation permission for the loopback origin, synthetic coordinates, a native confirm listener, and navigator.clipboard in-memory stub. No host clipboard, real site, account, checkout, LLM, CMP or store testing. Browser background networking is not audited.",
+    "cleanup": "Closes the fresh browser context and deletes only the temporary folder it creates; writes its fixture HTML with mode 0600.",
+    "validationOwner": "root integration executor",
+    "executorExecuted": false,
+    "rootExecuted": true,
+    "rootExecution": {
+      "sha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658",
+      "startedAt": "2026-10-27T01:36:32.147962+00:00",
+      "finishedAt": "2026-10-27T01:36:33.090431+00:00",
+      "exitCode": 0,
+      "stderrEmpty": true,
+      "temporaryDirectoryCleaned": true,
+      "node": "v22.22.3",
+      "playwright": "1.64.0-alpha-1790635538000",
+      "chromium": "155.0.8059.85",
+      "scope": "Synthetic coordinates granted for loopback origin; native confirm dismissed; clipboard uses an in-memory stub. No native OS clipboard, denied/unavailable/cache geolocation cases, real CMP/store/account, LLM, vision or benchmark testing."
+    },
+    "executedAssetSha256": "af32e19ca91c61830b726a64cdcd7cdf35ab965ea5c891730ac9833cb0ead658"
+  },
+  "execution": {
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "searchTools": [
+      "web search",
+      "direct page opens"
+    ],
+    "editorialSkillsRead": [
+      {
+        "name": "content-strategy",
+        "path": "/Users/myd/.codex/skills/content-strategy/SKILL.md"
+      },
+      {
+        "name": "humanizer",
+        "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+        "version": "3.1.0"
+      },
+      {
+        "name": "humanizer-zh",
+        "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+      }
+    ],
+    "files": [
+      "src/data/ai-tasks-2026-10-27.ts",
+      "public/templates/browser-agent-task-fixtures.mjs",
+      "docs/seo/research-ai-tasks-2026-10-27.json"
+    ],
+    "unknowns": [
+      "Monthly search volume",
+      "BrowserHub query/click/session data",
+      "Competitor traffic",
+      "Search rank",
+      "Live-site performance for any commercial agent",
+      "Cross-browser runtime results; the executed fixture used Chromium only."
+    ]
+  }
+}
