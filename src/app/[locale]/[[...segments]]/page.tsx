@@ -22,6 +22,7 @@ import { StatusBadge } from "@/components/status-badge";
 import { browsers, comparisons, guides, technologies, tools, type BrowserResource, type ComparisonResource, type GuideResource, type TechnologyResource, type ToolResource } from "@/data/resources";
 import { allLocaleParams, browserSpecLabel, comparisonApiAnswer, comparisonCopy, comparisonFaq, comparisonIsolationAnswer, comparisonPitfalls, comparisonProxyAnswer, fingerprintCopy, guideCategoryLabel, hreflangFor, isLocale, localeMeta, localePath, localizedResourceDescription, pageMeta, relatedLinks, resourceFor, t, toolCategoryLabel, toolHowToSteps, scenarioLabel, type Locale, type LocalizedKind } from "@/lib/i18n";
 import { localizedGuideCopy } from "@/data/guide-translations";
+import { comparisonSectionsFor } from "@/data/comparison-sections";
 import { GuideArticle, guideFaq } from "@/components/guide-article";
 import { contentLocales, contentPath } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -170,15 +171,15 @@ function Detail({ locale, kind, item: rawItem }: { locale: Locale; kind: Localiz
 			<Card><CardHeader><CardTitle>{labels.comparisonTable}</CardTitle></CardHeader><CardContent className="overflow-x-auto p-0"><table className="w-full min-w-[680px] text-sm"><thead><tr className="border-y bg-muted/50 text-left"><th className="p-4">{copy.fields.price}</th><th className="p-4">{a.name}</th><th className="p-4">{b.name}</th></tr></thead><tbody>{rows.map(([field, va, vb]) => <tr key={field} className="border-b last:border-0"><td className="p-4 font-medium text-muted-foreground">{field}</td><td className="p-4">{valueCell(va)}</td><td className="p-4">{valueCell(vb)}</td></tr>)}</tbody></table></CardContent></Card>
 			<div className="grid gap-5 md:grid-cols-2">{[a, b].map(browser => <div key={browser.slug}><p className="mt-6 font-semibold">{browser.name}</p><ProductEvidence slug={browser.slug} locale={locale} compact /></div>)}</div><section className="mt-8 grid gap-5 md:grid-cols-2"><Card><CardHeader><CardTitle>{copy.strengths}</CardTitle></CardHeader><CardContent><ul className="space-y-3 text-sm leading-7">{(a.pros.length ? a.pros : a.features).slice(0, 4).map(value => <li key={value}><Check className="mr-2 inline h-4 w-4 text-success" />{value}</li>)}</ul><p className="mt-5 border-t pt-4 text-sm text-muted-foreground">{a.bestFor.slice(0, 3).join(" · ")}</p></CardContent></Card><Card><CardHeader><CardTitle>{copy.limitations}</CardTitle></CardHeader><CardContent><ul className="space-y-3 text-sm leading-7">{(b.pros.length ? b.pros : b.features).slice(0, 4).map(value => <li key={value}><Check className="mr-2 inline h-4 w-4 text-success" />{value}</li>)}</ul><p className="mt-5 border-t pt-4 text-sm text-muted-foreground">{b.bestFor.slice(0, 3).join(" · ")}</p></CardContent></Card></section>
 			<section className="mt-8"><h2 className="text-xl font-semibold">{copy.scenarios}</h2><div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{[a, b].flatMap(browser => browser.bestFor.slice(0, 2).map(scenario => <div key={`${browser.slug}-${scenario}`} className="rounded-lg border bg-card p-4 text-sm"><p className="font-medium">{browser.name}</p><p className="mt-2 text-muted-foreground">{scenario}</p></div>))}</div></section>
-			{/* The generated scenario sections are Chinese-only prose built from the real
-			    catalog. Rendering them on en/ja/ko/es/pt/ru pages leaked Chinese body copy
-			    into every hreflang sibling, so they stay on zh-cn only. The same catalog
-			    facts (free tier, price, platforms, storage, engine) are already presented
-			    in the localised comparison table and scenario cards above. */}
-			{locale === "zh-cn" && item.sections?.map(section => (
+			{/* These sections are generated from the same reviewed fields as the table
+			    above, so they render in every locale. `comparisonSectionsFor` picks the
+			    body copy by locale (zh-cn and en carry full copy; the other locales
+			    fall back to the English body with localised headings) and names both
+			    products, so no paragraph repeats across the whole comparison set. */}
+			{comparisonSectionsFor(a, b, locale).map(section => (
 				<section key={section.heading} className="mt-10">
 					<h2 className="text-xl font-semibold">{section.heading}</h2>
-					<div className="mt-4 space-y-4">{section.body.split(/\n{2,}/).map((block, blockIndex) => <p key={blockIndex} className="text-sm leading-7 text-muted-foreground">{block}</p>)}</div>
+					<SectionBody body={section.body} className="mt-4" />
 				</section>
 			))}
 			<ComparisonResearch slug={item.slug} locale={locale} />
