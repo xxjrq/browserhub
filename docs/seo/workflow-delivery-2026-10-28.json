@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-28",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-28",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "abfc08b1060ff914d09029baae4683c269e4c759411c6f560470d49e5701ecfc",
+  "commit": "1aea55b8c3e691b58de7021d0923e18f5aa44e3d",
+  "release": "/opt/browsertools/releases/20261028-094709",
+  "publicationReceiptAt": "2026-10-28T01:47:46.118Z",
+  "completedAt": "2026-10-28T01:47:49.186Z",
+  "newTopics": [
+    "ai-browser-trip-planning",
+    "ai-browser-expense-report-reconciliation",
+    "ai-browser-job-application-status",
+    "browser-agent-drag-and-drop",
+    "browser-agent-request-mocking-har"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-trip-planning/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-trip-planning/",
+    "https://browserhub.co/en/guides/ai-browser-expense-report-reconciliation/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-expense-report-reconciliation/",
+    "https://browserhub.co/en/guides/ai-browser-job-application-status/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-job-application-status/",
+    "https://browserhub.co/en/guides/browser-agent-drag-and-drop/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-drag-and-drop/",
+    "https://browserhub.co/en/guides/browser-agent-request-mocking-har/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-request-mocking-har/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Complete English and Chinese count as one independent topic. All64 existing guide metadata/translations retained; no prior-cycle theme counted again.",
+  "editorialSelection": "Three bounded application tasks (trip feasibility, expense-line reconciliation, application status) and two developer tasks (native drag/drop and deterministic request mocks/HAR boundaries), with current public problems/competitive pages and current primary facts. No traffic or ranking claim.",
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful deployment receipt time, not search-engine discovery or exact first reader request.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-04T01:47:46.118000+00:00",
+      "14day": "2026-11-11T01:47:46.118000+00:00",
+      "28day": "2026-11-25T01:47:46.118000+00:00"
+    },
+    "dateOnlyReminder": "November4/11/25 are reminders. Compare after exact mature time, using matching closed observation windows; incomplete or unavailable results remain unknown/pending."
+  },
+  "review": {
+    "decision": "approved",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "independentContext": true,
+    "fileCount": 11,
+    "sha256": "99031c408070a8e4ca95238bf38d8617b741d8e14c3ac0a1c1306af7f3f4be20"
+  },
+  "executor": {
+    "role": "executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffort": "high",
+    "selectionSource": "role_default",
+    "agent": "content_execution_20261028",
+    "executionAttempts": [
+      {
+        "attempt": 1,
+        "scope": "Current public demand/problem and competitive-page research against64 prior topics and130 map rows; root accepted three concrete application reconciliations and two distinct developer tasks, rejected weaker overlap candidates."
+      },
+      {
+        "attempt": 2,
+        "scope": "Full bilingual drafting and content/shared navigation integration; independent pre-CI review directs serialization, concrete cases, primary-source feature/preview and factual provenance corrections. Actual final typecheck and source gate required before preflight."
+      }
+    ],
+    "attemptAccounting": "No same unresolved issue after three distinct failed approaches. No model switch or fabricated actual model/token usage. Root inspects/runs code and manages workflow; Sol independently reviews actual source/facts/exports and signs only final SHA.",
+    "fixtureCorrection": "Root code inspection caught Alpha dragged before Beta preserving initial order before any actual run. Luna changed gesture to Beta before Alpha; final asset executed once successfully by root.",
+    "sourceGate": {
+      "reviewer": "review_20261028",
+      "status": "clear_before_preflight",
+      "corrections": [
+        "Programmatic string serialization and full TypeScript check, not syntax-only transpilation",
+        "Concrete trip date/transfer feasibility and expense mini-ledger with corrected arithmetic and duplicate narrative removed",
+        "Accurate Microsoft preview and browser account/rollout/action boundaries",
+        "HAR blocked-resource value, recording/filtered coverage/service-worker/fallback caveats; no actual HAR test claim",
+        "Bad404 source replaced with real opened page; search dates vs body dates and unavailable sources corrected",
+        "Playwright steps prerequisite1.57+, exact alpha-run environment and no compatibility-matrix claim"
+      ],
+      "typecheck": "Luna ran npx tsc --noEmit after final prose; reported exit0. Root full CI remains required.",
+      "asset": "Unchanged since root single exact-byte successful run."
+    }
+  },
+  "skills": [
+    "content-strategy",
+    "humanizer",
+    "humanizer-zh"
+  ],
+  "validation": {
+    "preflight": {
+      "startedAt": "2026-10-28T01:43:29.650497+00:00",
+      "checkedAt": "2026-10-28T01:43:45.594411+00:00",
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logPath": ".local/workflows/cycles/content-2026-10-28/preflight-ci.log",
+      "logSha256": "70b150e567f55af1cb11497c6446f5fee5974608ce5648afce5a93454e1e624c"
+    },
+    "gitRead": {
+      "checkedAt": "2026-10-28T01:43:29.987335+00:00",
+      "scopedUsername": "xxjrq",
+      "exitCode": 0,
+      "stdout": "5deb2f35d582451b019c5005d9d66b47aa742b5b\trefs/heads/main\n",
+      "stderr": "",
+      "credentialSource": "Repository-scoped helper reads local account tool; no credentials output or persisted; global GitHub account unchanged"
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1263,
+    "seoAudit": {
+      "htmlPages": 1259,
+      "sitemapUrls": 1006,
+      "internalLinks": 42483,
+      "alternateLinks": 7565,
+      "fallbackPages": 60,
+      "editorialGuides": 138,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-10-28T01:43:29.644Z",
+      "status": "passed",
+      "existingTopicsPreserved": 64,
+      "totalTopics": 69,
+      "completeEditions": 138,
+      "newTopics": 5,
+      "details": [
+        {
+          "slug": "ai-browser-trip-planning",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "ai-browser-trip-planning",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "ai-browser-expense-report-reconciliation",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "ai-browser-expense-report-reconciliation",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "ai-browser-job-application-status",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "ai-browser-job-application-status",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-drag-and-drop",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-drag-and-drop",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-request-mocking-har",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        },
+        {
+          "slug": "browser-agent-request-mocking-har",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3,
+          "status": "valid"
+        }
+      ]
+    },
+    "workspaceScope": "Only reviewed content/data/navigation/audit/research/download files. No framework/renderer/workflow/dependency changes.",
+    "priorBaseline": {
+      "commit": "5deb2f35d582451b019c5005d9d66b47aa742b5b",
+      "alreadyLiveRelease": "/opt/browsertools/releases/20261027-101721",
+      "all232ComparisonRoutesMatchedOriginBeforeTodayBuild": true,
+      "handling": "Retained already committed and live comparison localization; not counted among daily article changes."
+    },
+    "productEvidence": {
+      "products": 36,
+      "confirmedPriceOrLicenceRecords": 26,
+      "explicitlyUnverifiedPrices": 10,
+      "catalogueFactDate": "2026-10-16; article publication does not recertify prices."
+    },
+    "serverCurrent": {
+      "checkedAt": "2026-10-28T01:48:31.090859+00:00",
+      "exitCode": 0,
+      "current": "/opt/browsertools/releases/20261028-094709",
+      "expected": "/opt/browsertools/releases/20261028-094709",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-28T01:47:49.130Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-trip-planning/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-trip-planning/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-trip-planning/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-trip-planning/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-expense-report-reconciliation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-expense-report-reconciliation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-expense-report-reconciliation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-expense-report-reconciliation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-job-application-status/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-job-application-status/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-job-application-status/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-job-application-status/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-drag-and-drop/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-drag-and-drop/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-drag-and-drop/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-drag-and-drop/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-request-mocking-har/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-request-mocking-har/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-request-mocking-har/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-request-mocking-har/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-28T01:48:29.703920+00:00",
+    "ok": true,
+    "release": "/opt/browsertools/releases/20261028-094709",
+    "results": [
+      {
+        "url": "https://browserhub.co/templates/browser-agent-interaction-fixtures.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "3328e5312cc9eef22d13a93e309bb46d0fb1b46d45bf978ac9248003ea5f8669",
+        "expectedSha256": "3328e5312cc9eef22d13a93e309bb46d0fb1b46d45bf978ac9248003ea5f8669",
+        "bytesMatch": true,
+        "error": null
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/browser-agent-interaction-fixtures.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "3328e5312cc9eef22d13a93e309bb46d0fb1b46d45bf978ac9248003ea5f8669",
+        "expectedSha256": "3328e5312cc9eef22d13a93e309bb46d0fb1b46d45bf978ac9248003ea5f8669",
+        "bytesMatch": true,
+        "error": null
+      }
+    ],
+    "scope": "Read-only HTTP and exact source/export/download byte verification; does not execute remote example tasks."
+  },
+  "offlineValidation": {
+    "startedAt": "2026-10-28T01:33:39.914116+00:00",
+    "finishedAt": "2026-10-28T01:33:41.833700+00:00",
+    "command": "node public/templates/browser-agent-interaction-fixtures.mjs",
+    "assetPath": "public/templates/browser-agent-interaction-fixtures.mjs",
+    "assetSha256": "3328e5312cc9eef22d13a93e309bb46d0fb1b46d45bf978ac9248003ea5f8669",
+    "exitCode": 0,
+    "nodeVersion": "v22.22.3",
+    "playwrightVersion": "1.64.0-alpha-1790635538000",
+    "browserVersion": "155.0.8059.85",
+    "stdout": {
+      "result": "local_synthetic_fixture_passed",
+      "nodeVersion": "v22.22.3",
+      "browserVersion": "155.0.8059.85",
+      "html5DragOrder": [
+        "beta",
+        "alpha"
+      ],
+      "requestMock": "loopback fixture route returned synthetic JSON",
+      "harCaptureOrReplay": false,
+      "realSites": false,
+      "accounts": false,
+      "externalPageRequestsAllowed": false,
+      "browserBackgroundNetworkingAudited": false,
+      "JSWidgetsOrCanvas": false
+    },
+    "stderrEmpty": true,
+    "temporaryOutputCleaned": true,
+    "scope": "Actual exact-byte local loopback synthetic fixture: native HTML5 drop order and context-scoped route fulfillment. No HAR capture/replay, JS sortable/canvas, real websites/accounts, LLM or benchmark. Browser background networking not audited."
+  },
+  "measurement": {
+    "status": "Prior real performance records retained privately; no new verified traffic dataset reported for this release.",
+    "privateDirectory": ".local/workflows/measurement/2026-10-28",
+    "limits": "Some older cohorts mature today, but missing access or matching closed-window data is unknown, not failed content. Publication and fixture execution are delivery evidence, not SEO effect."
+  },
+  "sourceRecords": [
+    "docs/seo/research-2026-10-28.json",
+    "docs/seo/research-ai-applications-2026-10-28.json"
+  ],
+  "metrics": {
+    "organicClicks": null,
+    "organicSessions": null,
+    "rank": null,
+    "measuredSearchVolume": null
+  },
+  "operationsNotPerformed": [
+    "Index or sitemap submissions",
+    "Detection website",
+    "EasyBR client/backend changes",
+    "Outreach or real applications/bookings/expense submissions",
+    "New paid subscriptions/tools/model APIs",
+    "Cloudflare/account/analytics configuration changes"
+  ]
+}
