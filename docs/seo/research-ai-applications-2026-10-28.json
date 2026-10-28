@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-28",
+  "cycleId": "content-2026-10-28",
+  "project": "BrowserHub",
+  "status": "content_prepared_for_independent_review; publication_is_separate",
+  "primaryDirection": "AI browser and browser-agent applications plus one bounded developer troubleshooting theme and one deterministic test-data theme.",
+  "baseline": {
+    "previousPublishedTopics": 64,
+    "previousKeywordRows": 130,
+    "exactPriorOwnersAndTranslationsPreserved": true,
+    "existingMcpOwnersRefreshed": false,
+    "pricingFactsModified": false,
+    "source": "Prior daily delivery records and docs/seo/keyword-map-2026-10-16.json including additions through 2026-10-27"
+  },
+  "selectionMethod": {
+    "checkedOn": "2026-10-28",
+    "webSearch": "Current public search and directly opened primary, competitor, and task/problem pages; qualitative topic evidence only.",
+    "competitorGate": "At least three topic-relevant public pages were directly opened per candidate; each has an observation date, source-date field when visible, and an attribution/boundary. Reviewer-opened pages are attributed. Official primary docs are listed separately where applicable.",
+    "ownershipGate": "Compared against 64 published owners and 130 keyword rows. Exact owner not found for any accepted topic. Nearby broad workflow owners are recorded per topic; added scopes are distinct task/data models rather than keyword variants.",
+    "unknownMetrics": {
+      "searchVolume": null,
+      "keywordDifficulty": null,
+      "BrowserHubGscQueries": null,
+      "organicClicks": null,
+      "organicSessions": null,
+      "rankings": null,
+      "competitorTraffic": null
+    },
+    "limits": "Public pages show that products, publishers, or developers discuss these tasks. They do not establish BrowserHub query demand, site traffic, ranking likelihood, market adoption, or reproduced performance. Search-result dates are not substituted for actual page dates; inaccessible pages and 404s are excluded from the direct-open gate. No read-count or traffic estimate was invented."
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-trip-planning",
+      "targetQuestion": "How can I ask an AI browser to compare trip options while retaining local dates, transfer constraints, displayed fare conditions, sources, and a hard stop before booking?",
+      "intent": "Practical consumer application / decision support",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "demandEvidence": "Current Google Gemini help lists travel booking as an example task; directly opened travel products describe assembling itineraries, checking route timing and fixed-entry constraints, or planning by real opening hours. These public task signals do not measure search demand.",
+      "primarySources": [
+        {
+          "url": "https://support.google.com/gemini/answer/16821166",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Gemini in Chrome help describes travel accommodation tasks, eligibility and rollout requirements, task review, take-over, personal-data sharing and confirmation safeguards. The page says computer use requires age 18+, US availability, eligibility/opt-in, latest Chrome, English device language, personal AI Pro or Ultra plan, personal Google Account, and is not available in Incognito or iPhone; rollout is gradual.",
+          "type": "current primary product documentation"
+        },
+        {
+          "url": "https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "ChatGPT cloud browser uses its own cloud computer; support varies by site/action and may pause for sign-in, user input or confirmation.",
+          "type": "current primary product documentation"
+        }
+      ],
+      "competitorAndProblemPages": [
+        {
+          "url": "https://tripami.io/automatic-itinerary/",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "observed": "Page describes combining flights, stays, reservations and plans from email/messages/AI conversations into one itinerary.",
+          "boundary": "Vendor product claims; page provides no visible publication date and was not independently tested.",
+          "openedBy": "review_20261028"
+        },
+        {
+          "url": "https://mapv.io/",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "observed": "Page describes checking travel time, last entry, fixed bookings, transfer buffers and day-end location; example flags arrival after a fixed ticket time.",
+          "boundary": "Vendor product claims and illustrative example; no publication date or independent performance test.",
+          "openedBy": "review_20261028"
+        },
+        {
+          "url": "https://tourista.cc/",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "observed": "Page describes date-based daily itineraries organized around opening hours and walking distances.",
+          "boundary": "Vendor product claims; no publication date or independent performance test.",
+          "openedBy": "review_20261028"
+        }
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "ai-browser-research-source-verification",
+          "browser-agent-shopping-cart-verification",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Trip-specific normalization of airport-local dates, transfer constraints including airport changes, baggage/fare class, displayed cancellation text as observation, source freshness, and pre-booking stop. It is not a generic source-verification guide or a booking tutorial."
+      },
+      "originalGain": "A trip comparison worksheet that keeps each value tied to provider URL and observation time, flags hidden overnight/airport-change constraints and unknown totals, and separates public planning from reservation/payment. Cancellation wording is recorded as supplier display, not legal entitlement.",
+      "feasibility": "Documentation-based guidance with a clearly hypothetical itinerary example. No live travel-site task, booking, price check, product comparison, or travel availability test is claimed.",
+      "addedGuardrails": [
+        "Do not claim Google auto-browse is available to all users or regions.",
+        "Qualify current Google age/region/language/account/browser and gradual-rollout requirements.",
+        "Treat supplier refund/cancellation text as observed display, not legal advice.",
+        "No booking, purchase, credential submission, or actual itinerary research is claimed."
+      ],
+      "researchNotes": "AI Agents for Travel body states Updated 2026-10-21; an earlier search label showed 2026-10-27 and is not used as page publication date. TechRadar exact page date was not independently confirmed in the final source audit; no date-dependent claim relies on it."
+    },
+    {
+      "slug": "ai-browser-expense-report-reconciliation",
+      "targetQuestion": "How do I reconcile AI-drafted expense lines against receipts and transaction evidence before a human submits the report?",
+      "intent": "Practical finance workflow / document reconciliation",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "demandEvidence": "Current Microsoft Expense Agent documentation and directly opened Payhawk, Continia, and Simular product/help pages discuss receipt extraction, matching, ambiguity, or review. Microsoft also provides a dummy-data expense sample reviewed independently. These pages establish task/problem evidence, not web-search demand or comparative results.",
+      "primarySources": [
+        {
+          "url": "https://learn.microsoft.com/en-us/dynamics365/business-central/expense-management/expense-agent",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Microsoft describes receipt intake, draft fields, itemization, issue handling, and mandatory user review before report submission; page is marked prerelease/production-ready preview.",
+          "type": "current primary product documentation"
+        },
+        {
+          "url": "https://github.com/microsoft/mcp-interactiveUI-samples/tree/main/mcp-apps/expense-submission/node",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Sample data spans 2026-02-05 through 2026-03-14; exact README publication date not stated.",
+          "fact": "Microsoft sample README (independently reviewed by reviewer_20261028) describes 15 dummy transactions and PDF receipts, with draft creation, attachment, retrieval, and a distinct final submit action.",
+          "type": "primary vendor sample",
+          "openedBy": "review_20261028 (raw sample README)"
+        }
+      ],
+      "competitorAndProblemPages": [
+        {
+          "url": "https://payhawk.com/help/online-invoice-fetching",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "observed": "Help describes matching documents to expenses using amount and date, alerts for retrieval failure, and owner-authorized retrieval.",
+          "boundary": "Vendor-specific documented flow, not an independent result."
+        },
+        {
+          "url": "https://docs.continia.com/en-us/continia-expense-management/business-functionality/continia-expense-app-and-portal/using-the-expense-agent-in-the-expense-app-and-portal/",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "observed": "Documentation says to review/correct AI data and submit through the normal expense workflow.",
+          "boundary": "Product documentation, not comparative testing."
+        },
+        {
+          "url": "https://www.simular.ai/solutions/automate-expense-reports",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "observed": "Vendor page describes matching expenses by amount/date/merchant and surfacing missing receipts or ambiguous charges.",
+          "boundary": "Vendor claims, not independently tested; no publication date visible.",
+          "openedBy": "review_20261028"
+        }
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-structured-data-extraction",
+          "browser-agent-download-files",
+          "browser-agent-form-submission"
+        ],
+        "distinctiveCoverage": "Reconciliation ledger connecting each draft row to a receipt and card transaction, explicit currency/date/amount/duplicate/itemized-total exception states, and a stop before submission. This is not OCR or form-filling repackaged under a vertical label."
+      },
+      "originalGain": "A source-to-line reconciliation table and exception protocol covering currency mismatches, identical-but-legitimate duplicate candidates, itemized sums, partial refunds and missing evidence; uncertainty remains explicit. No tax, reimbursement, or accounting-policy decision is made.",
+      "feasibility": "Document-based explanation with hypothetical amounts; Microsoft provides dummy records for safe learning. No private receipts or expense account were accessed and no report was submitted.",
+      "addedGuardrails": [
+        "No tax, legal, reimbursement or accounting advice.",
+        "No private receipt upload or use of employee data in an unapproved service.",
+        "No claim that report submission or manager approval occurred.",
+        "Separate agent extraction, reviewer correction, submission and approval states."
+      ],
+      "researchNotes": "Microsoft Expense Agent is labeled prerelease/production-ready preview; do not imply general availability. Review of the raw Microsoft sample README was performed by reviewer_20261028, not the executor. No private account or real receipt was used."
+    },
+    {
+      "slug": "ai-browser-job-application-status",
+      "targetQuestion": "What evidence distinguishes a browser agent's saved draft, submitted application, and employer-confirmed receipt?",
+      "intent": "Practical job-seeker application tracking / state verification",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "demandEvidence": "Current employer and job-seeker help pages discuss automated applications and status ownership; separate guides and product pages address prepare/review/submit flow. These are public task/problem signals, not measured search volume or outcomes.",
+      "primarySources": [
+        {
+          "url": "https://support.google.com/gemini/answer/16821166",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Google lists job-market research among task examples, but does not say this means automated applications are a supported task. The page warns that Gemini may share personal info with sites and can make mistakes.",
+          "type": "current primary product documentation"
+        },
+        {
+          "url": "https://jobseekers.workable.com/hc/en-us/articles/360042101733-How-can-I-track-the-status-of-my-application",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Updated 2026-10-27",
+          "fact": "Workable job-seeker help directs applicants to contact the hiring company for status and says Workable only handles technical application issues.",
+          "type": "primary task/status documentation"
+        },
+        {
+          "url": "https://help.workable.com/hc/en-us/articles/35293126257815-Managing-AI-assisted-and-automated-job-applications",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Workable employer help describes AI application tools that fill forms, submit across jobs, and may use intermediary addresses that separate candidate communication.",
+          "type": "primary platform documentation"
+        }
+      ],
+      "competitorAndProblemPages": [
+        {
+          "url": "https://asktherecruiter.com/blog/ai-agent-to-apply-for-jobs/",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Published about 4 weeks earlier in search results",
+          "observed": "Recommends distinguish agent versus chatbot, prepare/review, map fields to source, submit and verify, and use a mock form.",
+          "boundary": "Guidance page, not independently verified platform policy."
+        },
+        {
+          "url": "https://www.hrlens.io/articles/ai-auto-apply-bots-for-jobs",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Search result published about 2 months earlier",
+          "observed": "Reports claimed bot testing where some tools filled forms but did not complete submission, and warns of platform rules and fake postings.",
+          "boundary": "Publisher-reported testing and claims only; figures not adopted or independently reproduced."
+        },
+        {
+          "url": "https://hiair.ai/auto-apply",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Search result crawled last month",
+          "observed": "Vendor says it records the role, resume version and answers for submitted applications.",
+          "boundary": "Vendor feature claim, not BrowserHub evaluation."
+        }
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-form-submission",
+          "browser-agent-structured-data-extraction",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Job-specific status record keyed by employer/requisition ID and exact resume/answer revision; explicit draft/saved/submit/confirmation states and employer-side evidence. This does not teach bulk application, form filling, or general status tracking."
+      },
+      "originalGain": "Evidence model that prevents a UI fill or agent completion sentence from being counted as an employer-received application; demonstrates timeout reconciliation and duplicate-submission avoidance with a hypothetical role ID and material version.",
+      "feasibility": "Documentation-based process; illustrative data is fictional. No real resume, application portal, job account, submission, recruiter outreach, or result was used.",
+      "addedGuardrails": [
+        "Do not bypass employer/platform rules, CAPTCHAs, access limits or login controls.",
+        "Do not promise interviews, hiring outcomes or ATS acceptance.",
+        "No actual job submission or outreach.",
+        "Google job-market research feature is not described as supported job application automation."
+      ]
+    },
+    {
+      "slug": "browser-agent-drag-and-drop",
+      "targetQuestion": "Why can Playwright dragTo finish without changing a sortable UI, and how can the tester verify the actual drop state?",
+      "intent": "Developer troubleshooting / interaction-model diagnosis",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "demandEvidence": "Current Playwright documentation, a Chromium/HTML5-sortable issue, a live Stack Overflow question and an independent testing guide discuss drag behavior and failures. This establishes an existing developer problem, not query volume.",
+      "primarySources": [
+        {
+          "url": "https://playwright.dev/docs/api/class-locator#locator-drag-to",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Current Locator API describes dragTo and supports position/step options; action completion does not assert an application-specific reorder.",
+          "type": "current primary API documentation"
+        },
+        {
+          "url": "https://dndkit.com/",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "dnd-kit is a separate drag-and-drop toolkit; its configured sensor model must be considered rather than assuming native HTML events.",
+          "type": "primary library documentation"
+        }
+      ],
+      "competitorAndProblemPages": [
+        {
+          "url": "https://github.com/microsoft/playwright/issues/38796",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Issue opened 2026-01-15",
+          "observed": "One reporter describes html5sortable drag behavior with Playwright 1.57.0 and Chromium and a different outcome with 1.56.1; issue closed as not planned. A maintainer reproduced the behavior on 1.57 but noted that master/next had already worked again; issue closed as not planned.",
+          "boundary": "One dated reproduction, not evidence of a general Playwright regression or universal downgrade fix."
+        },
+        {
+          "url": "https://www.browserstack.com/guide/playwright-drag-and-drop",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Search result published about 10 months earlier",
+          "observed": "Distinguishes native HTML drag from pointer-driven framework widgets and discusses timing/reliability.",
+          "boundary": "Third-party testing guidance, not all-library compatibility proof."
+        },
+        {
+          "url": "https://stackoverflow.com/questions/79547581/why-arent-these-elements-dragging-and-dropping-as-expected",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Question asked 2025-04-01; edited 2025-04-05 (page dates checked directly).",
+          "observed": "Question describes sorting a list with Playwright and an answer using movement/location-aware interaction rather than assuming a simple drop.",
+          "boundary": "Individual question/answer, not authoritative API documentation. Do not infer recency from search snippet."
+        }
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-date-picker",
+          "browser-agent-debugging-traces",
+          "browser-agent-accessibility-snapshot-vs-screenshot"
+        ],
+        "distinctiveCoverage": "Classify native HTML DnD versus pointer/sensor versus canvas; select the matching Playwright gesture and assert destination/order. The synthetic fixture covers only one native HTML5 list, not dnd-kit, JS sortables, canvas, or touch.",
+        "ownerOverlapAssessment": "A distinct interaction intent, not a synonym of picker, hover, scrolling, or general trace debugging."
+      },
+      "originalGain": "A failure decision path tied to event model, explicit final state and a local native HTML fixture. It explains why a resolved action promise is not evidence that the app accepted a drop.",
+      "feasibility": "Executed once against an isolated synthetic loopback fixture. No real site, production sortable, AI model, or arbitrary widget was tested.",
+      "addedGuardrails": [
+        "No broad claim that a specific Playwright version or browser is broken.",
+        "Do not claim the native HTML fixture verifies JS sortable/canvas/touch interactions.",
+        "Use final-order assertion rather than action completion only."
+      ]
+    },
+    {
+      "slug": "browser-agent-request-mocking-har",
+      "targetQuestion": "How do I keep a browser-agent UI test deterministic and fail closed when using Playwright route mocks or HAR replay?",
+      "intent": "Developer testing / controlled network fixtures",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "demandEvidence": "Current Playwright route, mock, and network documentation plus a historical matching issue, a recent missing-request guide, and a separately opened backend HAR guide discuss matching and fallback boundaries. These are problem signals, not measured volume.",
+      "primarySources": [
+        {
+          "url": "https://playwright.dev/docs/mock",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Playwright mock docs cover routing and HAR; routeFromHAR API docs specify update:true network recording and context-close write, URL/method/POST-body matching, most-matching-headers selection, URL-filter scope, notFound abort default and fallback behavior. Service-worker handling is separately documented.",
+          "type": "current primary API documentation"
+        },
+        {
+          "url": "https://playwright.dev/docs/network",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Playwright documents route handling and service-worker interception boundaries; requests handled by service workers are not intercepted as ordinary page routes/HAR requests.",
+          "type": "current primary API documentation"
+        },
+        {
+          "url": "https://playwright.dev/docs/api/class-browsercontext#browser-context-route-from-har",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "fact": "Current BrowserContext API reference for HAR routing, matching/filtering, update and notFound options.",
+          "type": "current primary API documentation"
+        }
+      ],
+      "competitorAndProblemPages": [
+        {
+          "url": "https://github.com/microsoft/playwright/issues/28167",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "Issue from Playwright v1.39 / macOS 14.1 era",
+          "observed": "Issue report discusses recording/replaying state-changing POST requests differently across browser engines.",
+          "boundary": "Historical issue report; not a claim about the current release."
+        },
+        {
+          "url": "https://qaskills.sh/blog/playwright-har-replay-not-found-fallback",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": "2026-07-13",
+          "observed": "Explains missing matches, POST-body changes, route scope, service workers and fail-closed vs fallback tradeoffs.",
+          "boundary": "Third-party guide; current primary API docs control."
+        },
+        {
+          "url": "https://danielshawellis.github.io/playwright-backend-mocks/guide/har",
+          "observedOn": "2026-10-28",
+          "sourceDateDisplayed": null,
+          "observed": "Backend mocking guide distinguishes replay from update/recording and notes that replay hits do not call upstream.",
+          "boundary": "Third-party Playwright-style Node backend-mocking documentation, not the BrowserContext API; no publication date visible."
+        }
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-debugging-traces",
+          "browser-agent-form-submission",
+          "playwright-cli-vs-mcp"
+        ],
+        "distinctiveCoverage": "Test-data isolation and fail-closed behavior for route mocks/HAR, including strict request matching and secret-safe recordings. This is network fixture design, not trace viewing or live connection diagnosis.",
+        "ownerOverlapAssessment": "Independent developer problem. The included fixture uses route.fulfill only; it does not demonstrate HAR capture/replay."
+      },
+      "originalGain": "A practical boundary comparison: route.fulfill supplies a synthetic reply, while upstream/fallback paths can contact a server; default missing-match behavior, service-worker bypass, context scope and HAR credential review are explicit.",
+      "feasibility": "Local synthetic route was executed once as part of the combined fixture. HAR recording/replay itself remains documentation-only and untested.",
+      "addedGuardrails": [
+        "Do not say route.fulfill tests HAR replay.",
+        "Do not say all external or browser background requests are blocked; only configured page requests in the fresh context were guarded, and browser background networking was not audited.",
+        "Do not record or publish credentials, cookies, tokens, personal data, or private HAR contents.",
+        "HAR update/close behavior and matching details checked in official docs; issue #28167 is historical only."
+      ],
+      "researchNotes": "The Microsoft Learn API-mocking sample URL initially considered returned 404 and was removed; it is not counted as opened evidence. The third task/problem page is the directly opened Playwright Backend Mocks HAR guide. Its Node backendMocks API is distinct from browser-context routeFromHAR."
+    }
+  ],
+  "execution": {
+    "fixture": {
+      "path": "public/templates/browser-agent-interaction-fixtures.mjs",
+      "sha256": "3328e5312cc9eef22d13a93e309bb46d0fb1b46d45bf978ac9248003ea5f8669",
+      "executorPerformed": false,
+      "rootPerformed": true,
+      "attemptCount": 1,
+      "startedAt": "2026-10-28T01:33:39.914116Z",
+      "finishedAt": "2026-10-28T01:33:41.833700Z",
+      "exitCode": 0,
+      "stderrEmpty": true,
+      "temporaryDirectoryCleaned": true,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.0-alpha-1790635538000",
+      "browserVersion": "155.0.8059.85",
+      "observed": {
+        "result": "local_synthetic_fixture_passed",
+        "nativeHtml5DragOrder": [
+          "beta",
+          "alpha"
+        ],
+        "loopbackRoute": "synthetic JSON returned through context-scoped fulfill route",
+        "externalPageRequestsAllowed": false,
+        "accounts": false,
+        "realSites": false,
+        "HARCaptureOrReplay": false,
+        "jsSortableOrCanvas": false,
+        "LLM": false,
+        "browserBackgroundNetworkingAudited": false
+      },
+      "scope": "Exact bytes executed once by root. The fixture validates one native HTML5 list state and one loopback API mock only. It does not establish HAR behavior, generic widget support, or a blanket network guarantee."
+    },
+    "noTrafficMeasurement": "No new analytics or private dashboard data was available in this content execution. Site visits, impressions, clicks, search volume, and mature cohort outcomes remain null; absence of access is not zero and is not a failed cohort."
+  },
+  "counting": {
+    "newTopicCount": 5,
+    "completeEditionCount": 10,
+    "oldEnhancements": [],
+    "translationsCountAsOneTopic": true,
+    "acceptedSlugs": [
+      "ai-browser-trip-planning",
+      "ai-browser-expense-report-reconciliation",
+      "ai-browser-job-application-status",
+      "browser-agent-drag-and-drop",
+      "browser-agent-request-mocking-har"
+    ]
+  },
+  "modelRoles": {
+    "executor": {
+      "role": "executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "selectionSource": "explicit parent delegation/role default",
+      "agent": "content_execution_20261028"
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "agent": "review_20261028"
+    },
+    "tokenUsage": null,
+    "policy": "Actual model identifiers and token usage were not reported. No silent fallback or invented model use."
+  },
+  "skills": [
+    {
+      "name": "content-strategy",
+      "version": "2.1.3",
+      "path": "/Users/myd/.codex/skills/content-strategy/SKILL.md",
+      "status": "read; applied to topical intent, ownership and unique-gain gates"
+    },
+    {
+      "name": "humanizer",
+      "version": "3.1.0",
+      "path": "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "status": "read; EN copy edited to remove staging/filler while retaining factual boundaries"
+    },
+    {
+      "name": "humanizer-zh",
+      "path": "/Users/myd/.codex/skills/humanizer-zh/SKILL.md",
+      "status": "read; ZH copy edited for natural phrasing and repetition while retaining technical qualifications"
+    }
+  ],
+  "editorial": {
+    "format": "Five complete EN/ZH guides with direct answer, five topic-specific sections, worked or clearly hypothetical examples, at least three external links, three FAQs and natural series links.",
+    "sourceBoundary": "Official current documentation is distinguished from vendor claims, publisher-reported experiences, dated issues, reviewer-opened pages and the exact root-executed synthetic fixture. No inaccessible or 404 page is represented as read evidence. No prose or test result was attributed to BrowserHub without evidence.",
+    "language": "English and Simplified Chinese complete editions only.",
+    "pricesAndProductFacts": "No product prices, general catalogue claims, EasyBR capabilities, or existing verified-product records changed. No general claim that AI browsers are available to all users."
+  },
+  "publication": {
+    "rootFormalGraphRun": false,
+    "independentFinalReview": "pending",
+    "fullCi": "pending",
+    "pushOrDeploy": false,
+    "status": "Prepared content only; not submitted for publication in this record. Root owns independent review and formal publication workflow."
+  }
+}

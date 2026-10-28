@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-28",
+  "cycleId": "content-2026-10-28",
+  "project": "BrowserHub",
+  "status": "content_prepared_for_independent_review; publication_is_separate",
+  "primaryDirection": "AI browser applications and browser-agent developer troubleshooting.",
+  "selection": {
+    "dailyTarget": 5,
+    "completeLocales": [
+      "en",
+      "zh-cn"
+    ],
+    "translationsCountAsSeparateTopics": false,
+    "oldEnhancements": 0,
+    "priorPublishedTopics": 64,
+    "priorKeywordRows": 130,
+    "noExistingOwnersRefreshed": true,
+    "method": "Current public search plus at least three directly opened task/problem pages per candidate, with observed page dates distinguished from search-snippet labels. Primary product/API docs and nearest ownership compared against all existing guide/keyword records; reviewer-opened evidence is attributed. Search volumes, rankings, traffic and BrowserHub queries remain null.",
+    "record": "docs/seo/research-ai-applications-2026-10-28.json",
+    "limitations": "Trip, expense and other competitor pages may be vendor claims without independent performance evidence; historical issues are bounded examples. A 404 and inaccessible pages are excluded. All consumer examples are hypothetical; no travel booking, expense submission, job application submission or outreach occurred."
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-trip-planning",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "intent": "Trip-specific option comparison preserving local date/time, transfer constraints, displayed fare/cancellation observations and source freshness; stop before booking.",
+      "addedValue": "Constraint table and evidence timestamp per option, with unknown totals and airport/timezone pitfalls. Cancellation text is supplier display, not legal entitlement.",
+      "nearestOwners": [
+        "ai-browser-research-source-verification",
+        "browser-agent-shopping-cart-verification",
+        "browser-agent-human-takeover"
+      ],
+      "exactOwnerFound": false
+    },
+    {
+      "slug": "ai-browser-expense-report-reconciliation",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "intent": "Reconcile each expense draft line to receipt and transaction evidence before human submission.",
+      "addedValue": "Source-to-line reconciliation with two café draft rows linked to one receipt, item arithmetic, duplicate-candidate state and a separate EUR/USD mismatch; no tax/accounting-policy decision.",
+      "nearestOwners": [
+        "browser-agent-structured-data-extraction",
+        "browser-agent-download-files",
+        "browser-agent-form-submission"
+      ],
+      "exactOwnerFound": false
+    },
+    {
+      "slug": "ai-browser-job-application-status",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "intent": "Distinguish prepared, draft-saved, submitted and employer-confirmed job applications with evidence by requisition and material version.",
+      "addedValue": "Employer/requisition and resume version plus append-only raw status label/source/time, separate normalized state and confirmation evidence; no submission/outreach.",
+      "nearestOwners": [
+        "browser-agent-form-submission",
+        "browser-agent-structured-data-extraction",
+        "browser-agent-human-takeover"
+      ],
+      "exactOwnerFound": false
+    },
+    {
+      "slug": "browser-agent-drag-and-drop",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "intent": "Diagnose Playwright drag-and-drop by widget event model and assert the actual resulting order or destination.",
+      "addedValue": "Separate native HTML DnD, pointer/sensor widgets and canvas; local fixture demonstrates only native HTML5 state change.",
+      "nearestOwners": [
+        "browser-agent-date-picker",
+        "browser-agent-debugging-traces",
+        "browser-agent-accessibility-snapshot-vs-screenshot"
+      ],
+      "exactOwnerFound": false
+    },
+    {
+      "slug": "browser-agent-request-mocking-har",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "intent": "Choose direct Playwright route mocks or HAR replay, safely handle unmatched requests and avoid storing secrets.",
+      "addedValue": "Distinguishes route.fulfill from HAR replay/upstream fallback; fail-closed behavior, matching, service-worker boundary and secret review. Local fixture tests route.fulfill only.",
+      "nearestOwners": [
+        "browser-agent-debugging-traces",
+        "browser-agent-form-submission",
+        "playwright-cli-vs-mcp"
+      ],
+      "exactOwnerFound": false
+    }
+  ],
+  "sourceBoundary": "Primary docs, directly opened vendor/problem pages, reviewer-opened sources, exact root-run fixture and fictional worked consumer examples are clearly separated. A 404 sample and unavailable pages are excluded from claims.",
+  "fixtureExecution": {
+    "executorPerformed": false,
+    "rootPerformed": true,
+    "artifact": "public/templates/browser-agent-interaction-fixtures.mjs",
+    "record": "docs/seo/research-ai-applications-2026-10-28.json#/execution/fixture",
+    "sha256": "3328e5312cc9eef22d13a93e309bb46d0fb1b46d45bf978ac9248003ea5f8669",
+    "result": "One exact-byte local synthetic run passed: native HTML5 order beta,alpha plus loopback context-route synthetic JSON. HAR capture/replay, JS sortable/canvas, real sites/accounts, LLM and browser background traffic were not tested/audited."
+  },
+  "metrics": {
+    "searchVolume": null,
+    "keywordDifficulty": null,
+    "gscQueries": null,
+    "organicClicks": null,
+    "organicSessions": null,
+    "ranking": null,
+    "trafficUplift": null,
+    "freshAnalyticsAccess": false,
+    "note": "Unknown or unavailable is null, not zero; no new measurement or failed-cohort inference."
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high"
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    },
+    "tokenUsage": null
+  },
+  "publication": {
+    "formalWorkflow": false,
+    "independentReview": "pending",
+    "ci": "pending",
+    "pushDeployAndLiveVerification": false,
+    "status": "Prepared article and metadata edits only. Root controls review, CI and the formal publication workflow."
+  }
+}

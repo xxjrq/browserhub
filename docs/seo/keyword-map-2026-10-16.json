@@ -4795,6 +4795,176 @@
         "28day": "2026-11-24"
       },
       "dateOnlyReminder": "Use exact successful publication receipt time +7/+14/+28days in delivery record, then closed comparable windows. Calendar date alone does not establish maturity."
+    },
+    {
+      "id": "guides:ai-browser-trip-planning",
+      "primaryKeyword": {
+        "en": "AI browser trip planning",
+        "zh-CN": "AI 浏览器旅行规划"
+      },
+      "intent": "informational / decision support",
+      "cluster": "ai-browser-applications",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-trip-planning/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-trip-planning/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact owner found in current published topics; nearest scopes are documented in the dated source record.",
+      "action": "Publish only after independent source/content review and formal workflow receipt; later measure with dated webmaster data.",
+      "demandEvidence": "Qualitative current task/problem pages only; no query volume or traffic measurement.",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "observedOn": "2026-10-28",
+      "originalGain": "Compare trip candidates with local date/time, transfer, displayed fare conditions, source and observation time, stopping before booking.",
+      "nearestExistingOwners": [
+        "ai-browser-research-source-verification",
+        "browser-agent-shopping-cart-verification",
+        "browser-agent-human-takeover"
+      ]
+    },
+    {
+      "id": "guides:ai-browser-expense-report-reconciliation",
+      "primaryKeyword": {
+        "en": "AI expense report reconciliation",
+        "zh-CN": "AI 费用报销对账"
+      },
+      "intent": "informational / document reconciliation",
+      "cluster": "ai-browser-applications",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-expense-report-reconciliation/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-expense-report-reconciliation/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact owner found in current published topics; nearest scopes are documented in the dated source record.",
+      "action": "Publish only after independent source/content review and formal workflow receipt; later measure with dated webmaster data.",
+      "demandEvidence": "Qualitative current task/problem pages only; no query volume or traffic measurement.",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "observedOn": "2026-10-28",
+      "originalGain": "Reconcile every draft line to receipt and card evidence; flag duplicate candidates and currency/total mismatches before a person submits.",
+      "nearestExistingOwners": [
+        "browser-agent-structured-data-extraction",
+        "browser-agent-download-files",
+        "browser-agent-form-submission"
+      ]
+    },
+    {
+      "id": "guides:ai-browser-job-application-status",
+      "primaryKeyword": {
+        "en": "AI job application status tracking",
+        "zh-CN": "AI 求职申请状态追踪"
+      },
+      "intent": "informational / evidence tracking",
+      "cluster": "ai-browser-applications",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-job-application-status/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-job-application-status/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact owner found in current published topics; nearest scopes are documented in the dated source record.",
+      "action": "Publish only after independent source/content review and formal workflow receipt; later measure with dated webmaster data.",
+      "demandEvidence": "Qualitative current task/problem pages only; no query volume or traffic measurement.",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "observedOn": "2026-10-28",
+      "originalGain": "Track employer/requisition and resume version with raw status label, source, observed time, normalized state and employer confirmation evidence.",
+      "nearestExistingOwners": [
+        "browser-agent-form-submission",
+        "browser-agent-structured-data-extraction",
+        "browser-agent-human-takeover"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-drag-and-drop",
+      "primaryKeyword": {
+        "en": "Playwright drag and drop not working",
+        "zh-CN": "Playwright 拖放不生效"
+      },
+      "intent": "informational / troubleshooting",
+      "cluster": "playwright-interaction-testing",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-drag-and-drop/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-drag-and-drop/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact owner found in current published topics; nearest scopes are documented in the dated source record.",
+      "action": "Publish only after independent source/content review and formal workflow receipt; later measure with dated webmaster data.",
+      "demandEvidence": "Qualitative current task/problem pages only; no query volume or traffic measurement.",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "observedOn": "2026-10-28",
+      "originalGain": "Diagnose native HTML drag, pointer-sensor widget or canvas interaction; assert destination state rather than action completion.",
+      "nearestExistingOwners": [
+        "browser-agent-date-picker",
+        "browser-agent-debugging-traces",
+        "browser-agent-accessibility-snapshot-vs-screenshot"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-request-mocking-har",
+      "primaryKeyword": {
+        "en": "Playwright HAR replay unmatched requests",
+        "zh-CN": "Playwright HAR 回放请求不匹配"
+      },
+      "intent": "informational / test fixture design",
+      "cluster": "playwright-network-testing",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-request-mocking-har/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-request-mocking-har/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact owner found in current published topics; nearest scopes are documented in the dated source record.",
+      "action": "Publish only after independent source/content review and formal workflow receipt; later measure with dated webmaster data.",
+      "demandEvidence": "Qualitative current task/problem pages only; no query volume or traffic measurement.",
+      "sourceRecord": "docs/seo/research-ai-applications-2026-10-28.json",
+      "observedOn": "2026-10-28",
+      "originalGain": "Choose direct route mock or HAR replay; scope URL filtering and fallback, preserve secret-safe data, and fail closed by default.",
+      "nearestExistingOwners": [
+        "browser-agent-debugging-traces",
+        "browser-agent-form-submission",
+        "playwright-cli-vs-mcp"
+      ]
     }
   ],
   "futureCandidates": [
@@ -4858,20 +5028,20 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-10-27",
-    "cycleId": "content-2026-10-27",
+    "date": "2026-10-28",
+    "cycleId": "content-2026-10-28",
     "newTopics": [
-      "browser-agent-clipboard-read-write",
-      "playwright-geolocation-permission-tests",
-      "playwright-javascript-dialog-hangs",
-      "browser-agent-cookie-consent-choice",
-      "browser-agent-shopping-cart-verification"
+      "ai-browser-trip-planning",
+      "ai-browser-expense-report-reconciliation",
+      "ai-browser-job-application-status",
+      "browser-agent-drag-and-drop",
+      "browser-agent-request-mocking-har"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
-    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-27.json when completed",
-    "notClaimed": "Publication is not traffic growth. Measuredquery/volume/rank/session remain unknown."
+    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-28.json when completed",
+    "notClaimed": "Publication is not traffic growth. Measured query/volume/rank/session remain unknown; current five editions are prepared for review only."
   },
   "latestEditorialEnhancement": {
     "date": "2026-10-25",
