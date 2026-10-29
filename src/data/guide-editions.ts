@@ -1,5 +1,6 @@
 import { aiTasksTranslations27 } from "./ai-tasks-2026-10-27";
 import { aiApplicationsTranslations28 } from "./ai-applications-2026-10-28";
+import { aiCycleTranslations29 } from "./ai-cycle-2026-10-29";
 import { aiUsageTranslations26 } from "./ai-usage-2026-10-26";
 import { aiReadinessTranslations26 } from "./ai-readiness-2026-10-26";
 import { aiChoicesTranslations25 } from "./ai-choices-2026-10-25";
@@ -26,6 +27,7 @@ import { dailyGuideTranslations } from "./daily-guides-2026-10-20";
 
 /** Complete editions only; untranslated legacy URLs retain labelled English. */
 export const guideEditions = {
+	...aiCycleTranslations29,
 	...aiApplicationsTranslations28,
 	...aiTasksTranslations27,
 	...aiUsageTranslations26,

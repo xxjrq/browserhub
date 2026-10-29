@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-29",
+  "status": "topic_research_and_content_execution",
+  "cycleId": "content-2026-10-29",
+  "project": "BrowserHub",
+  "researchMethod": {
+    "livePublicSearch": true,
+    "officialSourcesOpened": true,
+    "competitorOrProblemPagesOpenedPerCandidate": 3,
+    "observedOn": "2026-10-29",
+    "searchVolumes": null,
+    "siteTraffic": null,
+    "rankings": null,
+    "gscQueries": null,
+    "notes": "Search-result excerpts were used to discover pages, then the selected pages were opened directly. Public product claims and individual user reports are qualitative evidence only. A forum report does not establish prevalence or a product defect. No failed source is represented as opened."
+  },
+  "existingOwnerAudit": {
+    "source": "docs/seo/keyword-map-2026-10-16.json rows plus src/data/guide-series.ts and current guide source modules",
+    "publishedAndPreparedOwnersChecked": true,
+    "exactOwnersFound": [],
+    "excludedNearDuplicates": [
+      {
+        "candidate": "new-tab and popup handling",
+        "owner": "browser-agent-tabs-popups",
+        "reason": "Existing complete task guide covers page events and popup handling."
+      },
+      {
+        "candidate": "PDF summarization and source cross-check",
+        "owner": "ai-browser-pdf-summary / ai-browser-research-source-verification",
+        "reason": "Existing guides cover file route, extraction, page references and evidence checking."
+      },
+      {
+        "candidate": "cross-tab comparison and structured data extraction",
+        "owner": "ai-browser-research-source-verification / browser-agent-structured-data-extraction",
+        "reason": "Existing guides own claims/source verification and schema extraction."
+      }
+    ],
+    "warning": "The prior-day delivery state is determined from its formal delivery record. The five selected intents do not duplicate the audited existing owners. Publication is controlled by the root and the existing paused workflow."
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-meeting-prep-brief",
+      "primaryKeyword": {
+        "en": "AI browser meeting preparation brief",
+        "zh-CN": "AI 浏览器会前准备简报"
+      },
+      "intent": "Prepare a source-linked meeting brief from an authorized calendar event and its related email, notes and documents; expose missing context and produce a draft agenda/questions/notes template without creating or sending an invitation.",
+      "exactOwnerFound": false,
+      "nearestExistingOwners": [
+        "ai-browser-research-source-verification",
+        "browser-agent-structured-data-extraction",
+        "browser-agent-form-submission"
+      ],
+      "addedValue": "A decision-ready brief with event identity, attendee evidence, source timestamp, confirmed context, unresolved questions and a no-send stopping point. Product documentation warns that thin meeting context can produce generic summaries.",
+      "sources": [
+        {
+          "title": "Microsoft Support: Prepare for your meeting with Copilot",
+          "url": "https://support.microsoft.com/en-us/outlook/prepare-for-your-meeting-with-copilot",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official product help",
+          "opened": true,
+          "evidence": "Meeting insights draw on related content; the page says absence of shared docs, prior email or chat can yield generic output and advises checking it."
+        },
+        {
+          "title": "Zoom Support: Generating meeting agendas with AI",
+          "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0081706",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official product help",
+          "opened": true,
+          "evidence": "Meeting hosts can use previous documents or meetings as resources or generate an agenda from the meeting title."
+        },
+        {
+          "title": "Claude Academy: Prepare and plan from your calendar",
+          "url": "https://academy.claude.com/use-cases/prepare-and-plan-from-your-calendar",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "vendor workflow example",
+          "opened": true,
+          "evidence": "Describes checking a Google Calendar attendee list, searching Gmail threads and reviewing related docs; this is vendor-published capability guidance, not an independent quality test."
+        },
+        {
+          "title": "ChatGPT use cases: Prepare meeting briefs",
+          "url": "https://learn.chatgpt.com/use-cases/meeting-prep-briefs",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official OpenAI workflow example",
+          "opened": true,
+          "evidence": "Describes gathering approved Calendar, Drive, Slack and Gmail context into objectives, agenda, questions and a notes template."
+        }
+      ]
+    },
+    {
+      "slug": "ai-browser-calendar-timezone-proposal",
+      "primaryKeyword": {
+        "en": "AI browser propose meeting times across time zones",
+        "zh-CN": "AI 浏览器跨时区会议时间建议"
+      },
+      "intent": "Turn a request into candidate meeting instants labelled with date-specific IANA zones, UTC offset and both participants' local date/time; flag DST gaps/folds for human choice and stop before writing to a calendar or sending invites.",
+      "exactOwnerFound": false,
+      "nearestExistingOwners": [
+        "browser-timezone-language-check",
+        "browser-agent-form-submission",
+        "ai-browser-meeting-prep-brief"
+      ],
+      "addedValue": "A concrete fictional cross-zone candidate table readers can recalculate, with DST nonexistent/repeated local times explicitly escalated; this is calendar task planning rather than browser fingerprint or locale diagnosis.",
+      "sources": [
+        {
+          "title": "Google Calendar Help: Use Google Calendar in different time zones",
+          "url": "https://support.google.com/calendar/answer/37064?hl=en",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official product help",
+          "opened": true,
+          "evidence": "Explains local rendering, per-event time zone selection and separate start/end zones; also notes future events may be affected by time-zone rule changes."
+        },
+        {
+          "title": "Google Calendar API: Calendars and events",
+          "url": "https://developers.google.com/workspace/calendar/api/concepts/events-calendars",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "Last updated 2026-09-03 UTC",
+          "type": "official developer documentation",
+          "opened": true,
+          "evidence": "Specifies IANA time-zone identifiers for the Calendar API and explains event/calendar time-zone behavior."
+        },
+        {
+          "title": "Microsoft Learn: Multiple time zones show an incorrect time difference when DST starts and ends",
+          "url": "https://learn.microsoft.com/en-us/troubleshoot/outlook/calendaring/additional-time-zone-shows-one-hour-offset-on-dst",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "2025-06-25 updated",
+          "type": "official troubleshooting article",
+          "opened": true,
+          "evidence": "Documents a one-hour DST display problem in Outlook's multi-zone calendar view and a bounded workaround."
+        },
+        {
+          "title": "Microsoft Learn: How time zone normalization works in Outlook",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365-apps/outlook/user-interface/time-zone-normalization",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "2025-05-07 updated",
+          "type": "official technical explanation",
+          "opened": true,
+          "evidence": "Explains stored UTC plus time-zone and DST rule normalization and local display conversion."
+        },
+        {
+          "title": "Reddit r/GoogleCalendar: Timezones for Calendar events not working?",
+          "url": "https://www.reddit.com/r/GoogleCalendar/comments/1t1s0s0/timezones-for-calendar-events-not-working/",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "6mo ago",
+          "type": "user-reported question",
+          "opened": true,
+          "evidence": "A user asks about secondary time zone display versus selecting a zone for an individual event. It indicates a question, not prevalence or root cause."
+        },
+        {
+          "title": "IANA: Time Zones and the Time Zone Database",
+          "url": "https://www.iana.org/time-zones",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "2026f released 2026-10-27",
+          "type": "official time-zone data authority",
+          "opened": true,
+          "evidence": "The database is periodically updated to reflect political changes to boundaries, UTC offsets and daylight-saving rules; it identifies 2026f as the latest release on the observed date."
+        },
+        {
+          "title": "MDN: Temporal.ZonedDateTime",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "technical reference",
+          "opened": true,
+          "evidence": "Explains zoned date-time behavior and the disambiguation of nonexistent local times (gaps) and repeated local times (folds); page marks Temporal as limited availability."
+        }
+      ]
+    },
+    {
+      "slug": "ai-browser-tab-access-permissions",
+      "primaryKeyword": {
+        "en": "AI browser cannot access tab permissions",
+        "zh-CN": "AI 浏览器无法读取标签页权限排查"
+      },
+      "intent": "Diagnose which browser surface the assistant can see and why: separate built-in browser from extension-connected profile, current tab from named tabs, site permissions from extension access, profile mismatch and local file URL access; grant the smallest required permission and verify the intended page is in context.",
+      "exactOwnerFound": false,
+      "nearestExistingOwners": [
+        "ai-browser-vs-browser-agent",
+        "browser-agent-prompt-injection",
+        "ai-browser-pdf-summary",
+        "browser-agent-upload-files"
+      ],
+      "addedValue": "A permission-path decision tree that distinguishes app-level website approval, browser extension permissions, tab mentions, profile selection and file URL access. It does not claim settings transfer between products or that permission grants make page instructions safe.",
+      "sources": [
+        {
+          "title": "ChatGPT Learn: Browser extension",
+          "url": "https://learn.chatgpt.com/docs/chrome-extension",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official OpenAI documentation",
+          "opened": true,
+          "evidence": "Describes supported browsers and current setup; distinguishes website permissions, browser extension permissions, profile selection and Chrome file URL access. Availability may depend on rollout and workspace settings."
+        },
+        {
+          "title": "ChatGPT Learn: Browser",
+          "url": "https://learn.chatgpt.com/docs/browser",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official OpenAI documentation",
+          "opened": true,
+          "evidence": "The built-in browser uses separate state; extension is the path for regular browser tabs/session; permission settings and managed controls differ; file uploads are unavailable in the built-in browser."
+        },
+        {
+          "title": "ChatGPT Learn: ChatGPT Work local security",
+          "url": "https://learn.chatgpt.com/docs/enterprise/chatgpt-work-local-security",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official OpenAI documentation",
+          "opened": true,
+          "evidence": "Documents local security and user-controlled access boundaries for ChatGPT Work; scoped to that product."
+        },
+        {
+          "title": "Claude Help Center: Claude in Chrome permissions guide",
+          "url": "https://support.claude.com/en/articles/12902446-claude-in-chrome-permissions-guide",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official vendor help",
+          "opened": true,
+          "evidence": "Documents multiple permission modes and site-specific additional permission prompts for that product only."
+        },
+        {
+          "title": "Google Chrome Help: Ask Gemini in Chrome to complete tasks for you with auto browse",
+          "url": "https://support.google.com/chrome/answer/16821166?hl=en",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official product help",
+          "opened": true,
+          "evidence": "Documents Gemini-specific permissions, access to local browsing state, sign-in approval and stop/take-over controls. Its conditions are product and account specific."
+        },
+        {
+          "title": "Reddit r/ChatGPT: Browser access works on some sites but gets blocked on others",
+          "url": "https://www.reddit.com/r/ChatGPT/comments/1wu850y/browser_access_works_on_some_sites_but_gets/",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "28d ago",
+          "type": "user-reported question",
+          "opened": true,
+          "evidence": "A user reports inconsistent site access and a permission-denied response. Comments are unverified and cannot establish product-wide behavior or a cause."
+        }
+      ]
+    },
+    {
+      "slug": "browser-agent-session-expiry-recovery",
+      "primaryKeyword": {
+        "en": "Playwright browser agent session expired recover safely",
+        "zh-CN": "Playwright 浏览器智能体登录过期后安全恢复"
+      },
+      "intent": "Recognize auth expiry separately from network failure, pause protected work, refresh or complete human-approved sign-in, re-read the page/object and inspect whether a prior write succeeded before resuming. Never blindly replay a non-idempotent action.",
+      "exactOwnerFound": false,
+      "nearestExistingOwners": [
+        "browser-automation-profile-persistence",
+        "browser-use-existing-browser-session",
+        "playwright-mcp-existing-browser",
+        "browser-agent-human-takeover"
+      ],
+      "addedValue": "Recovery is about expired state and uncertain commit outcomes, while existing owners cover stored-profile persistence, attaching to a running browser, or pausing for MFA/human takeover.",
+      "sources": [
+        {
+          "title": "Playwright: Authentication",
+          "url": "https://playwright.dev/docs/auth",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official developer documentation",
+          "opened": true,
+          "evidence": "The authentication guide says to remove stored state after expiry and keep sensitive auth state out of repositories. The state file is not a renewal mechanism; exact included storage fields and opt-in flags are documented separately in BrowserContext.storageState."
+        },
+        {
+          "title": "Playwright MCP: Storage & Authentication",
+          "url": "https://playwright.dev/mcp/tools/storage",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official developer documentation",
+          "opened": true,
+          "evidence": "Documents saving/restoring cookies and local storage through an explicit storage capability; this does not promise token refresh."
+        },
+        {
+          "title": "Reddit r/Playwright: Handle 401s and session expiry in long regression suites",
+          "url": "https://www.reddit.com/r/Playwright/comments/1wxhcti/handle_401s_and_session_expiry_in_long_regression/",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "6d ago",
+          "type": "user-reported question",
+          "opened": true,
+          "evidence": "A recent report describes long suites and short-lived credentials; a comment distinguishes snapshot expiry and refresh-token concurrency and warns against replaying writes. Advice is a community suggestion, not an official fix."
+        },
+        {
+          "title": "Reddit r/Playwright: Auth0 + Playwright storage state does not work for more than 1 test",
+          "url": "https://www.reddit.com/r/Playwright/comments/1fexpzz/auth0_playwright_storage_state_does_not_work_for/",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "2y ago",
+          "type": "user-reported problem",
+          "opened": true,
+          "evidence": "A commenter describes a similar case caused by their own application/test logout redirect race; this is not established as the original poster's root cause."
+        },
+        {
+          "title": "Playwright: BrowserContext storageState API",
+          "url": "https://playwright.dev/docs/api/class-browsercontext#browser-context-storage-state",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official developer API reference",
+          "opened": true,
+          "evidence": "Specifies snapshot option scopes: IndexedDB capture requires indexedDB:true (added v1.51), virtual WebAuthn credentials require credentials:true (added v1.61), and sessionStorage is not in the standard snapshot."
+        }
+      ]
+    },
+    {
+      "slug": "browser-agent-network-interruption-recovery",
+      "primaryKeyword": {
+        "en": "Playwright browser agent recover from network interruption",
+        "zh-CN": "Playwright 浏览器智能体网络中断后恢复"
+      },
+      "intent": "Classify a failed navigation/request versus HTTP error, regain connectivity with bounded retries for safe reads, inspect current page state, and determine write outcome before any retry. Use a synthetic local fixture; never infer that a timeout means the server did nothing.",
+      "exactOwnerFound": false,
+      "nearestExistingOwners": [
+        "browser-agent-debugging-traces",
+        "browser-agent-request-mocking-har",
+        "browser-agent-wait-for-page-ready"
+      ],
+      "addedValue": "Real failure and recovery decision logic with an idempotency boundary; existing HAR page covers deterministic test network stubs rather than recovery from an interrupted real action.",
+      "sources": [
+        {
+          "title": "Playwright: Request API",
+          "url": "https://playwright.dev/docs/api/class-request",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official developer documentation",
+          "opened": true,
+          "evidence": "A failed request emits requestfailed instead of requestfinished and possibly instead of response; 404/503 are still HTTP responses and normally finish as requests. A failure does not establish that the server did not receive or act on the request."
+        },
+        {
+          "title": "Playwright: Network",
+          "url": "https://playwright.dev/docs/network",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": null,
+          "type": "official developer documentation",
+          "opened": true,
+          "evidence": "Documents request routing/interception and service-worker caveats; mock routes are test behavior, not a network-recovery guarantee."
+        },
+        {
+          "title": "Playwright issue #42385: WebKit page.goto hangs with no request issued",
+          "url": "https://github.com/microsoft/playwright/issues/42385",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "2026-08-25 opened; issue marked closed as not planned",
+          "type": "specific project issue report",
+          "opened": true,
+          "evidence": "Reporter describes a long-run WebKit navigation timeout with zero observed requests, while other engines pass. A version-specific report does not establish general network failure behavior."
+        },
+        {
+          "title": "Playwright issue #16749: tests fail in Azure Pipelines with connection reset",
+          "url": "https://github.com/microsoft/playwright/issues/16749",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "2022 opened",
+          "type": "specific project issue report",
+          "opened": true,
+          "evidence": "A user reports CI-specific `ERR_CONNECTION_RESET`/`NET_RESET`; treated as a troubleshooting example, not current product behavior."
+        },
+        {
+          "title": "Reddit r/Playwright: Annoyed by timeout option when getting a URL",
+          "url": "https://www.reddit.com/r/Playwright/comments/16qfstt/annoyed-by-timeout-option-when-getting-a-url/",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "3y ago",
+          "type": "user-reported problem",
+          "opened": true,
+          "evidence": "Shows a navigation exception context, but its age and site-specific setting limit generalization."
+        },
+        {
+          "title": "Playwright: Release notes",
+          "url": "https://playwright.dev/docs/release-notes",
+          "observedOn": "2026-10-29",
+          "sourceDateDisplayed": "Version 1.64 listed as current",
+          "type": "official developer release notes",
+          "opened": true,
+          "evidence": "The official notes page listed version 1.64 at the time checked; article snippets name this tested documentation version, without claiming a local install."
+        }
+      ]
+    }
+  ],
+  "enhancement": {
+    "candidate": null,
+    "decision": "No existing page was changed. The source/page comparison did not identify a documented material omission that justified a refresh in this cycle.",
+    "publicMetricsAdded": false
+  },
+  "metrics": {
+    "searchVolume": null,
+    "keywordDifficulty": null,
+    "gscQueries": null,
+    "organicClicks": null,
+    "organicSessions": null,
+    "ranking": null,
+    "trafficUplift": null
+  },
+  "limitations": [
+    "Public search and individual questions indicate kinds of tasks/problems, not demand magnitude or BrowserHub traffic.",
+    "Vendor help describes vendor-stated capability and eligibility; it is not an independent performance benchmark.",
+    "No logged-in browser, real user account, paid model, external site action, or live test was used.",
+    "No public record contains the private raw account/effect measurements.",
+    "The fictional 2026-11-02 Los Angeles/London conversion is a date-specific example. IANA rules can change; verify the current zone database close to the actual event.",
+    "The local fixture executions are single, dated runs on the listed Node/Playwright/Chromium environment; the offline mode is simulated and does not validate production recovery or other runtime versions.",
+    "The time-zone formatter output reflects Node.js 22.22.3 runtime data (ICU 78.2, tz data 2026a) observed in the local execution; IANA listed 2026f as latest on 2026-10-29. The fixture does not validate all future date rules against the latest IANA release."
+  ],
+  "fixtureExecutions": {
+    "observedOn": "2026-10-29",
+    "timezoneFormatter": {
+      "asset": "public/templates/calendar-timezone-format.mjs",
+      "sha256": "51609a3f03f0b64e697e22e26fa6e81dba67114f239245a58b66bbf7c9665a5a",
+      "executions": 1,
+      "exitCode": 0,
+      "node": "22.22.3",
+      "stdout": [
+        "America/Los_Angeles: 02/11/2026, 09:00 GMT-08:00",
+        "Europe/London: 02/11/2026, 17:00 GMT+00:00"
+      ],
+      "scope": "Formats one fixed UTC instant in two IANA zones; no calendar access, wall-time reverse conversion, or gap/fold validation.",
+      "platform": "darwin arm64",
+      "icu": "78.2",
+      "runtimeTimeZoneData": "2026a"
+    },
+    "networkRecovery": {
+      "asset": "public/templates/browser-agent-network-recovery-fixture.mjs",
+      "sha256": "06a037a9b1f3c3ab44925393129d4b7d768d6a577b7dcb71de2df9b3821238f0",
+      "executions": 2,
+      "exitCode": 0,
+      "stderr": "empty",
+      "node": "22.22.3",
+      "playwright": "1.64.0-alpha-1790635538000",
+      "observed": [
+        "offline loopback GET -> requestfailed",
+        "recovered synthetic GET -> response 200, requestfinished, {state:\"read-only-ok\",fixture:true}",
+        "synthetic HTTP 503 -> response 503, requestfinished"
+      ],
+      "scope": "BrowserContext offline simulation only; loopback read-only server; no application write, write retry or automatic retry loop; one explicit recovered GET. No real network outage, production recovery, MFA, LLM, or account. Page requests were restricted to loopback; Chromium background traffic was not audited.",
+      "platform": "darwin arm64",
+      "icu": "78.2",
+      "firstRunSha256": "9ca3a988d02b3f1c4564d05fccf822bdc1d3b9091961e6e4452349fcbb7c836a",
+      "finalAssetExecutionPending": false,
+      "googleChromeExecutable": "156.0.8078.49",
+      "latestExecution": {
+        "attempt": 2,
+        "exitCode": 0,
+        "stderr": "empty",
+        "confirmedOutput": "applicationWrites:false; writeRetries:false; automaticRetryLoop:false; recoveredReadCount:1"
+      }
+    }
+  }
+}

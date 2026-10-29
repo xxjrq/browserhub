@@ -4965,6 +4965,183 @@
         "browser-agent-form-submission",
         "playwright-cli-vs-mcp"
       ]
+    },
+    {
+      "id": "guides:ai-browser-meeting-prep-brief",
+      "primaryKeyword": {
+        "en": "AI browser meeting preparation brief",
+        "zh-CN": "AI 浏览器会前准备简报"
+      },
+      "intent": "informational / task completion",
+      "cluster": "AI browsers and browser agents",
+      "priority": "P1",
+      "demandEvidence": "Current public task/problem pages opened on 2026-10-29; search volume and site demand unknown",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-meeting-prep-brief/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-meeting-prep-brief/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact existing owner found after checking the published topic map and guide series; nearest scopes are recorded in dated research.",
+      "action": "Review complete English and Chinese editions and source accuracy; publish only through the existing formal workflow after independent review.",
+      "demandEvidenceNote": "Qualitative source evidence only; no search volume, ranking, or traffic inference.",
+      "sourceRecord": "docs/seo/research-2026-10-29.json",
+      "observedOn": "2026-10-29",
+      "originalGain": "A concrete pre-meeting output with traceable evidence and an explicit no-send boundary.",
+      "nearestExistingOwners": [
+        "ai-browser-research-source-verification",
+        "browser-agent-structured-data-extraction",
+        "browser-agent-form-submission"
+      ]
+    },
+    {
+      "id": "guides:ai-browser-calendar-timezone-proposal",
+      "primaryKeyword": {
+        "en": "AI browser propose meeting times across time zones",
+        "zh-CN": "AI 浏览器跨时区会议时间建议"
+      },
+      "intent": "informational / task completion",
+      "cluster": "AI browsers and browser agents",
+      "priority": "P1",
+      "demandEvidence": "Current public task/problem pages opened on 2026-10-29; search volume and site demand unknown",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-calendar-timezone-proposal/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-calendar-timezone-proposal/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact existing owner found after checking the published topic map and guide series; nearest scopes are recorded in dated research.",
+      "action": "Review complete English and Chinese editions and source accuracy; publish only through the existing formal workflow after independent review.",
+      "demandEvidenceNote": "Qualitative source evidence only; no search volume, ranking, or traffic inference.",
+      "sourceRecord": "docs/seo/research-2026-10-29.json",
+      "observedOn": "2026-10-29",
+      "originalGain": "A worked date-specific conversion and human confirmation path for skipped/repeated local times.",
+      "nearestExistingOwners": [
+        "browser-timezone-language-check",
+        "browser-agent-form-submission",
+        "ai-browser-meeting-prep-brief"
+      ]
+    },
+    {
+      "id": "guides:ai-browser-tab-access-permissions",
+      "primaryKeyword": {
+        "en": "AI browser cannot access tab permissions",
+        "zh-CN": "AI 浏览器无法读取标签页权限排查"
+      },
+      "intent": "informational / task completion",
+      "cluster": "AI browsers and browser agents",
+      "priority": "P1",
+      "demandEvidence": "Current public task/problem pages opened on 2026-10-29; search volume and site demand unknown",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-tab-access-permissions/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-tab-access-permissions/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact existing owner found after checking the published topic map and guide series; nearest scopes are recorded in dated research.",
+      "action": "Review complete English and Chinese editions and source accuracy; publish only through the existing formal workflow after independent review.",
+      "demandEvidenceNote": "Qualitative source evidence only; no search volume, ranking, or traffic inference.",
+      "sourceRecord": "docs/seo/research-2026-10-29.json",
+      "observedOn": "2026-10-29",
+      "originalGain": "A product-scoped permission-path guide with version/availability caveats and distinct layers.",
+      "nearestExistingOwners": [
+        "ai-browser-vs-browser-agent",
+        "browser-agent-prompt-injection",
+        "ai-browser-pdf-summary",
+        "browser-agent-upload-files"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-session-expiry-recovery",
+      "primaryKeyword": {
+        "en": "Playwright browser agent session expired recover safely",
+        "zh-CN": "Playwright 浏览器智能体登录过期后安全恢复"
+      },
+      "intent": "informational / task completion",
+      "cluster": "AI browsers and browser agents",
+      "priority": "P1",
+      "demandEvidence": "Current public task/problem pages opened on 2026-10-29; search volume and site demand unknown",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-session-expiry-recovery/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-session-expiry-recovery/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact existing owner found after checking the published topic map and guide series; nearest scopes are recorded in dated research.",
+      "action": "Review complete English and Chinese editions and source accuracy; publish only through the existing formal workflow after independent review.",
+      "demandEvidenceNote": "Qualitative source evidence only; no search volume, ranking, or traffic inference.",
+      "sourceRecord": "docs/seo/research-2026-10-29.json",
+      "observedOn": "2026-10-29",
+      "originalGain": "Distinguishes expired saved state from a running profile and makes uncertain writes a read-before-retry decision.",
+      "nearestExistingOwners": [
+        "browser-automation-profile-persistence",
+        "browser-use-existing-browser-session",
+        "playwright-mcp-existing-browser",
+        "browser-agent-human-takeover"
+      ]
+    },
+    {
+      "id": "guides:browser-agent-network-interruption-recovery",
+      "primaryKeyword": {
+        "en": "Playwright browser agent recover from network interruption",
+        "zh-CN": "Playwright 浏览器智能体网络中断后恢复"
+      },
+      "intent": "informational / task completion",
+      "cluster": "AI browsers and browser agents",
+      "priority": "P1",
+      "demandEvidence": "Current public task/problem pages opened on 2026-10-29; search volume and site demand unknown",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-network-interruption-recovery/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-network-interruption-recovery/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "gap": "No exact existing owner found after checking the published topic map and guide series; nearest scopes are recorded in dated research.",
+      "action": "Review complete English and Chinese editions and source accuracy; publish only through the existing formal workflow after independent review.",
+      "demandEvidenceNote": "Qualitative source evidence only; no search volume, ranking, or traffic inference.",
+      "sourceRecord": "docs/seo/research-2026-10-29.json",
+      "observedOn": "2026-10-29",
+      "originalGain": "Explains Playwright lifecycle evidence and safe bounded recovery; does not equate timeout with rollback.",
+      "nearestExistingOwners": [
+        "browser-agent-debugging-traces",
+        "browser-agent-request-mocking-har",
+        "browser-agent-wait-for-page-ready"
+      ]
     }
   ],
   "futureCandidates": [
@@ -5028,20 +5205,20 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-10-28",
-    "cycleId": "content-2026-10-28",
+    "date": "2026-10-29",
+    "cycleId": "content-2026-10-29",
     "newTopics": [
-      "ai-browser-trip-planning",
-      "ai-browser-expense-report-reconciliation",
-      "ai-browser-job-application-status",
-      "browser-agent-drag-and-drop",
-      "browser-agent-request-mocking-har"
+      "ai-browser-meeting-prep-brief",
+      "ai-browser-calendar-timezone-proposal",
+      "ai-browser-tab-access-permissions",
+      "browser-agent-session-expiry-recovery",
+      "browser-agent-network-interruption-recovery"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
-    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-28.json when completed",
-    "notClaimed": "Publication is not traffic growth. Measured query/volume/rank/session remain unknown; current five editions are prepared for review only."
+    "publicationEvidence": ".local/workflows/cycles/content-2026-10-29/handoff.json when completed",
+    "notClaimed": "Prepared for review only; no publication, traffic gain, indexing result, or measured demand is claimed."
   },
   "latestEditorialEnhancement": {
     "date": "2026-10-25",
