@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-30",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "eaabb88069d6cf71b08af6cf57044388050a36b213417c69bf95916b00ef5166",
+  "commit": "26106489e0d86b7f5184eb374a6a0e532bc3f4ad",
+  "release": "/opt/browsertools/releases/20261030-101140",
+  "publicationReceiptAt": "2026-10-30T02:12:08.510Z",
+  "completedAt": "2026-10-30T02:12:10.718Z",
+  "newTopics": [
+    "ai-browser-compare-products-across-sites",
+    "ai-browser-organize-tabs-by-task",
+    "playwright-rich-text-editor-state-not-updated",
+    "playwright-virtualized-grid-row-actions",
+    "browser-agent-monitor-page-changes-meaningfully"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-compare-products-across-sites/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-compare-products-across-sites/",
+    "https://browserhub.co/en/guides/ai-browser-organize-tabs-by-task/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-organize-tabs-by-task/",
+    "https://browserhub.co/en/guides/playwright-rich-text-editor-state-not-updated/",
+    "https://browserhub.co/zh-cn/guides/playwright-rich-text-editor-state-not-updated/",
+    "https://browserhub.co/en/guides/playwright-virtualized-grid-row-actions/",
+    "https://browserhub.co/zh-cn/guides/playwright-virtualized-grid-row-actions/",
+    "https://browserhub.co/en/guides/browser-agent-monitor-page-changes-meaningfully/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-monitor-page-changes-meaningfully/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five complete independent themes; EN/ZH translations count once. All74 prior guide topics and140 prior keyword rows preserved. No prior batch counted as new.",
+  "editorialSelection": "Cross-retailer comparable SKU/cost decisions, task-based tab organization, contenteditable state validation, two-axis virtualized row actions and successful-baseline change comparison. Current directly opened task/problem and primary source evidence; no volume, ranking, traffic or vendor benchmark claim.",
+  "sourceRecords": [
+    "docs/seo/research-2026-10-30.json"
+  ],
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful publication receipt, not first reader or search-engine discovery.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-06T02:12:08.510000+00:00",
+      "14day": "2026-11-13T02:12:08.510000+00:00",
+      "28day": "2026-11-27T02:12:08.510000+00:00"
+    },
+    "measurementRule": "Compare matching closed windows after cohort maturity and report data latency/missing values. Actual account and effectiveness data remain private."
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": false
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    },
+    "escalatedImplementation": {
+      "role": "decision_and_escalated_implementation",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "xhigh",
+      "scope": "public/templates/browser-agent-editor-grid-fixture.mjs only"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "independentContext": true,
+    "fileCount": 9,
+    "sha256": "3f155b0766eb4c22fbcc44c756573ba88ed379ce57e0461b2cfe9707a341cb9c"
+  },
+  "executionAccounting": {
+    "historyStoredPrivately": true,
+    "ciPreflightAttempts": 2,
+    "firstCiFailure": "Monitoring ZH needed richer visible content; matching fictional observation/baseline decision ledger added to EN/ZH, no audit threshold lowered.",
+    "editorGridRuntimeRuns": 1,
+    "diffRuntimeRuns": 1,
+    "preRuntimeStaticCorrections": 3,
+    "escalation": "Three distinct static fixture designs required explicit Sol6.1 xhigh escalation before the first actual runtime; local pass then independently reviewed. Effective model unreported null; no silent switch."
+  },
+  "validation": {
+    "preflightCi": {
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 2,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "c3d89a88783bce0d948c68611cb33fedfc42edf42bb5e3d62a3ab449259122fb"
+    },
+    "repositoryRead": {
+      "exitCode": 0,
+      "projectScopedAuthVerified": true
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1293,
+    "seoAudit": {
+      "htmlPages": 1289,
+      "sitemapUrls": 1026,
+      "internalLinks": 43675,
+      "alternateLinks": 7655,
+      "fallbackPages": 60,
+      "editorialGuides": 158,
+      "errors": 0
+    },
+    "contentContract": {
+      "status": "passed",
+      "existingTopicsPreserved": 74,
+      "totalTopics": 79,
+      "completeEditions": 158,
+      "newTopics": 5
+    },
+    "scope": "Reviewed content/data/series/keyword/research/assets and editorial audit required-slug list. No renderer, dependency, shared runner or client/backend change.",
+    "productFacts": "36 catalogue records retained;26 confirmed price/licence records and10 unverified prices keep field dates2026-10-16; this article release does not recertify them.",
+    "serverCurrent": {
+      "checkedAt": "2026-10-30T02:13:50.961050+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261030-101140",
+      "expected": "/opt/browsertools/releases/20261030-101140",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-30T02:12:10.663Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-compare-products-across-sites/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-compare-products-across-sites/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-compare-products-across-sites/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-compare-products-across-sites/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-organize-tabs-by-task/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-organize-tabs-by-task/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-organize-tabs-by-task/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-organize-tabs-by-task/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-rich-text-editor-state-not-updated/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-rich-text-editor-state-not-updated/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-rich-text-editor-state-not-updated/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-rich-text-editor-state-not-updated/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-virtualized-grid-row-actions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-virtualized-grid-row-actions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-virtualized-grid-row-actions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-virtualized-grid-row-actions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-monitor-page-changes-meaningfully/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-monitor-page-changes-meaningfully/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-monitor-page-changes-meaningfully/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-monitor-page-changes-meaningfully/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-30T02:13:49.683542+00:00",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/templates/browser-agent-editor-grid-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "6ccabcaefc1022a4a03a033eece870e7ccdbea700508b692e29b9d09506ccc1e",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/browser-agent-editor-grid-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "6ccabcaefc1022a4a03a033eece870e7ccdbea700508b692e29b9d09506ccc1e",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/templates/browser-page-change-diff.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "8877a07d4deaf939f7c262914b83794b0a4ffb5b44b2bea34573f18203b1d64b",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/browser-page-change-diff.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "8877a07d4deaf939f7c262914b83794b0a4ffb5b44b2bea34573f18203b1d64b",
+        "bytesMatch": true
+      }
+    ]
+  },
+  "localExamples": [
+    {
+      "assetPath": "public/templates/browser-agent-editor-grid-fixture.mjs",
+      "assetSha256": "6ccabcaefc1022a4a03a033eece870e7ccdbea700508b692e29b9d09506ccc1e",
+      "exitCode": 0,
+      "attempt": null,
+      "runtimeAttempt": 1,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.0-alpha-1790635538000",
+      "stdout": {
+        "result": "local_editor_and_virtual_grid_fixture_passed",
+        "nodeVersion": "v22.22.3",
+        "browserVersion": "156.0.8078.49",
+        "editor": {
+          "input": "Synthetic revised note",
+          "visibleState": "draft:Synthetic revised note",
+          "saveEnabled": true
+        },
+        "grid": {
+          "logicalRows": 60,
+          "renderedRows": 8,
+          "targetKey": "CASE-4219",
+          "visibleActionColumn": true,
+          "geometry": {
+            "rowKey": "CASE-4219",
+            "checks": {
+              "visibleBusinessKey": true,
+              "visibleActionHeader": true,
+              "sameRow": true,
+              "sameColumn": true,
+              "buttonInsideCell": true,
+              "belowStickyHeader": true,
+              "visibleActionButton": true
+            },
+            "scrollTop": 1260,
+            "scrollLeft": 360
+          },
+          "result": "opened:CASE-4219"
+        },
+        "externalPageRequestsAllowed": false,
+        "realAccounts": false,
+        "localStateChanged": true,
+        "serverWrites": false,
+        "productionWrites": false,
+        "productionEditorOrGridTested": false,
+        "columnVirtualizationModel": "synthetic fixture only",
+        "networkScope": "Playwright page-request routing; not a physical network audit"
+      },
+      "executionBoundary": "Synthetic local contenteditable.fill/input-model update and 60 logical/8 mounted-row two-axis grid with visible business-key/Action geometry+hit checks and local Open selection. No ProseMirror/Quill/AG Grid implementation, real accounts/site, production/server writes or LLM. Nonloopback page requests blocked; not a browser-background/physical network audit."
+    },
+    {
+      "assetPath": "public/templates/browser-page-change-diff.mjs",
+      "assetSha256": "8877a07d4deaf939f7c262914b83794b0a4ffb5b44b2bea34573f18203b1d64b",
+      "exitCode": 0,
+      "attempt": 1,
+      "runtimeAttempt": null,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": null,
+      "stdout": {
+        "result": "synthetic_page_text_diff_passed",
+        "meaningfulChange": true,
+        "changes": {
+          "removed": [
+            "Price: $29/month"
+          ],
+          "added": [
+            "Price: $25/month"
+          ]
+        },
+        "ignoredLinePatterns": [
+          "^Checked at: ",
+          "^Page views: "
+        ],
+        "baselinePersistedOrReplaced": false,
+        "pageFetched": false,
+        "alertSent": false,
+        "realSiteTested": false
+      },
+      "executionBoundary": "Synthetic fixed three meaningful lines vs two ignored fixture noise lines; line-set membership only. No fetched site, reorder/duplicate-count detection, successful-baseline persistence, scheduling, alert or production data."
+    }
+  ],
+  "measurement": {
+    "privateReviewSaved": true,
+    "status": "Read-only authenticated follow-up recorded privately. Publication and local examples are delivery evidence; no traffic or conversion uplift claimed."
+  },
+  "operationsNotPerformed": [
+    "Index/sitemap submission or validation requests",
+    "Detection website",
+    "EasyBR client/backend or shared services",
+    "Outreach, real calendar invitations or account actions",
+    "New paid tools/subscriptions/model APIs",
+    "Cloudflare or analytics configuration"
+  ]
+}
