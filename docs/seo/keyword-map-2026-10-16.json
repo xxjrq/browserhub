@@ -5142,6 +5142,216 @@
         "browser-agent-request-mocking-har",
         "browser-agent-wait-for-page-ready"
       ]
+    },
+    {
+      "id": "guides:ai-browser-compare-products-across-sites",
+      "primaryKeyword": {
+        "en": "compare same product across sellers",
+        "zh-CN": "跨商家同款商品比较"
+      },
+      "intent": "Compare exact manufacturer model, configuration, region and condition; calculate delivered totals only when fees are known, then show warranty and return trade-offs.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-compare-products-across-sites/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-compare-products-across-sites/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-30",
+      "demandEvidence": "Public discovery and problem pages are editorial evidence only, not BrowserHub query, volume, ranking, or traffic data.",
+      "sourceRecord": "docs/seo/research-2026-10-30.json",
+      "originalGain": "Compare exact manufacturer model, configuration, region and condition; calculate delivered totals only when fees are known, then show warranty and return trade-offs.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-shopping-cart-verification",
+          "ai-browser-expense-report-reconciliation",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Compare exact manufacturer model, configuration, region and condition; calculate delivered totals only when fees are known, then show warranty and return trade-offs."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-06",
+        "14day": "2026-11-13",
+        "28day": "2026-11-27"
+      },
+      "dateOnlyReminder": "Use exact successful publication receipt time +7/+14/+28 days in delivery record, then closed comparable windows. Calendar date alone does not establish maturity."
+    },
+    {
+      "id": "guides:ai-browser-organize-tabs-by-task",
+      "primaryKeyword": {
+        "en": "AI browser organize tabs by task",
+        "zh-CN": "AI 浏览器按任务整理标签页"
+      },
+      "intent": "Distinguish reviewable tab grouping from context selection, persistence, permissions, and saving unfinished work.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-organize-tabs-by-task/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-organize-tabs-by-task/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-30",
+      "demandEvidence": "Public discovery and problem pages are editorial evidence only, not BrowserHub query, volume, ranking, or traffic data.",
+      "sourceRecord": "docs/seo/research-2026-10-30.json",
+      "originalGain": "Distinguish reviewable tab grouping from context selection, persistence, permissions, and saving unfinished work.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-research-source-verification",
+          "browser-agent-tabs-popups"
+        ],
+        "distinctiveCoverage": "Distinguish reviewable tab grouping from context selection, persistence, permissions, and saving unfinished work."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-06",
+        "14day": "2026-11-13",
+        "28day": "2026-11-27"
+      },
+      "dateOnlyReminder": "Use exact successful publication receipt time +7/+14/+28 days in delivery record, then closed comparable windows. Calendar date alone does not establish maturity."
+    },
+    {
+      "id": "guides:playwright-rich-text-editor-state-not-updated",
+      "primaryKeyword": {
+        "en": "Playwright rich text editor state not updated",
+        "zh-CN": "Playwright 富文本编辑器状态未更新"
+      },
+      "intent": "Separate rendered text from accepted editor and application state, using Playwright and ProseMirror as scoped examples.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-rich-text-editor-state-not-updated/",
+        "https://browserhub.co/zh-cn/guides/playwright-rich-text-editor-state-not-updated/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-30",
+      "demandEvidence": "Public discovery and problem pages are editorial evidence only, not BrowserHub query, volume, ranking, or traffic data.",
+      "sourceRecord": "docs/seo/research-2026-10-30.json",
+      "originalGain": "Separate rendered text from accepted editor and application state, using Playwright and ProseMirror as scoped examples.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-form-submission",
+          "browser-agent-clipboard-read-write",
+          "browser-agent-debugging-traces"
+        ],
+        "distinctiveCoverage": "Separate rendered text from accepted editor and application state, using Playwright and ProseMirror as scoped examples."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-06",
+        "14day": "2026-11-13",
+        "28day": "2026-11-27"
+      },
+      "dateOnlyReminder": "Use exact successful publication receipt time +7/+14/+28 days in delivery record, then closed comparable windows. Calendar date alone does not establish maturity."
+    },
+    {
+      "id": "guides:playwright-virtualized-grid-row-actions",
+      "primaryKeyword": {
+        "en": "Playwright virtualized grid row action",
+        "zh-CN": "Playwright 虚拟表格行操作定位"
+      },
+      "intent": "Re-identify a row by business key across row and column virtualization before an action, then verify the same record afterward.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-virtualized-grid-row-actions/",
+        "https://browserhub.co/zh-cn/guides/playwright-virtualized-grid-row-actions/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-30",
+      "demandEvidence": "Public discovery and problem pages are editorial evidence only, not BrowserHub query, volume, ranking, or traffic data.",
+      "sourceRecord": "docs/seo/research-2026-10-30.json",
+      "originalGain": "Re-identify a row by business key across row and column virtualization before an action, then verify the same record afterward.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-scroll-pagination",
+          "browser-agent-structured-data-extraction",
+          "browser-agent-accessibility-snapshot-vs-screenshot"
+        ],
+        "distinctiveCoverage": "Re-identify a row by business key across row and column virtualization before an action, then verify the same record afterward."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-06",
+        "14day": "2026-11-13",
+        "28day": "2026-11-27"
+      },
+      "dateOnlyReminder": "Use exact successful publication receipt time +7/+14/+28 days in delivery record, then closed comparable windows. Calendar date alone does not establish maturity."
+    },
+    {
+      "id": "guides:browser-agent-monitor-page-changes-meaningfully",
+      "primaryKeyword": {
+        "en": "browser agent monitor meaningful page changes",
+        "zh-CN": "浏览器智能体有意义网页变化对比"
+      },
+      "intent": "Preserve a successful baseline when capture fails, version narrow ignore rules, and review line membership changes before accepting a new baseline.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-monitor-page-changes-meaningfully/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-monitor-page-changes-meaningfully/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-30",
+      "demandEvidence": "Public discovery and problem pages are editorial evidence only, not BrowserHub query, volume, ranking, or traffic data.",
+      "sourceRecord": "docs/seo/research-2026-10-30.json",
+      "originalGain": "Preserve a successful baseline when capture fails, version narrow ignore rules, and review line membership changes before accepting a new baseline.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestExistingOwners": [
+          "browser-agent-wait-for-page-ready",
+          "browser-agent-request-mocking-har",
+          "browser-agent-debugging-traces"
+        ],
+        "distinctiveCoverage": "Preserve a successful baseline when capture fails, version narrow ignore rules, and review line membership changes before accepting a new baseline."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-06",
+        "14day": "2026-11-13",
+        "28day": "2026-11-27"
+      },
+      "dateOnlyReminder": "Use exact successful publication receipt time +7/+14/+28 days in delivery record, then closed comparable windows. Calendar date alone does not establish maturity."
     }
   ],
   "futureCandidates": [
@@ -5205,19 +5415,19 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-10-29",
-    "cycleId": "content-2026-10-29",
+    "date": "2026-10-30",
+    "cycleId": "content-2026-10-30",
     "newTopics": [
-      "ai-browser-meeting-prep-brief",
-      "ai-browser-calendar-timezone-proposal",
-      "ai-browser-tab-access-permissions",
-      "browser-agent-session-expiry-recovery",
-      "browser-agent-network-interruption-recovery"
+      "ai-browser-compare-products-across-sites",
+      "ai-browser-organize-tabs-by-task",
+      "playwright-rich-text-editor-state-not-updated",
+      "playwright-virtualized-grid-row-actions",
+      "browser-agent-monitor-page-changes-meaningfully"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
-    "publicationEvidence": ".local/workflows/cycles/content-2026-10-29/handoff.json when completed",
+    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-30.json when completed",
     "notClaimed": "Prepared for review only; no publication, traffic gain, indexing result, or measured demand is claimed."
   },
   "latestEditorialEnhancement": {
