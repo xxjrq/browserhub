@@ -231,6 +231,25 @@ export function browserSpecLabel(locale: Locale, field: "free" | "price" | "prof
 	return map[locale][field];
 }
 
+/**
+ * Screen-reader label for the editorial rating stars.
+ *
+ * The rating is an editorial ordering label, not an average of user reviews,
+ * so the wording says "editorial rating" rather than "user rating".
+ */
+export function ratingLabel(locale: Locale, value: number): string {
+	const map: Record<Locale, string> = {
+		"zh-cn": `编辑评分 ${value} / 5`,
+		en: `Editorial rating ${value} / 5`,
+		ja: `編集評価 ${value} / 5`,
+		ko: `편집 평가 ${value} / 5`,
+		es: `Valoración editorial ${value} / 5`,
+		pt: `Avaliação editorial ${value} / 5`,
+		ru: `Редакционная оценка ${value} / 5`
+	};
+	return map[locale];
+}
+
 /** Localised copy for the fingerprint signal pages (previously hard-coded English). */
 export function fingerprintCopy(locale: Locale, name: string): { what: string; detection: string; mitigation: string } {
 	const copy: Record<Locale, { what: string; detection: string; mitigation: string }> = {

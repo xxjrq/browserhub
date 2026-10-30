@@ -9,14 +9,15 @@
     "lint": "eslint",
     "assets:brand": "node scripts/generate-brand-assets.mjs",
     "check:dist": "node scripts/check-dist.mjs",
-    "ci": "npm run lint && npm run check:info && npm run check:browser-sections && npm run check:comparison-sections && npm run assets:brand && NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build && npm run fix:locale-lang && npm run check:dist && npm run audit:seo && npm run check:products",
+    "ci": "npm run lint && npm run check:info && npm run check:browser-sections && npm run check:comparison-sections && npm run check:comparison-editorial && npm run assets:brand && NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build && npm run fix:locale-lang && npm run check:dist && npm run audit:seo && npm run check:products",
     "fix:locale-lang": "node scripts/fix-static-locale-lang.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
     "check:products": "node scripts/check-product-evidence.mjs",
     "test:workflows": "node --test tools/workflows/editorial.test.mjs",
     "check:info": "node scripts/check-info-sections.mjs",
     "check:browser-sections": "node scripts/check-browser-sections.mjs",
-    "check:comparison-sections": "node scripts/check-comparison-sections.mjs"
+    "check:comparison-sections": "node scripts/check-comparison-sections.mjs",
+    "check:comparison-editorial": "node scripts/check-comparison-editorial.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

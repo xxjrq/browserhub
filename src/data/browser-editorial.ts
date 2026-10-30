@@ -1,4 +1,5 @@
 import { seriesComparisonEditorial } from "./series-comparisons";
+import { generatedComparisonEditorial } from "./comparison-editorial-generated";
 import { verifiedProducts } from "./verified-products";
 
 /**
@@ -157,6 +158,10 @@ const multiProduct = source("Multilogin: cloud phones and proxy product overview
 
 export const comparisonEditorial: Record<string, ComparisonEditorialLocales> = {
 	...seriesComparisonEditorial,
+	// The nineteen pairs that carried no hand-written research get generated
+	// research derived from the verified product records. The hand-written
+	// entries below are declared after this spread and therefore keep priority.
+	...generatedComparisonEditorial,
 	"adspower-vs-gologin": {
 		en: {
 			sections: [
