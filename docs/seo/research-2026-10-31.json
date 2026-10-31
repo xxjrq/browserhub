@@ -1,0 +1,545 @@
+{
+  "date": "2026-10-31",
+  "cycleId": "content-2026-10-31",
+  "status": "researched_draft_prepared_for_independent_review_not_a_release",
+  "scope": "Five separate AI-browser and browser-agent user/developer intents; English and Simplified Chinese editions are paired. Current public search was used to discover task questions and competitors, then candidate pages and primary docs were opened. Public sources are not BrowserHub traffic, ranking, or volume data.",
+  "baseline": {
+    "existingCompleteTopics": 79,
+    "existingCompleteEditions": 158,
+    "keywordRowsBefore": 145,
+    "priorCycleTopicsNotRecounted": [
+      "ai-browser-compare-products-across-sites",
+      "ai-browser-organize-tabs-by-task",
+      "playwright-rich-text-editor-state-not-updated",
+      "playwright-virtualized-grid-row-actions",
+      "browser-agent-monitor-page-changes-meaningfully"
+    ],
+    "measurementContext": "A private read-only Search Console review was read for site context, but no account metrics, per-URL results, or private paths are copied into this public research file. Existing indexing follow-up remains separate from these drafts. No new-topic query or conversion evidence was available, and no index or sitemap submissions were performed."
+  },
+  "researchMethod": {
+    "discovery": "Current public searches for exact user/developer task phrasing and competing guides, followed by direct page opens for at least three problem/competitor pages per candidate. Search volume, BrowserHub query counts, rankings, clicks and topic traffic remain null / not measured.",
+    "observedOn": "2026-10-31",
+    "pageDatePolicy": "Page date recorded only when directly established; otherwise not stated or not captured. Search-result snippets were used for discovery only.",
+    "technicalFacts": "Checked against current Playwright, W3C, MDN, Google Search Help, Federal Student Aid and CareerOneStop documentation opened 2026-10-31. Product competitor copy is not treated as independent verification of product performance.",
+    "selectionGate": "Compared all candidates with the published keyword map, all 79 topic owners, current guide-series journeys and latest 30 Oct delivery. Dropped nested-scroll as too close to the 30 Oct virtualized-grid row/action article. Kept tooltip help scoped to an agent discovering supplementary UI text, not generic Playwright hover advice."
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-shortlist-job-postings",
+      "intent": "Use an AI browser to collect public job postings into a pre-application shortlist with explicit hard constraints, employer-source evidence, visible unknowns and duplicate checks, then stop before applying.",
+      "targetAudience": "Job seekers who want to compare public roles across boards and employer career pages before deciding whether to apply.",
+      "nearestOwners": [
+        "ai-browser-job-application-status",
+        "browser-agent-structured-data-extraction",
+        "ai-browser-research-source-verification"
+      ],
+      "distinctiveCoverage": "A criteria brief distinguishes hard dealbreakers from preferences; a source-linked table preserves employer wording for location/pay/requirements and last-checked time; duplicates retain requisition evidence; privacy and consent boundaries stop before résumé upload or application.",
+      "demandHypothesis": "Current how-to and product pages frame browser-assisted job discovery as a user task. This is qualitative public-topic evidence only; no volume, reach, or BrowserHub demand is claimed.",
+      "candidateSources": [
+        {
+          "title": "Tom's Guide: Make ChatGPT your personal job scout",
+          "url": "https://www.tomsguide.com/ai/job-hunting-is-exhausting-heres-how-to-make-chatgpt-your-personal-job-scout",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Competing tutorial",
+          "observation": "Shows a job-scout prompt over public listings and optional spreadsheet output; its reported results are editorial experience, not a controlled benchmark."
+        },
+        {
+          "title": "NextWork: Build a multi-board job search agent",
+          "url": "https://nextwork.ai/projects/075b7476-8bfb-497a-b3fb-53516d1daa9a",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Competing developer tutorial",
+          "observation": "Describes multi-board extraction, deduplication and scoring; also documents variability and experimental failure boundaries. These claims were not independently tested."
+        },
+        {
+          "title": "ego(lite): AI browser automation for job hunting",
+          "url": "https://www.egolite.ai/solutions/auto-apply-jobs",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Competing product use case",
+          "observation": "Describes browser-assisted role filtering, source-linked logs and review before submission, including stop boundaries. Product claims are attributed to the publisher."
+        },
+        {
+          "title": "Hira: AI job search agent",
+          "url": "https://applyhira.com/",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Competing product use case",
+          "observation": "Frames job discovery and application handling as an agent task; the new article narrows to a human-reviewable shortlist before application."
+        },
+        {
+          "title": "Google Search Help: Search for jobs",
+          "url": "https://support.google.com/websearch/answer/7498276?hl=en",
+          "observedOn": "2026-10-31",
+          "pageDate": "not stated",
+          "type": "Official primary documentation",
+          "observation": "Explains job result sources, location/search filters, and that some details may be automatically identified from descriptions; supports preserving employer-page evidence and country availability caveats."
+        }
+      ],
+      "measurement": {
+        "searchVolume": null,
+        "browserhubQueries": null,
+        "rankings": null,
+        "traffic": null,
+        "conversions": null
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      }
+    },
+    {
+      "slug": "ai-browser-scholarship-eligibility-shortlist",
+      "intent": "Use an AI browser to discover scholarships and grants and create a provider-linked eligibility/deadline ledger that labels each rule confirmed, not met or needs checking, without predicting awards or submitting applications.",
+      "targetAudience": "Students and families comparing public scholarship opportunities before deciding which provider rules to verify or which application to pursue.",
+      "nearestOwners": [
+        "ai-browser-job-application-status",
+        "browser-agent-structured-data-extraction",
+        "ai-browser-research-source-verification"
+      ],
+      "distinctiveCoverage": "Separates search discovery from provider eligibility; presents a practical rules ledger for citizenship/residency, study level, academic thresholds, date/time zone, amount and required materials; limits sensitive data exposure and stops before applications or individualized financial advice.",
+      "demandHypothesis": "Multiple scholarship-finder pages currently describe live-web search, match explanations and eligibility checks. This demonstrates active competing task framing but does not establish search volume or BrowserHub demand.",
+      "candidateSources": [
+        {
+          "title": "ScholarScan: AI Scholarship Finder",
+          "url": "https://www.scholarscan.ai/",
+          "observedOn": "2026-10-31",
+          "pageDate": "not stated",
+          "type": "Competing product use case",
+          "observation": "Describes profile-matched live web scholarship discovery and match scores; its coverage, counts and performance claims remain publisher claims."
+        },
+        {
+          "title": "PrepGPT: Scholarship finder and eligibility rules",
+          "url": "https://prepgpt.com/features/scholarship-finder",
+          "observedOn": "2026-10-31",
+          "pageDate": "not stated",
+          "type": "Competing product use case",
+          "observation": "Separates rule-based eligibility verdicts from AI funding briefs and explicitly flags unverified requirements."
+        },
+        {
+          "title": "AspireOpen: How scholarship matching works",
+          "url": "https://aspireopen.com/how-it-works/",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Competing product use case",
+          "observation": "Shows matching factors, amounts and deadlines and distinguishes application stages; product claims were not independently tested."
+        },
+        {
+          "title": "Next Scholar: AI Scholarship Finder",
+          "url": "https://www.nextscholar.com/",
+          "observedOn": "2026-10-31",
+          "pageDate": "not stated",
+          "type": "Competing product use case",
+          "observation": "Describes scholarship listings with official sources and last-check dates; supports the need for provider links and freshness fields."
+        },
+        {
+          "title": "CareerOneStop: Scholarship Finder",
+          "url": "https://www.careeronestop.org/toolkit/training/find-scholarships.aspx",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Official government directory",
+          "observation": "Department of Labor-linked directory of scholarship, fellowship, grant and financial-aid entries; a discovery source, not the administering provider's final rule."
+        },
+        {
+          "title": "Federal Student Aid: Scholarship basics and tips",
+          "url": "https://studentaid.gov/articles/scholarship-tips/",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Official government guidance",
+          "observation": "Advises applicants to check requirements and submit ahead of deadlines; cited as practical guidance, not a guarantee of award eligibility or acceptance."
+        },
+        {
+          "title": "Federal Student Aid: Financial aid not enough",
+          "url": "https://studentaid.gov/articles/financial-aid-not-enough/",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Official government guidance",
+          "observation": "Points students to additional funding and scam-avoidance information; supports cautious verification framing."
+        }
+      ],
+      "measurement": {
+        "searchVolume": null,
+        "browserhubQueries": null,
+        "rankings": null,
+        "traffic": null,
+        "conversions": null
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      }
+    },
+    {
+      "slug": "playwright-dynamic-combobox-option-selection",
+      "intent": "Diagnose Playwright failures selecting asynchronous custom autocomplete/combobox options, distinguish from native selectOption, and verify the committed application value.",
+      "targetAudience": "Browser-agent developers and Playwright users testing custom dynamic suggestion controls.",
+      "nearestOwners": [
+        "browser-agent-date-picker",
+        "browser-agent-form-submission",
+        "playwright-rich-text-editor-state-not-updated"
+      ],
+      "distinctiveCoverage": "Explains control-type boundary, request/list/current-query states, accessible role and popup scope, selection behavior and committed value; avoids duplicating date picker or generic form/editor state content.",
+      "demandHypothesis": "Current developer problem pages show concrete intermittent option-loading and React custom-dropdown questions. These support a troubleshooting task, not a traffic estimate.",
+      "candidateSources": [
+        {
+          "title": "r/QualityAssurance: Dropdown options sometimes don't load in Playwright",
+          "url": "https://www.reddit.com/r/QualityAssurance/comments/1juiccz/dropdown_options_sometimes_dont_load_in/",
+          "observedOn": "2026-10-31",
+          "pageDate": "2025-04-11 inferred from URL date metadata; not used in article",
+          "type": "Developer problem discussion",
+          "observation": "Question reports intermittent suggestions and considers retries; article instead separates request/render/selection states."
+        },
+        {
+          "title": "r/Playwright: React dropdown click issue",
+          "url": "https://www.reddit.com/r/Playwright/comments/1p266v1/dropdown_in_react_and_im_having_trouble/",
+          "observedOn": "2026-10-31",
+          "pageDate": "2025-11-16 inferred from URL date metadata; not used in article",
+          "type": "Developer problem discussion",
+          "observation": "Question reports headless/debug difference and forced-click attempts on a custom dropdown."
+        },
+        {
+          "title": "ErrLookup: Did not find some options",
+          "url": "https://errors.standardbeagle.com/microsoft/playwright/did-not-find-some-options/",
+          "observedOn": "2026-10-31",
+          "pageDate": "analysis source references Playwright commit from 2026-08-12",
+          "type": "Third-party diagnostic page",
+          "observation": "Distinguishes native selectOption missing options and actionability conditions; not treated as official docs."
+        },
+        {
+          "title": "W3C ARIA Authoring Practices: Combobox Pattern",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+          "observedOn": "2026-10-31",
+          "pageDate": "live standard guidance",
+          "type": "Primary accessibility guidance",
+          "observation": "Defines popup variants, editable/select-only behavior and different expansion triggers."
+        },
+        {
+          "title": "Playwright: Actions",
+          "url": "https://playwright.dev/docs/input",
+          "observedOn": "2026-10-31",
+          "pageDate": "current documentation",
+          "type": "Official framework documentation",
+          "observation": "Documents fill and pressSequentially distinction and user-facing input operations."
+        },
+        {
+          "title": "Playwright: Locators",
+          "url": "https://playwright.dev/docs/locators",
+          "observedOn": "2026-10-31",
+          "pageDate": "current documentation",
+          "type": "Official framework documentation",
+          "observation": "Recommends semantic roles, labels and locators that resolve against current page state."
+        }
+      ],
+      "measurement": {
+        "searchVolume": null,
+        "browserhubQueries": null,
+        "rankings": null,
+        "traffic": null,
+        "conversions": null
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      }
+    },
+    {
+      "slug": "browser-agent-diagnose-blocked-clicks",
+      "intent": "Interpret an agent or Playwright click blocked by an overlay/intercepting element, identify why the target misses hit testing, and choose safe wait, supported dismissal, fresh targeting or stop behavior.",
+      "targetAudience": "Browser-agent developers, test engineers and teams troubleshooting controls blocked by page overlays.",
+      "nearestOwners": [
+        "browser-agent-cookie-consent-choice",
+        "browser-agent-debugging-traces",
+        "browser-agent-accessibility-snapshot-vs-screenshot"
+      ],
+      "distinctiveCoverage": "A blocker decision process for consent, loading masks, sticky elements, layout shifts and stale targets, with authorization boundaries and force/dispatchEvent limitations; no new detection site or generic fingerprint guidance.",
+      "demandHypothesis": "Current troubleshooting pages and user reports describe click-interception errors and overlays; qualitative evidence only.",
+      "candidateSources": [
+        {
+          "title": "Playwright: Auto-waiting and actionability",
+          "url": "https://playwright.dev/docs/actionability",
+          "observedOn": "2026-10-31",
+          "pageDate": "current documentation",
+          "type": "Official framework documentation",
+          "observation": "Defines visible, stable, receives-events and enabled checks for click actions."
+        },
+        {
+          "title": "GitHub: Playwright element click intercepted",
+          "url": "https://github.com/feder-cr/invisible_playwright/wiki/playwright-element-click-intercepted",
+          "observedOn": "2026-10-31",
+          "pageDate": "edited 2026-09-08 per page history",
+          "type": "Troubleshooting page",
+          "observation": "Discusses sticky headers, modal backdrops, animations and consent overlays; recommendations were checked against official Playwright docs."
+        },
+        {
+          "title": "ObserveOne: Element intercepted by another element",
+          "url": "https://www.observeone.com/community/errors/playwright/element-intercepted",
+          "observedOn": "2026-10-31",
+          "pageDate": "not stated",
+          "type": "Vendor troubleshooting page",
+          "observation": "Lists overlay, spinner, sticky header and tooltip as possible blockers; vendor product statements are not relied upon."
+        },
+        {
+          "title": "BrowserStack: Click, type and hover with Playwright",
+          "url": "https://www.browserstack.com/guide/playwright-click-type",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Vendor technical guide",
+          "observation": "Discusses layout shifts, nested containers and overlays; article treats it as competing coverage, not primary authority."
+        }
+      ],
+      "measurement": {
+        "searchVolume": null,
+        "browserhubQueries": null,
+        "rankings": null,
+        "traffic": null,
+        "conversions": null
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      }
+    },
+    {
+      "slug": "browser-agent-reveal-and-check-tooltip-help",
+      "intent": "Help a browser agent read supplementary instructions attached to a UI control by revealing hover/focus help and verifying which control the text describes.",
+      "targetAudience": "Browser-agent developers and accessibility/test teams working with unfamiliar or icon-only interfaces.",
+      "nearestOwners": [
+        "browser-agent-accessibility-snapshot-vs-screenshot",
+        "browser-agent-shadow-dom",
+        "browser-agent-debugging-traces"
+      ],
+      "distinctiveCoverage": "A scoped agent task for contextual help: trigger/help association, snapshot before and after reveal, keyboard path, native title limitation, tooltip versus actionable popup, and user-action boundary. This does not duplicate general snapshot-vs-screenshot selection advice.",
+      "demandHypothesis": "Current tooltip flakiness/problem pages and official interaction guidance show discoverability and hover/focus issues. This is qualitative topic evidence only.",
+      "candidateSources": [
+        {
+          "title": "QABattle: Test hover tooltips without flake",
+          "url": "https://www.qabattle.com/blog/test-hover-tooltips-without-flake",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Competing test guide",
+          "observation": "Recommends pointer/focus coverage and description association; vendor prose is not treated as an official rule."
+        },
+        {
+          "title": "r/Playwright: Screenshot of a hovering button",
+          "url": "https://www.reddit.com/r/Playwright/comments/1uecko2/how_to_make_screenshot_of_hovering_button/",
+          "observedOn": "2026-10-31",
+          "pageDate": "2026-06-19 inferred from URL date metadata; not used in article",
+          "type": "Developer problem discussion",
+          "observation": "Question describes hover screenshot state not appearing consistently."
+        },
+        {
+          "title": "BrowserBash: How to Test Tooltips, Popovers, and Hover States With AI",
+          "url": "https://www.browserbash.com/blog/test-tooltips-popovers-and-hover-states-ai",
+          "observedOn": "2026-10-31",
+          "pageDate": "not captured",
+          "type": "Competing browser-agent guide",
+          "observation": "Covers tooltip timing, visibility assertions, keyboard reachability and hover flakiness in AI browser testing. This article narrows the answer to identifying which control the text belongs to, distinguishing explanatory help from actionable popups, and respecting the user-action boundary."
+        },
+        {
+          "title": "MDN: ARIA tooltip role",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role",
+          "observedOn": "2026-10-31",
+          "pageDate": "current documentation",
+          "type": "Primary reference documentation",
+          "observation": "Explains tooltip relationship via aria-describedby and limitations of title-based native bubbles."
+        },
+        {
+          "title": "W3C ARIA Authoring Practices: Tooltip Pattern",
+          "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+          "observedOn": "2026-10-31",
+          "pageDate": "work-in-progress pattern",
+          "type": "Primary accessibility guidance",
+          "observation": "Describes focus/hover, Escape dismissal, trigger focus retention, role and description association; pattern status remains work in progress."
+        },
+        {
+          "title": "Playwright MCP: Interaction and hover",
+          "url": "https://playwright.dev/mcp/tools/interaction",
+          "observedOn": "2026-10-31",
+          "pageDate": "current documentation",
+          "type": "Official tool documentation",
+          "observation": "Documents hover as a way to reveal tooltips, dropdowns or hover states and describes snapshot references."
+        }
+      ],
+      "measurement": {
+        "searchVolume": null,
+        "browserhubQueries": null,
+        "rankings": null,
+        "traffic": null,
+        "conversions": null
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      }
+    }
+  ],
+  "modelProvenance": {
+    "executor": {
+      "role": "executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "selectionSource": "human_task",
+      "agent": "content_execution_20261031"
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "status": "pending independent final review"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "scope": "Read project instructions, content workflow, model roles, product/leadership/editorial strategy, current keyword ownership, latest published batch, private measurement summary and fixed prose editing skills."
+      },
+      {
+        "attempt": 2,
+        "scope": "Searched current public task/problem pages, directly opened at least three candidate problem/competitor pages per retained intent, and opened primary docs for current technical and official facts."
+      },
+      {
+        "attempt": 3,
+        "scope": "Selected five independent intents after rejecting nested scroll because of overlap with 30 Oct virtualized-grid coverage; drafted complete en/zh editions and added the public source inventory, series, keyword rows and audit slugs."
+      },
+      {
+        "stage": 4,
+        "scope": "Added a single combined synthetic fixture as a downloadable code example; updated the three developer guides with prerequisites, setup, expected output and explicit unverified boundaries. node --check passed; no runtime success claimed."
+      }
+    ],
+    "runtimeFailures": [],
+    "testsClaimed": false,
+    "formalCI": "Not run by executor; root owns CI and final review workflow."
+  },
+  "publicationStatus": "Not published. Drafts are prepared for independent review and have no publication receipt.",
+  "deferred": [
+    "Index submission",
+    "Detection website",
+    "External outreach",
+    "New subscription",
+    "EasyBR client/backend/shared service changes",
+    "Commit, push, deploy, publish or reviewer signature by executor"
+  ],
+  "sources": [
+    {
+      "title": "Playwright: Auto-waiting and actionability",
+      "url": "https://playwright.dev/docs/actionability",
+      "observedOn": "2026-10-31"
+    },
+    {
+      "title": "Playwright: Actions",
+      "url": "https://playwright.dev/docs/input",
+      "observedOn": "2026-10-31"
+    },
+    {
+      "title": "W3C ARIA Authoring Practices: Combobox Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+      "observedOn": "2026-10-31"
+    },
+    {
+      "title": "W3C ARIA Authoring Practices: Tooltip Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+      "observedOn": "2026-10-31"
+    },
+    {
+      "title": "MDN: ARIA tooltip role",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role",
+      "observedOn": "2026-10-31"
+    },
+    {
+      "title": "Google Search Help: Search for jobs",
+      "url": "https://support.google.com/websearch/answer/7498276?hl=en",
+      "observedOn": "2026-10-31"
+    },
+    {
+      "title": "Federal Student Aid: Scholarship basics and tips",
+      "url": "https://studentaid.gov/articles/scholarship-tips/",
+      "observedOn": "2026-10-31"
+    },
+    {
+      "title": "CareerOneStop: Scholarship Finder",
+      "url": "https://www.careeronestop.org/toolkit/training/find-scholarships.aspx",
+      "observedOn": "2026-10-31"
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/templates/browser-agent-interaction-fixture.mjs",
+      "sha256": "4ab27915e604a4c6eb9eabc5afb9d44002a980bd9213a7d72c0b5e38eaddae96",
+      "observedOn": "2026-10-31",
+      "staticCheck": "node --check passed on final source",
+      "runtimeStatus": "passed on final byte SHA; actualrun2, no runtime failures",
+      "purpose": "Single synthetic self-contained Playwright fixture referenced by dynamic combobox, blocked-click and tooltip-help articles.",
+      "executionBoundary": "Synthetic local-only page served on 127.0.0.1. Covers delayed custom combobox suggestions vs committed selection, Playwright click actionability trial blocked by a fixture overlay then explicit fixture dismissal and a normal local click, plus tooltip hover/focus text and aria-describedby association. Cross-origin page requests are blocked; no real accounts, app, vendor widget, AI model, server/production writes or physical network audit. Playwright uses a disposable browser profile for this launch.",
+      "priorObservedRuntime": {
+        "attempt": 1,
+        "assetSha256": "8f0149283fd45e7be7608481689a4905c9acbfed062b898b2e8cf66e20e7e065",
+        "status": "passed",
+        "executedBy": "root",
+        "nodeVersion": "v22.22.3",
+        "playwrightVersion": "1.64.1",
+        "browserVersion": "156.0.8078.49",
+        "mode": "fresh headless Chromium",
+        "elapsedSeconds": 6.7,
+        "exitCode": 0,
+        "stderr": "empty",
+        "summary": "Combobox query Res selected Research and committed department:research; click trial detected interception, explicit fixture dismissal permitted the subsequent normal click; hover and programmatic focus exposed associated tooltip text. This was a prior asset version; current hash has not been executed."
+      },
+      "observedRuntime": {
+        "attempt": 2,
+        "assetSha256": "4ab27915e604a4c6eb9eabc5afb9d44002a980bd9213a7d72c0b5e38eaddae96",
+        "status": "passed",
+        "executedBy": "root",
+        "startedAt": "2026-10-31T01:13:39.742435+00:00",
+        "finishedAt": "2026-10-31T01:13:45.860216+00:00",
+        "nodeVersion": "v22.22.3",
+        "playwrightVersion": "1.64.1",
+        "browserVersion": "156.0.8078.49",
+        "mode": "Existing Google Chrome, fresh headless disposable profile",
+        "exitCode": 0,
+        "stderr": "empty",
+        "observed": {
+          "result": "local_browser_agent_interaction_fixture_passed",
+          "nodeVersion": "v22.22.3",
+          "browserVersion": "156.0.8078.49",
+          "combobox": {
+            "query": "Res",
+            "matchedOption": "Research",
+            "committed": "department:research",
+            "typedTextWasNotTreatedAsSelection": true
+          },
+          "blockedClick": {
+            "trialDetectedIntercept": true,
+            "fixtureDismissalAuthorized": true,
+            "resultAfterNormalClick": "Saved local draft"
+          },
+          "tooltip": {
+            "hoverText": "Renewal date is shown in the selected plan's time zone.",
+            "programmaticFocusText": "Renewal date is shown in the selected plan's time zone.",
+            "ariaDescribedBy": "fixture-tooltip"
+          },
+          "externalPageRequestsAllowed": false,
+          "realAccounts": false,
+          "localStateChanged": true,
+          "serverWrites": false,
+          "productionWrites": false,
+          "appFrameworkOrVendorWidgetTested": false,
+          "modelOrAgentReasoningTested": false,
+          "networkScope": "Playwright page-request routing; not a physical network audit"
+        },
+        "executionBoundary": "Syntheticloopback delayedcustomcombobox explicitcommittedvalue, blockedclick actionabilitytrial plusnamedlocaldismissal+normalclick, tooltip hover/programmaticfocus textandaria-describedby. Noproduction/vendorframework/realaccount/keyboardTabnavigation/modelreasoning/serverwrites. Nonloopbackpagerequestsblocked; notphysical/backgroundnetworkaudit.",
+        "repeatReason": "Output/assertion wording changed to name programmatic focus accurately; first successful byte-version run preserved, no runtime failures."
+      }
+    }
+  ]
+}

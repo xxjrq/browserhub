@@ -5352,6 +5352,196 @@
         "28day": "2026-11-27"
       },
       "dateOnlyReminder": "Use exact successful publication receipt time +7/+14/+28 days in delivery record, then closed comparable windows. Calendar date alone does not establish maturity."
+    },
+    {
+      "id": "guides:ai-browser-shortlist-job-postings",
+      "primaryKeyword": {
+        "en": "AI browser job posting shortlist",
+        "zh-CN": "AI 浏览器招聘岗位候选清单"
+      },
+      "intent": "Collect public job postings into a source-linked pre-application shortlist; keep employer evidence, hard constraints, duplicates and unknown fields visible.",
+      "cluster": "AI browsers and browser agents",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-shortlist-job-postings/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-shortlist-job-postings/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-31",
+      "demandEvidence": "Public task pages and job-search agent examples opened 2026-10-31; qualitative only. No search volume or BrowserHub demand claim.",
+      "sourceRecord": "docs/seo/research-2026-10-31.json",
+      "originalGain": "Keep pre-application research distinct from existing post-application status tracker and generic structured extraction.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "distinctiveCoverage": "Keep pre-application research distinct from existing post-application status tracker and generic structured extraction."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-scholarship-eligibility-shortlist",
+      "primaryKeyword": {
+        "en": "AI browser scholarship eligibility shortlist",
+        "zh-CN": "AI 浏览器奖学金资格筛选"
+      },
+      "intent": "Gather scholarship candidates into a source-linked ledger with current-cycle eligibility, deadlines, missing rules and provider-verification status.",
+      "cluster": "AI browsers and browser agents",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-scholarship-eligibility-shortlist/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-scholarship-eligibility-shortlist/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-31",
+      "demandEvidence": "Current scholarship-finder product pages opened 2026-10-31 and official federal student-aid/CareerOneStop sources; qualitative only. No search volume or BrowserHub demand claim.",
+      "sourceRecord": "docs/seo/research-2026-10-31.json",
+      "originalGain": "Scholarship discovery and provider-rule ledger; no award prediction, personalized financial advice or application submission.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "distinctiveCoverage": "Scholarship discovery and provider-rule ledger; no award prediction, personalized financial advice or application submission."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-dynamic-combobox-option-selection",
+      "primaryKeyword": {
+        "en": "Playwright dynamic combobox select option",
+        "zh-CN": "Playwright 动态组合框选择选项"
+      },
+      "intent": "Diagnose native select versus asynchronous custom combobox, wait for the current query option, select through the supported widget path, and verify committed state.",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-dynamic-combobox-option-selection/",
+        "https://browserhub.co/zh-cn/guides/playwright-dynamic-combobox-option-selection/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-31",
+      "demandEvidence": "Current developer problem pages and W3C/Playwright documentation opened 2026-10-31; qualitative task evidence only.",
+      "sourceRecord": "docs/seo/research-2026-10-31.json",
+      "originalGain": "Do not duplicate date picker, generic form submission or rich-text editor state. Focus on asynchronous suggestions and selection commitment.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "distinctiveCoverage": "Do not duplicate date picker, generic form submission or rich-text editor state. Focus on asynchronous suggestions and selection commitment."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:browser-agent-diagnose-blocked-clicks",
+      "primaryKeyword": {
+        "en": "Playwright browser agent click intercepted by overlay",
+        "zh-CN": "浏览器智能体点击被遮罩拦截"
+      },
+      "intent": "Interpret Playwright hit-target evidence, classify the covering layer, and choose wait, supported dismissal, fresh targeting or stop; constrain forced interaction.",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-diagnose-blocked-clicks/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-diagnose-blocked-clicks/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-31",
+      "demandEvidence": "Current troubleshooting pages and official Playwright actionability documentation opened 2026-10-31; qualitative task evidence only.",
+      "sourceRecord": "docs/seo/research-2026-10-31.json",
+      "originalGain": "Focus on blocked pointer target and safe recovery; adjacent cookie-consent and trace pages are links, not alternate owners.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "distinctiveCoverage": "Focus on blocked pointer target and safe recovery; adjacent cookie-consent and trace pages are links, not alternate owners."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:browser-agent-reveal-and-check-tooltip-help",
+      "primaryKeyword": {
+        "en": "browser agent read tooltip help text",
+        "zh-CN": "浏览器智能体读取提示气泡说明"
+      },
+      "intent": "Reveal a specific control’s hover/focus help, verify its accessible association, distinguish help from an actionable popup, and report ambiguous or missing text.",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/browser-agent-reveal-and-check-tooltip-help/",
+        "https://browserhub.co/zh-cn/guides/browser-agent-reveal-and-check-tooltip-help/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-10-31",
+      "demandEvidence": "Current tooltip-testing/problem pages and W3C/MDN/Playwright interaction docs opened 2026-10-31; qualitative evidence only.",
+      "sourceRecord": "docs/seo/research-2026-10-31.json",
+      "originalGain": "Focus on agent discovery of supplementary UI help and authorization boundary; distinct from whole-page accessibility snapshot versus screenshot.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "distinctiveCoverage": "Focus on agent discovery of supplementary UI help and authorization boundary; distinct from whole-page accessibility snapshot versus screenshot."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-07",
+        "14day": "2026-11-14",
+        "28day": "2026-11-28"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
