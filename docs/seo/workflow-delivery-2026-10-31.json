@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-31",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-10-31",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "4911eb8818963377e62926e3b4bad573317390ca143934e186efcd12dcdc3815",
+  "commit": "fbfb6e6dd5eb8f4289c8f5930acd2a77c026fd71",
+  "release": "/opt/browsertools/releases/20261031-091806",
+  "publicationReceiptAt": "2026-10-31T01:18:44.449Z",
+  "completedAt": "2026-10-31T01:18:45.902Z",
+  "newTopics": [
+    "ai-browser-shortlist-job-postings",
+    "ai-browser-scholarship-eligibility-shortlist",
+    "playwright-dynamic-combobox-option-selection",
+    "browser-agent-diagnose-blocked-clicks",
+    "browser-agent-reveal-and-check-tooltip-help"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-shortlist-job-postings/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-shortlist-job-postings/",
+    "https://browserhub.co/en/guides/ai-browser-scholarship-eligibility-shortlist/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-scholarship-eligibility-shortlist/",
+    "https://browserhub.co/en/guides/playwright-dynamic-combobox-option-selection/",
+    "https://browserhub.co/zh-cn/guides/playwright-dynamic-combobox-option-selection/",
+    "https://browserhub.co/en/guides/browser-agent-diagnose-blocked-clicks/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-diagnose-blocked-clicks/",
+    "https://browserhub.co/en/guides/browser-agent-reveal-and-check-tooltip-help/",
+    "https://browserhub.co/zh-cn/guides/browser-agent-reveal-and-check-tooltip-help/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent new themes; EN/ZH editions count once. All79 prior topics and145 keywordrows preserved. Preexisting committed and already-live19comparison enhancements are baseline, not today new work.",
+  "editorialSelection": "Pre-application job shortlist, provider-linked scholarship eligibility/deadline ledger, customcombobox committed selection, blockedclick diagnosis and supplementary tooltip help. Current directlyopened task/problem and primarysource evidence; no volume/ranking/traffic or vendorbenchmark claims.",
+  "sourceRecords": [
+    "docs/seo/research-2026-10-31.json"
+  ],
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful publication receipt, not first reader or search-engine discovery.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-07T01:18:44.449000+00:00",
+      "14day": "2026-11-14T01:18:44.449000+00:00",
+      "28day": "2026-11-28T01:18:44.449000+00:00"
+    },
+    "measurementRule": "Use matching closed available windows, preserve data latency/missing values; rawaccount/effect metrics private."
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": false
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "independentContext": true,
+    "fileCount": 8,
+    "sha256": "e4707aa5fbc6bbe18d98dbf3487d1446f15435175889d65cf2995f347a95bf19"
+  },
+  "executionAccounting": {
+    "historyStoredPrivately": true,
+    "ciPreflightAttempts": 2,
+    "fixtureRuntimeRuns": 2,
+    "fixtureRuntimeFailures": 0,
+    "repeatReason": "Final asset renamed focus output/assertion to explicitlyprogrammaticfocus, notkeyboardTabnavigation; actualchangedbyte rerun, firstpasspreserved",
+    "staticCorrections": "Two defects identified and corrected before firstactualruntime; no three-distinct-failed-approach escalation."
+  },
+  "validation": {
+    "preflightCi": {
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 2,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "ba18fabebc53e6ea15ad10a059427e2e5eeb83e309b58f7c226901c586f8e46d"
+    },
+    "repositoryRead": {
+      "exitCode": 0,
+      "projectScopedAuthVerified": true
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1308,
+    "seoAudit": {
+      "htmlPages": 1304,
+      "sitemapUrls": 1036,
+      "internalLinks": 44274,
+      "alternateLinks": 7700,
+      "fallbackPages": 60,
+      "editorialGuides": 168,
+      "errors": 0
+    },
+    "contentContract": {
+      "status": "passed",
+      "existingTopicsPreserved": 79,
+      "totalTopics": 84,
+      "completeEditions": 168,
+      "newTopics": 5
+    },
+    "scope": "Reviewed dated content/data/series/keyword/research/downloadasset and requiredslug audit additions. No renderer/dependency/sharedrunner/clientbackend changes. Preexisting9153a58 comparison/validation/rating changes preserved; representative dualdomainHTML already matched existing export before thiscycle.",
+    "productFacts": "36 catalogue records unchanged;26 confirmed price/licence and10 explicitlyunverified prices keepfielddates2026-10-16; this article release does not recertify them.",
+    "serverCurrent": {
+      "checkedAt": "2026-10-31T01:18:56.997528+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261031-091806",
+      "expected": "/opt/browsertools/releases/20261031-091806",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-10-31T01:18:45.859Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-shortlist-job-postings/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-shortlist-job-postings/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-shortlist-job-postings/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-shortlist-job-postings/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-scholarship-eligibility-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-scholarship-eligibility-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-scholarship-eligibility-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-scholarship-eligibility-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-dynamic-combobox-option-selection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-dynamic-combobox-option-selection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-dynamic-combobox-option-selection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-dynamic-combobox-option-selection/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-diagnose-blocked-clicks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-diagnose-blocked-clicks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-diagnose-blocked-clicks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-diagnose-blocked-clicks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/browser-agent-reveal-and-check-tooltip-help/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/browser-agent-reveal-and-check-tooltip-help/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/browser-agent-reveal-and-check-tooltip-help/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/browser-agent-reveal-and-check-tooltip-help/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-10-31T01:18:54.661027+00:00",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/templates/browser-agent-interaction-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "4ab27915e604a4c6eb9eabc5afb9d44002a980bd9213a7d72c0b5e38eaddae96",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/browser-agent-interaction-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "4ab27915e604a4c6eb9eabc5afb9d44002a980bd9213a7d72c0b5e38eaddae96",
+        "bytesMatch": true
+      }
+    ]
+  },
+  "localExamples": [
+    {
+      "assetPath": "public/templates/browser-agent-interaction-fixture.mjs",
+      "assetSha256": "4ab27915e604a4c6eb9eabc5afb9d44002a980bd9213a7d72c0b5e38eaddae96",
+      "exitCode": 0,
+      "runtimeAttempt": 2,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.1",
+      "stdout": {
+        "result": "local_browser_agent_interaction_fixture_passed",
+        "nodeVersion": "v22.22.3",
+        "browserVersion": "156.0.8078.49",
+        "combobox": {
+          "query": "Res",
+          "matchedOption": "Research",
+          "committed": "department:research",
+          "typedTextWasNotTreatedAsSelection": true
+        },
+        "blockedClick": {
+          "trialDetectedIntercept": true,
+          "fixtureDismissalAuthorized": true,
+          "resultAfterNormalClick": "Saved local draft"
+        },
+        "tooltip": {
+          "hoverText": "Renewal date is shown in the selected plan's time zone.",
+          "programmaticFocusText": "Renewal date is shown in the selected plan's time zone.",
+          "ariaDescribedBy": "fixture-tooltip"
+        },
+        "externalPageRequestsAllowed": false,
+        "realAccounts": false,
+        "localStateChanged": true,
+        "serverWrites": false,
+        "productionWrites": false,
+        "appFrameworkOrVendorWidgetTested": false,
+        "modelOrAgentReasoningTested": false,
+        "networkScope": "Playwright page-request routing; not a physical network audit"
+      },
+      "executionBoundary": "Syntheticloopback delayedcustomcombobox explicitcommittedvalue, blockedclick actionabilitytrial plusnamedlocaldismissal+normalclick, tooltip hover/programmaticfocus textandaria-describedby. Noproduction/vendorframework/realaccount/keyboardTabnavigation/modelreasoning/serverwrites. Nonloopbackpagerequestsblocked; notphysical/backgroundnetworkaudit.",
+      "repeatReason": "Final asset renamed focus output/assertion to explicitlyprogrammaticfocus, notkeyboardTabnavigation; actualchangedbyte rerun, firstpasspreserved"
+    }
+  ],
+  "measurement": {
+    "privateReviewSaved": true,
+    "status": "Authenticated read-only GSC follow-up recorded privately. No publication or local example count presented as traffic/conversion gain."
+  },
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or validationrequests",
+    "Detection website",
+    "EasyBR client/backend or sharedservice changes",
+    "Outreach/application/financialaward submissions or accountactions",
+    "New paidtools/subscriptions/modelAPIs",
+    "Cloudflare/analyticsconfig"
+  ]
+}
