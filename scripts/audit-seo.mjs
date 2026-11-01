@@ -165,7 +165,10 @@ for (const page of pages.values()) {
 	if (locale && /^\/[^/]+\/browsers\/[^/]+\/$/.test(route)) {
 		const slug = route.split("/")[3];
 		if (!page.article.includes(`data-product-evidence="${slug}"`)) add(route, "product missing visible official-source verification");
-		if (!/Current price unverified|Listed price confirmed|当前价格未核实|所列价格已在该日期确认/.test(page.articleText)) add(route, "product missing explicit price verification status");
+		// The status is checked through a machine-readable attribute rather than
+		// through the sentence, because the sentence is translated per locale and
+		// a text match would break every time a translation changed.
+		if (!/data-price-status="(?:verified|unverified)"/.test(page.article)) add(route, "product missing explicit price verification status");
 	}
 	if (detail && !page.schemas.length) add(route, "detail page missing JSON-LD");
 	for (const schema of page.schemas) {

@@ -168,7 +168,7 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
 						))}
 					</div>
 				</section>
-			<div className="grid gap-5 md:grid-cols-2">{[browserA, browserB].map(browser => <div key={browser.slug}><p className="mt-6 font-semibold">{browser.name}</p><ProductEvidence slug={browser.slug} compact /></div>)}</div>
+			<div className="grid gap-5 md:grid-cols-2">{[browserA, browserB].map(browser => <div key={browser.slug}><p className="mt-6 font-semibold">{browser.name}</p><ProductEvidence slug={browser.slug} compact name={browser.name} /></div>)}</div>
 			</article>
 		</div>
 	);

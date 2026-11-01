@@ -12,9 +12,9 @@ function inline(text: string) {
 	});
 }
 
-export function SectionBody({ body, className }: { body: string; className?: string }) {
+export function SectionBody({ body, className, lang }: { body: string; className?: string; lang?: string }) {
 	const blocks = body.split(/\n{2,}/).map(block => block.trim()).filter(Boolean);
-	return <div className={className ?? "space-y-4"}>{blocks.map((block, index) => {
+	return <div className={className ?? "space-y-4"} lang={lang}>{blocks.map((block, index) => {
 		const lines = block.split("\n").map(line => line.trim()).filter(Boolean);
 		if (lines.length && lines.every(line => line.startsWith("- "))) {
 			return <ul key={index} className="list-disc space-y-2 pl-5 text-sm leading-7 text-muted-foreground">{lines.map((line, i) => <li key={i}>{inline(line.slice(2))}</li>)}</ul>;

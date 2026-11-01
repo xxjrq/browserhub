@@ -305,20 +305,82 @@ const openingFor = (input: BrowserSectionInput, locale: BrowserSectionsLocale) =
 // ---------------------------------------------------------------------------
 
 /**
+ * Localised section headings. All seven locales are covered here because the
+ * headings are short structural labels, not article prose — the same rule
+ * `tool-sections.ts` and `fingerprint-sections.ts` follow.
+ *
+ * A 2026-11-01 audit of the built pages found this was the last page class
+ * whose headings were never translated: every one of the six headings below
+ * was emitted in English on the ja/ko/es/pt/ru browser pages, which left those
+ * pages with an English document outline under a localised `<title>`.
+ */
+const headings: Record<Locale, { storage: string; engine: string; proxy: string; platform: string; evaluate: string; precheck: string }> = {
+	"zh-cn": {
+		storage: "存储方式决定了这个产品的前提",
+		engine: "内核与自动化接口怎么核对",
+		proxy: "代理协议字段该怎么读",
+		platform: "平台覆盖的实际影响",
+		evaluate: "把它放进评估流程",
+		precheck: "开始之前需要先确认的事"
+	},
+	en: {
+		storage: "Storage model sets the premise",
+		engine: "Engine and automation interface",
+		proxy: "How to read the proxy protocol field",
+		platform: "What platform coverage actually affects",
+		evaluate: "Putting it into an evaluation process",
+		precheck: "What to confirm before you start"
+	},
+	ja: {
+		storage: "保存方式がこの製品の前提を決める",
+		engine: "ブラウザエンジンと自動化インターフェースの核对方法",
+		proxy: "プロキシプロトコル項目の読み方",
+		platform: "対応プラットフォームの範囲が実際に意味すること",
+		evaluate: "評価プロセスに組み込む",
+		precheck: "始める前に確認しておくこと"
+	},
+	ko: {
+		storage: "저장 방식이 이 제품의 전제를 정한다",
+		engine: "브라우저 엔진과 자동화 인터페이스 확인 방법",
+		proxy: "프록시 프로토콜 항목 읽는 법",
+		platform: "지원 플랫폼 범위가 실제로 의미하는 것",
+		evaluate: "평가 절차에 넣기",
+		precheck: "시작하기 전에 확인할 것"
+	},
+	es: {
+		storage: "El modelo de almacenamiento determina las premisas del producto",
+		engine: "Cómo verificar el motor del navegador y la interfaz de automatización",
+		proxy: "Cómo leer el campo de protocolo de proxy",
+		platform: "Qué afecta realmente la cobertura de plataformas",
+		evaluate: "Cómo integrarlo en un proceso de evaluación",
+		precheck: "Qué confirmar antes de empezar"
+	},
+	pt: {
+		storage: "O modelo de armazenamento determina as premissas do produto",
+		engine: "Como verificar o motor do navegador e a interface de automação",
+		proxy: "Como ler o campo de protocolo de proxy",
+		platform: "O que a cobertura de plataformas realmente afeta",
+		evaluate: "Como integrá-lo em um processo de avaliação",
+		precheck: "O que confirmar antes de começar"
+	},
+	ru: {
+		storage: "Модель хранения задаёт предпосылки продукта",
+		engine: "Как проверить движок браузера и интерфейс автоматизации",
+		proxy: "Как читать поле с протоколами прокси",
+		platform: "Что на самом деле влияет список поддерживаемых платформ",
+		evaluate: "Как встроить это в процесс оценки",
+		precheck: "Что проверить перед началом работы"
+	}
+};
+
+/**
  * Sections are chosen by which catalog fields the product actually has, so the
  * page only carries advice relevant to that product. A page with no recorded
  * proxy protocols does not get a proxy section.
  */
-function sectionsFor(input: BrowserSectionInput, locale: BrowserSectionsLocale): BrowserSection[] {
-	const zh = locale === "zh-cn";
-	const heading = {
-		storage: zh ? "存储方式决定了这个产品的前提" : "Storage model sets the premise",
-		engine: zh ? "内核与自动化接口怎么核对" : "Engine and automation interface",
-		proxy: zh ? "代理协议字段该怎么读" : "How to read the proxy protocol field",
-		platform: zh ? "平台覆盖的实际影响" : "What platform coverage actually affects",
-		evaluate: zh ? "把它放进评估流程" : "Putting it into an evaluation process",
-		precheck: zh ? "开始之前需要先确认的事" : "What to confirm before you start"
-	};
+function sectionsFor(input: BrowserSectionInput, copyLocale: BrowserSectionsLocale, headingLocale: Locale): BrowserSection[] {
+	const zh = copyLocale === "zh-cn";
+	const heading = headings[headingLocale] ?? headings.en;
 
 	const sections: BrowserSection[] = [];
 
@@ -377,5 +439,5 @@ function sectionsFor(input: BrowserSectionInput, locale: BrowserSectionsLocale):
  */
 export function browserSectionsFor(input: BrowserSectionInput, locale: Locale): { opening: string; sections: BrowserSection[] } {
 	const language: BrowserSectionsLocale = locale === "zh-cn" ? "zh-cn" : "en";
-	return { opening: openingFor(input, language), sections: sectionsFor(input, language) };
+	return { opening: openingFor(input, language), sections: sectionsFor(input, language, locale) };
 }
