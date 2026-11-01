@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-01",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "3166c8bfd09ed4a7270d5cb66f60e9bcda3875c8b55f3203fde71593168f2f8c",
+  "commit": "e22fd8785f5b42f88465b49b6af4fe4b02834971",
+  "release": "/opt/browsertools/releases/20261101-092412",
+  "publicationReceiptAt": "2026-11-01T01:24:45.940Z",
+  "completedAt": "2026-11-01T01:24:52.782Z",
+  "newTopics": [
+    "ai-browser-build-degree-plan-from-course-catalogs",
+    "ai-browser-build-conference-agenda",
+    "ai-browser-volunteer-opportunity-shortlist",
+    "playwright-test-multiple-roles-permissions",
+    "playwright-stabilize-dynamic-screenshot-assertions"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-build-degree-plan-from-course-catalogs/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-build-degree-plan-from-course-catalogs/",
+    "https://browserhub.co/en/guides/ai-browser-build-conference-agenda/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-build-conference-agenda/",
+    "https://browserhub.co/en/guides/ai-browser-volunteer-opportunity-shortlist/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-volunteer-opportunity-shortlist/",
+    "https://browserhub.co/en/guides/playwright-test-multiple-roles-permissions/",
+    "https://browserhub.co/zh-cn/guides/playwright-test-multiple-roles-permissions/",
+    "https://browserhub.co/en/guides/playwright-stabilize-dynamic-screenshot-assertions/",
+    "https://browserhub.co/zh-cn/guides/playwright-stabilize-dynamic-screenshot-assertions/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent new themes; EN/ZH editions count once. All84 prior topics and150 keywordrows preserved. Preexisting committed and already-live llms route/check enhancement is baseline, not today new work.",
+  "editorialSelection": "Five independently scoped AI-browser user/developer tasks, with current directly opened problem/competing pages and primary sources, preserving existing intent owners. No volume/ranking/traffic/vendor benchmark claims.",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-01.json"
+  ],
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful publication receipt, not first reader or search-engine discovery.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-08T01:24:45.940000+00:00",
+      "14day": "2026-11-15T01:24:45.940000+00:00",
+      "28day": "2026-11-29T01:24:45.940000+00:00"
+    },
+    "measurementRule": "Use matching closed available windows, preserve data latency/missing values; rawaccount/effect metrics private."
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": false
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "independentContext": true,
+    "fileCount": 8,
+    "sha256": "07f9eb1629b23f52ff5fd09fb846121d0efa34e94663fb425ba21ea8ddf50b2c"
+  },
+  "executionAccounting": {
+    "historyStoredPrivately": true,
+    "ciPreflightAttempts": 1,
+    "fixtureRuntimeRuns": 1,
+    "fixtureRuntimeFailures": 0,
+    "repeatReason": null,
+    "ciRepeatReason": null,
+    "staticCorrections": "See private execution/review history; no unreported model switch or fabricated runtime count."
+  },
+  "validation": {
+    "preflightCi": {
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "02885a59e7847d1e746ca44fbde0e63019c87af8a6962584d72b266991d24b0d"
+    },
+    "repositoryRead": {
+      "exitCode": 0,
+      "projectScopedAuthVerified": true
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1323,
+    "seoAudit": {
+      "htmlPages": 1319,
+      "sitemapUrls": 1046,
+      "internalLinks": 44878,
+      "alternateLinks": 7745,
+      "fallbackPages": 60,
+      "editorialGuides": 178,
+      "errors": 0
+    },
+    "contentContract": {
+      "status": "passed",
+      "existingTopicsPreserved": 84,
+      "totalTopics": 89,
+      "completeEditions": 178,
+      "newTopics": 5
+    },
+    "scope": "Reviewed dated content/data/series/keyword/research/downloadasset and requiredslug audit additions. No renderer/dependency/sharedrunner/clientbackend changes. Preexisting05f4ed0 llms route/check/patrol changes preserved; llms.txt already matched existing export on bothdomains before thiscycle.",
+    "productFacts": "36 catalogue records unchanged;26 confirmed price/licence and10 explicitlyunverified prices keepfielddates2026-10-16; this article release does not recertify them.",
+    "serverCurrent": {
+      "checkedAt": "2026-11-01T01:25:28.504665+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261101-092412",
+      "expected": "/opt/browsertools/releases/20261101-092412",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-01T01:24:52.735Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-build-degree-plan-from-course-catalogs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-build-degree-plan-from-course-catalogs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-build-degree-plan-from-course-catalogs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-build-degree-plan-from-course-catalogs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-build-conference-agenda/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-build-conference-agenda/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-build-conference-agenda/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-build-conference-agenda/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-volunteer-opportunity-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-volunteer-opportunity-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-volunteer-opportunity-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-volunteer-opportunity-shortlist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-test-multiple-roles-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-test-multiple-roles-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-test-multiple-roles-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-test-multiple-roles-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-stabilize-dynamic-screenshot-assertions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-stabilize-dynamic-screenshot-assertions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-stabilize-dynamic-screenshot-assertions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-stabilize-dynamic-screenshot-assertions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-11-01T01:25:25.910610+00:00",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/templates/playwright-role-visual-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "ba853a6c0c09475697e7bb164800555b82716d08b6ab115cb9db7f4e250fc2ab",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/playwright-role-visual-fixture.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "ba853a6c0c09475697e7bb164800555b82716d08b6ab115cb9db7f4e250fc2ab",
+        "bytesMatch": true
+      }
+    ]
+  },
+  "localExamples": [
+    {
+      "assetPath": "public/templates/playwright-role-visual-fixture.mjs",
+      "assetSha256": "ba853a6c0c09475697e7bb164800555b82716d08b6ab115cb9db7f4e250fc2ab",
+      "exitCode": 0,
+      "runtimeAttempt": 1,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.1",
+      "stdout": {
+        "result": "local_synthetic_role_and_mask_comparison_completed",
+        "nodeVersion": "v22.22.3",
+        "browserVersion": "156.0.8078.76",
+        "roles": {
+          "admin": {
+            "renderedStatus": "200: synthetic audit record available",
+            "auditLinkVisible": true,
+            "panelOpened": true
+          },
+          "member": {
+            "renderedStatus": "403: forbidden in synthetic fixture",
+            "auditLinkVisible": false,
+            "directProtectedRequest": 403
+          }
+        },
+        "screenshotComparison": {
+          "scope": "Same page, same process and browser, same rendered layout; synthetic timestamp text is the only intentional state change.",
+          "firstTextAsserted": "Checked at 2026-11-01T12:00:00.000Z",
+          "secondTextAsserted": "Checked at 2026-11-01T12:00:01.000Z",
+          "unmaskedPngSha256": [
+            "316fce59b8f5defe9ab82149be3b52c4b467ab724963cb83793b612ca468ca15",
+            "8bc80ebc73f33d7215736d5ef1cdcb6ae0289bd0e85a668e4b561f2c823e1c49"
+          ],
+          "unmaskedPngDifferingByteCount": 21622,
+          "maskedPngSha256": [
+            "314c54493ff7bb03091fcb8271e32f2fb2db6d7be29b58956b7399c2e036ebba",
+            "314c54493ff7bb03091fcb8271e32f2fb2db6d7be29b58956b7399c2e036ebba"
+          ],
+          "maskedPngDifferingByteCount": 0,
+          "maskedPngBytesEqual": true,
+          "screenshotFilesWritten": false
+        },
+        "pageRequestsAllowed": "exact 127.0.0.1 origin and ephemeral port only through Playwright page routing; service workers blocked",
+        "roleSelector": "Readable caller-controlled synthetic fixture cookie, not authentication or a security mechanism",
+        "realAccounts": false,
+        "productionWrites": false,
+        "applicationBackendTested": false,
+        "authorizationScope": "Synthetic Node HTTP branch only; not an authentication or production authorization assessment",
+        "portabilityClaim": "No cross-OS, cross-browser-build, CI-worker, baseline, or real-application compatibility claim"
+      },
+      "executionBoundary": "Syntheticrole-selectorcookiein2isolatedBrowserContexts andtoyNodeHTTP403branch; notauthentication/productionauthorization. Samepage/sameprocessfixedtimestampDOMassertions andunmasked/maskedPNGbytecomparisons; nocrossOS/build/baseline/vendor/CIportability assessment. Exactoriginpagerequestrouting, notphysical/browserbackgroundnetworkaudit. No realaccounts/serverorproductionwrites/LLM or screenshotfiles.",
+      "repeatReason": null
+    }
+  ],
+  "measurement": {
+    "privateReviewSaved": true,
+    "status": "Authenticated read-only GSC follow-up recorded privately. No publication or local example count presented as traffic/conversion gain."
+  },
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or validationrequests",
+    "Detection website",
+    "EasyBR client/backend or sharedservice changes",
+    "Outreach/application/submission/registration or realaccount actions",
+    "New paidtools/subscriptions/modelAPIs",
+    "Cloudflare/analyticsconfig"
+  ]
+}
