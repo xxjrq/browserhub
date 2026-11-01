@@ -1,0 +1,447 @@
+{
+  "cycleId": "content-2026-11-01",
+  "observedOn": "2026-11-01",
+  "status": "draft evidence record; not publication or traffic proof",
+  "researchMethod": {
+    "sourceTypes": [
+      "official product and API documentation",
+      "official institutional and event pages",
+      "competitor and tutorial pages",
+      "public practitioner discussions"
+    ],
+    "searchTool": "Public web search and direct page opens",
+    "firecrawl": "Broad Firecrawl research was unavailable for this cycle; fallback used public search and direct page opens.",
+    "limits": [
+      "No search volume, ranking, trend, demand percentage, or conversion estimate is claimed.",
+      "Public discussion is qualitative task evidence, not a representative survey.",
+      "No proprietary BrowserHub query or click data is included in this editorial file.",
+      "Official sources were opened separately from competitor/problem pages; official documentation is not counted toward the three competitor/problem/tutorial pages per theme."
+    ],
+    "failedReads": [
+      {
+        "url": "https://www.americorps.gov/join/find-volunteer-opportunity",
+        "result": "Direct page open returned HTTP 403; page was not read and is not used for factual claims."
+      },
+      {
+        "url": "https://www.rfc-editor.org/rfc/rfc5545",
+        "result": "Direct page open returned HTTP 429; page was not read and is not used for factual claims. An accessible official IETF Datatracker copy was opened instead."
+      }
+    ],
+    "redirectedOrUnavailable": [
+      {
+        "url": "https://www.oracle.com/ai-world/planning-guide/",
+        "result": "Current open redirects to the post-event /ai-world/ on-demand page; not treated as a current event-planning or logistics guide and not counted among the three conference task/tutorial pages."
+      },
+      {
+        "url": "https://learn.sessionboard.com/agents/scheduler",
+        "result": "Current open redirects to a welcome/sign-in page; the earlier cached scheduler result is not treated as a fresh page read or counted among retained evidence."
+      },
+      {
+        "url": "https://catalog.nau.edu/ProgressionPlans/",
+        "result": "This executor had previously opened the progression-plan page; a fresh current open now failed through web access and direct access returned HTTP 500. Preserve the earlier reading as historical evidence only; do not claim the page is currently accessible."
+      },
+      {
+        "url": "https://subscription.packtpub.com/book/programming/9781806106479/14/ch14lvl1sec04/managing-multiple-user-roles-in-tests",
+        "result": "Search result described a multiple-role tutorial, but direct open returned HTTP 403. Not read and not counted."
+      }
+    ]
+  },
+  "topicDecision": {
+    "priorPublishedThemeCount": 84,
+    "priorEditions": 168,
+    "priorKeywordRows": 150,
+    "selectedCount": 5,
+    "noveltyChecks": "Compared selected slugs and tasks against the existing guide corpus and 31 October batch. Rejected download-versus-inline as a new theme because the existing browser-agent-download-files guide already covers download events, inline PDFs, troubleshooting and templates. The retained topics add independent user tasks; links to adjacent guides are supporting context, not claims of a new product feature.",
+    "selectedTopics": [
+      "ai-browser-build-degree-plan-from-course-catalogs",
+      "ai-browser-build-conference-agenda",
+      "ai-browser-volunteer-opportunity-shortlist",
+      "playwright-test-multiple-roles-permissions",
+      "playwright-stabilize-dynamic-screenshot-assertions"
+    ]
+  },
+  "modelProvenance": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "selectionSource": "human_task"
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "status": "pending independent review"
+    }
+  },
+  "candidateTopics": [
+    {
+      "slug": "ai-browser-build-degree-plan-from-course-catalogs",
+      "intent": "Turn official academic catalog requirements, progression maps, and current term schedules into a source-linked term-by-term degree-plan draft with prerequisite logic, alternatives, unresolved rules, and adviser questions.",
+      "userTask": "A student or adviser comparing official program requirements needs to distinguish binding requirements from sample maps, preferences, and current course availability without treating a browser-generated sequence as a degree audit.",
+      "competition": "Qualitative review found degree-planning products and course maps, but this guide focuses on reconciling a catalog year with registrar availability and keeping uncertain prerequisite or transfer-credit decisions visible for an adviser.",
+      "increment": "Adds an evidence ledger and a decision method for catalog-versus-schedule conflicts, AND/OR prerequisite structure, alternate terms, formal credit evaluation, and stopping before registration. Not a rewrite of a job or scholarship eligibility checklist.",
+      "openedCompetitorProblemTutorialPages": [
+        {
+          "title": "CoursePlanner.ai degree planner",
+          "url": "https://courseplanner.ai/",
+          "observation": "Degree-planning product page reviewed as a competitor example."
+        },
+        {
+          "title": "MonMap Monash course planner",
+          "url": "https://monmap.monashcoding.com/",
+          "observation": "Course-planning tool page reviewed as a competitor example."
+        },
+        {
+          "title": "CourseTree course-planning discussion",
+          "url": "https://www.reddit.com/r/UCalgary/comments/1u353bi/got_tired_of_course_planning_juggling_tabs_and/",
+          "observation": "Public student discussion reviewed for the multi-source planning problem; anecdotal only."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "UBC Computer Science AI option requirements",
+          "url": "https://www.cs.ubc.ca/undergrads/degree-programs-options/ai-option",
+          "observation": "Directly opened current official UBC option requirements. The page says being added to the AI option does not guarantee access to the courses needed to graduate with it; do not treat requirements as seat availability."
+        },
+        {
+          "title": "Microsoft AI Agents for Beginners, browser use lesson",
+          "url": "https://microsoft.github.io/ai-agents-for-beginners/15-browser-use/",
+          "observation": "Tutorial page reviewed for bounded browser-use framing."
+        }
+      ],
+      "competitionAssessment": "Products already support course planning; the useful editorial distinction is source governance and explicit unresolved conditions, not a claim that no competitor exists.",
+      "metrics": {
+        "searchVolume": null,
+        "rank": null,
+        "browserHubImpressions": null,
+        "browserHubClicks": null,
+        "conversion": null
+      },
+      "publication": {
+        "status": "pending review and publication receipt",
+        "firstPublishedAt": null
+      },
+      "reviews": [
+        "2026-11-08",
+        "2026-11-15",
+        "2026-11-29"
+      ],
+      "historicallyOpenedSources": [
+        {
+          "title": "Northern Arizona University progression plans",
+          "url": "https://catalog.nau.edu/ProgressionPlans/",
+          "observation": "Previously opened as a university progression-plan resource. A fresh 2026-11-01 open failed; this historical read is not a claim of current accessibility."
+        }
+      ],
+      "currentAccessChecks": [
+        {
+          "url": "https://catalog.nau.edu/ProgressionPlans/",
+          "result": "Fresh web open unavailable; direct access returned HTTP 500. Not used as current evidence."
+        }
+      ]
+    },
+    {
+      "slug": "ai-browser-build-conference-agenda",
+      "intent": "Create a personal conference-session shortlist from the current official program, preserving event timezone, conflicts, locations, change buffers, registration/capacity questions, and source links.",
+      "userTask": "An attendee comparing parallel sessions needs to make a reviewable agenda while accounting for local event time, room changes, cancellations, access details, and unsourced schedule discrepancies.",
+      "competition": "Three current, directly opened agenda/schedule pages cover conference program discovery, attendee agendas and schedule loading. Editorial value is a source-linked attendee decision ledger with event-local timezone, overlap/room buffers, unknown access/capacity state, and a stop before registration or calendar changes.",
+      "increment": "Adds a source-linked session decision table with timezone provenance, overlap and travel-buffer checks, alternatives, unknown accessibility/capacity status, and a stop before registration or calendar modification. Adjacent calendar timezone content is linked, not duplicated.",
+      "openedCompetitorProblemTutorialPages": [
+        {
+          "title": "Janix conference program and personal schedule",
+          "url": "https://janix.ai/program/",
+          "observation": "Directly opened program and personal agenda page."
+        },
+        {
+          "title": "AirBalloon attendee My Agenda",
+          "url": "https://airballoon.ai/help/roles/attendee/my-agenda/",
+          "observation": "Directly opened attendee-agenda documentation."
+        },
+        {
+          "title": "CalendarMCP conference schedule loader showcase",
+          "url": "https://calendarmcp.ai/showcase",
+          "observation": "Directly opened schedule-loading example page."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "IETF Datatracker RFC 5545 iCalendar specification",
+          "url": "https://datatracker.ietf.org/doc/html/rfc5545",
+          "observation": "Directly opened official RFC. Defines iCalendar event/time data, time-zone identifiers, and duration/date-time representation; supports advice to inspect timezone and interval fields before import."
+        }
+      ],
+      "failedPrimaryReads": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc5545",
+          "status": 429,
+          "usedForClaims": false
+        }
+      ],
+      "competitionAssessment": "Agenda tools are present; this guide is useful for source freshness, local event time, on-site transitions, and attendee-controlled choices. It makes no market-share or search-demand claim.",
+      "metrics": {
+        "searchVolume": null,
+        "rank": null,
+        "browserHubImpressions": null,
+        "browserHubClicks": null,
+        "conversion": null
+      },
+      "publication": {
+        "status": "pending review and publication receipt",
+        "firstPublishedAt": null
+      },
+      "reviews": [
+        "2026-11-08",
+        "2026-11-15",
+        "2026-11-29"
+      ]
+    },
+    {
+      "slug": "ai-browser-volunteer-opportunity-shortlist",
+      "intent": "Shortlist public volunteer roles against schedule, commitment, geography or remote scope, eligibility, training, accessibility, host source, deadline, and current availability.",
+      "userTask": "A prospective volunteer needs to tell whether a listing from an aggregator actually fits their time, location, eligibility, and access needs before sharing personal data or applying. A known schedule conflict should be rejected as a mismatch, while an omitted or ambiguous shift remains unresolved.",
+      "competition": "Reviewed established volunteer directories and a public search-advice discussion. The guide keeps aggregator leads separate from facts confirmed on the organization's own listing and flags inaccessible or stale source pages.",
+      "increment": "Adds schedule and weekly time cap, travel radius or remote scope, eligibility, accessibility, training, organization-source ambiguity and checked date. Does more than swap the noun in a job or scholarship ledger; it gives volunteering-specific verification fields and halts before outreach/application. Status rule: a confirmed time, eligibility or accessibility conflict is a mismatch; needs checking is reserved for missing or ambiguous source information.",
+      "openedCompetitorProblemTutorialPages": [
+        {
+          "title": "Network for Good volunteer opportunities",
+          "url": "https://www.networkforgood.org/volunteer/default.aspx",
+          "observation": "Volunteer directory page reviewed."
+        },
+        {
+          "title": "Reach Volunteering search opportunities",
+          "url": "https://reachvolunteering.org.uk/search/opportunities",
+          "observation": "Volunteer-matching directory reviewed."
+        },
+        {
+          "title": "How to search for volunteering roles",
+          "url": "https://www.reddit.com/r/volunteer/comments/1hqi6hl/how_to_use_google_or_any_search_engine_to_find/",
+          "observation": "Public advice discussion reviewed; anecdotal only."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "Volunteer Iowa opportunities",
+          "url": "https://volunteer.iowa.gov/volunteering/individuals/find-volunteer-opportunities",
+          "observation": "State volunteer-opportunity information page reviewed."
+        },
+        {
+          "title": "Volunteer Florida Volunteer Connect",
+          "url": "https://www.volunteerflorida.org/volunteerconnect/",
+          "observation": "State volunteer directory page reviewed."
+        }
+      ],
+      "failedPrimaryReads": [
+        {
+          "url": "https://www.americorps.gov/join/find-volunteer-opportunity",
+          "status": 403,
+          "usedForClaims": false
+        }
+      ],
+      "competitionAssessment": "Volunteer directories already exist; the editorial value is checking practical fit and host-source freshness instead of presenting a directory result as confirmed placement.",
+      "metrics": {
+        "searchVolume": null,
+        "rank": null,
+        "browserHubImpressions": null,
+        "browserHubClicks": null,
+        "conversion": null
+      },
+      "publication": {
+        "status": "pending review and publication receipt",
+        "firstPublishedAt": null
+      },
+      "reviews": [
+        "2026-11-08",
+        "2026-11-15",
+        "2026-11-29"
+      ]
+    },
+    {
+      "slug": "playwright-test-multiple-roles-permissions",
+      "intent": "Test two or more synthetic roles in isolated browser contexts and independently assert visible UI states and direct protected endpoint authorization behavior.",
+      "userTask": "A developer must distinguish browser-state isolation from actual server authorization and catch mismatches where UI visibility and protected API decisions disagree.",
+      "competition": "The official Playwright multi-role guide and multiple nonprimary tutorials already cover role states and separate contexts. One directly opened practitioner thread asks about architecture for test accounts with varied permissions. The remaining editorial increment is to keep authentication versus authorization distinct, assert UI and protected endpoint behavior separately, and label the local cookie fixture as a toy selector.",
+      "increment": "Adds a decision ledger that separates role session setup from authorization: distinct UI expectations, direct protected endpoint outcome, 401 versus 403 contract, and no-mutation check. It explicitly does not claim that separate contexts, hidden controls, or the downloadable caller-controlled selector validate a real application.",
+      "openedCompetitorProblemTutorialPages": [
+        {
+          "title": "Ministry of Testing: Simple Playwright authentication recipes",
+          "url": "https://www.ministryoftesting.com/insights/simple-playwright-authentication-recipes-a-cookbook-for-software-testers",
+          "observation": "Directly opened. Recipe 4 describes using admin and reader states in separate BrowserContexts in one test and discusses role-specific flows. It focuses on authentication-state setup; the article uses it as adjacent setup context, not independent proof of server authorization."
+        },
+        {
+          "title": "Leapwork: Test role-based access with multiple authenticated Playwright users",
+          "url": "https://docs.leapwork.com/playwright/latest/authentication-authorization/how-to-test-role-based-access-with-multiple-authenticated-users-in-playwright",
+          "observation": "Directly opened. Covers per-role identities, positive/negative permission checks, direct navigation/protected actions, and data isolation. Shows the existing tutorial coverage and limits the claimed increment to the independent UI/API verdict and synthetic-only boundary."
+        },
+        {
+          "title": "Reddit: RBAC test architecture in Playwright",
+          "url": "https://www.reddit.com/r/Playwright/comments/1l2f2il/rbac_test_architecture_in_playwright/",
+          "observation": "Directly opened. Practitioner asks how to organize test accounts with different permissions and describes global setup and per-account storage files. Anecdotal task evidence, not representative demand."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "Playwright authentication guide",
+          "url": "https://playwright.dev/docs/auth#testing-multiple-roles-together",
+          "observation": "Official multi-role test guidance reviewed; storage state can initialize distinct contexts."
+        },
+        {
+          "title": "Playwright browser contexts",
+          "url": "https://playwright.dev/docs/browser-contexts",
+          "observation": "Official documentation reviewed for isolated browser contexts."
+        },
+        {
+          "title": "OWASP Authorization Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+          "observation": "Primary security guidance reviewed for server-side access checks and deny-by-default authorization."
+        }
+      ],
+      "competitionAssessment": "Relevant tutorials exist; this article addresses the remaining practical distinction between browser-state setup and server-side authorization and avoids presenting the synthetic fixture as a security test.",
+      "metrics": {
+        "searchVolume": null,
+        "rank": null,
+        "browserHubImpressions": null,
+        "browserHubClicks": null,
+        "conversion": null
+      },
+      "publication": {
+        "status": "pending review and publication receipt",
+        "firstPublishedAt": null
+      },
+      "reviews": [
+        "2026-11-08",
+        "2026-11-15",
+        "2026-11-29"
+      ]
+    },
+    {
+      "slug": "playwright-stabilize-dynamic-screenshot-assertions",
+      "intent": "Reduce screenshot assertion noise by fixing relevant state, environment, and readiness; narrowly mask noncritical dynamic pixels; independently assert masked information.",
+      "userTask": "A developer needs to tell rendering drift from product regression without hiding a broken or missing value under an overly broad screenshot mask.",
+      "competition": "Official Playwright docs plus practical screenshot guides and public CI-flakiness discussions were reviewed. The article centers on an explicit decision order and mask risk, not a generic overview of visual testing.",
+      "increment": "Adds a concrete triage order, environment metadata list, mask ledger, independent semantic assertions for masked text, and one bounded synthetic same-process PNG comparison using two different fixed timestamp strings. It explicitly does not establish cross-OS/browser baseline portability.",
+      "openedCompetitorProblemTutorialPages": [
+        {
+          "title": "BrowserStack Playwright screenshot guide",
+          "url": "https://www.browserstack.com/guide/playwright-screenshot",
+          "observation": "Practical screenshot tutorial reviewed."
+        },
+        {
+          "title": "BrowserStack screenshot testing guide",
+          "url": "https://www.browserstack.com/guide/screenshot-testing",
+          "observation": "Visual testing tutorial reviewed."
+        },
+        {
+          "title": "Visual comparison failures with dynamic content",
+          "url": "https://www.reddit.com/r/QualityAssurance/comments/1ib8adp/playwright_has_native_visual_comparisons_feature_to/",
+          "observation": "Public practitioner problem discussion reviewed; anecdotal only."
+        },
+        {
+          "title": "Visual regression flakiness in CI",
+          "url": "https://www.reddit.com/r/Everything_QA/comments/1s2yl0e/how_do_you_deal_with_visual_regression_flakiness/",
+          "observation": "Public practitioner problem discussion reviewed; anecdotal only."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "Playwright visual comparisons",
+          "url": "https://playwright.dev/docs/test-snapshots",
+          "observation": "Official visual comparison documentation reviewed for environment and baseline concerns."
+        },
+        {
+          "title": "Playwright page screenshot assertions",
+          "url": "https://playwright.dev/docs/api/class-pageassertions",
+          "observation": "Official API reference reviewed for screenshot assertion behavior."
+        }
+      ],
+      "competitionAssessment": "Screenshot stabilization material is available; an independent practical contribution is exposing the tradeoff that a mask improves pixel determinism by removing evidence, and pairing it with an assertion on the underlying value.",
+      "metrics": {
+        "searchVolume": null,
+        "rank": null,
+        "browserHubImpressions": null,
+        "browserHubClicks": null,
+        "conversion": null
+      },
+      "publication": {
+        "status": "pending review and publication receipt",
+        "firstPublishedAt": null
+      },
+      "reviews": [
+        "2026-11-08",
+        "2026-11-15",
+        "2026-11-29"
+      ]
+    }
+  ],
+  "executionAccounting": {
+    "draftedEditions": 10,
+    "newThemes": 5,
+    "assetCount": 1,
+    "staticAssetCheck": "node --check passed for final fixture SHA ba853a6c0c09475697e7bb164800555b82716d08b6ab115cb9db7f4e250fc2ab; no executor runtime claim.",
+    "runtimeFailures": [],
+    "formalCI": "Not run by executor; root owns CI and publication workflow.",
+    "publicationStatus": "Pending independent review and root-controlled validation; no new page is claimed published by this draft.",
+    "rootRuntime": "Exact final-byte fixture run1 passed; no runtime failures. See assets for actual environment/output/boundaries.",
+    "sourceNote": "Current redirect and access failures are documented separately from pages successfully opened; only directly opened relevant pages count toward each task source floor."
+  },
+  "assets": [
+    {
+      "path": "public/templates/playwright-role-visual-fixture.mjs",
+      "sha256": "ba853a6c0c09475697e7bb164800555b82716d08b6ab115cb9db7f4e250fc2ab",
+      "staticCheck": "node --check passed",
+      "observedRuntime": {
+        "assetPath": "public/templates/playwright-role-visual-fixture.mjs",
+        "assetSha256": "ba853a6c0c09475697e7bb164800555b82716d08b6ab115cb9db7f4e250fc2ab",
+        "exitCode": 0,
+        "runtimeAttempt": 1,
+        "nodeVersion": "v22.22.3",
+        "playwrightVersion": "1.64.1",
+        "stdout": {
+          "result": "local_synthetic_role_and_mask_comparison_completed",
+          "nodeVersion": "v22.22.3",
+          "browserVersion": "156.0.8078.76",
+          "roles": {
+            "admin": {
+              "renderedStatus": "200: synthetic audit record available",
+              "auditLinkVisible": true,
+              "panelOpened": true
+            },
+            "member": {
+              "renderedStatus": "403: forbidden in synthetic fixture",
+              "auditLinkVisible": false,
+              "directProtectedRequest": 403
+            }
+          },
+          "screenshotComparison": {
+            "scope": "Same page, same process and browser, same rendered layout; synthetic timestamp text is the only intentional state change.",
+            "firstTextAsserted": "Checked at 2026-11-01T12:00:00.000Z",
+            "secondTextAsserted": "Checked at 2026-11-01T12:00:01.000Z",
+            "unmaskedPngSha256": [
+              "316fce59b8f5defe9ab82149be3b52c4b467ab724963cb83793b612ca468ca15",
+              "8bc80ebc73f33d7215736d5ef1cdcb6ae0289bd0e85a668e4b561f2c823e1c49"
+            ],
+            "unmaskedPngDifferingByteCount": 21622,
+            "maskedPngSha256": [
+              "314c54493ff7bb03091fcb8271e32f2fb2db6d7be29b58956b7399c2e036ebba",
+              "314c54493ff7bb03091fcb8271e32f2fb2db6d7be29b58956b7399c2e036ebba"
+            ],
+            "maskedPngDifferingByteCount": 0,
+            "maskedPngBytesEqual": true,
+            "screenshotFilesWritten": false
+          },
+          "pageRequestsAllowed": "exact 127.0.0.1 origin and ephemeral port only through Playwright page routing; service workers blocked",
+          "roleSelector": "Readable caller-controlled synthetic fixture cookie, not authentication or a security mechanism",
+          "realAccounts": false,
+          "productionWrites": false,
+          "applicationBackendTested": false,
+          "authorizationScope": "Synthetic Node HTTP branch only; not an authentication or production authorization assessment",
+          "portabilityClaim": "No cross-OS, cross-browser-build, CI-worker, baseline, or real-application compatibility claim"
+        },
+        "executionBoundary": "Syntheticrole-selectorcookiein2isolatedBrowserContexts andtoyNodeHTTP403branch; notauthentication/productionauthorization. Samepage/sameprocessfixedtimestampDOMassertions andunmasked/maskedPNGbytecomparisons; nocrossOS/build/baseline/vendor/CIportability assessment. Exactoriginpagerequestrouting, notphysical/browserbackgroundnetworkaudit. No realaccounts/serverorproductionwrites/LLM or screenshotfiles.",
+        "startedAt": "2026-11-01T01:14:09.778843+00:00",
+        "finishedAt": "2026-11-01T01:14:23.947590+00:00",
+        "executedBy": "root"
+      }
+    }
+  ]
+}

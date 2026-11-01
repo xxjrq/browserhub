@@ -3,6 +3,7 @@ import { aiApplicationsTranslations28 } from "./ai-applications-2026-10-28";
 import { aiCycleTranslations29 } from "./ai-cycle-2026-10-29";
 import { aiCycleTranslations30 } from "./ai-cycle-2026-10-30";
 import { aiCycleTranslations31 } from "./ai-cycle-2026-10-31";
+import { aiCycleTranslations01 } from "./ai-cycle-2026-11-01";
 import { aiUsageTranslations26 } from "./ai-usage-2026-10-26";
 import { aiReadinessTranslations26 } from "./ai-readiness-2026-10-26";
 import { aiChoicesTranslations25 } from "./ai-choices-2026-10-25";
@@ -29,6 +30,7 @@ import { dailyGuideTranslations } from "./daily-guides-2026-10-20";
 
 /** Complete editions only; untranslated legacy URLs retain labelled English. */
 export const guideEditions = {
+	...aiCycleTranslations01,
 	...aiCycleTranslations30,
 	...aiCycleTranslations31,
 	...aiCycleTranslations29,

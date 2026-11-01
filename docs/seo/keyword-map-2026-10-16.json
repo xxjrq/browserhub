@@ -5542,6 +5542,216 @@
         "28day": "2026-11-28"
       },
       "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-build-degree-plan-from-course-catalogs",
+      "primaryKeyword": {
+        "en": "AI browser course catalog degree plan",
+        "zh-CN": "AI 浏览器整理课程目录学位计划"
+      },
+      "intent": "Draft a source-linked term-by-term degree plan from official catalog rules and the current course schedule; show prerequisite constraints and adviser questions.",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-build-degree-plan-from-course-catalogs/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-build-degree-plan-from-course-catalogs/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-01",
+      "demandEvidence": "Opened three current planning/problem pages: CoursePlanner.ai, MonMap, and a student report describing manual cross-checking. Qualitative task evidence; no search volume or BrowserHub traffic inferred.",
+      "sourceRecord": "docs/seo/research-2026-11-01.json",
+      "originalGain": "Separates catalog requirements, current term offerings, and nonbinding progression maps; retains AND/OR prerequisites, cohort year, unresolved transfers, and adviser review.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-research-source-verification",
+          "ai-browser-organize-tabs-by-task"
+        ],
+        "distinctiveCoverage": "Separates catalog requirements, current term offerings, and nonbinding progression maps; retains AND/OR prerequisites, cohort year, unresolved transfers, and adviser review."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-08",
+        "14day": "2026-11-15",
+        "28day": "2026-11-29"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-build-conference-agenda",
+      "primaryKeyword": {
+        "en": "AI browser conference schedule planner",
+        "zh-CN": "AI 浏览器整理会议个人议程"
+      },
+      "intent": "Build a personal shortlist from official multi-track event pages, resolve overlapping sessions, preserve the event time zone, and flag room-change or capacity questions.",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-build-conference-agenda/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-build-conference-agenda/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-01",
+      "demandEvidence": "Opened three task-relevant pages: Janix conference program/personal schedule, AirBalloon attendee agenda help, and CalendarMCP schedule loader. These show existing agenda and schedule workflows; no search-volume or traffic inference. Oracle planning URL redirected to post-event content and Sessionboard redirected to sign-in, so neither is counted.",
+      "sourceRecord": "docs/seo/research-2026-11-01.json",
+      "originalGain": "Keeps primary choice and alternative for each conflict, separates event-local time from device-local display, and stops before registration or calendar writes.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-research-source-verification",
+          "ai-browser-organize-tabs-by-task"
+        ],
+        "distinctiveCoverage": "Keeps primary choice and alternative for each conflict, separates event-local time from device-local display, and stops before registration or calendar writes."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-08",
+        "14day": "2026-11-15",
+        "28day": "2026-11-29"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-volunteer-opportunity-shortlist",
+      "primaryKeyword": {
+        "en": "AI browser volunteer opportunities by availability",
+        "zh-CN": "AI 浏览器按时间筛选志愿服务岗位"
+      },
+      "intent": "Compare public volunteer roles by time commitment, schedule, location, eligibility, accessibility, host organization, and current status before contacting anyone.",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-volunteer-opportunity-shortlist/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-volunteer-opportunity-shortlist/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-01",
+      "demandEvidence": "Opened Network for Good, Reach Volunteering, and a public Reddit help thread; opened pages expose distinct location, skill, availability and time-commitment filters. AmeriCorps URL returned 403 on open and is recorded as failed, not read.",
+      "sourceRecord": "docs/seo/research-2026-11-01.json",
+      "originalGain": "Unlike a general opportunity ledger, it weighs weekly schedule and physical/access conditions; checks the host page and keeps directory-only or stale entries visibly uncertain.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-research-source-verification",
+          "ai-browser-organize-tabs-by-task"
+        ],
+        "distinctiveCoverage": "Unlike a general opportunity ledger, it weighs weekly schedule and physical/access conditions; checks the host page and keeps directory-only or stale entries visibly uncertain."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-08",
+        "14day": "2026-11-15",
+        "28day": "2026-11-29"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-test-multiple-roles-permissions",
+      "primaryKeyword": {
+        "en": "Playwright test multiple roles and API authorization",
+        "zh-CN": "Playwright 多角色权限和接口授权测试"
+      },
+      "intent": "Test simultaneous user roles with separate contexts, assert visible UI separately from direct protected endpoint responses, and verify denied requests do not mutate test data.",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-test-multiple-roles-permissions/",
+        "https://browserhub.co/zh-cn/guides/playwright-test-multiple-roles-permissions/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-01",
+      "demandEvidence": "Opened Ministry of Testing multi-role recipes, Leapwork role-based access testing guide, and a Reddit RBAC test-architecture discussion, plus official Playwright and OWASP documentation. The practitioner thread is qualitative only; no search-volume or traffic inference.",
+      "sourceRecord": "docs/seo/research-2026-11-01.json",
+      "originalGain": "Focuses on a synthetic end-to-end permission matrix and server enforcement, distinct from saving/reusing authentication state or recovering expired browser sessions.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-debugging-traces",
+          "browser-agent-accessibility-snapshot-vs-screenshot"
+        ],
+        "distinctiveCoverage": "Focuses on a synthetic end-to-end permission matrix and server enforcement, distinct from saving/reusing authentication state or recovering expired browser sessions."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-08",
+        "14day": "2026-11-15",
+        "28day": "2026-11-29"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-stabilize-dynamic-screenshot-assertions",
+      "primaryKeyword": {
+        "en": "Playwright stabilize visual tests with dynamic content",
+        "zh-CN": "Playwright 动态内容截图断言稳定"
+      },
+      "intent": "Make visual assertions repeatable by controlling page state, masking only identified volatile regions, asserting masked information separately, and matching baseline environment.",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-stabilize-dynamic-screenshot-assertions/",
+        "https://browserhub.co/zh-cn/guides/playwright-stabilize-dynamic-screenshot-assertions/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-01",
+      "demandEvidence": "Opened Playwright visual-comparison/API docs, two BrowserStack guides and two QA discussions describing dynamic-content and CI diff noise. Qualitative problem evidence only.",
+      "sourceRecord": "docs/seo/research-2026-11-01.json",
+      "originalGain": "Combines fixed data, precise locator masks, independent semantic checks and environment-bound baselines; explains how broad masks and tolerance can hide real regressions.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-debugging-traces",
+          "browser-agent-accessibility-snapshot-vs-screenshot"
+        ],
+        "distinctiveCoverage": "Combines fixed data, precise locator masks, independent semantic checks and environment-bound baselines; explains how broad masks and tolerance can hide real regressions."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-08",
+        "14day": "2026-11-15",
+        "28day": "2026-11-29"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
@@ -5605,20 +5815,20 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-10-30",
-    "cycleId": "content-2026-10-30",
+    "date": "2026-11-01",
+    "cycleId": "content-2026-11-01",
     "newTopics": [
-      "ai-browser-compare-products-across-sites",
-      "ai-browser-organize-tabs-by-task",
-      "playwright-rich-text-editor-state-not-updated",
-      "playwright-virtualized-grid-row-actions",
-      "browser-agent-monitor-page-changes-meaningfully"
+      "ai-browser-build-degree-plan-from-course-catalogs",
+      "ai-browser-build-conference-agenda",
+      "ai-browser-volunteer-opportunity-shortlist",
+      "playwright-test-multiple-roles-permissions",
+      "playwright-stabilize-dynamic-screenshot-assertions"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
-    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-30.json when completed",
-    "notClaimed": "Prepared for review only; no publication, traffic gain, indexing result, or measured demand is claimed."
+    "publicationEvidence": "Pending independent review and workflow receipt; not yet published.",
+    "notClaimed": "Draft prepared for review; no publication, traffic gain, indexing result, or measured search demand is claimed."
   },
   "latestEditorialEnhancement": {
     "date": "2026-10-25",
