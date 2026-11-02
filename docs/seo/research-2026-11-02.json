@@ -1,0 +1,453 @@
+{
+  "cycleId": "content-2026-11-02",
+  "observedOn": "2026-11-02",
+  "status": "draft evidence record; not publication or traffic proof",
+  "researchMethod": {
+    "liveWeb": true,
+    "openedPrimarySources": true,
+    "openedNonprimaryProblemOrTutorialPagesPerTheme": 3,
+    "searchVolumes": null,
+    "rank": null,
+    "browserHubImpressions": null,
+    "browserHubClicks": null,
+    "trafficOrConversion": null,
+    "firecrawl": "Known unavailable quota; used existing web search/open fallback, no new subscription or API.",
+    "sourceRule": "Search excerpts were used only to locate pages. Claims about current product behavior use opened current official sources. Failed pages are listed separately and are not used for claims. Public task reports are qualitative and not representative demand or BrowserHub traffic."
+  },
+  "ownershipAudit": {
+    "keywordMapRowsChecked": 155,
+    "guideOwnersChecked": 89,
+    "result": "The five selected new task intents had no exact guide owner among the 89 checked. Separately, one explicitly assigned bilingual Playwright CLI vs MCP copy enhancement is recorded below; its immutable owner metadata and the other 88 guide copies remain unchanged.",
+    "excludedIntentFamilies": [
+      "2026-11-01 course-plan, conference-agenda, volunteer and Playwright roles/screenshot topics",
+      "existing job-posting, scholarship, degree-plan, conference and volunteer shortlists",
+      "existing travel planning, product comparison, expense reconciliation, page monitoring, PDF summary, generic source verification and form submission owners"
+    ]
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-audit-rental-listings-before-a-viewing",
+      "intent": "Compare public rental listings for an intended move by exact unit, dated availability, disclosed monthly and one-time costs, source links and unresolved photo or detail mismatches; stop before contacting, booking, applying or paying.",
+      "userTask": "A renter has multiple changing listing pages and needs to determine which candidates meet hard constraints before scheduling a viewing, without treating a search snippet or AI summary as proof that a unit is available.",
+      "increment": "Unit-level source ledger; recurring versus up-front fee table; page conflict and image-to-unit uncertainty fields; privacy boundary; explicit stop before contact or financial/account actions. It does not produce another generic product/rental comparison or rank homes by an agent's preference.",
+      "nearestOwners": [
+        "ai-browser-trip-planning",
+        "ai-browser-compare-products-across-sites",
+        "ai-browser-research-source-verification"
+      ],
+      "publicProblemOrTutorialPagesOpened": [
+        {
+          "title": "The Daily Prompt: apartment-listing agent report",
+          "url": "https://thedailyprompt.ai/agent-uses/use-an-agent-to-monitor-apartment-listings",
+          "observed": "A reported apartment-search agent missed broken links and bad matches and produced unsupported property details; author-reported experiment only."
+        },
+        {
+          "title": "Reddit: apartment-hunting agent project and reader discussion",
+          "url": "https://www.reddit.com/r/SideProject/comments/1rpk4o6/i_built_an_ai_that_apartmenthunts_for_you_and/",
+          "observed": "Project author describes multi-site searching/ranking and proposed contact flow; one commenter expresses rental-search frustration. Anecdotal, not a demand estimate."
+        },
+        {
+          "title": "brightplace: renter use cases and trade-offs",
+          "url": "https://www.brightplace.ai/llm-info",
+          "observed": "Rental discovery product describes renter questions around monthly cost, fees, commute, resident experience and neighborhood context. Vendor-authored positioning, not independent use evidence."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "Apartments.com AI-powered conversational search announcement",
+          "url": "https://www.apartments.com/grow/news/apartments-ai-conversational-search-launch",
+          "observed": "Provider announcement says renters can search in natural language and receive property matches; promotional source, used only to establish a current product example."
+        },
+        {
+          "title": "CoStar/Apartments.com apartment-hunting demo announcement",
+          "url": "https://investors.costargroup.com/node/17306/pdf",
+          "observed": "Company release describes unit-level availability, prices/fees, media and tour/contact actions in its ChatGPT app. Vendor claim; no performance claim reused."
+        },
+        {
+          "title": "realestate.com.au AI Assistant support page",
+          "url": "https://help.realestate.com.au/hc/en-us/articles/62368223508505-What-is-the-AI-Assistant-on-realestate-com-au",
+          "observed": "Official product help says answers can be wrong, important information should be checked against original listings/official sources, the tool can explain factual trade-offs, and users should not provide sensitive personal details."
+        },
+        {
+          "title": "FTC rental listing scam guidance",
+          "url": "https://consumer.ftc.gov/articles/rental-listing-scams",
+          "observed": "Official consumer guidance says scammers may copy real listing photos and descriptions, recommends checking the rental company’s own site, and warns about unusual payment methods and personal-data requests."
+        }
+      ],
+      "failedReads": [],
+      "competitionAssessment": "Rental agent products and task reports exist. The guide's added value is a careful, source-linked unit/cost decision table with unknowns preserved and no unapproved contact/payment actions."
+    },
+    {
+      "slug": "ai-browser-check-laptop-dock-compatibility",
+      "intent": "Check whether one exact laptop configuration, dock model, cable and display combination supports the required functions, distinguishing native GPU video from USB graphics/DisplayLink video where relevant.",
+      "userTask": "A buyer sees a USB-C connector and a broad dock feature list but cannot determine whether the exact laptop port and dock combination will support the required display and charging setup.",
+      "increment": "A component-by-component matrix distinguishes connector shape from optional capability, native GPU video requirements from USB graphics/DisplayLink paths, exact OS/driver support from marketing claims, and documented support from hands-on testing. It asks for one compatibility verdict rather than product rankings.",
+      "nearestOwners": [
+        "ai-browser-compare-products-across-sites",
+        "ai-browser-research-source-verification",
+        "browser-agent-structured-data-extraction"
+      ],
+      "publicProblemOrTutorialPagesOpened": [
+        {
+          "title": "iTechGuides USB-C dock compatibility buying guide",
+          "url": "https://www.itechguides.com/usb-c-docking-station-buying-guide-ports-power-delivery-displays-and-compatibility/",
+          "observed": "Explains model-specific DP Alt Mode/Thunderbolt/USB4 video, Power Delivery, monitor limits and cable capability. Tutorial coverage, no BrowserHub bench claim."
+        },
+        {
+          "title": "Laptop Mag docking station review method and host-port notes",
+          "url": "https://www.laptopmag.com/articles/best-docking-station",
+          "observed": "Describes checking port documentation and reports its own charge, data and multi-display measurements; those measurements are not reused as BrowserHub results."
+        },
+        {
+          "title": "Reddit buyer question about USB-C dock compatibility",
+          "url": "https://www.reddit.com/r/UsbCHardware/comments/1d9d8ay/a_novice_looking_to_buy_a_usb_c_dock/",
+          "observed": "Buyer asks how to check a particular laptop/dock combination and whether some dock functions can work while video does not. Anecdotal problem evidence."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "Microsoft Learn docking recommendations",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/docking",
+          "observed": "Official Windows docking guidance describes native USB-C DisplayPort alternate mode and Thunderbolt fallback, and also indirect display over USB; it states this indirect display path can work over USB-A and USB-C ports with or without alternate mode, subject to the applicable implementation/driver. Its recommendations distinguish these paths and include power and host-port requirements."
+        },
+        {
+          "title": "MSI USB-C docking station FAQ",
+          "url": "https://www.msi.com/faq/faq-10184",
+          "observed": "MSI says the laptop port must support DisplayPort output for video and Power Delivery input for dock charging; capabilities vary by model."
+        },
+        {
+          "title": "Dell dock compatibility guide",
+          "url": "https://www.delltechnologies.com/asset/en-us/products/electronics-and-accessories/technical-support/dell_docking_compatibility_guide.pdf",
+          "observed": "Manufacturer matrix lists model-specific dock functions and limitations."
+        },
+        {
+          "title": "Anker compatibility guidance",
+          "url": "https://service.anker.com/au/article-description/What-Should-I-Do-to-Determine-If-the-Dock-is-Compatible-with-My-Computer-A83C3",
+          "observed": "Manufacturer guidance distinguishes video output from USB Power Delivery charging and names cable capability considerations."
+        }
+      ],
+      "failedReads": [],
+      "competitionAssessment": "Buying guides cover dock categories and compatibility factors. The guide's added value is a one-combination matrix with model-specific source and function-by-function unknowns; it claims no hardware test."
+    },
+    {
+      "slug": "ai-browser-audit-subscriptions-before-cancelling",
+      "intent": "Prepare a private, dated inventory of subscriptions from user-selected billing records and official provider pages, identify the billing channel and renewal/cancellation terms, and leave keep/change/cancel decisions and account actions to the user.",
+      "userTask": "A household wants to review recurring services and understand which account controls each renewal before deciding what to keep or cancel, without handing over credentials or allowing the browser agent to change billing.",
+      "increment": "Separates receipts from memory, provider facts from usage opinion, billing channel from service account, renewal/access/refund terms, and an audit from the irreversible account action. The workflow is read-only and explicitly verifies cancellation status only if the person acts separately.",
+      "nearestOwners": [
+        "ai-browser-expense-report-reconciliation",
+        "ai-browser-tab-access-permissions",
+        "browser-agent-human-takeover"
+      ],
+      "publicProblemOrTutorialPagesOpened": [
+        {
+          "title": "Agent Finder AI-assisted subscription audit workflow",
+          "url": "https://agent-finder.co/guides/ai-agent-cancel-subscriptions",
+          "observed": "Guide organizes inventory, decision, provider path, preparation and approval; vendor/tool guide rather than independent benchmark."
+        },
+        {
+          "title": "Tom's Guide subscription review and agent-assisted cancellation report",
+          "url": "https://www.tomsguide.com/ai/i-asked-chatgpt-which-streaming-services-to-cancel-this-month-then-used-agent-mode-to-do-it",
+          "observed": "Author report describes reviewing streaming services and agent-guided cancellation steps; not presented as a repeatable benchmark."
+        },
+        {
+          "title": "Tom's Guide agent-guided streaming cancellation report",
+          "url": "https://www.tomsguide.com/ai/i-used-chatgpt-to-cancel-my-streaming-subscriptions-heres-how-to-try-it-too",
+          "observed": "Author reports cancellation flows varied by site and some required user login/confirmation."
+        },
+        {
+          "title": "Candor forgotten-subscription guide",
+          "url": "https://candor.money/find-forgotten-subscriptions",
+          "observed": "Current guide discusses subscription discovery with or without AI. Service/vendor positioning is not independent evidence."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "OpenAI subscription cancellation help",
+          "url": "https://help.openai.com/en/articles/7232927-canceling-your-chatgpt-subscription",
+          "observed": "Official article identifies different cancellation paths by web, Apple, Google Play and self-service Business purchase channel, and distinguishes cancellation from refund."
+        },
+        {
+          "title": "Google Play subscription help",
+          "url": "https://support.google.com/googleplay/answer/7018481",
+          "observed": "Google says uninstalling an app does not cancel a subscription and describes access through the paid period and payment-plan exceptions."
+        }
+      ],
+      "failedReads": [
+        {
+          "url": "https://support.apple.com/en-us/118428",
+          "status": 429,
+          "usedForClaims": false
+        }
+      ],
+      "competitionAssessment": "Consumer guides and reports already describe agent-assisted cancellation. The new article narrows to the safer distinct inventory/terms-review task, separates platform-specific billing paths, and stops before account changes."
+    },
+    {
+      "slug": "playwright-test-spa-history-back-forward",
+      "intent": "Test a real client-side route transition plus browser back and forward by asserting both the URL/history destination and the settled user-visible route state.",
+      "userTask": "A developer needs to catch a test that sees pushState or a restored address but does not prove the SPA rendered the correct view or restored expected route state.",
+      "increment": "Distinguishes direct deep-link navigation from in-app transitions; seeds a known history stack; checks visible state after push/pop/back/forward, separates UI readiness from URL updates and load-state events, and excludes unsupported BFCache restoration assertions.",
+      "nearestOwners": [
+        "browser-agent-wait-for-page-ready",
+        "browser-agent-tabs-popups",
+        "browser-agent-debugging-traces"
+      ],
+      "publicProblemOrTutorialPagesOpened": [
+        {
+          "title": "amLab single-page navigation and re-hydration tutorial",
+          "url": "https://lab.amalitsky.com/posts/2022/wait-for-single-page-navigation-and-re-hydration-playwright-react/",
+          "observed": "Historical React/Reach Router tutorial covers app-specific route completion and listener-before-action ordering; its custom-event approach is not presented as universal."
+        },
+        {
+          "title": "TechYorker client routing and deep-link tutorial",
+          "url": "https://techyorker.com/how-to-test-client-side-routing-and-deep-links-with-playwright/",
+          "observed": "Tutorial advises checking both URL and visible state during history traversal and links to the Playwright BFCache limitation."
+        },
+        {
+          "title": "TurnTrout Playwright timing and SPA navigation notes",
+          "url": "https://turntrout.com/playwright-tips",
+          "observed": "Author's long-running notes warn that URL update may precede app render; anecdotal debugging guidance."
+        },
+        {
+          "title": "Reddit testing extension behavior during real SPA navigation",
+          "url": "https://www.reddit.com/r/chrome_extensions/comments/1xbmldz/testing-extensions-with-playwrightwebext/",
+          "observed": "Developer asks about extension popup tests and notes that direct goto does not exercise client-side page transitions."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "Playwright navigation guide",
+          "url": "https://playwright.dev/docs/navigations",
+          "observed": "Current docs recommend waiting for a specific URL when appropriate and state BFCache restoration testing is unsupported."
+        },
+        {
+          "title": "Playwright waitForURL source tests",
+          "url": "https://github.com/microsoft/playwright/blob/main/tests/page/page-wait-for-url.spec.ts",
+          "observed": "Official test suite covers pushState, replaceState, back/forward and same-document URL matching."
+        },
+        {
+          "title": "React Router useNavigate documentation",
+          "url": "https://reactrouter.com/api/hooks/useNavigate",
+          "observed": "Router warns numeric back/forward navigation depends on an appropriate history entry existing."
+        },
+        {
+          "title": "MDN History API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/History_API",
+          "observed": "Defines browser session history and back/forward operations."
+        },
+        {
+          "title": "MDN History.pushState",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/History/pushState",
+          "observed": "Explains that pushState adds a session-history entry and how state is associated with that entry."
+        }
+      ],
+      "failedReads": [],
+      "competitionAssessment": "Current and older tutorials address waits or routing. The added value is a concise route-by-route assertion contract that checks URL and settled visible app state after real transitions and history traversal."
+    },
+    {
+      "slug": "playwright-api-request-context-econnreset-retries",
+      "intent": "Use APIRequestContext maxRetries only for its documented ECONNRESET network-error case, distinguish it from HTTP status responses and test retries, and demonstrate it with a local GET-only fixture.",
+      "userTask": "A developer sees an API test fail with ECONNRESET and needs to understand whether Playwright retries it, which errors the option covers, and whether repeating a request could duplicate a write.",
+      "increment": "Explains the installed-version contract, zero default, ECONNRESET-only limit, distinction between HTTP errors and transport resets, test-level retry versus request retry, and why the example stays local and GET-only. It adds no universal network-reliability claim.",
+      "nearestOwners": [
+        "browser-agent-request-mocking-har",
+        "browser-agent-network-interruption-recovery",
+        "browser-agent-debugging-traces"
+      ],
+      "publicProblemOrTutorialPagesOpened": [
+        {
+          "title": "Playwright issue: ECONNRESET retry option confusion",
+          "url": "https://github.com/microsoft/playwright/issues/38668",
+          "observed": "Reporter using Playwright 1.57 expected implicit retry; maintainer clarified default no retries and the maxRetries behavior."
+        },
+        {
+          "title": "Playwright issue: ECONNRESET after keep-alive socket reuse",
+          "url": "https://github.com/microsoft/playwright/issues/42698",
+          "observed": "Reporter describes a version/environment-specific socket-reuse reset and a reproduction using GET; treated as one failure report, not universal behavior."
+        },
+        {
+          "title": "Reddit Playwright API failures on CI discussion",
+          "url": "https://www.reddit.com/r/Playwright/comments/1sn9mw5/api_failures_when_running_ui_tests_in_gitaction/",
+          "observed": "Practitioner reports CI API calls that fail without a status response and asks about retries. Anecdotal problem evidence."
+        },
+        {
+          "title": "Playwright maxRetries timeout feature request",
+          "url": "https://github.com/microsoft/playwright/issues/34207",
+          "observed": "Feature request asks to include timeouts and says the then-current maxRetries case covered ECONNRESET; used as issue history, not substitute for current docs."
+        }
+      ],
+      "openedPrimarySources": [
+        {
+          "title": "Playwright APIRequestContext current API reference",
+          "url": "https://playwright.dev/docs/api/class-apirequestcontext",
+          "observed": "Current docs say maxRetries was added in v1.46, defaults to zero, retries ECONNRESET only, and does not retry HTTP response codes."
+        }
+      ],
+      "failedReads": [
+        {
+          "url": "https://www.browserstack.com/guide/guide-to-api-testing-with-playwright",
+          "status": "unavailable through web open",
+          "usedForClaims": false
+        }
+      ],
+      "competitionAssessment": "The exact retry behavior is a narrow technical problem with direct issue reports. Current official API docs control. The guide adds an isolated local GET example and clear boundaries around status retries and side-effecting methods."
+    }
+  ],
+  "metrics": {
+    "searchVolume": null,
+    "rank": null,
+    "gscImpressions": null,
+    "gscClicks": null,
+    "conversion": null
+  },
+  "executionAccounting": {
+    "newThemes": 5,
+    "completeEditions": 10,
+    "refreshes": 1,
+    "assetCount": 1,
+    "fixtureStaticCheck": "Final source passed node --check and git diff --check; root exact-byte runtime passed.",
+    "fixtureRuntime": "Root exact-byte run1 passed; executor did not execute fixture.",
+    "formalCI": "Not run by executor; root owns CI.",
+    "publicationStatus": "Draft pending independent review, root validation and publication receipt. No publication or traffic gain is claimed.",
+    "sourceNote": "All three selected nonprimary problem/tutorial pages per theme were opened. Nonprimary source observations are qualitative. Failed fetches are explicitly excluded from claims.",
+    "oldEnhancements": 1,
+    "enhancedLocaleCopies": 2,
+    "fixtureSha256": "2bd27a620eefe7a25efa8143d918abb175aa58b3cdbc9f786d4a3d78d4cc7bcd",
+    "contentContract": "Root content-contract helper passed; 89 baseline owners preserved with one explicitly assigned bilingual owner enhancement.",
+    "sourceDepth": "Advisory helper passed; all ten new locale copies above source character floors. Not a quality score."
+  },
+  "oldOwnerEnhancements": [
+    {
+      "slug": "playwright-cli-vs-mcp",
+      "observedOn": "2026-11-02",
+      "localesUpdated": [
+        "en",
+        "zh-cn"
+      ],
+      "updatedArea": "Corrected project-local CLI setup to current official steps (install @playwright/cli as a development dependency, then use npx playwright cli). Replaced an assumed empty TodoMVC list with a bounded exact-URL task that records baseline active count N and verifies N+1, preserving the same action, visible result and stop condition across CLI, MCP and Playwright Test. Clarified CLI URL/title plus saved snapshot output, MCP structured tool result and session isolation, and Test assertion/report handoff.",
+      "faqAdded": "Which interface uses fewer tokens? Answer reflects official CLI token-efficiency positioning and MCP tool-schema/snapshot context, while stating there is no universal measured saving and no BrowserHub benchmark.",
+      "openedOfficialSources": [
+        {
+          "title": "Playwright coding agents CLI guide",
+          "url": "https://playwright.dev/docs/getting-started-cli",
+          "observed": "Current official guide documents global install with npm install -g @playwright/cli@latest and project-local install with npm install -D @playwright/cli@latest followed by npx playwright cli; merely having Playwright installed is not sufficient. It requires Node.js 20+, describes CLI URL/title and snapshot-file output, in-memory session state until browser close, and token-efficient concise commands as product guidance."
+        },
+        {
+          "title": "Playwright CLI introduction",
+          "url": "https://playwright.dev/agent-cli/introduction",
+          "observed": "Current official comparison positions CLI for coding agents using shell commands and MCP for specialized iterative browser loops; no universal performance or task-success benchmark is provided."
+        },
+        {
+          "title": "Playwright MCP introduction",
+          "url": "https://playwright.dev/mcp/introduction",
+          "observed": "Current guide documents structured accessibility snapshots and tool results, JSON host setup, headed default, and an isolated option distinct from persistent state; token-context statements are product guidance, not a BrowserHub benchmark."
+        },
+        {
+          "title": "Playwright Test assertions",
+          "url": "https://playwright.dev/docs/test-assertions",
+          "observed": "Official docs describe expect assertions, including web-specific async assertions that wait for expected conditions."
+        },
+        {
+          "title": "Playwright Test reporters",
+          "url": "https://playwright.dev/docs/test-reporters",
+          "observed": "Official docs describe built-in and configurable reporters for test results."
+        }
+      ],
+      "metrics": {
+        "searchVolume": null,
+        "rank": null,
+        "gscImpressions": null,
+        "gscClicks": null,
+        "tokenBenchmark": null,
+        "conversion": null
+      },
+      "privatePerformanceEvidenceExcluded": true,
+      "publicationEvidence": "Existing guide remains pending root review/release receipt; this is a draft copy enhancement, not a new page or publication claim."
+    }
+  ],
+  "fixtureExecution": {
+    "status": "passed",
+    "executedBy": "root",
+    "assetSha256": "2bd27a620eefe7a25efa8143d918abb175aa58b3cdbc9f786d4a3d78d4cc7bcd",
+    "exitCode": 0,
+    "runtimeAttempt": 1,
+    "previousRuntimeFailures": 0,
+    "durationSeconds": 1.3,
+    "playwrightVersion": "1.64.1",
+    "stdout": {
+      "result": "local_spa_history_and_api_reset_fixture_completed",
+      "nodeVersion": "v22.22.3",
+      "browserVersion": "156.0.8078.76",
+      "directDeepLink": {
+        "path": "/app/profile",
+        "visibleHeading": "Profile"
+      },
+      "history": [
+        {
+          "action": "pushState",
+          "path": "/app/profile",
+          "visibleHeading": "Profile"
+        },
+        {
+          "action": "pushState",
+          "path": "/app/settings",
+          "visibleHeading": "Settings"
+        },
+        {
+          "action": "back",
+          "path": "/app/profile",
+          "visibleHeading": "Profile"
+        },
+        {
+          "action": "back",
+          "path": "/app",
+          "visibleHeading": "Home"
+        },
+        {
+          "action": "forward",
+          "path": "/app/profile",
+          "visibleHeading": "Profile"
+        },
+        {
+          "action": "forward",
+          "path": "/app/settings",
+          "visibleHeading": "Settings"
+        }
+      ],
+      "api": {
+        "resetGetStatus": 200,
+        "resetGetLocalRequestCount": 2,
+        "http500Status": 500,
+        "http500LocalRequestCount": 1,
+        "methodsUsed": [
+          "GET"
+        ]
+      },
+      "pageOriginPolicy": "Exact ephemeral 127.0.0.1 origin only; Service Workers blocked",
+      "externalPageRequestsAllowed": false,
+      "networkScope": "Exact-origin page routing and fixed local API URLs; browser-background and physical network traffic were not audited",
+      "productionBackendTested": false
+    },
+    "stderrEmpty": true,
+    "claimBoundary": "Exact-byte local synthetic fixture execution only. No real SPA/router, production backend, write operation, external page access, or physical/browser-background traffic audit."
+  },
+  "contentContractValidation": {
+    "status": "passed",
+    "checkedBy": "root helper",
+    "existingGuideOwners": 89,
+    "preservedOwners": 88,
+    "explicitlyUpdatedOwner": "playwright-cli-vs-mcp",
+    "totalGuideOwnersAfter": 94,
+    "completeLocaleEditionsAfter": 188,
+    "newTopics": 5,
+    "checkedAt": "2026-11-02T01:49:01.497Z"
+  },
+  "sourceDepthAdvisory": {
+    "status": "advisory_only",
+    "allTenNewLocaleCopiesAboveSourceCharacterFloors": true,
+    "qualityScore": false,
+    "staticSourceEstimateOnly": true,
+    "checkedAt": "2026-11-02T01:49:01.679Z",
+    "note": "Root helper source-only estimate; all ten new locale copies remain above the advisory floors after final copy revisions. Not a quality score or replacement for full CI."
+  }
+}

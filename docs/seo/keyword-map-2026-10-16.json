@@ -5752,6 +5752,221 @@
         "28day": "2026-11-29"
       },
       "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-audit-rental-listings-before-a-viewing",
+      "primaryKeyword": {
+        "en": "ai browser audit rental listings before a viewing",
+        "zh-CN": "AI 浏览器核对出租房源费用和可租状态"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "demandEvidence": "Rental listing comparison by exact unit, dated availability and disclosed costs; qualitative opened-source evidence only; volume unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-audit-rental-listings-before-a-viewing/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-audit-rental-listings-before-a-viewing/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-02",
+      "sourceRecord": "docs/seo/research-2026-11-02.json",
+      "originalGain": "A bounded AI browser task with source-linked evidence, unknowns preserved and human-owned decisions.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-trip-planning",
+          "ai-browser-compare-products-across-sites",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Unit-level source ledger; recurring versus up-front fee table; page conflict and image-to-unit uncertainty fields; privacy boundary; explicit stop before contact or financial/account actions. It does not produce another generic product/rental comparison or rank homes by an agent's preference."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-09",
+        "14day": "2026-11-16",
+        "28day": "2026-11-30"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-check-laptop-dock-compatibility",
+      "primaryKeyword": {
+        "en": "ai browser check laptop dock compatibility",
+        "zh-CN": "笔记本和扩展坞兼容性核对"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "demandEvidence": "Compatibility check for one laptop, dock, cable and display configuration; qualitative opened-source evidence only; volume unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-check-laptop-dock-compatibility/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-check-laptop-dock-compatibility/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-02",
+      "sourceRecord": "docs/seo/research-2026-11-02.json",
+      "originalGain": "A bounded AI browser task with source-linked evidence, unknowns preserved and human-owned decisions.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-compare-products-across-sites",
+          "ai-browser-research-source-verification",
+          "browser-agent-structured-data-extraction"
+        ],
+        "distinctiveCoverage": "A component-by-component evidence matrix distinguishes connector shape from optional capability, exact host/model support from family-level marketing, display bandwidth from charging, and documented support from hands-on testing. It asks for a compatibility verdict for one combination rather than ranking products."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-09",
+        "14day": "2026-11-16",
+        "28day": "2026-11-30"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-audit-subscriptions-before-cancelling",
+      "primaryKeyword": {
+        "en": "ai browser audit subscriptions before cancelling",
+        "zh-CN": "取消前整理订阅和续费信息"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "demandEvidence": "Read-only subscription inventory and billing terms before a human cancellation decision; qualitative opened-source evidence only; volume unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-audit-subscriptions-before-cancelling/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-audit-subscriptions-before-cancelling/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-02",
+      "sourceRecord": "docs/seo/research-2026-11-02.json",
+      "originalGain": "A bounded AI browser task with source-linked evidence, unknowns preserved and human-owned decisions.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-expense-report-reconciliation",
+          "ai-browser-tab-access-permissions",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Separates receipts from memory, provider facts from usage opinion, billing channel from service account, renewal/access/refund terms, and an audit from the irreversible account action. The workflow is read-only and explicitly verifies cancellation status only if the person acts separately."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-09",
+        "14day": "2026-11-16",
+        "28day": "2026-11-30"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-test-spa-history-back-forward",
+      "primaryKeyword": {
+        "en": "playwright test spa history back forward",
+        "zh-CN": "Playwright 测试 SPA 前进后退和路由状态"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Playwright SPA route, back and forward test asserting both URL and settled visible state; qualitative tutorial and issue evidence only.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-test-spa-history-back-forward/",
+        "https://browserhub.co/zh-cn/guides/playwright-test-spa-history-back-forward/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-02",
+      "sourceRecord": "docs/seo/research-2026-11-02.json",
+      "originalGain": "A bounded Playwright test task with current official behavior, practical steps and explicit limitations.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-wait-for-page-ready",
+          "browser-agent-tabs-popups",
+          "browser-agent-debugging-traces"
+        ],
+        "distinctiveCoverage": "Distinguishes direct deep-link navigation from in-app transitions; seeds a known history stack; checks visible state after push/pop/back/forward, separates UI readiness from URL updates and load-state events, and excludes unsupported BFCache restoration assertions."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-09",
+        "14day": "2026-11-16",
+        "28day": "2026-11-30"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-api-request-context-econnreset-retries",
+      "primaryKeyword": {
+        "en": "playwright api request context econnreset retries",
+        "zh-CN": "Playwright APIRequestContext ECONNRESET 重试"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Playwright APIRequestContext ECONNRESET maxRetries boundaries with local GET-only fixture; qualitative issue evidence and current official docs; volume unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-api-request-context-econnreset-retries/",
+        "https://browserhub.co/zh-cn/guides/playwright-api-request-context-econnreset-retries/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-02",
+      "sourceRecord": "docs/seo/research-2026-11-02.json",
+      "originalGain": "A bounded Playwright test task with current official behavior, practical steps and explicit limitations.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-request-mocking-har",
+          "browser-agent-network-interruption-recovery",
+          "browser-agent-debugging-traces"
+        ],
+        "distinctiveCoverage": "Explains the installed-version contract, zero default, ECONNRESET-only limit, distinction between HTTP errors and transport resets, test-level retry versus request retry, and why the example stays local and GET-only. It adds no universal network-reliability claim."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-09",
+        "14day": "2026-11-16",
+        "28day": "2026-11-30"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
@@ -5815,31 +6030,33 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-11-01",
-    "cycleId": "content-2026-11-01",
+    "date": "2026-11-02",
+    "cycleId": "content-2026-11-02",
     "newTopics": [
-      "ai-browser-build-degree-plan-from-course-catalogs",
-      "ai-browser-build-conference-agenda",
-      "ai-browser-volunteer-opportunity-shortlist",
-      "playwright-test-multiple-roles-permissions",
-      "playwright-stabilize-dynamic-screenshot-assertions"
+      "ai-browser-audit-rental-listings-before-a-viewing",
+      "ai-browser-check-laptop-dock-compatibility",
+      "ai-browser-audit-subscriptions-before-cancelling",
+      "playwright-test-spa-history-back-forward",
+      "playwright-api-request-context-econnreset-retries"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
     "publicationEvidence": "Pending independent review and workflow receipt; not yet published.",
     "notClaimed": "Draft prepared for review; no publication, traffic gain, indexing result, or measured search demand is claimed."
-  },
+  } ,
   "latestEditorialEnhancement": {
-    "date": "2026-10-25",
-    "cycleId": "content-2026-10-25-batch-02",
+    "date": "2026-11-02",
+    "cycleId": "content-2026-11-02",
     "newTopicCount": 0,
     "substantialExistingTopics": [
-      "chrome-devtools-mcp-existing-browser",
-      "playwright-mcp-vs-chrome-devtools-mcp"
+      "playwright-cli-vs-mcp"
     ],
-    "completeLocaleCopiesUpdated": 4,
-    "publicationEvidence": "docs/seo/workflow-delivery-2026-10-25-batch-02.json when completed",
-    "metrics": null
+    "completeLocaleCopiesUpdated": 2,
+    "increment": "Corrects the project-local CLI install steps to the current official package requirement, adds one bounded comparison using an exact demo URL and baseline-count-plus-one result, distinguishes CLI files, MCP tool results and Test assertion/report output, and adds the token-use FAQ without any benchmark claim.",
+    "sourceRecord": "docs/seo/research-2026-11-02.json",
+    "publicationEvidence": "Draft copy enhancement pending root review and release receipt; no new publication or performance claim.",
+    "metrics": null,
+    "privatePerformanceDataExcluded": true
   }
 }
