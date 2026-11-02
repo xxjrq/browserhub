@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-02",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-02",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "b35811ac783759bfa47add647fc410b2c3965b6b8f3bd1dd427928faa11f01ac",
+  "commit": "7981ee1f4db8c1ecb0a256683bddd77e617202c7",
+  "release": "/opt/browsertools/releases/20261102-095415",
+  "publicationReceiptAt": "2026-11-02T01:54:42.959Z",
+  "completedAt": "2026-11-02T01:54:45.741Z",
+  "newTopics": [
+    "ai-browser-audit-rental-listings-before-a-viewing",
+    "ai-browser-check-laptop-dock-compatibility",
+    "ai-browser-audit-subscriptions-before-cancelling",
+    "playwright-test-spa-history-back-forward",
+    "playwright-api-request-context-econnreset-retries"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [
+    "playwright-cli-vs-mcp"
+  ],
+  "oldEnhancementCount": 1,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-audit-rental-listings-before-a-viewing/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-audit-rental-listings-before-a-viewing/",
+    "https://browserhub.co/en/guides/ai-browser-check-laptop-dock-compatibility/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-check-laptop-dock-compatibility/",
+    "https://browserhub.co/en/guides/ai-browser-audit-subscriptions-before-cancelling/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-audit-subscriptions-before-cancelling/",
+    "https://browserhub.co/en/guides/playwright-test-spa-history-back-forward/",
+    "https://browserhub.co/zh-cn/guides/playwright-test-spa-history-back-forward/",
+    "https://browserhub.co/en/guides/playwright-api-request-context-econnreset-retries/",
+    "https://browserhub.co/zh-cn/guides/playwright-api-request-context-econnreset-retries/",
+    "https://browserhub.co/en/guides/playwright-cli-vs-mcp/",
+    "https://browserhub.co/zh-cn/guides/playwright-cli-vs-mcp/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent new themes; EN/ZH editions count once. All89 prior topics retained, with only explicitly reviewed CLI/MCP owner copy refreshed; all155 prior keywordrows unchanged. Preexisting committed and already-live localization changes are baseline, not today new work.",
+  "editorialSelection": "Five independently scoped AI-browser user/developer tasks, with current directly opened problem/competing pages and primary sources, preserving existing intent owners. No volume/ranking/traffic/vendor benchmark claims.",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-02.json"
+  ],
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful publication receipt, not first reader or search-engine discovery.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-09T01:54:42.959000+00:00",
+      "14day": "2026-11-16T01:54:42.959000+00:00",
+      "28day": "2026-11-30T01:54:42.959000+00:00"
+    },
+    "measurementRule": "Use matching closed available windows, preserve data latency/missing values; rawaccount/effect metrics private."
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": false
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "independentContext": true,
+    "fileCount": 9,
+    "sha256": "1e75d01f5a94e9c26f4a248922f18e3ef3a2fd8bdd21f49e35124304aefe2eb4"
+  },
+  "executionAccounting": {
+    "historyStoredPrivately": true,
+    "ciPreflightAttempts": 1,
+    "fixtureRuntimeRuns": 1,
+    "fixtureRuntimeFailures": 0,
+    "repeatReason": null,
+    "ciRepeatReason": null,
+    "staticCorrections": "See private execution/review history; no unreported model switch or fabricated runtime count."
+  },
+  "validation": {
+    "preflightCi": {
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "bca7cff9b5f7ae521c828830ed5bf199633ad0cdf612072f23c7f3283c5b6b73"
+    },
+    "repositoryRead": {
+      "exitCode": 0,
+      "projectScopedAuthVerified": true
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1338,
+    "seoAudit": {
+      "htmlPages": 1334,
+      "sitemapUrls": 1056,
+      "internalLinks": 45495,
+      "alternateLinks": 7790,
+      "fallbackPages": 60,
+      "editorialGuides": 188,
+      "errors": 0
+    },
+    "contentContract": {
+      "status": "passed",
+      "existingTopicsPreserved": 89,
+      "totalTopics": 94,
+      "completeEditions": 188,
+      "newTopics": 5
+    },
+    "scope": "Reviewed new dated content/data/series/keyword/research/downloadasset plus boundedexistingCLI/MCP ENZH copy refresh and requiredslug audit additions. No renderer/dependency/sharedrunner/clientbackend changes. Preexisting3556262 localization changes preserved; representativeJAcomparison already matched existing export bothdomains beforecycle.",
+    "productFacts": "36 catalogue records unchanged;26 confirmed price/licence and10 explicitlyunverified prices keepfielddates2026-10-16; this article release does not recertify them.",
+    "serverCurrent": {
+      "checkedAt": "2026-11-02T01:55:09.646307+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261102-095415",
+      "expected": "/opt/browsertools/releases/20261102-095415",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-02T01:54:45.691Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-audit-rental-listings-before-a-viewing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-audit-rental-listings-before-a-viewing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-audit-rental-listings-before-a-viewing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-audit-rental-listings-before-a-viewing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-check-laptop-dock-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-check-laptop-dock-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-check-laptop-dock-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-check-laptop-dock-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-audit-subscriptions-before-cancelling/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-audit-subscriptions-before-cancelling/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-audit-subscriptions-before-cancelling/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-audit-subscriptions-before-cancelling/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-test-spa-history-back-forward/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-test-spa-history-back-forward/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-test-spa-history-back-forward/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-test-spa-history-back-forward/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-api-request-context-econnreset-retries/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-api-request-context-econnreset-retries/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-api-request-context-econnreset-retries/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-api-request-context-econnreset-retries/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-cli-vs-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-cli-vs-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-cli-vs-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-cli-vs-mcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-11-02T01:55:07.952499+00:00",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/templates/playwright-spa-history-api-retry.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "2bd27a620eefe7a25efa8143d918abb175aa58b3cdbc9f786d4a3d78d4cc7bcd",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/playwright-spa-history-api-retry.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "2bd27a620eefe7a25efa8143d918abb175aa58b3cdbc9f786d4a3d78d4cc7bcd",
+        "bytesMatch": true
+      }
+    ]
+  },
+  "localExamples": [
+    {
+      "assetPath": "public/templates/playwright-spa-history-api-retry.mjs",
+      "assetSha256": "2bd27a620eefe7a25efa8143d918abb175aa58b3cdbc9f786d4a3d78d4cc7bcd",
+      "exitCode": 0,
+      "runtimeAttempt": 1,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.1",
+      "stdout": {
+        "result": "local_spa_history_and_api_reset_fixture_completed",
+        "nodeVersion": "v22.22.3",
+        "browserVersion": "156.0.8078.76",
+        "directDeepLink": {
+          "path": "/app/profile",
+          "visibleHeading": "Profile"
+        },
+        "history": [
+          {
+            "action": "pushState",
+            "path": "/app/profile",
+            "visibleHeading": "Profile"
+          },
+          {
+            "action": "pushState",
+            "path": "/app/settings",
+            "visibleHeading": "Settings"
+          },
+          {
+            "action": "back",
+            "path": "/app/profile",
+            "visibleHeading": "Profile"
+          },
+          {
+            "action": "back",
+            "path": "/app",
+            "visibleHeading": "Home"
+          },
+          {
+            "action": "forward",
+            "path": "/app/profile",
+            "visibleHeading": "Profile"
+          },
+          {
+            "action": "forward",
+            "path": "/app/settings",
+            "visibleHeading": "Settings"
+          }
+        ],
+        "api": {
+          "resetGetStatus": 200,
+          "resetGetLocalRequestCount": 2,
+          "http500Status": 500,
+          "http500LocalRequestCount": 1,
+          "methodsUsed": [
+            "GET"
+          ]
+        },
+        "pageOriginPolicy": "Exact ephemeral 127.0.0.1 origin only; Service Workers blocked",
+        "externalPageRequestsAllowed": false,
+        "networkScope": "Exact-origin page routing and fixed local API URLs; browser-background and physical network traffic were not audited",
+        "productionBackendTested": false
+      },
+      "executionBoundary": "Loopback-only synthetic history deep link, pushState andback/forward URL+visibleheading assertions; notrealSPAframework/routercompatibility. APIRequestContext.GET only: firstconnectionreset then200 undermaxRetries1, andsingleHTTP500notretried. NoPOST/replay/idempotency/security/vendor/productionassessment. PageoriginroutingandfixedlocalAPIURLs; physical/browserbackgroundtrafficnotaudited.",
+      "repeatReason": null
+    }
+  ],
+  "measurement": {
+    "privateReviewSaved": true,
+    "status": "Authenticated read-only GSC follow-up recorded privately. No publication or local example count presented as traffic/conversion gain."
+  },
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or validationrequests",
+    "Detection website",
+    "EasyBR client/backend or sharedservice changes",
+    "Outreach/application/submission/registration or realaccount actions",
+    "New paidtools/subscriptions/modelAPIs",
+    "Cloudflare/analyticsconfig"
+  ]
+}
