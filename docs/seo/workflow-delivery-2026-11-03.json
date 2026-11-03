@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-03",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "4ae0ebdf40ac37d6353db9b7851c4d773edaa079d168675aa0e2439acb1c9b07",
+  "commit": "4e27b16c3ffbbb23a89e8f5368480ee322f862f0",
+  "release": "/opt/browsertools/releases/20261103-105241",
+  "publicationReceiptAt": "2026-11-03T02:53:11.645Z",
+  "completedAt": "2026-11-03T02:53:15.851Z",
+  "newTopics": [
+    "playwright-test-service-worker-route-visibility",
+    "playwright-await-websocket-ui-update",
+    "playwright-diagnose-strict-mode-matches",
+    "playwright-classify-browser-console-errors",
+    "playwright-handle-page-crash-event"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/playwright-test-service-worker-route-visibility/",
+    "https://browserhub.co/zh-cn/guides/playwright-test-service-worker-route-visibility/",
+    "https://browserhub.co/en/guides/playwright-await-websocket-ui-update/",
+    "https://browserhub.co/zh-cn/guides/playwright-await-websocket-ui-update/",
+    "https://browserhub.co/en/guides/playwright-diagnose-strict-mode-matches/",
+    "https://browserhub.co/zh-cn/guides/playwright-diagnose-strict-mode-matches/",
+    "https://browserhub.co/en/guides/playwright-classify-browser-console-errors/",
+    "https://browserhub.co/zh-cn/guides/playwright-classify-browser-console-errors/",
+    "https://browserhub.co/en/guides/playwright-handle-page-crash-event/",
+    "https://browserhub.co/zh-cn/guides/playwright-handle-page-crash-event/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent new themes; EN/ZH editions count once. All94 prior topics and188 editions retained unchanged; all160 prior keywordrows unchanged. Old enhancements are counted separately.",
+  "editorialSelection": "Five independently scoped browser-agent developer tasks, with current directly opened problem/competing pages and primary sources, preserving existing intent owners. No volume/ranking/traffic/vendor benchmark claims.",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-03.json"
+  ],
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful publication receipt, not first reader or search-engine discovery.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-10T02:53:11.645000+00:00",
+      "14day": "2026-11-17T02:53:11.645000+00:00",
+      "28day": "2026-12-01T02:53:11.645000+00:00"
+    },
+    "measurementRule": "Use matching closed available windows, preserve data latency/missing values; rawaccount/effect metrics private."
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": false
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "independentContext": true,
+    "fileCount": 8,
+    "sha256": "242219e3b865e9e058f5c1057612e10371c7c3f35d31dffa789e907a2b2e3c62"
+  },
+  "executionAccounting": {
+    "historyStoredPrivately": true,
+    "ciPreflightAttempts": 3,
+    "fixtureRuntimeRuns": 3,
+    "fixtureRuntimeFailures": 1,
+    "repeatReason": "Root final proof review removes tautological generated-path absence assertion (observer only tracked /api/routed) and hardcoded misleading cachedPageRequestSeenByRoute property. Existing measured generated SWresponse and workerownedroutedfetch remain; do not claim routeabsence was instrumented. Re-run finalchangedassetbytes once, no new mechanism or scope.",
+    "ciRepeatReason": {
+      "recordedAt": "2026-11-03T02:46:28.449907+00:00",
+      "previousExitCode": 0,
+      "previousLogSha256": "5ded6ba7d5d3cd2ff118a9406496772852b53d46e1aca30739e02409f892a0c7",
+      "nextAttempt": 3,
+      "reason": "Independent final review after firstCI identified narrowly scoped public prose corrections: mock-only WebSocketFAQ versus connectToServer support; explicit downloaded-fixture prerequisites/one-command bullets/cleanup in all ten editions; remaining ZH requestfailed after-headers nuance. Recheck changed finalsource rather than reuse earlier-byte CI. Root finalproofreview also removed a tautological generated-path routeabsence assertion and hardcoded cachelabel from the downloadable fixture, requiring finalbyte runtimeverification. CI2was rejectedby source-immutabilityguard duringlate researchmetadata update; subprocessoutcome/logunknown becauseoldprivatewrapper asserted beforepersist. Executorfinished; allpublicmutations stopped; privateharnessnowpersistsSHA/log/exitbeforeguard.",
+      "assetUnchangedNoRerunNeeded": false,
+      "secondAttemptGuardRejection": {
+        "checkedAt": "2026-11-03T02:50:25.543919+00:00",
+        "attempt": 2,
+        "status": "rejected_source_mutation",
+        "command": "npm run ci",
+        "exitCode": null,
+        "sourceFilesUnchangedDuringCi": false,
+        "logSha256": null,
+        "whyUnknown": "Old privatewrapper asserted byteequality before saving subprocess exit/stdout/stderr; rejected result cannot be accepted as a pass.",
+        "observedFileMtimes": {
+          "src/data/ai-cycle-2026-11-03.ts": "2026-11-03T02:47:51.773912+00:00",
+          "src/data/resources.ts": "2026-11-03T02:39:24.638787+00:00",
+          "src/data/guide-editions.ts": "2026-11-03T02:39:24.639303+00:00",
+          "src/data/guide-series.ts": "2026-11-03T02:39:35.979294+00:00",
+          "docs/seo/keyword-map-2026-10-16.json": "2026-11-03T02:42:03.322146+00:00",
+          "scripts/audit-seo.mjs": "2026-11-03T02:39:35.979959+00:00",
+          "docs/seo/research-2026-11-03.json": "2026-11-03T02:48:58.721689+00:00",
+          "public/templates/playwright-diagnostics-local-fixtures.mjs": "2026-11-03T02:47:37.496438+00:00"
+        },
+        "suspectedChangedFile": "docs/seo/research-2026-11-03.json",
+        "attribution": "Most recent publicfilemtime corresponds to late execution-metadata update; perfilebeforeSHA was not persisted, so exact changedfile not independentlyproven."
+      }
+    },
+    "staticCorrections": "See private execution/review history; no unreported model switch or fabricated runtime count."
+  },
+  "validation": {
+    "preflightCi": {
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 3,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "632932e169bbae5f583ba50889d7a8d3dfb137e5cd8e6555e422a40faac5a98f"
+    },
+    "repositoryRead": {
+      "exitCode": 0,
+      "projectScopedAuthVerified": true
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1353,
+    "seoAudit": {
+      "htmlPages": 1349,
+      "sitemapUrls": 1066,
+      "internalLinks": 46115,
+      "alternateLinks": 7835,
+      "fallbackPages": 60,
+      "editorialGuides": 198,
+      "errors": 0
+    },
+    "contentContract": {
+      "status": "passed",
+      "existingTopicsPreserved": 94,
+      "totalTopics": 99,
+      "completeEditions": 198,
+      "newTopics": 5
+    },
+    "scope": "Reviewed new dated content/data/series/keyword/research/downloadasset and requiredslug audit additions. No existingcontent/renderer/dependency/sharedrunner/clientbackend changes.",
+    "productFacts": "36 catalogue records unchanged;26 confirmed price/licence and10 explicitlyunverified prices keepfielddates2026-10-16; this article release does not recertify them.",
+    "serverCurrent": {
+      "checkedAt": "2026-11-03T02:53:27.745760+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261103-105241",
+      "expected": "/opt/browsertools/releases/20261103-105241",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-03T02:53:15.796Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-test-service-worker-route-visibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-test-service-worker-route-visibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-test-service-worker-route-visibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-test-service-worker-route-visibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-await-websocket-ui-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-await-websocket-ui-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-await-websocket-ui-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-await-websocket-ui-update/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-diagnose-strict-mode-matches/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-diagnose-strict-mode-matches/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-diagnose-strict-mode-matches/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-diagnose-strict-mode-matches/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-classify-browser-console-errors/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-classify-browser-console-errors/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-classify-browser-console-errors/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-classify-browser-console-errors/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-handle-page-crash-event/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-handle-page-crash-event/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-handle-page-crash-event/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-handle-page-crash-event/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-11-03T02:53:23.512216+00:00",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/templates/playwright-diagnostics-local-fixtures.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "b8f6df3e21e539824cf076e759294f45aa8a35bd32d9e1f0c88852242ce4cad5",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/playwright-diagnostics-local-fixtures.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "b8f6df3e21e539824cf076e759294f45aa8a35bd32d9e1f0c88852242ce4cad5",
+        "bytesMatch": true
+      }
+    ]
+  },
+  "localExamples": [
+    {
+      "assetPath": "public/templates/playwright-diagnostics-local-fixtures.mjs",
+      "assetSha256": "b8f6df3e21e539824cf076e759294f45aa8a35bd32d9e1f0c88852242ce4cad5",
+      "exitCode": 0,
+      "runtimeAttempt": 3,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.1",
+      "stdout": {
+        "result": "local_playwright_diagnostics_fixtures_completed",
+        "nodeVersion": "v22.22.3",
+        "playwrightVersion": "not-exported",
+        "browserVersion": "156.0.8078.76",
+        "strictMode": {
+          "broadMatchCount": 4,
+          "broadActionRejectedAsAmbiguous": true,
+          "exactNameCount": 3,
+          "scopedTargetCount": 1,
+          "visibleResult": "archived SKU-4102"
+        },
+        "browserSignals": {
+          "consoleErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "fixture-console-error",
+            "Failed to load resource: net::ERR_FAILED"
+          ],
+          "pageErrors": [
+            "fixture-page-error"
+          ],
+          "failedRequests": [
+            "http://127.0.0.1:56263/api/aborted"
+          ],
+          "httpStatuses": [
+            404
+          ]
+        },
+        "websocket": {
+          "mockedRouteObservedCommandBeforeAcknowledgement": {
+            "type": "fixture-command",
+            "id": "local-1"
+          },
+          "correlationId": "local-1",
+          "uiAssertion": "matching acknowledgement visible",
+          "pageWebSocketEventOrReceivedFrameObserved": false
+        },
+        "serviceWorker": {
+          "routedRequests": [
+            {
+              "path": "/api/routed",
+              "workerOwned": true
+            }
+          ],
+          "workerCount": 1,
+          "workerResponseSource": "generated by the synthetic Service Worker, not CacheStorage"
+        },
+        "lifecycle": {
+          "normalPageCloseObserved": true,
+          "crashForcedOrSimulated": false
+        },
+        "boundary": "Fresh headless Chromium contexts; synthetic loopback-only pages and responses; no external API, user profile, production site, forced crash, or browser-background traffic audit."
+      },
+      "executionBoundary": "Synthetic loopback Chromium only, mockedWS notrealupstream/socketio; generatedSWresponse vsworker-ownednetwork, notproductioncache/offlinecompatibility; strictmatchcounts/scopedclick; browserconsole/pageerror/transport/HTTPclassification; normalclose only,noforcedorsimulatedcrash,nocrashrecoverytest; pageoriginroutingdoesnotauditphysical/browserbackgroundtraffic.",
+      "repeatReason": "Root final proof review removes tautological generated-path absence assertion (observer only tracked /api/routed) and hardcoded misleading cachedPageRequestSeenByRoute property. Existing measured generated SWresponse and workerownedroutedfetch remain; do not claim routeabsence was instrumented. Re-run finalchangedassetbytes once, no new mechanism or scope."
+    }
+  ],
+  "measurement": {
+    "privateReviewSaved": true,
+    "status": "Two pending28OctZH cached GSC inspections refreshed privately; unchanged discovered-notindexed. No submissions or claims of traffic gains. Weekly review completed Nov2; nextNov9."
+  },
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or validationrequests",
+    "Detection website",
+    "EasyBR client/backend or sharedservice changes",
+    "External outreach, applications, account registration or realaccount actions",
+    "New paidtools/subscriptions/modelAPIs",
+    "Cloudflare/analyticsconfig"
+  ]
+}
