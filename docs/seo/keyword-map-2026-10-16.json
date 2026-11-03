@@ -5967,6 +5967,218 @@
         "28day": "2026-11-30"
       },
       "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-test-service-worker-route-visibility",
+      "primaryKeyword": {
+        "en": "playwright service worker route not firing",
+        "zh-CN": "Playwright Service Worker 路由未触发"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Diagnose whether the page request was answered by the worker or the worker made a separate fetch; when blocking workers is valid for routing-focused mocks. Public search results and opened tutorials/issues show a concrete developer task; qualitative evidence only, search volume and rank unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-test-service-worker-route-visibility/",
+        "https://browserhub.co/zh-cn/guides/playwright-test-service-worker-route-visibility/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-03",
+      "sourceRecord": "docs/seo/research-2026-11-03.json",
+      "originalGain": "Separates worker-intercepted page requests from worker-owned fetches, with a local fixture for each path and no CacheStorage/offline claim.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-request-mocking-har",
+          "browser-agent-debugging-traces"
+        ],
+        "distinctiveCoverage": "Separates worker-intercepted page requests from worker-owned fetches, with a local fixture for each path and no CacheStorage/offline claim."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-10",
+        "14day": "2026-11-17",
+        "28day": "2026-12-01"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-await-websocket-ui-update",
+      "primaryKeyword": {
+        "en": "playwright wait for websocket message and UI update",
+        "zh-CN": "Playwright 等待 WebSocket 消息和界面更新"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Wait for the correlated WebSocket frame and separately verify that the page rendered its result. Public search results and opened tutorials/issues show a concrete developer task; qualitative evidence only, search volume and rank unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-await-websocket-ui-update/",
+        "https://browserhub.co/zh-cn/guides/playwright-await-websocket-ui-update/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-03",
+      "sourceRecord": "docs/seo/research-2026-11-03.json",
+      "originalGain": "Covers listener timing, correlation, frame receipt versus visible UI, and the mock-versus-real-server boundary without adding reconnect or protocol claims.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-wait-for-page-ready",
+          "browser-agent-monitor-page-changes-meaningfully"
+        ],
+        "distinctiveCoverage": "Covers listener timing, correlation, frame receipt versus visible UI, and the mock-versus-real-server boundary without adding reconnect or protocol claims."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-10",
+        "14day": "2026-11-17",
+        "28day": "2026-12-01"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-diagnose-strict-mode-matches",
+      "primaryKeyword": {
+        "en": "playwright strict mode violation multiple elements",
+        "zh-CN": "Playwright 严格模式错误多个元素匹配"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Resolve a strict-mode failure by distinguishing substring collisions from identical accessible names and scoping repeated actions to a stable row. Public search results and opened tutorials/issues show a concrete developer task; qualitative evidence only, search volume and rank unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-diagnose-strict-mode-matches/",
+        "https://browserhub.co/zh-cn/guides/playwright-diagnose-strict-mode-matches/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-03",
+      "sourceRecord": "docs/seo/research-2026-11-03.json",
+      "originalGain": "Explains exact names, parent scoping, positional selection boundaries, and force versus strictness using a distinct product-row fixture.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "playwright-dynamic-combobox-option-selection",
+          "playwright-virtualized-grid-row-actions",
+          "browser-agent-diagnose-blocked-clicks"
+        ],
+        "distinctiveCoverage": "Explains exact names, parent scoping, positional selection boundaries, and force versus strictness using a distinct product-row fixture."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-10",
+        "14day": "2026-11-17",
+        "28day": "2026-12-01"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-classify-browser-console-errors",
+      "primaryKeyword": {
+        "en": "playwright console error pageerror requestfailed response",
+        "zh-CN": "Playwright console error、pageerror、requestfailed 与 response"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Classify console output, uncaught exceptions, HTTP status responses and requests that receive no response as separate signals. Public search results and opened tutorials/issues show a concrete developer task; qualitative evidence only, search volume and rank unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-classify-browser-console-errors/",
+        "https://browserhub.co/zh-cn/guides/playwright-classify-browser-console-errors/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-03",
+      "sourceRecord": "docs/seo/research-2026-11-03.json",
+      "originalGain": "Pairs four Playwright event channels with requirement-specific assertions and trace correlation, including why 404/503 are not requestfailed events.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-debugging-traces",
+          "browser-agent-request-mocking-har"
+        ],
+        "distinctiveCoverage": "Pairs four Playwright event channels with requirement-specific assertions and trace correlation, including why 404/503 are not requestfailed events."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-10",
+        "14day": "2026-11-17",
+        "28day": "2026-12-01"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-handle-page-crash-event",
+      "primaryKeyword": {
+        "en": "playwright page crash event target closed recovery",
+        "zh-CN": "Playwright 页面崩溃事件与 target closed 恢复"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Distinguish the Page crash event from normal close and generic closed-target symptoms, then use a checkpoint-aware stale-page recovery decision. Public search results and opened tutorials/issues show a concrete developer task; qualitative evidence only, search volume and rank unknown.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-handle-page-crash-event/",
+        "https://browserhub.co/zh-cn/guides/playwright-handle-page-crash-event/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-03",
+      "sourceRecord": "docs/seo/research-2026-11-03.json",
+      "originalGain": "Documents crash detection and state-safe recovery choices without forcing a crash or claiming automatic recovery.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-debugging-traces",
+          "browser-agent-network-interruption-recovery",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Documents crash detection and state-safe recovery choices without forcing a crash or claiming automatic recovery."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-10",
+        "14day": "2026-11-17",
+        "28day": "2026-12-01"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
@@ -6044,7 +6256,7 @@
     "oldEnhancements": [],
     "publicationEvidence": "Pending independent review and workflow receipt; not yet published.",
     "notClaimed": "Draft prepared for review; no publication, traffic gain, indexing result, or measured search demand is claimed."
-  } ,
+  },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",
     "cycleId": "content-2026-11-02",

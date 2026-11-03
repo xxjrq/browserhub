@@ -1,0 +1,337 @@
+{
+  "cycleId": "content-2026-11-03",
+  "observedOn": "2026-11-03",
+  "status": "public research evidence only; not publication, traffic, rank, or runtime proof",
+  "researchMethod": {
+    "livePublicSearch": true,
+    "openedNonPrimaryPagesPerThemeMinimum": 3,
+    "openedOfficialSources": true,
+    "publicSearchIsSiteQueries": false,
+    "searchVolume": null,
+    "rank": null,
+    "BrowserHubImpressions": null,
+    "BrowserHubClicks": null,
+    "trafficOrConversion": null,
+    "firecrawl": "No new subscription or paid API used; current public search and direct page opens used.",
+    "sourceRule": "Public pages establish qualitative problem or tutorial coverage only. Technical claims use the opened Playwright documentation or first-party project issue where appropriate. First-party issues are labeled primary problem reports and are not counted as competitor tutorials. Search snippets located pages but were not treated as evidence when the page could not be opened.",
+    "queries": [
+      "Playwright service worker page.route does not intercept requests tutorial",
+      "Playwright WebSocket waitForEvent frame received UI update Socket.IO issue",
+      "Playwright strict mode violation duplicate locators tutorial",
+      "Playwright capture console errors pageerror requestfailed HTTP status tutorial",
+      "Playwright page crash event Target closed troubleshooting tutorial"
+    ],
+    "failedOpens": []
+  },
+  "ownershipAudit": {
+    "existingGuideTopicsReviewed": 94,
+    "existingKeywordRowsReviewed": 160,
+    "exactOwnerFound": false,
+    "result": "No exact owner found for these five narrowly defined intents. All 94 existing guide objects and their copies are preserved. The existing Playwright CLI vs MCP guide remains unchanged in this cycle.",
+    "nearestOwnersByTheme": {
+      "playwright-test-service-worker-route-visibility": [
+        "browser-agent-request-mocking-har",
+        "browser-agent-debugging-traces"
+      ],
+      "playwright-await-websocket-ui-update": [
+        "browser-agent-wait-for-page-ready",
+        "browser-agent-monitor-page-changes-meaningfully"
+      ],
+      "playwright-diagnose-strict-mode-matches": [
+        "playwright-dynamic-combobox-option-selection",
+        "playwright-virtualized-grid-row-actions",
+        "browser-agent-diagnose-blocked-clicks"
+      ],
+      "playwright-classify-browser-console-errors": [
+        "browser-agent-debugging-traces",
+        "browser-agent-request-mocking-har"
+      ],
+      "playwright-handle-page-crash-event": [
+        "browser-agent-debugging-traces",
+        "browser-agent-network-interruption-recovery",
+        "browser-agent-human-takeover"
+      ]
+    },
+    "excludedOverlaps": [
+      "The Service Worker article distinguishes page requests intercepted by a worker from worker-originated network requests and does not become another general HAR tutorial.",
+      "The WebSocket article covers a matched frame followed by rendered UI state; it does not claim reconnect, deduplication, Socket.IO protocol, or general page readiness.",
+      "The strict-mode article addresses multi-match locator resolution generally; existing row-action and combobox pages retain their narrower task ownership.",
+      "The console article classifies browser diagnostics; it does not replace trace capture guidance.",
+      "The crash article documents crash-event detection and stale target recovery boundaries; it does not replace network interruption or general trace workflows."
+    ]
+  },
+  "topics": [
+    {
+      "slug": "playwright-test-service-worker-route-visibility",
+      "intent": "Diagnose why a page route misses a request handled by a Service Worker; choose blocked workers for routing-focused mocks or keep workers enabled and inspect worker-owned context events when testing worker behavior.",
+      "userTask": "A developer's route callback never fires although the page displays data, and they need to determine whether the worker returned a response, sent its own fetch, or the page never requested the endpoint.",
+      "originalGain": "Explicitly separates frame-owned requests handled by a worker from separate worker-originated network fetches; scopes the blocked-worker recommendation to network-mock tests; local fixture includes a synthetic generated response and a routed worker fetch without claiming CacheStorage/offline behavior.",
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "QASkills: Playwright Service Worker network mocking gotchas",
+          "url": "https://qaskills.sh/blog/playwright-service-worker-network-mocking-gotchas",
+          "observation": "Separates worker responses from routed network activity and notes route-order/HAR interactions; practitioner tutorial, not an independent benchmark."
+        },
+        {
+          "title": "MobileStalk: capture background requests and responses in Playwright",
+          "url": "https://mobilestalk.net/how-to-capture-background-requests-and-responses-in-playwright/",
+          "observation": "Describes Service Worker and MSW behavior, context events, and route visibility; secondary tutorial."
+        },
+        {
+          "title": "Simplified Guide: intercept network requests in Playwright",
+          "url": "https://www.simplified.guide/playwright/network-request-intercept",
+          "observation": "Shows route registration before requests and recommends blocking workers only when the worker is not under test."
+        }
+      ],
+      "primarySourcesOpened": [
+        {
+          "title": "Playwright Service Workers",
+          "url": "https://playwright.dev/docs/service-workers",
+          "observation": "Current guide says worker support is Chromium-only, distinguishes frame-owned and service-worker-owned requests, exposes context events and request.serviceWorker(), and warns the serviceworker event precedes activation/control."
+        },
+        {
+          "title": "Playwright Network",
+          "url": "https://playwright.dev/docs/network",
+          "observation": "Current guide recommends serviceWorkers: block when native page/context routing misses worker-handled requests; blocking changes behavior under test."
+        }
+      ],
+      "competitionAssessment": "Several tutorials explain interception and the worker exception. The article adds an explicit decision by test contract and careful ownership/provenance distinctions with a bounded local fixture."
+    },
+    {
+      "slug": "playwright-await-websocket-ui-update",
+      "intent": "Wait for a specific Playwright-observed WebSocket frame before concluding a browser action succeeded, then assert the corresponding user-visible application state separately.",
+      "userTask": "A browser test times out or misses a fast socket reply, or sees a frame without knowing whether the UI consumed it.",
+      "originalGain": "Shows listener ordering before navigation/action, handles possible initial server push by registering inside the page websocket callback, correlates a reply to a synthetic request ID, and distinguishes frame receipt, rendered state, mocked transport, and real server integration.",
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "TestDino Playwright WebSockets and real-time testing",
+          "url": "https://github.com/testdino-hq/playwright-skill/blob/main/core/websockets-and-realtime.md",
+          "observation": "Recommends event/UI assertions over arbitrary sleeps and discusses binary frames and routeWebSocket; third-party skill content."
+        },
+        {
+          "title": "Reddit: Playwright not detecting changes from Socket.IO",
+          "url": "https://www.reddit.com/r/Playwright/comments/1d95nhw/playwright_not_detecting_changes_from_socketio/",
+          "observation": "Developer reports that the backend emits a Socket.IO message but the test sees the UI only after reload; anecdotal problem evidence."
+        },
+        {
+          "title": "Reddit: WebSocket calls and browser automation",
+          "url": "https://www.reddit.com/r/Playwright/comments/1wsech7/web_socket_calls_automation/",
+          "observation": "Discussion distinguishes mocking a socket from observing an independently running UI and mentions routeWebSocket; anecdotal."
+        }
+      ],
+      "primarySourcesOpened": [
+        {
+          "title": "Playwright WebSocket API",
+          "url": "https://playwright.dev/docs/api/class-websocket",
+          "observation": "Current API supports waitForEvent predicates and finite timeouts; received frame payload can be text or Buffer."
+        },
+        {
+          "title": "Playwright WebSocketRoute API",
+          "url": "https://playwright.dev/docs/api/class-websocketroute",
+          "observation": "First-party route API for intercepting or modifying a page-created WebSocket; used only for deterministic synthetic acknowledgement, not server validation."
+        }
+      ],
+      "competitionAssessment": "Tutorials cover socket interception and waits, and a public problem thread describes a missing UI update. The article separates pre-armed event capture, correlation, and UI assertion without claiming production protocol validation."
+    },
+    {
+      "slug": "playwright-diagnose-strict-mode-matches",
+      "intent": "Resolve a Playwright locator strict-mode violation by reading the matched elements, tightening role/name matching, and scoping repeated actions to a stable row or landmark instead of reflexively selecting by index.",
+      "userTask": "A test fails after a page adds a second button or repeated row, and the developer needs to determine the intended target without silently acting on whichever match comes first.",
+      "originalGain": "Separates substring collision from genuinely duplicate accessible names, explains row scoping and when count/nth is appropriate, states force bypasses actionability rather than strictness, and uses an original product-row/SKU fixture rather than reproducing a tutorial example.",
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "Smoketest: Fix the Playwright strict mode violation",
+          "url": "https://smoketest.sh/blog/playwright-strict-mode-violation",
+          "observation": "Explains numbered matches, exact names, repeated rows and semantic scoping; shares a Save/Save draft example not reused."
+        },
+        {
+          "title": "QASkills: Playwright strict mode locator fixes",
+          "url": "https://qaskills.sh/blog/playwright-strict-mode-violation-fix",
+          "observation": "Discusses visibility filters, responsive duplicates, animation timing and positional methods."
+        },
+        {
+          "title": "Stack Overflow: Playwright locator strict mode violation",
+          "url": "https://stackoverflow.com/questions/76043713/playwright-locator-error-strict-mode-violation",
+          "observation": "Question and answers describe ambiguous locator matches and positional selection."
+        },
+        {
+          "title": "QA Vibes: Playwright strict mode violation fixes",
+          "url": "https://qavibes.com/blog/playwright-strict-mode-violation",
+          "observation": "Uses a practice-shop framing and describes duplicates, filters and positional choices; product-led tutorial."
+        }
+      ],
+      "primarySourcesOpened": [
+        {
+          "title": "Playwright Locators",
+          "url": "https://playwright.dev/docs/locators",
+          "observation": "Current guide says locator actions are strict, recommends unique locators and cautions positional methods may select a different element after page changes."
+        },
+        {
+          "title": "Playwright Locator API",
+          "url": "https://playwright.dev/docs/api/class-locator",
+          "observation": "Current API says force bypasses actionability checks; Locator.or may match both elements and cause strictness violation."
+        }
+      ],
+      "competitionAssessment": "The core error has abundant tutorial coverage. The narrower value is a systematic distinction between substring/duplicate-name/row ambiguity, a materially different fixture, and an explicit correction that force does not make the locator unique."
+    },
+    {
+      "slug": "playwright-classify-browser-console-errors",
+      "intent": "Collect and classify Playwright console messages, uncaught page exceptions, HTTP error responses and requests that receive no HTTP response as separate browser diagnostics, then fail only on conditions defined by the tested application behavior.",
+      "userTask": "A developer sees several error-looking log lines and needs to decide whether an application exception, HTTP 404/500 or transport failure caused the test outcome.",
+      "originalGain": "Pairs four event channels with bounded sanitized records, makes test assertions requirement-specific, includes trace correlation without replacing capture, and avoids the false claim that HTTP error status triggers requestfailed.",
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "TechYorker: Read console errors in Playwright tests",
+          "url": "https://techyorker.com/how-to-read-console-errors-with-playwright/",
+          "observation": "Separates console, pageerror, response status and requestfailed, and describes trace correlation."
+        },
+        {
+          "title": "iTechGuides: Capture browser logs with Playwright",
+          "url": "https://www.itechguides.com/how-to-capture-browser-logs-with-playwright/",
+          "observation": "Opened current article distinguishes four event types, recommends pre-navigation listeners, and notes buffered helper version boundaries."
+        },
+        {
+          "title": "GeekChamp: Capture browser logs, exceptions, HTTP and network failures",
+          "url": "https://geekchamp.com/how-to-capture-browser-logs-with-playwright-console-exceptions-http-and-network-failures/",
+          "observation": "Documents separate listeners, early attachment and the HTTP response versus requestfailed distinction; affiliate-supported tutorial."
+        }
+      ],
+      "primarySourcesOpened": [
+        {
+          "title": "Playwright Page API",
+          "url": "https://playwright.dev/docs/api/class-page",
+          "observation": "Current docs distinguish console, pageerror, response and requestfailed; buffered pageErrors/console APIs have version boundaries."
+        },
+        {
+          "title": "Playwright Request API",
+          "url": "https://playwright.dev/docs/api/class-request",
+          "observation": "Current docs state HTTP 404/503 are responses that can finish normally rather than requestfailed."
+        },
+        {
+          "title": "Playwright Trace Viewer",
+          "url": "https://playwright.dev/docs/trace-viewer",
+          "observation": "Current trace viewer documentation explains browser and test console streams and action/network correlation."
+        }
+      ],
+      "competitionAssessment": "Multiple logs tutorials exist. The article provides a compact decision model for which event should fail which test and preserves the difference between browser evidence and server-side completion."
+    },
+    {
+      "slug": "playwright-handle-page-crash-event",
+      "intent": "Detect a Playwright renderer crash separately from normal page close, uncaught page exceptions, request failures and generic closed-target errors; stop using the stale Page and make recovery checkpoint/version-aware.",
+      "userTask": "An automated browser or MCP client repeatedly reports a dead page, and its maintainer needs to know whether the page crashed, was closed, or the worker/server is retaining a stale tab reference.",
+      "originalGain": "Restricts the scope to crash-event detection and stale-target recovery choices; does not force a renderer crash or claim automatic recovery. Distinguishes documented Playwright behavior, first-party incident reports, and secondary Target-closed tutorials.",
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "TurnSignal: Playwright Target page/context/browser closed causes",
+          "url": "https://turnsignal.ai/blog/playwright-target-page-context-or-browser-has-been-closed",
+          "observation": "Covers close, teardown, missing-await and crash as different sources of closed-target errors; secondary tutorial."
+        },
+        {
+          "title": "QA Vibes: diagnose Playwright Target closed",
+          "url": "https://qavibes.com/blog/playwright-target-closed",
+          "observation": "Shows close/timeout/missing-await cases and explains that failure may surface after the original cause; secondary guide."
+        },
+        {
+          "title": "Apify Academy: fix Target closed in Playwright/Puppeteer",
+          "url": "https://docs.apify.com/academy/node-js/how_to_fix_target-closed",
+          "observation": "Describes out-of-memory browser tab crash separately from premature close and recommends logging lifecycle; platform tutorial."
+        },
+        {
+          "title": "ScreenshotRun: Target closed lifecycle troubleshooting",
+          "url": "https://screenshotrun.com/blog/playwright-target-page-context-or-browser-has-been-closed",
+          "observation": "Separates page/context/browser lifecycle and discusses browser crash and explicit close events; vendor-authored tutorial."
+        }
+      ],
+      "primarySourcesOpened": [
+        {
+          "title": "Playwright Page crash event",
+          "url": "https://playwright.dev/docs/api/class-page#page-event-crash",
+          "observation": "Official API says page crash emits crash and ongoing/subsequent operations on that page throw."
+        },
+        {
+          "title": "Playwright MCP issue 1599: stale crashed page reference",
+          "url": "https://github.com/microsoft/playwright-mcp/issues/1599",
+          "observation": "First-party repository issue records a particular MCP build retaining a crashed tab because cleanup handled close but not crash; issue contains version/environment details and a restart workaround, not a universal current guarantee."
+        },
+        {
+          "title": "Playwright issue 43070: WebKit content process crash on reload",
+          "url": "https://github.com/microsoft/playwright/issues/43070",
+          "observation": "First-party report describes a version-specific WebKit crash and a limited repro loop; used as an incident example, not general behavior proof."
+        }
+      ],
+      "competitionAssessment": "Target-closed tutorials often center on teardown and missing awaits; public first-party issues describe true renderer crashes and stale MCP state. The article adds the narrower event-level distinction, safe checkpoint boundary, and explicit no-forced-crash fixture limitation."
+    }
+  ],
+  "asset": {
+    "path": "public/templates/playwright-diagnostics-local-fixtures.mjs",
+    "sha256": "b8f6df3e21e539824cf076e759294f45aa8a35bd32d9e1f0c88852242ce4cad5",
+    "scope": "Fresh headless Chromium contexts, synthetic loopback-only routes/pages and one mocked WebSocket; no external API, user profile, production site, forced crash, or browser-background traffic audit.",
+    "includedCases": [
+      "strict-mode locator counts, rejected broad action, row-scoped action and visible result",
+      "console/pageerror/requestfailed/HTTP response classification",
+      "mock WebSocket route observes a correlated synthetic command before acknowledgement; rendered UI is asserted separately, without claiming page socket/frame events for the mocked route",
+      "Service Worker generated response versus worker-originated routed fetch",
+      "normal page close lifecycle"
+    ],
+    "runtime": "Final asset SHA passed on runtime attempt 3 on 2026-11-03: Node.js 22.22.3, Playwright 1.64.1, headless Chrome 156.0.8078.76; exit code 0, stderr empty, duration 1.41 seconds. Attempt 1 failure and attempt 2 prior-revision pass remain in the history. The final run observed only the listed events and made no production, background-traffic, CacheStorage/offline or crash-recovery claims.",
+    "runtimeAttempts": [
+      {
+        "attempt": 1,
+        "executor": "root",
+        "result": "failed",
+        "playwrightVersion": "1.64.1",
+        "observation": "Mocked route did not emit page websocket event; page.waitForEvent timed out.",
+        "resolution": "Changed fixture to boundedly await the mock route receiving the expected synthetic command, then assert the mock acknowledgement in visible UI. The guide distinguishes route observation from page websocket/frame event waits.",
+        "assetSha256": "4c5c58fd02e34c796283a6da4337b26e0a15dda415bd99235ed9e5e7d933374f"
+      },
+      {
+        "attempt": 2,
+        "executor": "root",
+        "result": "passed",
+        "nodeVersion": "v22.22.3",
+        "playwrightVersion": "1.64.1",
+        "browserVersion": "156.0.8078.76",
+        "durationSeconds": 1.38,
+        "exitCode": 0,
+        "stderr": "empty",
+        "observations": {
+          "strictMode": "Broad locator matched 4 and rejected click; exact name matched 3; row scope matched 1 and visible result was archived SKU-4102.",
+          "browserSignals": "3 console errors including fixture marker and two browser resource messages; 1 pageerror; 1 aborted request; HTTP 404 response.",
+          "websocket": "Mock route observed correlated command id local-1 and matching acknowledgement appeared in UI; page websocket and received-frame events were not observed.",
+          "serviceWorker": "One worker-owned routed fetch at /api/routed; a synthetic worker-generated response was returned and visible in the page; the run did not measure route absence or response.fromServiceWorker provenance.",
+          "lifecycle": "Normal page close observed; crash was not forced or simulated."
+        },
+        "scope": "Fresh headless Chromium contexts, synthetic loopback pages and responses, mocked WebSocket route; no external API, user profile, production page, background network audit, CacheStorage/offline validation or crash/recovery test.",
+        "assetSha256": "3e1cd7c369ab0a77f63eebfece5b86a545d5baa434d07239d79f32a7e7bba03b"
+      },
+      {
+        "attempt": 3,
+        "executor": "root",
+        "result": "passed",
+        "assetSha256": "b8f6df3e21e539824cf076e759294f45aa8a35bd32d9e1f0c88852242ce4cad5",
+        "reason": "Removed an unsupported assertion and hard-coded route-absence output field identified in final static review; rerun exact current bytes.",
+        "nodeVersion": "v22.22.3",
+        "playwrightVersion": "1.64.1",
+        "browserVersion": "156.0.8078.76",
+        "durationSeconds": 1.41,
+        "exitCode": 0,
+        "stderr": "empty",
+        "observations": {
+          "strictMode": "Broad locator matched 4 and rejected click; exact name matched 3; row scope matched 1 and visible result was archived SKU-4102.",
+          "browserSignals": "3 console errors including fixture marker and two browser resource messages; 1 pageerror; 1 aborted request; HTTP 404 response.",
+          "websocket": "Mock route observed correlated command id local-1 and matching acknowledgement appeared in UI; page websocket and received-frame events were not observed.",
+          "serviceWorker": "One worker-owned routed fetch at /api/routed; synthetic worker-generated response was displayed and one worker was active. Route absence and response.fromServiceWorker provenance were not measured.",
+          "lifecycle": "Normal page close observed; crash was not forced or simulated."
+        },
+        "scope": "Fresh headless Chromium contexts, synthetic loopback pages and responses, mocked WebSocket route; no external API, user profile, production page, background network audit, CacheStorage/offline validation or crash/recovery test."
+      }
+    ]
+  },
+  "performanceEvidence": "Private read-only weekly report reviewed separately; no raw account metrics copied into public research or article copy.",
+  "limitations": [
+    "No search-volume, ranking, site query, conversion or causal traffic evidence is claimed.",
+    "Public tutorial pages and issue threads show existing coverage or an observed problem, not market-wide demand.",
+    "No product hands-on test or AI browser product capability is claimed.",
+    "The crash path is documentation-based and is not forced by the local asset."
+  ]
+}
