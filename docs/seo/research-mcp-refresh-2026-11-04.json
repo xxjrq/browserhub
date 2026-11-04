@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "cycleId": "content-2026-11-04-batch-02",
+  "status": "existing_owner_refresh_research_complete_not_published",
+  "scope": {
+    "newTopicCount": 0,
+    "owners": [
+      "chrome-devtools-mcp-existing-browser",
+      "playwright-mcp-existing-browser"
+    ],
+    "refreshes": 2,
+    "sourceFiles": [
+      "src/data/ai-session-guides.ts",
+      "src/data/ai-playwright-guides.ts"
+    ],
+    "outsideScope": [
+      "new themes",
+      "assets",
+      "workflow scripts",
+      "keyword map",
+      "other owners",
+      "runtime or compatibility tests",
+      "publication or deployment"
+    ]
+  },
+  "demandContext": {
+    "source": ".local/workflows/measurement/2026-11-04/effect-audit/",
+    "observed": "The private page-level audit contains small page signals and query wording around autoConnect, connecting an existing browser, and the exact closed-DevTools-port error. These are qualitative clues for refreshing the two existing intent owners.",
+    "privateDataPolicy": "No raw GSC metrics, counts, query dates, or exported account data are copied into this research file or public copy.",
+    "notAvailable": [
+      "search volume",
+      "competitor traffic",
+      "ranking position",
+      "measured site-level impact"
+    ],
+    "noNewKeywordOrTopicClaim": true
+  },
+  "officialFactsChecked": [
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/configuration.md",
+      "observedOn": "2026-11-04",
+      "facts": [
+        "--autoConnect is documented for local Chrome 144 or newer and requires remote debugging to be enabled in Chrome.",
+        "--browser-url attaches to a running debuggable Chrome instance.",
+        "The selected Chrome channel is stable by default.",
+        "The configuration reference documents --isolated and profile options."
+      ],
+      "sourceType": "Official Chrome DevTools MCP configuration reference"
+    },
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/advanced-usage.md",
+      "observedOn": "2026-11-04",
+      "facts": [
+        "autoConnect uses Chrome's default profile for the selected channel and asks the user to approve the connection.",
+        "Manual attach uses --browser-url with a matching remote-debugging port and non-default user-data directory.",
+        "The project describes autoConnect for local browser sharing and manual attach for sandbox or forwarded routes."
+      ],
+      "sourceType": "Official Chrome DevTools MCP advanced-usage guide"
+    },
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/troubleshooting.md",
+      "observedOn": "2026-11-04",
+      "facts": [
+        "Troubleshooting directs readers to check logs and the Node/npm environment used by the MCP client.",
+        "autoConnect failures can involve Chrome version, running state, remote-debugging toggle, user approval, another debugger connection, or macOS profile-folder permissions.",
+        "VM-to-host access may need forwarding or an SSH tunnel; test hostname and port reachability from the MCP environment."
+      ],
+      "sourceType": "Official Chrome DevTools MCP troubleshooting guide"
+    },
+    {
+      "url": "https://developer.chrome.com/blog/remote-debugging-port",
+      "observedOn": "2026-11-04",
+      "facts": [
+        "Chrome 136 and newer require a non-default user-data directory for command-line remote debugging."
+      ],
+      "sourceType": "Chrome for Developers"
+    },
+    {
+      "url": "https://playwright.dev/mcp/configuration/browser-extension",
+      "observedOn": "2026-11-04",
+      "facts": [
+        "Current Playwright MCP documentation separates Chrome/Edge channel connection, HTTP CDP endpoint, Playwright server endpoint, and browser-extension connection.",
+        "Chrome/Edge channels use values such as --cdp-endpoint=chrome or --cdp-endpoint=msedge and the in-browser remote-debugging permission; they do not require a manually selected port.",
+        "HTTP CDP endpoint configuration uses the browser's reachable endpoint.",
+        "The extension attaches to existing tabs; by default it selects the last-used profile with the extension installed, or --profile-dir-name can select a profile."
+      ],
+      "sourceType": "Official Playwright MCP documentation"
+    },
+    {
+      "url": "https://github.com/microsoft/playwright/blob/main/packages/extension/README.md",
+      "observedOn": "2026-11-04",
+      "facts": [
+        "A restricted frame URL such as chrome:// or chrome-extension:// can make Chrome detach the Playwright extension debugger; the README suggests disabling the injecting extension on that site, changing Site access to On click, or using another profile."
+      ],
+      "sourceType": "Official Playwright Extension README"
+    },
+    {
+      "url": "https://playwright.dev/mcp/configuration/options",
+      "observedOn": "2026-11-04",
+      "facts": [
+        "Configuration distinguishes a browser CDP endpoint from a remote Playwright server endpoint and browser profile options."
+      ],
+      "sourceType": "Official Playwright MCP configuration documentation"
+    }
+  ],
+  "readerPageObservations": {
+    "chromeDevtoolsMcpExistingBrowser": [
+      {
+        "title": "Chrome DevTools MCP Setup 2026: Fix Opens New Window + ...",
+        "url": "https://www.heyuan110.com/posts/ai/2026-03-17-chrome-devtools-mcp-guide/",
+        "openedOn": "2026-11-04",
+        "observation": "Leads with the new-window versus existing-session problem and walks through connection methods and profile setup. Its Chrome 146 stable phrasing is time-sensitive and was not carried forward; current primary documentation anchors the compatibility boundary."
+      },
+      {
+        "title": "Automating Authenticated Websites with Chrome DevTools MCP and Claude",
+        "url": "https://scalified.com/blog/chrome-devtools-mcp-authentication",
+        "openedOn": "2026-11-04",
+        "observation": "Explains a separate profile, manual port launch, a JSON endpoint check, and a failed-connection symptom. These are useful troubleshooting shapes; the refreshed owner adds mode-specific checks and reader network namespace, grounded in current official docs."
+      },
+      {
+        "title": "Remote connection to ChromeOS #2088",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/discussions/2088",
+        "openedOn": "2026-11-04",
+        "observation": "The question and maintainer replies focus on connecting from a second device, a WebSocket endpoint, and forwarding a loopback-only port. This supports a remote-routing branch, not a general compatibility claim."
+      }
+    ],
+    "playwrightMcpExistingBrowser": [
+      {
+        "title": "Testing in a Logged-In State with the Playwright MCP Browser Extension",
+        "url": "https://dev.to/debs_obrien/testing-in-a-logged-in-state-with-the-playwright-mcp-browser-extension-4cmg",
+        "openedOn": "2026-11-04",
+        "observation": "Demonstrates reuse of a signed-in browser profile and an extension setup flow. The refresh keeps that user task and adds current channel, endpoint, and profile distinctions from official docs."
+      },
+      {
+        "title": "Playwright MCP Server Launches New Chrome Instance Despite Configuration #921",
+        "url": "https://github.com/microsoft/playwright-mcp/issues/921",
+        "openedOn": "2026-11-04",
+        "observation": "Documents confusion between the extension and remote-debugging-port setup, plus a new-browser outcome. It informed a mode-first troubleshooting path; issue comments are not treated as current product documentation."
+      },
+      {
+        "title": "Is there a way to connect to my existing browser session using Playwright",
+        "url": "https://stackoverflow.com/questions/71362982/is-there-a-way-to-connect-to-my-existing-browser-session-using-playwright",
+        "openedOn": "2026-11-04",
+        "observation": "Describes a live authenticated session and saved-state limitation, showing why a reader may seek the current browser. It concerns Playwright more broadly and does not establish current MCP behavior."
+      }
+    ]
+  },
+  "editorialChanges": [
+    {
+      "owner": "chrome-devtools-mcp-existing-browser",
+      "locales": [
+        "en",
+        "zh-cn"
+      ],
+      "changes": [
+        "Clarified connection choice and current source-check date.",
+        "Added troubleshooting for the exact closed-port message, separated autoConnect from --browser-url checks, and qualified endpoint diagnostics for forwarded WebSocket addresses.",
+        "Added conditional macOS permission and client-log checks."
+      ],
+      "preserved": [
+        "The full October 25, 2026 Chrome DevTools MCP 1.12.0 / Chrome 155.0.8059.85 synthetic form record and its qualifications.",
+        "Existing manual configuration template, related owner and comparison links."
+      ],
+      "dateMeaning": "Guide source review date is November 4, 2026; the local task record remains dated October 25, 2026."
+    },
+    {
+      "owner": "playwright-mcp-existing-browser",
+      "locales": [
+        "en",
+        "zh-cn"
+      ],
+      "changes": [
+        "Separated channel-name CDP, HTTP CDP endpoint, browser extension, and MCP-managed persistent profile choices.",
+        "Added profile selection, restricted-frame debugger-detach, and container endpoint troubleshooting.",
+        "Added a contextual internal link to the Chrome DevTools MCP connection guide."
+      ],
+      "preserved": [
+        "Existing extension token, CDP, persistence and disconnect details and the no-compatibility-test qualification.",
+        "Existing downloadable configuration template and related guides."
+      ],
+      "dateMeaning": "Guide source review date is November 4, 2026; no Playwright compatibility test is claimed."
+    }
+  ],
+  "execution": {
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "selectionSource": "human_task",
+    "attempts": 1,
+    "tokenUsage": null,
+    "notes": [
+      "Actual model identity and token usage were not reported.",
+      "Documentation-only refresh. This executor ran no runtime, package-compatibility, or website tests.",
+      "Current official docs and competitor reader pages were opened and recorded above.",
+      "English and Simplified Chinese humanizer workflows were read and applied to touched copy."
+    ]
+  },
+  "editorialSkills": [
+    "/Users/myd/.codex/skills/humanizer/SKILL.md",
+    "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+  ],
+  "assets": {
+    "inspected": [
+      "public/templates/chrome-devtools-mcp-manual-attach.json",
+      "public/templates/playwright-mcp-existing-browser.json"
+    ],
+    "changed": []
+  },
+  "limits": [
+    "Competitor pages were read as examples of reader questions and presentation, not copied or treated as primary technical authority.",
+    "Public search and competitor observations do not provide BrowserHub traffic, query volume, ranking, or conversion evidence.",
+    "No new implementation or compatibility claim is added."
+  ]
+}

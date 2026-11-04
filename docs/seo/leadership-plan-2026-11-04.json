@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "project": "BrowserHub",
+  "status": "active_editorial_direction_not_a_traffic_result",
+  "supersedesEditorialSelection": "docs/seo/leadership-plan-2026-10-21.json",
+  "reason": "The user requested action after the effectiveness review: concentrate on reader problems and adjust investment using observed results. Publication continues; production volume is not an outcome metric.",
+  "primaryAudience": [
+    "People choosing and using AI browsers",
+    "Developers connecting browser agents to an existing authorized browser session",
+    "Teams troubleshooting browser-agent integrations"
+  ],
+  "priorityIntents": [
+    "Existing-browser MCP connection mode, profile selection and connection errors",
+    "AI-browser task and product selection with verified capability boundaries",
+    "Browser-agent development problems with a complete configuration, diagnostic path or reproducible example"
+  ],
+  "deprioritize": [
+    "Generic lifestyle workflows without direct evidence of demand from the core audience",
+    "Synonym pages for questions already answered by an existing intent owner",
+    "Broad Playwright API coverage without a clear browser-agent reader task"
+  ],
+  "dailyPublication": {
+    "target": "Approximately five complete independent new themes per day; English and Chinese editions count once. Substantial existing-page improvements are reported separately.",
+    "qualityRule": "Do not manufacture independent themes or publish outlines to fill the target. Check existing ownership, audience fit, current demand evidence and a specific information gain before writing.",
+    "completedCycles": "Never repeat a completed batch. Additional authorized work uses the next sequential batch after verified predecessor completion.",
+    "newTopicMix": "Prefer a majority of new themes about core AI-browser use and task-based tool selection. Developer integration is a supporting track selected from concrete reader questions; do not fill the schedule with generic API-reference coverage or weak topics to meet a mix."
+  },
+  "selectionGate": {
+    "required": [
+      "A concrete reader question and useful next action",
+      "An existing-owner check",
+      "Current public demand evidence or dated private Search Console query evidence, with limitations",
+      "Direct inspection of relevant competing pages and current primary technical sources",
+      "An explicit improvement over the existing answer"
+    ],
+    "insufficientAlone": [
+      "Three reference articles",
+      "A fashionable title",
+      "A long article or a fixed word count",
+      "An official API reference with no additional reader value"
+    ],
+    "competitorAnalysis": "Separate observed page features, hypotheses and unknowns. Never assign causal ranking percentages or invent backlinks, traffic, keyword volume or difficulty."
+  },
+  "immediateExistingOwners": [
+    {
+      "slug": "chrome-devtools-mcp-existing-browser",
+      "action": "Improve documented connection-error diagnosis, mode choice and safe endpoint verification; preserve the dated local execution evidence and its limits."
+    },
+    {
+      "slug": "playwright-mcp-existing-browser",
+      "action": "Improve the extension/CDP decision path, profile selection and failed-connection checks using current official instructions."
+    },
+    {
+      "slug": "gemini-in-chrome-vs-copilot-in-edge",
+      "action": "Next candidate for a source-backed task-selection review; make changes only where an actual gap is found. Not part of this two-owner refresh."
+    }
+  ],
+  "contentContract": {
+    "answer": "Start with a useful direct answer; do not force every answer into a 50-character template.",
+    "body": "Use the structure the task requires: decision table, prerequisites, configuration, expected observations and concrete errors. Include current sources and relevant internal next steps.",
+    "evidence": "Clearly separate official documentation, actual local execution and proposed untested procedures. Never invent firsthand experience.",
+    "schema": "Use structured data only where accurate and appropriate. FAQ content may help readers; schema coverage is not a ranking or AI-citation guarantee.",
+    "editing": "Apply humanizer and humanizer-zh without losing code, versions, qualifications or facts; independent review remains required."
+  },
+  "measurement": {
+    "privateEvidence": ".local/workflows/measurement/2026-11-04/effect-audit/",
+    "windows": "Compare matching closed and actually available 7/14/28-day page, query and language windows. Record refresh time separately from first publication time.",
+    "diagnosticStates": [
+      "Index status or reporting unavailable: unknown",
+      "Not indexed: investigate the individual page; do not treat missing performance rows as proof",
+      "Impressions without clicks: inspect query fit, position, title and competing results",
+      "Clicks without known downstream actions: conversion outcome unknown"
+    ],
+    "aiVisibility": "Record engine, date, prompt, citation URL and sample size when actually observed. A single answer is not a stable citation rate, and standard Google clicks are not proof of AI referrals.",
+    "weeklyReview": "Monday in the existing task; next scheduled review 2026-11-09. Explicit user requests may trigger earlier review.",
+    "success": "Qualified search clicks and verified useful downstream actions; publication counts, crawlers, request totals and skill counts are not substitutes.",
+    "sevenDays": "A review checkpoint, not a promise of top-three rankings or AI recommendations."
+  },
+  "officialMethodReferences": [
+    "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+    "https://developers.google.com/search/updates"
+  ],
+  "operationalBoundaries": [
+    "Reviewed content is published through the existing durable project graph with CI and dual-domain verification",
+    "No index or sitemap submissions; analytics and indexing observations remain read-only",
+    "No detection website, EasyBR client/backend changes, unsolicited outreach or new paid subscriptions",
+    "Raw account data and measured performance remain private",
+    "A plan or a successful deployment does not establish traffic uplift"
+  ]
+}

@@ -224,12 +224,12 @@ Browser Use 连上后如果看到错误的账号或标签页，先停止智能�
     copy: {
       en: {
         title:
-          "Chrome DevTools MCP with an existing browser: auto-connect or CDP URL",
+          "Connect Chrome DevTools MCP to an existing Chrome browser",
         description:
-          "Configure Chrome DevTools MCP to inspect a running Chrome profile, choose autoConnect or a manual CDP endpoint, and diagnose version and consent issues.",
+          "Choose autoConnect or a manual CDP URL for Chrome DevTools MCP. Check Chrome version, profile access, remote debugging and the exact DevTools endpoint when a connection stays closed.",
         category: "Browser agent guides",
         content:
-          "Chrome DevTools MCP normally starts a separate profile. To reuse an open browser, choose autoConnect or a manual CDP URL. autoConnect requires Chrome 144 or newer, remote debugging enabled in Chrome, and user approval. Manual attach needs a Chrome process started with a debugging port and a dedicated non-default data directory. The methods have different version and profile requirements.",
+          "Chrome DevTools MCP normally starts a separate profile. To connect an existing browser, use autoConnect on Chrome 144 or newer when the MCP client can reach the local Chrome process, or a manual CDP URL when you need a named port or a route across a sandbox. A closed DevTools port points to different checks in those two modes. This guide follows the official documentation checked on November 4, 2026; its local task record remains dated October 25.",
         sections: [
           {
             heading: "Pick the connection mode before editing MCP settings",
@@ -262,10 +262,14 @@ The server’s default behavior is to launch a dedicated profile. That profile p
 The server tools use page IDs and element UIDs from a page snapshot. In the retained harness run, a deliberately incomplete fill call omitted pageId and the server rejected it. The harness then took a snapshot, passed the page ID and textbox UID, and completed the form. If a call fails validation, inspect the installed server's input schema and refresh the snapshot before reusing a UID. That error was a tool-argument problem, not a browser connection failure. The [comparison guide](/en/guides/playwright-mcp-vs-chrome-devtools-mcp/) records the same local form task with both servers; the [runnable local check](/templates/mcp-local-attach-check.mjs) and [sanitized result](/templates/mcp-local-attach-results.json) are also available.`,
           },
           {
-            heading: "Check versions and common connection failures",
-            body: `If --autoConnect is not recognized, confirm you installed the current chrome-devtools-mcp package and used the spelling documented by that version. If Chrome does not offer the remote-debugging control or the server finds no browser, verify Chrome 144 or later, the selected channel, and that Chrome is already running. A consent prompt that was denied must be resolved in Chrome before retrying.
+            heading: "Fix a closed DevTools port by connection mode",
+            body: `If you see “DevTools port is still closed. Please make sure Chrome is running with remote debugging enabled.”, first check which connection mode the MCP server actually starts with.
 
-For manual attach, connection refused usually means Chrome is not listening on that port or the server is running in a container that cannot reach the host’s loopback address. A blank or stale endpoint can mean Chrome restarted on another port. Confirm the JSON version URL locally first, then check VM port forwarding or sandbox-to-host routing. If startup succeeds but the wrong tabs appear, verify the Chrome process and profile associated with that endpoint rather than changing the MCP tool list.`,
+For --autoConnect, start Chrome 144 or newer before the MCP client, open chrome://inspect/#remote-debugging in that Chrome profile, enable remote debugging and allow the connection prompt. This mode does not use a port you choose in the MCP settings. If Chrome has several profiles open, autoConnect uses the default profile for the selected channel; confirm that the intended tabs are there. If the flag is rejected, check the installed package’s current spelling and restart the client after changing its server arguments.
+
+For --browser-url, start the intended Chrome process with the debugging port from the URL and a separate user-data directory. Chrome 136 and later ignore remote-debugging switches for the default data directory. Open the matching /json/version URL from the same host or network namespace as the MCP server. If the request is refused, check endpoint reachability from that environment, then verify that Chrome is listening on the expected host and port. If it returns JSON, confirm it identifies the intended browser and version, then check that webSocketDebuggerUrl names an endpoint the MCP server can reach. An unexpected address is a clue to check the host, forwarding or proxy; it does not by itself prove the MCP URL is wrong. In a container or VM, localhost refers to that environment, so use a reachable forwarded endpoint or an access-controlled SSH tunnel. Keep the debugging endpoint on loopback when possible.
+
+If the endpoint responds but the MCP client still cannot attach, check its logs for the nested error and confirm the client runs the Node and npm environment you configured. The official troubleshooting guide also lists profile-folder permission failures on macOS for autoConnect; give the MCP host app access to Chrome under System Settings > Privacy & Security > Files & Folders.`,
           },
           {
             heading: "Limit the exposed tools and finish deliberately",
@@ -288,7 +292,7 @@ When work is done, stop or disconnect the MCP client. For a manual session, clos
           {
             question: "Why is there no permission prompt?",
             answer:
-              "Confirm that remote debugging is enabled at chrome://inspect/#remote-debugging, Chrome is already running, and the MCP server uses the documented autoConnect flag.",
+              "For autoConnect, start Chrome 144 or later first, enable remote debugging at chrome://inspect/#remote-debugging, and check the MCP server uses the documented flag and channel. A manual --browser-url connection uses the CDP endpoint instead of the autoConnect prompt.",
           },
           {
             question: "Can I connect through a VM?",
@@ -298,12 +302,12 @@ When work is done, stop or disconnect the MCP client. For a manual session, clos
         ],
       },
       "zh-cn": {
-        title: "Chrome DevTools MCP 接入已有浏览器：自动连接还是 CDP 地址",
+        title: "Chrome DevTools MCP 连接已有 Chrome 浏览器",
         description:
-          "配置 Chrome DevTools MCP 检查正在运行的 Chrome 配置，选择 autoConnect 或手动 CDP 端点，并排查版本与授权问题。",
+          "在 autoConnect 与手动 CDP 地址之间选择 Chrome DevTools MCP 连接方式。排查 Chrome 版本、配置权限、远程调试与 DevTools 端点问题。",
         category: "浏览器智能体指南",
         content:
-          "Chrome DevTools MCP 默认会启动独立配置。连接已打开的浏览器时，可选 autoConnect 或手动 CDP 地址。autoConnect 要求 Chrome 144 或更新版本、在 Chrome 中启用远程调试并由用户授权。手动连接则要求 Chrome 以调试端口和非默认数据目录启动。两种方式的版本和配置要求不同。",
+          "Chrome DevTools MCP 默认会启动独立配置。连接已有浏览器时，本机 Chrome 144 及更新版本可使用 autoConnect；需要指定端口或跨沙箱连接时，可使用手动 CDP 地址。遇到 DevTools 端口未打开时，应按所选模式检查。本文依据 2026 年 11 月 4 日核对的官方文档整理；本地任务记录仍保留 10 月 25 日的日期。",
         sections: [
           {
             heading: "修改 MCP 配置前先选连接方式",
@@ -336,10 +340,14 @@ Chrome 136 及更新版本会忽略针对默认数据目录的命令行远程调
 该服务的工具使用页面 ID 和快照中的元素 UID。保留的运行记录中，我故意发出了一次缺少 pageId 的填写调用，服务按预期拒绝了参数。之后脚本读取页面快照，传入 page ID 和输入框 UID，表单操作成功。如果参数校验失败，应查看当前服务的输入结构，并刷新快照后再使用 UID。这是工具参数问题，不是浏览器连接失败。[Playwright MCP 与 Chrome DevTools MCP 对比](/zh-cn/guides/playwright-mcp-vs-chrome-devtools-mcp/)记录了两种服务操作本地表单的结果和边界，也可下载[本地检查脚本](/templates/mcp-local-attach-check.mjs)与[精简结果](/templates/mcp-local-attach-results.json)。`,
           },
           {
-            heading: "检查版本与常见连接故障",
-            body: `如果服务不认识 --autoConnect，确认安装的是当前 chrome-devtools-mcp 包，并使用该版本文档中的参数拼写。如果 Chrome 没有远程调试开关，或服务找不到浏览器，检查 Chrome 是否为 144 或更新版本、channel 是否正确，以及 Chrome 是否已经运行。若用户拒绝了授权提示，应先回到 Chrome 处理权限，再重试。
+            heading: "按连接方式排查 DevTools 端口未打开",
+            body: `如果提示“DevTools port is still closed. Please make sure Chrome is running with remote debugging enabled.”，先确认 MCP 服务实际启用的是哪种连接方式。
 
-手动连接被拒绝通常表示 Chrome 没有监听该端口，或 MCP 服务所在容器无法访问宿主机的环回地址。端点为空或已经过期，可能因为 Chrome 重启后使用了另一端口。先在本机确认 JSON 版本地址，再检查虚拟机端口转发或沙箱到宿主机的路由。服务启动后看到错误标签页，应确认端点关联的 Chrome 进程和配置目录，不要先去改 MCP 工具清单。`,
+使用 --autoConnect 时，先启动 Chrome 144 或更新版本，再在对应 Chrome 配置中打开 chrome://inspect/#remote-debugging，启用远程调试并允许连接提示。这个模式不需要在 MCP 配置里填写端口。如果同时打开多个 Chrome 配置，autoConnect 会连接所选 channel 对应的默认配置，先确认目标标签在该配置中。若服务不认识参数，核对当前已安装包文档里的拼写，并在修改参数后重启客户端。
+
+使用 --browser-url 时，启动指定的 Chrome 进程，并确保启动端口和 MCP URL 一致，同时指定独立用户数据目录。Chrome 136 及更新版本会忽略默认数据目录上的远程调试开关。从 MCP 服务所在的主机或网络命名空间访问匹配的 /json/version 地址。若请求被拒绝，先从该环境检查端点是否可达，再确认 Chrome 是否监听预期主机和端口。若返回 JSON，核对它是否标识了预期的浏览器和版本，再确认 webSocketDebuggerUrl 指向 MCP 服务可访问的地址。出现非预期地址时，检查主机、转发或代理路径；单凭这一点不能证明 MCP URL 配错。容器和虚拟机里的 localhost 指向各自环境，需要通过可达的转发端点或受控 SSH 隧道连接。端点应尽量保持在本机环回接口。
+
+如果端点有响应但客户端仍无法接入，检查 MCP 服务日志中的具体错误，并核对客户端使用的 Node 与 npm 环境。官方排错文档还提到，macOS 可能限制 autoConnect 读取 Chrome 配置目录；可在“系统设置 > 隐私与安全性 > 文件与文件夹”中为 MCP 宿主应用授予 Google Chrome 访问权限。`,
           },
           {
             heading: "按任务限制工具，并在结束时关闭连接",
@@ -367,7 +375,7 @@ Chrome 136 及更新版本会忽略针对默认数据目录的命令行远程调
           {
             question: "虚拟机连接失败时怎么查？",
             answer:
-              "确认虚拟机或沙箱可以访问转发后的 CDP 地址，并为隧道配置访问控制。",
+              "先从 MCP 服务所在环境确认可达的 CDP 地址。Chrome 官方示例使用 SSH 本地端口转发；只允许需要的主机访问该隧道。",
           },
         ],
       },
@@ -380,7 +388,7 @@ export const aiSessionGuides: EditorialGuide[] = articles.map((article) => ({
   slug: article.slug,
   date:
     article.slug === "chrome-devtools-mcp-existing-browser"
-      ? "2026-10-25"
+      ? "2026-11-04"
       : "2026-10-21",
   sourcePath: `src/data/ai-session-guides.ts#${article.slug}`,
   availableLocales: ["en", "zh-cn"],
