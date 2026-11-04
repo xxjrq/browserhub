@@ -1,0 +1,302 @@
+{
+  "cycleId": "content-2026-11-04",
+  "observedOn": "2026-11-04",
+  "status": "research and prepared content evidence; not publication, traffic, rank, or SEO outcome proof",
+  "researchMethod": {
+    "ownershipAudit": "Reviewed all 99 existing guide owners/copies and 165 keyword rows at the approved baseline before selecting five intents. No old owner objects or existing keyword rows were modified.",
+    "openedNonPrimaryPagesPerThemeMinimum": 3,
+    "officialSourcesOpened": true,
+    "publicSearchIsSiteQueries": false,
+    "searchVolume": null,
+    "rank": null,
+    "BrowserHubImpressions": null,
+    "BrowserHubClicks": null,
+    "trafficOrConversion": null,
+    "sourceRule": "Non-primary pages establish qualitative problem/tutorial coverage only. Technical and jurisdiction-specific claims rely on opened official sources. Official and non-primary sources are recorded separately. No search volume, rankings, traffic, or popularity claims are inferred.",
+    "failedOpens": [
+      {
+        "url": "https://www.consumerreports.org/cars/car-recalls-defects/how-to-check-if-a-car-has-a-recall-a1271820271/",
+        "result": "403/blocked in attempted open; excluded from evidence and citation."
+      },
+      {
+        "url": "https://consumer.ftc.gov/articles/buying-used-car-private-seller",
+        "result": "Target URL unavailable/incorrect in attempted open; replaced with accessible FTC Used Cars consumer resources page."
+      },
+      {
+        "url": "https://www.consumerreports.org/cars/car-recalls-defects/how-to-check-if-a-car-has-a-recall-a1271820271/",
+        "result": "Repeated inaccessible attempt; not counted as one of the required non-primary pages."
+      }
+    ]
+  },
+  "ownershipAudit": {
+    "existingGuideTopicsReviewed": 99,
+    "existingKeywordRowsReviewed": 165,
+    "exactOwnerFound": false,
+    "result": "Five distinct tasks have no exact owner in the approved baseline. Existing owner objects/copies and 165 existing keyword rows are preserved; five rows are appended. No old enhancement was authorized or performed.",
+    "nearestOwnersByTheme": {
+      "ai-browser-check-used-car-recalls-by-vin": [
+        "ai-browser-research-source-verification",
+        "ai-browser-compare-products-across-sites"
+      ],
+      "ai-browser-verify-contractor-license-before-hire": [
+        "ai-browser-research-source-verification",
+        "ai-browser-volunteer-opportunity-shortlist"
+      ],
+      "playwright-api-request-context-cookie-sharing": [
+        "playwright-api-request-context-econnreset-retries",
+        "browser-automation-profile-persistence",
+        "playwright-test-multiple-roles-permissions"
+      ],
+      "playwright-api-request-context-multipart-upload": [
+        "playwright-api-request-context-econnreset-retries",
+        "browser-agent-upload-files",
+        "browser-agent-request-mocking-har"
+      ],
+      "ai-browser-trace-github-issue-to-released-fix": [
+        "playwright-cli-vs-mcp",
+        "playwright-mcp-vs-chrome-devtools-mcp",
+        "browser-agent-debugging-traces"
+      ]
+    }
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-check-used-car-recalls-by-vin",
+      "distinctiveQuestion": "Can an exact VIN result support a used-car decision, and what must remain unknown?",
+      "officialSources": [
+        {
+          "title": "NHTSA: Check for Recalls",
+          "url": "https://www.nhtsa.gov/recalls",
+          "observed": "Official VIN recall lookup and scope limitations; reviewed 2026-11-04."
+        },
+        {
+          "title": "FTC: Used Cars consumer resources",
+          "url": "https://consumer.ftc.gov/features/feature-0040-used-cars",
+          "observed": "Consumer used-car guidance supporting recall checks within broader vehicle history and inspection; reviewed 2026-11-04."
+        }
+      ],
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "AAA: Everything You Need to Know About Car Recalls",
+          "url": "https://magazine.northeast.aaa.com/daily/life/cars-trucks/everything-you-need-to-know-about-car-recalls/",
+          "observed": "Discusses recall lookup and used-car VIN checks; secondary consumer guidance."
+        },
+        {
+          "title": "Kelley Blue Book: Everything You Need to Know About Recalls",
+          "url": "https://www.kbb.com/car-advice/everything-you-need-to-know-about-recalls/",
+          "observed": "Recall lookup and vehicle repair context; secondary automotive consumer guide."
+        },
+        {
+          "title": "AAA: How to Handle a Vehicle Recall",
+          "url": "https://cluballiance.aaa.com/the-extra-mile/series/the-extra-mile-magazine/how-to-handle-a-vehicle-recall",
+          "observed": "Covers recall notices and repair follow-up; secondary consumer guidance."
+        }
+      ],
+      "qualitativeEvidenceOnly": true
+    },
+    {
+      "slug": "ai-browser-verify-contractor-license-before-hire",
+      "distinctiveQuestion": "How should a browser agent verify one Washington contractor registration without treating it as every trade credential, insurance proof, or legal conclusion?",
+      "officialSources": [
+        {
+          "title": "Washington L&I: Verify a contractor, tradesperson or business",
+          "url": "https://www.lni.wa.gov/licensing-permits/contractors/hiring-a-contractor/verify-contractor-tradesperson-business",
+          "observed": "Washington registry scope, records and stated update cadence reviewed 2026-11-04."
+        }
+      ],
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "Angi: Contractor licensing, bonds and insurance FAQ",
+          "url": "https://www.angi.com/landing/faq",
+          "observed": "Marketplace consumer guidance; used only as secondary checklist context."
+        },
+        {
+          "title": "HomeAdvisor: Customer care",
+          "url": "https://www.homeadvisor.com/customer-care/",
+          "observed": "Marketplace consumer guidance around hiring providers and verifying details."
+        },
+        {
+          "title": "Kiplinger: What to ask a contractor before a renovation",
+          "url": "https://www.kiplinger.com/real-estate/home-improvement/what-to-ask-a-contractor-before-a-renovation",
+          "observed": "Consumer renovation questions and hiring context; not authoritative licensing advice."
+        }
+      ],
+      "qualitativeEvidenceOnly": true
+    },
+    {
+      "slug": "playwright-api-request-context-cookie-sharing",
+      "distinctiveQuestion": "Which Playwright API client uses the browser context cookie jar, and which browser state is not shared?",
+      "officialSources": [
+        {
+          "title": "Playwright: APIRequestContext API",
+          "url": "https://playwright.dev/docs/api/class-apirequestcontext",
+          "observed": "Current API context and cookie behavior reviewed 2026-11-04."
+        },
+        {
+          "title": "Playwright: API testing",
+          "url": "https://playwright.dev/docs/api-testing",
+          "observed": "Official API testing patterns and context-associated request setup reviewed 2026-11-04."
+        }
+      ],
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "QABattle: Share authentication cookies between API and browser contexts",
+          "url": "https://qabattle.com/blog/playwright-api-browser-cookie-sharing",
+          "observed": "Secondary tutorial discussing API/browser cookie sharing."
+        },
+        {
+          "title": "Reddit Playwright: Share context to HTTP client",
+          "url": "https://www.reddit.com/r/Playwright/comments/1qkoxh6/share_context_to_httpclient/",
+          "observed": "Practitioner question/discussion about context-associated API use."
+        },
+        {
+          "title": "Reddit Playwright: Three approaches to authentication state",
+          "url": "https://www.reddit.com/r/Playwright/comments/1t77j5a/i_tested_3_approaches_to_handling_auth_state_in/",
+          "observed": "Practitioner comparison of Playwright authentication-state approaches."
+        }
+      ],
+      "qualitativeEvidenceOnly": true
+    },
+    {
+      "slug": "playwright-api-request-context-multipart-upload",
+      "distinctiveQuestion": "Does the API server receive the exact intended multipart field and bytes, independently of the browser UI file picker?",
+      "officialSources": [
+        {
+          "title": "Playwright: APIRequestContext API",
+          "url": "https://playwright.dev/docs/api/class-apirequestcontext",
+          "observed": "Current multipart option, file shapes and serialization documented/reviewed 2026-11-04."
+        },
+        {
+          "title": "Playwright: API testing",
+          "url": "https://playwright.dev/docs/api-testing",
+          "observed": "Official request context setup and API test patterns reviewed 2026-11-04."
+        }
+      ],
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "Mergify: Playwright API testing guide",
+          "url": "https://articles.mergify.com/playwright-api-testing/",
+          "observed": "Secondary API testing guide containing multipart buffer examples; not treated as complete authentication guidance."
+        },
+        {
+          "title": "OneUptime: Test multipart file uploads",
+          "url": "https://oneuptime.com/blog/post/2026-08-24-test-multipart-file-uploads/view",
+          "observed": "Dated secondary tutorial showing multipart/FormData cases and upload limit tests."
+        },
+        {
+          "title": "Ray.run: Upload a file with the Node.js fs module",
+          "url": "https://ray.run/questions/how-do-i-upload-a-file-using-the-fs-module-in-javascript",
+          "observed": "Secondary Playwright file payload example; sample bootstrap was incomplete, so no code copied."
+        }
+      ],
+      "qualitativeEvidenceOnly": true
+    },
+    {
+      "slug": "ai-browser-trace-github-issue-to-released-fix",
+      "distinctiveQuestion": "What evidence ties an issue to merged code, a release/tag, a published package, and the exact version installed by a developer?",
+      "officialSources": [
+        {
+          "title": "GitHub Docs: Link a pull request to an issue",
+          "url": "https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue",
+          "observed": "Issue/PR linkage and close-keyword behavior reviewed 2026-11-04."
+        },
+        {
+          "title": "GitHub Docs: About releases",
+          "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases",
+          "observed": "GitHub release and tag relationship reviewed 2026-11-04."
+        },
+        {
+          "title": "GitHub Changelog: Release info in issue sidebar",
+          "url": "https://github.blog/changelog/2026-04-09-release-info-in-issue-sidebar-and-project-defaults/",
+          "observed": "Documents issue sidebar release information and stable/prerelease badges; treated as a pointer requiring tag verification."
+        },
+        {
+          "title": "Playwright: Release notes",
+          "url": "https://playwright.dev/docs/release-notes",
+          "observed": "Official versioned release notes."
+        }
+      ],
+      "nonPrimaryPagesOpened": [
+        {
+          "title": "released: Find which release contains a commit",
+          "url": "https://released.blabberate.com/how-it-works",
+          "observed": "Secondary commit-to-release finder description; tag inclusion alone is not package publication proof."
+        },
+        {
+          "title": "PatchMon Help Center: How a release happens",
+          "url": "https://feedback.patchmon.net/hc/en/articles/11-how-a-release-happens",
+          "observed": "Secondary explanation of a project release workflow."
+        },
+        {
+          "title": "Reddit Git: When a patch is released",
+          "url": "https://www.reddit.com/r/git/comments/1ulk6oe/i_need_to_know_when_my_patches_are_released_so_i/",
+          "observed": "Practitioner question about connecting patches to releases."
+        },
+        {
+          "title": "Reddit npm: Resolved issue versus published package version",
+          "url": "https://www.reddit.com/r/npm/comments/vgcfqd/how_do_you_update_a_projects_version_that_had_an/",
+          "observed": "Practitioner discussion of merged/fixed code versus package publication."
+        },
+        {
+          "title": "Reddit Playwright: Browser installation report and workaround",
+          "url": "https://www.reddit.com/r/Playwright/comments/1tsyddy/playwright-browsers-freezing-github-actions/",
+          "observed": "Community author says changing to the official Playwright Docker image and Playwright 1.60.0 resolved the problem; both changed, so this is a lead rather than evidence isolating either cause."
+        }
+      ],
+      "qualitativeEvidenceOnly": true
+    }
+  ],
+  "fixtureExecution": {
+    "asset": "public/templates/playwright-api-context-boundary.mjs",
+    "sha256": "91211b3f17a157fc329925bc1bf8a02a886d305f57b823d73a70c3ac00026d3b",
+    "actualRuntime": {
+      "startedAt": "2026-11-04T01:16:23.779317+00:00",
+      "finishedAt": "2026-11-04T01:16:29.278932+00:00",
+      "exitCode": 0,
+      "stderr": "",
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.1",
+      "browserVersion": "156.0.8078.80",
+      "attempt": 1,
+      "priorFailures": 0
+    },
+    "observed": {
+      "result": "api_cookie_context_boundary_verified",
+      "nodeVersion": "v22.22.3",
+      "playwrightModuleLabel": "module URL override",
+      "browserVersion": "156.0.8078.80",
+      "origin": "127.0.0.1 loopback",
+      "sharedBrowserCookieObserved": true,
+      "standaloneRequestCookieIsolated": true,
+      "multipartUploadVerified": {
+        "fieldNames": [
+          "label",
+          "attachment"
+        ],
+        "label": "local-fixture",
+        "filename": "sample.txt",
+        "mimeType": "text/plain",
+        "fileBytes": 20,
+        "fileSha256": "18bca3da6a0b0dce00b67a31aaaf08ffb48b1c82c087a681ca37d5668bb95897",
+        "boundaryPresent": true
+      },
+      "storageTested": [
+        "cookies"
+      ],
+      "storageNotTested": [
+        "localStorage",
+        "sessionStorage",
+        "IndexedDB",
+        "CSRF",
+        "full authentication",
+        "large-file streaming performance"
+      ]
+    },
+    "scope": "One synthetic loopback run. Shared API Set-Cookie was visible in its browser context; independent API context response was empty; multipart received label and attachment/sample.txt, text/plain, 20 bytes, matching SHA-256 and a boundary. Does not test real authentication, localStorage/sessionStorage/IndexedDB/CSRF, repeated FormData fields, arbitrary parser input, upload security limits, browser UI upload, or large-file streaming."
+  },
+  "notes": [
+    "AI-browser VIN and contractor articles are desk-researched workflows; no real VIN or registry lookup was submitted.",
+    "No production account, real backend, client credentials, outreach, or paid API was used.",
+    "Source access was supplied by the executor, reviewer, and root during the coordinated research; all URL records indicate opened pages only."
+  ]
+}

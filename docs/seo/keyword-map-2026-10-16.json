@@ -6179,6 +6179,219 @@
         "28day": "2026-12-01"
       },
       "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-check-used-car-recalls-by-vin",
+      "primaryKeyword": {
+        "en": "used car recall check by VIN NHTSA AI browser",
+        "zh-CN": "按 VIN 查询二手车召回 NHTSA 浏览器智能体"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "demandEvidence": "Qualitative current public problem/tutorial evidence from opened sources is recorded in docs/seo/research-2026-11-04.json. Search volume, ranking, and traffic are unknown; no numeric demand estimate is asserted.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-check-used-car-recalls-by-vin/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-check-used-car-recalls-by-vin/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-04",
+      "sourceRecord": "docs/seo/research-2026-11-04.json",
+      "originalGain": "Separates an exact VIN lookup from model-level recall coverage, preserves blank/error as unknown, and directs the buyer to manufacturer repair confirmation and a separate vehicle inspection.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-research-source-verification",
+          "ai-browser-compare-products-across-sites"
+        ],
+        "distinctiveCoverage": "Separates an exact VIN lookup from model-level recall coverage, preserves blank/error as unknown, and directs the buyer to manufacturer repair confirmation and a separate vehicle inspection."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-11",
+        "14day": "2026-11-18",
+        "28day": "2026-12-02"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-verify-contractor-license-before-hire",
+      "primaryKeyword": {
+        "en": "verify Washington contractor registration before hiring",
+        "zh-CN": "华盛顿州雇佣承包商前核验登记"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-tasks",
+      "priority": "P1",
+      "demandEvidence": "Qualitative current public problem/tutorial evidence from opened sources is recorded in docs/seo/research-2026-11-04.json. Search volume, ranking, and traffic are unknown; no numeric demand estimate is asserted.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-verify-contractor-license-before-hire/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-verify-contractor-license-before-hire/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-04",
+      "sourceRecord": "docs/seo/research-2026-11-04.json",
+      "originalGain": "Scopes the workflow to Washington L&I registration, separates trade credentials and insurance questions, and records an official registry result without treating it as legal advice or an endorsement.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-research-source-verification",
+          "ai-browser-volunteer-opportunity-shortlist"
+        ],
+        "distinctiveCoverage": "Scopes the workflow to Washington L&I registration, separates trade credentials and insurance questions, and records an official registry result without treating it as legal advice or an endorsement."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-11",
+        "14day": "2026-11-18",
+        "28day": "2026-12-02"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-api-request-context-cookie-sharing",
+      "primaryKeyword": {
+        "en": "Playwright APIRequestContext cookie sharing browser context",
+        "zh-CN": "Playwright APIRequestContext Cookie 与浏览器上下文共享"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Qualitative current public problem/tutorial evidence from opened sources is recorded in docs/seo/research-2026-11-04.json. Search volume, ranking, and traffic are unknown; no numeric demand estimate is asserted.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-api-request-context-cookie-sharing/",
+        "https://browserhub.co/zh-cn/guides/playwright-api-request-context-cookie-sharing/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-04",
+      "sourceRecord": "docs/seo/research-2026-11-04.json",
+      "originalGain": "Explains context-associated cookie sharing versus standalone request.newContext isolation, with explicit limits around web storage, CSRF, and full browser authentication.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "playwright-api-request-context-econnreset-retries",
+          "browser-automation-profile-persistence",
+          "playwright-test-multiple-roles-permissions"
+        ],
+        "distinctiveCoverage": "Explains context-associated cookie sharing versus standalone request.newContext isolation, with explicit limits around web storage, CSRF, and full browser authentication."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-11",
+        "14day": "2026-11-18",
+        "28day": "2026-12-02"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:playwright-api-request-context-multipart-upload",
+      "primaryKeyword": {
+        "en": "Playwright APIRequestContext multipart file upload boundary",
+        "zh-CN": "Playwright APIRequestContext multipart 文件上传 boundary"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Qualitative current public problem/tutorial evidence from opened sources is recorded in docs/seo/research-2026-11-04.json. Search volume, ranking, and traffic are unknown; no numeric demand estimate is asserted.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/playwright-api-request-context-multipart-upload/",
+        "https://browserhub.co/zh-cn/guides/playwright-api-request-context-multipart-upload/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-04",
+      "sourceRecord": "docs/seo/research-2026-11-04.json",
+      "originalGain": "Separates API multipart from UI file selection and provides a fixed loopback fixture that checks the received field, filename, MIME type, exact bytes, and boundary.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "playwright-api-request-context-econnreset-retries",
+          "browser-agent-upload-files",
+          "browser-agent-request-mocking-har"
+        ],
+        "distinctiveCoverage": "Separates API multipart from UI file selection and provides a fixed loopback fixture that checks the received field, filename, MIME type, exact bytes, and boundary."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-11",
+        "14day": "2026-11-18",
+        "28day": "2026-12-02"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-trace-github-issue-to-released-fix",
+      "primaryKeyword": {
+        "en": "GitHub issue merged PR release version installed package",
+        "zh-CN": "GitHub issue PR 合并发布版本与已安装包核验"
+      },
+      "intent": "informational",
+      "cluster": "browser-agent-development",
+      "priority": "P1",
+      "demandEvidence": "Qualitative current public problem/tutorial evidence from opened sources is recorded in docs/seo/research-2026-11-04.json. Search volume, ranking, and traffic are unknown; no numeric demand estimate is asserted.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-trace-github-issue-to-released-fix/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-trace-github-issue-to-released-fix/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-04",
+      "sourceRecord": "docs/seo/research-2026-11-04.json",
+      "originalGain": "Traces issue to PR, commit, tag/release, registry package, and installed version while handling squash, backport, revert, missing tags, and unknown release outcomes.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "playwright-cli-vs-mcp",
+          "playwright-mcp-vs-chrome-devtools-mcp",
+          "browser-agent-debugging-traces"
+        ],
+        "distinctiveCoverage": "Traces issue to PR, commit, tag/release, registry package, and installed version while handling squash, backport, revert, missing tags, and unknown release outcomes."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-11",
+        "14day": "2026-11-18",
+        "28day": "2026-12-02"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
