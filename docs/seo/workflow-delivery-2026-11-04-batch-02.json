@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-04-batch-02",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "commit": "b0a10128505d20ce866312f3c87e8cf94574a96b",
+  "release": "/opt/browsertools/releases/20261104-213547",
+  "publicationReceiptAt": "2026-11-04T13:36:47.229Z",
+  "completedAt": "2026-11-04T13:36:51.531Z",
+  "newTopics": [],
+  "newTopicCount": 0,
+  "newLocalizedPageCount": 0,
+  "oldEnhancements": [
+    "chrome-devtools-mcp-existing-browser",
+    "playwright-mcp-existing-browser"
+  ],
+  "oldEnhancementCount": 2,
+  "refreshedLocalizedPageCount": 4,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+    "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+    "https://browserhub.co/en/guides/playwright-mcp-existing-browser/",
+    "https://browserhub.co/zh-cn/guides/playwright-mcp-existing-browser/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Additional user-authorized existing-owner refresh. The five new themes in the initial daily batch remain counted there exactly once. No duplicate theme URLs.",
+  "directionRecord": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-mcp-refresh-2026-11-04.json"
+  ],
+  "modelRoles": {
+    "executor": {
+      "role": "executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffortRequested": "high",
+      "reasoningEffortEffective": null,
+      "selectionSource": "human_task",
+      "agent": "seo_refresh_20261104",
+      "executionAttempts": [
+        {
+          "attempt": 1,
+          "scope": "Research-led bilingual refresh of two existing intent owners, with current official documentation and observed reader-page questions."
+        }
+      ],
+      "actualModelAndTokenUsage": "Not reported",
+      "runtimeChecks": "None performed; documentation-only changes. Root workflow will handle preservation review, final review, and CI after freeze.",
+      "editorialSkills": [
+        "/Users/myd/.codex/skills/humanizer/SKILL.md",
+        "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+      ],
+      "reasoningEffort": "high",
+      "attempts": 1
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "human_task"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 4,
+    "sha256": "833ddbdce8d699ae99cdfd0deb845170b28a86b42d0876f839b54015bf07df0a"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "bddc7ab9e9365f61ef468d1361a078a8de8e178971d8ed5640ccf5caa77206df"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1364,
+      "sitemapUrls": 1076,
+      "internalLinks": 46745,
+      "alternateLinks": 7880,
+      "fallbackPages": 60,
+      "editorialGuides": 208,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-04T13:32:54.352Z",
+      "status": "passed",
+      "totalTopics": 104,
+      "completeEditions": 208,
+      "newTopics": 0,
+      "existingTopicsPreserved": 104,
+      "existingTopicsUnchanged": 102,
+      "explicitlyRefreshedOwners": [
+        "chrome-devtools-mcp-existing-browser",
+        "playwright-mcp-existing-browser"
+      ],
+      "keywordRows": 170,
+      "oct25RuntimeEvidenceUnchanged": true,
+      "details": [
+        {
+          "slug": "chrome-devtools-mcp-existing-browser",
+          "locale": "en",
+          "sections": 7,
+          "faq": 4
+        },
+        {
+          "slug": "chrome-devtools-mcp-existing-browser",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 4
+        },
+        {
+          "slug": "playwright-mcp-existing-browser",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "playwright-mcp-existing-browser",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-04T13:38:12.619262+00:00",
+      "release": "/opt/browsertools/releases/20261104-213547",
+      "expectedRelease": "/opt/browsertools/releases/20261104-213547",
+      "exitCode": 0,
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "previous_batch_verified",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-04T13:36:51.497Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chrome-devtools-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-mcp-existing-browser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "refreshReceiptAt": "2026-11-04T13:36:47.229Z",
+    "firstPublicationTime": "Unchanged; these are existing pages, not new topics.",
+    "gscFirstFullPostRefreshWindows": {
+      "7day": {
+        "start": "2026-11-05",
+        "end": "2026-11-11",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-12T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-05",
+        "end": "2026-11-18",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-19T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-05",
+        "end": "2026-12-02",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-03T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed available page/query/language windows; preserve missing values and reporting latency. Raw baseline remains private."
+  },
+  "scope": "Two existing bilingual connection guides plus source research and the durable editorial direction. Other102 themes, all catalogue/comparison data and170 keyword rows preserved.",
+  "runtimeEvidence": "No new browser execution. Existing October25 local synthetic MCP evidence and public assets preserved unchanged; current documentation checks do not recertify those tests.",
+  "measurement": "No post-refresh traffic improvement, AI citation, conversion or ROI is claimed.",
+  "operationsNotPerformed": [
+    "Index/sitemap submission or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "Paid subscription or modelAPI purchase",
+    "Outreach or analytics configuration changes"
+  ]
+}
