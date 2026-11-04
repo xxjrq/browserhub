@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-04",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "2a17002ed9ae75a574603540350d24f5a0818a941bde8b6fb8a5eebb89c5139d",
+  "commit": "24065795e91b5930832fe6d1ec6fde729b569348",
+  "release": "/opt/browsertools/releases/20261104-092816",
+  "publicationReceiptAt": "2026-11-04T01:28:56.431Z",
+  "completedAt": "2026-11-04T01:29:02.532Z",
+  "newTopics": [
+    "ai-browser-check-used-car-recalls-by-vin",
+    "ai-browser-verify-contractor-license-before-hire",
+    "playwright-api-request-context-cookie-sharing",
+    "playwright-api-request-context-multipart-upload",
+    "ai-browser-trace-github-issue-to-released-fix"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-check-used-car-recalls-by-vin/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-check-used-car-recalls-by-vin/",
+    "https://browserhub.co/en/guides/ai-browser-verify-contractor-license-before-hire/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-verify-contractor-license-before-hire/",
+    "https://browserhub.co/en/guides/playwright-api-request-context-cookie-sharing/",
+    "https://browserhub.co/zh-cn/guides/playwright-api-request-context-cookie-sharing/",
+    "https://browserhub.co/en/guides/playwright-api-request-context-multipart-upload/",
+    "https://browserhub.co/zh-cn/guides/playwright-api-request-context-multipart-upload/",
+    "https://browserhub.co/en/guides/ai-browser-trace-github-issue-to-released-fix/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-trace-github-issue-to-released-fix/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent new themes; EN/ZH editions count once. All99 prior topics and198 editions retained unchanged; all165 prior keywordrows unchanged. Old enhancements are counted separately.",
+  "editorialSelection": "Five independently scoped AI-browser application and browser-agent developer tasks, with current directly opened problem/competing pages and primary sources, preserving existing intent owners. No volume/ranking/traffic/vendor benchmark claims.",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-04.json"
+  ],
+  "cohorts": {
+    "firstPublicationTimeMeaning": "Successful publication receipt, not first reader or search-engine discovery.",
+    "reviewMatureAtUtc": {
+      "7day": "2026-11-11T01:28:56.431000+00:00",
+      "14day": "2026-11-18T01:28:56.431000+00:00",
+      "28day": "2026-12-02T01:28:56.431000+00:00"
+    },
+    "measurementRule": "Use matching closed available windows, preserve data latency/missing values; rawaccount/effect metrics private."
+  },
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": false
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "independentContext": true,
+    "fileCount": 8,
+    "sha256": "1e75fa2d238226aaf71100af53f9b2709d5c73c08fc5421f64bfeeb133b71a31"
+  },
+  "executionAccounting": {
+    "historyStoredPrivately": true,
+    "ciPreflightAttempts": 1,
+    "fixtureRuntimeRuns": 1,
+    "fixtureRuntimeFailures": 0,
+    "repeatReason": null,
+    "ciRepeatReason": null,
+    "staticCorrections": "See private execution/review history; no unreported model switch or fabricated runtime count."
+  },
+  "validation": {
+    "preflightCi": {
+      "command": "npm run ci",
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "ec7eda4e246ed6982f4b43caf9783de22022b583ef484cdee2324d0e6a99d572"
+    },
+    "repositoryRead": {
+      "exitCode": 0,
+      "projectScopedAuthVerified": true
+    },
+    "formalCiExitCode": 0,
+    "htmlFiles": 1368,
+    "seoAudit": {
+      "htmlPages": 1364,
+      "sitemapUrls": 1076,
+      "internalLinks": 46742,
+      "alternateLinks": 7880,
+      "fallbackPages": 60,
+      "editorialGuides": 208,
+      "errors": 0
+    },
+    "contentContract": {
+      "status": "passed",
+      "existingTopicsPreserved": 99,
+      "totalTopics": 104,
+      "completeEditions": 208,
+      "newTopics": 5
+    },
+    "scope": "Reviewed new dated content/data/series/keyword/research/downloadasset and requiredslug audit additions. No existingcontent/renderer/dependency/sharedrunner/clientbackend changes.",
+    "productFacts": "36 catalogue records unchanged;26 confirmed price/licence and10 explicitlyunverified prices keepfielddates2026-10-16; this article release does not recertify them.",
+    "serverCurrent": {
+      "checkedAt": "2026-11-04T01:29:25.011130+00:00",
+      "exitCode": 0,
+      "release": "/opt/browsertools/releases/20261104-092816",
+      "expected": "/opt/browsertools/releases/20261104-092816",
+      "matches": true,
+      "stderr": ""
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-04T01:29:02.479Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-check-used-car-recalls-by-vin/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-check-used-car-recalls-by-vin/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-check-used-car-recalls-by-vin/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-check-used-car-recalls-by-vin/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-verify-contractor-license-before-hire/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-verify-contractor-license-before-hire/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-verify-contractor-license-before-hire/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-verify-contractor-license-before-hire/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-api-request-context-cookie-sharing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-api-request-context-cookie-sharing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-api-request-context-cookie-sharing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-api-request-context-cookie-sharing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/playwright-api-request-context-multipart-upload/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/playwright-api-request-context-multipart-upload/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/playwright-api-request-context-multipart-upload/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/playwright-api-request-context-multipart-upload/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-trace-github-issue-to-released-fix/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-trace-github-issue-to-released-fix/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-trace-github-issue-to-released-fix/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-trace-github-issue-to-released-fix/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "downloads": {
+    "checkedAt": "2026-11-04T01:29:23.627876+00:00",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/templates/playwright-api-context-boundary.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "91211b3f17a157fc329925bc1bf8a02a886d305f57b823d73a70c3ac00026d3b",
+        "bytesMatch": true
+      },
+      {
+        "url": "https://browserhub.co/templates/playwright-api-context-boundary.mjs",
+        "exitCode": 0,
+        "status": 200,
+        "sha256": "91211b3f17a157fc329925bc1bf8a02a886d305f57b823d73a70c3ac00026d3b",
+        "bytesMatch": true
+      }
+    ]
+  },
+  "localExamples": [
+    {
+      "assetPath": "public/templates/playwright-api-context-boundary.mjs",
+      "assetSha256": "91211b3f17a157fc329925bc1bf8a02a886d305f57b823d73a70c3ac00026d3b",
+      "exitCode": 0,
+      "runtimeAttempt": 1,
+      "nodeVersion": "v22.22.3",
+      "playwrightVersion": "1.64.1",
+      "stdout": {
+        "result": "api_cookie_context_boundary_verified",
+        "nodeVersion": "v22.22.3",
+        "playwrightModuleLabel": "module URL override",
+        "browserVersion": "156.0.8078.80",
+        "origin": "127.0.0.1 loopback",
+        "sharedBrowserCookieObserved": true,
+        "standaloneRequestCookieIsolated": true,
+        "multipartUploadVerified": {
+          "fieldNames": [
+            "label",
+            "attachment"
+          ],
+          "label": "local-fixture",
+          "filename": "sample.txt",
+          "mimeType": "text/plain",
+          "fileBytes": 20,
+          "fileSha256": "18bca3da6a0b0dce00b67a31aaaf08ffb48b1c82c087a681ca37d5668bb95897",
+          "boundaryPresent": true
+        },
+        "storageTested": [
+          "cookies"
+        ],
+        "storageNotTested": [
+          "localStorage",
+          "sessionStorage",
+          "IndexedDB",
+          "CSRF",
+          "full authentication",
+          "large-file streaming performance"
+        ]
+      },
+      "executionBoundary": "Synthetic loopback only, APISetCookie tobrowser cookie sharing and separate APIcookiejar; one tiny in-memory multipartfile/label with serverreceivedmetadata and exactbytes/hash only. No realaccount/backend/AI model, generalmultipartparser/security/uploadlimit/streamingperformance, reversecookie/path-domain/CSRF/localStorage/IndexedDB tests unless separatelyrecorded by actualoutput. Exact-origin page route and fixedlocalAPI URLs do not audit physical/browserbackground traffic.",
+      "repeatReason": null
+    }
+  ],
+  "measurement": {
+    "privateReviewSaved": true,
+    "status": "No fresh analytics measurement today; prior actual GSC performance readNov2 and pending28OctZH cached inspections readNov3 remain dated prior observations. NextweeklyreviewNov9, no submissions or trafficgainclaim."
+  },
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or validationrequests",
+    "Detection website",
+    "EasyBR client/backend or sharedservice changes",
+    "External outreach, applications, account registration or realaccount actions",
+    "New paidtools/subscriptions/modelAPIs",
+    "Cloudflare/analyticsconfig"
+  ]
+}
