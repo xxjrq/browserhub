@@ -6392,6 +6392,216 @@
         "28day": "2026-12-02"
       },
       "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:ai-browser-vs-ai-search-engine",
+      "primaryKeyword": {
+        "en": "AI browser vs AI search engine difference",
+        "zh-CN": "AI 浏览器与 AI 搜索引擎区别"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "demandEvidence": "Qualitative public question/tutorial/comparison evidence from opened sources is listed in docs/seo/research-2026-11-05.json. It indicates the question exists in public discussion; it does not establish search volume, ranking, hotness, traffic or conversion.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-vs-ai-search-engine/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-vs-ai-search-engine/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-05",
+      "sourceRecord": "docs/seo/research-2026-11-05.json",
+      "originalGain": "Distinguishes address-bar search provider, generated search-results features and page-aware assistant/task context; links to but does not repeat the existing AI browser vs agent taxonomy.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-vs-browser-agent",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Distinguishes address-bar search provider, generated search-results features and page-aware assistant/task context; links to but does not repeat the existing AI browser vs agent taxonomy."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-12",
+        "14day": "2026-11-19",
+        "28day": "2026-12-03"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:comet-query-shortcuts",
+      "primaryKeyword": {
+        "en": "Perplexity Comet Query Shortcuts setup",
+        "zh-CN": "Perplexity Comet 查询快捷方式设置"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "demandEvidence": "Qualitative public question/tutorial/comparison evidence from opened sources is listed in docs/seo/research-2026-11-05.json. It indicates the question exists in public discussion; it does not establish search volume, ranking, hotness, traffic or conversion.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-query-shortcuts/",
+        "https://browserhub.co/zh-cn/guides/comet-query-shortcuts/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-05",
+      "sourceRecord": "docs/seo/research-2026-11-05.json",
+      "originalGain": "Uses current official field list and explicit no-auto-execute behavior; separates query shortcuts from keyboard shortcuts and gives a review-before-submit checklist.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-vs-gemini-in-chrome",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Uses current official field list and explicit no-auto-execute behavior; separates query shortcuts from keyboard shortcuts and gives a review-before-submit checklist."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-12",
+        "14day": "2026-11-19",
+        "28day": "2026-12-03"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:comet-extension-compatibility",
+      "primaryKeyword": {
+        "en": "Chrome extension compatibility with Perplexity Comet",
+        "zh-CN": "Perplexity Comet Chrome 扩展兼容性"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "demandEvidence": "Qualitative public question/tutorial/comparison evidence from opened sources is listed in docs/seo/research-2026-11-05.json. It indicates the question exists in public discussion; it does not establish search volume, ranking, hotness, traffic or conversion.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-extension-compatibility/",
+        "https://browserhub.co/zh-cn/guides/comet-extension-compatibility/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-05",
+      "sourceRecord": "docs/seo/research-2026-11-05.json",
+      "originalGain": "Separates installation from site behavior and vendor support; avoids invented extension matrix and risky sideload advice.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-vs-gemini-in-chrome",
+          "comet-import-export-vs-sync"
+        ],
+        "distinctiveCoverage": "Separates installation from site behavior and vendor support; avoids invented extension matrix and risky sideload advice."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-12",
+        "14day": "2026-11-19",
+        "28day": "2026-12-03"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:comet-import-export-vs-sync",
+      "primaryKeyword": {
+        "en": "Comet import export and sync differences",
+        "zh-CN": "Comet 导入导出与同步区别"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "demandEvidence": "Qualitative public question/tutorial/comparison evidence from opened sources is listed in docs/seo/research-2026-11-05.json. It indicates the question exists in public discussion; it does not establish search volume, ranking, hotness, traffic or conversion.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-import-export-vs-sync/",
+        "https://browserhub.co/zh-cn/guides/comet-import-export-vs-sync/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-05",
+      "sourceRecord": "docs/seo/research-2026-11-05.json",
+      "originalGain": "Documents current Comet import/sync/local/account export boundaries; leaves browser-level export file format/path unknown and avoids credential-dump procedures.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "chatgpt-atlas-retirement-data-transition",
+          "local-vs-cloud-browser-storage"
+        ],
+        "distinctiveCoverage": "Documents current Comet import/sync/local/account export boundaries; leaves browser-level export file format/path unknown and avoids credential-dump procedures."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-12",
+        "14day": "2026-11-19",
+        "28day": "2026-12-03"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:gemini-auto-browse-local-vs-remote",
+      "primaryKeyword": {
+        "en": "Gemini Auto Browse local vs remote browser",
+        "zh-CN": "Gemini Auto Browse 本地与远程浏览器"
+      },
+      "intent": "informational",
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "demandEvidence": "Qualitative public question/tutorial/comparison evidence from opened sources is listed in docs/seo/research-2026-11-05.json. It indicates the question exists in public discussion; it does not establish search volume, ranking, hotness, traffic or conversion.",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/gemini-auto-browse-local-vs-remote/",
+        "https://browserhub.co/zh-cn/guides/gemini-auto-browse-local-vs-remote/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-05",
+      "sourceRecord": "docs/seo/research-2026-11-05.json",
+      "originalGain": "Explains the documented local awake requirement, conditional remote fallback, remote continuation, sign-in pause, desktop-only Chrome scope and stop/takeover checks.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "gemini-in-chrome-vs-copilot-in-edge",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Explains the documented local awake requirement, conditional remote fallback, remote continuation, sign-in pause, desktop-only Chrome scope and stop/takeover checks."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-12",
+        "14day": "2026-11-19",
+        "28day": "2026-12-03"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
@@ -6455,20 +6665,20 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-11-02",
-    "cycleId": "content-2026-11-02",
+    "date": "2026-11-05",
+    "cycleId": "content-2026-11-05",
     "newTopics": [
-      "ai-browser-audit-rental-listings-before-a-viewing",
-      "ai-browser-check-laptop-dock-compatibility",
-      "ai-browser-audit-subscriptions-before-cancelling",
-      "playwright-test-spa-history-back-forward",
-      "playwright-api-request-context-econnreset-retries"
+      "ai-browser-vs-ai-search-engine",
+      "comet-query-shortcuts",
+      "comet-extension-compatibility",
+      "comet-import-export-vs-sync",
+      "gemini-auto-browse-local-vs-remote"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
     "publicationEvidence": "Pending independent review and workflow receipt; not yet published.",
-    "notClaimed": "Draft prepared for review; no publication, traffic gain, indexing result, or measured search demand is claimed."
+    "notClaimed": "Draft prepared for review; no publication, traffic gain, indexing result, search volume, or measured demand is claimed."
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",

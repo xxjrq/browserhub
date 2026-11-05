@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "project": "BrowserHub",
+  "status": "five-site-public-page-review",
+  "method": {
+    "reviewedSites": 5,
+    "pagesPerSite": "Homepage or blog navigation plus one relevant article per site; rendered DOM metadata checked for five representative pages.",
+    "checkedOn": "2026-11-05",
+    "evidenceLocation": ".local/workflows/cycles/content-2026-11-05/competitors/",
+    "htmlEvidence": "Raw public HTML was saved for homepage/blog and article pages when accessible. Five representative articles were also checked in the existing rendered Chrome DOM; their HTTP status, canonical, heading counts, visible internal-link counts and structured-data types are scoped to those individual page observations. TechRepublic article raw HTTP fetch returned 403, while normal rendered Chrome navigation returned 200 and the expected article body. No challenge bypass was attempted.",
+    "limits": [
+      "This is a bounded review of five sites and selected public pages, not a crawl of their full sites or the web.",
+      "Observed page design and editorial features do not establish traffic, authority, backlinks, rankings, or causal SEO effects.",
+      "Competitor claims and feature descriptions were not treated as primary product evidence.",
+      "No competitor prose has been copied into BrowserHub content."
+    ]
+  },
+  "profiles": [
+    {
+      "site": "TechRepublic",
+      "type": "Technology publication for IT professionals",
+      "checkedUrls": [
+        "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+        "https://www.techrepublic.com/"
+      ],
+      "observedOn": "2026-11-05",
+      "articleDateDisplayed": "2026-09-30",
+      "observed": {
+        "homepageNavigation": [
+          "AI",
+          "Developer",
+          "Security",
+          "Events",
+          "Resource Hubs",
+          "Forums"
+        ],
+        "intentCoverage": "A five-product AI-browser comparison for users choosing among Chrome with Gemini, Comet, Edge with Copilot, Brave Leo, and Dia.",
+        "answerStructure": "Opening capability summary, contents links, at-a-glance table with best-for, price, platform and agentic browsing, then product-by-product sections and user-fit recommendations.",
+        "internalNavigation": "Homepage is organized around technology topics and resources. The article has linked contents and related product documentation.",
+        "ctaAndDisclosure": "The article displays an affiliate/sponsorship disclosure and a save-for-later control; inline vendor links are used for product details.",
+        "evidenceAssets": "A lead illustration is labeled as generated with ChatGPT; article content uses inline links and a comparison table.",
+        "metadata": {
+          "homepageHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/techrepublic-home.html",
+          "homepageTitle": "TechRepublic: News, Tips & Advice for Technology Professionals",
+          "homepageDescription": "Providing IT professionals with a unique blend of original content, peer-to-peer advice from the largest community of IT leaders on the Web.",
+          "homepageH1": "Welcome to TechRepublic",
+          "homepageJsonLdTypesObserved": [
+            "WebSite",
+            "WebPage",
+            "Organization",
+            "BreadcrumbList",
+            "ImageObject",
+            "ListItem",
+            "SearchAction",
+            "EntryPoint",
+            "PropertyValueSpecification"
+          ],
+          "articleHtmlFetch": "HTTP 403 for direct raw fetch; rendered Chrome DOM navigation returned HTTP 200, canonical and expected article H1/body observed. Article structured data is separately summarized under renderedArticleObservation.",
+          "representativeArticleUrl": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "renderedH1": "5 Best AI Browsers for 2026: Chrome, Comet, Edge, Brave and Dia Compared",
+          "renderedJsonLdTypes": [
+            "WebSite",
+            "SearchAction",
+            "EntryPoint",
+            "PropertyValueSpecification",
+            "Organization",
+            "ImageObject",
+            "WebPage",
+            "ReadAction",
+            "BreadcrumbList",
+            "ListItem",
+            "Person"
+          ]
+        },
+        "renderedArticleObservation": {
+          "checkedOn": "2026-11-05",
+          "httpStatus": 200,
+          "canonical": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "metaDescriptionPresent": true,
+          "h1Count": 1,
+          "h2Count": 8,
+          "visibleInternalLinksInRenderedDom": 66,
+          "jsonLdTypesObserved": [
+            "WebSite",
+            "SearchAction",
+            "EntryPoint",
+            "PropertyValueSpecification",
+            "Organization",
+            "ImageObject",
+            "WebPage",
+            "ReadAction",
+            "BreadcrumbList",
+            "ListItem",
+            "Person"
+          ],
+          "scope": "One representative rendered article; does not indicate link equity, ranking effect or site-wide implementation."
+        }
+      },
+      "inferred": [
+        "The table and task-fit framing appear designed to help readers scan product choices quickly; no traffic or ranking effect can be inferred.",
+        "The visible account, region, extension, and price caveats indicate that eligibility is part of the selection intent."
+      ],
+      "unknown": [
+        "Traffic, query coverage and conversion performance",
+        "Article HTML/schema from direct raw HTTP fetch; representative rendered article was observed separately"
+      ],
+      "actionableGapsForBrowserHub": [
+        "Use a task-first decision table with explicit conditions and current documentation dates rather than a single winner ranking.",
+        "Separate feature availability from browser compatibility and account eligibility; verify each claim against current vendor help pages.",
+        "Add narrow setup and troubleshooting pages for real reader questions that broad comparison articles do not answer."
+      ]
+    },
+    {
+      "site": "Zapier",
+      "type": "Automation platform with an editorial app-picks blog",
+      "checkedUrls": [
+        "https://zapier.com/blog/best-ai-browser/",
+        "https://zapier.com/blog/"
+      ],
+      "observedOn": "2026-11-05",
+      "articleDateDisplayed": "2025-11-17",
+      "observed": {
+        "homepageNavigation": [
+          "App picks",
+          "Automation inspiration",
+          "Zapier tutorials",
+          "Productivity",
+          "Business growth",
+          "Product & platform"
+        ],
+        "intentCoverage": "A five-item best-of list organized by practical use, including browsing automation and offline model access.",
+        "answerStructure": "Editorial introduction, criteria section, shortlist, then one review section per product with claimed hands-on experience, benefits and limitations.",
+        "internalNavigation": "The site routes through article categories, app and integration listings, templates, use cases, guides, and its own automation products.",
+        "ctaAndDisclosure": "The article states that some links may earn commission and includes prominent Zapier product CTAs between editorial sections.",
+        "evidenceAssets": "The article includes product imagery and named scenario descriptions; the authors state that they tested products over several weeks.",
+        "metadata": {
+          "homepageHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/zapier-blog.html",
+          "articleHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/zapier-ai-browser.html",
+          "articleTitle": "The 5 best AI browsers in 2026 | Zapier",
+          "articleDescription": "I tested each AI browser over the course of a few weeks, and based on that experience, these are the best AI browsers.",
+          "articleH1": "The 5 best AI browsers in 2026",
+          "articleJsonLdTypesObserved": [
+            "Article",
+            "BreadcrumbList"
+          ],
+          "representativeArticleUrl": "https://zapier.com/blog/best-ai-browser/",
+          "renderedH1": "The 5 best AI browsers in 2026",
+          "renderedJsonLdTypes": [
+            "Article",
+            "Person",
+            "Organization",
+            "PostalAddress",
+            "ContactPoint",
+            "BreadcrumbList",
+            "ListItem"
+          ]
+        },
+        "renderedArticleObservation": {
+          "checkedOn": "2026-11-05",
+          "httpStatus": 200,
+          "canonical": "https://zapier.com/blog/best-ai-browser/",
+          "metaDescriptionPresent": true,
+          "h1Count": 1,
+          "h2Count": 11,
+          "visibleInternalLinksInRenderedDom": 93,
+          "jsonLdTypesObserved": [
+            "Article",
+            "Person",
+            "Organization",
+            "PostalAddress",
+            "ContactPoint",
+            "BreadcrumbList",
+            "ListItem"
+          ],
+          "scope": "One representative rendered article; does not indicate link equity, ranking effect or site-wide implementation."
+        }
+      },
+      "inferred": [
+        "The repeated workflow and use-case navigation likely supports discovery across product categories; causality is unknown.",
+        "The article's product recommendations connect naturally to Zapier's commercial automation offerings."
+      ],
+      "unknown": [
+        "The full method and retained artifacts behind the reported multi-week tests",
+        "Traffic, ranking and downstream conversion results"
+      ],
+      "actionableGapsForBrowserHub": [
+        "For each recommendation, state the actual job, the evidence that supports it, and what a reader should verify before relying on the feature.",
+        "Make a direct next step available through a relevant BrowserHub guide or resource page without implying an unmeasured product result.",
+        "Keep eligibility, date, account and device conditions close to the affected feature rather than relying on a general disclaimer."
+      ]
+    },
+    {
+      "site": "ToolChase",
+      "type": "AI-tool directory and comparison publisher",
+      "checkedUrls": [
+        "https://toolchase.com/blog/best-ai-browsers-2026/",
+        "https://toolchase.com/blog/"
+      ],
+      "observedOn": "2026-11-05",
+      "articleDateDisplayed": "Last updated September 2026",
+      "observed": {
+        "homepageNavigation": [
+          "Browse",
+          "Categories",
+          "Compare",
+          "Alternatives",
+          "Prompts",
+          "Blog"
+        ],
+        "intentCoverage": "A nine-option comparison covering dedicated browsers, built-in assistants, extensions, platforms, price and agent capabilities.",
+        "answerStructure": "Quick-pick list, definition of browser-assistant/agent/connectors, security note, then product sections with descriptions, plan/platform notes and a score; the site states its eight-parameter method.",
+        "internalNavigation": "The blog is segmented into best-of, comparisons, guides, how-tos, reviews and glossary, with product pages linked from the article.",
+        "ctaAndDisclosure": "The page links to full reviews and a public methodology page. No affiliate disclosure was visible in the inspected article text.",
+        "evidenceAssets": "A comparison table, in-page contents links, product scores, a stated review methodology and FAQ structured content.",
+        "metadata": {
+          "homepageHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/toolchase-blog.html",
+          "articleHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/toolchase-ai-browser.html",
+          "articleTitle": "Best AI Browsers 2026: 9 AI Browsers Compared | ToolChase",
+          "articleDescription": "The best AI browsers in 2026 compared: Comet, Gemini in Chrome, Dia, Edge Copilot, Opera Neon, Fellou, Brave Leo, Genspark and Arc Search. Free options, agents, platforms, pricing.",
+          "articleH1": "Best AI Browsers in 2026: 9 AI Browsers and Assistants Compared",
+          "articleJsonLdTypesObserved": [
+            "BlogPosting",
+            "BreadcrumbList",
+            "ItemList",
+            "FAQPage"
+          ],
+          "representativeArticleUrl": "https://toolchase.com/blog/best-ai-browsers-2026/",
+          "renderedH1": "Best AI Browsers in 2026: 9 AI Browsers and Assistants Compared",
+          "renderedJsonLdTypes": [
+            "BlogPosting",
+            "Organization",
+            "ImageObject",
+            "WebPage",
+            "BreadcrumbList",
+            "ListItem",
+            "ItemList",
+            "FAQPage",
+            "Question",
+            "Answer"
+          ]
+        },
+        "renderedArticleObservation": {
+          "checkedOn": "2026-11-05",
+          "httpStatus": 200,
+          "canonical": "https://toolchase.com/blog/best-ai-browsers-2026/",
+          "metaDescriptionPresent": true,
+          "h1Count": 1,
+          "h2Count": 19,
+          "visibleInternalLinksInRenderedDom": 213,
+          "jsonLdTypesObserved": [
+            "BlogPosting",
+            "Organization",
+            "ImageObject",
+            "WebPage",
+            "BreadcrumbList",
+            "ListItem",
+            "ItemList",
+            "FAQPage",
+            "Question",
+            "Answer"
+          ],
+          "scope": "One representative rendered article; does not indicate link equity, ranking effect or site-wide implementation."
+        }
+      },
+      "inferred": [
+        "The directory taxonomy and article categories provide several paths into product discovery; the effect on visits is unknown.",
+        "The named methodology is intended to make product scoring legible, but this review did not audit the scoring evidence or reproduce scores."
+      ],
+      "unknown": [
+        "Independent reproducibility of the site’s scores",
+        "Traffic, rankings, backlinks or measured citation performance"
+      ],
+      "actionableGapsForBrowserHub": [
+        "Write answer pages around a single operational choice or failure state, not another broad list of every AI browser.",
+        "Keep comparison dimensions visible but do not use scores where the underlying measurement cannot be reproduced.",
+        "Use the resource and guide categories to route readers from a product choice to the exact next task."
+      ]
+    },
+    {
+      "site": "Ryza",
+      "type": "Personal AI productivity directory and editorial guide publisher",
+      "checkedUrls": [
+        "https://ryza.si/guides/best-ai-browser",
+        "https://ryza.si/"
+      ],
+      "observedOn": "2026-11-05",
+      "articleDateDisplayed": "Published 2026-10-05; updated 2026-10-21",
+      "observed": {
+        "homepageNavigation": [
+          "Directory",
+          "Categories",
+          "Live feed",
+          "Guides",
+          "This week",
+          "Pricing",
+          "About"
+        ],
+        "intentCoverage": "A four-product browser comparison plus the retired Atlas transition, with platform, price, task, and safety decisions.",
+        "answerStructure": "Direct answer, compact product table, task-based selection, detailed product sections, a 20-minute trial flow, safety discussion and FAQ.",
+        "internalNavigation": "The directory separates tools by personal-work category and links to guides, pricing, the live feed and weekly reporting.",
+        "ctaAndDisclosure": "The article links directly to vendors and its directory; no explicit affiliate disclosure was visible in the inspected first-page text.",
+        "evidenceAssets": "The article displays side-by-side product screenshots with stated October capture dates, audio playback/download, contents navigation and a short trial checklist.",
+        "metadata": {
+          "homepageHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/ryza-home.html",
+          "articleHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/ryza-ai-browser.html",
+          "articleTitle": "Best AI Browsers in 2026: Comet, Dia, Chrome, Edge | Ryza",
+          "articleDescription": "The best AI browsers in 2026 compared: Comet, Dia, Gemini in Chrome and Copilot in Edge on price, platforms and safety, plus what replaced ChatGPT Atlas.",
+          "articleH1": "Best AI Browsers in 2026: Comet, Dia, Chrome, Edge",
+          "articleJsonLdTypesObserved": [
+            "Article",
+            "BreadcrumbList",
+            "FAQPage"
+          ],
+          "representativeArticleUrl": "https://ryza.si/guides/best-ai-browser",
+          "renderedH1": "Best AI Browsers in 2026: Comet, Dia, Chrome, Edge",
+          "renderedJsonLdTypes": [
+            "Article",
+            "Organization",
+            "ImageObject",
+            "WebPage",
+            "CreativeWork",
+            "AudioObject",
+            "BreadcrumbList",
+            "ListItem",
+            "FAQPage",
+            "Question",
+            "Answer"
+          ]
+        },
+        "renderedArticleObservation": {
+          "checkedOn": "2026-11-05",
+          "httpStatus": 200,
+          "canonical": "https://ryza.si/guides/best-ai-browser",
+          "metaDescriptionPresent": true,
+          "h1Count": 1,
+          "h2Count": 11,
+          "visibleInternalLinksInRenderedDom": 69,
+          "jsonLdTypesObserved": [
+            "Article",
+            "Organization",
+            "ImageObject",
+            "WebPage",
+            "CreativeWork",
+            "AudioObject",
+            "BreadcrumbList",
+            "ListItem",
+            "FAQPage",
+            "Question",
+            "Answer"
+          ],
+          "scope": "One representative rendered article; does not indicate link equity, ranking effect or site-wide implementation."
+        }
+      },
+      "inferred": [
+        "Displayed publication, update and fact-check dates make freshness claims easier to assess, though they do not independently validate accuracy.",
+        "The trial flow appears intended to lower the cost of evaluating an unfamiliar product; no completion or conversion data was available."
+      ],
+      "unknown": [
+        "Whether the described 20-minute workflow was executed by the publisher",
+        "Traffic, rankings and recommendation outcomes"
+      ],
+      "actionableGapsForBrowserHub": [
+        "Date vendor checks at the individual claim level when availability changes by platform, account or rollout.",
+        "Provide a reversible, low-risk task readers can use to check fit without exposing personal sessions or committing to migration.",
+        "Keep screenshots or evidence links tied to the exact UI state and date instead of treating the illustration as proof for every user."
+      ]
+    },
+    {
+      "site": "Tom’s Guide",
+      "type": "Consumer technology reviews and how-to publisher",
+      "checkedUrls": [
+        "https://www.tomsguide.com/ai/perplexity/how-to-use-perplexity-comet",
+        "https://www.tomsguide.com/"
+      ],
+      "observedOn": "2026-11-05",
+      "articleDateDisplayed": "Published 2025-11-17",
+      "observed": {
+        "homepageNavigation": [
+          "Phones",
+          "TV & Audio",
+          "Entertainment",
+          "Computing",
+          "Gaming",
+          "How-Tos",
+          "Reviews",
+          "Best Picks"
+        ],
+        "intentCoverage": "A step-by-step Comet getting-started tutorial from install through importing data and using assistant features.",
+        "answerStructure": "Numbered install/setup walkthrough with screenshots, import recommendation, sign-in notes, then summarize, voice, agent and travel examples.",
+        "internalNavigation": "The site uses product and device categories, how-to and review sections, related stories, newsletters and the Tom’s Guide Club.",
+        "ctaAndDisclosure": "The article shows an affiliate commission notice near the top, links to Comet and includes newsletter and membership prompts in surrounding site content.",
+        "evidenceAssets": "Step screenshots, product imagery, a named interview and an attributed quote from an early investor in Perplexity.",
+        "metadata": {
+          "homepageHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/tomsguide-home.html",
+          "articleHtmlFile": ".local/workflows/cycles/content-2026-11-05/competitors/raw/tomsguide-comet-howto.html",
+          "articleTitle": "Getting started with Comet — Perplexity’s AI browser | Tom’s Guide",
+          "articleDescription": "Learn how to navigate the web with Perplexity Comet, from installation to daily use.",
+          "articleH1": "Getting started with Comet — here's how to use Perplexity AI's browser",
+          "articleJsonLdTypesObserved": [
+            "Article",
+            "SpeakableSpecification",
+            "ImageObject",
+            "Organization",
+            "HowTo",
+            "HowToSupply",
+            "HowToTool",
+            "HowToStep",
+            "Person",
+            "WebPage",
+            "BreadcrumbList",
+            "ListItem",
+            "SiteNavigationElement",
+            "ItemList"
+          ],
+          "representativeArticleUrl": "https://www.tomsguide.com/ai/perplexity/how-to-use-perplexity-comet",
+          "renderedH1": "Getting started with Comet — here's how to use Perplexity AI's browser",
+          "renderedJsonLdTypes": [
+            "Article",
+            "SpeakableSpecification",
+            "ImageObject",
+            "Organization",
+            "HowTo",
+            "HowToSupply",
+            "HowToTool",
+            "HowToStep",
+            "Person",
+            "WebPage",
+            "BreadcrumbList",
+            "ListItem",
+            "SiteNavigationElement",
+            "ItemList"
+          ]
+        },
+        "renderedArticleObservation": {
+          "checkedOn": "2026-11-05",
+          "httpStatus": 200,
+          "canonical": "https://www.tomsguide.com/ai/perplexity/how-to-use-perplexity-comet",
+          "metaDescriptionPresent": true,
+          "h1Count": 1,
+          "h2Count": 0,
+          "visibleInternalLinksInRenderedDom": 62,
+          "jsonLdTypesObserved": [
+            "Article",
+            "SpeakableSpecification",
+            "ImageObject",
+            "Organization",
+            "HowTo",
+            "HowToSupply",
+            "HowToTool",
+            "HowToStep",
+            "Person",
+            "WebPage",
+            "BreadcrumbList",
+            "ListItem",
+            "SiteNavigationElement",
+            "ItemList"
+          ],
+          "scope": "One representative rendered article; does not indicate link equity, ranking effect or site-wide implementation."
+        }
+      },
+      "inferred": [
+        "Numbered screenshots can make setup steps easier to follow, but UI paths need current verification as products change.",
+        "The tutorial date and a later product change mean individual import and feature claims should be checked before reuse; a publish date alone does not prove content is stale or incorrect.",
+        "An early investor quote is an attributed source with a relationship to the product, which readers may weigh differently from independent use evidence."
+      ],
+      "unknown": [
+        "Whether every screenshot matches the current Comet release",
+        "Article traffic and use of its affiliate links"
+      ],
+      "actionableGapsForBrowserHub": [
+        "Date-sensitive how-tos should include explicit scope and official source links, particularly for account eligibility, importable data and platform differences.",
+        "Separate documented setup instructions from any hands-on account observations; do not claim execution where none occurred.",
+        "When migration is the intent, distinguish bookmarks, passwords, history, cookies, and cross-device sync rather than saying ‘import your data’ as one action."
+      ]
+    }
+  ],
+  "crossSiteFindings": {
+    "observedPatterns": [
+      "Broad AI-browser choice pages repeatedly use a short recommendation table followed by product sections and FAQs or safety notes.",
+      "Task-fit labels, feature availability, platform support and pricing are recurring comparison dimensions.",
+      "Editorial navigation commonly connects broad comparisons to product reviews, how-tos, directories or app-selection categories.",
+      "Disclosures, vendor links, product screenshots and stated testing or fact-check dates appear on several reviewed pages."
+    ],
+    "inferencesNotProven": [
+      "These structures may help readers scan and continue to a next page; the review does not establish a causal ranking or traffic advantage.",
+      "The visible prominence of AI-browser comparison content does not establish its search volume or commercial value."
+    ],
+    "actionableGaps": [
+      "Prefer five genuinely distinct user problems with direct answers, eligibility caveats, safe task flows, and official product references over a sixth generic best-browser ranking.",
+      "For consumer tasks, preserve unknowns and distinguish normal browsing, assistant context, agent controls, browser-local state and vendor-side retention.",
+      "Use topic-specific next links and a compact choice/verification artifact; keep feature claims dated and traceable to official documentation.",
+      "Avoid replicating affiliate-style rankings, vendor claims as independent test conclusions, or broad feature matrices that age quickly."
+    ]
+  }
+}

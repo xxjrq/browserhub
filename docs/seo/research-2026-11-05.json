@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "cycleId": "content-2026-11-05",
+  "purpose": "Research and source record for five new bilingual AI-browser user-intent guides. Selection was checked against 104 existing guide owners, current relevant copy and keyword map before writing.",
+  "selection": {
+    "topics": [
+      "ai-browser-vs-ai-search-engine",
+      "comet-query-shortcuts",
+      "comet-extension-compatibility",
+      "comet-import-export-vs-sync",
+      "gemini-auto-browse-local-vs-remote"
+    ],
+    "newTopicCount": 5,
+    "englishChineseEditions": 10,
+    "oldEnhancements": [],
+    "baselineCommit": "6dfa18cc57ff909ab803aca5e90d1b0f10a50263",
+    "baselineTopics": 104,
+    "baselineEditions": 208,
+    "baselineKeywordRows": 170,
+    "afterTopics": 109,
+    "afterEditions": 218,
+    "afterKeywordRows": 175,
+    "topicMix": "All five are consumer/core AI-browser choice or use tasks; no generic vertical and no broad browser automation API coverage.",
+    "searchDemand": "Public queries, tutorials and comparisons are qualitative evidence that readers discuss these tasks. No paid keyword data, search volume, ranking, trend rate, GSC traffic, or hotness is claimed. Metrics remain null."
+  },
+  "ownershipReview": {
+    "reviewed": 104,
+    "exactNewOwnerConflicts": [],
+    "closestOwners": {
+      "ai-browser-vs-ai-search-engine": [
+        "ai-browser-vs-browser-agent"
+      ],
+      "comet-query-shortcuts": [
+        "comet-vs-gemini-in-chrome"
+      ],
+      "comet-extension-compatibility": [
+        "comet-vs-gemini-in-chrome"
+      ],
+      "comet-import-export-vs-sync": [
+        "chatgpt-atlas-retirement-data-transition",
+        "comet-vs-gemini-in-chrome"
+      ],
+      "gemini-auto-browse-local-vs-remote": [
+        "gemini-in-chrome-vs-copilot-in-edge",
+        "comet-vs-gemini-in-chrome"
+      ]
+    },
+    "noveltyBoundary": "Scope adjacent to existing category/comparison pages only for internal navigation; each new page answers a specific operational decision not owned by existing copy."
+  },
+  "sourcesByTopic": {
+    "ai-browser-vs-ai-search-engine": {
+      "sources": [
+        {
+          "title": "Google Chrome Help: Change your default search engine",
+          "url": "https://support.google.com/chrome/answer/95426?hl=en",
+          "role": "Official distinction for address-bar default search provider and settings."
+        },
+        {
+          "title": "Google Search Help: AI Overviews and more",
+          "url": "https://support.google.com/websearch/answer/14901683?hl=en",
+          "role": "Official current Search AI Overviews and Web filter guidance; page notes some setting guidance is being updated."
+        },
+        {
+          "title": "Google Search Labs Help: AI Mode",
+          "url": "https://support.google.com/websearch/answer/16296315?co=GENIE.Platform%3DDesktop&hl=en",
+          "role": "Current primary counterexample showing some search surfaces may include agentic finding/actions; prevents categorical claims that search products only return links or never act."
+        },
+        {
+          "title": "AI Multiple: AI Web Browsers Selection Guide",
+          "url": "https://aimultiple.com/ai-web-browser",
+          "role": "Nonprimary category comparison opened; supports reader confusion about browser vs search product."
+        },
+        {
+          "title": "Norton: Browser vs. search engine",
+          "url": "https://us.norton.com/blog/digital-life/browser-vs-search-engine",
+          "role": "Nonprimary explanatory page opened."
+        },
+        {
+          "title": "Reddit r/browsers question about AI appearing during searches",
+          "url": "https://www.reddit.com/r/browsers/comments/1up7tde/is_there_any_good_browser_that_doesnt_ask_ai/",
+          "role": "Opened public question and discussion; anecdotal issue signal only, not volume."
+        }
+      ],
+      "checkedSources": "Each listed nonprimary page body was opened; current official product/documentation pages were opened. Third-party pages show public editorial coverage or user questions, not search demand or proof of product behavior.",
+      "primaryBoundary": "Google states AI Overviews are a core feature that cannot be turned off; the post-search Web filter omits them from the displayed results, and the AI in Search Labs toggle controls Labs experiments only."
+    },
+    "comet-query-shortcuts": {
+      "sources": [
+        {
+          "title": "Perplexity Help: Comet Query Shortcuts",
+          "url": "https://www.perplexity.ai/help-center/comet/en/articles/11906981-comet-query-shortcuts",
+          "role": "Current primary: shortcut fields prompt/Search Mode/Model/Source, invoke from search bar or sidecar, no auto-execute, share link/widget."
+        },
+        {
+          "title": "Cosmo Edge: Comet browser tips",
+          "url": "https://cosmo-edge.com/comet-ai-browser-tips-guide/",
+          "role": "Nonprimary practical Comet shortcut tutorial opened; its older interface is not used for current steps."
+        },
+        {
+          "title": "Reddit: How can I create custom shortcuts in Perplexity Comet?",
+          "url": "https://www.reddit.com/r/PerplexityComet/comments/1nkvd68/how_can_create_custom_shortcuts_in_perplexity/",
+          "role": "Opened reader question and suggestions; public question signal only."
+        },
+        {
+          "title": "Reddit: Share your cool /Shortcuts on Comet",
+          "url": "https://www.reddit.com/r/PerplexityComet/comments/1mhdrnj/share_your_cool_shortcuts_on_comet/",
+          "role": "Opened community examples of prompt shortcuts; anecdotal and historical, not current instructions."
+        }
+      ],
+      "checkedSources": "Each listed nonprimary page body was opened; current official product/documentation pages were opened. Third-party pages show public editorial coverage or user questions, not search demand or proof of product behavior."
+    },
+    "comet-extension-compatibility": {
+      "sources": [
+        {
+          "title": "Perplexity Help: Extensions in Comet",
+          "url": "https://www.perplexity.ai/help-center/comet/en/articles/11734716-extensions",
+          "role": "Current primary: most but not all; Chrome-specific/default-startpage limitations; Web Store add and extension management."
+        },
+        {
+          "title": "AIA Alleyway: Comet browser review",
+          "url": "https://aialleyway.com/comet-browser-review/",
+          "role": "Nonprimary hands-on review opened; claims are attributed, not BrowserHub testing."
+        },
+        {
+          "title": "LastPass Community: Extension support question for Comet",
+          "url": "https://community.lastpass.com/discussion/2678/does-anyone-know-of-a-lastpass-extension-for-comet-browser-its-a-chrome-based-agentic-browser",
+          "role": "Vendor community support exchange opened; illustrates installability and vendor support are distinct."
+        },
+        {
+          "title": "Zenity Labs: Perplexity Comet reversing story",
+          "url": "https://labs.zenity.io/post/perplexity-comet-a-reversing-story",
+          "role": "Nonprimary security analysis opened; not used as a compatibility inventory."
+        },
+        {
+          "title": "Reddit: Extension not working on Perplexity pages in Comet",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1mgnxok/extension_not_working_on_perplexity_pages_on_comet/",
+          "role": "Opened report about site behavior; anecdotal, not a universal defect claim."
+        }
+      ],
+      "checkedSources": "Each listed nonprimary page body was opened; current official product/documentation pages were opened. Third-party pages show public editorial coverage or user questions, not search demand or proof of product behavior."
+    },
+    "comet-import-export-vs-sync": {
+      "sources": [
+        {
+          "title": "Perplexity Help: Getting Started with Comet: Set Up",
+          "url": "https://www.perplexity.ai/help-center/comet/en/articles/11583745-getting-started-with-comet-set-up",
+          "role": "Current primary import steps and example item list."
+        },
+        {
+          "title": "Perplexity Help: Sync Between Devices",
+          "url": "https://www.perplexity.ai/help-center/comet/en/articles/12569908-sync-between-devices",
+          "role": "Current primary data types, encrypted sync chain, passphrase and toggles."
+        },
+        {
+          "title": "Perplexity Help: Local Data & Device Storage",
+          "url": "https://www.perplexity.ai/help-center/comet/en/articles/11740986-local-data-device-storage",
+          "role": "Current primary local data/password storage/clear behavior."
+        },
+        {
+          "title": "Perplexity: Self-Serve Data Options",
+          "url": "https://www.perplexity.ai/en-GB/hub/legal/self-serve-data-options",
+          "role": "Current account-level export flow; does not define a restorable Comet profile archive."
+        },
+        {
+          "title": "Tom's Guide: Getting started with Comet",
+          "url": "https://www.tomsguide.com/ai/perplexity/how-to-use-perplexity-comet",
+          "role": "Nonprimary setup walkthrough opened; its import claims are compared against current primary docs."
+        },
+        {
+          "title": "Digital Trends: Comet on a phone",
+          "url": "https://www.digitaltrends.com/computing/i-tried-comet-browser-on-my-phone-and-its-a-wake-up-call-for-chrome-and-safari/",
+          "role": "Nonprimary mobile review opened; dated rollout statements are treated as historical."
+        },
+        {
+          "title": "Reddit: Importing all data to Chrome",
+          "url": "https://www.reddit.com/r/chrome/comments/1x6elmi/importing_all_data_to_chrome/",
+          "role": "Opened title and visible comments only; the original post body is removed by Reddit filters. Comments are anecdotal reader concerns, not current product instructions or a supported migration procedure."
+        },
+        {
+          "title": "Reddit: Importing passwords, bookmarks and form fills from Chrome to Comet",
+          "url": "https://www.reddit.com/r/PerplexityComet/comments/1ms3ep6/how_to_import_all_password_bookmarks_form_fills/",
+          "role": "Opened reader question; used only as an information need signal."
+        }
+      ],
+      "checkedSources": "The listed official help bodies and relevant nonprimary article bodies were opened. The Reddit item with a removed original post is explicitly limited to its opened title and visible comments in its source role; it is not used as product documentation."
+    },
+    "gemini-auto-browse-local-vs-remote": {
+      "sources": [
+        {
+          "title": "Google Gemini Apps Help: Auto browse in Chrome",
+          "url": "https://support.google.com/gemini/answer/16821166?hl=en",
+          "role": "Current primary: local desktop Chrome requires awake/running device and browser; if unavailable may use remote; remote continues after device closure; sign-in steps may pause; current eligibility includes Ultra/Pro/Plus."
+        },
+        {
+          "title": "TechRadar: Gemini Spark in Chrome hands-on",
+          "url": "https://www.techradar.com/ai-platforms-assistants/i-tried-gemini-spark-in-chrome-and-its-the-perfect-ai-for-handling-all-the-boring-bits-online",
+          "role": "Opened account of background continuation, attributed as one publisher test and kept distinct from general Auto Browse guarantees."
+        },
+        {
+          "title": "9to5Google: Gemini Spark uses Chrome Auto Browse",
+          "url": "https://9to5google.com/2026/07/30/gemini-spark-chrome-auto-browse/",
+          "role": "Opened rollout report distinguishes earlier remote browser from desktop local Chrome integration."
+        },
+        {
+          "title": "Android Central: Gemini Auto Browse arrives in Chrome on Android",
+          "url": "https://www.androidcentral.com/apps-software/ai/geminis-auto-browse-in-chrome-is-finally-here-for-android-to-make-the-mundane-a-breeze",
+          "role": "Opened report on an earlier mobile rollout statement; current Google primary documentation governs present Chrome Auto Browse scope, so the older article is not used to assert availability."
+        }
+      ],
+      "checkedSources": "Each listed nonprimary page body was opened; current official product/documentation pages were opened. Third-party pages show public editorial coverage or user questions, not search demand or proof of product behavior."
+    }
+  },
+  "competitiveReview": {
+    "artifact": "docs/seo/competitive-review-2026-11-05.json",
+    "sites": [
+      "TechRepublic",
+      "Zapier",
+      "ToolChase",
+      "Ryza",
+      "Tom’s Guide"
+    ],
+    "scope": "Selected representative pages; five rendered article observations available in private cycle evidence and summarized publicly. Qualitative only; no traffic, rank, authority or causal SEO claims."
+  },
+  "publicSignalsLimitations": [
+    "Reddit threads are individual self-selected questions and are not representative samples.",
+    "Editorial tutorials and comparison pages show public coverage, not measured demand.",
+    "Older third-party product claims are date-limited and were not used to override current official documentation.",
+    "The five-site review is not a whole-web crawl.",
+    "No browser product was installed, no signed account was tested, and no proposed migration/extension/Auto Browse flow was executed by BrowserHub.",
+    "One Reddit migration thread had its original body removed; only its title and visible comments were opened, and neither was used as product documentation."
+  ],
+  "publicationStatus": "Draft package for independent review; no publication or indexation is asserted."
+}
