@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-05",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "1133c5dacef7b493136aa828339e877bac0590cc8dcd11f24e99801788c0083d",
+  "commit": "42cc6decd2bdf161424ee227233d314af5422114",
+  "release": "/opt/browsertools/releases/20261105-100327",
+  "publicationReceiptAt": "2026-11-05T02:04:09.502Z",
+  "completedAt": "2026-11-05T02:04:12.952Z",
+  "newTopics": [
+    "ai-browser-vs-ai-search-engine",
+    "comet-query-shortcuts",
+    "comet-extension-compatibility",
+    "comet-import-export-vs-sync",
+    "gemini-auto-browse-local-vs-remote"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-vs-ai-search-engine/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-vs-ai-search-engine/",
+    "https://browserhub.co/en/guides/comet-query-shortcuts/",
+    "https://browserhub.co/zh-cn/guides/comet-query-shortcuts/",
+    "https://browserhub.co/en/guides/comet-extension-compatibility/",
+    "https://browserhub.co/zh-cn/guides/comet-extension-compatibility/",
+    "https://browserhub.co/en/guides/comet-import-export-vs-sync/",
+    "https://browserhub.co/zh-cn/guides/comet-import-export-vs-sync/",
+    "https://browserhub.co/en/guides/gemini-auto-browse-local-vs-remote/",
+    "https://browserhub.co/zh-cn/guides/gemini-auto-browse-local-vs-remote/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/"
+  ],
+  "counting": "Five independent core AI-browser themes; English and Chinese editions count once. All104 prior owners and208 editions remain unchanged, including the November4 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-05.json",
+    "docs/seo/competitive-review-2026-11-05.json"
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Five selected content sites and checked homepage/blog/representative-page samples; observed, inferred and unavailable are separated. No claim of a full-site crawl, top-three rank, ranking-factor weights, backlinks or traffic estimates.",
+  "modelRoles": {
+    "executor": {
+      "role": "executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffortRequested": "high",
+      "reasoningEffortEffective": null,
+      "attempts": 1,
+      "source": "human_task",
+      "reasoningEffort": "high",
+      "selectionSource": "human_task",
+      "agent": "content_execution_20261105"
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "human_task"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 8,
+    "sha256": "9e6ba4bb4cfd5899bc297a7f82e7b7201f2aa1bc572c544c576b5c0b6ef594bb"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "9e91e826ebdabb145bf9f0c1c83d84920c0d07e779cec2330a677fa6d79c544f"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1379,
+      "sitemapUrls": 1086,
+      "internalLinks": 47368,
+      "alternateLinks": 7925,
+      "fallbackPages": 60,
+      "editorialGuides": 218,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-05T01:58:37.333Z",
+      "status": "passed",
+      "existingTopicsPreserved": 104,
+      "existingTopicsUnchanged": 104,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 109,
+      "completeEditions": 218,
+      "newTopics": 5,
+      "keywordRows": 175,
+      "details": [
+        {
+          "slug": "ai-browser-vs-ai-search-engine",
+          "locale": "en",
+          "sections": 6,
+          "faq": 4
+        },
+        {
+          "slug": "ai-browser-vs-ai-search-engine",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 4
+        },
+        {
+          "slug": "comet-query-shortcuts",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "comet-query-shortcuts",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "comet-extension-compatibility",
+          "locale": "en",
+          "sections": 6,
+          "faq": 4
+        },
+        {
+          "slug": "comet-extension-compatibility",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 4
+        },
+        {
+          "slug": "comet-import-export-vs-sync",
+          "locale": "en",
+          "sections": 6,
+          "faq": 5
+        },
+        {
+          "slug": "comet-import-export-vs-sync",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 5
+        },
+        {
+          "slug": "gemini-auto-browse-local-vs-remote",
+          "locale": "en",
+          "sections": 6,
+          "faq": 5
+        },
+        {
+          "slug": "gemini-auto-browse-local-vs-remote",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 5
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-05T02:05:30.731925+00:00",
+      "release": "/opt/browsertools/releases/20261105-100327",
+      "expectedRelease": "/opt/browsertools/releases/20261105-100327",
+      "exitCode": 0,
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-05T02:04:12.918Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-vs-ai-search-engine/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-vs-ai-search-engine/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-vs-ai-search-engine/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-vs-ai-search-engine/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-query-shortcuts/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-query-shortcuts/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-query-shortcuts/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-query-shortcuts/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-extension-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-extension-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-extension-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-extension-compatibility/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-import-export-vs-sync/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-import-export-vs-sync/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-import-export-vs-sync/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-import-export-vs-sync/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/gemini-auto-browse-local-vs-remote/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/gemini-auto-browse-local-vs-remote/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/gemini-auto-browse-local-vs-remote/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/gemini-auto-browse-local-vs-remote/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-05T02:04:09.502Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-12T02:04:09.502000+00:00",
+      "14day": "2026-11-19T02:04:09.502000+00:00",
+      "28day": "2026-12-03T02:04:09.502000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-05",
+        "end": "2026-11-11",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-12T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-05",
+        "end": "2026-11-18",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-19T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-05",
+        "end": "2026-12-02",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-03T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "A bounded AI-citation observation baseline was recorded privately. No traffic uplift, conversion, AI-referral volume or ROI is claimed from publication.",
+  "automation": "Existing daily09:00 task updated to follow latest selection/effect rules; schedule and target preserved, no duplicate task.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
