@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-06",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "114a313f4dd4a83557887ff9560f0e0c74113c317ad30acbd8de00977637d283",
+  "commit": "d4b13c005df5a6195a659809820bec84bd0df684",
+  "release": "/opt/browsertools/releases/20261106-093345",
+  "publicationReceiptAt": "2026-11-06T01:34:17.815Z",
+  "completedAt": "2026-11-06T01:34:20.078Z",
+  "newTopics": [
+    "firefox-ai-controls-chatbot-provider-boundary",
+    "brave-leo-byom-local-vs-hosted",
+    "edge-copilot-page-context-enterprise-dlp",
+    "opera-ai-page-content-permission",
+    "opera-browser-connector-chatgpt-permissions"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/",
+    "https://browserhub.co/en/guides/firefox-ai-controls-chatbot-provider-boundary/",
+    "https://browserhub.co/zh-cn/guides/firefox-ai-controls-chatbot-provider-boundary/",
+    "https://browserhub.co/en/guides/brave-leo-byom-local-vs-hosted/",
+    "https://browserhub.co/zh-cn/guides/brave-leo-byom-local-vs-hosted/",
+    "https://browserhub.co/en/guides/edge-copilot-page-context-enterprise-dlp/",
+    "https://browserhub.co/zh-cn/guides/edge-copilot-page-context-enterprise-dlp/",
+    "https://browserhub.co/en/guides/opera-ai-page-content-permission/",
+    "https://browserhub.co/zh-cn/guides/opera-ai-page-content-permission/",
+    "https://browserhub.co/en/guides/opera-browser-connector-chatgpt-permissions/",
+    "https://browserhub.co/zh-cn/guides/opera-browser-connector-chatgpt-permissions/"
+  ],
+  "counting": "Five independent core AI-browser themes; English and Chinese editions count once. All 109 prior owners and 218 editions remain unchanged, including the November4 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-06.json"
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "role": "executor",
+      "modelRequested": "gpt-6-luna",
+      "reasoningEffort": "high",
+      "modelEffective": null,
+      "attempts": 2,
+      "selectionSource": "human_task",
+      "agent": "content_execution_20261106",
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "result": "Five themes drafted and integrated. Initial CI flagged article depth in the two Opera page-content editions."
+        },
+        {
+          "attempt": 2,
+          "result": "The same executor added sourced Tab Island and chat-history guidance in both Opera editions. Independent reread and preflight passed."
+        }
+      ],
+      "escalationReason": null
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "d84c438fa5fa9a686062f1e9a9d208839c8810945ccfc535fb70c8dec1bab459"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 2,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "421a998a822f8807a31b99254450c0f80034724f6ec39bb6e23d1c2df69e280a"
+    },
+    "resolvedPreflightFinding": "The first preflight flagged the two Opera page-content editions for visible depth. The executor added sourced scope and chat-history guidance, then the independent reviewer checked the revision.",
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1394,
+      "sitemapUrls": 1096,
+      "internalLinks": 47943,
+      "alternateLinks": 7970,
+      "fallbackPages": 60,
+      "editorialGuides": 228,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-06T01:32:24.721Z",
+      "status": "passed",
+      "existingTopicsPreserved": 109,
+      "existingTopicsUnchanged": 109,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 114,
+      "completeEditions": 228,
+      "newTopics": 5,
+      "keywordRows": 180,
+      "details": [
+        {
+          "slug": "firefox-ai-controls-chatbot-provider-boundary",
+          "locale": "en",
+          "sections": 4,
+          "faq": 3
+        },
+        {
+          "slug": "firefox-ai-controls-chatbot-provider-boundary",
+          "locale": "zh-cn",
+          "sections": 4,
+          "faq": 3
+        },
+        {
+          "slug": "brave-leo-byom-local-vs-hosted",
+          "locale": "en",
+          "sections": 4,
+          "faq": 3
+        },
+        {
+          "slug": "brave-leo-byom-local-vs-hosted",
+          "locale": "zh-cn",
+          "sections": 4,
+          "faq": 3
+        },
+        {
+          "slug": "edge-copilot-page-context-enterprise-dlp",
+          "locale": "en",
+          "sections": 4,
+          "faq": 3
+        },
+        {
+          "slug": "edge-copilot-page-context-enterprise-dlp",
+          "locale": "zh-cn",
+          "sections": 4,
+          "faq": 3
+        },
+        {
+          "slug": "opera-ai-page-content-permission",
+          "locale": "en",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "opera-ai-page-content-permission",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "opera-browser-connector-chatgpt-permissions",
+          "locale": "en",
+          "sections": 4,
+          "faq": 3
+        },
+        {
+          "slug": "opera-browser-connector-chatgpt-permissions",
+          "locale": "zh-cn",
+          "sections": 4,
+          "faq": 3
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-06T01:34:39.385760+00:00",
+      "release": "/opt/browsertools/releases/20261106-093345",
+      "expectedRelease": "/opt/browsertools/releases/20261106-093345",
+      "exitCode": 0,
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-06T01:34:20.021Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/firefox-ai-controls-chatbot-provider-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/firefox-ai-controls-chatbot-provider-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/firefox-ai-controls-chatbot-provider-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/firefox-ai-controls-chatbot-provider-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/brave-leo-byom-local-vs-hosted/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/brave-leo-byom-local-vs-hosted/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/brave-leo-byom-local-vs-hosted/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/brave-leo-byom-local-vs-hosted/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/edge-copilot-page-context-enterprise-dlp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/edge-copilot-page-context-enterprise-dlp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/edge-copilot-page-context-enterprise-dlp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/edge-copilot-page-context-enterprise-dlp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/opera-ai-page-content-permission/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/opera-ai-page-content-permission/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/opera-ai-page-content-permission/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/opera-ai-page-content-permission/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/opera-browser-connector-chatgpt-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/opera-browser-connector-chatgpt-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/opera-browser-connector-chatgpt-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/opera-browser-connector-chatgpt-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-06T01:34:17.815Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-13T01:34:17.815000+00:00",
+      "14day": "2026-11-20T01:34:17.815000+00:00",
+      "28day": "2026-12-04T01:34:17.815000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-06",
+        "end": "2026-11-12",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-13T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-06",
+        "end": "2026-11-19",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-20T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-06",
+        "end": "2026-12-03",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-04T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "The November 5 AI-citation baseline remains the latest sample. Publication effects are pending report availability.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
