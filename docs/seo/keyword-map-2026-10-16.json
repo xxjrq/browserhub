@@ -6602,6 +6602,216 @@
         "28day": "2026-12-03"
       },
       "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:firefox-ai-controls-chatbot-provider-boundary",
+      "primaryKeyword": {
+        "en": "Firefox AI Controls keep chatbot but block other AI",
+        "zh-CN": "Firefox AI Controls 屏蔽其他 AI 但保留侧栏聊天"
+      },
+      "intent": "How to enable only the Firefox sidebar chatbot while blocking other built-in AI features; distinguish the global Block AI enhancements switch, individual feature state, provider choice, selected-text action and third-party service boundary.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/firefox-ai-controls-chatbot-provider-boundary/",
+        "https://browserhub.co/zh-cn/guides/firefox-ai-controls-chatbot-provider-boundary/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-06",
+      "sourceRecord": "docs/seo/research-2026-11-06.json",
+      "demandEvidence": "PC Gamer, TechRadar, AllThings.How and Mozilla Connect discuss demand or confusion; public signals only, not measured volume.",
+      "originalGain": "Firefox 148 desktop global block plus individual chatbot exception; checked against Mozilla Support and Mozilla desktop guide.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-vs-browser-agent"
+        ],
+        "distinctiveCoverage": "Firefox 148 desktop global block plus individual chatbot exception; checked against Mozilla Support and Mozilla desktop guide."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-13",
+        "14day": "2026-11-20",
+        "28day": "2026-12-04"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:brave-leo-byom-local-vs-hosted",
+      "primaryKeyword": {
+        "en": "Brave Leo BYOM local vs hosted model",
+        "zh-CN": "Brave Leo BYOM 本地与托管模型"
+      },
+      "intent": "How to configure Brave Leo BYOM and verify whether inference stays local, including Ollama cloud-backed models, provider retention and local chat history.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/brave-leo-byom-local-vs-hosted/",
+        "https://browserhub.co/zh-cn/guides/brave-leo-byom-local-vs-hosted/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-06",
+      "sourceRecord": "docs/seo/research-2026-11-06.json",
+      "demandEvidence": "TechRadar Pro, Privacy Ratings, DigitBin and Reddit Brave setup/privacy threads; public coverage and anecdotes, no volume claim.",
+      "originalGain": "Versioned BYOM endpoint and model-name checks; distinguish endpoint locality, model hosting, chat-history storage and page context. No hands-on test claimed.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-pdf-summary"
+        ],
+        "distinctiveCoverage": "Versioned BYOM endpoint and model-name checks; distinguish endpoint locality, model hosting, chat-history storage and page context. No hands-on test claimed."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-13",
+        "14day": "2026-11-20",
+        "28day": "2026-12-04"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:edge-copilot-page-context-enterprise-dlp",
+      "primaryKeyword": {
+        "en": "Copilot in Edge work page context blocked by DLP",
+        "zh-CN": "Edge 工作账户 Copilot 页面上下文被 DLP 阻止"
+      },
+      "intent": "Enterprise admin diagnosis when Copilot in an Entra Edge profile cannot read a page: policy scope, EDP-specific policy, DLP refusal, unsupported document type and pane loading failure.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/edge-copilot-page-context-enterprise-dlp/",
+        "https://browserhub.co/zh-cn/guides/edge-copilot-page-context-enterprise-dlp/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-06",
+      "sourceRecord": "docs/seo/research-2026-11-06.json",
+      "demandEvidence": "Microsoft support articles, Windows Central, Reddit Edge and Intune discussions show troubleshooting need; not search volume.",
+      "originalGain": "Separate personal UI setting from Entra policy, EDP policy, DLP and content-type matrix; explicitly reject bypassing protected content.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "gemini-in-chrome-vs-copilot-in-edge"
+        ],
+        "distinctiveCoverage": "Separate personal UI setting from Entra policy, EDP policy, DLP and content-type matrix; explicitly reject bypassing protected content."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-13",
+        "14day": "2026-11-20",
+        "28day": "2026-12-04"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:opera-ai-page-content-permission",
+      "primaryKeyword": {
+        "en": "Opera AI page content access toggle before prompt",
+        "zh-CN": "Opera AI 页面内容访问开关与提交提示"
+      },
+      "intent": "How to prevent Opera AI from using the active page or Tab Island in a new chat; distinguish page context from master switch, toolbar button, AI Prompts and chat history.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/opera-ai-page-content-permission/",
+        "https://browserhub.co/zh-cn/guides/opera-ai-page-content-permission/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-06",
+      "sourceRecord": "docs/seo/research-2026-11-06.json",
+      "demandEvidence": "Rottenwifi, Sekin and Opera Reddit discussions cover toggles, page/Tab Island permissions and version confusion; anecdotal or editorial, not volume.",
+      "originalGain": "Clarifies automatic context state for new chats, prompt submission timing, Tab Island scope, sensitive-site restrictions and chat history.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-vs-browser-agent"
+        ],
+        "distinctiveCoverage": "Clarifies automatic context state for new chats, prompt submission timing, Tab Island scope, sensitive-site restrictions and chat history."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-13",
+        "14day": "2026-11-20",
+        "28day": "2026-12-04"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:opera-browser-connector-chatgpt-permissions",
+      "primaryKeyword": {
+        "en": "Opera Browser Connector ChatGPT permissions setup",
+        "zh-CN": "Opera Browser Connector 连接 ChatGPT 与权限设置"
+      },
+      "intent": "Set up Browser Connector for Opera One/GX, connect the matching account to ChatGPT and diagnose Update required/protocol errors without confusing it with Opera AI or Opera Neon.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/opera-browser-connector-chatgpt-permissions/",
+        "https://browserhub.co/zh-cn/guides/opera-browser-connector-chatgpt-permissions/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-06",
+      "sourceRecord": "docs/seo/research-2026-11-06.json",
+      "demandEvidence": "TestingCatalog, Thurrott, Opera forums and Reddit Opera reports; public coverage and anecdotal failures, not volume.",
+      "originalGain": "Feature-specific Early Bird, permissions, account matching, supported actions and fault-report checklist; no connection test claimed.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "chrome-devtools-mcp-existing-browser",
+          "playwright-mcp-existing-browser"
+        ],
+        "distinctiveCoverage": "Feature-specific Early Bird, permissions, account matching, supported actions and fault-report checklist; no connection test claimed."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-13",
+        "14day": "2026-11-20",
+        "28day": "2026-12-04"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
@@ -6665,20 +6875,20 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-11-05",
-    "cycleId": "content-2026-11-05",
+    "date": "2026-11-06",
+    "cycleId": "content-2026-11-06",
     "newTopics": [
-      "ai-browser-vs-ai-search-engine",
-      "comet-query-shortcuts",
-      "comet-extension-compatibility",
-      "comet-import-export-vs-sync",
-      "gemini-auto-browse-local-vs-remote"
+      "firefox-ai-controls-chatbot-provider-boundary",
+      "brave-leo-byom-local-vs-hosted",
+      "edge-copilot-page-context-enterprise-dlp",
+      "opera-ai-page-content-permission",
+      "opera-browser-connector-chatgpt-permissions"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
     "publicationEvidence": "Pending independent review and workflow receipt; not yet published.",
-    "notClaimed": "Draft prepared for review; no publication, traffic gain, indexing result, search volume, or measured demand is claimed."
+    "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",

@@ -1,0 +1,295 @@
+{
+  "observedOn": "2026-11-06",
+  "method": "Live search and opened page bodies. Public discussions are anecdotal issue evidence, not search volume or BrowserHub analytics. Official vendor documentation controls product claims.",
+  "topics": {
+    "firefox-ai-controls-chatbot-provider-boundary": {
+      "official": [
+        {
+          "url": "https://support.mozilla.org/en-US/kb/firefox-ai-controls",
+          "read": true,
+          "note": "Mozilla desktop Support: global block, per-feature Available/Enabled/Blocked states, blocked on-device models removed, third-party extension services continue independently."
+        },
+        {
+          "url": "https://blog.mozilla.org/en/firefox/how-to-use-ai-controls/",
+          "read": true,
+          "note": "Mozilla desktop tutorial: AI Controls manages translations, PDF alt text, tab groups, link previews, sidebar chatbot. Individual state can remain enabled while other features are blocked."
+        },
+        {
+          "url": "https://support.mozilla.org/en-US/kb/ai-chatbot",
+          "read": true,
+          "note": "Mozilla says selected-text prompts send selection plus prompt and page title; Summarize Page sends page content plus prompt and title; sidebar provider selection is a separate service choice."
+        }
+      ],
+      "competitorAndDiscussion": [
+        {
+          "url": "https://www.pcgamer.com/software/browsers/weve-heard-from-many-who-want-nothing-to-do-with-ai-says-mozilla-as-it-introduces-an-ai-blocking-menu-to-upcoming-firefox-builds/",
+          "read": true,
+          "note": "PC Gamer reports feature scope and the audience split between people wanting no AI and people wanting optional tools."
+        },
+        {
+          "url": "https://www.techradar.com/computing/firefox/someone-is-actually-reading-the-room-firefox-just-got-an-ai-kill-switch-and-i-hope-other-developers-will-follow-its-lead",
+          "read": true,
+          "note": "TechRadar covers global and individual controls and user reaction; launch-era framing, current state governed by Mozilla docs."
+        },
+        {
+          "url": "https://allthings.how/how-to-kill-every-ai-feature-in-firefox-for-good/",
+          "read": true,
+          "note": "AllThings.How explains AI Controls, about:config and user.js, but its broad claim that the panel cannot manage every AI-adjacent preference needs careful scope; draft steers to official controls."
+        },
+        {
+          "url": "https://connect.mozilla.org/t5/discussions/try-out-ai-controls-in-firefox-nightly/m-p/117177",
+          "read": true,
+          "note": "Mozilla Connect thread includes user questions about what Blocked means, whether downloaded components are removed, and complaints about confirmation UI. Used as problem signal only."
+        }
+      ],
+      "informationGain": "A sourced operational path for keeping the sidebar chatbot available while blocking other Firefox AI features, and a clear boundary between Firefox entry points, provider choice, extensions and website AI."
+    },
+    "brave-leo-byom-local-vs-hosted": {
+      "official": [
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/34070140231821-How-do-I-use-the-Bring-Your-Own-Model-BYOM-with-Brave-Leo",
+          "read": true,
+          "note": "Brave Help updated May 19 2026: BYOM accepts local or hosted models; endpoint, model name, API key setup and desktop Brave minimum version."
+        },
+        {
+          "url": "https://brave.com/blog/byom-nightly/",
+          "read": true,
+          "note": "Brave's BYOM walkthrough documents endpoint fields and Ollama example. Vendor-authored and not independent validation."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/32663367857549-How-do-I-use-Chat-History-in-Brave-Leo",
+          "read": true,
+          "note": "Brave Help says conversation and associated page content can be stored locally and cleared separately; local history is distinct from model inference host."
+        },
+        {
+          "url": "https://docs.ollama.com/faq",
+          "read": true,
+          "note": "Ollama FAQ explains cloud opt-out for supported versions; after restart, log includes “Ollama cloud disabled: true”. This check is limited to Ollama Cloud."
+        },
+        {
+          "url": "https://ollama.com/blog/cloud-models",
+          "read": true,
+          "note": "Ollama states cloud models use inference at ollama.com and are callable via a local-compatible API, demonstrating localhost is not equivalent to local inference."
+        }
+      ],
+      "competitorAndDiscussion": [
+        {
+          "url": "https://www.techradar.com/pro/brave-leo-ai-review",
+          "read": true,
+          "note": "TechRadar describes BYOM via Ollama or APIs; product review includes author-reported testing, not reproduced by BrowserHub."
+        },
+        {
+          "url": "https://privacyratings.com/ai-assistants/brave-leo/",
+          "read": true,
+          "note": "Privacy Ratings distinguishes local execution from Brave-hosted default and reports its own criteria and test date."
+        },
+        {
+          "url": "https://www.digitbin.com/brave-leo-review/",
+          "read": true,
+          "note": "DigitBin review discusses hosted model lineup, local Ocelot and practical limitations; model roster is date-sensitive."
+        },
+        {
+          "url": "https://www.reddit.com/r/brave_browser/comments/1uotbz9/leo_privacy/",
+          "read": true,
+          "note": "User asks what happens after accidentally sending a personal PDF; Brave staff reply is a community statement, not a binding privacy guarantee."
+        },
+        {
+          "url": "https://www.reddit.com/r/brave_browser/comments/1uoubqr/need-help-with-leos-byom/",
+          "read": true,
+          "note": "User's BYOM setup question reveals tool support versus web search expectations; reply says web search requires a server-side Brave Search API key."
+        }
+      ],
+      "informationGain": "Endpoint locality is not inference locality; inspect model tag and runtime, and keep browser history, provider retention and page context as separate layers. No hands-on test claimed."
+    },
+    "edge-copilot-page-context-enterprise-dlp": {
+      "official": [
+        {
+          "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/copilotpagecontext",
+          "read": true,
+          "note": "Policy applies to Entra ID profiles, not MSA; separate EDP policy exists; regional defaults; disabling also affects M365 link insights."
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/deployedge/edge-learnmore-copilot-page-summary-results",
+          "read": true,
+          "note": "Microsoft Learn support matrix distinguishes SharePoint/public sites/PDFs from embedded Office and Office files; documents Purview and Intune DLP blocks."
+        },
+        {
+          "url": "https://support.microsoft.com/en-gb/edge/copilot/using-microsoft-copilot-in-edge-at-work",
+          "read": true,
+          "note": "Microsoft Support explains consent visibility, organization policy, DLP refusal and restricted protected pages/PDFs."
+        },
+        {
+          "url": "https://github.com/MicrosoftDocs/SupportArticles-docs/blob/main/support/microsoft-edge/experience/copilot-chat-loading-issues.md",
+          "read": true,
+          "note": "Microsoft support article covers blank pane, auth, service connectivity, policy allow-list changes in Edge 146; sidebar loading failure is separate from page context denial."
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/edgeentracopilotpagecontext",
+          "read": true,
+          "note": "Separate Entra EDP policy covers page content, history and video transcript; DLP-protected pages remain inaccessible even when enabled."
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/deployedge/configure-microsoft-edge",
+          "read": true,
+          "note": "Microsoft Learn says edge://policy displays applied policy settings on a managed client; provides a concrete read-only admin diagnostic step."
+        }
+      ],
+      "competitorAndDiscussion": [
+        {
+          "url": "https://www.reddit.com/r/Intune/comments/1npvg9m/get_rid_of_copilot_chat_in_edge_browser/",
+          "read": true,
+          "note": "IT admin discussion distinguishes toolbar visibility policy from Copilot page content policy."
+        },
+        {
+          "url": "https://www.reddit.com/r/edge/comments/1uuulr4/using_copilot_as_a_guide_to_edge_settings/",
+          "read": true,
+          "note": "Consumer context-setting discussion contains inaccurate or outdated navigation suggestions; draft uses only as evidence of settings confusion."
+        },
+        {
+          "url": "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/microsofts-copilot-migration-can-leave-edge-sidebar-users-without-the-ai-assistant-for-days",
+          "read": true,
+          "note": "Recent report about Copilot migration and temporary sidebar unavailability; distinct from page content policy. Used as diagnostic alternative, not proof of DLP."
+        },
+        {
+          "url": "https://www.reddit.com/r/microsoft_365_copilot/comments/1jfnmf5/can_you_see_this_page/",
+          "read": true,
+          "note": "Work-profile user asks why Edge sidebar Copilot alternates between seeing and failing to see pages; anecdotal signal only."
+        }
+      ],
+      "informationGain": "Admin diagnostic path that distinguishes profile type, consent, effective policy, DLP and document support; records exact refusal rather than suggesting a policy bypass."
+    },
+    "opera-ai-page-content-permission": {
+      "official": [
+        {
+          "url": "https://help.opera.com/en/browser-ai-faq/",
+          "read": true,
+          "note": "Opera Help current FAQ: new chats on a website may default page access on; information is sent only after a prompt; context can include every open tab in the current Tab Island; some sensitive sites and private windows are blocked; page-context responses are saved in chat history. Desktop deletion path: full-tab view, left Menu chat list, hover a conversation, trash icon, confirm. Signed-in chats are kept one year or until deleted; signed-out chats six hours. FAQ does not claim deletion undoes a submitted prompt or describe deletion from every downstream system."
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/01/opera-one-r3-new-browser-update/",
+          "read": true,
+          "note": "Opera R3 describes distinct master AI, toolbar button, AI prompts, and chat page context controls."
+        }
+      ],
+      "competitorAndDiscussion": [
+        {
+          "url": "https://rottenwifi.com/how-to-enable-or-disable-ai-tools-and-services-in-opera/",
+          "read": true,
+          "note": "Recent Opera settings guide explicitly separates master switch, toolbar, prompts, sidebar services and page context."
+        },
+        {
+          "url": "https://www.reddit.com/r/operabrowser/comments/1sd1mks/ai_aria/",
+          "read": true,
+          "note": "Users discuss changes to Aria access point and page-context loss when adding a sidebar panel."
+        },
+        {
+          "url": "https://www.reddit.com/r/OperaGX/comments/1tiwnla/how_can_i_remove_ai_from_my_browser/",
+          "read": true,
+          "note": "Question mixes built-in AI, sidebar controls and search-engine AI; shows why controls must be separated."
+        },
+        {
+          "url": "https://www.androidcentral.com/apps-software/opera-wants-you-to-stop-juggling-ai-apps",
+          "read": true,
+          "note": "Coverage of Opera Android's manual tab attachment; not treated as desktop UI instructions."
+        },
+        {
+          "url": "https://sekin.in/how-to-disable-aria-ai-opera-ai-and-automatic-tab-islands-in-opera-one/",
+          "read": true,
+          "note": "Third-party guide separates master AI, toolbar button, prompts, Tab Islands and page content access."
+        },
+        {
+          "url": "https://www.reddit.com/r/operabrowser/comments/1p4xbul/thoughts_on_the_new_opera_ai/",
+          "read": true,
+          "note": "Discussion mentions page/Tab Island permission default and confusion after the Aria-to-Opera-AI UI change."
+        }
+      ],
+      "informationGain": "A concrete decision path for keeping Opera page context off before prompting; scoping a Tab Island by moving unrelated tabs out; distinguishing context from other AI controls; a public-page same-prompt comparison; and the exact desktop history deletion path with retention boundaries."
+    },
+    "opera-browser-connector-chatgpt-permissions": {
+      "official": [
+        {
+          "url": "https://press.opera.com/2026/04/16/opera-announces-browser-connector/",
+          "read": true,
+          "note": "Opera launch announcement: Early Bird availability for Opera One/GX and MCP connection to external AI."
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/05/how-to-set-up-opera-browser-connector-for-chatgpt/",
+          "read": true,
+          "note": "Opera setup guide covers Early Bird, install, Opera sign-in, ChatGPT app connection and matching account."
+        },
+        {
+          "url": "https://openai.com/business/plugins/opera-browser-connector/",
+          "read": true,
+          "note": "OpenAI app listing documents open tabs, read content, screenshots, navigation and optional history/close-tab permissions."
+        },
+        {
+          "url": "https://help.openai.com/en/articles/20001495-managing-app-permissions-in-chatgpt",
+          "read": true,
+          "note": "OpenAI Help documents managing or disconnecting an app from Settings > Apps or Plugins."
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/04/opera-new-browser-connector-brings-claude-and-chatgpt-into-the-browser/",
+          "read": true,
+          "note": "Opera April article specifies One/GX defaults: open-tab reading and screenshots enabled after connect; history and closing tabs disabled by default; actions do not include clicking or filling forms."
+        }
+      ],
+      "competitorAndDiscussion": [
+        {
+          "url": "https://www.testingcatalog.com/opera-adds-browser-connector-to-pass-context-ai-models/",
+          "read": true,
+          "note": "Coverage distinguishes default context capabilities from optional history/open/close controls and says it does not click/type into page controls."
+        },
+        {
+          "url": "https://www.thurrott.com/cloud/web-browsers/335001/opera-will-let-users-integrate-claude-and-chatgpt-into-its-browser",
+          "read": true,
+          "note": "Coverage describes Early Bird, external AI setup and page/context capabilities."
+        },
+        {
+          "url": "https://forums.opera.com/topic/89764/browser-connector-says-update-required-after-opera-update-but-no-update-is-available/1",
+          "read": true,
+          "note": "Multiple forum users describe Update required, stale connector version and reconnect/reinstall attempts. Reported issue, not universal behavior."
+        },
+        {
+          "url": "https://www.reddit.com/r/operabrowser/comments/1wbs04t/opera_browser_connector_protocol_error/",
+          "read": true,
+          "note": "Community thread records protocol error after update and reports later recovery; anecdotal and time-scoped."
+        }
+      ],
+      "informationGain": "Stepwise setup and permission inventory, plus version/account diagnostics, while distinguishing Browser Connector from built-in Opera AI and Neon MCP. No connection test claimed."
+    }
+  },
+  "metrics": {
+    "searchVolume": null,
+    "ranking": null,
+    "traffic": null,
+    "privateGscQueries": null
+  },
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "project": "BrowserHub",
+  "status": "evidence-researched-draft-prepared-for-independent-review",
+  "liveWeb": true,
+  "publicSearchDemandEvidence": "Observed relevant editorial coverage and product discussions for each specific task; this is not measured search volume, BrowserHub traffic, ranking or GSC query data.",
+  "existingOwnerCheck": {
+    "catalogueSnapshot": "docs/seo/keyword-map-2026-10-16.json plus active guide resources/series",
+    "catalogueOwnerCount": 109,
+    "method": "Scanned 109 intent owners and the active Nov 5 guide batch; checked nearest AI-browser/tab-context intents.",
+    "excludedDuplicates": [
+      "ai-browser-pdf-summary",
+      "ai-browser-tab-access-permissions",
+      "gemini-in-chrome-vs-copilot-in-edge"
+    ],
+    "note": "Edge topic is scoped to enterprise policy/DLP; not consumer page-context setup. Opera connector is an external-client connection setup, not built-in Opera AI page-context."
+  },
+  "limitations": [
+    "Search volumes, ranks, traffic and private queries are null.",
+    "No browser/account/tenant hands-on testing claimed.",
+    "Reader discussion may be dated and is only an anecdotal need signal.",
+    "Official product documentation governs current feature boundaries."
+  ],
+  "evidenceArchive": {
+    "privateNotes": "browsertools/.local/workflows/cycles/content-2026-11-06/sources/reader-notes.json",
+    "rawManifest": "browsertools/.local/workflows/cycles/content-2026-11-06/sources/raw-manifest.json",
+    "rawCoverage": "27 of 39 eligible opened source bodies saved as unmodified HTTP response bodies; 12 direct requests returned 403. Those pages were opened and read via web search/open, and their observations remain in reader-notes.json. Failed direct fetches were not treated as missing reading."
+  }
+}
