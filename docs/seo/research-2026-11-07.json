@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-07",
+  "observedAtUtc": "2026-11-07T03:43:52Z",
+  "timezone": "Asia/Shanghai",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-07",
+  "status": "research-and-draft-prepared-for-independent-review; publication requires completed workflow receipt",
+  "baseline": {
+    "topics": 114,
+    "completeEditions": 228,
+    "keywordRowsBeforeCycle": 180,
+    "gitHead": "98483e8f8e54f9c4aaeaad0db89144bebbb18cfa"
+  },
+  "selectionRule": "Checked all existing 114 topic owners, the 2026-11-06 additions, the 2026-11-05 competition review, and user-segment/intent records. English and Chinese editions count as one theme. No synonym pages, generic API coverage, or unsupported measurements.",
+  "reviewBasis": {
+    "leadershipPlan": "docs/seo/leadership-plan-2026-11-04.json",
+    "strategyResearch": "docs/seo/strategy-research-2026-10-25.json",
+    "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+    "priorDelivery": "docs/seo/workflow-delivery-2026-11-06.json",
+    "lastCompletedOwners": [
+      "firefox-ai-controls-chatbot-provider-boundary",
+      "brave-leo-byom-local-vs-hosted",
+      "edge-copilot-page-context-enterprise-dlp",
+      "opera-ai-page-content-permission",
+      "opera-browser-connector-chatgpt-permissions"
+    ]
+  },
+  "topics": [
+    {
+      "slug": "dia-skills-create-edit-reuse",
+      "intent": "Diagnose missing or prompt-only Dia Skills and distinguish historical Mac builder paths from current platform support; inspect a scoped reusable workflow where the installed build exposes controls.",
+      "primarySources": [
+        {
+          "title": "Dia Mac 1.56.0 changelog",
+          "url": "https://www.diabrowser.com/changelog/mac/1-56-0",
+          "publishedOrUpdated": "2026-11-05",
+          "relevantEvidence": "Mac v1.56.0 changelog covers profile routing, tab groups, apps and Chat; no Skills redesign stated."
+        },
+        {
+          "title": "Dia Windows 1.5.0 changelog",
+          "url": "https://www.diabrowser.com/changelog/windows/1-5-0",
+          "publishedOrUpdated": "2026-11-05",
+          "relevantEvidence": "Windows v1.5.0 changelog covers PDF attachments, apps and Chat; no Skills redesign stated."
+        },
+        {
+          "title": "Dia Windows 1.2.0 changelog",
+          "url": "https://www.diabrowser.com/changelog/windows/1-2-0",
+          "publishedOrUpdated": "2026-10-15",
+          "relevantEvidence": "Skills Now Available; custom Skills can be created on Windows, matching macOS."
+        },
+        {
+          "title": "Dia Mac 1.2.0 changelog",
+          "url": "https://www.diabrowser.com/changelog/mac/1-2-0",
+          "publishedOrUpdated": "2025-10-24",
+          "relevantEvidence": "Historical builder path and natural-language builder; treated as historical instructions, not a Nov 2026 redesign."
+        },
+        {
+          "title": "Dia Mac 1.0.1 changelog",
+          "url": "https://www.diabrowser.com/changelog/mac/1-0-1",
+          "publishedOrUpdated": "2025-10-09",
+          "relevantEvidence": "Historical Skills dropdown below Command Bar > New Skill and separate editing popup; dated explicitly, not represented as the current path."
+        }
+      ],
+      "publicReaderSignals": [
+        {
+          "title": "r/DiaBrowser: Create New Skills question",
+          "url": "https://www.reddit.com/r/diabrowser/comments/1sjo5db/create_new_skills/",
+          "publishedOrUpdated": "2026-04-12",
+          "relevantEvidence": "User reports cannot find skill creation after an update."
+        },
+        {
+          "title": "r/DiaBrowser: Skills not working",
+          "url": "https://www.reddit.com/r/diabrowser/comments/1voazdv/skills_not_working/",
+          "publishedOrUpdated": "2026-08-14",
+          "relevantEvidence": "User reports Skill text inserted into a newer Claude Chat instead of expected Skill execution; anecdotal."
+        },
+        {
+          "title": "r/DiaBrowser: Skills master thread",
+          "url": "https://www.reddit.com/r/diabrowser/comments/1m6pdk0/master_thread_for_dia_skills/",
+          "publishedOrUpdated": "2025-07-22",
+          "relevantEvidence": "Community organizes reusable Skills and examples."
+        }
+      ],
+      "competitors": [
+        {
+          "title": "TechCrunch: Dia launches Skills gallery",
+          "url": "https://techcrunch.com/2025/07/21/dia-launches-a-skill-gallery-perplexity-to-add-tasks-to-comet/",
+          "publishedOrUpdated": "2025-07-21",
+          "relevantEvidence": "Launch overview of Dia Skill gallery and comparable Comet tasks."
+        },
+        {
+          "title": "PiunikaWeb: Dia update adds custom Skills",
+          "url": "https://piunikaweb.com/2026/10/16/dia-update-github-live-groups-custom-skills/",
+          "publishedOrUpdated": "2026-10-16",
+          "relevantEvidence": "Windows 1.2 update and reusable Skills report."
+        },
+        {
+          "title": "r/DiaBrowser: Create New Skills question",
+          "url": "https://www.reddit.com/r/diabrowser/comments/1sjo5db/create_new_skills/",
+          "publishedOrUpdated": "2026-04-12",
+          "relevantEvidence": "Navigation problem."
+        },
+        {
+          "title": "r/DiaBrowser: Skills not working",
+          "url": "https://www.reddit.com/r/diabrowser/comments/1voazdv/skills_not_working/",
+          "publishedOrUpdated": "2026-08-14",
+          "relevantEvidence": "Invocation failure report."
+        }
+      ],
+      "existingOwnerCheck": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-query-shortcuts",
+          "comet-vs-dia"
+        ],
+        "reason": "Comet shortcuts and broad product choice have different intent; Dia Skill authoring and diagnosis is product-specific."
+      },
+      "originalGain": "Dated Mac/Windows version and path decision table, scoped prompt example, edit/reuse acceptance checks and missing-Skill diagnosis; no verified current builder path or hands-on behavior claimed."
+    },
+    {
+      "slug": "comet-assistant-history-data-controls",
+      "intent": "Choose the correct deletion or export control for local Comet browser data, Perplexity Library threads, account export and account deletion.",
+      "primarySources": [
+        {
+          "title": "Perplexity Self-Serve Data Options",
+          "url": "https://www.perplexity.ai/en-GB/hub/legal/self-serve-data-options",
+          "relevantEvidence": "Current instructions distinguish local Comet browsing-data deletion, per-thread/all-thread deletion, export and account deletion; local deletion does not affect account or synced settings; the Library supports Delete all threads."
+        },
+        {
+          "title": "Perplexity Privacy Snapshot",
+          "url": "https://www.perplexity.ai/en-GB/hub/blog/introducing-privacy-snapshot",
+          "relevantEvidence": "Describes current Comet privacy/security settings and Assistant access controls."
+        },
+        {
+          "title": "Perplexity December 5 changelog",
+          "url": "https://www.perplexity.ai/en-GB/changelog/what-we-shipped---december-5th",
+          "publishedOrUpdated": "2025-12-04",
+          "relevantEvidence": "Historical memory, thread rename and delete features; not used as current bulk-delete procedure."
+        }
+      ],
+      "publicReaderSignals": [
+        {
+          "title": "Perplexity forum: Comet history bulk removal",
+          "url": "https://community.perplexity.ai/t/perplexity-history-management-in-comet-browser/3918",
+          "publishedOrUpdated": "2026-02-13",
+          "relevantEvidence": "User requested a bulk option after selecting more than 200 threads individually; current official self-serve page now describes Delete all threads."
+        },
+        {
+          "title": "Reddit: separate Comet Assistant history from search",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1m5s639",
+          "publishedOrUpdated": "2025-07-21",
+          "relevantEvidence": "User objects to Assistant conversations mixed into search history."
+        },
+        {
+          "title": "Reddit: Assistant threads history",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1mkx928",
+          "publishedOrUpdated": "2025-08-08",
+          "relevantEvidence": "User asks whether temporary Comet Assistant threads are added to account history."
+        },
+        {
+          "title": "Reddit: Comet iOS thread cleanup",
+          "url": "https://www.reddit.com/r/PerplexityComet/comments/1s0sgl8",
+          "publishedOrUpdated": "2026-03-22",
+          "relevantEvidence": "User post discusses clearing Comet iOS threads."
+        }
+      ],
+      "competitors": [
+        {
+          "title": "Perplexity Self-Serve Data Options",
+          "url": "https://www.perplexity.ai/en-GB/hub/legal/self-serve-data-options",
+          "relevantEvidence": "Primary data-control page."
+        },
+        {
+          "title": "Perplexity December 5 changelog",
+          "url": "https://www.perplexity.ai/en-GB/changelog/what-we-shipped---december-5th",
+          "publishedOrUpdated": "2025-12-04",
+          "relevantEvidence": "History/memory interface background."
+        },
+        {
+          "title": "Perplexity forum: history bulk removal request",
+          "url": "https://community.perplexity.ai/t/perplexity-history-management-in-comet-browser/3918",
+          "publishedOrUpdated": "2026-02-13",
+          "relevantEvidence": "Reader confusion about thread cleanup."
+        },
+        {
+          "title": "Reddit: Assistant/Search history separation",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1m5s639",
+          "publishedOrUpdated": "2025-07-21",
+          "relevantEvidence": "Reader history organization question."
+        }
+      ],
+      "existingOwnerCheck": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-import-export-vs-sync",
+          "brave-leo-byom-local-vs-hosted",
+          "opera-ai-page-content-permission"
+        ],
+        "reason": "Existing Comet owner concerns browser profile data; Brave/Opera only discuss their own histories. This page covers Perplexity thread/account controls."
+      },
+      "originalGain": "Separates local browser records from account threads/memory/export; includes current bulk-deletion path and scope boundaries. No restoration guarantee."
+    },
+    {
+      "slug": "perplexity-comet-google-drive-connector",
+      "intent": "Diagnose Drive authorization, source-selection and picker failures in Perplexity opened in Comet; distinguish Computer Project context, account connection and Google grant revocation.",
+      "primarySources": [
+        {
+          "title": "Perplexity Computer Projects",
+          "url": "https://www.perplexity.ai/en-GB/hub/products/projects",
+          "relevantEvidence": "Computer workspaces: Spaces are now Projects; connector account selection and project instructions, with personal connections scoped to each member. Does not establish identical connector controls in Comet or ordinary search/chat."
+        },
+        {
+          "title": "Perplexity connectors changelog",
+          "url": "https://www.perplexity.ai/changelog/what-we-shipped-september-19th",
+          "publishedOrUpdated": "2025-09-18",
+          "relevantEvidence": "Describes Gmail/calendar separately from Drive file integrations. Plan availability is not repeated as a current entitlement claim."
+        },
+        {
+          "title": "Google Account Help: Remove third-party access",
+          "url": "https://support.google.com/accounts/answer/13533235?hl=en",
+          "relevantEvidence": "Google account procedure to revoke third-party access and note that already received data may persist."
+        }
+      ],
+      "publicReaderSignals": [
+        {
+          "title": "Perplexity forum: Drive connector crashes",
+          "url": "https://community.perplexity.ai/t/google-drive-connector-crashes-and-does-not-show-drive-files/5403",
+          "publishedOrUpdated": "2026-06-18",
+          "relevantEvidence": "Successful OAuth followed by empty/crashing picker, reported in Comet, Chrome and Safari; later replies describe similar symptoms."
+        },
+        {
+          "title": "Reddit: error connecting Google Drive",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1t9zn8y/error_connecting_google_drive_to_perplexity/",
+          "publishedOrUpdated": "2026-05-11",
+          "relevantEvidence": "User asks about connector access after removal."
+        },
+        {
+          "title": "Reddit: Google Drive connector issues",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1tfe61m/problems_with_google_drive_connector/",
+          "publishedOrUpdated": "2026-05-17",
+          "relevantEvidence": "User reports Drive connector stopped recognizing files."
+        },
+        {
+          "title": "Reddit: Google Drive permission scope",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1kzngdv",
+          "publishedOrUpdated": "2025-06-03",
+          "relevantEvidence": "User asks why Drive authorization appears to request broader account access."
+        }
+      ],
+      "competitors": [
+        {
+          "title": "Perplexity Projects",
+          "url": "https://www.perplexity.ai/en-GB/hub/products/projects",
+          "relevantEvidence": "Connector configuration surface."
+        },
+        {
+          "title": "Perplexity forum: Drive connector crashes",
+          "url": "https://community.perplexity.ai/t/google-drive-connector-crashes-and-does-not-show-drive-files/5403",
+          "publishedOrUpdated": "2026-06-18",
+          "relevantEvidence": "Cross-browser failure discussion."
+        },
+        {
+          "title": "Reddit: Drive connector error",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1t9zn8y/error_connecting_google_drive_to_perplexity/",
+          "publishedOrUpdated": "2026-05-11",
+          "relevantEvidence": "Reconnection question."
+        },
+        {
+          "title": "Reddit: connector access scope",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1kzngdv",
+          "publishedOrUpdated": "2025-06-03",
+          "relevantEvidence": "Authorization scope question."
+        }
+      ],
+      "existingOwnerCheck": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-meeting-prep-brief",
+          "opera-browser-connector-chatgpt-permissions"
+        ],
+        "reason": "Meeting prep is the downstream task; Opera Connector is another product. No Perplexity Drive connector troubleshooting owner."
+      },
+      "originalGain": "Controlled cross-browser diagnostic, explicit Computer Projects product boundary, and separate project context, account disconnect and Google grant revocation. Project instructions are not OAuth restrictions; no generalization to Gmail permissions."
+    },
+    {
+      "slug": "comet-linux-browser-vs-local-computer",
+      "intent": "Determine whether a Linux user needs the Comet browser, Perplexity web app, another Linux browser with AI, or Portable Computer.",
+      "primarySources": [
+        {
+          "title": "Comet official platform page",
+          "url": "https://www.perplexity.ai/comet",
+          "relevantEvidence": "Current page lists Mac, Windows, iOS and Android; it does not list a native Linux download."
+        },
+        {
+          "title": "Portable Computer Linux support",
+          "url": "https://www.perplexity.ai/en-GB/hub/products/portable-computer",
+          "relevantEvidence": "Separate local agent product with specific Linux hardware requirements, including supported NVIDIA RTX with minimum VRAM."
+        },
+        {
+          "title": "Portable Computer changelog",
+          "url": "https://www.perplexity.ai/changelog/effort-mode-gpt-6-astra-and-skills-marketplace",
+          "publishedOrUpdated": "2026-09-21",
+          "relevantEvidence": "Describes supported Linux/Windows Portable Computer rollout; product distinct from Comet browser."
+        },
+        {
+          "title": "Brave Linux downloads",
+          "url": "https://brave.com/linux/",
+          "relevantEvidence": "Primary Linux download page for an alternative browser."
+        },
+        {
+          "title": "Firefox Linux downloads",
+          "url": "https://www.mozilla.org/firefox/linux/",
+          "relevantEvidence": "Primary Linux download page for an alternative browser."
+        },
+        {
+          "title": "Brave Leo official product page",
+          "url": "https://brave.com/leo/",
+          "relevantEvidence": "Explicitly lists Linux desktop availability and webpage assistance; Firefox Linux download alone is not treated as evidence of an integrated AI assistant."
+        }
+      ],
+      "publicReaderSignals": [
+        {
+          "title": "Reddit: Comet browser on Linux",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1ma9xkr/comet_browser_in_linux/",
+          "publishedOrUpdated": "2025-07-27",
+          "relevantEvidence": "Linux support question; search result displayed 55 votes."
+        },
+        {
+          "title": "Reddit: Comet for Linux",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1mndzxo",
+          "publishedOrUpdated": "2025-08-11",
+          "relevantEvidence": "Request for Linux release; search result displayed 10 votes."
+        },
+        {
+          "title": "iTechGuides Comet review",
+          "url": "https://www.itechguides.com/perplexity-comet-browser-review-2026-is-it-worth-trying/",
+          "publishedOrUpdated": "2026-08-10",
+          "relevantEvidence": "2026 review notes Comet official page list does not include Linux."
+        },
+        {
+          "title": "BrowserPedia Comet profile",
+          "url": "https://browserpedia.com/browsers/comet",
+          "publishedOrUpdated": "2026-09",
+          "relevantEvidence": "Current profile lists desktop/mobile platforms and treats Linux as unclear."
+        }
+      ],
+      "competitors": [
+        {
+          "title": "iTechGuides: Comet review",
+          "url": "https://www.itechguides.com/perplexity-comet-browser-review-2026-is-it-worth-trying/",
+          "publishedOrUpdated": "2026-08-10",
+          "relevantEvidence": "Platform support and product decision."
+        },
+        {
+          "title": "BrowserPedia: Comet profile",
+          "url": "https://browserpedia.com/browsers/comet",
+          "publishedOrUpdated": "2026-09",
+          "relevantEvidence": "Platform matrix."
+        },
+        {
+          "title": "Reddit: Comet browser in Linux",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1ma9xkr/comet_browser_in_linux/",
+          "publishedOrUpdated": "2025-07-27",
+          "relevantEvidence": "Linux availability question."
+        },
+        {
+          "title": "Reddit: Comet for Linux",
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1mndzxo",
+          "publishedOrUpdated": "2025-08-11",
+          "relevantEvidence": "Linux availability request."
+        }
+      ],
+      "existingOwnerCheck": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-vs-dia",
+          "comet-vs-gemini-in-chrome"
+        ],
+        "reason": "Current product comparison owners do not cover Linux installation support or the distinction from Portable Computer."
+      },
+      "originalGain": "Dated and bounded official-platform answer, separates browser/web app/local Computer, offers verified Linux alternatives and hardware boundary. Does not claim Comet can never support Linux."
+    },
+    {
+      "slug": "gemini-in-chrome-mobile-surfaces",
+      "intent": "Compare OS-specific Gemini in Chrome requirements and Ask Gemini controls; distinguish page sharing from hiding the mobile entry.",
+      "primarySources": [
+        {
+          "title": "Google Chrome Help: Gemini in Chrome Android",
+          "url": "https://support.google.com/chrome/answer/16283624?co=GENIE.Platform%3DAndroid&hl=en",
+          "relevantEvidence": "Android 12+, 4GB RAM, English device language, 18+, supported region, signed-in latest Chrome, rollout; Ask Gemini and Stop sharing page."
+        },
+        {
+          "title": "Google Chrome Help: Gemini in Chrome iOS",
+          "url": "https://support.google.com/chrome/answer/16283624?co=GENIE.Platform%3DiOS&hl=en",
+          "relevantEvidence": "iPhone/iPad age 13 or applicable local age, supported region/language, latest signed-in Chrome, Page tools and Stop sharing current page."
+        },
+        {
+          "title": "Google Chrome Help: desktop Gemini",
+          "url": "https://support.google.com/chrome/answer/16283624?hl=en",
+          "relevantEvidence": "Desktop-only Show Gemini at browser top visibility control and multi-tab context; do not transfer to mobile."
+        },
+        {
+          "title": "Chrome Android toolbar settings",
+          "url": "https://support.google.com/chrome/answer/14835450?co=GENIE.Platform%3DAndroid&hl=en",
+          "relevantEvidence": "Generic toolbar shortcut control and available choices; Ask Gemini is not on documented selectable shortcut list."
+        }
+      ],
+      "publicReaderSignals": [
+        {
+          "title": "Chrome Community: disable cumbersome features",
+          "url": "https://support.google.com/chrome/thread/466551806/disabling-cumbersome-features?hl=en",
+          "publishedOrUpdated": "2026-09-11",
+          "relevantEvidence": "iOS user asks if Ask Gemini toolbar item can be hidden; community response says no direct iOS hide control, not official documentation."
+        },
+        {
+          "title": "Reddit: remove Ask Gemini mobile control",
+          "url": "https://www.reddit.com/r/chrome/comments/1uxar5z/how_do_we_delete_the_ask_gemini_bar_on_the_new/",
+          "publishedOrUpdated": "2026-07-15",
+          "relevantEvidence": "Search result showed 237 votes and user asks how to remove Ask Gemini on Chrome mobile."
+        },
+        {
+          "title": "Reddit: Gemini in Chrome iOS context menu",
+          "url": "https://www.reddit.com/r/chrome/comments/1skhn54/gemini_in_ios_chrome_context_menu/",
+          "publishedOrUpdated": "2026-04-13",
+          "relevantEvidence": "Search result showed 11 votes and user complains about changed iOS context-menu placement."
+        },
+        {
+          "title": "Reddit: remove Ask Gemini iPhone",
+          "url": "https://www.reddit.com/r/chrome/comments/1x2f86c/how_to_remove_ask_gemini_from_chrome_mobile_for/",
+          "publishedOrUpdated": "2026-10-10",
+          "relevantEvidence": "User asks about hiding Ask Gemini on iPhone; anecdotal."
+        }
+      ],
+      "competitors": [
+        {
+          "title": "Android Central: Gemini in Chrome rollout",
+          "url": "https://www.androidcentral.com/apps-software/chromes-ai-assistant-finally-breaks-out-of-the-us",
+          "publishedOrUpdated": "2026-03-11",
+          "relevantEvidence": "Reports rollout and platform differences."
+        },
+        {
+          "title": "Tom's Guide: Chrome Android page-to-podcast",
+          "url": "https://www.tomsguide.com/computing/browsers/chrome-can-turn-any-webpage-into-an-ai-podcast-heres-how-to-do-it",
+          "publishedOrUpdated": "2025-12-08",
+          "relevantEvidence": "Android page-audio workflow; not treated as the same feature."
+        },
+        {
+          "title": "TechRadar: Chrome Gemini Skills",
+          "url": "https://www.techradar.com/ai-platforms-assistants/i-tried-chromes-new-ai-skills-feature-and-its-like-a-mini-toolkit-of-ai-shortcuts",
+          "publishedOrUpdated": "2026-04-20",
+          "relevantEvidence": "Desktop Skills feature coverage, used as a comparator, not mobile instructions."
+        },
+        {
+          "title": "Google Chrome Community: mobile hide control question",
+          "url": "https://support.google.com/chrome/thread/466551806/disabling-cumbersome-features?hl=en",
+          "publishedOrUpdated": "2026-09-11",
+          "relevantEvidence": "User question and non-authoritative community reply."
+        }
+      ],
+      "existingOwnerCheck": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "gemini-auto-browse-local-vs-remote",
+          "ai-browser-tab-access-permissions",
+          "gemini-in-chrome-vs-copilot-in-edge"
+        ],
+        "reason": "Scope limited to mobile OS-specific support, UI placement and page sharing; excludes Auto Browse eligibility, desktop permission troubleshooting and product comparison."
+      },
+      "originalGain": "OS-specific requirements and controls, differentiates stopping page share from hiding the control, and accurately states that mobile hide settings are not documented in reviewed official help. No flags or OS-assistant workaround."
+    }
+  ],
+  "limits": [
+    "Public forum posts are evidence of specific reader problems, not site traffic or search volume.",
+    "No direct product-session hands-on testing was performed; product steps are documentation-based and date-bound.",
+    "No rank, keyword volume, conversion, demand estimate, or BrowserHub traffic result is claimed.",
+    "Current UI labels can vary by platform, account, release and rollout; source facts are date-scoped."
+  ],
+  "attemptMetadata": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "reasoningEffort": "high",
+      "modelEffective": null,
+      "attempts": 1,
+      "selectionSource": "human_task",
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "result": "Research, source verification, bilingual drafting and integration underway; no model identifier was reported by the execution environment."
+        }
+      ],
+      "escalationReason": null
+    },
+    "reviewer": {
+      "modelRequested": "gpt-6.1-sol",
+      "reasoningEffort": "high",
+      "modelEffective": null,
+      "independentContext": true,
+      "selectionSource": "role_default",
+      "status": "topic gate reviewed; draft review pending"
+    }
+  },
+  "recoveryEvidence": {
+    "role": "executor_recovery",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffortRequested": "xhigh",
+    "reasoningEffortEffective": null,
+    "attempt": 4,
+    "escalationBasis": "Three distinct unsuccessful Luna recovery approaches; parent explicitly delegated recovery under standing MODEL-ROLES escalation instructions.",
+    "method": "Bounded decoding of escaped final-body and next-object metadata, private TypeScript parse before edits, then object serialization. Original recovered prose preserved privately.",
+    "primarySourcesReopened": [
+      "https://www.diabrowser.com/changelog/mac/1-0-1",
+      "https://www.diabrowser.com/changelog/mac/1-2-0",
+      "https://www.perplexity.ai/en-GB/hub/products/projects",
+      "https://brave.com/leo/",
+      "https://support.google.com/chrome/answer/16283624?co=GENIE.Platform%3DAndroid&hl=en",
+      "https://support.google.com/chrome/answer/16283624?co=GENIE.Platform%3DiOS&hl=en",
+      "https://www.perplexity.ai/en-GB/hub/legal/self-serve-data-options",
+      "https://www.perplexity.ai/comet",
+      "https://www.perplexity.ai/en-GB/hub/products/portable-computer"
+    ],
+    "handsOnProductTesting": false
+  }
+}

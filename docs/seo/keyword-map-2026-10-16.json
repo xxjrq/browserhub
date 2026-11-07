@@ -6812,6 +6812,221 @@
         "28day": "2026-12-04"
       },
       "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-07",
+      "sourceRecord": "docs/seo/research-2026-11-07.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-14",
+        "14day": "2026-11-21",
+        "28day": "2026-12-05"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:dia-skills-create-edit-reuse",
+      "primaryKeyword": {
+        "en": "Dia Skills create edit and reuse workflow",
+        "zh-CN": "Dia Skills 创建、编辑和复用"
+      },
+      "intent": "How to create, inspect, edit and reuse Dia Skills across Mac and Windows versions, and diagnose a missing or prompt-only Skill without copying an obsolete menu path.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/dia-skills-create-edit-reuse/",
+        "https://browserhub.co/zh-cn/guides/dia-skills-create-edit-reuse/"
+      ],
+      "demandEvidence": "Dia update notes, TechCrunch, PiunikaWeb and Dia community questions; public product coverage and user reports, not search volume.",
+      "originalGain": "Version-specific workflow: distinguish Nov 5 Mac/Windows releases from the October 15 Windows Skills release; provide a scoped reusable prompt, review/edit checklist and missing-Skill diagnostic. No hands-on claim.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-query-shortcuts",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Version-specific workflow: distinguish Nov 5 Mac/Windows releases from the October 15 Windows Skills release; provide a scoped reusable prompt, review/edit checklist and missing-Skill diagnostic. No hands-on claim."
+      },
+      "currentPrimarySource": "https://www.diabrowser.com/changelog/windows/1-2-0"
+    },
+    {
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-07",
+      "sourceRecord": "docs/seo/research-2026-11-07.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-14",
+        "14day": "2026-11-21",
+        "28day": "2026-12-05"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:comet-assistant-history-data-controls",
+      "primaryKeyword": {
+        "en": "Comet Assistant conversation history deletion and account data",
+        "zh-CN": "Comet Assistant 对话历史与账号数据删除"
+      },
+      "intent": "Choose the correct deletion or export control for local Comet browser data, Perplexity Library threads, account exports and account deletion; keep the data layers separate.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-assistant-history-data-controls/",
+        "https://browserhub.co/zh-cn/guides/comet-assistant-history-data-controls/"
+      ],
+      "demandEvidence": "Perplexity community bulk-deletion request and dated Reddit reports about mixed Assistant/search history and Comet thread cleanup; problem reports are not usage measurement.",
+      "originalGain": "Layer-specific instructions for local browsing data, individual/all Library threads, account export and account deletion, plus the difference between these controls. Uses current help state; bulk delete is now documented.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-import-export-vs-sync",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Layer-specific instructions for local browsing data, individual/all Library threads, account export and account deletion, plus the difference between these controls. Uses current help state; bulk delete is now documented."
+      },
+      "currentPrimarySource": "https://www.perplexity.ai/en-GB/hub/legal/self-serve-data-options"
+    },
+    {
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-07",
+      "sourceRecord": "docs/seo/research-2026-11-07.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-14",
+        "14day": "2026-11-21",
+        "28day": "2026-12-05"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:perplexity-comet-google-drive-connector",
+      "primaryKeyword": {
+        "en": "Comet Google Drive connector find files and diagnose failures",
+        "zh-CN": "Comet Google Drive 连接器查找文件与故障排查"
+      },
+      "intent": "Connect the intended Google account, select Drive in the relevant Perplexity chat or Project, diagnose a connected-but-empty picker across browsers, and revoke access at the right layer.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/perplexity-comet-google-drive-connector/",
+        "https://browserhub.co/zh-cn/guides/perplexity-comet-google-drive-connector/"
+      ],
+      "demandEvidence": "Perplexity forum case reports successful OAuth but empty/closing Drive picker across Comet, Chrome and Safari; corroborating Reddit posts about connector errors and permission-scope confusion. Anecdotal, not an outage claim.",
+      "originalGain": "A controlled cross-browser diagnostic, account/Project source selection, and separate Perplexity connector versus Google third-party revocation steps. Scope kept to Drive; Gmail action permissions not generalized.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-meeting-prep-brief",
+          "comet-assistant-history-data-controls"
+        ],
+        "distinctiveCoverage": "A controlled cross-browser diagnostic, account/Project source selection, and separate Perplexity connector versus Google third-party revocation steps. Scope kept to Drive; Gmail action permissions not generalized."
+      },
+      "currentPrimarySource": "https://www.perplexity.ai/en-GB/hub/products/projects"
+    },
+    {
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-07",
+      "sourceRecord": "docs/seo/research-2026-11-07.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-14",
+        "14day": "2026-11-21",
+        "28day": "2026-12-05"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:comet-linux-browser-vs-local-computer",
+      "primaryKeyword": {
+        "en": "Perplexity Comet browser Linux native support vs Portable Computer",
+        "zh-CN": "Perplexity Comet Linux 浏览器与 Portable Computer 区别"
+      },
+      "intent": "Determine whether a Linux user needs the Comet browser, Perplexity web app, another Linux browser with AI, or Portable Computer; distinguish official platform listings from unsupported community packages.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-linux-browser-vs-local-computer/",
+        "https://browserhub.co/zh-cn/guides/comet-linux-browser-vs-local-computer/"
+      ],
+      "demandEvidence": "Linux availability questions in Perplexity Reddit communities and 2026 Comet review/catalog pages still marking the native browser platform unclear; older posts are treated as historical reader signals only.",
+      "originalGain": "Current dated product-page scope plus new Linux Portable Computer distinction, native-vs-web decision path and hardware-boundary checks. No absolute claim that Comet can never support Linux.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-vs-dia",
+          "comet-import-export-vs-sync"
+        ],
+        "distinctiveCoverage": "Current dated product-page scope plus new Linux Portable Computer distinction, native-vs-web decision path and hardware-boundary checks. No absolute claim that Comet can never support Linux."
+      },
+      "currentPrimarySource": "https://www.perplexity.ai/comet"
+    },
+    {
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-07",
+      "sourceRecord": "docs/seo/research-2026-11-07.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-14",
+        "14day": "2026-11-21",
+        "28day": "2026-12-05"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:gemini-in-chrome-mobile-surfaces",
+      "primaryKeyword": {
+        "en": "Gemini in Chrome Android iPhone availability and mobile controls",
+        "zh-CN": "Chrome Gemini 在 Android 与 iPhone 的可用性和控制项"
+      },
+      "intent": "Compare OS-specific requirements and Page tools/Ask Gemini surfaces, separate stopping page sharing from hiding an entry, and avoid undocumented flag recipes.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/gemini-in-chrome-mobile-surfaces/",
+        "https://browserhub.co/zh-cn/guides/gemini-in-chrome-mobile-surfaces/"
+      ],
+      "demandEvidence": "Google Chrome Community asks how to disable the iOS control; Reddit mobile users ask about removing Ask Gemini and its placement. Public complaint signals, not measured demand.",
+      "originalGain": "OS-specific Google help matrix, current-page sharing controls, documented desktop-only hide setting, Android toolbar shortcut distinction, and a carefully scoped answer where no mobile hide option is documented.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "gemini-auto-browse-local-vs-remote",
+          "ai-browser-tab-access-permissions"
+        ],
+        "distinctiveCoverage": "OS-specific Google help matrix, current-page sharing controls, documented desktop-only hide setting, Android toolbar shortcut distinction, and a carefully scoped answer where no mobile hide option is documented."
+      },
+      "currentPrimarySource": "https://support.google.com/chrome/answer/16283624?co=GENIE.Platform%3DAndroid&hl=en"
     }
   ],
   "futureCandidates": [
@@ -6889,6 +7104,22 @@
     "oldEnhancements": [],
     "publicationEvidence": "Pending independent review and workflow receipt; not yet published.",
     "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
+  },
+  "latestContentCycle": {
+    "date": "2026-11-07",
+    "cycleId": "content-2026-11-07",
+    "newTopics": [
+      "dia-skills-create-edit-reuse",
+      "comet-assistant-history-data-controls",
+      "perplexity-comet-google-drive-connector",
+      "comet-linux-browser-vs-local-computer",
+      "gemini-in-chrome-mobile-surfaces"
+    ],
+    "newTopicCount": 5,
+    "completeEditions": 10,
+    "oldEnhancements": [],
+    "publicationEvidence": "Drafts prepared for independent review; no publication or traffic result claimed.",
+    "sourceRecord": "docs/seo/research-2026-11-07.json"
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",
