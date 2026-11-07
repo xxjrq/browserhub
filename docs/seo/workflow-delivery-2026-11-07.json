@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-07",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-07",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "10594578a2d590a6e3461d2165d62312a43fcb81a51ccdd235a2775cfb562f32",
+  "commit": "4c8328a76b681d353c24057b11b4fd192761531a",
+  "release": "/opt/browsertools/releases/20261107-120419",
+  "publicationReceiptAt": "2026-11-07T04:05:00.517Z",
+  "completedAt": "2026-11-07T04:05:03.226Z",
+  "newTopics": [
+    "dia-skills-create-edit-reuse",
+    "comet-assistant-history-data-controls",
+    "perplexity-comet-google-drive-connector",
+    "comet-linux-browser-vs-local-computer",
+    "gemini-in-chrome-mobile-surfaces"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/",
+    "https://browserhub.co/en/guides/dia-skills-create-edit-reuse/",
+    "https://browserhub.co/zh-cn/guides/dia-skills-create-edit-reuse/",
+    "https://browserhub.co/en/guides/comet-assistant-history-data-controls/",
+    "https://browserhub.co/zh-cn/guides/comet-assistant-history-data-controls/",
+    "https://browserhub.co/en/guides/perplexity-comet-google-drive-connector/",
+    "https://browserhub.co/zh-cn/guides/perplexity-comet-google-drive-connector/",
+    "https://browserhub.co/en/guides/comet-linux-browser-vs-local-computer/",
+    "https://browserhub.co/zh-cn/guides/comet-linux-browser-vs-local-computer/",
+    "https://browserhub.co/en/guides/gemini-in-chrome-mobile-surfaces/",
+    "https://browserhub.co/zh-cn/guides/gemini-in-chrome-mobile-surfaces/"
+  ],
+  "counting": "Five independent core AI-browser themes; English and Chinese editions count once. All 114 prior owners and 228 editions remain unchanged, including the November4 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-07.json"
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "role": "executor",
+      "recoveryRole": "executor_recovery",
+      "modelRequested": "gpt-6.1-sol",
+      "reasoningEffort": "xhigh",
+      "reasoningEffortRequested": "xhigh",
+      "reasoningEffortEffective": null,
+      "modelEffective": null,
+      "attempts": 4,
+      "attempt": 4,
+      "selectionSource": "human_task",
+      "agent": "content_recovery_20261107",
+      "humanOverride": {
+        "roles": [
+          "executor"
+        ],
+        "model": "gpt-6.1-sol",
+        "reasoningEffort": "xhigh",
+        "originalRequest": "按项目角色配置显式分派：Luna 6执行，Sol 6.1独立审核，复杂架构及三次不同执行尝试仍未解决时Sol 6.1 xhigh；人工本次指定优先。",
+        "scope": "content-2026-11-07 recovery after three distinct unsuccessful Luna recovery attempts",
+        "source": "User standing heartbeat instructions, corroborated by project AGENTS.md and tools/workflows/model-roles.json"
+      },
+      "escalationReason": "Three distinct Luna recovery approaches did not restore valid TypeScript; parent explicitly delegated Sol 6.1 xhigh recovery under standing project MODEL-ROLES instructions.",
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "method": "Regex-converted body template literals ending in a backtick and object terminator into JSON-escaped quoted strings.",
+          "result": "Converted 48 bodies; 10 malformed final body terminators remained; TypeScript transpile diagnostics still reported syntax errors.",
+          "modelRequested": "gpt-6-luna",
+          "modelEffective": null,
+          "reasoningEffort": "high"
+        },
+        {
+          "attempt": 2,
+          "method": "Applied a second broad regex to bodies ending with a double quote terminator.",
+          "result": "Regex crossed object boundaries and corrupted nine final body fields, swallowing the following first section. Exact broken bytes preserved in recovery/ai-cycle-broken.ts. Do not treat module as valid.",
+          "modelRequested": "gpt-6-luna",
+          "modelEffective": null,
+          "reasoningEffort": "high"
+        },
+        {
+          "attempt": 3,
+          "method": "Prepared explicit line-by-line replacement for damaged final section bodies and insertion of missing first sections.",
+          "result": "Script aborted before writing because an expected heading target was absent; no module changes from this attempt.",
+          "modelRequested": "gpt-6-luna",
+          "modelEffective": null,
+          "reasoningEffort": "high"
+        },
+        {
+          "attempt": 4,
+          "method": "Decode only the exact escaped final-body delimiter and bounded metadata; parse private recovery before making editorial changes; serialize objects to valid TypeScript.",
+          "result": "Recovered all 10 final bodies and 9 swallowed first sections; 58 sections and 30 FAQs load. Applied factual fixes and decision tables; private syntax and visible-text checks passed.",
+          "modelRequested": "gpt-6.1-sol",
+          "modelEffective": null,
+          "reasoningEffort": "xhigh"
+        }
+      ],
+      "previousExecutor": {
+        "role": "research_and_initial_draft_executor",
+        "modelRequested": "gpt-6-luna",
+        "modelEffective": null,
+        "reasoningEffort": "high",
+        "selectionSource": "role_default",
+        "agent": "content_execution_20261107",
+        "recoveryAttempts": 3,
+        "result": "Drafted and integrated five topics; syntax recovery escalated after three unsuccessful approaches."
+      },
+      "attemptMeaning": "Recovery attempt ordinal; initial research/drafting is recorded separately."
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "8febdcf89527ff54b989327287c2a99531f8cbe5d2caaee5dfc1f18060df2a84"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "9877352377abae20774ca6eec1c965e65874a3a92f4e4b25b15f477e167e2f6f"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1409,
+      "sitemapUrls": 1106,
+      "internalLinks": 48554,
+      "alternateLinks": 8015,
+      "fallbackPages": 60,
+      "editorialGuides": 238,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-07T04:00:55.254Z",
+      "status": "passed",
+      "existingTopicsPreserved": 114,
+      "existingTopicsUnchanged": 114,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 119,
+      "completeEditions": 238,
+      "newTopics": 5,
+      "keywordRows": 185,
+      "details": [
+        {
+          "slug": "dia-skills-create-edit-reuse",
+          "locale": "en",
+          "sections": 5,
+          "faq": 3
+        },
+        {
+          "slug": "dia-skills-create-edit-reuse",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 3
+        },
+        {
+          "slug": "comet-assistant-history-data-controls",
+          "locale": "en",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "comet-assistant-history-data-controls",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "perplexity-comet-google-drive-connector",
+          "locale": "en",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "perplexity-comet-google-drive-connector",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "comet-linux-browser-vs-local-computer",
+          "locale": "en",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "comet-linux-browser-vs-local-computer",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "gemini-in-chrome-mobile-surfaces",
+          "locale": "en",
+          "sections": 6,
+          "faq": 3
+        },
+        {
+          "slug": "gemini-in-chrome-mobile-surfaces",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 3
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-07T04:05:15.331641+00:00",
+      "release": "/opt/browsertools/releases/20261107-120419",
+      "expectedRelease": "/opt/browsertools/releases/20261107-120419",
+      "exitCode": 0,
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-07T04:05:03.192Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dia-skills-create-edit-reuse/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dia-skills-create-edit-reuse/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dia-skills-create-edit-reuse/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dia-skills-create-edit-reuse/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-assistant-history-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-assistant-history-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-assistant-history-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-assistant-history-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/perplexity-comet-google-drive-connector/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/perplexity-comet-google-drive-connector/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/perplexity-comet-google-drive-connector/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/perplexity-comet-google-drive-connector/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-linux-browser-vs-local-computer/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-linux-browser-vs-local-computer/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-linux-browser-vs-local-computer/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-linux-browser-vs-local-computer/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/gemini-in-chrome-mobile-surfaces/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/gemini-in-chrome-mobile-surfaces/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/gemini-in-chrome-mobile-surfaces/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/gemini-in-chrome-mobile-surfaces/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-07T04:05:00.517Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-14T04:05:00.517000+00:00",
+      "14day": "2026-11-21T04:05:00.517000+00:00",
+      "28day": "2026-12-05T04:05:00.517000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-07",
+        "end": "2026-11-13",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-14T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-07",
+        "end": "2026-11-20",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-21T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-07",
+        "end": "2026-12-04",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-05T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "The November 5 AI-citation baseline remains the latest sample. Publication effects are pending report availability.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
