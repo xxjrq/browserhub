@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-08",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-08",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "ca7a0216857bd2d15d634ef03aa7980bf98244eb3d9d7d6e3dd08beddc00861a",
+  "commit": "cc317319f928b26a0558971af504f17bfdb2a64a",
+  "release": "/opt/browsertools/releases/20261108-115309",
+  "publicationReceiptAt": "2026-11-08T03:53:40.838Z",
+  "completedAt": "2026-11-08T03:53:43.517Z",
+  "newTopics": [
+    "gemini-chrome-auto-browse-no-action",
+    "gemini-chrome-skills-create-manage",
+    "comet-control-browser-missing",
+    "perplexity-comet-usage-limits",
+    "opera-neon-choose-ai-agent"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/",
+    "https://browserhub.co/en/guides/gemini-chrome-auto-browse-no-action/",
+    "https://browserhub.co/zh-cn/guides/gemini-chrome-auto-browse-no-action/",
+    "https://browserhub.co/en/guides/gemini-chrome-skills-create-manage/",
+    "https://browserhub.co/zh-cn/guides/gemini-chrome-skills-create-manage/",
+    "https://browserhub.co/en/guides/comet-control-browser-missing/",
+    "https://browserhub.co/zh-cn/guides/comet-control-browser-missing/",
+    "https://browserhub.co/en/guides/perplexity-comet-usage-limits/",
+    "https://browserhub.co/zh-cn/guides/perplexity-comet-usage-limits/",
+    "https://browserhub.co/en/guides/opera-neon-choose-ai-agent/",
+    "https://browserhub.co/zh-cn/guides/opera-neon-choose-ai-agent/"
+  ],
+  "counting": "Five independent core AI-browser themes; English and Chinese editions count once. All 119 prior owners and 238 editions remain unchanged, including the November4 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-08.json"
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "role": "executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffortRequested": "high",
+      "reasoningEffortEffective": null,
+      "attempts": 1,
+      "attemptHistory": [
+        {
+          "attempt": 1,
+          "method": "Public official documentation and dated reader-page research; Markdown drafts parsed into structured copy objects and serialized with JSON.stringify into TypeScript.",
+          "result": "5 new themes and 10 locale editions integrated; serialized TS diagnostics=0, project tsc --noEmit passed, and data-shape/visible-char/H2/FAQ/source checks passed. Await independent editorial review; CI and publication are outside this executor.",
+          "modelRequested": "gpt-6-luna",
+          "modelEffective": null,
+          "reasoningEffort": "high"
+        }
+      ],
+      "reasoningEffort": "high",
+      "selectionSource": "role_default",
+      "agent": "content_execution_20261108",
+      "escalationReason": null,
+      "preCiRevisionRounds": [
+        {
+          "round": 1,
+          "trigger": "Independent pre-read of actual seven files and ten editions",
+          "corrections": [
+            "Literal Markdown headings and raw backticks removed",
+            "Current Neon Chat/artifact facts separated from dated Make mode",
+            "Computer/credit effort conditions and source scopes corrected",
+            "Chrome Skills feature-specific eligibility and URLs corrected",
+            "Unverified Community body/date details and editorial-process prose removed"
+          ],
+          "stage": "before any root preflight CI or frozen approval"
+        },
+        {
+          "round": 2,
+          "trigger": "Independent reread of first revision",
+          "corrections": [
+            "False-completion warning polarity corrected in both languages",
+            "Chrome 13/applicable-country eligibility separated from Gemini Apps adult-only transition",
+            "Residual editorial demand sentence and Opera source-title attribution corrected"
+          ],
+          "rootCorrection": "An earlier root instruction had incorrectly specified an age-18 boundary; the author was directed back to current feature-specific Chrome documentation.",
+          "stage": "before any root preflight CI or frozen approval"
+        },
+        {
+          "round": 3,
+          "trigger": "Targeted independent verification of final Chinese conditions",
+          "corrections": [
+            "Quota Light-only condition limited to accounts without credits; accounts with credits can choose any effort",
+            "Actual serialized Chinese Skills eligibility and region prerequisites corrected; residual editorial search-volume sentence removed"
+          ],
+          "stage": "Before root preflight CI and frozen approval"
+        },
+        {
+          "round": 4,
+          "trigger": "Final actual-output HTML reread identified a Comet product-selection link description that overstated linked guide scope",
+          "corrections": [
+            "Relabeled EN/ZH Comet-versus-Gemini link as product selection and kept Gemini verification link explicitly general, not Computer/Comet-specific"
+          ],
+          "stage": "Before root reruns CI; no additional content/source/structure changes"
+        }
+      ],
+      "initialTechnicalChecksScope": "Syntax, data shape, visible-copy size and source presence; independent editorial preread found additional formatting and factual issues, recorded above."
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "c25ae1d0960647ecf3146bedc0c1b4f01f6f4755cbf0ed5163bcffe410854200"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 2,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "c66886ef87fb18a7b12f4ac211b21270aa70de3b3eba6b277c1d35815480954d"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1424,
+      "sitemapUrls": 1116,
+      "internalLinks": 49153,
+      "alternateLinks": 8060,
+      "fallbackPages": 60,
+      "editorialGuides": 248,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-08T03:51:03.628Z",
+      "status": "passed",
+      "existingTopicsPreserved": 119,
+      "existingTopicsUnchanged": 119,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 124,
+      "completeEditions": 248,
+      "newTopics": 5,
+      "keywordRows": 190,
+      "details": [
+        {
+          "slug": "gemini-chrome-auto-browse-no-action",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "gemini-chrome-auto-browse-no-action",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "gemini-chrome-skills-create-manage",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "gemini-chrome-skills-create-manage",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "comet-control-browser-missing",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "comet-control-browser-missing",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "perplexity-comet-usage-limits",
+          "locale": "en",
+          "sections": 5,
+          "faq": 5
+        },
+        {
+          "slug": "perplexity-comet-usage-limits",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 5
+        },
+        {
+          "slug": "opera-neon-choose-ai-agent",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "opera-neon-choose-ai-agent",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-08T03:54:05.549371+00:00",
+      "release": "/opt/browsertools/releases/20261108-115309",
+      "expectedRelease": "/opt/browsertools/releases/20261108-115309",
+      "exitCode": 0,
+      "matches": true
+    },
+    "preflightRevision": {
+      "priorAttempt": 1,
+      "priorExitCode": 0,
+      "reason": "Final independent HTML review required two bounded internal-link description corrections; the second CI covers the corrected final bytes.",
+      "priorLogSha256": "5d4ca7472cd573181f9b903db0120cf9fe6fa5d872fdcdefdfb28427eee18cd2"
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-08T03:53:43.485Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/gemini-chrome-auto-browse-no-action/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/gemini-chrome-auto-browse-no-action/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/gemini-chrome-auto-browse-no-action/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/gemini-chrome-auto-browse-no-action/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/gemini-chrome-skills-create-manage/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/gemini-chrome-skills-create-manage/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/gemini-chrome-skills-create-manage/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/gemini-chrome-skills-create-manage/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-control-browser-missing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-control-browser-missing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-control-browser-missing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-control-browser-missing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/perplexity-comet-usage-limits/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/perplexity-comet-usage-limits/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/perplexity-comet-usage-limits/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/perplexity-comet-usage-limits/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/opera-neon-choose-ai-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/opera-neon-choose-ai-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/opera-neon-choose-ai-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/opera-neon-choose-ai-agent/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-08T03:53:40.838Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-15T03:53:40.838000+00:00",
+      "14day": "2026-11-22T03:53:40.838000+00:00",
+      "28day": "2026-12-06T03:53:40.838000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-08",
+        "end": "2026-11-14",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-15T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-08",
+        "end": "2026-11-21",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-22T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-08",
+        "end": "2026-12-05",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-06T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "The November 5 AI-citation baseline remains the latest sample. Publication effects are pending report availability.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
