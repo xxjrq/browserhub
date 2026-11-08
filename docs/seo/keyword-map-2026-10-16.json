@@ -7027,6 +7027,226 @@
         "distinctiveCoverage": "OS-specific Google help matrix, current-page sharing controls, documented desktop-only hide setting, Android toolbar shortcut distinction, and a carefully scoped answer where no mobile hide option is documented."
       },
       "currentPrimarySource": "https://support.google.com/chrome/answer/16283624?co=GENIE.Platform%3DAndroid&hl=en"
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-08",
+      "sourceRecord": "docs/seo/research-2026-11-08.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-15",
+        "14day": "2026-11-22",
+        "28day": "2026-12-06"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:gemini-chrome-auto-browse-no-action",
+      "primaryKeyword": {
+        "en": "Gemini in Chrome Auto Browse says task finished but page did not change",
+        "zh-CN": "Gemini in Chrome Auto Browse 显示完成但网页未变化"
+      },
+      "intent": "Diagnose a Gemini Auto Browse run that reports completion without an observable target-page state change; verify the task tab, page and side effects before a retry.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/gemini-chrome-auto-browse-no-action/",
+        "https://browserhub.co/zh-cn/guides/gemini-chrome-auto-browse-no-action/"
+      ],
+      "demandEvidence": "Current Google Help explicitly warns to confirm when Auto Browse says a task is done but it is not. A Chrome Help Community thread has a related title, but its body was not independently readable; no outage or failure rate is claimed.",
+      "originalGain": "Adds a product-specific result reconciliation checklist: confirm task tab and site state, distinguish user-intervention pause from no-op, avoid duplicate consequential actions, and capture useful redacted evidence. The existing local-vs-remote owner already covers lifecycle, plan review, eligibility and takeover; this page does not repeat those sections.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "gemini-auto-browse-local-vs-remote",
+          "browser-agent-form-submission",
+          "browser-agent-diagnose-blocked-clicks"
+        ],
+        "distinctiveCoverage": "Adds a product-specific result reconciliation checklist: confirm task tab and site state, distinguish user-intervention pause from no-op, avoid duplicate consequential actions, and capture useful redacted evidence. The existing local-vs-remote owner already covers lifecycle, plan review, eligibility and takeover; this page does not repeat those sections."
+      },
+      "currentPrimarySource": "https://support.google.com/chrome/answer/16821166?hl=en-GB"
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-08",
+      "sourceRecord": "docs/seo/research-2026-11-08.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-15",
+        "14day": "2026-11-22",
+        "28day": "2026-12-06"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:gemini-chrome-skills-create-manage",
+      "primaryKeyword": {
+        "en": "Gemini in Chrome Skills create edit and reuse",
+        "zh-CN": "Gemini in Chrome Skills 的创建、编辑与复用"
+      },
+      "intent": "Create, edit, invoke and verify a reusable browser prompt in Gemini in Chrome; diagnose a missing Skills menu using the current version, rollout and managed-account scope.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/gemini-chrome-skills-create-manage/",
+        "https://browserhub.co/zh-cn/guides/gemini-chrome-skills-create-manage/"
+      ],
+      "demandEvidence": "Current Google Help gives a complete workflow and rollout requirements; recent feature explainers discuss repeated prompts and saved Skills. These are product documentation and publication signals, not measured query volume or search demand.",
+      "originalGain": "Adds a page-aware prompt test, repeatable output checks and a current missing-menu path with Chrome 147, gradual rollout and managed-account boundaries; clearly separates Chrome Skills from Gemini Apps Skills, Dia Skills and Comet shortcuts.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "dia-skills-create-edit-reuse",
+          "comet-query-shortcuts",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Adds a page-aware prompt test, repeatable output checks and a current missing-menu path with Chrome 147, gradual rollout and managed-account boundaries; clearly separates Chrome Skills from Gemini Apps Skills, Dia Skills and Comet shortcuts."
+      },
+      "currentPrimarySource": "https://support.google.com/gemini/answer/16988996?hl=en"
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-08",
+      "sourceRecord": "docs/seo/research-2026-11-08.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-15",
+        "14day": "2026-11-22",
+        "28day": "2026-12-06"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:comet-control-browser-missing",
+      "primaryKeyword": {
+        "en": "Comet Control Browser missing: check Assistant and Computer browser routes",
+        "zh-CN": "Comet Control Browser 入口缺失：核对 Assistant 与 Computer 路径"
+      },
+      "intent": "Troubleshoot a missing browser-control option by distinguishing Comet Assistant from Perplexity Computer and checking the current installed-Comet and Mac extension permission routes.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-control-browser-missing/",
+        "https://browserhub.co/zh-cn/guides/comet-control-browser-missing/"
+      ],
+      "demandEvidence": "Dated Sep–Oct 2026 Reddit threads ask whether Comet browser control disappeared or moved, with conflicting user reports; paired with current Perplexity help updated Nov 6 and changelog. Reports indicate confusion, not a universal migration.",
+      "originalGain": "Provides a route-by-surface matrix: Comet Assistant, Mac desktop app with installed Comet, and Mac Chromium extension; includes permission and version checks and explicitly avoids claiming universal removal or treating the Mac extension as a Windows path.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-extension-compatibility",
+          "comet-query-shortcuts",
+          "comet-vs-gemini-in-chrome"
+        ],
+        "distinctiveCoverage": "Provides a route-by-surface matrix: Comet Assistant, Mac desktop app with installed Comet, and Mac Chromium extension; includes permission and version checks and explicitly avoids claiming universal removal or treating the Mac extension as a Windows path."
+      },
+      "currentPrimarySource": "https://www.perplexity.ai/help-center/en/articles/19800006-work-with-browsers-and-apps"
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-08",
+      "sourceRecord": "docs/seo/research-2026-11-08.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-15",
+        "14day": "2026-11-22",
+        "28day": "2026-12-06"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:perplexity-comet-usage-limits",
+      "primaryKeyword": {
+        "en": "Perplexity Comet usage limits: Search vs Work and Computer credits",
+        "zh-CN": "Perplexity Comet 使用限额：Search、Work 与 Computer 积分"
+      },
+      "intent": "Explain why Comet Search, Comet Assistant Search and Assistant Work show different usage behavior, and how to verify included weekly Computer usage, credits and reset information in the account Usage page.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/perplexity-comet-usage-limits/",
+        "https://browserhub.co/zh-cn/guides/perplexity-comet-usage-limits/"
+      ],
+      "demandEvidence": "Recent Reddit questions ask for actual Comet task limits, limit resets and apparent Search/Comet counter overlap. The current Perplexity credit help page (modified Nov 4, 2026) documents separate Search/Work handling and Usage diagnostics; community posts are not plan limits.",
+      "originalGain": "Uses current mode-specific source: Search and Assistant Search do not consume Computer credits; Work runs Computer; eligible paid Consumer Pro may show weekly included usage with an account-specific reset date. It avoids inferring a fixed personal cap or using old monthly-average plan labels as a reset clock.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-control-browser-missing",
+          "comet-query-shortcuts",
+          "comet-assistant-history-data-controls"
+        ],
+        "distinctiveCoverage": "Uses current mode-specific source: Search and Assistant Search do not consume Computer credits; Work runs Computer; eligible paid Consumer Pro may show weekly included usage with an account-specific reset date. It avoids inferring a fixed personal cap or using old monthly-average plan labels as a reset clock."
+      },
+      "currentPrimarySource": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity"
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-08",
+      "sourceRecord": "docs/seo/research-2026-11-08.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-15",
+        "14day": "2026-11-22",
+        "28day": "2026-12-06"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:opera-neon-choose-ai-agent",
+      "primaryKeyword": {
+        "en": "Opera Neon choose Chat, Do, Make or Research agent",
+        "zh-CN": "Opera Neon 如何选择 Chat、Do、Make 或 Research Agent"
+      },
+      "intent": "Choose whether to keep a prompt in Neon Chat or accept a suggestion to switch to Do, Make or a Research agent; understand which interface opens and what remains in the earlier conversation.",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/opera-neon-choose-ai-agent/",
+        "https://browserhub.co/zh-cn/guides/opera-neon-choose-ai-agent/"
+      ],
+      "demandEvidence": "Opera’s Feb 2, 2026 Intelligent Mode post explicitly cites user uncertainty about which agent to use and describes suggestions; independent testing/interviews discuss mode differences. This is qualitative public product feedback, not search-volume evidence.",
+      "originalGain": "Turns the documented user-approved suggestion flow into a task-selection table, distinguishes recommendation from automatic execution, records Do/Make/One-Minute Research destination behavior and labels older hands-on problems as historical.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "opera-ai-page-content-permission",
+          "opera-browser-connector-chatgpt-permissions",
+          "comet-vs-dia"
+        ],
+        "distinctiveCoverage": "Turns the documented user-approved suggestion flow into a task-selection table, distinguishes recommendation from automatic execution, records Do/Make/One-Minute Research destination behavior and labels older hands-on problems as historical."
+      },
+      "currentPrimarySource": "https://blogs.opera.com/news/2026/02/opera-neon-ai-browser-intelligent-mode/"
     }
   ],
   "futureCandidates": [

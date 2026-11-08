@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-08",
+  "project": "BrowserHub",
+  "status": "topic-research-and-draft-prepared-for-independent-review",
+  "baseline": {
+    "guides": 119,
+    "guideEditions": 238,
+    "keywordRows": 185,
+    "gitHead": "bac54c2ac9d226bd5dc33b5f20ad84ee1f0f1633"
+  },
+  "measurement": {
+    "latestActualGscRead": "2026-11-04",
+    "availableGscDataThrough": "2026-11-01",
+    "weeklyReviewNext": "2026-11-09",
+    "performancePollPerformedToday": false,
+    "trafficOrSearchResultsClaimed": false
+  },
+  "selectionMethod": "Checked all 119 existing guide intent owners in the keyword map, then opened actual nearby guide bodies for Gemini Auto Browse, Dia Skills, Comet shortcuts/control and Opera AI. Read current official product documentation and public reader discussions/pages on 2026-11-08. Bilingual versions count once per theme. Three references were treated as research coverage, never as demand proof.",
+  "themes": [
+    {
+      "slug": "gemini-chrome-auto-browse-no-action",
+      "readerProblem": "Gemini in Chrome says Auto Browse completed a simple browser request, but the page remains unchanged. Reader needs a safe way to reconcile task and site state before retrying.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "gemini-auto-browse-local-vs-remote",
+          "browser-agent-form-submission",
+          "browser-agent-diagnose-blocked-clicks"
+        ],
+        "inspection": "The Nov 5 Auto Browse owner already documents eligibility, local/remote lifecycle, plan review, stop, takeover and resume. This article is restricted to failed outcome reconciliation and duplicate-side-effect prevention."
+      },
+      "primaryFacts": [
+        "Google Help current checked Nov 8: task tab/control status, page state, notifications, takeover/resume/stop; explicitly warns that Gemini may report a task as complete when it is not; feature eligibility varies.",
+        "Chrome Help Community has a thread titled “Gemini in Chrome cannot perform Auto Browse”; its body was not independently readable. Google Help, not that thread, grounds the documented false-completion warning."
+      ],
+      "sources": [
+        {
+          "url": "https://support.google.com/chrome/answer/16821166?hl=en-GB",
+          "type": "primary product help",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://support.google.com/chrome/a/answer/17030585?hl=en",
+          "type": "primary enterprise help",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://support.google.com/chrome/thread/425490329/gemini-in-chrome-cant-perform-auto-browse?hl=en",
+          "type": "public reader question (title only; body not independently readable)",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.techradar.com/ai-platforms-assistants/i-tried-gemini-spark-in-chrome-and-its-the-perfect-ai-for-handling-all-the-boring-bits-online",
+          "type": "independent hands-on coverage",
+          "observedOn": "2026-11-08"
+        }
+      ]
+    },
+    {
+      "slug": "gemini-chrome-skills-create-manage",
+      "readerProblem": "The user repeats the same browser prompt or cannot find Skills in Gemini in Chrome. They need a bounded reusable prompt and a current path to diagnose availability.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "dia-skills-create-edit-reuse",
+          "comet-query-shortcuts",
+          "ai-browser-research-source-verification"
+        ],
+        "inspection": "Opened actual Dia Skills and Comet Query Shortcuts bodies. Their saved prompt/Skill controls are other products; no existing Gemini in Chrome Skills intent owner."
+      },
+      "primaryFacts": [
+        "Google Help checked Nov 8: Chrome 147+, gradual rollout, English (United States) Chrome language, personal account age 13 or applicable country age, supported region, and managed-account administrator caveat; create/edit/copy/delete/reuse paths.",
+        "Gemini Apps Gems-to-Skills transition is a separate surface; not interchangeable with Chrome Skills."
+      ],
+      "sources": [
+        {
+          "url": "https://support.google.com/gemini/answer/16988996?hl=en",
+          "type": "primary current feature help",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/18560919",
+          "type": "primary Gemini Apps transition help",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.techradar.com/ai-platforms-assistants/i-tried-chromes-new-ai-skills-feature-and-its-like-a-mini-toolkit-of-ai-shortcuts",
+          "type": "independent feature walkthrough",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.androidcentral.com/apps-software/tired-of-repeating-ai-prompts-chromes-new-feature-handles-it-for-you",
+          "type": "independent feature explainer",
+          "observedOn": "2026-11-08"
+        }
+      ],
+      "demandLimit": "The articles and feature explanation document repeat-prompt utility and an active public product topic; they are qualitative evidence only, not an observed query or measured volume."
+    },
+    {
+      "slug": "comet-control-browser-missing",
+      "readerProblem": "Comet’s browser-control option is missing or the user sees differing Comet and Computer instructions. The next step depends on the surface and platform.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "comet-extension-compatibility",
+          "comet-query-shortcuts",
+          "comet-vs-gemini-in-chrome"
+        ],
+        "inspection": "Recent owners cover extension compatibility and keyboard shortcuts, not the Computer installed-browser permission route or missing control diagnosis."
+      },
+      "primaryFacts": [
+        "Perplexity Help Center modified Nov 6: Mac desktop app installs Comet; it requests local browser permission; no separate Comet connector needed before first use.",
+        "Oct changelog: Mac desktop app 26.38+ Chromium extension route, Settings > Connectors, Comet default if installed. Does not prove universal Assistant migration/removal or Windows extension support."
+      ],
+      "sources": [
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/19800006-work-with-browsers-and-apps",
+          "type": "primary current help",
+          "sourceDate": "2026-11-06",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.perplexity.ai/changelog/automations-inline-visualizations-and-gpt-6-1-sol",
+          "type": "primary product changelog",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/hub/blog/comet-assistant-puts-you-in-control",
+          "type": "primary Comet feature article",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1wbdxms/has_perplexity_removed_control_browser_what_other/",
+          "type": "dated user reports",
+          "sourceDate": "2026-09-09",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1x2qx8s/browser_control_in_comet_and_file_access_in_the/",
+          "type": "dated user report",
+          "sourceDate": "2026-10-10",
+          "observedOn": "2026-11-08"
+        }
+      ],
+      "demandLimit": "Community reports contain conflicting observations; they establish confusion in public discussion, not a universal product change or plan entitlement."
+    },
+    {
+      "slug": "perplexity-comet-usage-limits",
+      "readerProblem": "Comet usage or credit prompt appears and the user wants to know which allowance it refers to, whether Search is still usable, and where to see the account-specific reset.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "comet-control-browser-missing",
+          "comet-query-shortcuts",
+          "comet-assistant-history-data-controls"
+        ],
+        "inspection": "Existing Comet controls cover browser settings, query shortcuts and account-history data; no plan usage/credit intent owner."
+      },
+      "primaryFacts": [
+        "Perplexity Credits help modified Nov 4: Ask and Comet Assistant Search do not consume Computer credits; Work runs Computer.",
+        "Paid Consumer Pro weekly included usage is rollout dependent; Usage page must show Included in Pro. Cycle starts first use and displays next reset; not a general hard task count.",
+        "Included use, credits, bonus expiry, auto-refill and billing credits are separate account states."
+      ],
+      "sources": [
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity",
+          "type": "primary current credit help",
+          "sourceDate": "2026-11-04",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+          "type": "primary plan overview",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.reddit.com/r/PerplexityComet/comments/1snzxdp/what_are_the_actual_limits_for_comet_browser/",
+          "type": "dated user question",
+          "sourceDate": "2026-04-17",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.reddit.com/r/PerplexityComet/comments/1tgftrm/hit_usage_limit_on_perplexity_comet_browser/",
+          "type": "dated user report",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1v92neo/model_limits/",
+          "type": "dated user discussion",
+          "observedOn": "2026-11-08"
+        }
+      ],
+      "demandLimit": "Reddit posts ask about caps and resets but are not a source for account limits or reset rules; no unofficial endpoint or inferred cap used."
+    },
+    {
+      "slug": "opera-neon-choose-ai-agent",
+      "readerProblem": "The user is unsure whether to use Neon Chat, Do, Make or a Research agent, and wants to know whether accepting a suggestion executes automatically or changes the conversation.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "opera-ai-page-content-permission",
+          "opera-browser-connector-chatgpt-permissions",
+          "comet-vs-dia"
+        ],
+        "inspection": "Nov 6 Opera owners cover page-context privacy and external Browser Connector, not Opera Neon agent selection."
+      },
+      "primaryFacts": [
+        "Opera Feb 2 2026 Intelligent Mode documents user choice to accept/decline suggestions and the then-listed Do, Make and One-Minute Research destinations; Make behavior is dated, not asserted as current.",
+        "Current Opera FAQ checked Nov 8 describes Chat including creative outputs, Do, and Research modes; it does not list Make.",
+        "Independent older hands-on observations are dated; do not treat them as current feature guarantees."
+      ],
+      "sources": [
+        {
+          "url": "https://blogs.opera.com/news/2026/02/opera-neon-ai-browser-intelligent-mode/",
+          "type": "primary product update and explicit user confusion",
+          "sourceDate": "2026-02-02",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.operaneon.com/faq",
+          "type": "primary current feature FAQ",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://en.shiftdelete.net/how-do-ai-agents-work-we-asked-opera-about-opera-neon/",
+          "type": "independent interview",
+          "sourceDate": "2026-03-16",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://chrischinchilla.com/blog/2026/opera-neon/",
+          "type": "independent hands-on review",
+          "sourceDate": "2026-03-04",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.digitaltrends.com/computing/i-tried-a-operas-ai-browser-that-can-shop-book-and-even-apply-for-jobs-for-you-and-its-not-worth-it-just-yet/",
+          "type": "dated early-access review",
+          "sourceDate": "2025-10-26",
+          "observedOn": "2026-11-08"
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/opera-neon-is-now-available-to-the-public-heres-how-to-use-the-new-ai-browser",
+          "type": "independent product walkthrough",
+          "observedOn": "2026-11-08"
+        }
+      ],
+      "demandLimit": "Opera’s own post explicitly reports user confusion as the reason for the mode-suggestion feature; this is qualitative vendor-reported feedback, not measured search volume."
+    }
+  ],
+  "exclusions": {
+    "noSearchVolumeOrRankingsInvented": true,
+    "noPricesOrPaidActions": true,
+    "noNewIndexSubmission": true,
+    "noOutreach": true,
+    "noClientOrBackendChanges": true,
+    "noHandsOnProductTesting": true,
+    "sourceInterpretation": "Documentation research and dated public reader reports only. No signed-account execution or performance claim."
+  },
+  "sourceResearch": {
+    "publicWebLookupDate": "2026-11-08",
+    "browserWasNotUsed": true,
+    "competition": "Inspected Google Help/community and independent editorials, Perplexity Help/community and Opera feature coverage; public pages inform the question and source boundaries, not BrowserHub traffic or rank outcomes."
+  },
+  "proseProcess": {
+    "skillsRead": [
+      "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+    ],
+    "mode": "embedded",
+    "status": "drafted in reader-first technical prose; independent byte review pending"
+  },
+  "executor": {
+    "role": "research_and_content_executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffortRequested": "high",
+    "modelEffective": null,
+    "reasoningEffortEffective": null,
+    "attempts": 1,
+    "sourceRecords": [
+      "docs/seo/research-2026-11-08.json"
+    ],
+    "selectionSource": "project model roles; parent assignment"
+  }
+}
