@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-09",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "f898f1b50648b629d239ee6f3a7440b617a930fb487a179b7cd14f076e81462e",
+  "commit": "b263c1686493e3fcdefa37b699ecd3597c5c863e",
+  "release": "/opt/browsertools/releases/20261109-111151",
+  "publicationReceiptAt": "2026-11-09T03:12:21.011Z",
+  "completedAt": "2026-11-09T03:12:23.446Z",
+  "newTopics": [
+    "edge-copilot-shopping-migration",
+    "edge-copilot-sidebar-migration-message",
+    "gemini-chrome-shared-tabs",
+    "claude-chrome-shortcuts-schedule",
+    "edge-copilot-journeys-controls"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [
+    "gemini-in-chrome-vs-copilot-in-edge"
+  ],
+  "oldEnhancementCount": 1,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/edge-copilot-shopping-migration/",
+    "https://browserhub.co/zh-cn/guides/edge-copilot-shopping-migration/",
+    "https://browserhub.co/en/guides/edge-copilot-sidebar-migration-message/",
+    "https://browserhub.co/zh-cn/guides/edge-copilot-sidebar-migration-message/",
+    "https://browserhub.co/en/guides/gemini-chrome-shared-tabs/",
+    "https://browserhub.co/zh-cn/guides/gemini-chrome-shared-tabs/",
+    "https://browserhub.co/en/guides/claude-chrome-shortcuts-schedule/",
+    "https://browserhub.co/zh-cn/guides/claude-chrome-shortcuts-schedule/",
+    "https://browserhub.co/en/guides/edge-copilot-journeys-controls/",
+    "https://browserhub.co/zh-cn/guides/edge-copilot-journeys-controls/",
+    "https://browserhub.co/en/guides/gemini-in-chrome-vs-copilot-in-edge/",
+    "https://browserhub.co/zh-cn/guides/gemini-in-chrome-vs-copilot-in-edge/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent new core AI-browser themes; English and Chinese editions count once. One existing Gemini/Copilot theme was enhanced in two editions and is counted separately. All 124 prior owners are preserved; the other 123 topics and 246 editions remain unchanged.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-09.json"
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "role": "research_and_content_executor",
+      "modelRequested": "gpt-6-luna",
+      "reasoningEffortRequested": "high",
+      "modelEffective": null,
+      "reasoningEffortEffective": null,
+      "selectionSource": "role_default",
+      "attempts": 1,
+      "reasoningEffort": "high",
+      "agent": "content_execution_20261109",
+      "escalationReason": null,
+      "preCiRevisions": [
+        "Shopping notice has no year for “starting in November”; article preserves that and the conflicting current feature-page route.",
+        "Gemini shared-tabs scope corrected to current tab plus up to 10 additional recent tabs; dead or inaccessible source URLs removed.",
+        "Sidebar migration guide is limited to the named migration message and separates account, icon, loading, and policy checks without claiming universal outage or cause.",
+        "Claude guide distinguishes classic recording from Cowork, avoids claims of unattended/offline execution, and reports no hands-on test.",
+        "Journeys guide distinguishes initial URLs/titles from ongoing summaries, PC-only sync, per-card hiding, opt-out deletion, and history clearing.",
+        "Existing Gemini-vs-Copilot owner retains its first-publication date and other owners; adds only the approved Gemini-in-Edge answer/FAQ and two official sources."
+      ]
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 8,
+    "sha256": "b9ececda2ea9c60bac0540ede0c2eb1c4eec8b26f6338e28314893ee3025dc4b"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 2,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "2dee715345afec2457b3ea85b111fd2ca76d3abcaaefe5ed2686be6d1bd2ef95"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1439,
+      "sitemapUrls": 1126,
+      "internalLinks": 49776,
+      "alternateLinks": 8105,
+      "fallbackPages": 60,
+      "editorialGuides": 258,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-09T03:04:17.475Z",
+      "status": "passed",
+      "existingTopicsPreserved": 124,
+      "existingTopicsUnchanged": 123,
+      "existingCompleteEditionsUnchanged": 246,
+      "explicitlyRefreshedOwners": [
+        "gemini-in-chrome-vs-copilot-in-edge"
+      ],
+      "totalTopics": 129,
+      "completeEditions": 258,
+      "newTopics": 5,
+      "keywordRows": 195,
+      "details": [
+        {
+          "slug": "edge-copilot-shopping-migration",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "edge-copilot-shopping-migration",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "edge-copilot-sidebar-migration-message",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "edge-copilot-sidebar-migration-message",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "gemini-chrome-shared-tabs",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "gemini-chrome-shared-tabs",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "claude-chrome-shortcuts-schedule",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "claude-chrome-shortcuts-schedule",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "edge-copilot-journeys-controls",
+          "locale": "en",
+          "sections": 7,
+          "faq": 7
+        },
+        {
+          "slug": "edge-copilot-journeys-controls",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 7
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-09T03:13:13.240518+00:00",
+      "release": "/opt/browsertools/releases/20261109-111151",
+      "expectedRelease": "/opt/browsertools/releases/20261109-111151",
+      "exitCode": 0,
+      "matches": true,
+      "stderr": ""
+    },
+    "preflightRevision": {
+      "priorAttempt": 1,
+      "priorExitCode": 1,
+      "reason": "Actual first preflight failed strict TypeScript because new copy dictionary had inferred literal keys rather than the established string-indexed EditorialGuideCopy record. Apply a type-only annotation in the new module; no app or compiler weakening.",
+      "priorLogSha256": "61cb6d50fed565c9312dde242441557bb1fbbc5eb15fe85de7be8eb5dea73375"
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-09T03:12:23.416Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/edge-copilot-shopping-migration/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/edge-copilot-shopping-migration/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/edge-copilot-shopping-migration/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/edge-copilot-shopping-migration/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/edge-copilot-sidebar-migration-message/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/edge-copilot-sidebar-migration-message/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/edge-copilot-sidebar-migration-message/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/edge-copilot-sidebar-migration-message/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/gemini-chrome-shared-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/gemini-chrome-shared-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/gemini-chrome-shared-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/gemini-chrome-shared-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/claude-chrome-shortcuts-schedule/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/claude-chrome-shortcuts-schedule/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/claude-chrome-shortcuts-schedule/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/claude-chrome-shortcuts-schedule/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/edge-copilot-journeys-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/edge-copilot-journeys-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/edge-copilot-journeys-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/edge-copilot-journeys-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/gemini-in-chrome-vs-copilot-in-edge/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-09T03:12:21.011Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-16T03:12:21.011000+00:00",
+      "14day": "2026-11-23T03:12:21.011000+00:00",
+      "28day": "2026-12-07T03:12:21.011000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-09",
+        "end": "2026-11-15",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-16T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-09",
+        "end": "2026-11-22",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-23T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-09",
+        "end": "2026-12-06",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-07T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "Read-only weekly search-performance and bounded AI observations were reviewed privately on November 9. Raw account metrics remain private; publication and refresh effects require matching closed available windows.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ],
+  "existingOwnerRefresh": {
+    "topics": [
+      "gemini-in-chrome-vs-copilot-in-edge"
+    ],
+    "editionCount": 2,
+    "firstPublicationPreserved": "2026-10-25",
+    "refreshReceiptAt": "2026-11-09T03:12:21.011Z",
+    "firstFullPostRefreshGscWindows": {
+      "7day": {
+        "start": "2026-11-09",
+        "end": "2026-11-15",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-16T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-09",
+        "end": "2026-11-22",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-23T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-09",
+        "end": "2026-12-06",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-07T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "rule": "Refresh is separate from first publication and from the five new themes; effect pending matching closed available windows."
+  }
+}
