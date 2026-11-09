@@ -9,6 +9,14 @@ const sources = {
     "title": "Google Gemini Apps Help: Gemini in Chrome availability",
     "url": "https://support.google.com/gemini/answer/17140089?co=GENIE.Platform%3DDesktop&hl=en"
   },
+  "geminiSupportedBrowsers": {
+    "title": "Google Gemini Apps Help: Use Gemini Apps in a supported browser",
+    "url": "https://support.google.com/gemini/answer/13275745?hl=en"
+  },
+  "googleAccountEdgeSignin": {
+    "title": "Google Account Help: Sign in with a supported browser",
+    "url": "https://support.google.com/accounts/answer/7675428?hl=en"
+  },
   "edgeStart": {
     "title": "Microsoft Support: Getting started with Copilot in Microsoft Edge",
     "url": "https://support.microsoft.com/en-us/edge/copilot/getting-started-with-copilot-in-microsoft-edge"
@@ -65,8 +73,12 @@ const copies = {
       "title": "Gemini in Chrome vs Copilot in Edge: choose by task and context",
       "description": "Compare Gemini in Chrome with Copilot in Edge for page summaries, video questions, multi-tab research, context controls and work accounts. Check the feature in your own profile.",
       "category": "AI browser comparisons",
-      "content": "If you are deciding whether to stay in Chrome or switch to Edge for AI help, start with the task you actually do. Google documents Gemini in Chrome using the current tab by default, with up to 10 open tabs available when you share them. Microsoft documents Copilot in Edge using page context and, depending on the prompt and settings, other browsing context such as open tabs and history. Both can work with page content; eligibility and controls differ. This comparison uses official documentation checked on October 25, 2026. It is not a speed or quality benchmark.",
+      "content": "If you are deciding whether to stay in Chrome or switch to Edge for AI help, start with the task you actually do. Google documents Gemini in Chrome using the current tab by default, with up to 10 additional open tabs available when you share them. Microsoft documents Copilot in Edge using page context and, depending on the prompt and settings, other browsing context such as open tabs and history. Both can work with page content; eligibility and controls differ. This comparison uses official documentation checked on October 25 and refreshed on November 9, 2026. It is not a speed or quality benchmark.",
       "sections": [
+        {
+          "heading": "Can I use Gemini in Edge?",
+          "body": "Yes, eligible users can open Gemini Apps at gemini.google.com in a supported browser. Google's current Gemini Apps help lists Chrome, Safari, Firefox, Opera, and “Edgium” as supported browsers; Google Account help separately lists Microsoft Edge as a supported sign-in browser. This is the Gemini Apps website in an Edge tab. It does not add the Chrome-specific Gemini in Chrome side panel, its current-tab default, or its shared-tab controls to Edge. Edge Copilot remains a separate browser assistant with its own page context and account controls. If you need the Gemini in Chrome multi-tab flow, use a supported Chrome profile; if you prefer Edge, open the Gemini web app and compare it as a separate surface. See Google's [Gemini Apps browser requirements](https://support.google.com/gemini/answer/13275745?hl=en) and [Google Account supported-browser list](https://support.google.com/accounts/answer/7675428?hl=en)."
+        },
         {
           "heading": "Quick comparison by task",
           "body": "| If you need to… | Start with… | What to check |\n| --- | --- | --- |\n| Ask about the page you are reading | Either sidebar | Whether the current tab is shared and whether the answer points to checkable evidence |\n| Compare several open pages | Gemini in Chrome when you want to choose tabs; Copilot in Edge when its context clues fit | Which tabs or history are in scope, and whether unrelated pages could affect the answer |\n| Ask about media you already played | Gemini in Chrome documents questions about played audio and video; Edge documents video summaries | Whether the feature is available in your account and refers to the right moment |\n| Keep Google Workspace page context | Gemini in Chrome | A shared Workspace page may involve direct access to the Workspace account |\n| Ask an assistant to navigate or act | Check each browser's separate agent controls | A sidebar answer and an agent that clicks or navigates are different workflows |\n\nThe table points to a first trial, not a winner. Gemini in Chrome and Gemini Apps are separate surfaces. Edge consumer Copilot and workplace Copilot also have different account and administrator conditions. Follow the controls shown in the browser you use."
@@ -90,12 +102,16 @@ const copies = {
       ],
       "faq": [
         {
+          "question": "Can I use Gemini in Edge?",
+          "answer": "Eligible users can open gemini.google.com in Edge as a supported web app. This is separate from Gemini in Chrome's browser side panel and shared-tab controls; Edge Copilot is another separate product."
+        },
+        {
           "question": "Can Gemini in Chrome and Copilot in Edge summarize pages?",
           "answer": "Yes. Google's Chrome guide documents article summaries and questions about the current tab. Microsoft's Edge guide documents page summaries and page questions using browsing context. Availability and context controls differ."
         },
         {
           "question": "Which one can compare multiple tabs?",
-          "answer": "Google documents selecting up to 10 open tabs for Gemini in Chrome. Microsoft says Edge may use open tabs as context when relevant and enabled. Share only the pages needed, then check each source."
+          "answer": "Google documents the current tab plus up to 10 additional recent tabs across open windows for Gemini in Chrome. Microsoft says Edge may use open tabs as context when relevant and enabled. Share only the pages needed, then check each source."
         },
         {
           "question": "Does either one guarantee private browsing context?",
@@ -115,8 +131,12 @@ const copies = {
       "title": "Chrome 中的 Gemini vs Edge Copilot：按任务和上下文选择",
       "description": "对照 Gemini in Chrome 与 Edge Copilot 的网页摘要、视频提问、多标签研究、隐私控制和工作账号条件，并核对自己的浏览器实际入口。",
       "category": "AI 浏览器对比",
-      "content": "如果你在考虑继续用 Chrome，还是改用 Edge 来处理浏览器里的 AI 任务，先列出自己要完成的工作。Google 说明 Gemini in Chrome 默认使用当前标签页，也可以选择最多 10 个已打开标签页分享给 Gemini。Microsoft 说明 Edge Copilot 会按提示词使用页面上下文，相关设置开启时也可能参考其他浏览信息，例如标签页和历史记录。两者都能处理网页内容，但资格条件和控制方式不同。本文依据 2026 年 10 月 25 日核对的官方文档，不是速度或回答质量实测排名。",
+      "content": "如果你在考虑继续用 Chrome，还是改用 Edge 来处理浏览器里的 AI 任务，先列出自己要完成的工作。Google 说明 Gemini in Chrome 默认使用当前标签页，也可以选择最多 10 个额外标签页分享给 Gemini。Microsoft 说明 Edge Copilot 会按提示词使用页面上下文，相关设置开启时也可能参考其他浏览信息，例如标签页和历史记录。两者都能处理网页内容，但资格条件和控制方式不同。本文依据 2026 年 10 月 25 日核对并于 11 月 9 日补充的官方文档，不是速度或回答质量实测排名。",
       "sections": [
+        {
+          "heading": "可以在 Edge 中使用 Gemini 吗？",
+          "body": "可以。符合条件的用户可在支持的浏览器中打开 gemini.google.com。Google 当前的 Gemini Apps 帮助页列出 Chrome、Safari、Firefox、Opera 和“Edgium”；Google 账号帮助页也单独把 Microsoft Edge 列为支持登录的浏览器。这是 Edge 标签页中的 Gemini Apps 网页，不会把 Chrome 专属的 Gemini in Chrome 侧栏、当前标签默认共享或共享标签控制项带到 Edge。Edge Copilot 仍是另一款浏览器助手，使用自己的页面上下文和账号设置。想使用 Gemini in Chrome 的多标签流程，请使用受支持的 Chrome 配置文件；在 Edge 中则可把 Gemini 网页应用作为另一种入口。请看 Google 的 [Gemini Apps 浏览器要求](https://support.google.com/gemini/answer/13275745?hl=en)与[账号支持浏览器列表](https://support.google.com/accounts/answer/7675428?hl=en)。"
+        },
         {
           "heading": "按任务快速对照",
           "body": "| 你想完成的任务 | 优先查看 | 需要核对 |\n| --- | --- | --- |\n| 询问正在阅读的网页 | 两者侧边栏都可先试 | 当前标签页是否已分享，回答能否对应可核查的原文 |\n| 对照多个已打开网页 | 想指定标签时先看 Gemini in Chrome；Edge 上下文线索适合时也可测试 | 助手参考了哪些标签或历史记录，无关页面会否影响回答 |\n| 提问刚播放过的媒体 | Gemini in Chrome 文档支持询问已播放的音视频；Edge 文档支持视频摘要 | 账号是否开放功能，答案是否指向正确片段 |\n| 保留 Google Workspace 页面上下文 | Gemini in Chrome | 分享 Workspace 页面时可能涉及直接访问 Workspace 账号 |\n| 让助手代为浏览或操作 | 分别查看两款浏览器的智能体功能 | 侧边栏问答与点击、导航的流程权限不同 |\n\n这张表用于确定试用入口，不代表产品排名。Gemini in Chrome 与 Gemini Apps 是不同界面；Edge 个人版 Copilot 与工作账号中的 Copilot 也受不同条件限制。以浏览器当前显示的控件为准。"
@@ -140,12 +160,16 @@ const copies = {
       ],
       "faq": [
         {
+          "question": "可以在 Edge 中使用 Gemini 吗？",
+          "answer": "符合条件的用户可以在 Edge 中打开 gemini.google.com 网页应用。这与 Gemini in Chrome 侧栏和共享标签控制项不同；Edge Copilot 也是另一款独立产品。"
+        },
+        {
           "question": "Gemini in Chrome 和 Edge Copilot 都能总结网页吗？",
           "answer": "可以。Google 的 Chrome 指南记录了文章摘要和基于当前标签页提问；Microsoft 的 Edge 指南记录了网页摘要及使用浏览上下文提问。开放条件和上下文控制有所不同。"
         },
         {
           "question": "哪一个能比较多个标签页？",
-          "answer": "Google 说明 Gemini in Chrome 可选择最多 10 个已打开标签页。Microsoft 说明 Edge Copilot 在相关且设置允许时可能使用打开的标签页。只分享需要的页面，并对照来源核实。"
+          "answer": "Google 说明 Gemini in Chrome 默认使用当前标签，另可选择最多 10 个最近打开的其他标签页。Microsoft 说明 Edge Copilot 在相关且设置允许时可能使用打开的标签页。只分享需要的页面，并对照来源核实。"
         },
         {
           "question": "两者都能保证浏览上下文私密吗？",
@@ -275,7 +299,7 @@ const copies = {
 } as const satisfies Record<string, Record<"en" | "zh-cn", EditorialGuideCopy>>;
 
 const meta = {
-	"gemini-in-chrome-vs-copilot-in-edge": { relatedGuides: ["comet-vs-gemini-in-chrome", "comet-vs-dia", "ai-browser-vs-browser-agent", "ai-browser-pdf-summary"], sources: [sources.chromeGemini, sources.chromeAvailability, sources.edgeStart, sources.edgeBrowse, sources.edgeWork, sources.readerBrowserContext, sources.readerAssistantChoice] },
+	"gemini-in-chrome-vs-copilot-in-edge": { relatedGuides: ["comet-vs-gemini-in-chrome", "comet-vs-dia", "ai-browser-vs-browser-agent", "ai-browser-pdf-summary"], sources: [sources.chromeGemini, sources.chromeAvailability, sources.geminiSupportedBrowsers, sources.googleAccountEdgeSignin, sources.edgeStart, sources.edgeBrowse, sources.edgeWork, sources.readerBrowserContext, sources.readerAssistantChoice] },
 	"ai-browser-youtube-summary": { relatedGuides: ["gemini-in-chrome-vs-copilot-in-edge", "ai-browser-pdf-summary", "ai-browser-vs-browser-agent", "comet-vs-gemini-in-chrome"], sources: [sources.chromeGemini, sources.geminiYoutube, sources.edgeStart, sources.youtubeTranscript, sources.youtubeCaptions, sources.youtubeChapters, sources.readerTranscript, sources.readerFailure, sources.readerAvailability] }
 } as const;
 

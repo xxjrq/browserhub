@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-09",
+  "project": "BrowserHub",
+  "status": "five-new-themes-and-one-authorized-substantive-existing-owner-refresh-prepared-for-independent-review",
+  "baseline": {
+    "guides": 124,
+    "guideEditions": 248,
+    "keywordRowsBeforeAppend": 190,
+    "gitHead": "e444567b4d7996fe4e30fc68b3e31c3df8759052"
+  },
+  "scope": {
+    "newThemes": 5,
+    "bilingualEditionsPerTheme": 2,
+    "substantialExistingOwnerRefreshes": 1,
+    "existingOwner": "gemini-in-chrome-vs-copilot-in-edge",
+    "unchangedOtherOwners": 123
+  },
+  "measurement": {
+    "privateReadByRoot": true,
+    "publicQueryEvidenceUsed": false,
+    "publicReporting": "No Search Console raw counts or query rows reproduced here. Public qualitative demand only; no volume, ranking, traffic, or causal claims.",
+    "actualQuerySignalsAvailableForFiveNewThemes": false,
+    "oldOwnerQuerySignalUsedForAuthorizedRefresh": true
+  },
+  "selectionMethod": "Checked all existing intent owners in the keyword map, then inspected actual nearby guide bodies, including the Oct 25 Gemini vs Copilot owner, Oct 29 tab-access permissions, Oct 30 product comparison and live-tab organization, Nov 6 Edge DLP, Nov 7/8 product-specific guides, and the five Nov 8 topics. Public web sources and current official product help were inspected Nov 9. English and Chinese editions count once per theme.",
+  "themes": [
+    {
+      "slug": "edge-copilot-shopping-migration",
+      "readerProblem": "The Edge Shopping tag or one of its price tools is missing, and the reader wants to find its current Copilot entry and distinguish staged rollout from lost state.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-compare-products-across-sites",
+          "browser-agent-shopping-cart-verification"
+        ],
+        "inspection": "Opened actual Oct 30 seller-comparison body: it aligns exact product variants and briefly notes the announced Edge migration, but does not map the old Shopping entry to Copilot or separate current Product Insights from still-developing alerts. The cart guide checks a selected cart line, not the feature transition."
+      },
+      "gain": "Reconcile the current support notice with the still-visible shopping-tag route on Microsoft Edge’s feature page; identify Copilot sidebar as the intended destination; separate product insights from staged alerts; avoid claiming every legacy alert transferred.",
+      "demand": {
+        "type": "qualitative-public-product-change-and-reader-question",
+        "evidence": [
+          "Current Microsoft Support migration notice",
+          "Dated Reddit question about missing price history",
+          "Current third-party migration coverage"
+        ],
+        "limits": "No measured site query or search volume; public reports are not proof of account-level data loss or universal outage."
+      },
+      "primaryFacts": [
+        "Microsoft Support currently says standalone shopping tools are being discontinued and directs users to the Copilot sidebar; it says starting in November without stating a year.",
+        "The current Edge Shopping feature page still describes the former address-bar tag, so the official product pages are not fully synchronized.",
+        "Support lists Product Insights as already live for supported pages but says proactive alerts remain in development and may not appear for every user.",
+        "Microsoft lists update, sign-in, feature setting, supported page, and region/rollout as checks."
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.microsoft.com/en-us/edge/changes-to-shopping-in-edge",
+          "type": "primary-current-support",
+          "observed": "Nov 9 2026",
+          "note": "Current entry, feature availability, and missing-feature checks."
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/edge/copilot/shopping-with-microsoft-copilot",
+          "type": "primary-current-support",
+          "observed": "Nov 9 2026",
+          "note": "Copilot shopping product and result route."
+        },
+        {
+          "url": "https://explore.microsoft.com/en-us/edge/features/shopping",
+          "type": "primary-product-feature-page",
+          "observed": "Nov 9 2026",
+          "note": "Still displays prior Shopping-tag controls; preserves official-source discrepancy."
+        },
+        {
+          "url": "https://blogs.windows.com/msedgedev/2025/11/25/shop-smarter-with-copilot-in-edge-this-holiday-season/",
+          "type": "dated-primary-product-announcement",
+          "observed": "Nov 9 2026",
+          "note": "Nov 25 2025 US rollout background; not a 2026 launch date."
+        },
+        {
+          "url": "https://www.reddit.com/r/MicrosoftEdge/comments/1us6sw6/price_tracking_history_is_gone/",
+          "type": "public-reader-question",
+          "observed": "Nov 9 2026",
+          "note": "Dated report/question; not product authority."
+        },
+        {
+          "url": "https://www.itechguides.com/microsoft-is-retiring-and-changing-features-in-edge-what-users-need-to-know/",
+          "type": "independent-feature-coverage",
+          "observed": "Nov 9 2026",
+          "note": "Migration overview; current official help governs feature details."
+        }
+      ]
+    },
+    {
+      "slug": "edge-copilot-sidebar-migration-message",
+      "readerProblem": "The Edge Copilot pane displays the specific “migrating to the new experience” message, and the reader needs to know whether to wait, use the web surface, or troubleshoot the icon/account.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "edge-copilot-page-context-enterprise-dlp",
+          "gemini-in-chrome-vs-copilot-in-edge",
+          "ai-browser-tab-access-permissions"
+        ],
+        "inspection": "Opened the Nov 6 Edge work-DLP guide: it diagnoses protected-page refusals, supported document types, and pane loading, not this account/chat migration notice. Generic missing-icon documentation is also a separate problem."
+      },
+      "gain": "Offer a same-account web check; distinguish an explicit migration message from an absent icon, work-page DLP refusal, and loading error; preserve account access and avoid profile resets. Treat the issue as a dated reported state, not universal or current for every user.",
+      "demand": {
+        "type": "qualitative-dated-public-support-question-and-reporting",
+        "evidence": [
+          "Windows Central Oct 27 2026 describes the exact Edge sidebar message and user/team reports",
+          "Microsoft Q&A Nov 5 2026 user reports a similar account/chat warning after restarts",
+          "Microsoft Edge support separately documents ordinary missing-icon causes"
+        ],
+        "limits": "Microsoft has not documented a specific Edge-side backend cause or universal completion deadline for this exact message; Q&A discussion is not a product contract."
+      },
+      "primaryFacts": [
+        "The migration notice as reported directs users to copilot.com while migration completes and may ask for an Edge restart.",
+        "Microsoft Copilot account-content troubleshooting is the current primary path for sign-in/content questions; it does not promise the Edge pane will recover after one restart.",
+        "Microsoft’s missing-icon guide lists sidebar setting, app toggle, organization policy, version, and region/account availability; these do not explain the distinct migration message.",
+        "A work-page DLP refusal is owned separately by the Nov 6 guide."
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.microsoft.com/en-us/microsoft-365-copilot/troubleshoot-content-copilot-app",
+          "type": "primary-current-account-troubleshooting",
+          "observed": "Nov 9 2026",
+          "note": "Current account-content and migration troubleshooting."
+        },
+        {
+          "url": "https://www.windowscentral.com/artificial-intelligence/microsoft-copilot/microsofts-copilot-migration-can-leave-edge-sidebar-users-without-the-ai-assistant-for-days",
+          "type": "independent-dated-report",
+          "observed": "Nov 9 2026",
+          "sourceDate": "Oct 27 2026",
+          "note": "Exact message, distinguishes reported observation from Microsoft’s undisclosed cause."
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/answers/questions/6062015/co-pilot-not-working",
+          "type": "public-user-question-and-moderator-response",
+          "observed": "Nov 9 2026",
+          "sourceDate": "Nov 5 2026",
+          "note": "User’s exact similar account/chat migration wording; automated or moderator answers not treated as authority."
+        },
+        {
+          "url": "https://github.com/MicrosoftDocs/SupportArticles-docs/blob/main/support/microsoft-edge/experience/copilot-icon-missing-sidebar.md",
+          "type": "primary-support-article",
+          "observed": "Nov 9 2026",
+          "note": "Separate generic missing-icon diagnosis."
+        },
+        {
+          "url": "https://www.reddit.com/r/edge/comments/1xgpa9n/seen_this_message_your_copilot_is_migrating_to/",
+          "type": "public-reader-discussion",
+          "observed": "Nov 9 2026",
+          "note": "User discussion of the same notice, not universal outage evidence."
+        },
+        {
+          "url": "https://support.microsoft.com/en-us/edge/copilot/browse-with-copilot",
+          "type": "primary-current-product-help",
+          "observed": "Nov 9 2026",
+          "note": "Separate agent workflow and availability; not equivalent to sidebar chat."
+        }
+      ]
+    },
+    {
+      "slug": "gemini-chrome-shared-tabs",
+      "readerProblem": "The reader wants Gemini in Chrome to use selected pages without assuming that a tab is included, or that the assistant sees only the visible portion of a Google Doc.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-youtube-summary",
+          "ai-browser-research-source-verification"
+        ],
+        "inspection": "Actual ai-browser-tab-access-permissions body covers ChatGPT extension/site/file URL layers and generic Gemini boundaries, not Gemini Add tabs/@, Show shared tabs/Remove, the current-tab default, or Workspace full-document qualification. The video summary owner mentions the shared current tab indicator, not the multi-tab control workflow."
+      },
+      "gain": "Document exact current-tab default, up to 10 additional tabs, Add tabs/@ selection, Show shared tabs/Remove, visual indicators, and conditional Workspace account access; maintain separate boundaries from generic permissions and research verification.",
+      "demand": {
+        "type": "qualitative-public-product-question-and-feature-coverage",
+        "evidence": [
+          "Reddit user discussion about whether Gemini can see the current tab; report transcript itself reflects confusion rather than a verified access failure",
+          "Google product help now documents shared-tab controls",
+          "Google feature coverage describes adding currently open tabs"
+        ],
+        "limits": "No site query evidence or measured volume. Do not characterize the Reddit discussion as a confirmed product failure."
+      },
+      "primaryFacts": [
+        "Google help says a new chat shares the current tab by default unless the preference is turned off.",
+        "Google says up to 10 recent open tabs can be shared in addition to the current tab; Add tabs and @ are available.",
+        "Show shared tabs > Remove tab removes a page from the shared set; the glowing underline disappears when a tab is no longer shared.",
+        "When sharing a Workspace web page, Gemini may directly access the Workspace account and may refer to an entire Doc; more personal content requires connecting the Workspace app. Keep may/conditional qualification."
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.google.com/gemini/answer/16283624?hl=en",
+          "type": "primary-current-product-help",
+          "observed": "Nov 9 2026",
+          "note": "Direct source for all Chrome control steps and qualified Workspace scope."
+        },
+        {
+          "url": "https://support.google.com/gemini/answer/13594961?hl=en",
+          "type": "primary-privacy-help",
+          "observed": "Nov 9 2026",
+          "note": "Privacy hub; not a substitute for Chrome-specific controls."
+        },
+        {
+          "url": "https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/",
+          "type": "primary-feature-announcement",
+          "observed": "Nov 9 2026",
+          "note": "Feature context and multi-tab example."
+        },
+        {
+          "url": "https://note.com/google_gemini/n/ne840249aec6a",
+          "type": "Google-branded-feature-walkthrough",
+          "observed": "Nov 9 2026",
+          "sourceDate": "Jun 9 2026",
+          "note": "Shows selecting currently open tabs; no independent access guarantee."
+        },
+        {
+          "url": "https://www.reddit.com/r/Chatbots/comments/1tlw7h3/gemini-in-chrome-insisting-it-cannot-do-something-until-i-send-a-link-proving-that-it-can/",
+          "type": "public-user-discussion",
+          "observed": "Nov 9 2026",
+          "sourceDate": "May 23 2026",
+          "note": "User confusion/self-description inconsistency; not a verified product failure."
+        }
+      ]
+    },
+    {
+      "slug": "claude-chrome-shortcuts-schedule",
+      "readerProblem": "The reader wants to repeat a browser task or schedule it but cannot tell which shortcut/record control belongs to the current classic or Cowork side panel, or what a scheduled run guarantees.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "comet-query-shortcuts",
+          "gemini-chrome-skills-create-manage",
+          "dia-skills-create-edit-reuse"
+        ],
+        "inspection": "Those owners document Comet query shortcuts, Gemini Chrome prompt Skills, and Dia Skills. None documents Claude in Chrome shortcut scheduling, classic-only workflow recording, or the Cowork panel boundary."
+      },
+      "gain": "Separate reusable prompt, classic-only recorded workflow and scheduled browser shortcut; specify a low-risk repeat-task contract, first-run verification, Chrome-open caveat for background workflows, and human confirmation boundary.",
+      "demand": {
+        "type": "qualitative-feature-use-and-current-workflow-coverage",
+        "evidence": [
+          "Anthropic Help Center and Academy publish create/edit/schedule steps",
+          "Independent current walkthroughs explain Claude in Chrome recurring browser tasks",
+          "Public browser-automation discussion shows reader confusion between extension, Cowork, and CLI surfaces"
+        ],
+        "limits": "No measured query volume and no proof of scheduled-run reliability; GitHub CLI connection issues were not used as scheduling demand evidence."
+      },
+      "primaryFacts": [
+        "Current Claude in Chrome Help documents saving prompts as shortcuts, invoking with /, editing/deleting, and scheduling via the extension panel clock control.",
+        "The same Help Center documents recording a workflow only in the classic panel; recording is not available in a Cowork side panel.",
+        "Help lists schedules as daily, weekly, monthly, or annually and says background workflows continue while switching tabs as long as Chrome is open; it does not promise Chrome-closed/offline execution.",
+        "Cowork scheduled tasks are a separate feature from scheduling a Claude in Chrome shortcut."
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome",
+          "type": "primary-current-product-help",
+          "observed": "Nov 9 2026",
+          "note": "Controls, plan/panel boundary, shortcut, scheduling, and Chrome-open caveat."
+        },
+        {
+          "url": "https://academy.claude.com/tutorials/simplify-your-browsing-experience-with-claude-for-chrome",
+          "type": "vendor-workflow-tutorial",
+          "observed": "Nov 9 2026",
+          "note": "Create/edit/schedule UX and old/new interface boundary; older claims not copied."
+        },
+        {
+          "url": "https://code.claude.com/docs/en/chrome",
+          "type": "primary-developer-integration-docs",
+          "observed": "Nov 9 2026",
+          "note": "CLI integration has separate saved task behavior; logout may remove saved shortcuts/tasks."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/12902405-claude-in-chrome-troubleshooting",
+          "type": "primary-current-troubleshooting",
+          "observed": "Nov 9 2026",
+          "note": "Current plan and connection conditions."
+        },
+        {
+          "url": "https://technicallycurious.substack.com/p/ai-browsing-glimmers-of-magic-and",
+          "type": "independent-workflow-coverage",
+          "observed": "Nov 9 2026",
+          "sourceDate": "Dec 30 2025",
+          "note": "Dated saved/scheduled task walkthrough; not authority on current product guarantees."
+        },
+        {
+          "url": "https://claudeaitrainer.com/blog/how-to-use-claude-in-chrome/",
+          "type": "independent-current-feature-guide",
+          "observed": "Nov 9 2026",
+          "sourceDate": "Oct 28 2026",
+          "note": "Broad current panel setup; article adds scoped repeat-task checklist instead of repeating installation steps."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork",
+          "type": "primary-current-Cowork-scheduling-help",
+          "observed": "Nov 9 2026",
+          "note": "Current Cowork schedule conditions for account files/connectors and remote versus local work; kept distinct from Chrome shortcut scheduling."
+        }
+      ]
+    },
+    {
+      "slug": "edge-copilot-journeys-controls",
+      "readerProblem": "The reader wants topic cards to resume a past Edge project or wants to know what browsing data feeds them, how to opt out, and what the different deletion and sync controls affect.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-organize-tabs-by-task",
+          "edge-copilot-page-context-enterprise-dlp",
+          "comet-assistant-history-data-controls"
+        ],
+        "inspection": "Oct 30 live-tab organization owner covers current window groups and tab context, not history-derived Copilot topic cards. Edge work-DLP and Comet account-history owners do not cover Journeys data lifecycle."
+      },
+      "gain": "Separate history-derived topic cards from live tabs; describe initial URL/title inputs versus ongoing summaries/related data, turn-off versus hide/history deletion, and PC-only device sync without implying local-only inference.",
+      "demand": {
+        "type": "qualitative-current-product-feature-and-reader-concern",
+        "evidence": [
+          "Current Microsoft Support provides end-to-end steps and privacy/data details",
+          "PCWorld criticizes the exact-history replacement concern",
+          "The Windows Club and WiseCleaner publish how-to/off instructions, with older interface details"
+        ],
+        "limits": "No exact site query or measured demand; older how-tos are not treated as current source for settings."
+      },
+      "primaryFacts": [
+        "Journeys is off by default for personal Microsoft accounts in listed plans; mobile rollout may not be complete.",
+        "First cards from existing history use recent URLs and titles; Microsoft says this one-time process does not read full old-page content.",
+        "Ongoing Journeys use short page summaries and related titles, URLs, searches, and Copilot chats; 14-day expiry applies to older Journeys and underlying data.",
+        "Turning Journeys off stops collection and deletes stored Journey-creation information; hiding a card and clearing browser history are separate controls.",
+        "History sync on syncs Journeys on signed-in devices, but current help limits device sync to PCs; mobile sync is not available yet. Local generation with sync off is not local-only AI inference."
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.microsoft.com/en-gb/edge/copilot/copilot-journeys",
+          "type": "primary-current-product-help",
+          "observed": "Nov 9 2026",
+          "note": "Full current account, data, retention, control and sync detail."
+        },
+        {
+          "url": "https://blogs.windows.com/msedgedev/2026/05/13/new-updates-to-edge-across-desktop-and-mobile/",
+          "type": "primary-product-announcement",
+          "observed": "Nov 9 2026",
+          "sourceDate": "May 13 2026",
+          "note": "Broader product context and availability announcement."
+        },
+        {
+          "url": "https://www.pcworld.com/article/3139261/copilot-is-replacing-edges-browser-history-with-ai-slop.html",
+          "type": "independent-feature-critique",
+          "observed": "Nov 9 2026",
+          "note": "Reader concern about exact history and summary cards; not product controls authority."
+        },
+        {
+          "url": "https://www.thewindowsclub.com/HOW-TO-TURN-ON-OR-OFF-COPILOT-JOURNEYS-IN-MICROSOFT-EDGE",
+          "type": "independent-how-to",
+          "observed": "Nov 9 2026",
+          "sourceDate": "Mar 10 2026",
+          "note": "Earlier setup/off tutorial; interface details may be stale."
+        },
+        {
+          "url": "https://www.wisecleaner.com/think-tank/865-How-to-Turn-off-Copilot-Journeys-in-Microsoft-Edge.html",
+          "type": "independent-privacy-how-to",
+          "observed": "Nov 9 2026",
+          "sourceDate": "Apr 3 2026",
+          "note": "Earlier opt-out article; current Microsoft Help takes precedence."
+        },
+        {
+          "url": "https://explore.microsoft.com/en-us/edge/copilot",
+          "type": "primary-product-feature-page",
+          "observed": "Nov 9 2026",
+          "note": "Current user-facing Journeys product overview."
+        }
+      ]
+    }
+  ],
+  "refresh": {
+    "slug": "gemini-in-chrome-vs-copilot-in-edge",
+    "firstPublishedDate": "2026-10-25",
+    "measuredOwnerEvidenceUsedOnlyForSelection": true,
+    "publicPerformanceNumbersIncluded": false,
+    "exactIntentGap": "Add a direct answer to “Can I use Gemini in Edge?” Current Google Gemini Apps Help lists Chrome, Safari, Firefox, Opera, and “Edgium” as supported Gemini web-app browsers; Google Account Help separately lists Edge as a supported sign-in browser. Clarify that this means eligible users can open gemini.google.com in Edge, not that Chrome-specific Gemini in Chrome current/shared-tab integration moves to Edge or replaces Edge Copilot.",
+    "filesChanged": [
+      "src/data/ai-choices-2026-10-25.ts"
+    ],
+    "sourcesAdded": [
+      "https://support.google.com/gemini/answer/13275745?hl=en",
+      "https://support.google.com/accounts/answer/7675428?hl=en"
+    ],
+    "boundary": "Keep original owner URL and first-publication date; only add a concise EN/ZH answer and FAQ plus source records. Do not alter the old owner keyword row or include raw private query counts."
+  },
+  "proseProcess": {
+    "skillsRead": [
+      "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+    ],
+    "mode": "embedded; applied directly while editing EN and ZH reader copy; full independent byte review pending"
+  },
+  "executor": {
+    "role": "research_and_content_executor",
+    "modelRequested": "gpt-6-luna",
+    "reasoningEffortRequested": "high",
+    "modelEffective": null,
+    "reasoningEffortEffective": null,
+    "selectionSource": "role_default",
+    "attempts": 1
+  },
+  "exclusions": {
+    "noSearchVolumeOrRankingsInvented": true,
+    "noPrivateAnalyticsInPublicCopy": true,
+    "noNewIndexSubmission": true,
+    "noOutreach": true,
+    "noClientOrBackendChanges": true,
+    "noHandsOnProductTestingClaim": true,
+    "noPaidToolsOrAPIs": true
+  },
+  "preReviewRevisions": [
+    "Removed the unsupported claim that the Edge Shopping notice started in November 2026; the notice says “starting in November” without a year. Added the 2025 dated announcement and current official feature-page discrepancy.",
+    "For Gemini shared tabs, corrected the limit to the current tab plus up to 10 additional recent tabs; replaced an inaccessible source URL and removed a dead T3 link.",
+    "Kept Edge Copilot migration coverage scoped to the explicit message and dated reports; separated icon, loading, DLP, and account checks without claiming a universal outage or backend cause.",
+    "Kept Claude scheduling as product documentation, not hands-on evidence; distinguished classic-only recording and Cowork, and did not promise execution with Chrome closed or while offline.",
+    "For Journeys, separated initial URLs/titles from ongoing page summaries and added the PC-only sync and no-local-only-inference limits from current Microsoft Help.",
+    "Added the bounded Gemini-in-Edge answer to the existing Oct 25 comparison without changing its first-publication date or adjacent owners.",
+    "Structured FAQs as runtime faq arrays and removed duplicate sections. Added the exact original sign-in-provider, migration deadline, Gemini auto-shared tabs, Claude logout-loss, and Journeys 14-day expiry facts found during independent preread. Removed reader-facing demand and competitor methodology text."
+  ]
+}

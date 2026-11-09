@@ -7247,6 +7247,254 @@
         "distinctiveCoverage": "Turns the documented user-approved suggestion flow into a task-selection table, distinguishes recommendation from automatic execution, records Do/Make/One-Minute Research destination behavior and labels older hands-on problems as historical."
       },
       "currentPrimarySource": "https://blogs.opera.com/news/2026/02/opera-neon-ai-browser-intelligent-mode/"
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-09",
+      "sourceRecord": "docs/seo/research-2026-11-09.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-16",
+        "14day": "2026-11-23",
+        "28day": "2026-12-07"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:edge-copilot-shopping-migration",
+      "primaryKeyword": {
+        "en": "Microsoft Edge Shopping features moved to Copilot",
+        "zh-CN": "Microsoft Edge 价格历史和追踪迁到 Copilot 后在哪里找"
+      },
+      "intent": "Find the current Edge Shopping entry for price history, tracking, comparisons and cashback after the standalone shopping-tag transition; distinguish account/region rollout from missing data.",
+      "demandEvidence": "Current Microsoft Support and Edge feature pages describe conflicting old/new access paths, while dated public discussion asks why price history disappeared. This is qualitative product-change and reader-problem evidence; search volume and BrowserHub query evidence are unknown.",
+      "originalGain": "Reconciles the current support notice with the still-visible shopping-tag feature page, names the Copilot sidebar as the intended route, and separates Product Insights availability from alerts still in development; no promise that each legacy alert migrated.",
+      "nearestOwners": [
+        "ai-browser-compare-products-across-sites",
+        "browser-agent-shopping-cart-verification"
+      ],
+      "distinctiveCoverage": "Product feature migration, entry location, staged availability and loss-vs-rollout diagnostics; not another product comparison or cart audit.",
+      "currentPrimarySource": "https://support.microsoft.com/en-us/edge/changes-to-shopping-in-edge",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/edge-copilot-shopping-migration/",
+        "https://browserhub.co/zh-cn/guides/edge-copilot-shopping-migration/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-compare-products-across-sites",
+          "browser-agent-shopping-cart-verification"
+        ],
+        "distinctiveCoverage": "Product feature migration, entry location, staged availability and loss-vs-rollout diagnostics; not another product comparison or cart audit."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-09",
+      "sourceRecord": "docs/seo/research-2026-11-09.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-16",
+        "14day": "2026-11-23",
+        "28day": "2026-12-07"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:edge-copilot-sidebar-migration-message",
+      "primaryKeyword": {
+        "en": "Edge Copilot migrating to new experience sidebar message",
+        "zh-CN": "Edge Copilot 正在迁移到新体验 侧栏提示"
+      },
+      "intent": "Respond to the specific account/chat migration notice in Edge sidebar, check the named Copilot web experience and separate it from an absent icon, work-page DLP refusal or loading failure.",
+      "demandEvidence": "Windows Central reported the exact migration notice and a November 5 Microsoft Q&A user described a similar notice; the thread and reports are dated qualitative evidence, not a universal outage or confirmed cause.",
+      "originalGain": "Gives a low-disruption same-account web check, distinguishes the exact migration message from existing Edge DLP and missing-icon guides, and preserves the uncertainty around backend cause and completion time.",
+      "nearestOwners": [
+        "edge-copilot-page-context-enterprise-dlp",
+        "gemini-in-chrome-vs-copilot-in-edge",
+        "ai-browser-tab-access-permissions"
+      ],
+      "distinctiveCoverage": "Migration-message triage and account-history preservation; does not re-cover work-page DLP or generic missing-icon setup.",
+      "currentPrimarySource": "https://support.microsoft.com/en-us/microsoft-365-copilot/troubleshoot-content-copilot-app",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/edge-copilot-sidebar-migration-message/",
+        "https://browserhub.co/zh-cn/guides/edge-copilot-sidebar-migration-message/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "edge-copilot-page-context-enterprise-dlp",
+          "gemini-in-chrome-vs-copilot-in-edge",
+          "ai-browser-tab-access-permissions"
+        ],
+        "distinctiveCoverage": "Migration-message triage and account-history preservation; does not re-cover work-page DLP or generic missing-icon setup."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-09",
+      "sourceRecord": "docs/seo/research-2026-11-09.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-16",
+        "14day": "2026-11-23",
+        "28day": "2026-12-07"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:gemini-chrome-shared-tabs",
+      "primaryKeyword": {
+        "en": "Gemini in Chrome share tabs remove shared tab",
+        "zh-CN": "Gemini in Chrome 共享标签页 添加 移除"
+      },
+      "intent": "Select the Chrome tabs used by Gemini, inspect/remove shared tabs, change the new-chat current-tab default, and understand the qualified Workspace document route.",
+      "demandEvidence": "A public discussion reports confusion about whether Gemini can see the current tab; current Google help documents detailed share/remove controls and multi-tab context. This is qualitative product-use evidence only; no volume or BrowserHub query proof.",
+      "originalGain": "Adds the exact Add tabs/@ and Show shared tabs/Remove steps, current tab plus up to 10 additional tabs, visible indicators and conditional full-Doc Workspace path; bounded separately from generic tab-permission and research-verification guidance.",
+      "nearestOwners": [
+        "ai-browser-tab-access-permissions",
+        "ai-browser-youtube-summary",
+        "ai-browser-research-source-verification"
+      ],
+      "distinctiveCoverage": "Gemini in Chrome's tab-selection control state and qualified Workspace page scope, not general assistant permissions, YouTube summaries or source verification.",
+      "currentPrimarySource": "https://support.google.com/gemini/answer/16283624?hl=en",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/gemini-chrome-shared-tabs/",
+        "https://browserhub.co/zh-cn/guides/gemini-chrome-shared-tabs/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-youtube-summary",
+          "ai-browser-research-source-verification"
+        ],
+        "distinctiveCoverage": "Gemini in Chrome's tab-selection control state and qualified Workspace page scope, not general assistant permissions, YouTube summaries or source verification."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-09",
+      "sourceRecord": "docs/seo/research-2026-11-09.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-16",
+        "14day": "2026-11-23",
+        "28day": "2026-12-07"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:claude-chrome-shortcuts-schedule",
+      "primaryKeyword": {
+        "en": "Claude in Chrome shortcuts schedule recurring browser task",
+        "zh-CN": "Claude in Chrome 快捷方式 定时运行 浏览器工作流"
+      },
+      "intent": "Save a repeatable prompt or classic-panel recorded workflow as a shortcut, schedule it, and distinguish current Cowork panel controls and supported run conditions.",
+      "demandEvidence": "Anthropic Help and Academy publish specific shortcut/schedule workflows and independent tutorials discuss the feature. These are qualitative interest signals, not measured query demand or a reliability result.",
+      "originalGain": "Distinguishes saved prompt, classic-only recording, and scheduled Chrome shortcut; gives safe repeat-task and first-run verification steps without claiming background execution when Chrome is closed or unattended success.",
+      "nearestOwners": [
+        "comet-query-shortcuts",
+        "gemini-chrome-skills-create-manage",
+        "dia-skills-create-edit-reuse"
+      ],
+      "distinctiveCoverage": "Claude-specific browser shortcut scheduling and classic-vs-Cowork control boundary, beyond another saved-prompt or Skills overview.",
+      "currentPrimarySource": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/claude-chrome-shortcuts-schedule/",
+        "https://browserhub.co/zh-cn/guides/claude-chrome-shortcuts-schedule/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-query-shortcuts",
+          "gemini-chrome-skills-create-manage",
+          "dia-skills-create-edit-reuse"
+        ],
+        "distinctiveCoverage": "Claude-specific browser shortcut scheduling and classic-vs-Cowork control boundary, beyond another saved-prompt or Skills overview."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-09",
+      "sourceRecord": "docs/seo/research-2026-11-09.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-16",
+        "14day": "2026-11-23",
+        "28day": "2026-12-07"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:edge-copilot-journeys-controls",
+      "primaryKeyword": {
+        "en": "Microsoft Edge Copilot Journeys data settings delete history sync",
+        "zh-CN": "Edge Copilot Journeys 数据来源 关闭 删除 同步"
+      },
+      "intent": "Enable or disable Edge Copilot Journeys and distinguish initial history, ongoing browsing summaries, hiding one card, clearing browser history and desktop/mobile sync.",
+      "demandEvidence": "Current official help, independent how-to pages and current product coverage discuss Journeys, its history use and controls. Public interest is qualitative only; no exact site-query or volume evidence was observed.",
+      "originalGain": "Separates history-derived topic cards from live tab groups, states initial URLs/titles versus ongoing summaries and related data, distinguishes turn-off from hide/history clear, and limits sync claims to documented PC support.",
+      "nearestOwners": [
+        "ai-browser-organize-tabs-by-task",
+        "edge-copilot-page-context-enterprise-dlp",
+        "comet-assistant-history-data-controls"
+      ],
+      "distinctiveCoverage": "Opt-in history-topic cards, data lifecycle and sync controls; not live tabs, page permission, or Comet conversation deletion.",
+      "currentPrimarySource": "https://support.microsoft.com/en-gb/edge/copilot/copilot-journeys",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/edge-copilot-journeys-controls/",
+        "https://browserhub.co/zh-cn/guides/edge-copilot-journeys-controls/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-organize-tabs-by-task",
+          "edge-copilot-page-context-enterprise-dlp",
+          "comet-assistant-history-data-controls"
+        ],
+        "distinctiveCoverage": "Opt-in history-topic cards, data lifecycle and sync controls; not live tabs, page permission, or Comet conversation deletion."
+      }
     }
   ],
   "futureCandidates": [
