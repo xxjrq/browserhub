@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-10",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "833cdc8ede5bda7acd553452fe01d9cedc96137eadf56b3ae63bb4a64d9a9c5f",
+  "commit": "23d349090585e6e7a2d599c5bff10eddf194f33e",
+  "release": "/opt/browsertools/releases/20261110-094619",
+  "publicationReceiptAt": "2026-11-10T01:46:56.787Z",
+  "completedAt": "2026-11-10T01:46:58.790Z",
+  "newTopics": [
+    "chatgpt-chrome-extension-not-connecting",
+    "claude-chrome-connection-permissions",
+    "manus-preferred-browser-routing",
+    "chrome-on-device-ai-storage-controls",
+    "comet-voice-mode-context-navigation"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/chatgpt-chrome-extension-not-connecting/",
+    "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-not-connecting/",
+    "https://browserhub.co/en/guides/claude-chrome-connection-permissions/",
+    "https://browserhub.co/zh-cn/guides/claude-chrome-connection-permissions/",
+    "https://browserhub.co/en/guides/manus-preferred-browser-routing/",
+    "https://browserhub.co/zh-cn/guides/manus-preferred-browser-routing/",
+    "https://browserhub.co/en/guides/chrome-on-device-ai-storage-controls/",
+    "https://browserhub.co/zh-cn/guides/chrome-on-device-ai-storage-controls/",
+    "https://browserhub.co/en/guides/comet-voice-mode-context-navigation/",
+    "https://browserhub.co/zh-cn/guides/comet-voice-mode-context-navigation/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent core AI-browser themes; English and Chinese editions count once. All 129 prior owners and 258 editions remain unchanged, including the November9 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-10.json"
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "role": "research_and_content_executor",
+      "modelRequested": "gpt-6-luna",
+      "reasoningEffortRequested": "high",
+      "modelEffective": null,
+      "reasoningEffortEffective": null,
+      "selectionSource": "role_default",
+      "attempts": 1,
+      "agent": "content_execution_20261110",
+      "escalationReason": null,
+      "reasoningEffort": "high",
+      "preCiRevisions": [
+        "Added ChatGPT’s current Computer Use setup and troubleshooting order, distinguished Manage/Install and browser visibility toggle/site permissions.",
+        "Clarified consumer Claude side-panel browser scope versus Claude Code browser support; corrected inherited site permission language; preserved classic and Cowork Manual differences; exact approved-sites path; removed mode/site claims from Extension settings.",
+        "Manus manual takeover article is scoped to the cloud computer or VS Code, separate from local Preferred Browser routing. Removed inaccessible /uk connector page.",
+        "Chrome on-device settings use current consumer Help; separate API-specific and enterprise sources; 20 GB is free-space eligibility, not file size. No manual deletion procedure.",
+        "Comet current Help Center is linked directly; described desktop toolbar/shortcuts and exact controls. No desktop shortcut transferred to Android. Product update date labeled as displayed February 26.",
+        "Removed competitor and demand-methodology commentary from reader-facing sources sections; preserve competitor and public issue references in the public research record.",
+        "Ordered procedures use renderer-supported bullet blocks. Removed raw Markdown markers from article prose.",
+        "Mirrored ChatGPT Computer Use, @-menu toggle versus Manage site permissions, and current update/restart/reinstall order in the actual Chinese exported copy and FAQ.",
+        "Mirrored Claude Code /login, same-account/organization and API-key restrictions plus inherited extension site permissions in Chinese; narrowed missing-prompt pause to modes/actions that should request confirmation.",
+        "Qualified Claude Skip all approvals to ordinary prompts and kept explicit protections or organization restrictions in scope in both locales.",
+        "Mirrored Manus cloud-computer/VS Code takeover boundary versus local Preferred Browser routing in the Chinese exported copy.",
+        "Converted Chrome model-control procedures to renderer-supported bullets in both exported locales; corrected source attribution/punctuation and Comet microphone description.",
+        "Final Claude locale-parity pass: Code requires the extension to use the same claude.ai account and organization, and the Chinese FAQ now distinguishes Code Edge/other-browser detection from the Chrome-only consumer side panel."
+      ]
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "d7a8d4323d0644887513e480ebe05013dbafa3ebe32107248feb08b038e2652c"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "ade4d981a99c773c3bf919cdbc048e457fdfa200a6de4d1d12f3215492703783"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1454,
+      "sitemapUrls": 1136,
+      "internalLinks": 50408,
+      "alternateLinks": 8150,
+      "fallbackPages": 60,
+      "editorialGuides": 268,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-10T01:44:05.590Z",
+      "status": "passed",
+      "existingTopicsPreserved": 129,
+      "existingTopicsUnchanged": 129,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 134,
+      "completeEditions": 268,
+      "newTopics": 5,
+      "keywordRows": 200,
+      "details": [
+        {
+          "slug": "chatgpt-chrome-extension-not-connecting",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "chatgpt-chrome-extension-not-connecting",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "claude-chrome-connection-permissions",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "claude-chrome-connection-permissions",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "manus-preferred-browser-routing",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "manus-preferred-browser-routing",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "chrome-on-device-ai-storage-controls",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "chrome-on-device-ai-storage-controls",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "comet-voice-mode-context-navigation",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "comet-voice-mode-context-navigation",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-10T01:47:12.031750+00:00",
+      "exitCode": 0,
+      "stdout": "/opt/browsertools/releases/20261110-094619\n",
+      "stderr": "",
+      "expected": "/opt/browsertools/releases/20261110-094619",
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-10T01:46:58.737Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/claude-chrome-connection-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/claude-chrome-connection-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/claude-chrome-connection-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/claude-chrome-connection-permissions/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/manus-preferred-browser-routing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/manus-preferred-browser-routing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/manus-preferred-browser-routing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/manus-preferred-browser-routing/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chrome-on-device-ai-storage-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chrome-on-device-ai-storage-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chrome-on-device-ai-storage-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chrome-on-device-ai-storage-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-voice-mode-context-navigation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-voice-mode-context-navigation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-voice-mode-context-navigation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-voice-mode-context-navigation/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-10T01:46:56.787Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-17T01:46:56.787000+00:00",
+      "14day": "2026-11-24T01:46:56.787000+00:00",
+      "28day": "2026-12-08T01:46:56.787000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-10",
+        "end": "2026-11-16",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-17T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-10",
+        "end": "2026-11-23",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-24T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-10",
+        "end": "2026-12-07",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-08T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "The November 9 read-only weekly performance and bounded AI observations remain the latest private measurement. No fresh account sampling today; publication effects require matching closed available windows.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
