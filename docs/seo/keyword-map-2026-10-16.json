@@ -7495,6 +7495,256 @@
         ],
         "distinctiveCoverage": "Opt-in history-topic cards, data lifecycle and sync controls; not live tabs, page permission, or Comet conversation deletion."
       }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-10",
+      "sourceRecord": "docs/seo/research-2026-11-10.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-17",
+        "14day": "2026-11-24",
+        "28day": "2026-12-08"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:chatgpt-chrome-extension-not-connecting",
+      "primaryKeyword": {
+        "en": "ChatGPT Chrome extension Work originating browser context error",
+        "zh-CN": "ChatGPT Chrome extension Work originating browser context error"
+      },
+      "intent": "Diagnose a reported ChatGPT Work error when the Chrome extension cannot provide the originating browser context; separate active-profile installation, site access, task surface, rollout/workspace state, and an unresolved service or extension issue.",
+      "demandEvidence": "A dated OpenAI Community report and Reddit post describe this error; each is a user report, not proof of a current outage or fix. No Search Console query/volume evidence was polled today.",
+      "originalGain": "Separates the specific originating-context failure from generic permission setup and from choosing a built-in/cloud browser. Gives safe profile/site/task checks and a support evidence packet without claiming a fix.",
+      "nearestOwners": [
+        "ai-browser-tab-access-permissions",
+        "chatgpt-desktop-browser-vs-comet",
+        "gemini-chrome-shared-tabs"
+      ],
+      "distinctiveCoverage": "Separates the specific originating-context failure from generic permission setup and from choosing a built-in/cloud browser. Gives safe profile/site/task checks and a support evidence packet without claiming a fix.",
+      "currentPrimarySource": "https://learn.chatgpt.com/docs/chrome-extension",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chatgpt-chrome-extension-not-connecting/",
+        "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-not-connecting/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "chatgpt-desktop-browser-vs-comet",
+          "gemini-chrome-shared-tabs"
+        ],
+        "distinctiveCoverage": "Separates the specific originating-context failure from generic permission setup and from choosing a built-in/cloud browser. Gives safe profile/site/task checks and a support evidence packet without claiming a fix."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-10",
+      "sourceRecord": "docs/seo/research-2026-11-10.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-17",
+        "14day": "2026-11-24",
+        "28day": "2026-12-08"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:claude-chrome-connection-permissions",
+      "primaryKeyword": {
+        "en": "Claude in Chrome permission_required without approval popup",
+        "zh-CN": "Claude in Chrome permission_required without approval popup"
+      },
+      "intent": "Diagnose a Claude in Chrome or Claude Code permission_required report when the expected approval prompt does not appear, keeping Chrome site access, Claude panel mode, org policy, and Claude Code connection separate.",
+      "demandEvidence": "A dated Reddit report and Claude Code issues report permission_required with no popup; community issue age and version scope do not establish a current widespread defect. No Search Console query/volume evidence was polled today.",
+      "originalGain": "Adds surface-specific triage for current classic/Cowork and Code routes; preserves an unresolved state where no prompt appears and warns against Skip approvals or destructive sign-out/reinstall.",
+      "nearestOwners": [
+        "claude-chrome-shortcuts-schedule",
+        "ai-browser-tab-access-permissions",
+        "browser-agent-human-takeover"
+      ],
+      "distinctiveCoverage": "Adds surface-specific triage for current classic/Cowork and Code routes; preserves an unresolved state where no prompt appears and warns against Skip approvals or destructive sign-out/reinstall.",
+      "currentPrimarySource": "https://support.claude.com/en/articles/12902446-claude-in-chrome-permissions-guide",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/claude-chrome-connection-permissions/",
+        "https://browserhub.co/zh-cn/guides/claude-chrome-connection-permissions/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "claude-chrome-shortcuts-schedule",
+          "ai-browser-tab-access-permissions",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Adds surface-specific triage for current classic/Cowork and Code routes; preserves an unresolved state where no prompt appears and warns against Skip approvals or destructive sign-out/reinstall."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-10",
+      "sourceRecord": "docs/seo/research-2026-11-10.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-17",
+        "14day": "2026-11-24",
+        "28day": "2026-12-08"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:manus-preferred-browser-routing",
+      "primaryKeyword": {
+        "en": "Manus Preferred Browser device routing",
+        "zh-CN": "Manus Preferred Browser device routing"
+      },
+      "intent": "Choose the authorized Chrome device with the sign-in, extensions, permissions, and network needed by a Manus Browser Operator task; determine how tasks started elsewhere use the preferred device and what may happen when it is offline.",
+      "demandEvidence": "Dated Manus user threads ask why some projects do not invoke Browser Operator or need a local browser; they are individual reports. Current official Preferred Browser documentation states account/rollout availability and possible fallback. No Search Console query/volume evidence was polled today.",
+      "originalGain": "Explains same-account cross-device start, preferred Chrome setup, online/open-browser conditions, and non-exclusive offline fallback without inventing device or account guarantees.",
+      "nearestOwners": [
+        "browser-agent-human-takeover",
+        "browser-use-existing-browser-session",
+        "gemini-auto-browse-local-vs-remote"
+      ],
+      "distinctiveCoverage": "Explains same-account cross-device start, preferred Chrome setup, online/open-browser conditions, and non-exclusive offline fallback without inventing device or account guarantees.",
+      "currentPrimarySource": "https://manus.im/blog/manus-preferred-browser",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/manus-preferred-browser-routing/",
+        "https://browserhub.co/zh-cn/guides/manus-preferred-browser-routing/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-human-takeover",
+          "browser-use-existing-browser-session",
+          "gemini-auto-browse-local-vs-remote"
+        ],
+        "distinctiveCoverage": "Explains same-account cross-device start, preferred Chrome setup, online/open-browser conditions, and non-exclusive offline fallback without inventing device or account guarantees."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-10",
+      "sourceRecord": "docs/seo/research-2026-11-10.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-17",
+        "14day": "2026-11-24",
+        "28day": "2026-12-08"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:chrome-on-device-ai-storage-controls",
+      "primaryKeyword": {
+        "en": "Chrome on-device Generative AI storage controls",
+        "zh-CN": "Chrome on-device Generative AI storage controls"
+      },
+      "intent": "Identify Chrome's supported On-device AI control when a reader finds weights.bin or sees model downloads; understand deletion/redownload behavior, per-user/device scope, feature effects, and the distinction between free-space eligibility and model size.",
+      "demandEvidence": "Chrome Help Community and dated technology coverage discuss background model downloads and storage. Current Google help is the primary instruction; public reports are not proof all devices have the same file or fixed size. No Search Console query/volume evidence was polled today.",
+      "originalGain": "Replaces risky file-deletion recipes with the current Settings > AI Innovations > On-device AI method; separates approximate 20 GB free-space eligibility from file size, notes other AI can remain, and routes managed devices to Enterprise policy.",
+      "nearestOwners": [
+        "brave-leo-byom-local-vs-hosted",
+        "firefox-ai-controls-chatbot-provider-boundary",
+        "gemini-in-chrome-vs-copilot-in-edge"
+      ],
+      "distinctiveCoverage": "Replaces risky file-deletion recipes with the current Settings > AI Innovations > On-device AI method; separates approximate 20 GB free-space eligibility from file size, notes other AI can remain, and routes managed devices to Enterprise policy.",
+      "currentPrimarySource": "https://support.google.com/chrome/answer/16961953?hl=en",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chrome-on-device-ai-storage-controls/",
+        "https://browserhub.co/zh-cn/guides/chrome-on-device-ai-storage-controls/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "brave-leo-byom-local-vs-hosted",
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "gemini-in-chrome-vs-copilot-in-edge"
+        ],
+        "distinctiveCoverage": "Replaces risky file-deletion recipes with the current Settings > AI Innovations > On-device AI method; separates approximate 20 GB free-space eligibility from file size, notes other AI can remain, and routes managed devices to Enterprise policy."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-10",
+      "sourceRecord": "docs/seo/research-2026-11-10.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-17",
+        "14day": "2026-11-24",
+        "28day": "2026-12-08"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:comet-voice-mode-context-navigation",
+      "primaryKeyword": {
+        "en": "Comet Voice Mode context navigation and browser actions",
+        "zh-CN": "Comet Voice Mode context navigation and browser actions"
+      },
+      "intent": "Tell Comet Voice Mode's spoken page-aware assistant and navigation workflow apart from speech dictation; confirm the current account/browser-control route before relying on a consequential web action.",
+      "demandEvidence": "A dated Windows user asks whether the voice update arrived; a March Reddit user reports improved naturalness but one misheard request. These are qualitative rollout/usability signals, not capability or performance tests. No Search Console query/volume evidence was polled today.",
+      "originalGain": "Clarifies voice context vs dictation and the boundary between spoken intent and account/task-specific browser control. Links to the current Comet control owner and avoids treating February launch notes as a current per-account guarantee.",
+      "nearestOwners": [
+        "comet-control-browser-missing",
+        "comet-query-shortcuts",
+        "ai-browser-organize-tabs-by-task"
+      ],
+      "distinctiveCoverage": "Clarifies voice context vs dictation and the boundary between spoken intent and account/task-specific browser control. Links to the current Comet control owner and avoids treating February launch notes as a current per-account guarantee.",
+      "currentPrimarySource": "https://www.perplexity.ai/changelog/comet-voice-mode-improvements",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-voice-mode-context-navigation/",
+        "https://browserhub.co/zh-cn/guides/comet-voice-mode-context-navigation/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-control-browser-missing",
+          "comet-query-shortcuts",
+          "ai-browser-organize-tabs-by-task"
+        ],
+        "distinctiveCoverage": "Clarifies voice context vs dictation and the boundary between spoken intent and account/task-specific browser control. Links to the current Comet control owner and avoids treating February launch notes as a current per-account guarantee."
+      }
     }
   ],
   "futureCandidates": [
@@ -7574,20 +7824,20 @@
     "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
   },
   "latestContentCycle": {
-    "date": "2026-11-07",
-    "cycleId": "content-2026-11-07",
+    "date": "2026-11-10",
+    "cycleId": "content-2026-11-10",
     "newTopics": [
-      "dia-skills-create-edit-reuse",
-      "comet-assistant-history-data-controls",
-      "perplexity-comet-google-drive-connector",
-      "comet-linux-browser-vs-local-computer",
-      "gemini-in-chrome-mobile-surfaces"
+      "chatgpt-chrome-extension-not-connecting",
+      "claude-chrome-connection-permissions",
+      "manus-preferred-browser-routing",
+      "chrome-on-device-ai-storage-controls",
+      "comet-voice-mode-context-navigation"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
-    "publicationEvidence": "Drafts prepared for independent review; no publication or traffic result claimed.",
-    "sourceRecord": "docs/seo/research-2026-11-07.json"
+    "publicationEvidence": "Drafts prepared for independent review; no release or live publication claimed.",
+    "sourceRecord": "docs/seo/research-2026-11-10.json"
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",

@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "project": "BrowserHub",
+  "status": "five-new-bilingual-core-AI-browser-themes-prepared-for-independent-review",
+  "baseline": {
+    "guides": 129,
+    "guideEditions": 258,
+    "keywordRowsBeforeAppend": 195,
+    "gitHead": "82320b3533fdf456eef803deefa17dca01821e5e"
+  },
+  "scope": {
+    "newThemes": 5,
+    "bilingualEditionsPerTheme": 2,
+    "existingOwnerRefreshes": 0,
+    "unchangedExistingOwners": 129,
+    "keywordRowsAfterAppend": 200
+  },
+  "measurement": {
+    "privateReadByRoot": true,
+    "latestAvailableReport": "The Nov 9 private measurement review is the latest available. It did not show proven growth; no new performance poll was run on Nov 10. Exact account data remains only in the private measurement workspace.",
+    "publicReporting": "No account-level Search Console counts or query rows are reproduced. Public questions and reports are qualitative only and do not establish BrowserHub site performance.",
+    "freshPerformancePollToday": false,
+    "nextPerformanceReview": "2026-11-16",
+    "searchVolumeKeywordDifficultyRankings": null
+  },
+  "selectionMethod": "Root checked all 129 keyword-map owners and actual nearby guide bodies, then approved five distinct operational questions. Existing owners remain unchanged. Core use is five of five new themes; English and Chinese count once per theme. Primary docs were inspected by root/reviewer/executor as attributed in source messages; competitor evidence is bounded, not an exhaustive crawl.",
+  "gapResearchLimits": [
+    "No Search Console query sampling or performance poll today.",
+    "No invented search volume, keyword difficulty, ranking, traffic forecast, or causal weighting.",
+    "Public questions indicate an individual problem, not demand size, prevalence, current incidence, or product failure.",
+    "Product instructions describe intended flows; no signed-in browser task was executed.",
+    "For Manus, the Preferred Browser article displays Tuesday, May 12 without a year; no year was assigned.",
+    "The Perplexity product note URL slug says February 27 while rendered page date is 26/02/26; use the displayed date February 26.",
+    "An ExtWise Manus extension page was attempted but inaccessible in the web reader; it is not used as an inspected page or fact source.",
+    "Private Search Console values and query rows remain in the .local measurement workspace; this public research record contains no raw account metrics."
+  ],
+  "editorialSkillsRead": [
+    "/Users/myd/.codex/skills/humanizer/SKILL.md",
+    "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+  ],
+  "process": "Research notes keep reader issue evidence, current primary product facts, adjacent owner gap, and competitor answer observations separate. Editorial body avoids demand/competitor methodology. All English/Chinese copies are structured EditorialGuideCopy objects with actual faq arrays.",
+  "themes": [
+    {
+      "slug": "chatgpt-chrome-extension-not-connecting",
+      "readerProblem": "ChatGPT Work says “Browser access requires the originating browser context” although Chrome and the extension appear connected; which current settings and task steps should be checked before reporting it?",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-tab-access-permissions",
+          "chatgpt-desktop-browser-vs-comet",
+          "gemini-chrome-shared-tabs"
+        ],
+        "inspection": "Root checked all 129 current owners and adjacent bodies. The generic permissions guide covers product permission layers and the comparison explains separate browser surfaces; neither has the current Settings > Computer Use > Manage/Install triage, browser @ toggle, active profile, fresh Work chat, and official error recovery order."
+      },
+      "gain": "Document the official Settings > Computer Use setup and first checks; distinguish Install from Manage and the browser @ toggle from site permissions; verify profile and fresh Work task; keep unresolved context failures unresolved and give a safe support packet.",
+      "primaryFacts": [
+        "Current ChatGPT Learn docs specify the supported browser extension surfaces, Settings > Computer Use setup, Manage vs Install, browser @-menu toggle, and troubleshooting order.",
+        "OpenAI error help is generic and does not establish a cause for this browser-specific context error.",
+        "A related openai/codex report is a separate product surface and is not treated as a reproduced ChatGPT consumer-app defect."
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chatgpt-chrome-extension-not-connecting/",
+        "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-not-connecting/"
+      ],
+      "demandEvidence": {
+        "type": "qualitative-dated-user-reports",
+        "evidence": [
+          "OpenAI Community report of originating browser-context failure in Work",
+          "Reddit report of the same symptom with a Chrome extension"
+        ],
+        "limits": "Individual posts only; they do not establish a current outage, product-wide prevalence, cause, or universal fix. No Search Console query or volume data was polled today."
+      },
+      "publicReaderProblemEvidence": [
+        "https://community.openai.com/t/chatgpt-chrome-extension-is-enabled-but-browser-access-fails-in-work-mode/1410232",
+        "https://www.reddit.com/r/ChatGPT/comments/1xgx94f/chatgpt_chrome_extension_suddenly_stopped_working/"
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://learn.chatgpt.com/docs/chrome-extension",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/browser",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://help.openai.com/en/articles/7996703-troubleshooting-chatgpt-error-messages",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.tomsguide.com/ai/openai-is-shutting-down-its-ai-browser-heres-how-to-get-its-best-features-in-google-chrome",
+          "observed": "2026-11-10",
+          "note": "General ChatGPT Chrome installation and page-access walkthrough; does not cover current Work originating-context diagnosis.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.techradar.com/ai-platforms-assistants/chatgpt-has-a-new-chrome-integration-i-put-it-to-the-test-to-see-if-it-really-makes-browsing-better",
+          "observed": "2026-11-10",
+          "note": "Feature review of the Chrome integration, not the exact current Settings > Computer Use troubleshooting path.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Previously reviewed broad AI-browser comparison; it is not a troubleshooting answer for this error.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        }
+      ]
+    },
+    {
+      "slug": "claude-chrome-connection-permissions",
+      "readerProblem": "Claude reports permission_required or a site needs approval, but the expected approval prompt does not appear; determine whether the caller is consumer Chrome side panel, Cowork, or Claude Code and identify the matching permission path.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "claude-chrome-shortcuts-schedule",
+          "ai-browser-tab-access-permissions",
+          "browser-agent-human-takeover"
+        ],
+        "inspection": "Root/reviewer compared the actual Nov 9 Claude shortcuts/schedules guide and common access/takeover owners. They cover scheduling and generic boundaries, not permission-required without a prompt. The new page preserves the existing logout-loss warning without changing that owner."
+      },
+      "gain": "Scope consumer side-panel Chrome instructions separately from Claude Code browser support; explain classic Manual plan versus Cowork per-action prompts, the approved-sites history path, inherited Code site-level permissions, organization policy, and a safe stop when expected approval is absent.",
+      "primaryFacts": [
+        "Consumer Get started guide says the Claude in Chrome side-panel walkthrough is for Google Chrome and excludes other Chromium browsers and mobile devices.",
+        "Claude Code docs describe separate Chrome and Edge integration, detection in Brave/Arc/Vivaldi/Opera, and inherited site-level extension permissions.",
+        "Manual classic starts with a plan; Cowork Manual does not present an upfront plan and asks per action; Auto can proceed without asking for every step.",
+        "Approved sites/history is under extension menu > Extension settings > Permissions; mode is selected from chat input; organization allow/block controls are separate.",
+        "Logout may remove saved shortcuts/schedules; preserved existing owner warning."
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/claude-chrome-connection-permissions/",
+        "https://browserhub.co/zh-cn/guides/claude-chrome-connection-permissions/"
+      ],
+      "demandEvidence": {
+        "type": "qualitative-dated-support-questions",
+        "evidence": [
+          "Dated Reddit post reports permission_required with no popup",
+          "Claude Code issue discussions report missing approval UI for a distinct Code surface"
+        ],
+        "limits": "Posts are scoped reports, not proof of a present regression or common cause. Do not copy community workarounds; no Search Console query or volume data was polled today."
+      },
+      "publicReaderProblemEvidence": [
+        "https://www.reddit.com/r/ClaudeCowork/comments/1t5pbtt/claude_in_chrome_permission_required_error_on_all/",
+        "https://github.com/anthropics/claude-code/issues/56787"
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/12902446-claude-in-chrome-permissions-guide",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://support.claude.com/en/articles/12902405-claude-in-chrome-troubleshooting",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://code.claude.com/docs/en/chrome",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.techradar.com/ai-platforms-assistants/claude/i-tried-the-new-claude-in-chrome-extension-and-it-delivered-convenience-with-a-side-of-digital-paranoia",
+          "observed": "2026-11-10",
+          "note": "Extension experience/review; does not diagnose an absent approval prompt.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1vy8wn1/claude-in-chrome-always-allow-actions-on-this/",
+          "observed": "2026-11-10",
+          "note": "Dated configuration complaint; not an authoritative fix and different from missing prompt symptom.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1tct4ev/how_does_one_get_the_claude_chrome_plugin_to_work/",
+          "observed": "2026-11-10",
+          "note": "Dated setup question; not product documentation or proof of current defect.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        }
+      ]
+    },
+    {
+      "slug": "manus-preferred-browser-routing",
+      "readerProblem": "A Manus task launched from another computer does not use the browser session with the needed website sign-in, extension, permissions, or network; choose and check the preferred Chrome device and understand offline fallback.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "browser-agent-human-takeover",
+          "browser-use-existing-browser-session",
+          "gemini-auto-browse-local-vs-remote"
+        ],
+        "inspection": "Root checked the full owner list and actual nearby bodies; no Manus-specific owner exists. The existing human-takeover guide covers approval boundaries, and local/remote guides discuss other products rather than Manus Preferred Browser device routing."
+      },
+      "gain": "Explain authorized Chrome setup, same Manus account on both computers, open/online preferred device, account/rollout availability, and fallback to another authorized browser; distinguish local Preferred Browser from cloud-computer takeover.",
+      "primaryFacts": [
+        "Preferred Browser setup requires Browser Operator installed, Manus login and authorization on the selected Chrome, a simple initial task, and My Browser preference selection.",
+        "Same Manus account is used when starting from another computer; Chrome stays open and the preferred device remains online.",
+        "Availability may vary by account and rollout; if preferred device is unavailable Manus may fall back to another authorized browser, so preference is not an exclusive lock.",
+        "Manus Help takeover describes cloud computer or VS Code, not repair of local Preferred Browser routing."
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/manus-preferred-browser-routing/",
+        "https://browserhub.co/zh-cn/guides/manus-preferred-browser-routing/"
+      ],
+      "demandEvidence": {
+        "type": "qualitative-user-questions-and-current-product-change",
+        "evidence": [
+          "Two dated Manus user threads ask about Browser Operator invocation and local browser use",
+          "Current Preferred Browser product guide explicitly documents cross-computer start and fallback"
+        ],
+        "limits": "Individual posts do not establish task failure prevalence. The Preferred Browser page displays Tuesday, May 12 without a year; no date is inferred. No Search Console query or volume data was polled today."
+      },
+      "publicReaderProblemEvidence": [
+        "https://www.reddit.com/r/ManusOfficial/comments/1r5dfj0/cant_get_manus_to_use_chrome_browser_operator/",
+        "https://www.reddit.com/r/ManusOfficial/comments/1so0i8v/local_browser_use/"
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://manus.im/blog/manus-preferred-browser",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://manus.im/en/blog/manus-browser-operator",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://help.manus.im/en/articles/11711218-how-can-i-take-over-manus-browser-or-vs-code",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.tooltivity.com/extensions/manus-ai",
+          "observed": "2026-11-10",
+          "note": "Third-party Browser Operator review with feature and security framing; not authority for preferred-device availability.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://note.com/ishitani/n/n3411d2f43887?hl=en",
+          "observed": "2026-11-10",
+          "note": "Independent Preferred Browser feature walkthrough; notes device with an existing login/extensions, but official docs govern exact availability/fallback.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Previously inspected broad AI-browser comparison; not a device-routing support guide.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        }
+      ]
+    },
+    {
+      "slug": "chrome-on-device-ai-storage-controls",
+      "readerProblem": "Chrome storage or network usage rises and a user finds weights.bin or background model downloads; use the supported user-facing setting and understand what it removes, prevents, and leaves enabled.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "brave-leo-byom-local-vs-hosted",
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "gemini-in-chrome-vs-copilot-in-edge"
+        ],
+        "inspection": "Root checked all 129 owners. Existing AI privacy and browser comparison pages do not show Chrome consumer On-device AI storage control, the current deletion/redownload effect, per-user/device scope, or the distinction between ~20 GB free-space eligibility and model file size."
+      },
+      "gain": "Route consumers to Settings > AI Innovations > On-device AI; explain that turning it off deletes local model files and prevents redownload while off, while some other AI features may continue; clarify 20 GB is approximate free-space eligibility rather than model size and separate API-specific docs.",
+      "primaryFacts": [
+        "Google Chrome Help calls Settings > AI Innovations > On-device AI the only supported consumer management method.",
+        "Turning the option off deletes local generative model files and prevents redownload while off; some other AI can continue to operate.",
+        "Settings are per user and device; managed devices may be governed by enterprise policy.",
+        "Approximate 20 GB free disk is an eligibility condition, not the weights.bin size. Developer API setup is a separate API-specific route."
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chrome-on-device-ai-storage-controls/",
+        "https://browserhub.co/zh-cn/guides/chrome-on-device-ai-storage-controls/"
+      ],
+      "demandEvidence": {
+        "type": "qualitative-dated-storage-question-and-current-help",
+        "evidence": [
+          "Dated Chrome Community question about background downloads/bandwidth",
+          "2026 public coverage and user reports identify weights.bin/storage concerns"
+        ],
+        "limits": "Reports do not prove every profile downloads the same file or fixed size. The approximate free-space requirement is not the model size and is not a promise of disk reclamation. No Search Console query or volume data was polled today."
+      },
+      "publicReaderProblemEvidence": [
+        "https://support.google.com/chrome/thread/450737150/issue-fresh-chrome-install-is-maxing-out-my-entire-internet-bandwidth-downloading-in-background?hl=en",
+        "https://support.google.com/chrome/thread/412758821/chrome-is-constanly-creating-crx3-and-tmp-files?hl=en"
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.google.com/chrome/answer/16961953?hl=en",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://developer.chrome.com/docs/ai/get-started",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://chromeenterprise.google/intl/en_au/policies/gen-ai-local-foundational-model-settings/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.pcworld.com/article/3266103/dont-use-gemini-nano-in-chrome-delete-this-file-reclaim-up-to-4gb.html",
+          "observed": "2026-11-10",
+          "note": "Coverage discusses weights.bin and approximate 4 GB reporting; not authoritative for current supported controls or exact file size.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/check-your-storage-chrome-may-be-downloading-a-4gb-ai-model-heres-what-we-know",
+          "observed": "2026-11-10",
+          "note": "Storage-focused coverage; its older settings/flags discussion is superseded for supported management by current Chrome Help.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.itechguides.com/how-to-remove-chromes-downloaded-on-device-ai-models/",
+          "observed": "2026-11-10",
+          "note": "Removal instructions are third-party and may not match the current Settings path; no manual file deletion recipe is repeated.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        }
+      ]
+    },
+    {
+      "slug": "comet-voice-mode-context-navigation",
+      "readerProblem": "A Comet user wants to ask about the page or navigate across tabs by voice and needs to distinguish Voice Mode from ordinary dictation, start and stop it correctly on desktop, and verify separate browser-action availability.",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "comet-control-browser-missing",
+          "comet-query-shortcuts",
+          "ai-browser-organize-tabs-by-task"
+        ],
+        "inspection": "Root/reviewer checked actual neighboring Comet pages. Control Browser covers the Assistant/Computer action route, query shortcuts cover text prompts, and tab organization covers manual context; none explains voice page context, desktop controls/shortcuts, and voice versus dictation."
+      },
+      "gain": "Describe current Voice Mode toolbar and Mac/Windows shortcuts, listening/mute/stop indicators, tab context, and the separate action permission boundary. Treat rollout notes as historical, not an account availability guarantee; do not apply desktop shortcuts to Android.",
+      "primaryFacts": [
+        "Current Perplexity Help documents desktop toolbar Voice Mode, Mac Option+Shift+V and Windows Alt+Shift+V; panel starts listening immediately, microphone icon mutes/unmutes, headphone icon mutes mic and speaker, right-side stop control ends/closes session.",
+        "Voice Mode can maintain page context across tabs per current Help/product notes; desktop shortcut is not claimed for Android.",
+        "Voice discussion/context does not imply every account can execute every browser action; check the separate current Work with Browsers and Apps path.",
+        "A Perplexity product update URL slug names February 27, but page display is 26/02/26; state displayed date."
+      ],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-voice-mode-context-navigation/",
+        "https://browserhub.co/zh-cn/guides/comet-voice-mode-context-navigation/"
+      ],
+      "demandEvidence": {
+        "type": "qualitative-dated-feature-questions-and-usability-report",
+        "evidence": [
+          "February Windows user asked whether updated voice controls had arrived",
+          "March user described a misheard request",
+          "Perplexity Help current voice instructions last modified September 14, 2026"
+        ],
+        "limits": "Individual dated reports are not volume, performance tests, or a current rollout measure. Changelog slug says February 27 while page displays 26/02/26; article labels displayed date as February 26. No Search Console query or volume data was polled today."
+      },
+      "publicReaderProblemEvidence": [
+        "https://www.reddit.com/r/PerplexityComet/comments/1rg5rub/has_anyone_received-the-new-voice-feature-update/",
+        "https://www.reddit.com/r/perplexity_ai/comments/1rwe3c2/voice_mode_in_comet_is_such-a-life-saver/"
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://www.perplexity.ai/help-center/comet/en/articles/13860420-voice-mode",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://www.perplexity.ai/changelog/comet-voice-mode-improvements",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/changelog/what-we-shipped---february-27-2026",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/19800006-work-with-browsers-and-apps",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-10",
+          "claimScope": "Product facts scoped to page; account rollout/eligibility is not generalized."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.digitalcitizen.life/how-to-use-voice-mode-in-comet-browser/",
+          "observed": "2026-11-10",
+          "note": "Task guide focuses on starting voice; current Perplexity Help is authoritative for controls and UI details.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/perplexity/how-to-use-perplexity-comet",
+          "observed": "2026-11-10",
+          "note": "General Comet onboarding, not a detailed distinction between voice context and account/task browser control.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        },
+        {
+          "url": "https://app.therundown.ai/guides/exploring-how-comet-works-perplexitys-ai-browser",
+          "observed": "2026-11-10",
+          "note": "Broad Comet introduction; does not establish current per-account action eligibility.",
+          "evidenceType": "opened-public-page-or-retained-Nov-5-review"
+        }
+      ]
+    }
+  ],
+  "executor": {
+    "role": "research_and_content_executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "reasoningEffortEffective": null,
+    "selectionSource": "role_default",
+    "attempts": 1
+  },
+  "reviewer": {
+    "role": "independent_content_reviewer",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "selectionSource": "role_default",
+    "status": "pending final byte review"
+  },
+  "preReviewRevisions": [
+    "Added ChatGPT’s current Computer Use setup and troubleshooting order, distinguished Manage/Install and browser visibility toggle/site permissions.",
+    "Clarified consumer Claude side-panel browser scope versus Claude Code browser support; corrected inherited site permission language; preserved classic and Cowork Manual differences; exact approved-sites path; removed mode/site claims from Extension settings.",
+    "Manus manual takeover article is scoped to the cloud computer or VS Code, separate from local Preferred Browser routing. Removed inaccessible /uk connector page.",
+    "Chrome on-device settings use current consumer Help; separate API-specific and enterprise sources; 20 GB is free-space eligibility, not file size. No manual deletion procedure.",
+    "Comet current Help Center is linked directly; described desktop toolbar/shortcuts and exact controls. No desktop shortcut transferred to Android. Product update date labeled as displayed February 26.",
+    "Removed competitor and demand-methodology commentary from reader-facing sources sections; preserve competitor and public issue references in the public research record.",
+    "Ordered procedures use renderer-supported bullet blocks. Removed raw Markdown markers from article prose.",
+    "Mirrored ChatGPT Computer Use, @-menu toggle versus Manage site permissions, and current update/restart/reinstall order in the actual Chinese exported copy and FAQ.",
+    "Mirrored Claude Code /login, same-account/organization and API-key restrictions plus inherited extension site permissions in Chinese; narrowed missing-prompt pause to modes/actions that should request confirmation.",
+    "Qualified Claude Skip all approvals to ordinary prompts and kept explicit protections or organization restrictions in scope in both locales.",
+    "Mirrored Manus cloud-computer/VS Code takeover boundary versus local Preferred Browser routing in the Chinese exported copy.",
+    "Converted Chrome model-control procedures to renderer-supported bullets in both exported locales; corrected source attribution/punctuation and Comet microphone description.",
+    "Final Claude locale-parity pass: Code requires the extension to use the same claude.ai account and organization, and the Chinese FAQ now distinguishes Code Edge/other-browser detection from the Chrome-only consumer side panel."
+  ],
+  "exclusions": {
+    "noSearchVolumeOrRankingsInvented": true,
+    "noPrivateAnalyticsInPublicCopy": true,
+    "noFreshAnalyticsPoll": true,
+    "noOldOwnerEdits": true,
+    "noIndexSubmission": true,
+    "noOutreach": true,
+    "noClientOrBackendChanges": true,
+    "noHandsOnProductTestingClaim": true,
+    "noPaidToolsOrAPIs": true
+  },
+  "sourceRecords": [
+    "docs/seo/leadership-plan-2026-11-04.json",
+    "docs/seo/workflow-delivery-2026-11-09.json",
+    "docs/seo/competitive-review-2026-11-05.json",
+    "docs/seo/keyword-map-2026-10-16.json",
+    "src/data/ai-cycle-2026-11-10.ts",
+    "https://support.google.com/chrome/answer/16961953?hl=en",
+    "https://support.claude.com/en/articles/12902446-claude-in-chrome-permissions-guide",
+    "https://manus.im/blog/manus-preferred-browser",
+    "https://www.perplexity.ai/help-center/comet/en/articles/13860420-voice-mode"
+  ],
+  "validation": {
+    "status": "runtime copy assertions passed; private content contract passed; TypeScript project check passed; independent reviewer final review pending",
+    "contentContract": {
+      "topics": 5,
+      "editions": 10,
+      "minimumVisibleChars": {
+        "en": 4500,
+        "zh-cn": 2200
+      },
+      "rendererSectionsPerEdition": 7,
+      "faqPerEdition": 5,
+      "oldOwnersPreserved": 129,
+      "oldOwnersByteUnchanged": 129,
+      "keywordRows": 200
+    },
+    "runtimeCopyAssertions": "Targeted EN/ZH exported-copy corrections were verified from aiCycleTranslations10; before/after exports and private diff are retained in .local/workflows/cycles/content-2026-11-10/",
+    "typecheck": "npx tsc --noEmit exit 0",
+    "independentReview": "pending final review of updated exported Claude copy"
+  }
+}
