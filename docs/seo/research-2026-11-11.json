@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "project": "BrowserHub",
+  "status": "five-new-bilingual-core-AI-browser-themes-prepared-for-independent-review",
+  "baseline": {
+    "guides": 134,
+    "guideEditions": 268,
+    "keywordRowsBeforeAppend": 200,
+    "gitHead": "49a19b053af383f4bf1f8918401f54a8a5970909"
+  },
+  "scope": {
+    "newThemes": 5,
+    "bilingualEditionsPerTheme": 2,
+    "existingOwnerRefreshes": 0,
+    "unchangedExistingOwners": 134,
+    "guidesAfterAppend": 139,
+    "guideEditionsAfterAppend": 278,
+    "keywordRowsAfterAppend": 205
+  },
+  "measurement": {
+    "latestAvailableReport": "November 9 private measurement review remains the latest. No fresh analytics were polled on November 11; the pending November 4 cohort is not available for today's decision.",
+    "publicReporting": "No account-level Search Console counts, queries, or customer data are reproduced. Public questions are qualitative only and do not establish BrowserHub performance.",
+    "freshPerformancePollToday": false,
+    "nextPerformanceReview": "2026-11-12 08:00 UTC plus report availability",
+    "searchVolumeKeywordDifficultyRankings": null
+  },
+  "selectionMethod": "Root and reviewer checked the 134 existing owner map entries and actual nearby bodies before approving five distinct operational intents. The five topics are task-specific AI-browser use, not phases of the five November 10 owners. Each topic counts once across English and Chinese. No old owner was refreshed.",
+  "researchLimits": [
+    "No search volume, keyword difficulty, rankings, traffic forecasts, popularity, or causal performance claims were invented.",
+    "Public reports indicate individual questions only; they do not establish prevalence, a product-wide defect, or current outage.",
+    "Competitor pages reused from the November 5 review are labeled with that observation date and their broad relevance; they do not answer the exact product settings or task in each new guide.",
+    "Product instructions are attributed to current vendor sources. No signed-in product session, extension, or iPhone task was run by BrowserHub.",
+    "Some public-reader surfaces rendered relative dates that differed from search-rendered dates. Where an exact date was not retained, no publication date is asserted."
+  ],
+  "competitorSetFromNov5Review": [
+    {
+      "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+      "observed": "2026-11-05",
+      "note": "Broad AI-browser comparison. Useful as category framing, not a product-specific settings or task answer."
+    },
+    {
+      "url": "https://zapier.com/blog/best-ai-browser/",
+      "observed": "2026-11-05",
+      "note": "Broad selection guide; does not document the current product-specific controls covered by these pages."
+    },
+    {
+      "url": "https://toolchase.com/blog/best-ai-browsers-2026/",
+      "observed": "2026-11-05",
+      "note": "Broad product comparison; exact task instructions and source boundaries are limited."
+    },
+    {
+      "url": "https://ryza.si/guides/best-ai-browser",
+      "observed": "2026-11-05",
+      "note": "Broad buyer guidance; not an answer to the selected troubleshooting and page-task intents."
+    },
+    {
+      "url": "https://www.tomsguide.com/ai/perplexity/how-to-use-perplexity-comet",
+      "observed": "2026-11-05",
+      "note": "Comet onboarding walkthrough; adjacent to browser task choices, not the selected products' current controls."
+    }
+  ],
+  "themes": [
+    {
+      "slug": "notion-agent-web-browsing-access",
+      "readerProblem": "A Notion Agent says web browsing is disabled. Which workspace and Agent controls apply, and does a search answer mean it can open a page or share a local Chrome session?",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-vs-ai-search-engine",
+          "browser-agent-human-takeover"
+        ],
+        "inspection": "Reviewer compared the actual nearby owners. They discuss generic tab permissions, search versus browsing, and human handoff; none gives Notion's current two-level settings and account-role condition."
+      },
+      "gain": "Separate the workspace owner/admin control for Enterprise or account-managed workspaces from the current Agent's Web browsing setting; explain search versus page actions and the built-in browser's login handoff without implying local Chrome access.",
+      "primaryFacts": [
+        "Notion says that if the workspace is Enterprise or works with an account manager, a workspace owner or admin may need to enable Enable web browsing for computer; most plans default to on.",
+        "The Agent has a separately documented Notion AI > Web browsing setting. The documentation does not establish a separate switch for every custom Agent or an inherited local Chrome profile.",
+        "Notion describes browser takeover for sign-in, says credentials entered in the browser are not saved by Notion as passwords, and notes browser cookies may preserve a session."
+      ],
+      "publicReaderProblemEvidence": [
+        {
+          "url": "https://www.reddit.com/r/Notion/comments/1wrqszo/why_does_notion_think_browser_access_is_disabled/",
+          "observed": "2026-11-11",
+          "publicationDate": "not asserted",
+          "note": "Individual question about the disabled-browser message; not evidence of broad incidence or a universal fix."
+        }
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://www.notion.com/en-gb/help/turn-on-web-browser-for-notion-agent",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Current workspace/Agent settings and browser sign-in handoff."
+        },
+        {
+          "url": "https://www.notion.com/en-gb/help/notion-agent",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Built-in Agent computer context."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad comparison; no Notion-specific disabled-access workflow."
+        },
+        {
+          "url": "https://zapier.com/blog/best-ai-browser/",
+          "observed": "2026-11-05",
+          "note": "Broad selection guidance; no Notion workspace role and Agent-switch sequence."
+        },
+        {
+          "url": "https://toolchase.com/blog/best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad product comparison; does not explain Notion's separate controls."
+        }
+      ]
+    },
+    {
+      "slug": "dia-ai-content-data-controls",
+      "readerProblem": "Does Dia send page context to providers, use it to improve Dia, process it proactively for Morning Brief, or protect it through Sync—and which setting changes which path?",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "comet-assistant-history-data-controls",
+          "brave-leo-byom-local-vs-hosted",
+          "opera-ai-page-content-permission"
+        ],
+        "inspection": "Reviewer compared actual adjacent bodies. They cover another product's history, local/hosted models, and page permission; none maps Dia's improvement-sharing switch against provider processing, Morning Brief, local storage, Sync, and shared-data retention."
+      },
+      "gain": "Map provider processing, default-on content improvement and its opt-out, proactive Morning Brief, local records, Sync, and the scope of Dia’s passive sensitive-site filter.",
+      "primaryFacts": [
+        "Dia says prompts and relevant page context may pass through its servers and an Atlassian gateway to providers; provider agreements prohibit training on submitted data and retention beyond processing needed to answer.",
+        "Dia's own content-improvement sharing is on by default; Settings > Privacy > Share content data to help improve Dia opts out. Dia describes the shared improvement data as unlinked and retained for 30 days.",
+        "Morning Brief can prepare information proactively. Dia describes local browser data by default and Sync as end-to-end encrypted; Sync's claim does not cover AI inference."
+      ],
+      "publicReaderProblemEvidence": [
+        {
+          "url": "https://www.reddit.com/r/diabrowser/comments/1x2b99j/what_does_dia_send_to_ai-providers-from-sites/",
+          "observed": "2026-11-11",
+          "publicationDate": "not asserted",
+          "note": "Question asks what Dia sends and whether Morning Brief processes data without a prompt; qualitative clue only."
+        }
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://www.diabrowser.com/security",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Provider routing, Morning Brief, improvement sharing, local data, Sync, and limits of passive sensitive-site filtering."
+        },
+        {
+          "url": "https://www.diabrowser.com/privacy",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Privacy terms and stated retention for shared improvement content."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad browser comparison; no Dia-specific processing/control matrix."
+        },
+        {
+          "url": "https://zapier.com/blog/best-ai-browser/",
+          "observed": "2026-11-05",
+          "note": "Broad selection article; does not separate Dia provider processing from improvement sharing and Sync."
+        },
+        {
+          "url": "https://ryza.si/guides/best-ai-browser",
+          "observed": "2026-11-05",
+          "note": "Broad category guide; no current Dia settings path or retention scope."
+        }
+      ]
+    },
+    {
+      "slug": "firefox-ios-reader-ai-summary-controls",
+      "readerProblem": "Firefox on iPhone unexpectedly opens a page summary, or the reader wants Reader View without a shake-triggered summary. Which gesture and setting can be changed while keeping the other feature?",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "ai-browser-youtube-summary",
+          "ai-browser-webpage-translation"
+        ],
+        "inspection": "The existing Firefox owner covers desktop AI/provider controls, not iOS Reader View gestures and Page Summaries settings. The other owners cover different content tasks."
+      },
+      "gain": "Separate Shake to Summarize from Summarize Pages; give the exact icon tap/hold behavior and settings route; retain Mozilla's different device paths, limits, rollout, and conflicting language statements without importing desktop controls.",
+      "primaryFacts": [
+        "Mozilla says tapping the page-with-thunderbolt icon creates a summary; touching and holding that icon opens Reader View.",
+        "Settings > Page Summaries separates Shake to Summarize from Summarize Pages; disabling the main feature disables all summary actions.",
+        "Mozilla describes on-device Apple Intelligence for iPhone 15 Pro or later with iOS 26 or later, and a hosted Mistral Small 3.1 path for other supported devices; the page lists limits, progressive rollout, and Remote Improvements.",
+        "The help page's feature description lists seven languages while its FAQ says English-only; the inconsistency is attributed, not resolved by inference.",
+        "Mozilla Privacy Notice scopes its requested-summary data statement to the summary request; it does not imply that all Firefox data flows are local or absent.",
+        "For Firefox 148+, Remote Improvements is separate from telemetry and regular updates; turning it off stops remote fixes and progressive rollouts."
+      ],
+      "publicReaderProblemEvidence": [
+        {
+          "url": "https://www.reddit.com/r/firefox/comments/1qqk34u/reader_mode/",
+          "observed": "2026-11-11",
+          "publicationDate": "2026-01-29 as displayed in root's retained search; reply dates are not used",
+          "note": "Reader-mode question/reply includes the narrow interaction issue; not product documentation."
+        },
+        {
+          "url": "https://www.reddit.com/r/firefox/comments/1nizgsp/",
+          "observed": "2026-11-11",
+          "publicationDate": "2025-09-17 for original post; replies extend later",
+          "note": "Reader-mode discussion; individual reports only."
+        }
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.mozilla.org/en-US/kb/summarize-pages-ios",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Current Firefox iOS summary controls and stated limits."
+        },
+        {
+          "url": "https://support.mozilla.org/en-US/kb/remote-improvements",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Firefox 148+ iOS toggle path; turning off stops remote fixes and progressive feature rollouts, but not regular updates."
+        },
+        {
+          "url": "https://www.mozilla.org/en-US/privacy/firefox/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Privacy Notice effective May 4, 2026: for a requested summary, compatible systems process it on-device; otherwise submitted page content is sent to a Mozilla server. Mozilla says it does not store the submitted page content or resulting summary. This is scoped to requested-summary processing, not all Firefox data or logs."
+        },
+        {
+          "url": "https://support.mozilla.org/en-US/kb/ios-ai-controls",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "displayedUpdated": "2026-05-25",
+          "claimScope": "Mozilla iOS AI Controls page; on-device versus Mozilla-hosted summary paths and statement that personal browsing data is not used to train AI models."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad product comparison; does not explain Firefox iOS Reader/summary gestures."
+        },
+        {
+          "url": "https://toolchase.com/blog/best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad buyer guide; no iOS settings path or gesture control."
+        },
+        {
+          "url": "https://ryza.si/guides/best-ai-browser",
+          "observed": "2026-11-05",
+          "note": "Broad AI-browser guide; no Firefox iOS summary controls."
+        }
+      ]
+    },
+    {
+      "slug": "genspark-chrome-extension-page-task-boundary",
+      "readerProblem": "Should a task start from the page already open in Chrome, using Genspark's extension, or from a separate Genspark Browser environment—and how should the reader verify page context, automation, and credits?",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-tab-access-permissions",
+          "comet-extension-compatibility",
+          "browser-agent-human-takeover"
+        ],
+        "inspection": "Nearby owners cover generic tab permissions, another product's extension, and human handoff. They do not answer Genspark's extension-specific current-page workflow, vendor data statement, session history, and credit path."
+      },
+      "gain": "Distinguish the extension's current-page analysis and automation from a separate browser environment; attribute the extension privacy statement to Genspark; give setup and credit-history checks without asserting feature parity or per-task costs.",
+      "primaryFacts": [
+        "Genspark's Chrome extension help documents current-page analysis and browser automation, and states that active-use page capture does not transmit browsing data in the background.",
+        "The help page says sidebar history lasts during the session and points longer-term retention to the Privacy Policy.",
+        "Installation is free; extension use consumes credits under the current account allowance. Clicking Credits opens /credit-usage; Billing covers plan/payment; records may lag hours.",
+        "The help's extension data-handling statement is vendor-authored and is not described as an independent audit."
+      ],
+      "publicReaderProblemEvidence": [
+        {
+          "url": "https://www.reddit.com/r/genspark_ai/comments/1uyf0z1/credits_whats_free_what_isnt_and_answers_to_the/",
+          "observed": "2026-11-11",
+          "publicationDate": "reader displayed 4 months ago; exact date not independently established",
+          "note": "The post discusses credit-free AI Chat versus metered agent products, rates, failed generations, and replenishment. The author u/Henry-Genspark self-identifies as a team member; this is not independent extension usage or popularity evidence. Current official credits help governs product facts."
+        }
+      ],
+      "demandEvidenceLimits": "This team-authored credit discussion is a qualitative clue that credit boundaries prompt questions, not independent demand or extension-specific evidence. No prevalence or search volume is inferred.",
+      "pagesInspected": [
+        {
+          "url": "https://www.genspark.ai/helpcenter/chrome-extension",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Extension page context, automation, session history, and vendor data-access description."
+        },
+        {
+          "url": "https://www.genspark.ai/helpcenter/credits-guide",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Usage balance/history route and current credits guidance; no extension task cost is inferred."
+        },
+        {
+          "url": "https://www.genspark.ai/privacy",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Privacy policy for the broader account/product boundary."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://zapier.com/blog/best-ai-browser/",
+          "observed": "2026-11-05",
+          "note": "Broad AI-browser choice guidance; not the extension's current-page and credit workflow."
+        },
+        {
+          "url": "https://www.tomsguide.com/ai/perplexity/how-to-use-perplexity-comet",
+          "observed": "2026-11-05",
+          "note": "Comet onboarding, not Genspark extension/standalone context or credits."
+        },
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad product comparison; does not document Genspark extension credit tracking."
+        }
+      ]
+    },
+    {
+      "slug": "safari-iphone-webpage-summary",
+      "readerProblem": "How do I summarize the webpage currently open in iPhone Safari, and what should I check when Page Menu > Summarize is missing?",
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-webpage-translation",
+          "ai-browser-youtube-summary",
+          "firefox-ios-reader-ai-summary-controls"
+        ],
+        "inspection": "Reviewer compared the actual nearby PDF, translation, search, and Firefox mobile owners. None explains Apple's current iPhone Safari Page Menu action and its site/device/language eligibility gates. Firefox is kept as a related task link, not a repeated comparison theme."
+      },
+      "gain": "Give the current Page Menu > Summarize path for the open page, separate supported-site from device/iOS/language/region eligibility, use Apple's version selector if labels differ, and distinguish Siri URL requests and Writing Tools as other surfaces.",
+      "primaryFacts": [
+        "Apple's current iPhone guide says Page Menu > Summarize is shown only for websites that support it.",
+        "The iOS 27 guide lists iPhone 15 Pro/Pro Max and iPhone 16 models or later, supported language/region, and possible usage limits.",
+        "Apple availability says eligible updated devices receive Apple Intelligence automatically; device and Siri languages must match, and a new Siri language must finish downloading.",
+        "Apple documents Writing Tools as a separate text surface; the current iOS 27 Writing Tools page supports the selected-text/writing distinction."
+      ],
+      "publicReaderProblemEvidence": [
+        {
+          "url": "https://www.reddit.com/r/iPhone17Pro/comments/1sa4rn4/what_do_you_use_apple_ai_on_your_iphone_for/",
+          "observed": "2026-11-11",
+          "publicationDate": "not asserted; search and reader surfaces showed conflicting relative dates",
+          "note": "A user asks how to summarize a webpage/news article; used as a task clue only, not an instruction source."
+        }
+      ],
+      "pagesInspected": [
+        {
+          "url": "https://support.apple.com/guide/iphone/browse-the-web-iph1fbef4daa/ios",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Current Safari summary path and site/device/language conditions; saved HTTP 200 source artifact SHA-256 ffcea6ff021ecf79d6755bbde9ab1d446fbd5dcfb23b1f93d8ed471f9a6d37d8."
+        },
+        {
+          "url": "https://support.apple.com/en-us/121115",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Apple Intelligence availability and language matching."
+        },
+        {
+          "url": "https://support.apple.com/guide/iphone/writing-tools-write-improve-summarize-iph6f08da1d2/27/ios/27",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-11",
+          "claimScope": "Current iOS 27 Writing Tools text surface, supporting the separate selected-text/writing context."
+        }
+      ],
+      "competingPagesInspected": [
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad browser comparison, not Apple's iPhone Page Menu steps."
+        },
+        {
+          "url": "https://zapier.com/blog/best-ai-browser/",
+          "observed": "2026-11-05",
+          "note": "Broad selection article, not Safari webpage-summary eligibility troubleshooting."
+        },
+        {
+          "url": "https://ryza.si/guides/best-ai-browser",
+          "observed": "2026-11-05",
+          "note": "Broad AI-browser buyer guide; no current iPhone Safari Page Menu path."
+        }
+      ]
+    }
+  ],
+  "skillsRead": [
+    "/Users/myd/.codex/skills/humanizer/SKILL.md",
+    "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+  ],
+  "process": "Reader issue clues, current product facts, nearby-owner gaps, and inspected broad competitor answers are recorded separately. Reader-facing bodies omit demand methodology and competing-page commentary. Locale checks were run against actual exported EditorialGuideCopy objects, including each section and FAQ pair.",
+  "sourceRecords": [
+    "docs/seo/leadership-plan-2026-11-04.json",
+    "docs/seo/strategy-research-2026-10-25.json",
+    "docs/seo/competitive-review-2026-11-05.json",
+    "docs/seo/workflow-delivery-2026-11-10.json",
+    "docs/seo/research-2026-11-10.json",
+    "docs/seo/keyword-map-2026-10-16.json",
+    "/Users/myd/.codex/skills/humanizer/SKILL.md",
+    "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+  ],
+  "executor": {
+    "role": "research_and_content_executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "reasoningEffortEffective": null,
+    "selectionSource": "role_default",
+    "attempts": 1,
+    "escalation": "No model fallback claimed."
+  },
+  "reviewer": {
+    "role": "independent_content_reviewer",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "status": "pending final byte review"
+  },
+  "validation": {
+    "contentContract": {
+      "topics": 5,
+      "editions": 10,
+      "rendererSectionsPerEdition": 7,
+      "faqPerEdition": 5,
+      "keywordRows": 205,
+      "protectedOldOwnerChanges": 0
+    },
+    "runtimeCopyAssertions": "See .local/workflows/cycles/content-2026-11-11/locale-final-check.json. Actual exported English and Chinese section bodies and all FAQ questions/answers were checked.",
+    "typecheck": "npx tsc --noEmit --pretty false passed after the final source-list and body edits.",
+    "independentReview": "Pending Sol final byte review; no full CI run.",
+    "structureCheck": "Private check-content.cjs passed: 134 protected owners unchanged, 139 total guides, 278 editions, 205 keyword rows, five new themes, seven sections and five FAQs in each locale."
+  }
+}

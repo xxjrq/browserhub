@@ -11,6 +11,7 @@ import { aiCycleGuides05 } from "./ai-cycle-2026-11-05";
 import { aiCycleGuides06 } from "./ai-cycle-2026-11-06";
 import { aiCycleGuides08 } from "./ai-cycle-2026-11-08";
 import { aiCycleGuides09 } from "./ai-cycle-2026-11-09";
+import { aiCycleGuides11 } from "./ai-cycle-2026-11-11";
 import { aiCycleGuides10 } from "./ai-cycle-2026-11-10";
 import { aiCycleGuides07 } from "./ai-cycle-2026-11-07";
 import { aiUsageGuides26 } from "./ai-usage-2026-10-26";
@@ -286,7 +287,7 @@ export const technologies: TechnologyResource[] = technologyRows.map(item => ({
 
 export const useCases: UseCaseResource[] = (useCaseCatalog.useCases as Array<{ id: string; name: string; recommendedCategories: string[] }>).map(item => ({ ...item, slug: item.id }));
 
-export const guides: GuideResource[] = [...aiCycleGuides10, ...aiCycleGuides09, ...aiCycleGuides08, ...aiCycleGuides07, ...aiCycleGuides06, ...aiCycleGuides05, ...aiCycleGuides04, ...aiCycleGuides03, ...aiCycleGuides02, ...aiCycleGuides01, ...aiCycleGuides31, ...aiCycleGuides30, ...aiCycleGuides29, ...aiApplicationsGuides28, ...aiTasksGuides27, ...aiUsageGuides26, ...aiReadinessGuides26, ...aiChoicesGuides25, ...aiControlsGuides25, ...aiNavigationGuides25, ...aiChoicesGuides24, ...aiHandoffGuides, ...aiContextGuides, ...aiResearchGuides, ...aiToolsGuides, ...aiActionsGuides, ...aiChoicesGuides, ...aiSecurityGuides, ...aiDataGuides, ...aiSelectionGuides, ...aiSessionGuides, ...aiPlaywrightGuides, ...dailyGuides, ...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
+export const guides: GuideResource[] = [...aiCycleGuides11, ...aiCycleGuides10, ...aiCycleGuides09, ...aiCycleGuides08, ...aiCycleGuides07, ...aiCycleGuides06, ...aiCycleGuides05, ...aiCycleGuides04, ...aiCycleGuides03, ...aiCycleGuides02, ...aiCycleGuides01, ...aiCycleGuides31, ...aiCycleGuides30, ...aiCycleGuides29, ...aiApplicationsGuides28, ...aiTasksGuides27, ...aiUsageGuides26, ...aiReadinessGuides26, ...aiChoicesGuides25, ...aiControlsGuides25, ...aiNavigationGuides25, ...aiChoicesGuides24, ...aiHandoffGuides, ...aiContextGuides, ...aiResearchGuides, ...aiToolsGuides, ...aiActionsGuides, ...aiChoicesGuides, ...aiSecurityGuides, ...aiDataGuides, ...aiSelectionGuides, ...aiSessionGuides, ...aiPlaywrightGuides, ...dailyGuides, ...environmentGuidesA, ...environmentGuidesB, ...editorialGuides, ...refreshedGuidesA, ...refreshedGuidesB];
 
 const rawComparisons: ComparisonResource[] = [
 	{ title: "EasyBR vs AdsPower", slug: "easybr-vs-adspower", description: "比较本地优先与电商自动化工作流。", browsers: ["easybr", "adspower"] },

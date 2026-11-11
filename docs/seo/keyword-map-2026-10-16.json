@@ -7745,6 +7745,256 @@
         ],
         "distinctiveCoverage": "Clarifies voice context vs dictation and the boundary between spoken intent and account/task-specific browser control. Links to the current Comet control owner and avoids treating February launch notes as a current per-account guarantee."
       }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-11",
+      "sourceRecord": "docs/seo/research-2026-11-11.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-18",
+        "14day": "2026-11-25",
+        "28day": "2026-12-09"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:notion-agent-web-browsing-access",
+      "primaryKeyword": {
+        "en": "Notion Agent web browsing disabled workspace and agent settings",
+        "zh-CN": "Notion Agent 网页浏览关闭：工作区与 Agent 设置"
+      },
+      "intent": "Diagnoses the separate workspace permission and Agent Web browsing setting, distinguishes search from browser actions, and explains the Agent-owned login session without assuming local Chrome attachment.",
+      "demandEvidence": "A public user question reports a disabled-browser message; it is one qualitative example, not an outage or demand measure. No Search Console query or volume sample was taken today.",
+      "originalGain": "Diagnoses the separate workspace permission and Agent Web browsing setting, distinguishes search from browser actions, and explains the Agent-owned login session without assuming local Chrome attachment. No firsthand product task was performed.",
+      "nearestOwners": [
+        "ai-browser-tab-access-permissions",
+        "ai-browser-vs-ai-search-engine",
+        "browser-agent-human-takeover"
+      ],
+      "distinctiveCoverage": "Diagnoses the separate workspace permission and Agent Web browsing setting, distinguishes search from browser actions, and explains the Agent-owned login session without assuming local Chrome attachment.",
+      "currentPrimarySource": "https://www.notion.com/en-gb/help/turn-on-web-browser-for-notion-agent",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/notion-agent-web-browsing-access/",
+        "https://browserhub.co/zh-cn/guides/notion-agent-web-browsing-access/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "ai-browser-vs-ai-search-engine",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Diagnoses the separate workspace permission and Agent Web browsing setting, distinguishes search from browser actions, and explains the Agent-owned login session without assuming local Chrome attachment."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-11",
+      "sourceRecord": "docs/seo/research-2026-11-11.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-18",
+        "14day": "2026-11-25",
+        "28day": "2026-12-09"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:dia-ai-content-data-controls",
+      "primaryKeyword": {
+        "en": "Dia browser content sharing and AI provider privacy controls",
+        "zh-CN": "Dia 浏览器内容共享与 AI 服务商隐私控制"
+      },
+      "intent": "Separates Dia’s default product-improvement sharing and opt-out from provider processing, proactive Morning Brief, local data, Sync, and the scoped 30-day retention statement.",
+      "demandEvidence": "Public questions about default sharing and Morning Brief are qualitative clues; vendor security and privacy pages govern feature facts. No Search Console query or volume sample was taken today.",
+      "originalGain": "Separates Dia’s default product-improvement sharing and opt-out from provider processing, proactive Morning Brief, local data, Sync, and the scoped 30-day retention statement. No firsthand product task was performed.",
+      "nearestOwners": [
+        "comet-assistant-history-data-controls",
+        "brave-leo-byom-local-vs-hosted",
+        "opera-ai-page-content-permission"
+      ],
+      "distinctiveCoverage": "Separates Dia’s default product-improvement sharing and opt-out from provider processing, proactive Morning Brief, local data, Sync, and the scoped 30-day retention statement.",
+      "currentPrimarySource": "https://www.diabrowser.com/security",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/dia-ai-content-data-controls/",
+        "https://browserhub.co/zh-cn/guides/dia-ai-content-data-controls/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "comet-assistant-history-data-controls",
+          "brave-leo-byom-local-vs-hosted",
+          "opera-ai-page-content-permission"
+        ],
+        "distinctiveCoverage": "Separates Dia’s default product-improvement sharing and opt-out from provider processing, proactive Morning Brief, local data, Sync, and the scoped 30-day retention statement."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-11",
+      "sourceRecord": "docs/seo/research-2026-11-11.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-18",
+        "14day": "2026-11-25",
+        "28day": "2026-12-09"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:firefox-ios-reader-ai-summary-controls",
+      "primaryKeyword": {
+        "en": "Firefox iPhone disable shake to summarize but keep Reader View",
+        "zh-CN": "Firefox iPhone 关闭摇动摘要并保留阅读视图"
+      },
+      "intent": "Explains the iOS-only shake/manual/all-summary switches, the page-with-thunderbolt tap versus touch-and-hold action, Reader View, device-dependent processing, and Mozilla’s conflicting language statements.",
+      "demandEvidence": "A public iOS question asks about accidental summaries; it is a qualitative issue clue, not a prevalence or rollout measure. No Search Console query or volume sample was taken today.",
+      "originalGain": "Explains the iOS-only shake/manual/all-summary switches, the page-with-thunderbolt tap versus touch-and-hold action, Reader View, device-dependent processing, and Mozilla’s conflicting language statements. No firsthand product task was performed.",
+      "nearestOwners": [
+        "firefox-ai-controls-chatbot-provider-boundary",
+        "ai-browser-youtube-summary",
+        "ai-browser-webpage-translation"
+      ],
+      "distinctiveCoverage": "Explains the iOS-only shake/manual/all-summary switches, the page-with-thunderbolt tap versus touch-and-hold action, Reader View, device-dependent processing, and Mozilla’s conflicting language statements.",
+      "currentPrimarySource": "https://support.mozilla.org/en-US/kb/summarize-pages-ios",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/firefox-ios-reader-ai-summary-controls/",
+        "https://browserhub.co/zh-cn/guides/firefox-ios-reader-ai-summary-controls/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "ai-browser-youtube-summary",
+          "ai-browser-webpage-translation"
+        ],
+        "distinctiveCoverage": "Explains the iOS-only shake/manual/all-summary switches, the page-with-thunderbolt tap versus touch-and-hold action, Reader View, device-dependent processing, and Mozilla’s conflicting language statements."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-11",
+      "sourceRecord": "docs/seo/research-2026-11-11.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-18",
+        "14day": "2026-11-25",
+        "28day": "2026-12-09"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:genspark-chrome-extension-page-task-boundary",
+      "primaryKeyword": {
+        "en": "Genspark Chrome extension current page automation credits or standalone browser",
+        "zh-CN": "Genspark Chrome 扩展当前页面自动化、积分与独立浏览器选择"
+      },
+      "intent": "Compares a Chrome extension that reads the active page and can automate browser actions with a separate Genspark Browser; includes credit-use path and boundaries of vendor statements.",
+      "demandEvidence": "A credits discussion is authored by a Genspark team member; it is not independent demand evidence and does not override current help. No Search Console query or volume sample was taken today.",
+      "originalGain": "Compares a Chrome extension that reads the active page and can automate browser actions with a separate Genspark Browser; includes credit-use path and boundaries of vendor statements. No firsthand product task was performed.",
+      "nearestOwners": [
+        "ai-browser-tab-access-permissions",
+        "comet-extension-compatibility",
+        "browser-agent-human-takeover"
+      ],
+      "distinctiveCoverage": "Compares a Chrome extension that reads the active page and can automate browser actions with a separate Genspark Browser; includes credit-use path and boundaries of vendor statements.",
+      "currentPrimarySource": "https://www.genspark.ai/helpcenter/chrome-extension",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/genspark-chrome-extension-page-task-boundary/",
+        "https://browserhub.co/zh-cn/guides/genspark-chrome-extension-page-task-boundary/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-tab-access-permissions",
+          "comet-extension-compatibility",
+          "browser-agent-human-takeover"
+        ],
+        "distinctiveCoverage": "Compares a Chrome extension that reads the active page and can automate browser actions with a separate Genspark Browser; includes credit-use path and boundaries of vendor statements."
+      }
+    },
+    {
+      "cluster": "ai-browser-core-use",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-11",
+      "sourceRecord": "docs/seo/research-2026-11-11.json",
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-18",
+        "14day": "2026-11-25",
+        "28day": "2026-12-09"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity.",
+      "id": "guides:safari-iphone-webpage-summary",
+      "primaryKeyword": {
+        "en": "summarize webpage open in Safari on iPhone Page Menu missing",
+        "zh-CN": "iPhone Safari 总结当前网页 Page Menu 缺失"
+      },
+      "intent": "Gives the current Page Menu > Summarize route and diagnoses absent controls through site support, iPhone/iOS eligibility, and Apple Intelligence language and region without conflating Siri URL requests.",
+      "demandEvidence": "A public iPhone question asks how to summarize an article; readers displayed conflicting relative dates, so no publication date or demand level is claimed. No Search Console query or volume sample was taken today.",
+      "originalGain": "Gives the current Page Menu > Summarize route and diagnoses absent controls through site support, iPhone/iOS eligibility, and Apple Intelligence language and region without conflating Siri URL requests. No firsthand product task was performed.",
+      "nearestOwners": [
+        "ai-browser-webpage-translation",
+        "ai-browser-youtube-summary",
+        "firefox-ios-reader-ai-summary-controls"
+      ],
+      "distinctiveCoverage": "Gives the current Page Menu > Summarize route and diagnoses absent controls through site support, iPhone/iOS eligibility, and Apple Intelligence language and region without conflating Siri URL requests.",
+      "currentPrimarySource": "https://support.apple.com/guide/iphone/browse-the-web-iph1fbef4daa/ios",
+      "targetUrls": [
+        "https://browserhub.co/en/guides/safari-iphone-webpage-summary/",
+        "https://browserhub.co/zh-cn/guides/safari-iphone-webpage-summary/"
+      ],
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-webpage-translation",
+          "ai-browser-youtube-summary",
+          "firefox-ios-reader-ai-summary-controls"
+        ],
+        "distinctiveCoverage": "Gives the current Page Menu > Summarize route and diagnoses absent controls through site support, iPhone/iOS eligibility, and Apple Intelligence language and region without conflating Siri URL requests."
+      }
     }
   ],
   "futureCandidates": [
@@ -7824,20 +8074,20 @@
     "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
   },
   "latestContentCycle": {
-    "date": "2026-11-10",
-    "cycleId": "content-2026-11-10",
+    "date": "2026-11-11",
+    "cycleId": "content-2026-11-11",
     "newTopics": [
-      "chatgpt-chrome-extension-not-connecting",
-      "claude-chrome-connection-permissions",
-      "manus-preferred-browser-routing",
-      "chrome-on-device-ai-storage-controls",
-      "comet-voice-mode-context-navigation"
+      "notion-agent-web-browsing-access",
+      "dia-ai-content-data-controls",
+      "firefox-ios-reader-ai-summary-controls",
+      "genspark-chrome-extension-page-task-boundary",
+      "safari-iphone-webpage-summary"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
     "publicationEvidence": "Drafts prepared for independent review; no release or live publication claimed.",
-    "sourceRecord": "docs/seo/research-2026-11-10.json"
+    "sourceRecord": "docs/seo/research-2026-11-11.json"
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",
