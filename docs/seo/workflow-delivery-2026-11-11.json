@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-11",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "2c57bc9c9576da4b08446c7f1f012d443ab1d7366309e1fd6ce1b94361890252",
+  "commit": "1b946cf81347258cee1e38d0ba8fce253fa18adf",
+  "release": "/opt/browsertools/releases/20261111-104251",
+  "publicationReceiptAt": "2026-11-11T02:43:29.059Z",
+  "completedAt": "2026-11-11T02:43:33.545Z",
+  "newTopics": [
+    "notion-agent-web-browsing-access",
+    "dia-ai-content-data-controls",
+    "firefox-ios-reader-ai-summary-controls",
+    "genspark-chrome-extension-page-task-boundary",
+    "safari-iphone-webpage-summary"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/notion-agent-web-browsing-access/",
+    "https://browserhub.co/zh-cn/guides/notion-agent-web-browsing-access/",
+    "https://browserhub.co/en/guides/dia-ai-content-data-controls/",
+    "https://browserhub.co/zh-cn/guides/dia-ai-content-data-controls/",
+    "https://browserhub.co/en/guides/firefox-ios-reader-ai-summary-controls/",
+    "https://browserhub.co/zh-cn/guides/firefox-ios-reader-ai-summary-controls/",
+    "https://browserhub.co/en/guides/genspark-chrome-extension-page-task-boundary/",
+    "https://browserhub.co/zh-cn/guides/genspark-chrome-extension-page-task-boundary/",
+    "https://browserhub.co/en/guides/safari-iphone-webpage-summary/",
+    "https://browserhub.co/zh-cn/guides/safari-iphone-webpage-summary/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent core AI-browser themes; English and Chinese editions count once. All 134 prior owners and 268 editions remain unchanged, including the November9 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    "docs/seo/research-2026-11-11.json",
+    "https://support.mozilla.org/en-US/kb/ios-ai-controls"
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "role": "research_and_content_executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffortRequested": "high",
+      "reasoningEffortEffective": null,
+      "selectionSource": "role_default",
+      "attempts": 1,
+      "escalation": "Escalate to gpt-6.1-sol xhigh only after three distinct executor attempts fail to resolve a substantive blocker; no silent model fallback.",
+      "reasoningEffort": "high",
+      "agent": "content_execution_20261111",
+      "escalationReason": null
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "950670b806fd8934c901cc8ba378efd79ca3c1c9bbf57ff1b3c0d2df9bad58e5"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "9e2e0e958dd177df18164b598cafe6c2f7e02ecc2b270bbf800209334bb11363"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1469,
+      "sitemapUrls": 1146,
+      "internalLinks": 51040,
+      "alternateLinks": 8195,
+      "fallbackPages": 60,
+      "editorialGuides": 278,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-11T02:30:50.917Z",
+      "status": "passed",
+      "existingTopicsPreserved": 134,
+      "existingTopicsUnchanged": 134,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 139,
+      "completeEditions": 278,
+      "newTopics": 5,
+      "keywordRows": 205,
+      "details": [
+        {
+          "slug": "notion-agent-web-browsing-access",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "notion-agent-web-browsing-access",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "dia-ai-content-data-controls",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "dia-ai-content-data-controls",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "firefox-ios-reader-ai-summary-controls",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "firefox-ios-reader-ai-summary-controls",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "genspark-chrome-extension-page-task-boundary",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "genspark-chrome-extension-page-task-boundary",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "safari-iphone-webpage-summary",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "safari-iphone-webpage-summary",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-11T02:44:05.519940+00:00",
+      "exitCode": 0,
+      "stdout": "/opt/browsertools/releases/20261111-104251\n",
+      "stderr": "",
+      "expected": "/opt/browsertools/releases/20261111-104251",
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-11T02:43:33.473Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/notion-agent-web-browsing-access/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/notion-agent-web-browsing-access/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/notion-agent-web-browsing-access/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/notion-agent-web-browsing-access/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/firefox-ios-reader-ai-summary-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/firefox-ios-reader-ai-summary-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/firefox-ios-reader-ai-summary-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/firefox-ios-reader-ai-summary-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/genspark-chrome-extension-page-task-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/genspark-chrome-extension-page-task-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/genspark-chrome-extension-page-task-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/genspark-chrome-extension-page-task-boundary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/safari-iphone-webpage-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/safari-iphone-webpage-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/safari-iphone-webpage-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/safari-iphone-webpage-summary/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-11T02:43:29.059Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-18T02:43:29.059000+00:00",
+      "14day": "2026-11-25T02:43:29.059000+00:00",
+      "28day": "2026-12-09T02:43:29.059000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-11",
+        "end": "2026-11-17",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-18T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-11",
+        "end": "2026-11-24",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-25T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-11",
+        "end": "2026-12-08",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-09T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "The November 9 read-only weekly performance and bounded AI observations remain the latest private measurement. No fresh account sampling today; publication effects require matching closed available windows.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
