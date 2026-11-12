@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-12",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "a16292d2aaa5bebe46d10d37499945ead8e9c9c4e7c78164519144c5df7cc16c",
+  "commit": "fe8aabb94c656a9258013f56be295a9b3547ca91",
+  "release": "/opt/browsertools/releases/20261112-104226",
+  "publicationReceiptAt": "2026-11-12T02:42:59.434Z",
+  "completedAt": "2026-11-12T02:43:01.289Z",
+  "newTopics": [
+    "ai-browser-task-platform-chooser",
+    "arc-sunset-migration-data-checklist",
+    "tabbit-chat-agent-context-workflow",
+    "opera-neon-mcp-server-setup",
+    "chrome-ai-history-find-visited-page"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/ai-browser-task-platform-chooser/",
+    "https://browserhub.co/zh-cn/guides/ai-browser-task-platform-chooser/",
+    "https://browserhub.co/en/guides/arc-sunset-migration-data-checklist/",
+    "https://browserhub.co/zh-cn/guides/arc-sunset-migration-data-checklist/",
+    "https://browserhub.co/en/guides/tabbit-chat-agent-context-workflow/",
+    "https://browserhub.co/zh-cn/guides/tabbit-chat-agent-context-workflow/",
+    "https://browserhub.co/en/guides/opera-neon-mcp-server-setup/",
+    "https://browserhub.co/zh-cn/guides/opera-neon-mcp-server-setup/",
+    "https://browserhub.co/en/guides/chrome-ai-history-find-visited-page/",
+    "https://browserhub.co/zh-cn/guides/chrome-ai-history-find-visited-page/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent themes: four core AI-browser use/selection tasks and one supporting connection task; English and Chinese editions count once. All 139 prior owners and 278 editions remain unchanged, including the November9 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    {
+      "topic": "ai-browser-task-platform-chooser",
+      "url": "https://www.reddit.com/r/browsers/comments/1nzs7mh/which_browser_do_you_think_has_the_best_ai/"
+    },
+    {
+      "topic": "ai-browser-task-platform-chooser",
+      "url": "https://support.google.com/chrome/answer/17140089?hl=en"
+    },
+    {
+      "topic": "ai-browser-task-platform-chooser",
+      "url": "https://support.google.com/chrome/answer/16821166?hl=en-GB"
+    },
+    {
+      "topic": "ai-browser-task-platform-chooser",
+      "url": "https://www.perplexity.ai/en-GB/hub/blog/the-new-comet-assistant"
+    },
+    {
+      "topic": "ai-browser-task-platform-chooser",
+      "url": "https://www.perplexity.ai/comet"
+    },
+    {
+      "topic": "ai-browser-task-platform-chooser",
+      "url": "https://blogs.opera.com/news/2026/08/your-ai-agents-can-use-opera-neon-free-of-charge/"
+    },
+    {
+      "topic": "arc-sunset-migration-data-checklist",
+      "url": "https://www.reddit.com/r/ArcBrowser/comments/1xcubyl/does-sunset-mean-it-wont-work-anymore/"
+    },
+    {
+      "topic": "arc-sunset-migration-data-checklist",
+      "url": "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect"
+    },
+    {
+      "topic": "arc-sunset-migration-data-checklist",
+      "url": "https://resources.arc.net/hc/en-us/articles/44413577819159-Arc-Sunset-Frequently-Asked-Questions"
+    },
+    {
+      "topic": "arc-sunset-migration-data-checklist",
+      "url": "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia"
+    },
+    {
+      "topic": "tabbit-chat-agent-context-workflow",
+      "url": "https://blog.csdn.net/longerxin2020/article/details/162234121"
+    },
+    {
+      "topic": "tabbit-chat-agent-context-workflow",
+      "url": "https://www.tabbit.ai/guide/usage"
+    },
+    {
+      "topic": "opera-neon-mcp-server-setup",
+      "url": "https://www.reddit.com/r/OperaNeon/comments/1s9c7bt/anyone_got_the_mcp_connector_going_thoughts_i_see/"
+    },
+    {
+      "topic": "chrome-ai-history-find-visited-page",
+      "url": "https://www.reddit.com/r/browsers/comments/1wzwmu8/is_there_a_browser_where_the_ai_agent_actually/"
+    }
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "role": "research_and_content_executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffortRequested": "high",
+      "reasoningEffortEffective": null,
+      "selectionSource": "role_default",
+      "attempts": 1,
+      "priorSession": "Original source-research session was interrupted by deliberate turn interruption and resumed within the same official task; this is not three failed distinct attempts.",
+      "escalation": "No model fallback claimed.",
+      "reasoningEffort": "high"
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "3ac796c4869554ddc52478d33d2787687c355ac25b929bfae77e3a22c447ed04"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 1,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "106c7000c0d9d7c85aa46a7330c36d0b1b8a3d65355f55e6de45fd6565b61bdc"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1484,
+      "sitemapUrls": 1156,
+      "internalLinks": 51672,
+      "alternateLinks": 8240,
+      "fallbackPages": 60,
+      "editorialGuides": 288,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-12T02:38:52.684Z",
+      "status": "passed",
+      "existingTopicsPreserved": 139,
+      "existingTopicsUnchanged": 139,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 144,
+      "completeEditions": 288,
+      "newTopics": 5,
+      "keywordRows": 210,
+      "details": [
+        {
+          "slug": "ai-browser-task-platform-chooser",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "ai-browser-task-platform-chooser",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "arc-sunset-migration-data-checklist",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "arc-sunset-migration-data-checklist",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "tabbit-chat-agent-context-workflow",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "tabbit-chat-agent-context-workflow",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "opera-neon-mcp-server-setup",
+          "locale": "en",
+          "sections": 8,
+          "faq": 5
+        },
+        {
+          "slug": "opera-neon-mcp-server-setup",
+          "locale": "zh-cn",
+          "sections": 8,
+          "faq": 5
+        },
+        {
+          "slug": "chrome-ai-history-find-visited-page",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "chrome-ai-history-find-visited-page",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-12T02:43:12.656627+00:00",
+      "exitCode": 0,
+      "stdout": "/opt/browsertools/releases/20261112-104226\n",
+      "stderr": "",
+      "expected": "/opt/browsertools/releases/20261112-104226",
+      "matches": true
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-12T02:43:01.237Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/ai-browser-task-platform-chooser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/ai-browser-task-platform-chooser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/ai-browser-task-platform-chooser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/ai-browser-task-platform-chooser/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/arc-sunset-migration-data-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/arc-sunset-migration-data-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/arc-sunset-migration-data-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/arc-sunset-migration-data-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/tabbit-chat-agent-context-workflow/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/tabbit-chat-agent-context-workflow/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/tabbit-chat-agent-context-workflow/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/tabbit-chat-agent-context-workflow/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/opera-neon-mcp-server-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/opera-neon-mcp-server-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/opera-neon-mcp-server-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/opera-neon-mcp-server-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chrome-ai-history-find-visited-page/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chrome-ai-history-find-visited-page/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chrome-ai-history-find-visited-page/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chrome-ai-history-find-visited-page/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-12T02:42:59.434Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-19T02:42:59.434000+00:00",
+      "14day": "2026-11-26T02:42:59.434000+00:00",
+      "28day": "2026-12-10T02:42:59.434000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-12",
+        "end": "2026-11-18",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-19T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-12",
+        "end": "2026-11-25",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-26T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-12",
+        "end": "2026-12-09",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-10T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no new signed-in product end-to-end or compatibility execution and no fabricated hands-on result.",
+  "measurement": "The November 9 read-only weekly performance and bounded AI observations remain the latest private measurement. No fresh account sampling today; publication effects require matching closed available windows.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
