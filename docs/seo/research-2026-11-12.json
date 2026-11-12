@@ -1,0 +1,584 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-12",
+  "status": "research-and-bilingual-drafts-prepared-for-independent-review",
+  "mainline": "Daily new AI-browser use and task-selection themes; English and Simplified Chinese editions count once per theme. No extra batch, completed-cycle replay, journal reset, analytics query, or publication claim.",
+  "selection": {
+    "targetTopics": 5,
+    "approvedTopics": 5,
+    "oldEnhancements": 0,
+    "existingOwnerBaseline": 139,
+    "existingEditionBaseline": 278,
+    "keywordRowBaseline": 205,
+    "ownerChangesAllowed": 0,
+    "themeRule": "Each topic maps to a distinct current reader task and current primary instructions. No synonym split, ranking score, volume or popularity claim."
+  },
+  "competitorMethod": {
+    "reusedRecord": "docs/seo/competitive-review-2026-11-05.json",
+    "sites": 5,
+    "scope": "Bounded prior review reused for broad chooser; for product-specific topics, directly inspected the current official answer and the individual public question or related competing guide.",
+    "limits": [
+      "Observed page structure does not establish traffic or ranking.",
+      "No competitor claims treated as primary product facts.",
+      "No competitor prose copied.",
+      "No BrowserHub hands-on test."
+    ]
+  },
+  "topics": [
+    {
+      "slug": "ai-browser-task-platform-chooser",
+      "gate": "approved",
+      "readerQuestion": "Which browser's AI is useful for the job I need: reading one page, comparing tabs, or completing a multi-step task?",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/browsers/comments/1nzs7mh/which_browser_do_you_think_has_the_best_ai/",
+        "observed": "2026-11-12",
+        "note": "The author asks which browser has useful AI integrations, names Comet, Dia, Fellou and Neo, and asks whether they work for browsing. Comments contain differing individual opinions; they do not establish broad preference or current product behavior."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          "ai-browser-vs-browser-agent",
+          "chatgpt-desktop-browser-vs-comet",
+          "comet-vs-dia",
+          "opera-neon-choose-ai-agent"
+        ],
+        "gap": "Existing pages define assistant-versus-agent or compare particular pairs and workflows. None is a platform-and-task chooser that records availability, account/region constraints, allowed actions, and data/context boundaries in one comparable matrix.",
+        "competitorReview": "Reuse docs/seo/competitive-review-2026-11-05.json: bounded broad comparisons from TechRepublic, Zapier, Toolchase and Ryza; do not infer traffic, ranking, or claim to have reproduced their hands-on testing."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://support.google.com/chrome/answer/17140089?hl=en",
+          "claim": "Consumer help lists Chromebook Plus, Mac or Windows, supported language/region, latest signed-in Chrome, minimum age, and gradual rollout; work or school access may require administrator enablement. The separate task guide documents tab context and Auto Browse actions.",
+          "qualification": "Check account, region, device, management and rollout details before recommending it."
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/hub/blog/the-new-comet-assistant",
+          "claim": "Perplexity’s November 6, 2025 announcement describes Comet Assistant working across multiple tabs and a task-level choice before browser interaction; it gives examples of research and data-entry tasks.",
+          "qualification": "Dated vendor description, not a current rollout guarantee or BrowserHub benchmark; use the current Comet page for listed platforms and verify account/region in the app."
+        },
+        {
+          "url": "https://www.diabrowser.com/",
+          "claim": "Dia's current product page lists macOS and Windows and describes Morning Brief, connected-app/tab synthesis, profiles, and user controls for Memory and content sharing.",
+          "qualification": "Marketing page; link privacy claims to the separate security/privacy documents and avoid claiming independent verification."
+        },
+        {
+          "url": "https://www.operaneon.com/",
+          "claim": "Opera's current Neon page describes agent choice and MCP/CLI connection paths; the August 14 first-party update says external MCP/CLI use is available on Free, with account needed for MCP but not CLI, while Neon-owned autonomous browsing/research/Skills require Standard.",
+          "qualification": "Do not conflate Neon as an MCP server with Neon as an MCP client; this chooser only records high-level task fit."
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/08/your-ai-agents-can-use-opera-neon-free-of-charge/",
+          "claim": "Opera says users can connect existing agents to Neon via MCP or CLI on the Free plan. A Neon account is required for MCP, not for CLI. Standard unlocks Neon’s own AI services.",
+          "qualification": "Checked against the August 14 update, which supersedes the earlier paid-only assumption."
+        },
+        {
+          "url": "https://www.perplexity.ai/comet",
+          "claim": "The current Comet page lists Mac, Windows, iOS and Android.",
+          "qualification": "Platform listing only; check current account and regional access in the app."
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/16821166?hl=en-GB",
+          "claim": "Auto Browse has separate age, US/English and eligible-plan access conditions; this is distinct from general Gemini-in-Chrome availability.",
+          "qualification": "Do not infer Auto Browse eligibility from Gemini availability alone; check current account and plan requirements."
+        }
+      ],
+      "increment": "A non-scored decision table keyed to task, product surface, platform/account/region checks, permitted actions and context/data exposure; starts with the least-capable surface that meets the task and leaves sensitive actions for a person.",
+      "plannedSources": [
+        "https://www.reddit.com/r/browsers/comments/1nzs7mh/which_browser_do_you_think_has_the_best_ai/",
+        "https://support.google.com/chrome/answer/17140089?hl=en",
+        "https://support.google.com/chrome/a/answer/17031592?hl=en",
+        "https://www.perplexity.ai/comet",
+        "https://www.perplexity.ai/en-GB/hub/blog/the-new-comet-assistant",
+        "https://www.diabrowser.com/",
+        "https://www.diabrowser.com/security",
+        "https://www.operaneon.com/",
+        "https://blogs.opera.com/news/2026/08/your-ai-agents-can-use-opera-neon-free-of-charge/",
+        "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+        "https://zapier.com/blog/best-ai-browser/",
+        "https://support.google.com/chrome/answer/16821166?hl=en-GB"
+      ],
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "demandEvidenceLimits": "Individual public question or task article is qualitative topic evidence only. No prevalence, ranking, volume, or BrowserHub traffic is inferred.",
+      "competingPagesInspected": [
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad five-product chooser with a task-fit table. It is a bounded editorial sample, not evidence of ranking or hands-on tests by BrowserHub."
+        },
+        {
+          "url": "https://zapier.com/blog/best-ai-browser/",
+          "observed": "2026-11-05",
+          "note": "Broad shortlist organized by use cases and product sections; not the product capability or eligibility source."
+        },
+        {
+          "url": "https://toolchase.com/blog/best-ai-browsers-2026/",
+          "observed": "2026-11-05",
+          "note": "Broad category comparison; page does not replace current vendor documentation for account, region or actions."
+        }
+      ],
+      "sourceInventory": [
+        {
+          "url": "https://www.reddit.com/r/browsers/comments/1nzs7mh/which_browser_do_you_think_has_the_best_ai/",
+          "category": "public-reader-question",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/17140089?hl=en",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://support.google.com/chrome/a/answer/17031592?hl=en",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.perplexity.ai/comet",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/hub/blog/the-new-comet-assistant",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.diabrowser.com/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.diabrowser.com/security",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.operaneon.com/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/08/your-ai-agents-can-use-opera-neon-free-of-charge/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.techrepublic.com/article/news-best-ai-browsers-2026/",
+          "category": "competitor-editorial",
+          "observed": "2026-11-05"
+        },
+        {
+          "url": "https://zapier.com/blog/best-ai-browser/",
+          "category": "competitor-editorial",
+          "observed": "2026-11-05"
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/16821166?hl=en-GB",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "slug": "arc-sunset-migration-data-checklist",
+      "gate": "approved",
+      "readerQuestion": "Does Arc sunset mean it stops working, and what should I export or import before each date?",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/ArcBrowser/comments/1xcubyl/does-sunset-mean-it-wont-work-anymore/",
+        "observed": "2026-11-12",
+        "note": "An individual user asks whether sunset means no updates or that Arc stops working. This establishes a concrete question, not incidence or product instructions."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          "chatgpt-atlas-retirement-data-transition"
+        ],
+        "gap": "Atlas retirement page concerns a different product, dates, and export/import path; no Arc Sunset owner was found."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+          "claim": "Arc for macOS/Windows stops working Dec 22, 2026; Arc Search AI features, sign-in and sync stop Nov 23 on iOS/Android; Android app is removed Dec 22 while iOS remains a browser. Account-data copy requests are due Dec 15.",
+          "qualification": "Date-specific status. Recheck immediately before publication."
+        },
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44413577819159-Arc-Sunset-Frequently-Asked-Questions",
+          "claim": "The vendor FAQ explains desktop vs mobile timelines, account deactivation, Dia as the successor, one-time import, profile behavior, and Arc features that do not exist in Dia.",
+          "qualification": "Do not imply Arc keeps working after Dec 22 or that Dia is a byte-for-byte replacement."
+        },
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia",
+          "claim": "Dia's import can bring spaces, tabs, bookmarks, history, passwords, cookies/sign-ins, and extensions on macOS and Windows; saved payment methods and autofill are not imported. Import is a copy, not sync. Windows users should quit Arc if its cookie file is locked and keep Arc installed until import completes.",
+          "qualification": "Importing sensitive signed-in data should be an explicit user decision; suggest checking selected data and destination profile."
+        }
+      ],
+      "increment": "A date-by-date action checklist plus a what-moves/what-does-not table for Arc desktop and Arc Search mobile, including the exact Move from Arc to Dia guide URL and the Windows cookie-lock fix.",
+      "plannedSources": [
+        "https://www.reddit.com/r/ArcBrowser/comments/1xcubyl/does-sunset-mean-it-wont-work-anymore/",
+        "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+        "https://resources.arc.net/hc/en-us/articles/44413577819159-Arc-Sunset-Frequently-Asked-Questions",
+        "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia",
+        "https://resources.arc.net/hc/en-us/articles/25583851606039-How-Do-I-Export-My-Data-from-Arc"
+      ],
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "demandEvidenceLimits": "Individual public question or task article is qualitative topic evidence only. No prevalence, ranking, volume, or BrowserHub traffic is inferred.",
+      "competingPagesInspected": [
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44413577819159-Arc-Sunset-Frequently-Asked-Questions",
+          "observed": "2026-11-12",
+          "note": "Existing official answer covers dates and migration features; new article turns it into a platform-specific checklist and exact data-transfer matrix."
+        },
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia",
+          "observed": "2026-11-12",
+          "note": "Existing official migration walkthrough; new article separates importable versus excluded data, deadline effects, and Windows cookie-lock condition."
+        }
+      ],
+      "sourceInventory": [
+        {
+          "url": "https://www.reddit.com/r/ArcBrowser/comments/1xcubyl/does-sunset-mean-it-wont-work-anymore/",
+          "category": "public-reader-question",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44413577819159-Arc-Sunset-Frequently-Asked-Questions",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/44413129117591-Move-from-Arc-to-Dia",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://resources.arc.net/hc/en-us/articles/25583851606039-How-Do-I-Export-My-Data-from-Arc",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "slug": "tabbit-chat-agent-context-workflow",
+      "gate": "approved",
+      "readerQuestion": "When should I use Tabbit Chat, Agent, @-attached context, or reusable Skills for a browser task?",
+      "publicQuestion": {
+        "url": "https://blog.csdn.net/longerxin2020/article/details/162234121",
+        "observed": "2026-11-12",
+        "publicationDate": "2026-06-30",
+        "note": "A directly opened CSDN article covers Agent webpage operation and model selection; it is promotional and includes an invite link. Two retrieval observations showed 660 and 678 reads, so neither is cited as popularity or traffic evidence. Its procedures include older setup instructions, which are superseded by current Tabbit help."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          "ai-browser-vs-browser-agent",
+          "ai-browser-organize-tabs-by-task",
+          "ai-browser-compare-products-across-sites"
+        ],
+        "gap": "Existing pages explain generic AI browser vs agent boundaries, generic tab organization, and cross-site product comparison. None documents current Tabbit's Chat vs Agent mode, context attachments, reusable Skills, and the separate CLI handoff.",
+        "scopeLimit": "The guide stays on Tabbit consumer Chat/Agent/@ context/Skills. CLI appears only to mark the separate coding-agent boundary; no CLI compatibility tutorial or test is claimed."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://www.tabbit.ai/guide/usage",
+          "claim": "Current Tabbit usage documentation says Agent is selected in More Modes; @ attaches tabs, tab groups, favorites, or local files as context; / opens Skills; the separate Tabbit CLI can connect coding agents through /tabbit and reuse existing sign-ins.",
+          "qualification": "Instructions are current vendor documentation, not a BrowserHub hands-on result."
+        },
+        {
+          "url": "https://www.tabbit.ai/blog/2026-09-11-v1-13-tabbit-cli",
+          "claim": "The vendor's September 11 notes document Tabbit CLI for coding agents and show that it is separate from in-browser Task Agent use.",
+          "qualification": "Do not make model availability, task success, or OS compatibility claims from this release note."
+        },
+        {
+          "url": "https://www.tabbit.com/",
+          "claim": "The Chinese product site links to the English tabbit.ai international site and lists its current desktop platform requirements.",
+          "qualification": "Use this only to corroborate the official-domain relationship; no platform recommendation needed in the article."
+        }
+      ],
+      "increment": "A current use-path selector distinguishing one-page Chat, multistep Agent, supplied @ context, reusable Skills, and the separate CLI interface, followed by a read-only first-task prompt and checks for context/output correctness.",
+      "plannedSources": [
+        "https://blog.csdn.net/longerxin2020/article/details/162234121",
+        "https://www.tabbit.ai/guide/usage",
+        "https://www.tabbit.ai/blog/2026-09-11-v1-13-tabbit-cli",
+        "https://www.tabbit.com/"
+      ],
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "demandEvidenceLimits": "Individual public question or task article is qualitative topic evidence only. No prevalence, ranking, volume, or BrowserHub traffic is inferred.",
+      "competingPagesInspected": [
+        {
+          "url": "https://www.tabbit.ai/guide/usage",
+          "observed": "2026-11-12",
+          "note": "Current vendor Quick Start is an existing answer for menus; new guide maps the choices to a task and context scope, with checks on resulting output."
+        },
+        {
+          "url": "https://blog.csdn.net/longerxin2020/article/details/162234121",
+          "observed": "2026-11-12",
+          "note": "Public usage article covers Agent behavior and model selection but includes promotional content and older instructions; current vendor guide governs procedures."
+        }
+      ],
+      "sourceInventory": [
+        {
+          "url": "https://blog.csdn.net/longerxin2020/article/details/162234121",
+          "category": "competitor-editorial",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.tabbit.ai/guide/usage",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.tabbit.ai/blog/2026-09-11-v1-13-tabbit-cli",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.tabbit.com/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "slug": "opera-neon-mcp-server-setup",
+      "gate": "approved",
+      "readerQuestion": "Is Opera Neon the MCP server or MCP client in this connection, and which setup/permissions apply?",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/OperaNeon/comments/1s9c7bt/anyone_got_the_mcp_connector_going_thoughts_i_see/",
+        "observed": "2026-11-12",
+        "note": "One user asks how to get the MCP connector working and calls setup fidgety. This is an individual setup question, not evidence of prevalence."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          "opera-neon-choose-ai-agent",
+          "opera-browser-connector-chatgpt-permissions",
+          "playwright-mcp-existing-browser"
+        ],
+        "gap": "Neon agent chooser covers Chat/Do/Make/Research selection; Opera One/GX Browser Connector is a different branded product exposing a browser session to ChatGPT; this guide covers an external AI client connecting to Neon as an MCP server. The June Neon client route is the inverse direction: Neon Do connects outward to a remote MCP server.",
+        "scopeLimit": "Briefly distinguish Neon acting as an MCP client to remote services, documented in June, but do not duplicate that setup."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://blogs.opera.com/news/2026/03/opera-neon-adds-mcp-connector-to-the-browser/",
+          "claim": "Opera setup article documents adding Neon in an external client, approval in Neon, OAuth, permission presets/scopes and the requirement that Neon be open.",
+          "qualification": "Use current UI and the scopes actually presented; do not copy a fixed endpoint or install/connect during this task."
+        },
+        {
+          "url": "https://press.opera.com/2026/03/31/opera-neon-adds-mcp-connector/",
+          "claim": "Opera announced Neon exposing an MCP endpoint to external AI clients; documented actions include reading tabs/page content/screenshots and browser actions. The setup includes an authorization/permission screen.",
+          "qualification": "Use the current setup screen to confirm exact available scopes; do not imply every listed action is enabled by default."
+        },
+        {
+          "url": "https://www.operaneon.com/news/connect-opera-neon-to-mcp-servers",
+          "claim": "Opera's June 5 guide documents the opposite direction: Neon as an MCP client connecting outward to remote MCP services, only in Neon Do and with OAuth.",
+          "qualification": "This is a short contrast to prevent the two connector directions from being conflated, not this article's setup target."
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/08/your-ai-agents-can-use-opera-neon-free-of-charge/",
+          "claim": "Opera's August 14 update says external MCP/CLI connections are available on Neon Free; an Opera account is required for MCP but not CLI; Standard is for Neon-owned AI capabilities.",
+          "qualification": "This newer primary statement supersedes older subscription-only messaging. Avoid a fixed plan eligibility claim beyond the documented distinction."
+        }
+      ],
+      "increment": "Name the connector direction first, then give a current UI path, OAuth/account requirements, minimally necessary read permissions, read/write boundary, closed-browser behavior, and a short failure triage. Keep exact menu labels version-dependent and avoid inventing endpoints or having BrowserHub install MCP.",
+      "plannedSources": [
+        "https://www.reddit.com/r/OperaNeon/comments/1s9c7bt/anyone_got_the_mcp_connector_going_thoughts_i_see/",
+        "https://blogs.opera.com/news/2026/03/opera-neon-adds-mcp-connector-to-the-browser/",
+        "https://press.opera.com/2026/03/31/opera-neon-adds-mcp-connector/",
+        "https://www.operaneon.com/news/connect-opera-neon-to-mcp-servers",
+        "https://blogs.opera.com/news/2026/08/your-ai-agents-can-use-opera-neon-free-of-charge/"
+      ],
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "demandEvidenceLimits": "Individual public question or task article is qualitative topic evidence only. No prevalence, ranking, volume, or BrowserHub traffic is inferred.",
+      "competingPagesInspected": [
+        {
+          "url": "https://blogs.opera.com/news/2026/03/opera-neon-adds-mcp-connector-to-the-browser/",
+          "observed": "2026-11-12",
+          "note": "Existing first-party setup answer; new guide reorders it around server/client direction, minimal scopes and setup troubleshooting, and corrects plan details with August update."
+        },
+        {
+          "url": "https://www.operaneon.com/news/connect-opera-neon-to-mcp-servers",
+          "observed": "2026-11-12",
+          "note": "Existing official answer for inverse Neon-as-client to remote server path; new guide flags the distinction without duplicating that tutorial."
+        }
+      ],
+      "sourceInventory": [
+        {
+          "url": "https://www.reddit.com/r/OperaNeon/comments/1s9c7bt/anyone_got_the_mcp_connector_going_thoughts_i_see/",
+          "category": "public-reader-question",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/03/opera-neon-adds-mcp-connector-to-the-browser/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://press.opera.com/2026/03/31/opera-neon-adds-mcp-connector/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://www.operaneon.com/news/connect-opera-neon-to-mcp-servers",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://blogs.opera.com/news/2026/08/your-ai-agents-can-use-opera-neon-free-of-charge/",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "slug": "chrome-ai-history-find-visited-page",
+      "gate": "approved-conditionally-owner-audit-passed-by-executor",
+      "readerQuestion": "Can I find a page where I filled out a form if I only remember what it was about?",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/browsers/comments/1wzwmu8/is_there_a_browser_where_the_ai_agent_actually/",
+        "observed": "2026-11-12",
+        "note": "An individual asks whether an AI browser can recall a previously completed government form and whether agents expose a reviewable action log. The Chrome history feature helps find pages but cannot establish form fields, submission, or agent actions."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          "chrome-on-device-ai-storage-controls",
+          "comet-assistant-history-data-controls",
+          "edge-copilot-journeys-controls"
+        ],
+        "gap": "Chrome's existing page is about local model storage and redownload control. Comet and Edge pages cover different products' records. No current Chrome owner explains semantic retrieval from visit history or the two distinct Chrome AI retrieval paths.",
+        "actualBodyCheck": "The Nov 10 Chrome owner covers Settings > AI Innovations > On-device AI, deleting/preventing local model downloads, 20 GB eligibility vs model size, and per-user/device enterprise control. Its FAQ is about model files and settings, not retrieving pages, forms, or action logs.",
+        "scopeLimit": "Limit the answer to finding a visited page. State that the reviewed Chrome help pages do not document retrieval of form values or an agent action log, and that a history entry alone does not prove submission."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://support.google.com/chrome/answer/16716225?hl=en",
+          "claim": "Gemini in Chrome can search Chrome history in natural language. Requirements include opt-in, latest Chrome, personal Google account, synced history; unavailable in Incognito, work/school accounts, and Live chats.",
+          "qualification": "Troubleshooting should verify the same Google account was used to visit the page, plus history sync."
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/15305774?hl=en",
+          "claim": "A separate History search powered by AI feature is available only in the US with Chrome in English; it indexes content only after opt-in, stores page content encrypted locally, and may affect performance. History page detailed queries can show up to three best matches.",
+          "qualification": "Do not merge this local post-enable content index with the synced-history Gemini retrieval path."
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/95589?hl=en",
+          "claim": "Chrome's general History view covers the last 90 days, omits Incognito and deleted pages, and can sync across devices when enabled.",
+          "qualification": "This source was opened to distinguish ordinary History coverage from AI retrieval; the opened locale showed Android steps, so avoid claiming desktop settings paths from it."
+        }
+      ],
+      "increment": "A clear chooser between Gemini-in-Chrome synced history retrieval and the separate US/English post-enable local AI History search, followed by a safe lookup query and eligibility/data-scope checks. It does not claim agent memory or a submit audit trail.",
+      "plannedSources": [
+        "https://www.reddit.com/r/browsers/comments/1wzwmu8/is_there_a_browser_where_the_ai_agent_actually/",
+        "https://support.google.com/chrome/answer/16716225?hl=en",
+        "https://support.google.com/chrome/answer/15305774?hl=en",
+        "https://support.google.com/chrome/answer/95589?hl=en"
+      ],
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "demandEvidenceLimits": "Individual public question or task article is qualitative topic evidence only. No prevalence, ranking, volume, or BrowserHub traffic is inferred.",
+      "competingPagesInspected": [
+        {
+          "url": "https://support.google.com/chrome/answer/16716225?hl=en",
+          "observed": "2026-11-12",
+          "note": "Official Gemini history retrieval instructions; new guide distinguishes it from local History search and limits the answer to finding a page."
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/15305774?hl=en",
+          "observed": "2026-11-12",
+          "note": "Official local AI History instructions; new guide adds the post-enable, encrypted-local-storage, region/language, managed-profile and result-count limits."
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/95589?hl=en",
+          "observed": "2026-11-12",
+          "note": "Official ordinary history retention and deletion guidance; separates page visitation from evidence of a submitted form."
+        }
+      ],
+      "sourceInventory": [
+        {
+          "url": "https://www.reddit.com/r/browsers/comments/1wzwmu8/is_there_a_browser_where_the_ai_agent_actually/",
+          "category": "public-reader-question",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/16716225?hl=en",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/15305774?hl=en",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        },
+        {
+          "url": "https://support.google.com/chrome/answer/95589?hl=en",
+          "category": "primary-vendor-source",
+          "observed": "2026-11-12"
+        }
+      ]
+    }
+  ],
+  "editorialMethod": {
+    "directAnswer": "First paragraph answers the question and sets the important boundary.",
+    "content": "Task tables, current settings or migration steps, limits, a troubleshooting path, related internal guides, short FAQs and source/coverage notes.",
+    "renderer": "Markdown tables and bullets in body strings; headings remain plain strings.",
+    "locales": [
+      "en",
+      "zh-cn"
+    ],
+    "humanizerSkills": [
+      "/Users/myd/.codex/skills/humanizer/SKILL.md",
+      "/Users/myd/.codex/skills/humanizer-zh/SKILL.md"
+    ],
+    "humanizerApplied": "Both full skill documents were read. English and Chinese copy was reviewed for unsupported contrasts, repeated closing lines, staged openers, filler, forced triads and claim changes. Code, links, dates, attribution and uncertainty retained."
+  },
+  "executor": {
+    "role": "research_and_content_executor",
+    "modelRequested": "gpt-6-luna",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "reasoningEffortEffective": null,
+    "selectionSource": "role_default",
+    "attempts": 1,
+    "priorSession": "Original source-research session was interrupted by deliberate turn interruption and resumed within the same official task; this is not three failed distinct attempts.",
+    "escalation": "No model fallback claimed."
+  },
+  "reviewer": {
+    "role": "independent_content_reviewer",
+    "modelRequested": "gpt-6.1-sol",
+    "modelEffective": null,
+    "reasoningEffortRequested": "high",
+    "status": "pending independent final byte review"
+  },
+  "sourceRecord": "Private evidence and handoff are retained in .local/workflows/cycles/content-2026-11-12/; no account data or private query rows included."
+}

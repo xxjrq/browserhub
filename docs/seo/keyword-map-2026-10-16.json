@@ -7995,6 +7995,146 @@
         ],
         "distinctiveCoverage": "Gives the current Page Menu > Summarize route and diagnoses absent controls through site support, iPhone/iOS eligibility, and Apple Intelligence language and region without conflating Siri URL requests."
       }
+    },
+    {
+      "id": "guides:ai-browser-task-platform-chooser",
+      "cluster": "ai-browser-core-use",
+      "primaryKeyword": {
+        "en": "which AI browser should I use for this task",
+        "zh-CN": "按任务怎么选 AI 浏览器"
+      },
+      "intent": "informational task selection and troubleshooting",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/ai-browser-task-platform-chooser/",
+        "https://browserhub.co/zh-cn/guides/ai-browser-task-platform-chooser/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-12",
+      "sourceRecord": "docs/seo/research-2026-11-12.json",
+      "intentSummary": "Compare page help, multi-tab research and browser actions across current products; no universal winner asserted.",
+      "demandEvidence": "The question appears in one public Reddit thread; qualitative only, volume and site traffic unknown.",
+      "metricsStatus": "unknown; no fresh Search Console or analytics query was run"
+    },
+    {
+      "id": "guides:arc-sunset-migration-data-checklist",
+      "cluster": "browser-migration",
+      "primaryKeyword": {
+        "en": "Arc sunset what stops working and how to move data",
+        "zh-CN": "Arc 停止服务后如何迁移数据"
+      },
+      "intent": "informational task selection and troubleshooting",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/arc-sunset-migration-data-checklist/",
+        "https://browserhub.co/zh-cn/guides/arc-sunset-migration-data-checklist/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-12",
+      "sourceRecord": "docs/seo/research-2026-11-12.json",
+      "intentSummary": "Resolve platform-specific sunset dates and list what Dia import copies, excludes and does not sync.",
+      "demandEvidence": "One current public Arc community question about what sunset means; qualitative only.",
+      "metricsStatus": "unknown; no fresh Search Console or analytics query was run"
+    },
+    {
+      "id": "guides:tabbit-chat-agent-context-workflow",
+      "cluster": "ai-browser-core-use",
+      "primaryKeyword": {
+        "en": "Tabbit Chat vs Agent mode and context",
+        "zh-CN": "Tabbit 的 Chat 和 Agent 怎么选"
+      },
+      "intent": "informational task selection and troubleshooting",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/tabbit-chat-agent-context-workflow/",
+        "https://browserhub.co/zh-cn/guides/tabbit-chat-agent-context-workflow/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-12",
+      "sourceRecord": "docs/seo/research-2026-11-12.json",
+      "intentSummary": "Map current Chat, Agent, @ context and Skills to a task; keep /tabbit CLI as a separate coding-agent route.",
+      "demandEvidence": "One public usage article directly discusses Tabbit Agent; promotional and dated, not evidence of broad demand.",
+      "metricsStatus": "unknown; no fresh Search Console or analytics query was run"
+    },
+    {
+      "id": "guides:opera-neon-mcp-server-setup",
+      "cluster": "ai-browser-developer-integration",
+      "primaryKeyword": {
+        "en": "connect external AI client to Opera Neon MCP server",
+        "zh-CN": "外部 AI 客户端如何连接 Opera Neon MCP"
+      },
+      "intent": "informational task selection and troubleshooting",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/opera-neon-mcp-server-setup/",
+        "https://browserhub.co/zh-cn/guides/opera-neon-mcp-server-setup/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-12",
+      "sourceRecord": "docs/seo/research-2026-11-12.json",
+      "intentSummary": "Distinguish external client to Neon server from Neon Do to remote server; include current account, plan and scope checks.",
+      "demandEvidence": "One individual Reddit setup question; qualitative only.",
+      "metricsStatus": "unknown; no fresh Search Console or analytics query was run"
+    },
+    {
+      "id": "guides:chrome-ai-history-find-visited-page",
+      "cluster": "ai-browser-core-use",
+      "primaryKeyword": {
+        "en": "find a page I visited with Chrome AI history",
+        "zh-CN": "用 Chrome AI 历史搜索找回访问网页"
+      },
+      "intent": "informational task selection and troubleshooting",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chrome-ai-history-find-visited-page/",
+        "https://browserhub.co/zh-cn/guides/chrome-ai-history-find-visited-page/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-12",
+      "sourceRecord": "docs/seo/research-2026-11-12.json",
+      "intentSummary": "Separate Gemini synced history retrieval from local post-enable History search; do not promise form fields or action logs.",
+      "demandEvidence": "One recent public question about browser memory and filled-form recall; qualitative only.",
+      "metricsStatus": "unknown; no fresh Search Console or analytics query was run"
     }
   ],
   "futureCandidates": [
@@ -8074,20 +8214,22 @@
     "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
   },
   "latestContentCycle": {
-    "date": "2026-11-11",
-    "cycleId": "content-2026-11-11",
+    "date": "2026-11-12",
+    "cycleId": "content-2026-11-12",
     "newTopics": [
-      "notion-agent-web-browsing-access",
-      "dia-ai-content-data-controls",
-      "firefox-ios-reader-ai-summary-controls",
-      "genspark-chrome-extension-page-task-boundary",
-      "safari-iphone-webpage-summary"
+      "ai-browser-task-platform-chooser",
+      "arc-sunset-migration-data-checklist",
+      "tabbit-chat-agent-context-workflow",
+      "opera-neon-mcp-server-setup",
+      "chrome-ai-history-find-visited-page"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
     "publicationEvidence": "Drafts prepared for independent review; no release or live publication claimed.",
-    "sourceRecord": "docs/seo/research-2026-11-11.json"
+    "sourceRecord": "docs/seo/research-2026-11-12.json",
+    "metrics": null,
+    "protectedOldOwners": "139 prior owners and 278 editions remain unchanged; English and Chinese count once per new theme."
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",
