@@ -1,7 +1,9 @@
 import { verifiedProducts } from "@/data/verified-products";
 import { browsers, comparisons, guides, technologies, tools } from "@/data/resources";
 import { localizedGuideCopy } from "@/data/guide-translations";
+import { llmsLocaleCopy } from "@/data/llms-locale-copy";
 import { comparisonCopy, localizedResourceDescription } from "@/lib/i18n";
+import { localeMeta, localePath, locales } from "@/lib/locale-ui";
 
 export const dynamic = "force-static";
 
@@ -141,6 +143,9 @@ export function GET() {
 	const technologyFacts = technologies.map(technologyLine).join("\n");
 	const compareFacts = comparisons.map(comparisonLine).join("\n");
 	const guideFacts = guides.map(guideLine).join("\n");
+	const languageFiles = locales
+		.map(locale => `- [${localeMeta[locale].label}](${SITE}${localePath(locale)}llms.txt) — ${llmsLocaleCopy[locale].scope}`)
+		.join("\n");
 
 	const body = `# BrowserHub — Anti-detect browser resource directory / 指纹浏览器资源大全
 
@@ -182,6 +187,10 @@ ${guideFacts}
 - [About the catalogue](${SITE}/en/about/) · [About the catalogue](${SITE}/zh-cn/about/) — how the directory is structured, which fields every entry shares, and how each entry is checked.
 - [Contact and contribute](${SITE}/en/contact/) · [Contact and contribute](${SITE}/zh-cn/contact/) — how to submit a price or feature correction, a new product or a new guide.
 - [Privacy notice](${SITE}/en/privacy/) · [Privacy notice](${SITE}/zh-cn/privacy/) — what this site does not collect, what the analytics script and the server access log do record, and how to delete local data.
+
+## Localized knowledge files / 多语言知识文件
+The llms.txt specification places a knowledge file "at the site root, or at any path within it, covering the pages under that path", and says that "where more than one file applies, agents should use the most specific one". Each language below therefore has its own file covering the pages under its path, written in that language.
+${languageFiles}
 
 ## Frequently asked questions / 常见问题
 Q: What is an anti-detect browser?

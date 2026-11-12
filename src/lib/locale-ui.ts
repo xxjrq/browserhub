@@ -1,14 +1,14 @@
 export const locales = ["zh-cn", "en", "ja", "ko", "es", "pt", "ru"] as const;
 export type Locale = (typeof locales)[number];
 
-export const localeMeta: Record<Locale, { htmlLang: string; hreflang: string; label: string; ogLocale: string }> = {
-	"zh-cn": { htmlLang: "zh-CN", hreflang: "zh-CN", label: "中文", ogLocale: "zh_CN" },
-	en: { htmlLang: "en", hreflang: "en", label: "English", ogLocale: "en_US" },
-	ja: { htmlLang: "ja", hreflang: "ja", label: "日本語", ogLocale: "ja_JP" },
-	ko: { htmlLang: "ko", hreflang: "ko", label: "한국어", ogLocale: "ko_KR" },
-	es: { htmlLang: "es", hreflang: "es", label: "Español", ogLocale: "es_ES" },
-	pt: { htmlLang: "pt", hreflang: "pt", label: "Português", ogLocale: "pt_BR" },
-	ru: { htmlLang: "ru", hreflang: "ru", label: "Русский", ogLocale: "ru_RU" }
+export const localeMeta: Record<Locale, { htmlLang: string; hreflang: string; label: string; ogLocale: string; englishName: string }> = {
+	"zh-cn": { htmlLang: "zh-CN", hreflang: "zh-CN", label: "中文", ogLocale: "zh_CN", englishName: "Chinese" },
+	en: { htmlLang: "en", hreflang: "en", label: "English", ogLocale: "en_US", englishName: "English" },
+	ja: { htmlLang: "ja", hreflang: "ja", label: "日本語", ogLocale: "ja_JP", englishName: "Japanese" },
+	ko: { htmlLang: "ko", hreflang: "ko", label: "한국어", ogLocale: "ko_KR", englishName: "Korean" },
+	es: { htmlLang: "es", hreflang: "es", label: "Español", ogLocale: "es_ES", englishName: "Spanish" },
+	pt: { htmlLang: "pt", hreflang: "pt", label: "Português", ogLocale: "pt_BR", englishName: "Portuguese" },
+	ru: { htmlLang: "ru", hreflang: "ru", label: "Русский", ogLocale: "ru_RU", englishName: "Russian" }
 };
 
 export const isLocale = (value: string): value is Locale => locales.includes(value as Locale);

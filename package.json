@@ -9,7 +9,7 @@
     "lint": "eslint",
     "assets:brand": "node scripts/generate-brand-assets.mjs",
     "check:dist": "node scripts/check-dist.mjs",
-    "ci": "npm run lint && npm run check:info && npm run check:browser-sections && npm run check:comparison-sections && npm run check:comparison-editorial && npm run check:editorial-headings && npm run assets:brand && NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build && npm run fix:locale-lang && npm run check:dist && npm run check:llms && npm run check:headings && npm run audit:seo && npm run check:products",
+    "ci": "npm run lint && npm run check:info && npm run check:browser-sections && npm run check:comparison-sections && npm run check:comparison-editorial && npm run check:editorial-headings && npm run assets:brand && NEXT_PUBLIC_SITE_URL=https://browserhub.co npm run build && npm run fix:locale-lang && npm run check:dist && npm run check:llms && npm run test:llms-mutations && npm run check:headings && npm run audit:seo && npm run check:products",
     "fix:locale-lang": "node scripts/fix-static-locale-lang.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
     "check:products": "node scripts/check-product-evidence.mjs",
@@ -19,6 +19,7 @@
     "check:comparison-sections": "node scripts/check-comparison-sections.mjs",
     "check:comparison-editorial": "node scripts/check-comparison-editorial.mjs",
     "check:llms": "node scripts/check-llms-txt.mjs",
+    "test:llms-mutations": "bash scripts/mutation-test-llms-locale.sh",
     "check:headings": "node scripts/audit-heading-localisation.mjs",
     "check:editorial-headings": "node scripts/check-comparison-headings.mjs"
   },
