@@ -8135,6 +8135,261 @@
       "intentSummary": "Separate Gemini synced history retrieval from local post-enable History search; do not promise form fields or action logs.",
       "demandEvidence": "One recent public question about browser memory and filled-form recall; qualitative only.",
       "metricsStatus": "unknown; no fresh Search Console or analytics query was run"
+    },
+    {
+      "id": "guides:chatgpt-chrome-extension-site-permission-choices",
+      "primaryKeyword": {
+        "en": "ChatGPT Chrome extension website permission choices",
+        "zh-CN": "ChatGPT Chrome 扩展网站权限选择"
+      },
+      "intent": "Decide which host access to grant, how one-time/site/all permissions and history requests differ, and how to revoke or re-prompt.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chatgpt-chrome-extension-site-permission-choices/",
+        "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-site-permission-choices/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-13",
+      "demandEvidence": "Qualitative public reader question: https://www.reddit.com/r/ChatGPT/comments/1x7e3jw/chatgpt_can_now_read_your_open_chrome_tabs_and/; individual question context only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-13.json",
+      "originalGain": "Host-level grant choices, separate history prompts, cross-browser allow/block list effects, revoke/recheck steps, and the boundary between extension install permissions and site access.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 210 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "chatgpt-chrome-extension-not-connecting",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "ai-browser-tab-access-permissions",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "browser-agent-prompt-injection",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Host-level grant choices, separate history prompts, cross-browser allow/block list effects, revoke/recheck steps, and the boundary between extension install permissions and site access."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-20",
+        "14day": "2026-11-27",
+        "28day": "2026-12-11"
+      }
+    },
+    {
+      "id": "guides:chatgpt-desktop-site-tools-webmcp",
+      "primaryKeyword": {
+        "en": "ChatGPT desktop Site tools WebMCP troubleshooting",
+        "zh-CN": "ChatGPT 桌面 Site tools WebMCP 排查"
+      },
+      "intent": "Find why Site tools are absent or unavailable in the built-in browser, inspect available page tools, and disable them safely.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/chatgpt-desktop-site-tools-webmcp/",
+        "https://browserhub.co/zh-cn/guides/chatgpt-desktop-site-tools-webmcp/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-13",
+      "demandEvidence": "Qualitative public reader question: https://community.openai.com/t/how-webmcp-site-tools-currently-work-in-chatgpt-desktop/1403403; individual question context only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-13.json",
+      "originalGain": "Consumer inspection and troubleshooting in ChatGPT desktop built-in browser; distinguishes page-provided WebMCP tools from remote MCP server setup and documents current visibility, policy, tool lifecycle, trust, and disable checks.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 210 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "opera-neon-mcp-server-setup",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "browser-agent-prompt-injection",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "chatgpt-desktop-browser-vs-comet",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Consumer inspection and troubleshooting in ChatGPT desktop built-in browser; distinguishes page-provided WebMCP tools from remote MCP server setup and documents current visibility, policy, tool lifecycle, trust, and disable checks."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-20",
+        "14day": "2026-11-27",
+        "28day": "2026-12-11"
+      }
+    },
+    {
+      "id": "guides:dia-sync-between-devices-checklist",
+      "primaryKeyword": {
+        "en": "Dia Sync between devices checklist",
+        "zh-CN": "Dia 跨设备 Sync 检查清单"
+      },
+      "intent": "Pair Dia devices, confirm the documented sync scope and account, and preserve recovery material before diagnosing missing data.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/dia-sync-between-devices-checklist/",
+        "https://browserhub.co/zh-cn/guides/dia-sync-between-devices-checklist/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-13",
+      "demandEvidence": "Qualitative public reader question: https://www.reddit.com/r/diabrowser/comments/1td36tq/dia_sync_not_syncing_at_all/; individual question context only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-13.json",
+      "originalGain": "Device-pairing and recovery checklist grounded in the current setup guide, including listed data types, encryption/recovery limits, same-account requirement, and distinction from Arc import or open tabs in another window.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 210 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "dia-ai-content-data-controls",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "arc-sunset-migration-data-checklist",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "ai-browser-organize-tabs-by-task",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Device-pairing and recovery checklist grounded in the current setup guide, including listed data types, encryption/recovery limits, same-account requirement, and distinction from Arc import or open tabs in another window."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-20",
+        "14day": "2026-11-27",
+        "28day": "2026-12-11"
+      }
+    },
+    {
+      "id": "guides:dia-link-rules-open-links-in-correct-profile",
+      "primaryKeyword": {
+        "en": "Dia Link Rules open links in the correct profile",
+        "zh-CN": "Dia Link Rules 将链接打开到正确配置文件"
+      },
+      "intent": "Route incoming links from another app to a Dia profile and test the visible rule scope without assuming domain or path semantics.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/dia-link-rules-open-links-in-correct-profile/",
+        "https://browserhub.co/zh-cn/guides/dia-link-rules-open-links-in-correct-profile/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-13",
+      "demandEvidence": "Qualitative public reader question: https://www.reddit.com/r/diabrowser/comments/1xoqikb/dia_browser_for_macos_update_1560_90312/; individual question context only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-13.json",
+      "originalGain": "Current Profiles-pane location, dated version path, link suggestion behavior, external-link verification steps, and explicit unknowns about URL matching granularity.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 210 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "dia-sync-between-devices-checklist",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "arc-sunset-migration-data-checklist",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "browser-profile-permissions",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Current Profiles-pane location, dated version path, link suggestion behavior, external-link verification steps, and explicit unknowns about URL matching granularity."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-20",
+        "14day": "2026-11-27",
+        "28day": "2026-12-11"
+      }
+    },
+    {
+      "id": "guides:perplexity-comet-gmail-calendar-assistant-setup",
+      "primaryKeyword": {
+        "en": "Perplexity Comet Gmail and Google Calendar connector setup",
+        "zh-CN": "Perplexity Comet Gmail 与 Google Calendar 连接器设置"
+      },
+      "intent": "Connect and select the Gmail/Calendar connector with awareness of OAuth scope, query limits, account policy, and write-action recovery.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/perplexity-comet-gmail-calendar-assistant-setup/",
+        "https://browserhub.co/zh-cn/guides/perplexity-comet-gmail-calendar-assistant-setup/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-13",
+      "demandEvidence": "Qualitative public reader question: https://www.reddit.com/r/perplexity_ai/comments/1nhp0cr/; individual question context only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-13.json",
+      "originalGain": "Current connector setup, broader OAuth scopes versus one-primary-calendar query coverage, per-task selection, personal/Enterprise distinctions, and verify-before-retry guidance for writes.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 210 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "perplexity-comet-google-drive-connector",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "ai-browser-meeting-prep-brief",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          },
+          {
+            "slug": "ai-browser-calendar-timezone-proposal",
+            "intent": "Existing related guide checked in full; this new guide addresses a distinct specific task and scope documented in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Current connector setup, broader OAuth scopes versus one-primary-calendar query coverage, per-task selection, personal/Enterprise distinctions, and verify-before-retry guidance for writes."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-20",
+        "14day": "2026-11-27",
+        "28day": "2026-12-11"
+      }
     }
   ],
   "futureCandidates": [
@@ -8214,22 +8469,22 @@
     "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
   },
   "latestContentCycle": {
-    "date": "2026-11-12",
-    "cycleId": "content-2026-11-12",
+    "date": "2026-11-13",
+    "cycleId": "content-2026-11-13",
     "newTopics": [
-      "ai-browser-task-platform-chooser",
-      "arc-sunset-migration-data-checklist",
-      "tabbit-chat-agent-context-workflow",
-      "opera-neon-mcp-server-setup",
-      "chrome-ai-history-find-visited-page"
+      "chatgpt-chrome-extension-site-permission-choices",
+      "chatgpt-desktop-site-tools-webmcp",
+      "dia-sync-between-devices-checklist",
+      "dia-link-rules-open-links-in-correct-profile",
+      "perplexity-comet-gmail-calendar-assistant-setup"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
     "publicationEvidence": "Drafts prepared for independent review; no release or live publication claimed.",
-    "sourceRecord": "docs/seo/research-2026-11-12.json",
+    "sourceRecord": "docs/seo/research-2026-11-13.json",
     "metrics": null,
-    "protectedOldOwners": "139 prior owners and 278 editions remain unchanged; English and Chinese count once per new theme."
+    "protectedOldOwners": "144 prior owners and 288 editions remain unchanged; five new themes have complete English and Simplified Chinese copies."
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",

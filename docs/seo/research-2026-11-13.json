@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-13",
+  "status": "research-and-bilingual-drafts-prepared-for-independent-review",
+  "mainline": "Five distinct AI-browser consumer tasks grounded in publicly visible questions and current product documentation. English and Simplified Chinese copies prepared. No publication, search performance, or direct product tests claimed.",
+  "selection": {
+    "targetTopics": 5,
+    "approvedTopics": 5,
+    "oldEnhancements": 0,
+    "existingOwnerBaseline": 144,
+    "existingEditionBaseline": 288,
+    "keywordRowBaseline": 210,
+    "ownerChangesAllowed": 0,
+    "themeRule": "Each article resolves a different current user task. Public discussion is qualitative evidence only. No search-volume or ranking claims."
+  },
+  "measurementBoundary": "No raw private Search Console, account or query data in this public research file. Current GSC coverage through Nov 10 was reviewed privately by root; unavailable week Nov 5–11 not inferred as zero or impact.",
+  "competitorMethod": {
+    "reusedRecord": "docs/seo/competitive-review-2026-11-05.json",
+    "scope": "Prior dated competitive review reused only as background; directly read current product documentation and topic-specific public question contexts where accessible.",
+    "limits": [
+      "The Nov 5 competitor review is not represented as fresh.",
+      "Competitor pages are context, never product-fact authority.",
+      "No traffic, ranking, search volume, or preference inferred.",
+      "No hands-on browser/product behavior tested."
+    ]
+  },
+  "topics": [
+    {
+      "slug": "chatgpt-chrome-extension-site-permission-choices",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "A commenter asked whether the extension can access only shared tabs or every open tab; the guide itself describes host permissions rather than a per-tab exclusion.",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/ChatGPT/comments/1x7e3jw/chatgpt_can_now_read_your_open_chrome_tabs_and/",
+        "observed": "2026-11-13",
+        "note": "Specific comment in public discussion observed Nov 13. Original publication date not independently confirmed. It signals one reader question, not popularity or a current usage estimate."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          {
+            "slug": "chatgpt-chrome-extension-not-connecting",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "ai-browser-tab-access-permissions",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "browser-agent-prompt-injection",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          }
+        ],
+        "gap": "Host-level grant choices, separate history prompts, cross-browser allow/block list effects, revoke/recheck steps, and the boundary between extension install permissions and site access.",
+        "keywordMap": "All 210 pre-existing keyword rows checked; no exact owner found."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://learn.chatgpt.com/docs/chrome-extension",
+          "claim": "The current guide distinguishes Chrome installation permissions, host-level website permission choices (including Allow once, Allow for this site and Allow for all sites), and a separate browser-history request.",
+          "qualification": "Do not interpret Allow for this site as a single-tab restriction; the guide does not promise exact duration beyond Allow once."
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/chrome-extension",
+          "claim": "Allowed and blocked website lists are managed in ChatGPT settings; removing a host resets the future website permission decision. Browsing activity can become part of ChatGPT context and is subject to ChatGPT data controls.",
+          "qualification": "Revoking future access is not evidence of deletion of content already in a conversation; no retention period inferred."
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/browser",
+          "claim": "Browser context and Computer Use controls are separate from a saved site decision.",
+          "qualification": "Use current guide UI wording; BrowserHub did not connect an account."
+        }
+      ],
+      "demandInterpretation": "Specific comment in public discussion observed Nov 13. Original publication date not independently confirmed. It signals one reader question, not popularity or a current usage estimate.",
+      "increment": "Host-level grant choices, separate history prompts, cross-browser allow/block list effects, revoke/recheck steps, and the boundary between extension install permissions and site access.",
+      "sourceRecords": [
+        {
+          "url": "https://learn.chatgpt.com/docs/chrome-extension",
+          "sourceType": "primary",
+          "whatItSupports": "OpenAI Learn current Chrome extension access and permission guidance"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/browser",
+          "sourceType": "primary",
+          "whatItSupports": "OpenAI Learn browser context and controls"
+        },
+        {
+          "url": "https://www.reddit.com/r/ChatGPT/comments/1x7e3jw/chatgpt_can_now_read_your_open_chrome_tabs_and/",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Public discussion asking what open-tab access means"
+        },
+        {
+          "url": "https://madrobot.blog/2026/10/16/chatgpt-chrome-extension-read-control-open-tabs-work-mode/",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Competing explainer read as comparison context; not primary product evidence"
+        }
+      ],
+      "directAccessNote": "Official primary sources read through the EWB browser. Reddit pages can present login/access limits; where full thread text was verified, that verification was by the independent root/reviewer browser reader. No claim of personal hands-on product testing.",
+      "plannedSources": [
+        "https://learn.chatgpt.com/docs/chrome-extension",
+        "https://learn.chatgpt.com/docs/browser",
+        "https://www.reddit.com/r/ChatGPT/comments/1x7e3jw/chatgpt_can_now_read_your_open_chrome_tabs_and/",
+        "https://madrobot.blog/2026/10/16/chatgpt-chrome-extension-read-control-open-tabs-work-mode/"
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://madrobot.blog/2026/10/16/chatgpt-chrome-extension-read-control-open-tabs-work-mode/",
+            "answer": "A broad overview of Chrome extension access and Work mode.",
+            "gap": "Does not replace the official host-choice/revoke and separate history decision documented here; this article makes no claim of novelty against the broad overview."
+          }
+        ],
+        "priorReviewReuse": "docs/seo/competitive-review-2026-11-05.json reused only as dated broad competitor context."
+      }
+    },
+    {
+      "slug": "chatgpt-desktop-site-tools-webmcp",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "An OpenAI community user asks how WebMCP Site tools currently work in ChatGPT desktop; a separate r/mcp post is a promotional setup announcement rather than a consumer support question.",
+      "publicQuestion": {
+        "url": "https://community.openai.com/t/how-webmcp-site-tools-currently-work-in-chatgpt-desktop/1403403",
+        "observed": "2026-11-13",
+        "note": "The OpenAI community question was read in the independent browser on Nov 13. The Reddit page is promotional and is recorded as discovery/context only, not a reader help question."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          {
+            "slug": "opera-neon-mcp-server-setup",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "browser-agent-prompt-injection",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "chatgpt-desktop-browser-vs-comet",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          }
+        ],
+        "gap": "Consumer inspection and troubleshooting in ChatGPT desktop built-in browser; distinguishes page-provided WebMCP tools from remote MCP server setup and documents current visibility, policy, tool lifecycle, trust, and disable checks.",
+        "keywordMap": "All 210 pre-existing keyword rows checked; no exact owner found."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://learn.chatgpt.com/docs/webmcp",
+          "claim": "Site tools run in ChatGPT desktop built-in browser when supported model, page-provided tools and account/workspace policy permit; users can inspect Available site tools and disable the setting in Browser permissions.",
+          "qualification": "No guarantee that all websites expose tools or that a connected Chrome extension enables Site tools."
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/webmcp",
+          "claim": "The page documents recently used tools/results via Recently used > Sources when available, and says tools may disappear after navigation or closing the page; normal confirmations and safety review still apply.",
+          "qualification": "Do not infer tool execution preference, automatic navigation or deterministic behavior from names/annotations."
+        },
+        {
+          "url": "https://developer.chrome.com/docs/ai/webmcp",
+          "claim": "Chrome developer guide explains the WebMCP page interface and site implementation context.",
+          "qualification": "Developer documentation is not an end-user compatibility guarantee."
+        },
+        {
+          "url": "https://webmachinelearning.github.io/webmcp/",
+          "claim": "The linked WebMCP specification describes the proposed page interface.",
+          "qualification": "Specification does not establish universal support or deployment."
+        }
+      ],
+      "demandInterpretation": "The OpenAI community question was read in the independent browser on Nov 13. The Reddit page is promotional and is recorded as discovery/context only, not a reader help question.",
+      "increment": "Consumer inspection and troubleshooting in ChatGPT desktop built-in browser; distinguishes page-provided WebMCP tools from remote MCP server setup and documents current visibility, policy, tool lifecycle, trust, and disable checks.",
+      "sourceRecords": [
+        {
+          "url": "https://learn.chatgpt.com/docs/webmcp",
+          "sourceType": "primary",
+          "whatItSupports": "OpenAI Learn current ChatGPT desktop Site tools guide"
+        },
+        {
+          "url": "https://webmachinelearning.github.io/webmcp/",
+          "sourceType": "primary",
+          "whatItSupports": "WebMCP draft specification"
+        },
+        {
+          "url": "https://developer.chrome.com/docs/ai/webmcp",
+          "sourceType": "primary",
+          "whatItSupports": "Chrome developer WebMCP guide"
+        },
+        {
+          "url": "https://community.openai.com/t/how-webmcp-site-tools-currently-work-in-chatgpt-desktop/1403403",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Public end-user question about current Site tools behavior"
+        },
+        {
+          "url": "https://www.reddit.com/r/mcp/comments/1wamhh7/webmcp_is_here_how_to_set_it_up_today/",
+          "sourceType": "promotional-discussion-context",
+          "whatItSupports": "A promotional setup announcement, recorded only as discovery context; not a consumer support question or product-fact source."
+        }
+      ],
+      "directAccessNote": "Official primary sources read through the EWB browser. Reddit pages can present login/access limits; where full thread text was verified, that verification was by the independent root/reviewer browser reader. No claim of personal hands-on product testing.",
+      "plannedSources": [
+        "https://learn.chatgpt.com/docs/webmcp",
+        "https://webmachinelearning.github.io/webmcp/",
+        "https://developer.chrome.com/docs/ai/webmcp",
+        "https://community.openai.com/t/how-webmcp-site-tools-currently-work-in-chatgpt-desktop/1403403",
+        "https://www.reddit.com/r/mcp/comments/1wamhh7/webmcp_is_here_how_to_set_it_up_today/"
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://learn.chatgpt.com/docs/webmcp",
+            "answer": "OpenAI Learn documents the built-in browser, model/page/account-policy conditions, Available site tools, Recently used > Sources when available, navigation lifecycle, normal confirmations and disable path.",
+            "gap": "The guide answers consumer visibility/troubleshooting. WebMCP spec and Chrome guide are implementation context; the community question remains a separate demand signal."
+          }
+        ],
+        "readerQuestions": [
+          {
+            "url": "https://community.openai.com/t/how-webmcp-site-tools-currently-work-in-chatgpt-desktop/1403403",
+            "question": "A user asks how WebMCP Site tools currently work in ChatGPT desktop."
+          }
+        ],
+        "promotionalContext": [
+          {
+            "url": "https://www.reddit.com/r/mcp/comments/1wamhh7/webmcp_is_here_how_to_set_it_up_today/",
+            "note": "Promotional/developer setup discussion; not treated as a consumer question or product-fact source."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "dia-sync-between-devices-checklist",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "One older post asks why bookmarks/profiles do not appear on two machines using the same account with Sync enabled; another asks whether tabs mirror between separate Dia windows. These are distinct observations.",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/diabrowser/comments/1td36tq/dia_sync_not_syncing_at_all/",
+        "observed": "2026-11-13",
+        "note": "Question threads are older qualitative reports; original dates were not independently re-confirmed in this handoff. They are not evidence of current issue prevalence."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          {
+            "slug": "dia-ai-content-data-controls",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "arc-sunset-migration-data-checklist",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "ai-browser-organize-tabs-by-task",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          }
+        ],
+        "gap": "Device-pairing and recovery checklist grounded in the current setup guide, including listed data types, encryption/recovery limits, same-account requirement, and distinction from Arc import or open tabs in another window.",
+        "keywordMap": "All 210 pre-existing keyword rows checked; no exact owner found."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://browserinc.notion.site/How-to-set-up-Sync-33c612503676806c82bcfba8920ec7e8",
+          "claim": "The current setup guide lists Profiles, Bookmarks, Pinned tabs and Tab groups; describes end-to-end encryption, access via user devices or recovery-kit passphrase, same Dia account, and first-device setup/recovery kit.",
+          "qualification": "The visible guide section reviewed does not document the six-character pairing code; that step is attributed to the April 9 launch note. Do not extend the data list to passwords, sign-in sessions, downloads or every preference."
+        },
+        {
+          "url": "https://www.diabrowser.com/release-notes/1-26-0-sync-is-here",
+          "claim": "The April 9 launch notes describe Sync setup, recovery-kit creation and pairing with a six-character code; losing device plus recovery kit removes the recovery path.",
+          "qualification": "Dated launch flow; current screen labels can vary."
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/windows/1-3-0",
+          "claim": "The October 22 Windows 1.3.0 notes describe Windows/Mac sync and matching-profile merge.",
+          "qualification": "Version-specific dated statement; no instant all-tab mirroring claim."
+        }
+      ],
+      "demandInterpretation": "Question threads are older qualitative reports; original dates were not independently re-confirmed in this handoff. They are not evidence of current issue prevalence.",
+      "increment": "Device-pairing and recovery checklist grounded in the current setup guide, including listed data types, encryption/recovery limits, same-account requirement, and distinction from Arc import or open tabs in another window.",
+      "sourceRecords": [
+        {
+          "url": "https://browserinc.notion.site/How-to-set-up-Sync-33c612503676806c82bcfba8920ec7e8",
+          "sourceType": "primary",
+          "whatItSupports": "Current setup guide data scope, encryption/recovery access, same-account requirement and first-device recovery-kit setup."
+        },
+        {
+          "url": "https://www.diabrowser.com/release-notes/1-26-0-sync-is-here",
+          "sourceType": "primary",
+          "whatItSupports": "Dia Sync launch/recovery kit and pairing notes"
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/windows/1-3-0",
+          "sourceType": "primary",
+          "whatItSupports": "Dia Windows 1.3.0 cross-platform sync notes"
+        },
+        {
+          "url": "https://www.reddit.com/r/diabrowser/comments/1td36tq/dia_sync_not_syncing_at_all/",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Public question about two-device sync and missing bookmarks/profiles"
+        },
+        {
+          "url": "https://www.reddit.com/r/diabrowser/comments/1vhrm3p/tabs_sync_across_windows/",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Public question distinguishing cross-window tabs from sync"
+        }
+      ],
+      "directAccessNote": "Official primary sources read through the EWB browser. Reddit pages can present login/access limits; where full thread text was verified, that verification was by the independent root/reviewer browser reader. No claim of personal hands-on product testing.",
+      "plannedSources": [
+        "https://browserinc.notion.site/How-to-set-up-Sync-33c612503676806c82bcfba8920ec7e8",
+        "https://www.diabrowser.com/release-notes/1-26-0-sync-is-here",
+        "https://www.diabrowser.com/changelog/windows/1-3-0",
+        "https://www.reddit.com/r/diabrowser/comments/1td36tq/dia_sync_not_syncing_at_all/",
+        "https://www.reddit.com/r/diabrowser/comments/1vhrm3p/tabs_sync_across_windows/"
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://browserinc.notion.site/How-to-set-up-Sync-33c612503676806c82bcfba8920ec7e8",
+            "answer": "Dia’s current setup guide lists synced data types, encryption/recovery access, same-account prerequisite and first-device recovery-kit setup.",
+            "gap": "It does not resolve a reader’s specific missing-bookmark or cross-window mirroring symptom; the guide turns those into separate checks without claiming a universal fix."
+          },
+          {
+            "url": "https://www.diabrowser.com/release-notes/1-26-0-sync-is-here",
+            "answer": "Dia launch notes document the six-character pairing code and warn that losing both the device and recovery kit removes the recovery path.",
+            "gap": "Dated setup guidance, not a diagnosis of old community reports or guarantee of instant mirroring."
+          }
+        ],
+        "readerQuestions": [
+          {
+            "url": "https://www.reddit.com/r/diabrowser/comments/1td36tq/dia_sync_not_syncing_at_all/",
+            "question": "Two devices, same account and Sync enabled, but bookmarks/profiles are reportedly missing."
+          },
+          {
+            "url": "https://www.reddit.com/r/diabrowser/comments/1vhrm3p/tabs_sync_across_windows/",
+            "question": "Whether tabs mirror between Dia windows; comments distinguish pinned/tab handoff from full mirroring."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "dia-link-rules-open-links-in-correct-profile",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "In a Dia Mac 1.56 release thread, a user asks whether Link Rules match only a domain or can target more specific URL scope.",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/diabrowser/comments/1xoqikb/dia_browser_for_macos_update_1560_90312/",
+        "observed": "2026-11-13",
+        "note": "Question observed/read in public release thread Nov 13; original thread date not independently confirmed. It is one specific unresolved question."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          {
+            "slug": "dia-sync-between-devices-checklist",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "arc-sunset-migration-data-checklist",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "browser-profile-permissions",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          }
+        ],
+        "gap": "Current Profiles-pane location, dated version path, link suggestion behavior, external-link verification steps, and explicit unknowns about URL matching granularity.",
+        "keywordMap": "All 210 pre-existing keyword rows checked; no exact owner found."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://www.diabrowser.com/changelog/mac/1-56-0",
+          "claim": "Mac 1.56.0 changelog discusses incoming URLs/links from other apps routed by Link Rules.",
+          "qualification": "Does not establish the rule parser or matching granularity."
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/windows/1-6-0",
+          "claim": "Windows 1.6.0 changelog moves the Link Rules editor into the Profiles pane.",
+          "qualification": "Do not attribute incoming-app route details to this page."
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/mac/1-57-0",
+          "claim": "Mac 1.57.0 changelog likewise places Link Rules in the Profiles pane with a simpler editor.",
+          "qualification": "Current UI location only; it does not document domain/path/page matching."
+        },
+        {
+          "url": "https://www.diabrowser.com/release-notes/1-56-make-yourself-at-home",
+          "claim": "Nov 5 notes describe link routing, suggestions after moving a tab, cross-device rule sync, Arc import and the then-current Settings > Advanced route.",
+          "qualification": "Treat the menu path as dated; follow current installed UI."
+        }
+      ],
+      "demandInterpretation": "Question observed/read in public release thread Nov 13; original thread date not independently confirmed. It is one specific unresolved question.",
+      "increment": "Current Profiles-pane location, dated version path, link suggestion behavior, external-link verification steps, and explicit unknowns about URL matching granularity.",
+      "sourceRecords": [
+        {
+          "url": "https://www.diabrowser.com/changelog/windows/1-6-0",
+          "sourceType": "primary",
+          "whatItSupports": "Windows 1.6.0 Profiles-pane Link Rules editor; not the Mac incoming-link statement."
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/mac/1-56-0",
+          "sourceType": "primary",
+          "whatItSupports": "Mac 1.56.0 Link Rules handling of incoming links from other apps."
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/mac/1-57-0",
+          "sourceType": "primary",
+          "whatItSupports": "Mac 1.57.0 Profiles-pane Link Rules editor."
+        },
+        {
+          "url": "https://www.diabrowser.com/release-notes/1-56-make-yourself-at-home",
+          "sourceType": "primary",
+          "whatItSupports": "Dia Nov 5 link rules, suggestion, sync, Arc import and dated path"
+        },
+        {
+          "url": "https://www.reddit.com/r/diabrowser/comments/1xoqikb/dia_browser_for_macos_update_1560_90312/",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Public question about domain-only versus narrower rules"
+        }
+      ],
+      "directAccessNote": "Official primary sources read through the EWB browser. Reddit pages can present login/access limits; where full thread text was verified, that verification was by the independent root/reviewer browser reader. No claim of personal hands-on product testing.",
+      "plannedSources": [
+        "https://www.diabrowser.com/changelog/windows/1-6-0",
+        "https://www.diabrowser.com/changelog/mac/1-56-0",
+        "https://www.diabrowser.com/changelog/mac/1-57-0",
+        "https://www.diabrowser.com/release-notes/1-56-make-yourself-at-home",
+        "https://www.reddit.com/r/diabrowser/comments/1xoqikb/dia_browser_for_macos_update_1560_90312/"
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://www.diabrowser.com/changelog/mac/1-56-0",
+            "answer": "Mac 1.56.0 describes incoming links from other apps routed by Link Rules.",
+            "gap": "Does not specify URL matching grammar."
+          },
+          {
+            "url": "https://www.diabrowser.com/changelog/mac/1-57-0",
+            "answer": "Mac 1.57.0 places Link Rules in the Profiles pane.",
+            "gap": "Current editor location, but still no domain/path/page matching detail."
+          },
+          {
+            "url": "https://www.diabrowser.com/changelog/windows/1-6-0",
+            "answer": "Windows 1.6.0 likewise puts the editor in Profiles.",
+            "gap": "Does not document matching granularity or incoming-link parser."
+          },
+          {
+            "url": "https://www.diabrowser.com/release-notes/1-56-make-yourself-at-home",
+            "answer": "Nov 5 notes describe link routing, suggestions after a tab move, cross-device rule sync, Arc import and a then-current Settings > Advanced path.",
+            "gap": "Dated UI path; no answer to the reader’s domain-versus-narrower-scope question."
+          }
+        ],
+        "readerQuestions": [
+          {
+            "url": "https://www.reddit.com/r/diabrowser/comments/1xoqikb/dia_browser_for_macos_update_1560_90312/",
+            "question": "A user asks whether Link Rules match only a domain or allow narrower matching."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "perplexity-comet-gmail-calendar-assistant-setup",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "Older r/perplexity_ai questions ask why Comet cannot access a Google calendar or Gmail account that the user expected to connect.",
+      "publicQuestion": {
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1nhp0cr/",
+        "observed": "2026-11-13",
+        "note": "The public posts date to 2025 (Sep 15 and Aug 2025 per the original Reddit page context available to the reviewer). They are evergreen qualitative context, not current demand or outage evidence."
+      },
+      "existingOwnerCheck": {
+        "nearest": [
+          {
+            "slug": "perplexity-comet-google-drive-connector",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "ai-browser-meeting-prep-brief",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          },
+          {
+            "slug": "ai-browser-calendar-timezone-proposal",
+            "review": "Full English and Chinese owner bodies reviewed; nearest coverage and limits recorded."
+          }
+        ],
+        "gap": "Current connector setup, broader OAuth scopes versus one-primary-calendar query coverage, per-task selection, personal/Enterprise distinctions, and verify-before-retry guidance for writes.",
+        "keywordMap": "All 210 pre-existing keyword rows checked; no exact owner found."
+      },
+      "primaryFacts": [
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/12168040-connecting-perplexity-with-gmail-and-google-calendar",
+          "claim": "Current connector guide gives Plugins > Discover/search > Connect (or Customize > Connectors), documents broad Gmail compose/send and calendar view/edit OAuth scopes, and says Comet Assistant can send mail/create events.",
+          "qualification": "Read the actual Google consent screen; account and workspace policy may restrict connector access."
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/12168040-connecting-perplexity-with-gmail-and-google-calendar",
+          "claim": "Connector currently queries one primary calendar even though documented permissions span all calendars; connection is reusable across account surfaces.",
+          "qualification": "OAuth permissions are not query coverage. Do not call this read-only."
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/2026091802-troubleshooting-connectors",
+          "claim": "Troubleshooting guide covers account authorization, per-task connector selection, source filters and organization restrictions.",
+          "qualification": "A Connected state does not prove the current task used the connector."
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/11172798-getting-started-with-comet",
+          "claim": "Comet getting-started documentation describes the browser and Assistant entry points.",
+          "qualification": "Use it for product surfaces, not to broaden connector capability claims."
+        }
+      ],
+      "demandInterpretation": "The public posts date to 2025 (Sep 15 and Aug 2025 per the original Reddit page context available to the reviewer). They are evergreen qualitative context, not current demand or outage evidence.",
+      "increment": "Current connector setup, broader OAuth scopes versus one-primary-calendar query coverage, per-task selection, personal/Enterprise distinctions, and verify-before-retry guidance for writes.",
+      "sourceRecords": [
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/12168040-connecting-perplexity-with-gmail-and-google-calendar",
+          "sourceType": "primary",
+          "whatItSupports": "Current connector setup, requested scopes and one-primary-calendar query limit"
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/2026091802-troubleshooting-connectors",
+          "sourceType": "primary",
+          "whatItSupports": "Connector troubleshooting and task selection"
+        },
+        {
+          "url": "https://www.perplexity.ai/help-center/en/articles/11172798-getting-started-with-comet",
+          "sourceType": "primary",
+          "whatItSupports": "Comet usage and supported surface context"
+        },
+        {
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1nhp0cr/",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Public historical question about Comet Gmail access; not current outage evidence"
+        },
+        {
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1mue04i/",
+          "sourceType": "public-question-or-competitor-context",
+          "whatItSupports": "Public historical question about advertised Gmail access; not current outage evidence"
+        }
+      ],
+      "directAccessNote": "Official primary sources read through the EWB browser. Reddit pages can present login/access limits; where full thread text was verified, that verification was by the independent root/reviewer browser reader. No claim of personal hands-on product testing.",
+      "plannedSources": [
+        "https://www.perplexity.ai/help-center/en/articles/12168040-connecting-perplexity-with-gmail-and-google-calendar",
+        "https://www.perplexity.ai/help-center/en/articles/2026091802-troubleshooting-connectors",
+        "https://www.perplexity.ai/help-center/en/articles/11172798-getting-started-with-comet",
+        "https://www.reddit.com/r/perplexity_ai/comments/1nhp0cr/",
+        "https://www.reddit.com/r/perplexity_ai/comments/1mue04i/"
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://www.perplexity.ai/help-center/en/articles/12168040-connecting-perplexity-with-gmail-and-google-calendar",
+            "answer": "Current Perplexity help documents Connect steps, broad OAuth scopes, Comet send/create actions and query access to one primary calendar.",
+            "gap": "This is the current answer; the practical increment makes OAuth breadth versus query coverage explicit and adds safe task selection/write recovery."
+          },
+          {
+            "url": "https://www.perplexity.ai/help-center/en/articles/2026091802-troubleshooting-connectors",
+            "answer": "Current troubleshooting documents account authorization, task-level connector selection, source filters and organization restrictions.",
+            "gap": "A Connected state alone does not establish that a specific Comet task used the connector."
+          }
+        ],
+        "readerQuestions": [
+          {
+            "url": "https://www.reddit.com/r/perplexity_ai/comments/1nhp0cr/",
+            "question": "Historical question about Comet not accessing the user’s calendar/email."
+          },
+          {
+            "url": "https://www.reddit.com/r/perplexity_ai/comments/1mue04i/",
+            "question": "Historical question about Gmail access in Comet."
+          }
+        ],
+        "readerQuestionDates": "2025-09-15 and August 2025 per reviewer’s original page context; old qualitative examples only, not current bug evidence."
+      }
+    }
+  ],
+  "publicationLimits": [
+    "Drafts only; release requires independent review and the root-managed content workflow receipt.",
+    "No publishing, indexing submission, live-site verification, measurements or CI run performed by this executor.",
+    "Do not state search demand, click/rank lift, or product behavior beyond the cited current source."
+  ]
+}
