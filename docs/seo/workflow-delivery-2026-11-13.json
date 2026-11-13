@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-13",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "0b6e1ba1be2442ef19144836a1821ef55ecb2844be8f2b4523530bdae2cdda77",
+  "commit": "70e42a06f57182ac92705170674dadb957af8fe0",
+  "release": "/opt/browsertools/releases/20261113-094623",
+  "publicationReceiptAt": "2026-11-13T01:46:51.741Z",
+  "completedAt": "2026-11-13T01:46:53.815Z",
+  "newTopics": [
+    "chatgpt-chrome-extension-site-permission-choices",
+    "chatgpt-desktop-site-tools-webmcp",
+    "dia-sync-between-devices-checklist",
+    "dia-link-rules-open-links-in-correct-profile",
+    "perplexity-comet-gmail-calendar-assistant-setup"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/chatgpt-chrome-extension-site-permission-choices/",
+    "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-site-permission-choices/",
+    "https://browserhub.co/en/guides/chatgpt-desktop-site-tools-webmcp/",
+    "https://browserhub.co/zh-cn/guides/chatgpt-desktop-site-tools-webmcp/",
+    "https://browserhub.co/en/guides/dia-sync-between-devices-checklist/",
+    "https://browserhub.co/zh-cn/guides/dia-sync-between-devices-checklist/",
+    "https://browserhub.co/en/guides/dia-link-rules-open-links-in-correct-profile/",
+    "https://browserhub.co/zh-cn/guides/dia-link-rules-open-links-in-correct-profile/",
+    "https://browserhub.co/en/guides/perplexity-comet-gmail-calendar-assistant-setup/",
+    "https://browserhub.co/zh-cn/guides/perplexity-comet-gmail-calendar-assistant-setup/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "counting": "Five independent themes: four core AI-browser use/selection tasks and one supporting connection task; English and Chinese editions count once. All 144 prior owners and 288 editions remain unchanged, including the November9 existing-owner refresh.",
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "sourceRecords": [
+    {
+      "topic": "chatgpt-chrome-extension-site-permission-choices",
+      "url": "https://learn.chatgpt.com/docs/chrome-extension",
+      "sourceType": "primary",
+      "whatItSupports": "OpenAI Learn current Chrome extension access and permission guidance"
+    },
+    {
+      "topic": "chatgpt-chrome-extension-site-permission-choices",
+      "url": "https://learn.chatgpt.com/docs/browser",
+      "sourceType": "primary",
+      "whatItSupports": "OpenAI Learn browser context and controls"
+    },
+    {
+      "topic": "chatgpt-chrome-extension-site-permission-choices",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1x7e3jw/chatgpt_can_now_read_your_open_chrome_tabs_and/",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Public discussion asking what open-tab access means"
+    },
+    {
+      "topic": "chatgpt-chrome-extension-site-permission-choices",
+      "url": "https://madrobot.blog/2026/10/16/chatgpt-chrome-extension-read-control-open-tabs-work-mode/",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Competing explainer read as comparison context; not primary product evidence"
+    },
+    {
+      "topic": "chatgpt-desktop-site-tools-webmcp",
+      "url": "https://learn.chatgpt.com/docs/webmcp",
+      "sourceType": "primary",
+      "whatItSupports": "OpenAI Learn current ChatGPT desktop Site tools guide"
+    },
+    {
+      "topic": "chatgpt-desktop-site-tools-webmcp",
+      "url": "https://webmachinelearning.github.io/webmcp/",
+      "sourceType": "primary",
+      "whatItSupports": "WebMCP draft specification"
+    },
+    {
+      "topic": "chatgpt-desktop-site-tools-webmcp",
+      "url": "https://developer.chrome.com/docs/ai/webmcp",
+      "sourceType": "primary",
+      "whatItSupports": "Chrome developer WebMCP guide"
+    },
+    {
+      "topic": "chatgpt-desktop-site-tools-webmcp",
+      "url": "https://community.openai.com/t/how-webmcp-site-tools-currently-work-in-chatgpt-desktop/1403403",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Public end-user question about current Site tools behavior"
+    },
+    {
+      "topic": "chatgpt-desktop-site-tools-webmcp",
+      "url": "https://www.reddit.com/r/mcp/comments/1wamhh7/webmcp_is_here_how_to_set_it_up_today/",
+      "sourceType": "promotional-discussion-context",
+      "whatItSupports": "A promotional setup announcement, recorded only as discovery context; not a consumer support question or product-fact source."
+    },
+    {
+      "topic": "dia-sync-between-devices-checklist",
+      "url": "https://browserinc.notion.site/How-to-set-up-Sync-33c612503676806c82bcfba8920ec7e8",
+      "sourceType": "primary",
+      "whatItSupports": "Dia Sync setup guide, data scope, encryption and pairing"
+    },
+    {
+      "topic": "dia-sync-between-devices-checklist",
+      "url": "https://www.diabrowser.com/release-notes/1-26-0-sync-is-here",
+      "sourceType": "primary",
+      "whatItSupports": "Dia Sync launch/recovery kit and pairing notes"
+    },
+    {
+      "topic": "dia-sync-between-devices-checklist",
+      "url": "https://www.diabrowser.com/changelog/windows/1-3-0",
+      "sourceType": "primary",
+      "whatItSupports": "Dia Windows 1.3.0 cross-platform sync notes"
+    },
+    {
+      "topic": "dia-sync-between-devices-checklist",
+      "url": "https://www.reddit.com/r/diabrowser/comments/1td36tq/dia_sync_not_syncing_at_all/",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Public question about two-device sync and missing bookmarks/profiles"
+    },
+    {
+      "topic": "dia-sync-between-devices-checklist",
+      "url": "https://www.reddit.com/r/diabrowser/comments/1vhrm3p/tabs_sync_across_windows/",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Public question distinguishing cross-window tabs from sync"
+    },
+    {
+      "topic": "dia-link-rules-open-links-in-correct-profile",
+      "url": "https://www.diabrowser.com/changelog/windows/1-6-0",
+      "sourceType": "primary",
+      "whatItSupports": "Windows 1.6.0 Profiles-pane Link Rules editor; not the Mac incoming-link statement."
+    },
+    {
+      "topic": "dia-link-rules-open-links-in-correct-profile",
+      "url": "https://www.diabrowser.com/changelog/mac/1-56-0",
+      "sourceType": "primary",
+      "whatItSupports": "Mac 1.56.0 Link Rules handling of incoming links from other apps."
+    },
+    {
+      "topic": "dia-link-rules-open-links-in-correct-profile",
+      "url": "https://www.diabrowser.com/changelog/mac/1-57-0",
+      "sourceType": "primary",
+      "whatItSupports": "Mac 1.57.0 Profiles-pane Link Rules editor."
+    },
+    {
+      "topic": "dia-link-rules-open-links-in-correct-profile",
+      "url": "https://www.diabrowser.com/release-notes/1-56-make-yourself-at-home",
+      "sourceType": "primary",
+      "whatItSupports": "Dia Nov 5 link rules, suggestion, sync, Arc import and dated path"
+    },
+    {
+      "topic": "dia-link-rules-open-links-in-correct-profile",
+      "url": "https://www.reddit.com/r/diabrowser/comments/1xoqikb/dia_browser_for_macos_update_1560_90312/",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Public question about domain-only versus narrower rules"
+    },
+    {
+      "topic": "perplexity-comet-gmail-calendar-assistant-setup",
+      "url": "https://www.perplexity.ai/help-center/en/articles/12168040-connecting-perplexity-with-gmail-and-google-calendar",
+      "sourceType": "primary",
+      "whatItSupports": "Current connector setup, requested scopes and one-primary-calendar query limit"
+    },
+    {
+      "topic": "perplexity-comet-gmail-calendar-assistant-setup",
+      "url": "https://www.perplexity.ai/help-center/en/articles/2026091802-troubleshooting-connectors",
+      "sourceType": "primary",
+      "whatItSupports": "Connector troubleshooting and task selection"
+    },
+    {
+      "topic": "perplexity-comet-gmail-calendar-assistant-setup",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11172798-getting-started-with-comet",
+      "sourceType": "primary",
+      "whatItSupports": "Comet usage and supported surface context"
+    },
+    {
+      "topic": "perplexity-comet-gmail-calendar-assistant-setup",
+      "url": "https://www.reddit.com/r/perplexity_ai/comments/1nhp0cr/",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Public historical question about Comet Gmail access; not current outage evidence"
+    },
+    {
+      "topic": "perplexity-comet-gmail-calendar-assistant-setup",
+      "url": "https://www.reddit.com/r/perplexity_ai/comments/1mue04i/",
+      "sourceType": "public-question-or-competitor-context",
+      "whatItSupports": "Public historical question about advertised Gmail access; not current outage evidence"
+    }
+  ],
+  "competitiveReview": "docs/seo/competitive-review-2026-11-05.json",
+  "competitorScope": "Reused the November 5 site samples and checked current reader and competitor evidence for each new topic.",
+  "modelRoles": {
+    "executor": {
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "selectionSource": "role_default",
+      "attempts": 1,
+      "fallback": null,
+      "role": "executor"
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "independentContext": true,
+      "attempts": 1,
+      "selectionSource": "role_default"
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "79f4c6261a7705129ea8836345344935949004607325835e990ebe83842776eb"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "attempt": 2,
+      "sourceFilesUnchangedDuringCi": true,
+      "logSha256": "858f5fc57202702c896d8feab37b7eb00a03222ac86e31d4cd52a2e8582e6bd6"
+    },
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1499,
+      "sitemapUrls": 1166,
+      "internalLinks": 52298,
+      "alternateLinks": 8285,
+      "fallbackPages": 60,
+      "editorialGuides": 298,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-13T01:41:50.300Z",
+      "status": "passed",
+      "existingTopicsPreserved": 144,
+      "existingTopicsUnchanged": 144,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 149,
+      "completeEditions": 298,
+      "newTopics": 5,
+      "keywordRows": 215,
+      "details": [
+        {
+          "slug": "chatgpt-chrome-extension-site-permission-choices",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "chatgpt-chrome-extension-site-permission-choices",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "chatgpt-desktop-site-tools-webmcp",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "chatgpt-desktop-site-tools-webmcp",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "dia-sync-between-devices-checklist",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "dia-sync-between-devices-checklist",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "dia-link-rules-open-links-in-correct-profile",
+          "locale": "en",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "dia-link-rules-open-links-in-correct-profile",
+          "locale": "zh-cn",
+          "sections": 7,
+          "faq": 5
+        },
+        {
+          "slug": "perplexity-comet-gmail-calendar-assistant-setup",
+          "locale": "en",
+          "sections": 8,
+          "faq": 5
+        },
+        {
+          "slug": "perplexity-comet-gmail-calendar-assistant-setup",
+          "locale": "zh-cn",
+          "sections": 8,
+          "faq": 5
+        }
+      ]
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified; no global account switch",
+    "serverCurrent": {
+      "checkedAt": "2026-11-13T01:47:00.856720+00:00",
+      "exitCode": 0,
+      "stdout": "/opt/browsertools/releases/20261113-094623\n",
+      "stderr": "",
+      "expected": "/opt/browsertools/releases/20261113-094623",
+      "matches": true
+    },
+    "preflightRevision": {
+      "priorAttempt": 1,
+      "priorExitCode": 0,
+      "reason": "Independent actual rendered-HTML review found numbered checklist lines collapse into one paragraph. Content-only supported-bullet formatting correction is required; first successful CI evidence preserved, final approval withheld. No renderer or external operations changed.",
+      "priorLogSha256": "6effac8e06566df2ecc2e163e2785698507c345937bc3df03e39467fde87d75f"
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-13T01:46:53.784Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chatgpt-chrome-extension-site-permission-choices/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chatgpt-chrome-extension-site-permission-choices/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chatgpt-chrome-extension-site-permission-choices/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-site-permission-choices/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chatgpt-desktop-site-tools-webmcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chatgpt-desktop-site-tools-webmcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chatgpt-desktop-site-tools-webmcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chatgpt-desktop-site-tools-webmcp/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dia-link-rules-open-links-in-correct-profile/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dia-link-rules-open-links-in-correct-profile/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dia-link-rules-open-links-in-correct-profile/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dia-link-rules-open-links-in-correct-profile/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/perplexity-comet-gmail-calendar-assistant-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/perplexity-comet-gmail-calendar-assistant-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/perplexity-comet-gmail-calendar-assistant-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/perplexity-comet-gmail-calendar-assistant-setup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-13T01:46:51.741Z",
+    "timeMeaning": "Successful release receipt, not first human visit or discovery.",
+    "nominalDurationMatureAtUtc": {
+      "7day": "2026-11-20T01:46:51.741000+00:00",
+      "14day": "2026-11-27T01:46:51.741000+00:00",
+      "28day": "2026-12-11T01:46:51.741000+00:00"
+    },
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-13",
+        "end": "2026-11-19",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-20T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-13",
+        "end": "2026-11-26",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-11-27T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-13",
+        "end": "2026-12-10",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-11T08:00:00+00:00",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare matching closed and actually available page/query/language windows; missing rows and latency are not zero traffic."
+  },
+  "runtimeEvidence": "Documentation-based consumer/browser workflows; no signed-in product task execution or compatibility benchmark, and no fabricated hands-on result.",
+  "measurement": "Read-only Google Search Console and QQ Baidu reports were refreshed on November 13. The November 4 refresh still lacks its complete available window. New-publication effects require matching closed available windows; no causal or ROI claim.",
+  "operationsNotPerformed": [
+    "Index/sitemap submissions or live Google validation",
+    "Detection website or EasyBR client/backend changes",
+    "New paidtools/subscriptions/modelAPIs",
+    "Outreach or realaccount product task execution",
+    "Analytics configuration changes"
+  ]
+}
