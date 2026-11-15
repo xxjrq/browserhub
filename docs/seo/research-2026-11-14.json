@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-14",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-14",
+  "status": "research-and-bilingual-drafts-prepared-for-independent-review",
+  "mainline": "Five distinct AI-browser consumer tasks grounded in public reader questions and current official sources. Discussion is qualitative evidence only; no product testing, search volume, traffic, or ranking result is claimed.",
+  "selection": {
+    "targetTopics": 5,
+    "approvedTopics": 5,
+    "oldEnhancements": 0,
+    "existingOwnerBaseline": 149,
+    "existingEditionBaseline": 298,
+    "keywordRowBaseline": 215,
+    "ownerChangesAllowed": 0,
+    "themeRule": "Topics must answer distinct consumer tasks, with a current public question, a complete existing-owner check, current primary sources, and a concrete answer gain. EN/ZH editions count once. No quantity claim substitutes for demand or quality."
+  },
+  "measurementBoundary": "Private Nov 13 review found whole-site closed-week movement but no causal attribution, conversion evidence, or per-topic effect. Search Console was available only through Nov 10 PT. This record does not expose private page or query data and does not claim content effectiveness.",
+  "competitorMethod": {
+    "scope": "Read topic-specific public user questions, official support and release pages, plus independent explainers where available. Official sources establish product facts; community reports establish only that an individual asked or reported something.",
+    "limits": [
+      "Public posts are qualitative and may describe old versions or unresolved individual cases.",
+      "No search volume, popularity, ranking, traffic, or causal impact was inferred.",
+      "No direct browser account or product behavior test was performed by the executor.",
+      "Where an official page is stale or conflicts with a newer official policy, the conflict and the resulting unknown are stated explicitly."
+    ]
+  },
+  "topics": [
+    {
+      "slug": "brave-leo-chat-history-sync-and-cleanup",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "How can I keep Brave Leo conversations, use them on another device, and avoid deleting them while clearing browser data?",
+      "publicQuestions": [
+        {
+          "url": "https://community.brave.app/t/issue-with-instructions-from-leo-ai/658319",
+          "observed": "2026-11-14",
+          "note": "Sep 15 2026 user report says months of chats were missing after cleanup. Brave support replied that Leo history is a separate file/category with its own checkbox, could not reproduce the loss, and requested details. The user later said the Leo option was unchecked. After first suggesting a laptop shutdown, the user clarified that neither device had been shut down and chats disappeared after closing and reopening the browser. Cause unresolved; not proof of a general clearing failure."
+        },
+        {
+          "url": "https://community.brave.app/t/loss-of-conversation-data-even-after-copying-the-link-in-ask-brave/653906",
+          "observed": "2026-11-14",
+          "note": "A June 7 2026 Ask Brave thread appears to confuse Ask Brave and Leo. It is retained as a product-boundary example, not counted as a distinct Leo-history demand question."
+        },
+        {
+          "url": "https://community.brave.app/t/conversation-history-is-inconsistent/653467/2",
+          "observed": "2026-11-14",
+          "note": "A May 26 2026 question about inconsistent history is qualitative context only."
+        }
+      ],
+      "existingOwnerCheck": {
+        "keywordMap": "All 215 existing keyword rows inspected; no exact Brave Leo history or history-sync owner.",
+        "nearest": [
+          {
+            "slug": "brave-leo-byom-local-vs-hosted",
+            "intent": "Configure BYOM and distinguish local inference from hosted models, provider retention, and local chat-history storage. It does not cover finding, preserving, syncing, or clearing history."
+          },
+          {
+            "slug": "comet-assistant-history-data-controls",
+            "intent": "Separate Comet's local browser data, Library threads, exports, and account deletion. It is product-specific and does not cover Leo's conversation list or Brave Sync."
+          },
+          {
+            "slug": "dia-ai-content-data-controls",
+            "intent": "Explain Dia's processing choices and local data controls, not Leo history navigation or Brave Sync."
+          }
+        ],
+        "completeOwnerReview": "The executor read the 149-owner title inventory, searched English metadata/body/FAQ fields and all 215 keyword rows for the candidate intent, and read the nearest owners in full, with relevant Chinese copy checked. This was a targeted owner check, not a full body review of every owner in both languages. The June 7 Ask Brave missing-data discussion is a product-boundary example and is not counted as a Leo-history demand question."
+      },
+      "demandInterpretation": "One clearly relevant public Leo-history report was found, dated Sep 15 2026. The June 7 Ask Brave missing-data thread appears to conflate Ask Brave and Leo and is not counted as a Leo-history demand signal. The May 26 inconsistency discussion is secondary qualitative context. These are individual reports, not a measured frequency, current support trend, or proof of unrecoverable data.",
+      "increment": "A product-specific preserve-before-cleaning checklist, history lookup routes, current conditional Sync statement, and an explicit warning that neither policy text nor an old help page proves the current build's checkbox state or restores deleted chats. The community thread is represented with both the user report and support reply: clearing ordinary data is not shown to delete every chat, and the reported browser-close/reopen loss remains unexplained. Clear Leo data also removes customization and memories per the separate official Help page.",
+      "primaryFacts": [
+        {
+          "url": "https://brave.com/privacy/browser/",
+          "claim": "Privacy policy last updated Sep 23 2026 says Leo history is stored locally and, if enabled, securely included in Sync; deleting browsing history also removes associated page content from past conversations.",
+          "qualification": "This describes a conditional data policy. It does not prove the history Sync setting is present or enabled in every current stable build. Current policy also says deleting a single conversation is supported; the installed UI should be checked before using any destructive control."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/32663367857549-How-do-I-use-Chat-History-in-Brave-Leo",
+          "claim": "Help page documents brave://leo-ai and sidebar Conversation History, the Store my conversation history setting, Clear Leo data, and page-content removal when browsing history is cleared.",
+          "qualification": "Its privacy section still says local-only and conflicts with the newer Sep 23 policy on Sync. Follow the newer policy for the stated policy scope and check the installed UI; do not repeat local-only as current fact."
+        },
+        {
+          "url": "https://brave.com/leo/",
+          "claim": "Brave's Leo page describes the full-page and sidebar history routes and says history can be stored locally regardless of model choice.",
+          "qualification": "It does not describe the exact Sync rollout or guarantee that a specific conversation can be recovered."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/360047642371-Sync-FAQ",
+          "claim": "Brave Sync uses a Sync chain and client-side encryption; new devices join that chain and data availability depends on active devices.",
+          "qualification": "The FAQ's list of synchronized browser data does not explicitly confirm Leo chat history on every current build. Do not use it alone to promise Leo history sync."
+        },
+        {
+          "url": "https://github.com/brave/brave-browser/issues/53978",
+          "claim": "An open Brave issue reports a Leo conversation Sync checkbox request/behavior as of Sep 7 2026.",
+          "qualification": "Issue remains open without a milestone; an issue and current source code are not proof of a released stable feature."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/38441287509261-How-do-I-use-Leo-customization-and-memory-features",
+          "claim": "Brave Help says Clear Leo data also clears Leo customization and memories.",
+          "qualification": "Treat it as a broad Leo-data deletion; preserve useful references first and check the installed UI."
+        }
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://support.brave.app/hc/en-us/articles/32663367857549-How-do-I-use-Chat-History-in-Brave-Leo",
+            "answer": "Official help explains local chat-history navigation and deletion controls.",
+            "gap": "Its local-only paragraph is outdated relative to the newer policy. It does not answer how to preserve chats safely when cleaning data or resolve the policy/build mismatch."
+          },
+          {
+            "url": "https://brave.com/leo/",
+            "answer": "Brave's product page identifies full-page and sidebar history access.",
+            "gap": "It provides no recovery guarantee or current build-by-build Sync checklist."
+          }
+        ]
+      },
+      "noTestingClaim": "No Brave profile was opened, no data cleared, and no Sync chain or conversation was tested. The community report remains unresolved; readers should inspect their installed Brave settings before cleanup and manually retain necessary answers and original page URLs."
+    },
+    {
+      "slug": "brave-leo-multi-tab-context-and-sidebar",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "Why does the same Brave Leo sidebar follow me to another tab, and how do I control which pages a question can use?",
+      "publicQuestions": [
+        {
+          "url": "https://www.reddit.com/r/brave_browser/comments/1vdyy3d/leo_now_functioning_across_tabs_how_to_go_back_to/",
+          "observed": "2026-11-14",
+          "note": "Aug 3 2026 thread reports a persistent sidebar conversation across tab switches and asks how to keep workflows separate. It is a dated individual report."
+        },
+        {
+          "url": "https://community.brave.app/t/leo-ai-stuck-on-thinking-when-page-context-is-enabled-in-brave-stable-v1-97-56-works-perfectly-in-beta/659461",
+          "observed": "2026-11-14",
+          "note": "Oct 2026 reports describe context-related stalls and concern about the sidebar following tab switches. Reports are version-specific and not a confirmed current defect."
+        },
+        {
+          "url": "https://www.reddit.com/r/brave_browser/comments/1vb3fft/release_channel_193129/",
+          "observed": "2026-11-14",
+          "note": "Jul 30 2026 release notes copied into a public release discussion mention a persistent Leo sidebar between tab switches."
+        }
+      ],
+      "existingOwnerCheck": {
+        "keywordMap": "All 215 existing keyword rows inspected; no exact Leo multi-tab/sidebar-context owner.",
+        "nearest": [
+          {
+            "slug": "ai-browser-tab-access-permissions",
+            "intent": "General permission scopes for browser AI; it does not explain Leo's persistent sidebar conversation versus selected page context."
+          },
+          {
+            "slug": "browser-agent-tabs-popups",
+            "intent": "Developer handling for newly opened browser tabs and popups, not consumer Leo context selection."
+          },
+          {
+            "slug": "brave-leo-byom-local-vs-hosted",
+            "intent": "BYOM inference and data-location distinction; it does not teach selected-tab context."
+          },
+          {
+            "slug": "gemini-chrome-shared-tabs",
+            "intent": "Gemini-specific shared-tab availability, not Brave Leo's sidebar or paperclip context control."
+          }
+        ],
+        "completeOwnerReview": "The executor read the 149-owner title inventory, searched English metadata/body/FAQ fields and all 215 keyword rows for the candidate intent, and read the nearest owners in full, with relevant Chinese copy checked. This was a targeted owner check, not a full body review of every owner in both languages."
+      },
+      "demandInterpretation": "Public discussions show confusion about a shared sidebar across tab switches and the context attached to a Leo request. Older flag suggestions in comments are not treated as supported current instructions.",
+      "increment": "Separates persistent sidebar state from the pages explicitly selected with the paperclip tab-context control, offers a safe context audit before asking a question, and avoids claiming that Leo automatically reads every open tab or that an old feature flag remains supported.",
+      "primaryFacts": [
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/38614934646029-How-to-Use-Multi-Tab-Context-with-Brave-Leo",
+          "claim": "Leo's paperclip selector lets users select or deselect open tabs for multi-tab context; current help lists desktop and Android and Brave 1.81+.",
+          "qualification": "Feature availability depends on platform/build; context amount may depend on selected model. Selection is user-controlled, not automatic all-tabs inclusion."
+        },
+        {
+          "url": "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md",
+          "claim": "Brave desktop release 1.93.129 notes persistent Leo sidebar behavior between tab switches.",
+          "qualification": "Dated release note; do not infer exact behavior for every platform or current build from that line alone."
+        },
+        {
+          "url": "https://brave.com/privacy/browser/",
+          "claim": "Current policy says tab-management mode sends titles and URLs of open non-Private/non-Tor tabs, while tab-history mode includes matching history titles, URLs and text passages.",
+          "qualification": "Those are separately described modes. Do not conflate either with ordinary chat or with paperclip-selected context."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/38441287509261-How-do-I-use-Leo-customization-and-memory-features",
+          "claim": "Leo customization and memory are separate settings and can affect personalization of later conversations.",
+          "qualification": "Do not use memory controls as a substitute for checking which page context is attached to a particular message."
+        }
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://support.brave.app/hc/en-us/articles/38614934646029-How-to-Use-Multi-Tab-Context-with-Brave-Leo",
+            "answer": "Official support documents selection and removal of tabs with the paperclip control.",
+            "gap": "It does not explain why the sidebar persists across tab switches or offer a consumer decision path for keeping task conversations distinct."
+          },
+          {
+            "url": "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md",
+            "answer": "The dated desktop release entry records the persistent sidebar change.",
+            "gap": "A release note names the change but does not guide users through context selection for each task."
+          },
+          {
+            "url": "https://www.reddit.com/r/brave_browser/comments/1vdyy3d/leo_now_functioning_across_tabs_how_to_go_back_to/",
+            "answer": "A public thread suggests an old global-sidebar flag as a workaround.",
+            "gap": "The advice is dated community context, not current official support; this guide does not repeat it as a supported fix."
+          }
+        ]
+      },
+      "noTestingClaim": "The executor did not switch tabs in a Brave account. Steps are attributed to current official documentation and dated release notes."
+    },
+    {
+      "slug": "comet-ios-assistant-current-tab-and-tabs",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "On Comet for iPhone or iPad, when should I ask the Assistant about this page, search normally, or ask it to work across open tabs?",
+      "publicQuestions": [
+        {
+          "url": "https://www.reddit.com/r/cometbrowser/comments/1trfbwi/is_anyone_satisfied_with_the_ios_version_of_comet/",
+          "observed": "2026-11-14",
+          "note": "May 29 2026 thread describes mobile UI friction and preference for choosing regular search versus asking Perplexity. Its specific layout complaint may have changed in later app versions."
+        },
+        {
+          "url": "https://www.reddit.com/r/perplexity_ai/comments/1rx99wm/perplexity_comet_on_ios_is_out/",
+          "observed": "2026-11-14",
+          "note": "Mar 18 2026 launch discussion asks about search and thread behavior. It is historical, not evidence of current app behavior."
+        },
+        {
+          "url": "https://www.reddit.com/r/PerplexityComet/comments/1rxe3ge/initial_thoughts_on_comet_iosipados/",
+          "observed": "2026-11-14",
+          "note": "Launch-day iOS/iPadOS comments describe layout and workflow reactions, not current bug prevalence."
+        }
+      ],
+      "existingOwnerCheck": {
+        "keywordMap": "All 215 existing keyword rows inspected; no exact iOS task-flow owner.",
+        "nearest": [
+          {
+            "slug": "comet-control-browser-missing",
+            "intent": "Desktop/Mac browser-control routing and permissions; it does not explain mobile page-aware Assistant and search tasks."
+          },
+          {
+            "slug": "comet-voice-mode-context-navigation",
+            "intent": "Voice mode and navigation across desktop/Android surfaces; it does not cover iOS current-tab and multi-tab task choices."
+          },
+          {
+            "slug": "comet-import-export-vs-sync",
+            "intent": "Transfer and sync of browser data between devices, not how to use the current iOS Assistant."
+          },
+          {
+            "slug": "comet-assistant-history-data-controls",
+            "intent": "Conversation data deletion/export, not mobile search or page-context task routing."
+          },
+          {
+            "slug": "comet-vs-gemini-in-chrome",
+            "intent": "Product-level comparison, not a current iOS task workflow."
+          }
+        ],
+        "completeOwnerReview": "The executor read the 149-owner title inventory, searched English metadata/body/FAQ fields and all 215 keyword rows for the candidate intent, and read the nearest owners in full, with relevant Chinese copy checked. This was a targeted owner check, not a full body review of every owner in both languages."
+      },
+      "demandInterpretation": "Public iOS discussions ask how mobile Comet distinguishes ordinary search and Assistant and describe launch-era UI friction. They are historical demand signals only. Current claims use the live App Store listing and iOS-specific official launch/change notes; desktop and Android behavior are not used as proof of iOS behavior.",
+      "increment": "Uses a current iOS task decision table for page questions, ordinary search and tab tasks; explicitly limits cross-tab evidence to the iOS announcement statement that Voice Mode works across open tabs, and directs readers to inspect the text Assistant context controls rather than assuming all tabs are attached. Adds a concise publisher-version trail and iOS 18+ prerequisite.",
+      "primaryFacts": [
+        {
+          "url": "https://apps.apple.com/us/app/comet-ai-browser-assistant/id6748622471",
+          "claim": "The live App Store listing checked Nov 15, 2026 shows iOS 18+, version 26.44.0, Assistant beside the address bar on pages and New Tab, and version history including 26.42.0 (Oct 30), 26.21 (per-tab sidebar state), 26.27 (Assistant near address bar), and 26.38 (browser computer task from Assistant). The listing did not show a date for 26.44.0.",
+          "qualification": "App Store notes describe the publisher's listed version history, not every account's rollout or a hands-on test. The observation date is Nov 15; no release date is inferred for 26.44.0.",
+          "observedOn": "2026-11-15"
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/hub/blog/meet-comet-for-ios",
+          "claim": "Perplexity’s iOS launch article distinguishes traditional search from its Assistant experience and explicitly says Voice Mode works across open tabs.",
+          "qualification": "The cross-tab statement is specific to Voice Mode; it does not establish that text Assistant automatically gets all open tabs."
+        },
+        {
+          "url": "https://www.perplexity.ai/changelog/what-we-shipped--march-27-2026",
+          "claim": "The changelog page displays March 26, 2026 and announces the Comet iOS release.",
+          "qualification": "It establishes iOS launch timing, not feature parity with desktop."
+        },
+        {
+          "url": "https://www.perplexity.ai/en-GB/changelog/comet-voice-mode-improvements",
+          "claim": "Comet voice-mode notes say the assistant can ask about what the user is seeing and continue while switching tabs.",
+          "qualification": "This is a voice-mode description and should not be generalized to all mobile UI or background actions."
+        }
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://apps.apple.com/us/app/comet-ai-browser-assistant/id6748622471",
+            "answer": "The live App Store listing reports current UI changes, Assistant placement, and bug fixes.",
+            "gap": "A version list is not a task-selection guide and does not distinguish page questions, ordinary search, and cross-tab synthesis."
+          },
+          {
+            "url": "https://www.perplexity.ai/en-GB/hub/blog/meet-comet-for-ios",
+            "answer": "Perplexity's launch article describes the iOS Assistant and mobile search direction.",
+            "gap": "It is launch information rather than a current step-by-step workflow, and predates current App Store changes."
+          },
+          {
+            "url": "https://www.reddit.com/r/cometbrowser/comments/1trfbwi/is_anyone_satisfied_with_the_ios_version_of_comet/",
+            "answer": "An individual compares iOS UI with desktop and reports a specific button overlap.",
+            "gap": "This may be fixed; the current listing includes later UI fixes, so the post is not an accurate present-day feature map."
+          }
+        ]
+      },
+      "noTestingClaim": "No Comet iOS account or device was used. The article identifies current release notes as documentation and labels launch-era reports as historical."
+    },
+    {
+      "slug": "dia-site-search-shortcuts-troubleshooting",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "Why does a Dia search-engine shortcut such as !y appear configured but fail to show feedback or route to the expected site search?",
+      "publicQuestions": [
+        {
+          "url": "https://www.reddit.com/r/diabrowser/comments/1xnro2c/search_engine_shortcuts/",
+          "observed": "2026-11-14",
+          "note": "Nov 4-5 2026 thread says !y plus Space or Tab did not visibly trigger; commenters report Enter worked for them. This is individual unverified behavior, not an official compatibility promise."
+        },
+        {
+          "url": "https://www.reddit.com/r/diabrowser/comments/1rq7f5u/guide_dia_does_have_site_search/",
+          "observed": "2026-11-14",
+          "note": "Mar 10 2026 user guide gives a dia://settings/searchEngines setup route and says custom searches can conflict with AI search. It is community guidance, not an official feature guarantee."
+        },
+        {
+          "url": "https://www.reddit.com/r/diabrowser/comments/1rjw0xz/question_about_search_engines/",
+          "observed": "2026-11-14",
+          "note": "Mar 3 2026 question distinguishes the default search engine from Dia's AI web search. Its comments are historical."
+        }
+      ],
+      "existingOwnerCheck": {
+        "keywordMap": "All 215 existing keyword rows inspected; no exact Dia site-search shortcut owner.",
+        "nearest": [
+          {
+            "slug": "dia-link-rules-open-links-in-correct-profile",
+            "intent": "Routes incoming links from another application to a Dia profile. It is not address-bar keyword search."
+          },
+          {
+            "slug": "dia-skills-create-edit-reuse",
+            "intent": "Creates and invokes Dia prompt Skills, not browser search-engine keyword shortcuts."
+          },
+          {
+            "slug": "comet-query-shortcuts",
+            "intent": "Comet-specific Assistant slash commands, not Dia's Chromium search-provider keywords."
+          },
+          {
+            "slug": "ai-browser-vs-ai-search-engine",
+            "intent": "Defines product-level layers between browser search, generated results and page-aware assistants; it does not diagnose Dia's shortcut field or address-bar routing."
+          }
+        ],
+        "completeOwnerReview": "The executor read the 149-owner title inventory, searched English metadata/body/FAQ fields and all 215 keyword rows for the candidate intent, and read the nearest owners in full, with relevant Chinese copy checked. This was a targeted owner check, not a full body review of every owner in both languages."
+      },
+      "demandInterpretation": "The Nov 4-5 thread is direct and recent qualitative evidence of a shortcut not appearing to work. The comments disagree about whether Tab produces a visual state; they are not taken as verified behavior.",
+      "increment": "Separates the default search route, custom site-search keywords, and Dia Chat. Correctly assigns matched-engine labels to Mac 1.41.0, extension shortcut fixes to 1.14.0, and direct Chat/Google keyboard routes to Mac 1.22.0. Adds a proposed harmless YouTube template test drawn from community guidance, clearly marked unverified and dependent on the current settings fields accepting that convention.",
+      "primaryFacts": [
+        {
+          "url": "https://www.diabrowser.com/changelog",
+          "claim": "Dia Mac 1.41.0 documents command-bar labels that show the matched search engine, while Mac 1.22.0 separately documents direct Chat and Google Search keyboard routes.",
+          "qualification": "Keyboard routes are Mac 1.22.0 facts, not 1.41.0 or universal Windows instructions. Neither release note establishes custom keyword syntax or Tab feedback."
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/mac/1-14-0",
+          "claim": "Mac 1.14.0 records a fix for extension-provided search shortcuts.",
+          "qualification": "This does not prove custom search templates accept any particular placeholder syntax in current Dia."
+        },
+        {
+          "url": "https://www.diabrowser.com/changelog/mac/1-41-0",
+          "claim": "Dia Mac 1.41.0 includes actual matched search-engine labels.",
+          "qualification": "It does not establish bang syntax, Tab behavior, or custom keyword submission feedback."
+        },
+        {
+          "url": "https://www.diabrowser.com/release-notes/1-22-0-dont-think",
+          "claim": "Dia Mac 1.22.0 release notes document keyboard shortcuts that route the command bar directly to Chat or Google Search.",
+          "qualification": "This is a Mac version-specific route. Do not attribute it to 1.41.0 or Windows, or conflate it with custom website-search keywords."
+        }
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://www.reddit.com/r/diabrowser/comments/1rq7f5u/guide_dia_does_have_site_search/",
+            "answer": "A community guide says users can add site-search templates in dia://settings/searchEngines.",
+            "gap": "It does not distinguish current official routing from individual shortcut syntax or provide a verified test for current builds."
+          },
+          {
+            "url": "https://www.reddit.com/r/diabrowser/comments/1xnro2c/search_engine_shortcuts/",
+            "answer": "The current thread records contradictory individual reports about !y, Space, Tab, Enter, and lack of visual feedback.",
+            "gap": "It is a question thread with no official compatibility statement; the guide labels these reports as unverified."
+          },
+          {
+            "url": "https://www.diabrowser.com/changelog",
+            "answer": "Dia's changelog notes the visible matched search-engine name and extension custom-search fixes.",
+            "gap": "The changelog does not give a full step-by-step setup or troubleshooting test for typed custom site-search phrases."
+          }
+        ]
+      },
+      "noTestingClaim": "No Dia installation was used to test URL templates or keystrokes. Article steps describe how to inspect settings and test harmless queries, not observed BrowserHub results."
+    },
+    {
+      "slug": "brave-leo-web-search-vs-ask-brave",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "Why does Leo sometimes search the web and sometimes say it cannot, and when should I use Ask Brave instead?",
+      "publicQuestions": [
+        {
+          "url": "https://community.brave.app/t/leo-ai-premium-inconsistent-web-search-access/647408",
+          "observed": "2026-11-14",
+          "note": "A Dec 26 2025 user reports inconsistent web search and a /web-search Skill workaround. A Brave staff reply dated Mar 24 2026 describes model-selected tool calls and prompt clarity. Historical report, not a current defect or current service-level guarantee."
+        },
+        {
+          "url": "https://community.brave.app/t/new-action-icon-in-leo-ai-question-about-plans-for-development/648479",
+          "observed": "2026-11-14",
+          "note": "Jan 2026 post asks whether Leo's search will gain a manual trigger and reports confusion about search scope. Historical feedback only."
+        },
+        {
+          "url": "https://community.brave.app/t/sonnet-says-it-can-search-the-internet-but-it-can-not/644982",
+          "observed": "2026-11-14",
+          "note": "Oct 2025 community discussion compares models and reports apparent search mismatch. The post is old and not a statement about current model support."
+        }
+      ],
+      "existingOwnerCheck": {
+        "keywordMap": "All 215 existing keyword rows inspected; no exact Brave Leo search-trigger or Ask Brave route owner.",
+        "nearest": [
+          {
+            "slug": "ai-browser-vs-ai-search-engine",
+            "intent": "Explains general differences between address-bar search, generated results, and page-aware browser assistants; it does not explain Leo's model-selected web-search path or the Ask Brave product route."
+          },
+          {
+            "slug": "brave-leo-byom-local-vs-hosted",
+            "intent": "Configures BYOM endpoints and local-versus-hosted inference; it does not diagnose general web-search triggering."
+          },
+          {
+            "slug": "brave-leo-web-search-vs-ask-brave",
+            "intent": "New proposed specific task; not yet an owner."
+          },
+          {
+            "slug": "chatgpt-desktop-site-tools-webmcp",
+            "intent": "ChatGPT built-in browser site-provided tools; it is not Brave Leo's general Brave Search tool or Ask Brave interface."
+          }
+        ],
+        "completeOwnerReview": "The executor read the 149-owner title inventory, searched English metadata/body/FAQ fields and all 215 keyword rows for the candidate intent, and read the nearest owners in full, with relevant Chinese copy checked. This was a targeted owner check, not a full body review of every owner in both languages. Brave Website Tools are described as a separate feature; no existing BrowserHub owner for them was established."
+      },
+      "demandInterpretation": "Public Leo discussion began Dec 26, 2025 and includes later staff replies (including Mar 24 and Apr 1). The staff account describes the then-current model tool behavior and a later Nightly change; it is not evidence of a current stable mechanism or current defect. Separate public discussion compares Leo and Ask Brave. These are qualitative questions only.",
+      "increment": "Adds actionable route: select a Leo model through the chat header three-dot menu > Language Models (or inspect brave://settings/leo-ai), choose Ask after a Brave Search query or open brave.ai for cited web-grounded answers, and use one repeatable diagnostic prompt plus a compact evidence row. It does not claim a forced-search control or infer current internals from the historical thread.",
+      "primaryFacts": [
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/27586048343309-How-does-Leo-get-current-information",
+          "claim": "Brave Help describes Leo's current-information path as adding Brave Search results to a prompt when search is used.",
+          "qualification": "The page is older and does not document every current model/tool condition; do not promise that every prompt triggers a search."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/26727364100493-What-are-the-differences-between-Leo-s-AI-Models",
+          "claim": "Brave Help says available models vary by plan and the model selector/Automatic mode can be changed through Leo settings.",
+          "qualification": "This does not guarantee a particular search result quality or search trigger."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/41599880226317-How-do-I-use-Skills-in-Brave-Leo",
+          "claim": "Skills save reusable prompts and can be selected in Leo; the selected/default model is used for a skill.",
+          "qualification": "A prompt skill is not a manual guaranteed web-search toggle."
+        },
+        {
+          "url": "https://support.brave.app/hc/en-us/articles/20958609786637-How-do-I-use-Brave-Leo",
+          "claim": "Brave documents Leo as a browser sidebar/page-aware assistant accessed from the browser UI.",
+          "qualification": "Do not interpret page context access as proof that a web search occurred."
+        },
+        {
+          "url": "https://search.brave.com/help/ai",
+          "claim": "Brave Search Help describes Ask Brave in the search interface as a grounded answer with cited web sources.",
+          "qualification": "The announcement gives the current public entry route; result coverage and freshness still require checking cited pages."
+        },
+        {
+          "url": "https://brave.com/whats-new/ask-brave/",
+          "claim": "The Ask Brave announcement describes entering a Brave Search query and choosing Ask, as well as the brave.ai entry point.",
+          "qualification": "Separate from Leo’s browser conversation and model-selected search enrichment."
+        }
+      ],
+      "competingAnswers": {
+        "inspected": [
+          {
+            "url": "https://support.brave.app/hc/en-us/articles/27586048343309-How-does-Leo-get-current-information",
+            "answer": "Official help explains that Leo can append Brave Search results to a request.",
+            "gap": "It does not explain the model-dependent decision that determines when this happens or how to diagnose a missing search."
+          },
+          {
+            "url": "https://community.brave.app/t/leo-ai-premium-inconsistent-web-search-access/647408",
+            "answer": "A user describes an intermittent /web-search skill, and a Brave staff reply explains that search is selected by a model and can be guided by a specific prompt.",
+            "gap": "This is historical thread guidance rather than a current supported setting; it does not compare when to use Ask Brave or a page-aware Leo conversation."
+          },
+          {
+            "url": "https://community.brave.app/t/leo-vs-ask-brave/643296",
+            "answer": "A public discussion compares Leo and Ask Brave at a high level and raises perceived search-result differences.",
+            "gap": "The conversation is dated and does not give a current diagnostic path for search triggers or model/tool settings."
+          }
+        ]
+      },
+      "boundary": "This article concerns general Brave Search enrichment in Leo and the user-facing Ask Brave search surface. It does not cover Website Tools, which use website-defined actions on attached HTTPS tabs in a normal signed-in profile. It does not promise forced search, source completeness, or freshness.",
+      "noTestingClaim": "No prompt, model, account, or search was tested in Brave. Public staff comments are dated discussion, not current product documentation."
+    }
+  ],
+  "publicationLimits": [
+    "Drafts only; release requires independent review and the root-managed workflow receipt.",
+    "No publishing, indexing submission, live-site verification, measurement sampling or CI run performed by this executor.",
+    "No result about search demand, traffic, rank, account impact, product popularity, or causal performance is claimed.",
+    "The included Brave Leo history source conflict and Dia shortcut behavior uncertainty must remain explicit in final copy."
+  ]
+}

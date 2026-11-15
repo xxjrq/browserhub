@@ -8390,6 +8390,261 @@
         "14day": "2026-11-27",
         "28day": "2026-12-11"
       }
+    },
+    {
+      "id": "guides:brave-leo-chat-history-sync-and-cleanup",
+      "primaryKeyword": {
+        "en": "Brave Leo chat history Sync and cleanup",
+        "zh-CN": "Brave Leo 对话历史 Sync 与清理"
+      },
+      "intent": "Find and preserve Leo conversations, understand conditional Sync policy, and check which Leo data a cleanup action removes.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/brave-leo-chat-history-sync-and-cleanup/",
+        "https://browserhub.co/zh-cn/guides/brave-leo-chat-history-sync-and-cleanup/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-14",
+      "demandEvidence": "Qualitative public reader question: https://community.brave.app/t/issue-with-instructions-from-leo-ai/658319; an individual question/report only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-14.json",
+      "originalGain": "History lookup, manual copy of useful answers with original page URLs, conditional Sync wording, distinction between browsing-history page context and Leo data, and warning that Clear Leo data also removes customization and memories.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 215 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "brave-leo-byom-local-vs-hosted",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "comet-assistant-history-data-controls",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "dia-ai-content-data-controls",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "History lookup, manual copy of useful answers with original page URLs, conditional Sync wording, distinction between browsing-history page context and Leo data, and warning that Clear Leo data also removes customization and memories."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-21",
+        "14day": "2026-11-28",
+        "28day": "2026-12-12"
+      }
+    },
+    {
+      "id": "guides:brave-leo-multi-tab-context-and-sidebar",
+      "primaryKeyword": {
+        "en": "Brave Leo multi tab context and persistent sidebar",
+        "zh-CN": "Brave Leo 多标签上下文与持续侧边栏"
+      },
+      "intent": "Understand why the Leo sidebar persists across tabs and select page context for a separate request.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/brave-leo-multi-tab-context-and-sidebar/",
+        "https://browserhub.co/zh-cn/guides/brave-leo-multi-tab-context-and-sidebar/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-14",
+      "demandEvidence": "Qualitative public reader question: https://www.reddit.com/r/brave_browser/comments/1vdyy3d/leo_now_functioning_across_tabs_how_to_go_back_to/; an individual question/report only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-14.json",
+      "originalGain": "Separates persistent sidebar state from paperclip-selected pages; explains that removing attachments does not retract earlier messages and recommends a new conversation for an unrelated task.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 215 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "ai-browser-tab-access-permissions",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "browser-agent-tabs-popups",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "brave-leo-byom-local-vs-hosted",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Separates persistent sidebar state from paperclip-selected pages; explains that removing attachments does not retract earlier messages and recommends a new conversation for an unrelated task."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-21",
+        "14day": "2026-11-28",
+        "28day": "2026-12-12"
+      }
+    },
+    {
+      "id": "guides:comet-ios-assistant-current-tab-and-tabs",
+      "primaryKeyword": {
+        "en": "Comet iOS Assistant current page and tab tasks",
+        "zh-CN": "Comet iOS Assistant 当前页面与标签任务"
+      },
+      "intent": "Choose between ordinary search, a current-page question, and an iOS-supported tab task using current App Store and iOS-specific evidence.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/comet-ios-assistant-current-tab-and-tabs/",
+        "https://browserhub.co/zh-cn/guides/comet-ios-assistant-current-tab-and-tabs/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-14",
+      "demandEvidence": "Qualitative public reader question: https://www.reddit.com/r/cometbrowser/comments/1trfbwi/is-anyone-satisfied-with-the-ios-version-of-comet/; an individual question/report only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-14.json",
+      "originalGain": "Current iOS task chooser; limits across-tab statement to iOS Voice Mode; adds current version trail and iOS 18+ prerequisite without assuming desktop/Android parity.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 215 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "comet-control-browser-missing",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "comet-voice-mode-context-navigation",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "comet-import-export-vs-sync",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Current iOS task chooser; limits across-tab statement to iOS Voice Mode; adds current version trail and iOS 18+ prerequisite without assuming desktop/Android parity."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-21",
+        "14day": "2026-11-28",
+        "28day": "2026-12-12"
+      }
+    },
+    {
+      "id": "guides:dia-site-search-shortcuts-troubleshooting",
+      "primaryKeyword": {
+        "en": "Dia site search keyword shortcut troubleshooting",
+        "zh-CN": "Dia 站内搜索关键词快捷方式排查"
+      },
+      "intent": "Diagnose a Dia site-search keyword separately from default search and Chat, using a harmless proposed query and checking the destination.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/dia-site-search-shortcuts-troubleshooting/",
+        "https://browserhub.co/zh-cn/guides/dia-site-search-shortcuts-troubleshooting/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-14",
+      "demandEvidence": "Qualitative public reader question: https://www.reddit.com/r/diabrowser/comments/1xnro2c/search_engine_shortcuts/; an individual question/report only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-14.json",
+      "originalGain": "Distinguishes default engine, custom site keyword and Chat; versions 1.41 matched labels, 1.22 Mac keyboard routes, 1.14 extension fix; provides a proposed but unverified YouTube template test.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 215 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "dia-link-rules-open-links-in-correct-profile",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "dia-skills-create-edit-reuse",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "comet-query-shortcuts",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          }
+        ],
+        "distinctiveCoverage": "Distinguishes default engine, custom site keyword and Chat; versions 1.41 matched labels, 1.22 Mac keyboard routes, 1.14 extension fix; provides a proposed but unverified YouTube template test."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-21",
+        "14day": "2026-11-28",
+        "28day": "2026-12-12"
+      }
+    },
+    {
+      "id": "guides:brave-leo-web-search-vs-ask-brave",
+      "primaryKeyword": {
+        "en": "Brave Leo web search vs Ask Brave",
+        "zh-CN": "Brave Leo 网页搜索与 Ask Brave"
+      },
+      "intent": "Diagnose why Leo may not show web-search evidence and choose Leo page context or the cited Ask Brave search surface.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/brave-leo-web-search-vs-ask-brave/",
+        "https://browserhub.co/zh-cn/guides/brave-leo-web-search-vs-ask-brave/"
+      ],
+      "status": "prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-14",
+      "demandEvidence": "Qualitative public reader question: https://community.brave.app/t/leo-ai-premium-inconsistent-web-search-access/647408; an individual question/report only, not volume, prevalence, search demand, or BrowserHub analytics. Current official documentation was checked separately.",
+      "sourceRecord": "docs/seo/research-2026-11-14.json",
+      "originalGain": "Product-specific route and diagnostic prompt; model menu location; Ask Brave entry via Brave Search or brave.ai; treats old staff thread as historical, not current internals.",
+      "ownership": {
+        "keywordMapChecked": "docs/seo/keyword-map-2026-10-16.json; all prior 215 rows inspected before appending this batch",
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          {
+            "slug": "ai-browser-vs-ai-search-engine",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "brave-leo-byom-local-vs-hosted",
+            "intent": "Existing guide checked against full candidate-related copy; distinct task boundary is recorded in the cycle research."
+          },
+          {
+            "slug": "brave-leo-multi-tab-context-and-sidebar",
+            "intent": "Same-cycle complementary guide: Multi Tab Context covers user-selected attached-page context; this guide covers general web-search enrichment in Leo and the separate Ask Brave search route."
+          }
+        ],
+        "distinctiveCoverage": "Product-specific route and diagnostic prompt; model menu location; Ask Brave entry via Brave Search or brave.ai; treats old staff thread as historical, not current internals."
+      },
+      "reviewDatesAfterPublication": {
+        "7day": "2026-11-21",
+        "14day": "2026-11-28",
+        "28day": "2026-12-12"
+      }
     }
   ],
   "futureCandidates": [
@@ -8469,22 +8724,22 @@
     "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
   },
   "latestContentCycle": {
-    "date": "2026-11-13",
-    "cycleId": "content-2026-11-13",
+    "date": "2026-11-14",
+    "cycleId": "content-2026-11-14",
     "newTopics": [
-      "chatgpt-chrome-extension-site-permission-choices",
-      "chatgpt-desktop-site-tools-webmcp",
-      "dia-sync-between-devices-checklist",
-      "dia-link-rules-open-links-in-correct-profile",
-      "perplexity-comet-gmail-calendar-assistant-setup"
+      "brave-leo-chat-history-sync-and-cleanup",
+      "brave-leo-multi-tab-context-and-sidebar",
+      "comet-ios-assistant-current-tab-and-tabs",
+      "dia-site-search-shortcuts-troubleshooting",
+      "brave-leo-web-search-vs-ask-brave"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
     "publicationEvidence": "Drafts prepared for independent review; no release or live publication claimed.",
-    "sourceRecord": "docs/seo/research-2026-11-13.json",
+    "sourceRecord": "docs/seo/research-2026-11-14.json",
     "metrics": null,
-    "protectedOldOwners": "144 prior owners and 288 editions remain unchanged; five new themes have complete English and Simplified Chinese copies."
+    "protectedOldOwners": "149 prior owners and 298 editions remain unchanged; five new themes have complete English and Simplified Chinese copies."
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",
