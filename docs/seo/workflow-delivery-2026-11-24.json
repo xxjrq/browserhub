@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "project": "BrowserHub",
+  "date": "2026-11-24",
+  "cycleId": "content-2026-11-24",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "newTopicCount": 0,
+  "newLocalizedPageCount": 0,
+  "newTopics": [],
+  "oldEnhancementCount": 3,
+  "oldEnhancements": [
+    "dia-sync-between-devices-checklist",
+    "dia-ai-content-data-controls",
+    "chatgpt-chrome-extension-not-connecting"
+  ],
+  "languages": [
+    "en"
+  ],
+  "commit": "bb61077d21f194300b1c523e68db25dc6b99b769",
+  "release": "/opt/browsertools/releases/20261124-095835",
+  "completedAt": "2026-11-24T01:59:36.381Z",
+  "publishedDateAsiaShanghai": "2026-11-24",
+  "publicationReceiptAt": "2026-11-24T01:59:34.610Z",
+  "manifestSha256": "2080a7a0d6f76e6c70950add2825e1ea58beee8ac7a2252a838275941a158d20",
+  "review": {
+    "decision": "approved",
+    "fileCount": 3,
+    "sha256": "62e730d583a9d190018d70408d29436cb71997f6581e73768377e09b1751d0f4"
+  },
+  "urls": [
+    "https://browserhub.co/en/guides/dia-sync-between-devices-checklist/",
+    "https://browserhub.co/zh-cn/guides/dia-sync-between-devices-checklist/",
+    "https://browserhub.co/en/guides/dia-ai-content-data-controls/",
+    "https://browserhub.co/zh-cn/guides/dia-ai-content-data-controls/",
+    "https://browserhub.co/en/guides/chatgpt-chrome-extension-not-connecting/",
+    "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-not-connecting/"
+  ],
+  "live": {
+    "ok": true,
+    "responses": 12,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dia-sync-between-devices-checklist/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dia-ai-content-data-controls/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/chatgpt-chrome-extension-not-connecting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "validation": {
+    "formalCiExitCode": 0,
+    "pushExitCode": 0,
+    "publishExitCode": 0,
+    "metadataAndCurrentRelease": {
+      "ok": true,
+      "responses": 12,
+      "actualCurrent": "/opt/browsertools/releases/20261124-095835"
+    }
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": null,
+    "refreshReceiptAt": "2026-11-24T01:59:34.610Z",
+    "gscFirstFullWindows": {
+      "7": {
+        "start": "2026-11-24",
+        "end": "2026-11-30",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-01T08:00:00+00:00"
+      },
+      "14": {
+        "start": "2026-11-24",
+        "end": "2026-12-07",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-08T08:00:00+00:00"
+      },
+      "28": {
+        "start": "2026-11-24",
+        "end": "2026-12-21",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-22T08:00:00+00:00"
+      }
+    },
+    "measurementRule": "Compare closed, actually available page/query/language dates; no outcome or causal attribution claimed."
+  },
+  "counting": "Three English existing owner enhancements; the Chinese controls were included in live verification. No new topics.",
+  "editorialChange": "Refined existing title, description, and lead for Dia Sync, Dia privacy controls, and ChatGPT Chrome extension connection troubleshooting. Source links and article sections remain as previously reviewed."
+}

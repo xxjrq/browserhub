@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "project": "BrowserHub",
+  "date": "2026-11-14",
+  "cycleId": "content-2026-11-14",
+  "status": "project_manual_reconciled",
+  "runtimeStatus": "needs_reconciliation",
+  "graphExecutionCompleted": false,
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "newTopics": [
+    "brave-leo-chat-history-sync-and-cleanup",
+    "brave-leo-multi-tab-context-and-sidebar",
+    "comet-ios-assistant-current-tab-and-tabs",
+    "dia-site-search-shortcuts-troubleshooting",
+    "brave-leo-web-search-vs-ask-brave"
+  ],
+  "oldEnhancementCount": 0,
+  "oldEnhancements": [],
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "commit": "05cb3fba6d2ddabe52ffd05beeec4b50b45db76a",
+  "release": "/opt/browsertools/releases/20261124-095533",
+  "completedAt": "2026-11-24T01:56:25.817Z",
+  "publishedDateAsiaShanghai": "2026-11-24",
+  "publicationReceiptAt": "2026-11-24T01:56:10.374Z",
+  "manifestSha256": "b6edfbdcdc293e12d5713a24f23fb693b53b0a67692f619f57a2280bea5cb698",
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "9feefe1ef979fe41c22435b56b63f1266bb5f73dc2dc9abf723de875624ec0ce"
+  },
+  "urls": [
+    "https://browserhub.co/en/guides/brave-leo-chat-history-sync-and-cleanup/",
+    "https://browserhub.co/zh-cn/guides/brave-leo-chat-history-sync-and-cleanup/",
+    "https://browserhub.co/en/guides/brave-leo-multi-tab-context-and-sidebar/",
+    "https://browserhub.co/zh-cn/guides/brave-leo-multi-tab-context-and-sidebar/",
+    "https://browserhub.co/en/guides/comet-ios-assistant-current-tab-and-tabs/",
+    "https://browserhub.co/zh-cn/guides/comet-ios-assistant-current-tab-and-tabs/",
+    "https://browserhub.co/en/guides/dia-site-search-shortcuts-troubleshooting/",
+    "https://browserhub.co/zh-cn/guides/dia-site-search-shortcuts-troubleshooting/",
+    "https://browserhub.co/en/guides/brave-leo-web-search-vs-ask-brave/",
+    "https://browserhub.co/zh-cn/guides/brave-leo-web-search-vs-ask-brave/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "live": {
+    "ok": true,
+    "responses": 28,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/brave-leo-chat-history-sync-and-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/brave-leo-chat-history-sync-and-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/brave-leo-chat-history-sync-and-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/brave-leo-chat-history-sync-and-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/brave-leo-multi-tab-context-and-sidebar/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/brave-leo-multi-tab-context-and-sidebar/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/brave-leo-multi-tab-context-and-sidebar/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/brave-leo-multi-tab-context-and-sidebar/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/comet-ios-assistant-current-tab-and-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/comet-ios-assistant-current-tab-and-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/comet-ios-assistant-current-tab-and-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/comet-ios-assistant-current-tab-and-tabs/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/dia-site-search-shortcuts-troubleshooting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/dia-site-search-shortcuts-troubleshooting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/dia-site-search-shortcuts-troubleshooting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/dia-site-search-shortcuts-troubleshooting/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/brave-leo-web-search-vs-ask-brave/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/brave-leo-web-search-vs-ask-brave/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/brave-leo-web-search-vs-ask-brave/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/brave-leo-web-search-vs-ask-brave/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "validation": {
+    "formalCiExitCode": 0,
+    "pushExitCode": 0,
+    "publishExitCode": 0
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-24T01:56:10.374Z",
+    "refreshReceiptAt": null,
+    "gscFirstFullWindows": {
+      "7": {
+        "start": "2026-11-24",
+        "end": "2026-11-30",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-01T08:00:00+00:00"
+      },
+      "14": {
+        "start": "2026-11-24",
+        "end": "2026-12-07",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-08T08:00:00+00:00"
+      },
+      "28": {
+        "start": "2026-11-24",
+        "end": "2026-12-21",
+        "timeZone": "America/Los_Angeles",
+        "notBeforeUtc": "2026-12-22T08:00:00+00:00"
+      }
+    },
+    "measurementRule": "Compare closed, actually available page/query/language dates; no outcome or causal attribution claimed."
+  },
+  "counting": "Five independent themes belong to the original November 14 batch; bilingual editions count once.",
+  "manualReconciliation": {
+    "originalRuntimeStatus": "needs_reconciliation",
+    "originalJournalPreserved": true,
+    "graphExecutionCompleted": false,
+    "originalPublishExitCode": 255,
+    "intentPreserved": true,
+    "originalNonapplicationProven": true,
+    "originalPublishReceiptSha256": "dc663dd8b1fc5d32444127cf860a1fc72dfb201636ca1373873513bf4afa58de",
+    "originalPushReceiptSha256": "f50bd57282734097e22c834b96df2f26822a27785810ab4a636d4f2e197523d3",
+    "supplementalPublishReceiptSha256": "1eff7ba03ec14073d006cf7825ae3df37d84e11e452013352c6d708388299fda",
+    "authorizationReceiptSha256": "b80e931749c0ffb5748bedd90983fb0f815dadb5233678b18557d4206bdb3371",
+    "independentOpsReviewSha256": "9786ac620d63ffd3ca695e79e09263897cfb07bc1632d7ee6d206c36f240b10f",
+    "scope": "Same-cycle supplemental publication of the already reviewed Nov14 commit after confirmed nonapplication. This approval applies to this exact attempt only."
+  }
+}
