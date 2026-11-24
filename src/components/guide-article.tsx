@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { GuideResource } from "@/data/resources";
 import { guideEditions } from "@/data/guide-editions";
 import { localizedGuideCopy, localizedGuideSections } from "@/data/guide-translations";
-import { guideCategoryLabel, localePath, t, type Locale } from "@/lib/i18n";
+import { guideCategoryLabel, localePath, type Locale } from "@/lib/i18n";
 import { SectionBody } from "@/components/section-body";
 import { Badge } from "@/components/ui/badge";
 
@@ -34,9 +34,27 @@ export function GuideArticle({ guide, locale }: { guide: GuideResource; locale: 
 		{questions.length > 0 && <section className="mt-10" id="faq"><h2 className="text-xl font-semibold">{en ? "Frequently asked questions (FAQ)" : "常见问题"}</h2><dl className="mt-4 divide-y">{questions.map(question => <div key={question.question} className="py-4"><dt className="font-semibold">{question.question}</dt><dd className="mt-2 text-sm leading-7 text-muted-foreground">{question.answer}</dd></div>)}</dl></section>}
 		{guide.sources?.length ? <section className="mt-10 border-t pt-6" id="sources"><h2 className="text-xl font-semibold">{en ? "Sources" : "参考来源"}</h2><p className="mt-2 text-xs text-muted-foreground">{en ? "Public documentation reviewed on" : "公开资料核查于"} {guide.date}. {en ? "This is document-based research, not a hands-on benchmark." : "本文基于公开资料研究，不作为产品实测报告。"}</p><ul className="mt-4 space-y-3 text-sm">{guide.sources.map(source => <li key={source.url}><a href={source.url} rel="noopener noreferrer" className="text-primary underline underline-offset-4">{source.title}</a></li>)}</ul></section> : null}
 		<GuideSeriesTrail locale={locale} slug={guide.slug} />
-		<aside className="mt-10 rounded-lg border bg-muted/30 p-5 text-sm leading-7 text-muted-foreground">
-			{en ? "Disclosure: EasyBR is affiliated with BrowserHub. Product placement and editorial selections are not independent lab rankings. Verify plans and capabilities with each vendor." : "关系披露：EasyBR 是 BrowserHub 的关联产品。特色展示和编辑选型不代表独立实验室排名，请向各供应商确认套餐与功能。"}
-			<p className="mt-3"><Link href={localePath(en ? "en" : "zh-cn", "browsers/easybr")} className="text-primary underline underline-offset-4">{en ? "Evaluate EasyBR" : "查看 EasyBR 资料"}</Link> · <Link href={localePath(en ? "en" : "zh-cn", "compare")} className="text-primary underline underline-offset-4">{t(locale).compare}</Link></p>
+		<aside className="mt-10 rounded-xl border bg-muted/30 p-5 text-sm leading-7 text-muted-foreground" aria-label={en ? "Next steps and affiliated disclosure" : "下一步行动与关联披露"}>
+			<p className="font-semibold text-foreground">{en ? "Continue exploring & affiliated product disclosure" : "继续探索与关联产品披露"}</p>
+			<p className="mt-2">{en ? "Disclosure: EasyBR is affiliated with BrowserHub. Product placement and editorial selections are not independent lab rankings. Verify plans and capabilities with each vendor." : "关系披露：EasyBR 是 BrowserHub 的关联产品。特色展示和编辑选型不代表独立实验室排名，请向各供应商确认套餐与功能。"}</p>
+			<div className="mt-4 grid gap-3 sm:grid-cols-3">
+				<Link href={localePath(en ? "en" : "zh-cn", "compare")} className="rounded-lg border bg-background p-3.5 transition-colors hover:border-primary/50">
+					<span className="block font-medium text-foreground">{en ? "Compare browsers" : "对比主流指纹浏览器"}</span>
+					<span className="mt-1 block text-xs text-muted-foreground">{en ? "Side-by-side platform, pricing & isolation checks" : "按平台、价格与隔离边界横向对照"}</span>
+				</Link>
+				<Link href={localePath(en ? "en" : "zh-cn", "tools")} className="rounded-lg border bg-background p-3.5 transition-colors hover:border-primary/50">
+					<span className="block font-medium text-foreground">{en ? "Detection & agent tools" : "指纹检测与自动化工具"}</span>
+					<span className="mt-1 block text-xs text-muted-foreground">{en ? "Browse WebRTC, CreepJS, Playwright & MCP tools" : "查看 WebRTC、CreepJS、Playwright 与 MCP 工具"}</span>
+				</Link>
+				<div className="rounded-lg border bg-background p-3.5">
+					<span className="block font-medium text-foreground">{en ? "EasyBR (Affiliated)" : "EasyBR（关联产品）"}</span>
+					<span className="mt-1 block text-xs text-muted-foreground">{en ? "Isolated profiles + Easy WebBridge for AI agents" : "多账号独立环境 + Easy WebBridge AI 接管"}</span>
+					<div className="mt-2 flex flex-wrap gap-3 text-xs font-medium">
+						<Link href={localePath(en ? "en" : "zh-cn", "browsers/easybr")} className="text-primary underline underline-offset-4">{en ? "Profile & notes" : "查看评估资料"}</Link>
+						<a href={en ? "https://www.ebrower.com/en/" : "https://www.ebrower.com/"} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4">{en ? "Official site" : "访问官网"}</a>
+					</div>
+				</div>
+			</div>
 		</aside>
 	</article>;
 }

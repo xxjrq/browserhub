@@ -76,6 +76,8 @@ export default function RootLayout({
 			<body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
 				{process.env.NODE_ENV === "production" && <Script id="baidu-analytics" strategy="afterInteractive">{`var _hmt = _hmt || [];
 (function() {
+  var h = window.location.hostname;
+  if (h !== "browserhub.co" && h !== "www.browserhub.co") return;
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?05e35203a9afa3bf3f9100645c520d27";
   var s = document.getElementsByTagName("script")[0];
