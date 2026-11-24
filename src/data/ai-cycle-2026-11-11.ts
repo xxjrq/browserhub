@@ -129,10 +129,10 @@ Notion Agent 使用自己的浏览器流程；[通用标签访问指南](/zh-cn/
 	},
 	"dia-ai-content-data-controls": {
 		en: {
-			title: "Dia Privacy Settings: Separate Provider Processing, Training, and Sync",
-			description: "Check Dia's default content-sharing control, provider processing, proactive Morning Brief, local browser data, and encrypted Sync without treating one switch as a blanket opt-out.",
+			title: "Dia Privacy Settings: Find the Controls and Limit AI Content Sharing",
+			description: "Open Dia Settings to find the content-improvement sharing switch. It covers that use only, not every AI feature that may process page context.",
 			category: "AI browser guides",
-			content: "Dia's security page describes two ways content may be processed: relevant page context sent to an AI provider for a request, and content used by default to improve Dia and its small on-device models. The provider terms described by Dia restrict training and retention beyond processing; the separate improvement-sharing setting is at Settings > Privacy > Share content data to help improve Dia. Dia says shared improvement content is retained for 30 days. Morning Brief can also prepare information proactively, so page processing is not limited to a request you type.",
+			content: "Open Dia Settings and go to Settings > Privacy > Share content data to help improve Dia. Turn off the switch to opt out of the documented content-improvement sharing. This setting does not disable every AI feature: an active AI request may send relevant page context to a provider, and Dia says Morning Brief can process relevant information without a new question. Dia says shared improvement content is retained for 30 days.",
 			sections: [
 				{ heading: "Start by naming the data path", body: `Separate three questions before using a page: will this feature send context to an AI provider, is content sharing for Dia improvement enabled, and can the feature prepare information proactively? Dia's security page says provider processing may happen when an AI request uses page context. It also describes Morning Brief as proactively preparing information, which may involve relevant data without a new prompt. Dia's content-improvement sharing is a separate default use.
 

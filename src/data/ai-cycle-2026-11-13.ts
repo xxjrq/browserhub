@@ -240,10 +240,10 @@ OpenAI 说明，内置浏览器会在每次调用工具前执行安全检查。�
 	},
 	"dia-sync-between-devices-checklist": {
 		en: {
-			title: "Dia Sync across devices: Pair devices, check profiles, and protect recovery",
-			description: "Set up Dia Sync on a second device, check what the official notes confirm, and separate missing tabs from profile or recovery-key problems.",
+			title: "Dia Sync Across Devices: Setup and Missing Data Checks",
+			description: "Pair a second Dia device with the six-character code, then check the account, profile, and documented Sync scope if something is missing.",
 			category: "AI browser guides",
-			content: "Dia Sync pairs profiles, bookmarks, pinned tabs, and tab groups across devices. Its setup uses a recovery kit and a separate device-connection code. Before treating a missing tab or bookmark as a sync failure, check that Sync is on at both ends, that the second device was paired, and that the expected profile exists. Dia says synced data is end-to-end encrypted and readable only by your devices or recovery-kit passphrase. Losing both a machine and the recovery kit leaves no recovery path.",
+			content: "To set up Dia Sync on a second device, save a recovery kit on the first device, choose Connect Another Device to get a six-character code, and enter it under Settings > Sync on the second device. Both devices must use the same Dia account, with Sync on at both ends. If a bookmark, pinned tab, or profile is missing, check that pairing finished and that the item is in Dia's documented Sync scope before disconnecting or resetting anything. Dia says synced data is end-to-end encrypted and readable only by your devices or someone with the recovery-kit passphrase. Losing both a machine and the recovery kit leaves no recovery path.",
 			sections: [
 				{ heading: "Know which problem you are checking", body: `“Sync is not working” can mean that the second device is not paired, a profile is missing, a bookmark has not arrived, or a tab is open in another window. Those are different observations. Write down the source device, target device, profile name, and the exact item you expect to see before changing settings.
 
