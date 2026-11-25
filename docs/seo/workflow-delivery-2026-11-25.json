@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-25",
+  "status": "completed",
+  "runtimeStatus": "completed",
+  "graphExecutionCompleted": true,
+  "runtimeDefinitionHash": "9322a8b29c039b3da4672735e7ee059e74b669f490a219fa60ecf97edc181e0a",
+  "manifestSha256": "28ac6116a9ff48090e74a9ca72b4308f580c5760d4a4cbe4c9c06ff1420cdad2",
+  "commit": "89c318e5b1a00335f7d00662e98d5ce334013bac",
+  "release": "/opt/browsertools/releases/20261125-094840",
+  "publishedDateAsiaShanghai": "2026-11-25",
+  "publicationReceiptAt": "2026-11-25T01:53:35.699Z",
+  "completedAt": "2026-11-25T01:55:11.158Z",
+  "newTopics": [
+    "firefox-smart-window-availability",
+    "firefox-smart-window-watch-tasks",
+    "firefox-smart-window-model-choice",
+    "firefox-smart-window-memories-privacy",
+    "claude-chrome-tab-group-cleanup"
+  ],
+  "newTopicCount": 5,
+  "newLocalizedPageCount": 10,
+  "oldEnhancements": [],
+  "oldEnhancementCount": 0,
+  "languages": [
+    "en",
+    "zh-cn"
+  ],
+  "urls": [
+    "https://browserhub.co/en/guides/firefox-smart-window-availability/",
+    "https://browserhub.co/zh-cn/guides/firefox-smart-window-availability/",
+    "https://browserhub.co/en/guides/firefox-smart-window-watch-tasks/",
+    "https://browserhub.co/zh-cn/guides/firefox-smart-window-watch-tasks/",
+    "https://browserhub.co/en/guides/firefox-smart-window-model-choice/",
+    "https://browserhub.co/zh-cn/guides/firefox-smart-window-model-choice/",
+    "https://browserhub.co/en/guides/firefox-smart-window-memories-privacy/",
+    "https://browserhub.co/zh-cn/guides/firefox-smart-window-memories-privacy/",
+    "https://browserhub.co/en/guides/claude-chrome-tab-group-cleanup/",
+    "https://browserhub.co/zh-cn/guides/claude-chrome-tab-group-cleanup/",
+    "https://browserhub.co/en/",
+    "https://browserhub.co/en/guides/",
+    "https://browserhub.co/zh-cn/",
+    "https://browserhub.co/zh-cn/guides/"
+  ],
+  "editorialDirection": "docs/seo/leadership-plan-2026-11-04.json",
+  "research": "docs/seo/research-2026-11-25.json",
+  "sourceRecords": [
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window",
+      "claim": "Help describes gradual early beta, US/Canada beginning Firefox 150, France beginning Firefox 155, supported locales en-US, en-CA and French, desktop surface and Mozilla account sign-in. Smart Window must be enabled and onboarding complete before selecting it as default; default-window preference requires Firefox 151.0.2 and is hidden/disabled when the feature is unavailable. Classic is fallback.",
+      "qualification": "The rollout is staged, so minimum version/region do not guarantee account access.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.firefox.com/en-US/smart-window/",
+      "claim": "Product page offers early access/waitlist.",
+      "qualification": "Waitlist is not stated as immediate activation guarantee.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/questions/1584560",
+      "claim": "Mozilla Support question about beta access without the Try Smart Window entry; search result indicates 2026-05-29. Individual support question, not an eligibility guarantee.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1vs8td2/firefox_1540_smart_window/",
+      "claim": "Search result/title reports Smart Window availability questions on Firefox 154.0; qualitative individual discussion.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/",
+      "claim": "Search excerpt includes advice to restart and check Settings > AI Controls; used only as evidence of access/rollout confusion, not technical guidance.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/create-tasks-smart-window",
+      "claim": "Task guide says English locales in US and Canada; up to 15 active tasks, five webpages per task; tasks use Qwen irrespective of selected assistant model; tasks can be managed at about:smartwindowtasks; pause after 60 days without matches and all tasks pause 90 days after creation; macOS desktop notifications off by default.",
+      "qualification": "",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://blog.mozilla.org/en/firefox/skip-the-busywork-with-smart-window/",
+      "claim": "Mozilla announcement dated October 27 says checks run only while Firefox is open, daily or weekly schedules, and tasks pause after 60 days without a match and stop checking after 90 days without a match.",
+      "qualification": "Its 90-day boundary is described differently from Help (no-match period versus creation-date pause). Article exposes both and uses Help creation-date deadline as conservative review point.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window",
+      "claim": "Provides general Smart Window availability conditions, which are broader than Watch-a-page task eligibility; task access has its own narrower English US/Canada conditions.",
+      "qualification": "Do not infer task availability from general Smart Window availability.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1xjzcks/why_cant_i_create_a_task/",
+      "claim": "Search result excerpt/title says user saw a Watch a page example but could not find task creation. Direct Reddit page extraction was unavailable; treat as snippet-only public-demand evidence, not a directly inspected thread.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.parasmadan.in/blog/firefox-smart-window-form-fill-page-watching",
+      "claim": "Independent competitor article read for task-specific coverage and answer comparison.",
+      "qualification": "Secondary source; product facts retained only where corroborated by current official documentation.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "competitor_article"
+    },
+    {
+      "url": "https://explainx.ai/blog/firefox-smart-window-fill-from-sources-watch-tasks-gemini-flash-lite-privacy-2026",
+      "claim": "Independent competitor article read for task-specific coverage and answer comparison.",
+      "qualification": "Secondary source; product facts retained only where corroborated by current official documentation.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "competitor_article"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window-models",
+      "claim": "Mozilla documents default Assistant model in Settings versus an in-chat model for the current conversation; choices may change. Its guide also states that if a hosted model is unresponsive, Smart Window may fall back to another model; fallback hosts provide Zero Data Retention and prefer the same model family and host when feasible.",
+      "qualification": "The fallback is conditional on a hosted model being unresponsive; the article does not claim a particular fallback will occur or identify a backend model for an individual request.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/create-tasks-smart-window",
+      "claim": "Tasks use Qwen even if another assistant model is selected.",
+      "qualification": "Task behavior is separate from normal chat model selection.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.mozilla.org/en-US/privacy/smart-window/",
+      "claim": "Privacy notice gives separate data-handling context for prompts and context sent to Mozilla/model provider.",
+      "qualification": "Model selection and privacy controls are distinct questions.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://connect.mozilla.org/t5/discussions/different-model-profiles-for-smart-window/m-p/125039",
+      "claim": "Mozilla Connect feature discussion asks for different model profiles; used as evidence of interest in persistent model choices, not product roadmap.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/",
+      "claim": "Same public Smart Window beta discussion includes chat/model discussion; qualitative, not treated as independent exact default-setting demand.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window-memories",
+      "claim": "Saved Memories are stored locally and do not sync. A chat input Memories switch disables memory use for that chat, but new memories may still be created from it. Retry without memories applies to one answer. Learning-source switches stop future memory creation; existing memories can still be used. Saved memory deletion is separate, one item or all. Clearing history/chat does not remove the independent Memories store.",
+      "qualification": "",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.mozilla.org/en-US/privacy/smart-window/",
+      "claim": "Mozilla says browsing and assistant activity may be briefly processed on Mozilla servers to infer memories; relevant prompts/context/memories for Mozilla-provided model choices can be sent to Mozilla then the third-party model provider. Mozilla states no retention after processing for inference and no chat logs without consent.",
+      "qualification": "If a user configures an endpoint not offered in Smart Window, Mozilla says requests bypass Mozilla servers and the endpoint operator terms/privacy notice apply. These are published policy claims, not an independent network capture or audit.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.firefox.com/en-US/smart-window/",
+      "claim": "Product page gives shorter local memory summary.",
+      "qualification": "Read with privacy notice to distinguish local storage from inference processing.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1whvljq/mistral_and_mozilla_are_bringing_open_private_and/",
+      "claim": "Public discussion excerpt specifically questions server processing versus local memory storage. Reddit is used only to document reader concern, never to substantiate data-flow facts.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome",
+      "claim": "Consumer extension guide describes tab controls and tabGroups grouping of tabs it opens.",
+      "qualification": "Does not promise consumer extension/Cowork cleanup at every task end.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/chrome",
+      "claim": "Claude Code local Chrome integration: /clear closes session tab group including pages unless work surviving clear is running; /resume, exit, or /clear with surviving work closes only group with empty new tabs, leaving nonempty pages open.",
+      "qualification": "Applies to documented local Claude Code session integration, not consumer extension or Cowork.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/sessions",
+      "claim": "Documents /clear and session resume semantics.",
+      "qualification": "Session behavior alone should not be generalized to browser extension.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.google.com/chrome/answer/2391819",
+      "claim": "Chrome distinguishes Close group (saved/reopenable), Delete group (removed, including synced groups), and Remove from group (tabs remain open).",
+      "qualification": "",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wp5dn3/claude_in_chrome_extension_tab_group_behavior_is/",
+      "claim": "Reader describes Claude-created group behavior; qualitative report.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/claude/comments/1upz6te/why_doesnt_claude_in_chrome_clean_up_after_itself/",
+      "claim": "Reader asks why Claude in Chrome does not clean up after itself; qualitative question.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/issues/15436",
+      "claim": "Historical Claude Code feature request opened 2025-12-26, currently Closed; concerns automatic Chrome tab-group cleanup. Issue status is not evidence that the requested behavior shipped.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://rzailabs.com/blog/agent-browser-for-claude-code",
+      "claim": "Independent competitor article read for task-specific coverage and answer comparison.",
+      "qualification": "Secondary source; product facts retained only where corroborated by current official documentation.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "competitor_article"
+    },
+    {
+      "url": "https://www.firefox.com/en-US/firefox/159.0/releasenotes/",
+      "claim": "Firefox 159 desktop release notes list Smart Window /watch and say certain new features roll out gradually.",
+      "qualification": "Release note does not guarantee Watch-a-page is enabled for every Firefox 159 account.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25T09:39:30+08:00",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window-byom",
+      "claim": "Mozilla Help documents configuring a user-provided Smart Window model endpoint.",
+      "qualification": "For endpoints not offered in the Smart Window interface, privacy notice says requests bypass Mozilla and the endpoint operator terms/privacy notice apply.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25T09:39:30+08:00",
+      "kind": "primary_product_or_official_issue_source"
+    }
+  ],
+  "modelRoles": {
+    "executor": {
+      "role": "executor",
+      "modelRequested": "gpt-6-luna",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "reasoningEffortRequested": "high",
+      "reasoningEffortEffective": null,
+      "attempt": 1,
+      "attempts": 1,
+      "selectionSource": "project_role_default"
+    },
+    "reviewer": {
+      "role": "reviewer",
+      "modelRequested": "gpt-6.1-sol",
+      "modelEffective": null,
+      "reasoningEffort": "high",
+      "reasoningEffortRequested": "high",
+      "reasoningEffortEffective": null,
+      "attempt": 1,
+      "attempts": 1,
+      "selectionSource": "project_role_default",
+      "independentContext": true
+    }
+  },
+  "review": {
+    "decision": "approved",
+    "fileCount": 7,
+    "sha256": "50052f4c45f2b0899b08312f304163de6a51b761d284dcf3800c4ace734dd594"
+  },
+  "validation": {
+    "preflightCi": {
+      "exitCode": 0,
+      "logSha256": "60bbe1a3663225d2e1e8659c164ac4b97f65740820cd35b7cb1ca349a084a90a",
+      "sourceFilesUnchangedDuringCi": true
+    },
+    "repositoryAuth": "Project-scoped xxjrq verified with read-only remote main check",
+    "formalCiExitCode": 0,
+    "seoAudit": {
+      "htmlPages": 1529,
+      "sitemapUrls": 1186,
+      "internalLinks": 54027,
+      "alternateLinks": 8375,
+      "fallbackPages": 60,
+      "editorialGuides": 318,
+      "errors": 0
+    },
+    "contentContract": {
+      "checkedAt": "2026-11-25T01:44:52.369Z",
+      "status": "passed",
+      "existingTopicsPreserved": 154,
+      "existingTopicsUnchanged": 154,
+      "explicitlyRefreshedOwners": [],
+      "totalTopics": 159,
+      "completeEditions": 318,
+      "newTopics": 5,
+      "keywordRows": 225,
+      "details": [
+        {
+          "slug": "firefox-smart-window-availability",
+          "locale": "en",
+          "sections": 4,
+          "faq": 4
+        },
+        {
+          "slug": "firefox-smart-window-availability",
+          "locale": "zh-cn",
+          "sections": 4,
+          "faq": 4
+        },
+        {
+          "slug": "firefox-smart-window-watch-tasks",
+          "locale": "en",
+          "sections": 5,
+          "faq": 5
+        },
+        {
+          "slug": "firefox-smart-window-watch-tasks",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 5
+        },
+        {
+          "slug": "firefox-smart-window-model-choice",
+          "locale": "en",
+          "sections": 6,
+          "faq": 4
+        },
+        {
+          "slug": "firefox-smart-window-model-choice",
+          "locale": "zh-cn",
+          "sections": 6,
+          "faq": 4
+        },
+        {
+          "slug": "firefox-smart-window-memories-privacy",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "firefox-smart-window-memories-privacy",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "claude-chrome-tab-group-cleanup",
+          "locale": "en",
+          "sections": 5,
+          "faq": 4
+        },
+        {
+          "slug": "claude-chrome-tab-group-cleanup",
+          "locale": "zh-cn",
+          "sections": 5,
+          "faq": 4
+        }
+      ]
+    },
+    "serverCurrent": {
+      "matches": true,
+      "release": "/opt/browsertools/releases/20261125-094840"
+    }
+  },
+  "workflowStatuses": {
+    "build": "build_verified",
+    "checkpoint": "content_committed",
+    "dependencies": "checked",
+    "editorial-ready": "editorial_approved",
+    "previous-batch": "initial_daily_batch",
+    "publish": "published",
+    "push": "pushed",
+    "receipt": "content_cycle_completed",
+    "verify": "live_verified"
+  },
+  "live": {
+    "checkedAt": "2026-11-25T01:55:11.109Z",
+    "ok": true,
+    "results": [
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/firefox-smart-window-availability/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/firefox-smart-window-availability/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/firefox-smart-window-availability/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/firefox-smart-window-availability/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/firefox-smart-window-watch-tasks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/firefox-smart-window-watch-tasks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/firefox-smart-window-watch-tasks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/firefox-smart-window-watch-tasks/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/firefox-smart-window-model-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/firefox-smart-window-model-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/firefox-smart-window-model-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/firefox-smart-window-model-choice/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/firefox-smart-window-memories-privacy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/firefox-smart-window-memories-privacy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/firefox-smart-window-memories-privacy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/firefox-smart-window-memories-privacy/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/claude-chrome-tab-group-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/claude-chrome-tab-group-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/claude-chrome-tab-group-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/claude-chrome-tab-group-cleanup/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/en/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browsers.draxgr.cc/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      },
+      {
+        "url": "https://browserhub.co/zh-cn/guides/",
+        "status": 200,
+        "contentMatches": true,
+        "canonical": true
+      }
+    ]
+  },
+  "cohorts": {
+    "firstPublicationReceiptAt": "2026-11-25T01:53:35.699Z",
+    "gscFirstFullWindows": {
+      "7day": {
+        "start": "2026-11-25",
+        "end": "2026-12-01",
+        "notBeforeUtc": "2026-12-02T08:00:00+00:00",
+        "timeZone": "America/Los_Angeles",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "14day": {
+        "start": "2026-11-25",
+        "end": "2026-12-08",
+        "notBeforeUtc": "2026-12-09T08:00:00+00:00",
+        "timeZone": "America/Los_Angeles",
+        "status": "pending_closed_window_and_actual_report_availability"
+      },
+      "28day": {
+        "start": "2026-11-25",
+        "end": "2026-12-22",
+        "notBeforeUtc": "2026-12-23T08:00:00+00:00",
+        "timeZone": "America/Los_Angeles",
+        "status": "pending_closed_window_and_actual_report_availability"
+      }
+    },
+    "measurementRule": "Compare closed and actually available page/query/language windows. Missing rows remain unknown."
+  },
+  "measurement": "Prior private measurements were reused. No search traffic, conversion, or ROI result is claimed for this publication.",
+  "runtimeEvidence": "Documented browser workflows and explicitly labelled untested steps; publication verification is not hands-on product task testing."
+}
