@@ -8645,6 +8645,217 @@
         "14day": "2026-11-28",
         "28day": "2026-12-12"
       }
+    },
+    {
+      "id": "guides:firefox-smart-window-availability",
+      "primaryKeyword": {
+        "en": "Firefox Smart Window missing availability eligibility",
+        "zh-CN": "Firefox Smart Window 不显示开放资格"
+      },
+      "intent": "Firefox Smart Window staged beta access, locale/version/account eligibility and the separate Firefox 151.0.2 default-window control.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/firefox-smart-window-availability/",
+        "https://browserhub.co/zh-cn/guides/firefox-smart-window-availability/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-25",
+      "sourceRecord": "docs/seo/research-2026-11-25.json",
+      "demandEvidence": "Qualitative, topic-specific reader questions or feature requests documented in the research record; no search volume or popularity estimate.",
+      "originalGain": "Firefox Smart Window staged beta access, locale/version/account eligibility and the separate Firefox 151.0.2 default-window control.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "firefox-smart-window-watch-tasks"
+        ],
+        "distinctiveCoverage": "Firefox Smart Window staged beta access, locale/version/account eligibility and the separate Firefox 151.0.2 default-window control."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-12-02",
+        "14day": "2026-12-09",
+        "28day": "2026-12-23"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:firefox-smart-window-watch-tasks",
+      "primaryKeyword": {
+        "en": "Firefox Smart Window Watch a page create tasks",
+        "zh-CN": "Firefox Smart Window 网页监测任务创建"
+      },
+      "intent": "Firefox-specific Watch-a-page setup, locale, capacity, task model and lifecycle boundaries; distinct from general page-change monitoring workflow.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/firefox-smart-window-watch-tasks/",
+        "https://browserhub.co/zh-cn/guides/firefox-smart-window-watch-tasks/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-25",
+      "sourceRecord": "docs/seo/research-2026-11-25.json",
+      "demandEvidence": "Qualitative, topic-specific reader questions or feature requests documented in the research record; no search volume or popularity estimate.",
+      "originalGain": "Firefox-specific Watch-a-page setup, locale, capacity, task model and lifecycle boundaries; distinct from general page-change monitoring workflow.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "browser-agent-monitor-page-changes-meaningfully",
+          "firefox-smart-window-availability"
+        ],
+        "distinctiveCoverage": "Firefox-specific Watch-a-page setup, locale, capacity, task model and lifecycle boundaries; distinct from general page-change monitoring workflow."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-12-02",
+        "14day": "2026-12-09",
+        "28day": "2026-12-23"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:firefox-smart-window-model-choice",
+      "primaryKeyword": {
+        "en": "Firefox Smart Window change default model vs chat model",
+        "zh-CN": "Firefox Smart Window 默认模型与聊天模型"
+      },
+      "intent": "Firefox Smart Window default model in Settings versus the current-chat picker, including task-specific model exception.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/firefox-smart-window-model-choice/",
+        "https://browserhub.co/zh-cn/guides/firefox-smart-window-model-choice/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-25",
+      "sourceRecord": "docs/seo/research-2026-11-25.json",
+      "demandEvidence": "Qualitative, topic-specific reader questions or feature requests documented in the research record; no search volume or popularity estimate.",
+      "originalGain": "Firefox Smart Window default model in Settings versus the current-chat picker, including task-specific model exception.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "firefox-smart-window-memories-privacy"
+        ],
+        "distinctiveCoverage": "Firefox Smart Window default model in Settings versus the current-chat picker, including task-specific model exception."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-12-02",
+        "14day": "2026-12-09",
+        "28day": "2026-12-23"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:firefox-smart-window-memories-privacy",
+      "primaryKeyword": {
+        "en": "Firefox Smart Window Memories privacy controls delete",
+        "zh-CN": "Firefox Smart Window 记忆隐私控制与删除"
+      },
+      "intent": "Firefox Smart Window memory inference, local storage, chat-wide use control, one-answer retry, future learning controls and separate deletion.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/firefox-smart-window-memories-privacy/",
+        "https://browserhub.co/zh-cn/guides/firefox-smart-window-memories-privacy/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-25",
+      "sourceRecord": "docs/seo/research-2026-11-25.json",
+      "demandEvidence": "Qualitative, topic-specific reader questions or feature requests documented in the research record; no search volume or popularity estimate.",
+      "originalGain": "Firefox Smart Window memory inference, local storage, chat-wide use control, one-answer retry, future learning controls and separate deletion.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "firefox-smart-window-model-choice"
+        ],
+        "distinctiveCoverage": "Firefox Smart Window memory inference, local storage, chat-wide use control, one-answer retry, future learning controls and separate deletion."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-12-02",
+        "14day": "2026-12-09",
+        "28day": "2026-12-23"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
+    },
+    {
+      "id": "guides:claude-chrome-tab-group-cleanup",
+      "primaryKeyword": {
+        "en": "Claude in Chrome close tab group after task",
+        "zh-CN": "Claude in Chrome 任务后关闭标签组"
+      },
+      "intent": "Chrome group cleanup for Claude surfaces, distinguishing consumer extension uncertainty from documented Claude Code local-session lifecycle and Chrome group actions.",
+      "cluster": "ai-browser-development",
+      "priority": "P1",
+      "metrics": {
+        "monthlySearchVolume": null,
+        "keywordDifficulty": null,
+        "currentPosition": null,
+        "gscImpressions": null,
+        "gscClicks": null
+      },
+      "existingUrls": [],
+      "targetUrls": [
+        "https://browserhub.co/en/guides/claude-chrome-tab-group-cleanup/",
+        "https://browserhub.co/zh-cn/guides/claude-chrome-tab-group-cleanup/"
+      ],
+      "status": "draft-prepared-for-independent-review; publication requires completed workflow receipt",
+      "observedOn": "2026-11-25",
+      "sourceRecord": "docs/seo/research-2026-11-25.json",
+      "demandEvidence": "Qualitative, topic-specific reader questions or feature requests documented in the research record; no search volume or popularity estimate.",
+      "originalGain": "Chrome group cleanup for Claude surfaces, distinguishing consumer extension uncertainty from documented Claude Code local-session lifecycle and Chrome group actions.",
+      "ownership": {
+        "exactOwnerFound": false,
+        "nearestOwners": [
+          "ai-browser-organize-tabs-by-task",
+          "claude-chrome-shortcuts-schedule",
+          "claude-chrome-connection-permissions"
+        ],
+        "distinctiveCoverage": "Chrome group cleanup for Claude surfaces, distinguishing consumer extension uncertainty from documented Claude Code local-session lifecycle and Chrome group actions."
+      },
+      "firstPublishedAt": "pending",
+      "reviewDatesAfterPublication": {
+        "7day": "2026-12-02",
+        "14day": "2026-12-09",
+        "28day": "2026-12-23"
+      },
+      "dateOnlyReminder": "After a real publication receipt, calculate exact +7/+14/+28 day times; calendar dates alone do not establish review maturity."
     }
   ],
   "futureCandidates": [
@@ -8708,14 +8919,14 @@
     "aiBrowserDirection20261021": "用户明确内容主线为AI浏览器与浏览器智能体；指纹/代理保留为底层专题。规划与热点证据见leadership-plan-2026-10-21.json，不能据此编造现有产品AI能力。"
   },
   "latestEditorialAddition": {
-    "date": "2026-11-06",
-    "cycleId": "content-2026-11-06",
+    "date": "2026-11-25",
+    "cycleId": "content-2026-11-25",
     "newTopics": [
-      "firefox-ai-controls-chatbot-provider-boundary",
-      "brave-leo-byom-local-vs-hosted",
-      "edge-copilot-page-context-enterprise-dlp",
-      "opera-ai-page-content-permission",
-      "opera-browser-connector-chatgpt-permissions"
+      "firefox-smart-window-availability",
+      "firefox-smart-window-watch-tasks",
+      "firefox-smart-window-model-choice",
+      "firefox-smart-window-memories-privacy",
+      "claude-chrome-tab-group-cleanup"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
@@ -8724,22 +8935,23 @@
     "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed."
   },
   "latestContentCycle": {
-    "date": "2026-11-14",
-    "cycleId": "content-2026-11-14",
+    "date": "2026-11-25",
+    "cycleId": "content-2026-11-25",
     "newTopics": [
-      "brave-leo-chat-history-sync-and-cleanup",
-      "brave-leo-multi-tab-context-and-sidebar",
-      "comet-ios-assistant-current-tab-and-tabs",
-      "dia-site-search-shortcuts-troubleshooting",
-      "brave-leo-web-search-vs-ask-brave"
+      "firefox-smart-window-availability",
+      "firefox-smart-window-watch-tasks",
+      "firefox-smart-window-model-choice",
+      "firefox-smart-window-memories-privacy",
+      "claude-chrome-tab-group-cleanup"
     ],
     "newTopicCount": 5,
     "completeEditions": 10,
     "oldEnhancements": [],
-    "publicationEvidence": "Drafts prepared for independent review; no release or live publication claimed.",
-    "sourceRecord": "docs/seo/research-2026-11-14.json",
+    "publicationEvidence": "Pending independent review and workflow receipt; not yet published.",
+    "notClaimed": "Drafts prepared; no publication, traffic gain, indexing result, search volume, private query, or measured hands-on test is claimed.",
+    "sourceRecord": "docs/seo/research-2026-11-25.json",
     "metrics": null,
-    "protectedOldOwners": "149 prior owners and 298 editions remain unchanged; five new themes have complete English and Simplified Chinese copies."
+    "protectedOldOwners": "154 prior owners and 308 editions remain unchanged; five new themes have complete English and Simplified Chinese copies."
   },
   "latestEditorialEnhancement": {
     "date": "2026-11-02",

@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "timezone": "Asia/Shanghai",
+  "project": "BrowserHub",
+  "cycleId": "content-2026-11-25",
+  "status": "research-and-bilingual-drafts-prepared-for-independent-review",
+  "mainline": "Five distinct Firefox Smart Window and Claude Chrome tasks with full English and Simplified Chinese drafts, qualitative reader signals, current primary sources, competitor-answer gaps and explicit evidence limits. No direct product tests, search volume, traffic, rank, or publication result is claimed.",
+  "selection": {
+    "targetTopics": 5,
+    "approvedTopics": 5,
+    "oldEnhancements": 0,
+    "existingOwnerBaseline": 154,
+    "existingEditionBaseline": 308,
+    "keywordRowBaseline": 220,
+    "ownerChangesAllowed": 0,
+    "themeRule": "Topics must answer distinct consumer tasks, have topic-specific public demand evidence, a checked existing-owner boundary, current primary sources and useful additional guidance. EN/ZH editions count once. No quantity claim substitutes for demand or quality."
+  },
+  "measurementBoundary": "No private or public search-volume estimate, traffic attribution, ranking result, conversion evidence, or measured product behavior is claimed. This record is not a publication receipt.",
+  "competitorMethod": {
+    "scope": "Research began 2026-11-25 09:10 Asia/Shanghai and was finalized 09:39 Asia/Shanghai. Read relevant official support/release pages, public question/discussion pages where directly accessible, and task-specific independent explainers. Official sources establish current product facts; community sources establish only an individual question or report.",
+    "limits": [
+      "Public posts may describe a specific account/version or be incomplete; qualitative evidence only.",
+      "The Reddit task creation thread 1xjzcks was available only as a search excerpt; it was not directly fetched.",
+      "No search-volume, popularity, ranking, traffic, causal impact, account access, or live product test inferred.",
+      "Firefox Help and Oct 27 blog phrase the 90-day task boundary differently; both are retained with a conservative review recommendation.",
+      "Claude Code local Chrome lifecycle is scoped to that surface and not generalized to Claude consumer extension or Cowork.",
+      "Model list names are omitted because installed options may change and raw extracted tables may reflect version-conditioned content."
+    ]
+  },
+  "topics": [
+    {
+      "slug": "firefox-smart-window-availability",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "Why is Firefox Smart Window missing even though the installed version or waitlist signup seems eligible, and what is required to choose it as the default window?",
+      "publicQuestions": [
+        {
+          "url": "https://support.mozilla.org/en-US/questions/1584560",
+          "observed": "Mozilla Support question about beta access without the Try Smart Window entry; search result indicates 2026-05-29. Individual support question, not an eligibility guarantee."
+        },
+        {
+          "url": "https://www.reddit.com/r/firefox/comments/1vs8td2/firefox_1540_smart_window/",
+          "observed": "Search result/title reports Smart Window availability questions on Firefox 154.0; qualitative individual discussion."
+        },
+        {
+          "url": "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/",
+          "observed": "Search excerpt includes advice to restart and check Settings > AI Controls; used only as evidence of access/rollout confusion, not technical guidance."
+        }
+      ],
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "firefox-smart-window-watch-tasks",
+          "firefox-smart-window-model-choice"
+        ],
+        "distinct": "Access and separate default-window eligibility, rather than AI controls, task-specific rollout, or model selection."
+      },
+      "competitorAnswer": "Mozilla Help answers general availability but not how to interpret missing entry points across rollout, account, locale and the separate default-window version threshold. Support and Reddit competitor answers are individual reports; no guide was treated as an authoritative eligibility list.",
+      "originalGain": "Decision checklist separating staged rollout, locale/account prerequisites and Firefox 151.0.2+ default-window control; documents when to collect details for support without suggesting hidden-pref bypass.",
+      "sources": [
+        "https://support.mozilla.org/en-US/kb/smart-window",
+        "https://www.firefox.com/en-US/smart-window/",
+        "https://support.mozilla.org/en-US/questions/1584560",
+        "https://www.reddit.com/r/firefox/comments/1vs8td2/firefox_1540_smart_window/",
+        "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/"
+      ]
+    },
+    {
+      "slug": "firefox-smart-window-watch-tasks",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "Where can I create a Firefox Smart Window Watch-a-page task, why might the entry point be missing, and what do the checks and pause limits actually mean?",
+      "publicQuestions": [
+        {
+          "url": "https://www.reddit.com/r/firefox/comments/1xjzcks/why_cant_i_create_a_task/",
+          "observed": "Search result excerpt/title says user saw a Watch a page example but could not find task creation. Direct Reddit page extraction was unavailable; treat as snippet-only public-demand evidence, not a directly inspected thread."
+        }
+      ],
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "browser-agent-monitor-page-changes-meaningfully",
+          "firefox-smart-window-availability",
+          "firefox-smart-window-memories-privacy"
+        ],
+        "distinct": "Product-specific task creation and status management, not generic agent monitoring or Smart Window access."
+      },
+      "competitorAnswer": "Paras Madan (2026-10-28) and ExplainX task explainers were read; they describe task setup/caps, but operational statements must be reconciled against Mozilla. The Mozilla blog now confirms open-browser checks and daily/weekly schedules. Existing BrowserHub general page-change monitoring owner is broader and does not explain Firefox Watch-a-page setup or its task-specific limits.",
+      "originalGain": "Two documented creation routes, task scope limits, task-specific model behavior, visible lifecycle and notification checks; explicitly reconciles official 90-day wording difference. Adds Firefox 159 release-note context: /watch appears in the release, with gradual availability and no every-account guarantee.",
+      "sources": [
+        "https://support.mozilla.org/en-US/kb/create-tasks-smart-window",
+        "https://blog.mozilla.org/en/firefox/skip-the-busywork-with-smart-window/",
+        "https://support.mozilla.org/en-US/kb/smart-window",
+        "https://www.reddit.com/r/firefox/comments/1xjzcks/why_cant_i_create_a_task/",
+        "https://www.firefox.com/en-US/firefox/159.0/releasenotes/"
+      ]
+    },
+    {
+      "slug": "firefox-smart-window-model-choice",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "How do I change the model that new Firefox Smart Window chats use without changing only the current chat, and which model should I trust the picker to show?",
+      "publicQuestions": [
+        {
+          "url": "https://connect.mozilla.org/t5/discussions/different-model-profiles-for-smart-window/m-p/125039",
+          "observed": "Mozilla Connect feature discussion asks for different model profiles; used as evidence of interest in persistent model choices, not product roadmap."
+        },
+        {
+          "url": "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/",
+          "observed": "Same public Smart Window beta discussion includes chat/model discussion; qualitative, not treated as independent exact default-setting demand."
+        }
+      ],
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "firefox-smart-window-memories-privacy",
+          "firefox-smart-window-watch-tasks"
+        ],
+        "distinct": "Model default versus one current conversation, plus the Watch task’s explicit exception."
+      },
+      "competitorAnswer": "Official model guide contains the control distinction but the setup path is easy to confuse. Mozilla Connect request reflects feature interest but is not evidence of shipped persistent profiles. No ZDNET assertion retained because the page was not verified as fetched.",
+      "originalGain": "Direct Settings versus in-chat paths; what changes prospectively/currently; inspect installed picker; separate task model exception and privacy boundary.",
+      "sources": [
+        "https://support.mozilla.org/en-US/kb/smart-window-models",
+        "https://support.mozilla.org/en-US/kb/create-tasks-smart-window",
+        "https://www.mozilla.org/en-US/privacy/smart-window/",
+        "https://connect.mozilla.org/t5/discussions/different-model-profiles-for-smart-window/m-p/125039",
+        "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/"
+      ]
+    },
+    {
+      "slug": "firefox-smart-window-memories-privacy",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "If Firefox Smart Window Memories are local, what is processed remotely, and how can I stop using, stop learning, or delete memories?",
+      "publicQuestions": [
+        {
+          "url": "https://www.reddit.com/r/firefox/comments/1whvljq/mistral_and_mozilla_are_bringing_open_private_and/",
+          "observed": "Public discussion excerpt specifically questions server processing versus local memory storage. Reddit is used only to document reader concern, never to substantiate data-flow facts."
+        }
+      ],
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "firefox-ai-controls-chatbot-provider-boundary",
+          "firefox-smart-window-model-choice",
+          "firefox-smart-window-availability"
+        ],
+        "distinct": "Memory-specific processing and separate per-answer, per-chat, future-learning and deletion controls."
+      },
+      "competitorAnswer": "Product page’s local-storage summary can be mistaken for fully local inference. The detailed Help and Privacy Notice provide the multi-step controls and processing boundaries. A broader AI-controls Reddit discussion was excluded as technical evidence.",
+      "originalGain": "A control map that distinguishes Retry without memories (one answer), chat toggle (whole chat; learning may continue), learning source switches (future creation), and deletion (saved items), alongside policy processing.",
+      "sources": [
+        "https://support.mozilla.org/en-US/kb/smart-window-memories",
+        "https://www.mozilla.org/en-US/privacy/smart-window/",
+        "https://www.firefox.com/en-US/smart-window/",
+        "https://www.reddit.com/r/firefox/comments/1whvljq/mistral_and_mozilla_are_bringing_open_private_and/",
+        "https://support.mozilla.org/en-US/kb/smart-window-byom"
+      ]
+    },
+    {
+      "slug": "claude-chrome-tab-group-cleanup",
+      "gate": "approved-to-draft; independent content review pending",
+      "readerQuestion": "When Claude in Chrome finishes, which tabs or groups should I close, and how does Claude Code local-session cleanup differ from the consumer extension?",
+      "publicQuestions": [
+        {
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/1wp5dn3/claude_in_chrome_extension_tab_group_behavior_is/",
+          "observed": "Reader describes Claude-created group behavior; qualitative report."
+        },
+        {
+          "url": "https://www.reddit.com/r/claude/comments/1upz6te/why_doesnt_claude_in_chrome_clean_up_after_itself/",
+          "observed": "Reader asks why Claude in Chrome does not clean up after itself; qualitative question."
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/issues/15436",
+          "observed": "Historical Claude Code feature request opened 2025-12-26, currently Closed; concerns automatic Chrome tab-group cleanup. Issue status is not evidence that the requested behavior shipped."
+        }
+      ],
+      "ownerCheck": {
+        "exactOwnerFound": false,
+        "nearest": [
+          "ai-browser-organize-tabs-by-task",
+          "claude-chrome-shortcuts-schedule",
+          "claude-chrome-connection-permissions"
+        ],
+        "distinct": "After-task group cleanup and product-surface-specific lifecycle, including local Claude Code session behavior."
+      },
+      "competitorAnswer": "Independent RZ AI Labs (2026-07-06) recommends agent-browser for Claude Code and treats groups as session artifacts; the article’s broad behavior claims were not inherited. Chrome and Claude Code official docs answer separate layers. Existing BrowserHub generic organize-tabs and Claude shortcut/permissions pages do not cover cleanup behavior differences by surface.",
+      "originalGain": "A conservative user review procedure plus exact Chrome group semantics and carefully scoped current Claude Code cleanup; does not extrapolate CLI behavior to consumer surfaces.",
+      "sources": [
+        "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome",
+        "https://code.claude.com/docs/en/chrome",
+        "https://code.claude.com/docs/en/sessions",
+        "https://support.google.com/chrome/answer/2391819",
+        "https://www.reddit.com/r/ClaudeAI/comments/1wp5dn3/claude_in_chrome_extension_tab_group_behavior_is/",
+        "https://www.reddit.com/r/claude/comments/1upz6te/why_doesnt_claude_in_chrome_clean_up_after_itself/",
+        "https://github.com/anthropics/claude-code/issues/15436"
+      ]
+    }
+  ],
+  "sourceRecords": [
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window",
+      "claim": "Help describes gradual early beta, US/Canada beginning Firefox 150, France beginning Firefox 155, supported locales en-US, en-CA and French, desktop surface and Mozilla account sign-in. Smart Window must be enabled and onboarding complete before selecting it as default; default-window preference requires Firefox 151.0.2 and is hidden/disabled when the feature is unavailable. Classic is fallback.",
+      "qualification": "The rollout is staged, so minimum version/region do not guarantee account access.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.firefox.com/en-US/smart-window/",
+      "claim": "Product page offers early access/waitlist.",
+      "qualification": "Waitlist is not stated as immediate activation guarantee.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/questions/1584560",
+      "claim": "Mozilla Support question about beta access without the Try Smart Window entry; search result indicates 2026-05-29. Individual support question, not an eligibility guarantee.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1vs8td2/firefox_1540_smart_window/",
+      "claim": "Search result/title reports Smart Window availability questions on Firefox 154.0; qualitative individual discussion.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/",
+      "claim": "Search excerpt includes advice to restart and check Settings > AI Controls; used only as evidence of access/rollout confusion, not technical guidance.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-availability",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/create-tasks-smart-window",
+      "claim": "Task guide says English locales in US and Canada; up to 15 active tasks, five webpages per task; tasks use Qwen irrespective of selected assistant model; tasks can be managed at about:smartwindowtasks; pause after 60 days without matches and all tasks pause 90 days after creation; macOS desktop notifications off by default.",
+      "qualification": "",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://blog.mozilla.org/en/firefox/skip-the-busywork-with-smart-window/",
+      "claim": "Mozilla announcement dated October 27 says checks run only while Firefox is open, daily or weekly schedules, and tasks pause after 60 days without a match and stop checking after 90 days without a match.",
+      "qualification": "Its 90-day boundary is described differently from Help (no-match period versus creation-date pause). Article exposes both and uses Help creation-date deadline as conservative review point.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window",
+      "claim": "Provides general Smart Window availability conditions, which are broader than Watch-a-page task eligibility; task access has its own narrower English US/Canada conditions.",
+      "qualification": "Do not infer task availability from general Smart Window availability.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1xjzcks/why_cant_i_create_a_task/",
+      "claim": "Search result excerpt/title says user saw a Watch a page example but could not find task creation. Direct Reddit page extraction was unavailable; treat as snippet-only public-demand evidence, not a directly inspected thread.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.parasmadan.in/blog/firefox-smart-window-form-fill-page-watching",
+      "claim": "Independent competitor article read for task-specific coverage and answer comparison.",
+      "qualification": "Secondary source; product facts retained only where corroborated by current official documentation.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "competitor_article"
+    },
+    {
+      "url": "https://explainx.ai/blog/firefox-smart-window-fill-from-sources-watch-tasks-gemini-flash-lite-privacy-2026",
+      "claim": "Independent competitor article read for task-specific coverage and answer comparison.",
+      "qualification": "Secondary source; product facts retained only where corroborated by current official documentation.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25",
+      "kind": "competitor_article"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window-models",
+      "claim": "Mozilla documents default Assistant model in Settings versus an in-chat model for the current conversation; choices may change. Its guide also states that if a hosted model is unresponsive, Smart Window may fall back to another model; fallback hosts provide Zero Data Retention and prefer the same model family and host when feasible.",
+      "qualification": "The fallback is conditional on a hosted model being unresponsive; the article does not claim a particular fallback will occur or identify a backend model for an individual request.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/create-tasks-smart-window",
+      "claim": "Tasks use Qwen even if another assistant model is selected.",
+      "qualification": "Task behavior is separate from normal chat model selection.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.mozilla.org/en-US/privacy/smart-window/",
+      "claim": "Privacy notice gives separate data-handling context for prompts and context sent to Mozilla/model provider.",
+      "qualification": "Model selection and privacy controls are distinct questions.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://connect.mozilla.org/t5/discussions/different-model-profiles-for-smart-window/m-p/125039",
+      "claim": "Mozilla Connect feature discussion asks for different model profiles; used as evidence of interest in persistent model choices, not product roadmap.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1xpq5ye/might_be_the_only_one_but_i_actually_quite_like/",
+      "claim": "Same public Smart Window beta discussion includes chat/model discussion; qualitative, not treated as independent exact default-setting demand.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-model-choice",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window-memories",
+      "claim": "Saved Memories are stored locally and do not sync. A chat input Memories switch disables memory use for that chat, but new memories may still be created from it. Retry without memories applies to one answer. Learning-source switches stop future memory creation; existing memories can still be used. Saved memory deletion is separate, one item or all. Clearing history/chat does not remove the independent Memories store.",
+      "qualification": "",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.mozilla.org/en-US/privacy/smart-window/",
+      "claim": "Mozilla says browsing and assistant activity may be briefly processed on Mozilla servers to infer memories; relevant prompts/context/memories for Mozilla-provided model choices can be sent to Mozilla then the third-party model provider. Mozilla states no retention after processing for inference and no chat logs without consent.",
+      "qualification": "If a user configures an endpoint not offered in Smart Window, Mozilla says requests bypass Mozilla servers and the endpoint operator terms/privacy notice apply. These are published policy claims, not an independent network capture or audit.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.firefox.com/en-US/smart-window/",
+      "claim": "Product page gives shorter local memory summary.",
+      "qualification": "Read with privacy notice to distinguish local storage from inference processing.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.reddit.com/r/firefox/comments/1whvljq/mistral_and_mozilla_are_bringing_open_private_and/",
+      "claim": "Public discussion excerpt specifically questions server processing versus local memory storage. Reddit is used only to document reader concern, never to substantiate data-flow facts.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome",
+      "claim": "Consumer extension guide describes tab controls and tabGroups grouping of tabs it opens.",
+      "qualification": "Does not promise consumer extension/Cowork cleanup at every task end.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/chrome",
+      "claim": "Claude Code local Chrome integration: /clear closes session tab group including pages unless work surviving clear is running; /resume, exit, or /clear with surviving work closes only group with empty new tabs, leaving nonempty pages open.",
+      "qualification": "Applies to documented local Claude Code session integration, not consumer extension or Cowork.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://code.claude.com/docs/en/sessions",
+      "claim": "Documents /clear and session resume semantics.",
+      "qualification": "Session behavior alone should not be generalized to browser extension.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.google.com/chrome/answer/2391819",
+      "claim": "Chrome distinguishes Close group (saved/reopenable), Delete group (removed, including synced groups), and Remove from group (tabs remain open).",
+      "qualification": "",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wp5dn3/claude_in_chrome_extension_tab_group_behavior_is/",
+      "claim": "Reader describes Claude-created group behavior; qualitative report.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://www.reddit.com/r/claude/comments/1upz6te/why_doesnt_claude_in_chrome_clean_up_after_itself/",
+      "claim": "Reader asks why Claude in Chrome does not clean up after itself; qualitative question.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://github.com/anthropics/claude-code/issues/15436",
+      "claim": "Historical Claude Code feature request opened 2025-12-26, currently Closed; concerns automatic Chrome tab-group cleanup. Issue status is not evidence that the requested behavior shipped.",
+      "qualification": "Qualitative public evidence only; not search volume, prevalence, or authoritative product fact.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25T09:10:54+08:00",
+      "kind": "public_reader_question_or_discussion"
+    },
+    {
+      "url": "https://rzailabs.com/blog/agent-browser-for-claude-code",
+      "claim": "Independent competitor article read for task-specific coverage and answer comparison.",
+      "qualification": "Secondary source; product facts retained only where corroborated by current official documentation.",
+      "slug": "claude-chrome-tab-group-cleanup",
+      "observedOn": "2026-11-25",
+      "kind": "competitor_article"
+    },
+    {
+      "url": "https://www.firefox.com/en-US/firefox/159.0/releasenotes/",
+      "claim": "Firefox 159 desktop release notes list Smart Window /watch and say certain new features roll out gradually.",
+      "qualification": "Release note does not guarantee Watch-a-page is enabled for every Firefox 159 account.",
+      "slug": "firefox-smart-window-watch-tasks",
+      "observedOn": "2026-11-25T09:39:30+08:00",
+      "kind": "primary_product_or_official_issue_source"
+    },
+    {
+      "url": "https://support.mozilla.org/en-US/kb/smart-window-byom",
+      "claim": "Mozilla Help documents configuring a user-provided Smart Window model endpoint.",
+      "qualification": "For endpoints not offered in the Smart Window interface, privacy notice says requests bypass Mozilla and the endpoint operator terms/privacy notice apply.",
+      "slug": "firefox-smart-window-memories-privacy",
+      "observedOn": "2026-11-25T09:39:30+08:00",
+      "kind": "primary_product_or_official_issue_source"
+    }
+  ],
+  "delivery": {
+    "sourceFile": "src/data/ai-cycle-2026-11-25.ts",
+    "locales": [
+      "en",
+      "zh-cn"
+    ],
+    "routes": [
+      "https://browserhub.co/en/guides/firefox-smart-window-availability/",
+      "https://browserhub.co/zh-cn/guides/firefox-smart-window-availability/",
+      "https://browserhub.co/en/guides/firefox-smart-window-watch-tasks/",
+      "https://browserhub.co/zh-cn/guides/firefox-smart-window-watch-tasks/",
+      "https://browserhub.co/en/guides/firefox-smart-window-model-choice/",
+      "https://browserhub.co/zh-cn/guides/firefox-smart-window-model-choice/",
+      "https://browserhub.co/en/guides/firefox-smart-window-memories-privacy/",
+      "https://browserhub.co/zh-cn/guides/firefox-smart-window-memories-privacy/",
+      "https://browserhub.co/en/guides/claude-chrome-tab-group-cleanup/",
+      "https://browserhub.co/zh-cn/guides/claude-chrome-tab-group-cleanup/"
+    ],
+    "claims": "No publication or live route change claimed. Root owns review workflow receipt, CI, Git and release."
+  }
+}
