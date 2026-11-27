@@ -16,6 +16,7 @@ import { aiCycleTranslations12 } from "./ai-cycle-2026-11-12";
 import { aiCycleTranslations13 } from "./ai-cycle-2026-11-13";
 import { aiCycleTranslations14 } from "./ai-cycle-2026-11-14";
 import { aiCycleTranslations25 } from "./ai-cycle-2026-11-25";
+import { aiCycleTranslations26 } from "./ai-cycle-2026-11-26";
 import { aiCycleTranslations10 } from "./ai-cycle-2026-11-10";
 import { aiCycleTranslations07 } from "./ai-cycle-2026-11-07";
 import { aiUsageTranslations26 } from "./ai-usage-2026-10-26";
@@ -44,6 +45,7 @@ import { dailyGuideTranslations } from "./daily-guides-2026-10-20";
 
 /** Complete editions only; untranslated legacy URLs retain labelled English. */
 export const guideEditions = {
+  ...aiCycleTranslations26,
   ...aiCycleTranslations25,
   ...aiCycleTranslations14,
   ...aiCycleTranslations13,
